@@ -1,4 +1,4 @@
-# AWS Marketplace Seller Reports<a name="Reporting"></a>
+# Seller Reports<a name="Reporting"></a>
 
  AWS Marketplace provides you the ability to retrieve reports for your listings\. The information available includes data on your listings, customers, financials, usage, and any U\.S\. Sales and Use Tax collected for use of your software\. Different reports provide data covering daily and monthly time periods\. All reports are generated as \.csv files so you can open with a variety of tools, or import into other systems\. You can download and view sample reports [here](https://s3.amazonaws.com/awsmp-loadforms/AWS+Marketplace+-+Seller+Reporting+Examples.zip)\. 
 

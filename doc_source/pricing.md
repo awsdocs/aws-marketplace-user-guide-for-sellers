@@ -12,27 +12,29 @@
 
 ## AMI Pricing Models<a name="ami-pricing-models"></a>
 
- AWS Marketplace has multiple pricing models for AMI products\. **NOTE:** Sellers of paid AMI products **must** be able to provide a W\-9 tax form \(for U\.S\. based entities\) or a W\-8 form \(for EU\- based entities\) as described in Section 1\.1\.1\. 
+ AWS Marketplace has multiple pricing models for AMI products\. **NOTE:** You MUST be able to provide a W\-9 tax form \(for U\.S\. based entities\) or a W\-8 form \(for EU\- based entities\) as described in [Seller Registration Process](seller-registration-process.md)\. 
 
 
 |  **Pricing Model**  |  **Description**  | 
 | --- | --- | 
-|  Bring Your Own License \(BYOL\)  |  AWS Marketplace does not charge customers for usage of the software, but customers must supply a license key to activate the product\. This key is purchased outside of AWS Marketplace\. The entitlement/ licensing enforcement, as well as all pricing and billing are handled by the seller\.  | 
+|  Bring Your Own License \(BYOL\)  |  AWS Marketplace does not charge customers for usage of the software, but customers must supply a license key to activate the product\. This key is purchased outside of AWS Marketplace\. The entitlement/ licensing enforcement, as well as all pricing and billing are handled by the you\.  | 
 |  Free  |  Customers are allowed to run as many instances as EC2 supports with no additional software charges incurred\.  | 
-|  Hourly  |   **Hourly:** Software is charged by the hour\. Each instance type can be priced differently \(but is not required to be\) and usage is rounded up to the nearest whole hour\.   **Hourly with Free Trial:** Customers are allowed to run exactly 1 instance of the software without incurring a charge for a predetermined set of days between 5 and 30 days as decided by the seller\. The Free Trial applies to the most expensive instance type that is running, and any concurrent usage outside the 1 instance is billed at the hourly rate\. NOTE\- this is a different model than the AWS Free Tier for EC2 usage where customers are given a bucket of 750 hours of free usage each month\.   **Hourly with Monthly:** Both Hourly and Monthly charges are applied independently; the monthly fee is charged every month regardless of usage, the hourly fee is applied based on hourly usage only\.   **Hourly with Annual:** Customers have the option to purchase a year’s worth of usage upfront for one EC2 instance of one instance type\. Sellers set the pricing for each instance type and can offer net savings over the hourly price \(not required\)\. Any customer usage above the number of annual subscriptions purchased is billed at the hourly rate set by the seller for that instance type\.   **Hourly with Free Trial and Annual:** This is identical to the Hourly model with an Annual option, except it includes a Free Trial allowing a customer to run 1 instance of any instance type for free for a seller set number of days\. Annual subscriptions can be purchased at any time, and they are combined additively with the Free Trial subscription\.   | 
-|  Monthly  |   **Monthly:** Software is paid for on a fixed monthly basis, regardless of number of instances the customer runs\. Monthly Charges are pro\-rated at sign\-up and upon cancellation, e\.g\.: a customer who subscribes for 1 day of the month will be charged for 1/30th of the month\.   **Monthly with Hourly:** Both Hourly and Monthly charges are applied independently; the monthly fee is charged every month regardless of usage, the hourly fee is applied based on hourly usage only\.   **NOTE: Free Trial and Annual pricing cannot be combined with Monthly pricing**   | 
-|  Usage  |   **Usage**: Software is directly charged for the value the seller provides along with one of four dimensions: users, data, bandwidth, or hosts\. You may define up to 8 variants for the single dimension\. All charges are still incurred hourly by the customer\. All usage is calculated monthly and billed monthly using the same mechanism as existing AWS Marketplace software\. Usage pricing is also referred to as AWS Marketplace Metering Service   **NOTE: Free trial and Annual pricing cannot be combined with Usage pricing**   | 
+|  Hourly  |   **Hourly:** Software is charged by the hour\. Each instance type can be priced differently \(but is not required to be\) and usage is rounded up to the nearest whole hour\.   **Hourly with Free Trial:** Customers are allowed to run exactly 1 instance of the software without incurring a charge for a predetermined set of days between 5 and 30 days as decided by the you\. The Free Trial applies to the most expensive instance type that is running, and any concurrent usage outside the 1 instance is billed at the hourly rate\. NOTE\- This is a different model than the AWS Free Tier for EC2 usage whereby customers are given 750 hours of free usage each month\.   **Hourly with Monthly:** Both Hourly and Monthly charges are applied independently; the monthly fee is charged every month regardless of usage, the hourly fee is applied based on hourly usage only\.   **Hourly with Annual:** Customers have the option to purchase a year’s worth of usage upfront for one EC2 instance of one instance type\. You set the pricing for each instance type and can offer net savings over the hourly price \(not required\)\. Any customer usage above the number of annual subscriptions purchased is billed at the hourly rate set by you for that instance type\.   **Hourly with Free Trial and Annual:** This is identical to the Hourly model with an Annual option, except it includes a Free Trial allowing a customer to run 1 instance of any instance type for free for a set number of days that you determine\. Annual subscriptions can be purchased at any time, and they are combined with the Free Trial subscription\.   | 
+|  Monthly  |   **Monthly:** Software is paid for on a fixed monthly basis, regardless of the number of instances the customer runs\. Monthly Charges are pro\-rated at sign\-up and upon cancellation\. Example: A customer who subscribes for 1 day of the month will be charged for 1/30th of the month\.   **Monthly with Hourly:** Both Hourly and Monthly charges are applied independently\. The monthly fee is charged every month regardless of usage and the hourly fee is applied based on hourly usage only\.   **NOTE: Free Trial and Annual pricing cannot be combined with Monthly pricing\.**   | 
+|  Usage  |   **Usage**: Software is directly charged for the value you provide along with one of four dimensions: users, data, bandwidth, or hosts\. You may define up to 8 variants for the single dimension\. All charges are still incurred hourly by the customer\. All usage is calculated monthly and billed monthly using the same mechanism as existing AWS Marketplace software\. Usage pricing is also referred to as AWS Marketplace Metering Service   **NOTE: Free trial and Annual pricing cannot be combined with Usage pricing\.**   | 
 
 ## General Pricing Policies<a name="general-pricing-policies"></a>
 +  For Paid Listings, AWS Marketplace collects software charges from the customer\. 
-+  There is no service fee for BYOL products listed on AWS Marketplace\. However, in order to deliver on our customer promise of selection, we require that all BYOL products also have a paid option so that customers who don’t have existing licenses have the option to purchase and use the products\. We realize that the online purchase of software is a departure from how some companies do business, so for the first 90 days after launch we will relax the requirement that this software be accompanied by a version available for purchase on AWS Marketplace\. During this time, the AWS Marketplace account management teams will work with software sellers to address challenges and to determine if and how the software can be made available for purchase on AWS Marketplace\. 
++  There is no service fee for BYOL products listed on AWS Marketplace\. 
++  In order to deliver on our customer promise of selection, we require that all BYOL products also have a paid option\. This is so that customers who don’t have existing licenses have the option to purchase and use the products\. 
++  We realize that the online purchase of software is a departure from how some companies do business\. In light of this for the first 90 days after launch we will relax the requirement that this software be accompanied by a version available for purchase on AWS Marketplace\. During this time, the AWS Marketplace account management teams will work with you to address challenges and to determine if and how the software can be made available for purchase on AWS Marketplace\. 
 +  There is no service fee for Free or Open Source Software that is made available to customers without charge\. 
 
 ## AWS charges vs Software charges<a name="aws-charges-vs-software-charges"></a>
 +  All AMI\-based products will incur associated AWS infrastructure charges depending on the services and infrastructure used\. These rates and fees are defined and controlled by AWS, and can vary between regions\. See [EC2 Pricing](http://aws.amazon.com/ec2/pricing/) for more information\. 
 +  For Paid, the seller defines the charges for using the software\. 
 
- These 2 types of prices are displayed separately on the AWS Marketplace detail pages to provide customers with a clear understanding of potential cost for using the products\. For example: 
+ These 2 types of prices are displayed separately on the AWS Marketplace detail pages to provide customers with a clear understanding of the potential cost of using the products\. For example: 
 
  
 
@@ -44,17 +46,17 @@
 
  When a customer subscribers to a Free Trial product they are sent a Welcome email that includes the term of the Free Trial, a calculated expiration date and details on unsubscribing\. 3 days prior to the expiration date a reminder email is sent\. 
 
- If you are offering a Free Trial product in AWS Marketplace, you agree to the specific refund policies for Free Trials, located in Special Guidelines documentation\. 
+ If you are offering a Free Trial product in AWS Marketplace, you agree to the specific refund policies described under **Refund Policy**\. 
 
 ### Annual Pricing<a name="annual-pricing"></a>
 
- An Annual pricing model allows you to offer products to customers who can purchase a 12\-month subscription\. The subscription pricing can provide up to 40% savings versus running the same product hourly for extended periods\. The customer is invoiced for the full amount of the contract at the time of subscription\. To read more about the benefits of offering an Annual product, please see the [Annual Subscriptions FAQ](https://aws.amazon.com/marketplace/help/201550560/ref=help_ln_sibling) on the AWS Marketplace site\. 
+ An Annual pricing model allows you to offer products to customers who can purchase a 12 month subscription\. The subscription pricing can provide up to 40% savings versus running the same product hourly for extended periods\. The customer is invoiced for the full amount of the contract at the time of subscription\. To read more about the benefits of offering an Annual product, please see the [Annual Subscriptions FAQ](https://aws.amazon.com/marketplace/help/201550560/ref=help_ln_sibling) on the AWS Marketplace site\. 
 
  Some notes and callouts when working with an Annual product in AWS Marketplace: 
 +  Annual pricing is defined per instance type\. It can be the same for all EC2 instance types or different for each instance type\. 
-+  All Annual instance types must also have an Hourly instance type defined\. AWS Marketplace does not offer Annual\-only pricing or Hourly without Annual on the same product; for any product offering Annual pricing, Hourly pricing also needs to be specified\. 
++  All Annual instance types must also have an Hourly instance type defined\. AWS Marketplace does not offer Annual\-only pricing or Hourly without Annual on the same product\. For any product offering Annual pricing, Hourly pricing also needs to be specified\. 
 +  A $0 Annual price is allowed on a specific instance type, if the Hourly price is also $0 and there are other non\-$0 Annual instance types defined\. 
-+  At the end of Annual subscription period, the customer will start being charged at the Hourly price\. 
++  At the end of the annual subscription period, the customer will start being charged at the hourly price\. 
 +  If a customer buys X Annual subscriptions but is running Y software on Y instances, then the customer will be charged at Hourly software price for \(Y\-X\) instances which are not covered by Annual subscriptions\. As such, an Hourly rate must be included for all Annual pricing instance types\. 
 
  If you are offering an Annual product in AWS Marketplace, you agree to the specific refund policies for Annual products, located in the File Uploader documents section of [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour)\. 
@@ -262,12 +264,6 @@
 ### Refund policy<a name="refund-policy"></a>
 
  If you list your software as a free trial product, AWS can issue refunds on your behalf for software charges accruing within seven days of a conversion from a free trial to a paid subscription\. Refunds issued in connection with free trial conversions require no action on your part\. By enabling Free Trial on a product, you are agreeing to this policy\. 
-
-## AWS Marketplace for US IC<a name="aws-marketplace-for-us-ic"></a>
-
-### Refund Policy<a name="refund-policy-1"></a>
-
- For software listed on the IC Marketplace, AWS can issue a full refund for software charges incurred by end users within 30 days of subscription to the product\.  Refunds will be decided and executed by the AWS team and require no action on your part\. By listing a product in the IC Marketplace, you are agreeing to this policy 
 
 ## Annual Products<a name="annual-products"></a>
 

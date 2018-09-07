@@ -1,50 +1,13 @@
-# Getting Started as a Seller<a name="GettingStarted"></a>
+# Seller Registration Process<a name="seller-registration-process"></a>
 
- If you are interested in selling your software on AWS Marketplace, review the requirements, and then follow the steps to register as a seller\. There are different registration requirements based on where you reside and what type of products you want to list\. To register as a seller on AWS Marketplace, you can use an existing AWS account or create a new account\. All AWS Marketplace interactions will be tied to the AWS account you choose\. 
+ To register as an AWS Marketplace seller, from the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/) \(AMMP\), choose **Sign Up as an AWS Marketplace Seller** and follow the wizard to complete registration\. Identify an AWS account to use as your primary AWS Marketplace account\. You can use an existing account or register a new AWS account so long as the account is linked to a valid payment method\. This account will be the seller of record for your products on AWS Marketplace and will be used for reporting, disbursement and communication from the AWS Marketplace to you\. 
 
-## Seller Requirements for Publishing Free Products on AWS Marketplace<a name="SellerRequirementsForPublishingFreeProducts"></a>
-+  Sell publicly available, full\-feature production\-ready software \(not a beta product\)\. 
-+  Have a defined customer support process and support organization\. 
-+  Provide a means to keep software regularly updated and free of vulnerabilities\. 
-+  Follow best practices and guidelines when marketing your product on AWS Marketplace\. 
-+  Be an AWS customer in good standing and meet the requirements set forth in the terms and conditions for AWS Marketplace sellers\. 
+**Note**  
+ Once you use an AWS account to list a product on AWS Marketplace, you cannot change the AWS account associated with the product\. 
 
-## Additional Seller Requirements for Publishing Paid or BYOL Products on AWS Marketplace<a name="AdditionalSellerRequirementsForPaidProducts"></a>
-+  Be a permanent U\.S\. or European Union \(EU\) resident or citizen, or a business entity organized or incorporated in the United States or member state of the EU\. 
-+  Tax and bank account information are required\. For U\.S\. based entities, a W\-9 and banking account from a U\.S\. based bank are required\. 
-+  European Union state members are required to provide a W\-8, Value Added Tax \(VAT\) number, and U\.S\. bank account\. If you do not have a U\.S\. bank account, you can register for a virtual U\.S\. bank account from [Hyperwallet](https://wssellers.hyperwallet.com/)\. 
+ You can change other product information \(name, website, description\) on AWS Marketplace once the product is listed\. You can also use AWS Identity and Access Management \(AWS IAM\) to configure your primary AWS account to allow multiple users with various permissions to access the AMMP\. For more information visit [Controlling AWS Marketplace Management Portal Access](marketplace-management-portal-user-access.md)\. 
 
- To sell into the AWS GovCloud \(US\) Region, sellers must have an [AWS GovCloud account](https://aws.amazon.com/govcloud-us/getting-started/)\. For details on ITAR requirements, refer to the [AWS GovCloud \(US\) User Guide](http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-us-ug.pdf)\. 
-
- Contact the **AWS Marketplace Seller Operations** \(aws\-marketplace\-seller\-ops@amazon\.com\) team with any questions on AWS Marketplace seller requirements or the registration process\. 
-
-## AWS Marketplace Management Portal \(AMMP\)<a name="management-portal"></a>
-
- The [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour) is the tool you use to register as an AWS Marketplace seller, and then to manage the products you list on AWS Marketplace\. You can: 
-+  Register as an AWS Marketplace Seller\. 
-+  Use the Self\-Service Listings interface to submit new, and update existing products\. 
-+  Monitor the status of your requests\. 
-+  Upload files needed to create and manage your new listings\. 
-+  Manage your listing into incremental channel revenue by taking advantage of the go\-to\-market activities\. 
-+  Measure the results of your marketing efforts within hours of launch, including the usage and revenue driven by your campaigns\. 
-+  Customer service representatives can retrieve customer data in real\-time\. 
-+  Access AMI Self\-Sharing to scan your AMI’s for vulnerabilities\. 
-
- All registered sellers can access the AMMP using their AWS credentials for the account used to list their products \(the Seller of Record\)\. If you need help determining the specific account that is the Seller of Record for your products, contact the **AWS Marketplace Seller Operations** team \(aws\-marketplace\-seller\-ops@amazon\.com\)\. 
-
- AWS Marketplace **STRONGLY** recommends using IAM roles to sign in to the Management Portal rather than using your root account credentials\. See Create IAM Users for details\. 
-
- The AMMP is always evolving and we welcome any and all feedback on your experience using the AWS Marketplace Management Portal\. Send feedback to **ammp\-feedback@amazon\.com**\. 
-
-## Seller Registration Process<a name="SellerRegistrationProcess"></a>
-
- To register as an AWS Marketplace seller, from the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/) \(AMMP\), choose **Sign Up as an AWS Marketplace Seller** and follow the wizard to complete registration\. Identify an AWS account to use as your primary AWS Marketplace account\. You can use an existing account or register a new AWS Account so long as the account is linked to a valid payment method\. This account will be the seller of record for your products on AWS Marketplace and will be used for reporting, disbursement and communication from the AWS Marketplace to you\. 
-
- **NOTE**: Once you use an AWS account to list a product on AWS Marketplace, you cannot change the AWS account associated with the product\. 
-
- You can change other product information \(name, website, description\) on AWS Marketplace once the product is listed\. You can also use AWS Identity and Access Management \(AWS IAM\) to configure your primary AWS account to allow multiple users with various permissions to access the AMMP\. For more information visit [Controlling User Access to the AWS Marketplace Management Portal](http://docs.aws.amazon.com/marketplace/latest/controlling-access/marketplace-management-portal-user-access.html)\. 
-
-## U\.S\. Bank Account for European Union State Member Sellers<a name="USBankAccountForEUSellers"></a>
+## U\.S\. Bank Account for European Union State Member Sellers<a name="us-bank-account-for-eu-sellers"></a>
 
  A U\.S\. bank account is required for EU based sellers that wish to sell paid software in AWS Marketplace\. AWS Marketplace only disburses to U\.S\. bank accounts\. If you do not already have a U\.S\. bank account, you may be able to obtain one through Hyperwallet\. [Hyperwallet](https://wssellers.hyperwallet.com/) can provide you with a U\.S\. account, which you can provide to AWS Marketplace for your AWS Marketplace disbursements\. 
 
@@ -52,7 +15,7 @@
 +  By adding your Hyperwallet account details to your AWS Marketplace seller account, you agree and acknowledge that AWS Marketplace will share your name, email address and account number with Hyperwallet to confirm your status as an AWS Marketplace seller\. 
 +  Additional fees may apply to your use of Hyperwallet services \(including transfer fees and foreign exchange fees required to transfer funds into your local currency\), as well as foreign exchange rates\. Hyperwallet’s service fee will be waived for a limited time, and only with respect to AWS Marketplace disbursements of the proceeds from your Paid Listings into your Hyperwallet account\. Consult the Fees section of the Hyperwallet site or contact Hyperwallet for more information and to review applicable fees\. 
 
- To begin registration with Hyperwallet and obtain your U\.S\. bank account information: 
+**To begin registration with Hyperwallet and obtain your U\.S\. bank account information**
 
 1.  Use the URL and PIN emailed to you by AWS Marketplace to register with Hyperwallet\. You will receive the email as part of your registration process\. 
 
@@ -60,7 +23,7 @@
 
 1.  When you have obtained an account from Hyperwallet, add your Hyperwallet account information to your AWS account using the Bank Account Registration Tool\. 
 
-## U\.S\. Sales and Use Tax<a name="u.s.-sales-and-use-tax"></a>
+## U\.S\. Sales and Use Tax<a name="use-sales-and-use-tax"></a>
 
  AWS Marketplace Tax Calculation Service provides the ability to calculate and collect U\.S\. sales and use tax for existing and new products\. Some states are not eligible for Tax Calculation Service because AWS Marketplace is required by law to collect and remit applicable sales tax attributable to taxable sales of your product\(s\) to customers based in these states\. To use the service, configure your tax nexus settings for your seller profile, and then assign product tax codes to your products\. 
 
@@ -93,7 +56,7 @@
 There has been a reassessment of the tax treatment of cross border digital services based on the 2015 Japan Tax Reform\. As a result, AWS Marketplace sellers may have Japan consumption tax obligations for sales to customers in Japan\. If you sell any software through AWS Marketplace to a customer in Japan \(business or individual\), you may now have to pay tax\. Anyone whose billing address is in Japan is considered a customer in Japan in this case\. We recommend that you consult with your tax advisor to determine whether you have tax obligations in connection with this reassessment\. 
 
 ### Disbursement<a name="disbursement"></a>
-+  A valid [Payment Method](https://portal.aws.amazon.com/gp/aws/developer/account?ie=UTF8&action=payment-method), a [Registered U\.S\. bank account](https://portal.aws.amazon.com/ec2/ri/seller_registration) and a submitted W9 form are required for disbursement\. 
++  A valid [Payment Method](https://portal.aws.amazon.com/gp/aws/developer/account?ie=UTF8&action=payment-method), a [Registered U\.S\. bank account](https://aws.amazon.com/marketplace/management/seller-settings/account/bank) and a submitted W9 form are required for disbursement\. If you are EU\-based, you follow [this process](https://portal.aws.amazon.com/ec2/ri/seller_registration)\. 
 +  AWS disburses payments monthly directly to the bank account associated with the seller account, less AWS Marketplace service fees\. Payment is disbursed on a rolling monthly basis based off of when the seller account was created, not the beginning of each month\. 
 +  Funds are disbursed only after they are collected from the customer\. 
 +  If you participate in the AWS Marketplace Tax Calculation Service, any U\.S\. Sales and Use Tax collected from customers will be included in your monthly disbursement\. 

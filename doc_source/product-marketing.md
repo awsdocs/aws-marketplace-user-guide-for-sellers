@@ -1,4 +1,4 @@
-# Marketing Your Product<a name="MarketingGuidance"></a>
+# Marketing Your Product<a name="product-marketing"></a>
 
  You can contribute to your products’ success by driving awareness of AWS Marketplace and by driving traffic directly to the pages on AWS Marketplace where your products are listed for sale\. The purpose of this document is to provide the information and support to help you market the product you have listed on AWS Marketplace\. Additional information is available in the [AWS Marketplace Go\-to\-Market Program Guide](https://s3.amazonaws.com/awsmp-loadforms/AWS_MP_GTM_ProgramGuide.pdf) and the [AWS Marketplace Go\-to\-Market Best Practices Guide](https://s3.amazonaws.com/awsmp-loadforms/GTM_Best_Practice_Guide.pdf)\. 
 
@@ -38,13 +38,13 @@
 
 ## Using the AWS Marketplace Logo<a name="using-the-aws-marketplace-logo"></a>
 
- The **AWS Marketplace** logo is a way to easily tell your customers that your software runs on AWS and is available in AWS Marketplace\. If you would like to promote your software in AWS Marketplace, [download the logo in \.eps \(vector\) format here](https://s3.amazonaws.com/awsmp-logos/logo_AWSMP.eps)\. 
+ The **AWS Marketplace** logo is a way to easily tell your customers that your software runs on AWS and is available in AWS Marketplace\. If you would like to promote your software in AWS Marketplace, [download the archived folder \(\.zip file\)](https://s3.amazonaws.com/awsmp-logos/AWS_Marketplace-Logos-AllFormats-171006.zip) which contains multple color treatments and file formats here\. 
 
 ## Linking Directly to Your Product on AWS Marketplace<a name="linking-directly-to-your-product-on-aws-marketplace"></a>
 
- You can send your customers directly to the product’s information page on AWS Marketplace by including deep links on your website or collateral\. For web\-browser based linking, please use this link structure: 
+ You can send your customers directly to the product’s information page on AWS Marketplace by including deep links on your website or collateral\. For web\-browser based linking, please use this example link structure: 
 
- [http://aws\.amazon\.com/marketplace/pp/ASIN/ref=vdr\_rf](http://aws.amazon.com/marketplace/pp/ASIN/ref=vdr_rf) 
+ http://aws\.amazon\.com/marketplace/pp/ASIN/ref=vdr\_rf 
 
  Replace ASIN segment of the URL with your product’s ASIN\. 
 

@@ -83,7 +83,7 @@
 
 ### Data Coverage Period<a name="data-coverage-period-14"></a>
 
- Includes funds which were collected since the previous monthly disbursement\. 
+ Includes uncollected funds and their age\. 
 
 
 |  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
@@ -95,7 +95,21 @@
 |  Uncollected \(> 120 days pending\)  |  ✔  |  ✔  |  The total of uncollected funds greater than 120 days pending\. Note: “Uncollected” funds may include amounts that are not yet due\.  | 
 |  Uncollected \(overall\)  |  ✔  |  ✔  |  The total of all uncollected funds\. “Uncollected” funds may include amounts that are not yet due\.  | 
 
-## Section 5: Age of Disbursed Funds<a name="section-5-age-of-disbursed-funds"></a>
+## Section 5: Age of Past Due Funds<a name="age-of-past-due-funds"></a>
+
+ Includes the funds that have been accrued and are payable by the customer but have not been paid in accordance with the subscriber's agreement with AWS\. 
+
+
+|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+| --- | --- | --- | --- | 
+|  Past Due \(< 31 days\)  |  ✔  |  ✔  |  Funds accrued in last 0\-31 days and are payable by the customer but have not been paid in accordance with the subscriber’s agreement with AWS\.  | 
+|  Past Due \(31\-60 days\)  |  ✔  |  ✔  |  Funds accrued in last 31\-60 days and are payable by the customer but have not been paid in accordance with the subscriber’s agreement with AWS\.  | 
+|  Past Due \(61\-90 days\)  |  ✔  |  ✔  |  Funds accrued in last 61\-90 days and are payable by the customer but have not been paid in accordance with the subscriber’s agreement with AWS\.  | 
+|  Past Due \(91\-120 days\)  |  ✔  |  ✔  |  Funds accrued in last 91\-120 days and are payable by the customer but have not been paid in accordance with the subscriber’s agreement with AWS\.  | 
+|  Past Due \(> 120 days\)  |  ✔  |  ✔  |  Funds accrued in last 121\+ days and are payable by the customer but have not been paid in accordance with the subscriber’s agreement with AWS\.  | 
+|  Past Due \(overall\)  |  ✔  |  ✔  |  Funds accrued overall and are payable by the customer but have not been paid in accordance with the subscriber’s agreement with AWS\.  | 
+
+## Section 6: Age of Disbursed Funds<a name="section-5-age-of-disbursed-funds"></a>
 
 ### Data Coverage Period<a name="data-coverage-period-15"></a>
 
