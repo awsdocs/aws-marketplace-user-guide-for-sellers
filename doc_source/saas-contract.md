@@ -135,7 +135,7 @@
 
  After registering your product, you will have the option to sign up for an SNS topic that will provide notifications about contract creation and modification\. Your application should call `GetEntitlements` on the AWS Marketplace Entitlement Service to retrieve the customer’s entitlement\. 
 
- **The AWS Marketplace Entitlement Service is currently available in the us-east-1 region.**
+ **The AWS Marketplace Entitlement Service is available in the us-east-1 region only.**
 ### Registration Process<a name="registration-process-1"></a>
 
  The registration process is similar to consumption\-based products, with some minor differences\. 
