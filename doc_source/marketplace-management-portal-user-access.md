@@ -104,7 +104,7 @@ After you have created users in IAM, users can sign in with their own user names
     https://AWS_account_ID.signin.aws.amazon.com/console/
    ```
 **Note**  
-If you want the URL for your sign\-in page to contain your company name \(or other friendly identifier\) instead of your AWS account ID, you can create an alias for your AWS account by choosing **Customize**\. For more information, go to [Your AWS Account ID and Its Alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the *IAM User Guide*\. 
+L for your sign\-in page to contain your company name \(or other friendly identifier\) instead of your AWS account ID, you can create an alias for your AWS account by choosing **Customize**\. For more information, go to [Your AWS Account ID and Its Alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the *IAM User Guide*\. 
 
 1. Distribute this URL to the people at your company who can work with AWS Marketplace Management Portal, along with the user name and password that you created for each\. Instruct them to use your account's unique sign\-in URL to sign in before they access the AWS Marketplace Management Portal\. 
 
@@ -124,9 +124,12 @@ Allows a user to access the Reports page inside the AWS Marketplace Management P
 **`aws-marketplace-management:uploadFiles`**  
 Allows a user to access the File Upload page inside the AWS Marketplace Management Portal at [https://aws\.amazon\.com/marketplace/management/product\-load/](https://aws.amazon.com/marketplace/management/product-load/)\.
 
+<<<<<<< HEAD
 **`aws-marketplace-management:viewSettings`**  
 Allows a user to access the Settings page inside the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/)\.
 
+=======
+>>>>>>> 3cbbc839859a26f4bd6fdc50665e26fe3c1a24b8
 **`aws-marketplace-management:*`**  
 Allows a user full access to all of the pages inside the AWS Marketplace Management Portal, including the Manage Products page at [https://aws\.amazon\.com/marketplace/management/manage\-products/](https://aws.amazon.com/marketplace/management/manage-products/)\.  
 To allow a user access to the Manage Products page, you must allow full access\. The Manage Products page doesn't currently have its own permission that you can allow separately from the others\.

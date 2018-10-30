@@ -1,5 +1,6 @@
 # AWS Marketplace Commerce Analytics Service<a name="commerce-analytics-service"></a>
 
+
 The AWS Marketplace Commerce Analytics Service allows you to programmatically access product and customer data through AWS Marketplace\. Once you enroll in the service, you can access your usage, subscription, and billing reports through the AWS SDK\.
 
  ![\[Commerce Analytics Service Overview\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/commerce-analytics-service-overview.png) 
@@ -363,6 +364,7 @@ The AWS Marketplace Commerce Analytics service returns two responses\. The first
 
  **I can't access the service because of a whitelisting issue\.** 
 
+
  If you're not yet registered as a seller on the AWS Marketplace, visit [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management) to register\. If you have already registered as a seller on AWS Marketplace, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
  **I can't request data sets for a date in the past, even though the SDK documentation says it should be available for this date\.** 
@@ -407,5 +409,6 @@ aws marketplacecommerceanalytics generate-data-set \
  For additional information about IAM policies, see the following guide: [https://docs\.aws\.amazon\.com/IAM/latest/UserGuide/access\_policies\.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) 
 
  **My problem isn't listed here\.** 
+
 
  Contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 

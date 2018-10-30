@@ -19,6 +19,7 @@ You are responsible for securing resell rights for non\-free Linux distributions
 
  Resources:
 
+
  [Creating Your Own AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide//AMIs.html#creating-an-ami) in the *Amazon EC2 User Guide for Linux Instances*
 
  [Creating a Custom Windows AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) in the *Amazon EC2 User Guide for Windows Instances* 

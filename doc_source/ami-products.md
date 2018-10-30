@@ -4,6 +4,7 @@ Each product in AWS Marketplace is assigned a unique product ID\. This ID is use
 
 Sellers can obtain the product code while developing their software so it can be used for extra security, such as validating the product code at product start\. API calls to an AMI's product code isn't possible until the product has been published into a limited state for testing\. 
 
+
 Product codes automatically propagate as customers work with the software\. For example, a customer subscribes and launches an AMI, configures it, and produces a new AMI\. The new AMI still contains the original product code, so correct billing and permissions remains in place\. For more information, see [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide//ec2-instance-metadata.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
 
 ## Multiple Versions<a name="multiple-versions"></a>

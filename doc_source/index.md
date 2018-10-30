@@ -26,8 +26,10 @@ Amazon's trademarks and trade dress may not be used in
 + [Preparing Your Product](product-preparation.md)
    + [Product Pricing](pricing.md)
    + [Private Offers](private-offers.md)
+
       + [Flexible Payment Scheduler](flexible-payment-scheduler.md)
    + [Consulting Partner Private Offers](consulting-partner-offers.md)
+
    + [Categories and Metadata](categories-and-metadata.md)
    + [Search Engine Optimization](search-engine-optimization.md)
 + [AMI-Based Products](ami-products.md)
@@ -38,6 +40,7 @@ Amazon's trademarks and trade dress may not be used in
    + [AWS Marketplace for Desktop Application (AMDA)](amda.md)
    + [Private Images](private-images.md)
    + [AMI Listing Checklist](aws-marketplace-listing-checklist.md)
+
 + [Software-as-a-Service–Based Products](software-as-a-service-based-products-saas.md)
    + [Listing Your SaaS Product](listing-your-saas-product.md)
    + [Pricing for SaaS Subscriptions](saas-subscriptions.md)
@@ -53,6 +56,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Logging AWS Marketplace API Calls with AWS CloudTrail](logging-aws-marketplace-api-calls-with-aws-cloudtrail.md)
       + [AWS Marketplace Integration Checklist](aws-marketplace-integration-checklist.md)
    + [Reporting](saas-reporting.md)
+
 + [Submitting Your Listing for Publication](product-submission.md)
    + [Using AWS PrivateLink with AWS Marketplace](privatelink.md)
 + [Marketing Your Product](product-marketing.md)
@@ -64,6 +68,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Sales Compensation Report](sales-compensation-report.md)
    + [U.S. Sales and Use Tax Report](u.s.-sales-and-use-tax-report.md)
    + [Daily Ref Tag](daily-ref-tag.md)
+
    + [Weekly Ref Tag](weekly-ref-tag-1.md)
 + [Document History](document-history.md)
 + [AWS Glossary](glossary.md)

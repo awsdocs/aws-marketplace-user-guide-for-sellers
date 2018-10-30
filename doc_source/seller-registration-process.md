@@ -23,6 +23,7 @@
 
 1.  When you have obtained an account from Hyperwallet, add your Hyperwallet account information to your AWS account using the Bank Account Registration Tool\. 
 
+
 ## AWS Marketplace Tax Calculation Service<a name="tax-calculation-service"></a>
 
  AWS Marketplace Tax Calculation Service provides the ability to calculate and collect U\.S\. sales and use tax for existing and new products\. Some states are not eligible for Tax Calculation Service because AWS Marketplace is required by law to collect and remit applicable sales tax attributable to taxable sales of your product\(s\) to customers based in these states\. To use the service, configure your tax nexus settings for your seller profile, and then assign product tax codes to your products\. 

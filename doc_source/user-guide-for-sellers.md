@@ -16,6 +16,7 @@
 
  To sell into the AWS GovCloud \(US\) Region, sellers must have an [AWS GovCloud \(US\) account](https://aws.amazon.com/govcloud-us/getting-started/)\. For details on ITAR requirements, refer to the [AWS GovCloud \(US\) User Guide](http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-us-ug.pdf)\. 
 
+
  Contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team with any questions on AWS Marketplace seller requirements or the registration process\. 
 
 ## AWS Marketplace Management Portal \(AMMP\)<a name="management-portal"></a>
@@ -29,6 +30,7 @@
 +  Measure the results of your marketing efforts within hours of launch, including the usage and revenue driven by your campaigns\. 
 +  Customer service representatives can retrieve customer data in real\-time\. 
 +  Access AMI Self\-Sharing to scan your AMI’s for vulnerabilities\. 
+
 
  All registered sellers can access the AMMP using their AWS credentials for the account used to list their products \(the Seller of Record\)\. If you need help determining the specific account that is the Seller of Record for your products, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 

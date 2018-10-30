@@ -40,6 +40,7 @@ All of your users work on the same AWS Marketplace account\. Any change that a u
 
 Repeat the preceding steps to create more groups with different permissions and assign users to those groups\.
 
+
 You're not limited to the permissions in the AWS managed policies that are described here\. You can use IAM to create policies with custom permissions and then add those policies to IAM groups\. For more information, go to [Creating Customer Managed Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-using.html#create-managed-policy-console) and [Attaching a Policy to an IAM Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_manage_attach-policy.html) in the *IAM User Guide*\. 
 
 ## Signing In as an IAM User<a name="LoggingInUsingAUserNameThatYouCreated"></a>
@@ -58,6 +59,7 @@ After you have created users in IAM, users can sign in with their own user names
     https://AWS_account_ID.signin.aws.amazon.com/console/
    ```
 **Note**  
+
 If you want the URL for your sign\-in page to contain your company name \(or other friendly identifier\) instead of your AWS account ID, you can create an alias for your AWS account by choosing **Customize**\. For more information, go to [Your AWS Account ID and Its Alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the *IAM User Guide*\. 
 
 1. Distribute this URL to the people at your company who can work with AWS Marketplace, along with the user name and password that you created for each\. Instruct them to use your account's unique sign\-in URL to sign in before they access the AWS Marketplace\. 

@@ -12,6 +12,7 @@ In addition to Private Offers, there are also Enterprise Contract Private Offers
 
 ## Offer Submission Process<a name="offer-submission-process"></a>
 
+
  This process is for creating relatively uncomplicated private offers\. If you are creating a private offer with any of the following, you must follow the [Custom Private Offers](#custom-private-offers) process: 
 +  Bring Your Own License \(BYOL\) 
 +  Upfront billing for a suite of products 
@@ -25,6 +26,7 @@ In addition to Private Offers, there are also Enterprise Contract Private Offers
 1.  From the AMMP landing page, choose the **Offers** tab\. 
 
 1.  On the **Manage Private Offer** page, choose **CREATE AN OFFER**\. 
+
 
 1.  On the **Create Private Offer** page, use the drop\-down list to select the product and type the AWS account ID of the AWS Marketplace customer\. If you are allowing your customer to pay for the product in installments, select **Allow buyers to pay for this product in installments \(ISV only\)**\. Verify the information you entered is correct, and then choose **NEXT**\. 
 
@@ -50,6 +52,7 @@ In addition to Private Offers, there are also Enterprise Contract Private Offers
 
 ## Custom Private Offers<a name="custom-private-offers"></a>
 
+
  Custom Private Offers are offers that are manually published by the AWS Marketplace Business Development \(BD\) Operations team\. This process must be used to create private offers for Bring Your Own License \(BYOL\), billing upfront for a suite of products, and unlimited access to a license for one cost contracts\. The steps for each private offer type are different\. The BD team will contact you if they need information specific to your private offer request\. 
 
  To request a custom private offer, email the AWS Marketplace Customer Desk \(**mpcustdesk@amazon\.com**\) team, or work with your Customer Advisor or Business Development contact\. The team will email you instructions, including forms that you must complete and return for review\. After you have returned the completed forms, the team will review the offer to ensure it conforms with existing billing mechanisms and meets the minimum deal threshold\. If approved, the process takes from 5\-7 business days from first contact with AWS Marketplace\. When your private offer is published on AWS Marketplace, the AWS Marketplace Customer Desk team will email you a link to the private offer and the offer will be visible to the buyer in their AWS Marketplace portal\. 
@@ -66,6 +69,7 @@ In addition to Private Offers, there are also Enterprise Contract Private Offers
 
  Custom private offers that go through this process will appear in reports just like other private offers\. 
 
+
 ## Custom Private Offers with Flexible Payment Scheduler<a name="flexible-private-scheduler-link"></a>
 
  To create a custom private offer with a flexible payment schedule, see [Flexible Payment Scheduler](flexible-payment-scheduler.md)\. 
@@ -73,6 +77,7 @@ In addition to Private Offers, there are also Enterprise Contract Private Offers
 ## Experience for the Buyer of a Seller Private Offer<a name="experience-for-the-buyer-of-a-seller-private-offer"></a>
 
  As you create and execute a private offer, you and the customer will have steps to complete\. The experience for the customer is: 
+
 
 1.  A customer with a private offer can access the offer directly by the link provided to them\. The link might come from the seller of record or the AWS Customer Desk, or through the banner at the top of the page for the product the private offer is for\. The link takes the customer to the product fulfillment page, which requires the customer to authenticate with credentials \(root IAM user\) for the AWS account the offer was extended to \- the payor account for the customer\. Private offers must be accessed from the AWS Marketplace page\. Customers can also find the most recent private offer by visiting the public product's detail page and choosing **Continue** to access the product's fulfillment page\. After authenticating with the account’s credentials, the customer sees a blue banner indicating they have a private offer\. Follow the link in the banner to access the most recently created private offer for that product\. 
 
@@ -84,6 +89,7 @@ In addition to Private Offers, there are also Enterprise Contract Private Offers
 
  AWS Marketplace Seller Private Offers appear on the existing seller reports available to you, and are listed in the reports relevant to the offer\. The **Offer ID** and **Offer Visibility** fields contain information about the offers\. 
 
+
 ![\[Example of Private Offers Reporting\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/private-offers-07.png)
 
  The **Offer ID** field contains the unique offer ID generated for the private offer in step 4 of the offer submission process\. It is blank unless the report entry is for a private offer\. The **Offer Visibility** field indicates whether the report entry is a public or private offer\. For all AWS Marketplace Seller Private Offers, the entry is marked private\. 
@@ -94,7 +100,9 @@ In addition to Private Offers, there are also Enterprise Contract Private Offers
 
  **Q\. Which product types are not supported by the Custom Private Offer program?** 
 
+
  AMI Monthly, products delivered using AWS CloudFormation templates, 2P products, and SaaS Redirect products\. 
+
 
  **Q\. How do I know which product listing to use? Can the product listing I want to use support a custom private offer? ** 
 
@@ -150,6 +158,7 @@ In addition to Private Offers, there are also Enterprise Contract Private Offers
 
  For SaaS contracts, Private Offer listings do not monitor usage\. Buyers are able to manually upgrade to new contracts levels at any time, but it is up to the ISV to define contract tiers, enforce service limitations, and advise customers to manually upgrade to higher contract tiers when needed\. 
 
+
  **Q\. What is the difference between Seller Private Offers and Seller Private Offers for AWS MP Channel?** 
 
  Seller Private Offers are self\-service\. They can be created by the seller without AWS Marketplace involvement\. Seller Private Offers for AWS MP Channel is used to create a custom Seller Private Offer that requires AWS Marketplace engagement and support\. Creating an offer that has multiple sellers of record also requires AWS Marketplace engagement and support\. 
@@ -161,6 +170,7 @@ In addition to Private Offers, there are also Enterprise Contract Private Offers
  **Q\. Do I need to make any changes to billing settings of my account?** 
 
  Yes\. You must set your billing preferences to invoicing, not credit card billing\. 
+
 
  **Q\. How do I get set up on Net Invoicing Terms?** 
 
