@@ -13,7 +13,7 @@
  Includes data from the 24\-hour period of the previous day\. 
 
 
-|  **Column Name**  |  **Available for All Aellers**  |  **Available for Sellers Enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
+|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
 | --- | --- | --- | --- | 
 |  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS account number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
 |  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
@@ -46,7 +46,7 @@
  Includes data from the 24\-hour period occurring 72 hours before the report was published\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
 | --- | --- | --- | --- | 
 |  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
 |  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
@@ -76,7 +76,7 @@
  Includes data from the 24\-hour period of the previous day\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
 | --- | --- | --- | --- | 
 |  Product Title  |  ✔  |  ✔  |  The title of the product  | 
 |  Product Code  |  ✔  |  ✔  |  A unique identifier representing the individual software product  | 
@@ -94,7 +94,7 @@
  Includes data from the 24\-hour period of the previous day\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
 | --- | --- | --- | --- | 
 |  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
 |  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
@@ -119,7 +119,7 @@
  Includes data from the 24\-hour period of the previous day\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
 | --- | --- | --- | --- | 
 |  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
 |  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
@@ -143,7 +143,7 @@
  Includes data from the 24\-hour period of the previous day\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
 | --- | --- | --- | --- | 
 |  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
 |  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
