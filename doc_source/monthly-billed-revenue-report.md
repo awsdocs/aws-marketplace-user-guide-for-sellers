@@ -96,3 +96,31 @@
 |  Instance Type  |  ✔  |  ✔  |  The instance type associated with the field demonstration  | 
 |  Usage Units  |  ✔  |  ✔  |  The number of units of usage associated with the product  | 
 |  Usage Unit Types  |  ✔  |  ✔  |  The usage units associated with the usage unit count \(e\.g\. hours\)  | 
+
+## Section 4: Contracts with Flexible Payment Schedule<a name="section-4-contracts-with-flexible-payments"></a>
+
+### Data Coverage Period<a name="data-coverage-period-11"></a>
+
+ Includes all contracts created with a flexible payment schedule in the previous reporting period\. 
+
+
+|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+| --- | --- | --- | --- | 
+|  Customer AWS Account Number  |   |  ✔  |  The payer AWS account number associated with the AWS account to which software charges are billed  | 
+|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
+|  Customer State  |   |  ✔  |  The billing address state associated with the AWS account to which software charges are billed  | 
+|  Customer City  |   |  ✔  |  The billing address city associated with the AWS account to which software charges are billed  | 
+|  Customer ZIP Code  |   |  ✔  |  The billing address zip code associated with the AWS account to which software charges are billed  | 
+|  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account to which software charges are billed\. For example, amazon\.com  | 
+|  User Reference ID  |  ✔  |  ✔  |  The payer AWS account number associated with the AWS account to which software charges are billed  | 
+|  User AWS Account Number  |   |  ✔  |  The AWS account number associated with the AWS account which is subscribed to the listing\. This is a 12\-digit number, represented by 3 sets of 4 numbers, separated by hyphens\. For example, 1234\-5678\-9012  | 
+|  Product ID  |  ✔  |  ✔  |  Unique ID for the software product  | 
+|  Product Title  |  ✔  |  ✔  |  The name of the product  | 
+|  Product Type  |  ✔  |  ✔  |  The type of software product  | 
+|  AWS Marketplace Offer ID  |  ✔  |  ✔  |  The identifier for the offer the subscriber signed  | 
+|  Contract Create Date  |  ✔  |  ✔  |  The date when the contract was created \(triggered when buyer accepts and subscribes to offer\)  | 
+|  Contract Expiration Date  |  ✔  |  ✔  |  The date when the contract expires  | 
+|  Total Contract Value \(USD\)  |  ✔  |  ✔  |  Total value of the contract in USD  | 
+|  \# of Payments  |  ✔  |  ✔  |  Number of payments scheduled for the contract  | 
+|  Invoice Date  |  ✔  |  ✔  |  The date when the invoice is created  | 
+|  Invoice Amount \(USD\)  |  ✔  |  ✔  |  Amount \(in USD\) billed on the invoice  | 

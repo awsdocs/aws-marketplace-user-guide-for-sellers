@@ -1,8 +1,8 @@
-# Submitting Your Listing for Publication<a name="ProductSubmission"></a>
+# Submitting Your Listing for Publication<a name="product-submission"></a>
 
-## <a name="w3ab1b5c17b3"></a>
+## <a name="w4aac16b3"></a>
 
- Product submission is the process used to make your products available to AWS Marketplace customers\. There are two tools used to submit products for publication in the AWS Marketplace\. The Self\-service Listing \(SSL\) tool is a menu\-driven tool available on the [AWS Marketplace Management Portal \(AMMP\)](https://aws.amazon.com/marketplace/management/reports/) you use to submit or edit product offerings\. The other tool is the Product Load Form, also available on the AMMP\. Use this table to determine whether you can submit your product using the SSL tool or will need to complete and submit the Product Load Form: 
+ Product submission is the process used to make your products available to AWS Marketplace customers\. There are two tools used to submit products for publication in the AWS Marketplace\. The Self\-service Listing \(SSL\) tool is a menu\-driven tool available on the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) \(AMMP\) you use to submit or edit product offerings\. The other tool is the Product Load Form, also available on the AMMP\. Use this table to determine whether you can submit your product using the SSL tool or will need to complete and submit the Product Load Form: 
 
 
 |  **Pricing Model **Yes = product submission using SSL  No = product submission using Product Load Form   |  **Products launched using Single\-Node AMI **  |  **Products launched with AWS CloudFormation**  |  **Products launched as Software as a Service \(SaaS\)**  | 
@@ -18,7 +18,7 @@
 |  SaaS Contract  |     |     |  Yes  | 
 |  SaaS Legacy  |     |     |  No  | 
 
- You can submit products individually, or can submit multiple products at the same time\. Bulk submissions \(new products or updates to products\) cannot be completed using the SSL tool\. If you are unclear on what products can be submitted in what manner, we recommend you first try submitting your product using the SSL tool and only use the product load form if you cannot submit your products with SSL\. If you have any problems making your submissions, contact the AWS Marketplace Seller Operations team at aws\-marketplace\-seller\-ops@amazon\.com\. 
+ You can submit products individually, or can submit multiple products at the same time\. Bulk submissions \(new products or updates to products\) cannot be completed using the SSL tool\. If you are unclear on what products can be submitted in what manner, we recommend you first try submitting your product using the SSL tool and only use the product load form if you cannot submit your products with SSL\. If you have any problems making your submissions, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
 ## Self\-Service Listings<a name="self-service-listings"></a>
 
@@ -63,6 +63,14 @@
 1.  Fill out the appropriate fields in each of the tabs and submit your change\. 
 
  Your product submission is reviewed using a similar process to the one used when you create a new product\. You can monitor the status of your submission using the SSL dashboard\. After your product has been approved by the AWS Marketplace team your updates will be published live on the AWS Marketplace web site\. 
+
+## Company and Product Logo Requirements<a name="seller-and-product-logos"></a>
+
+ Your company logo and the logo for the products you list through AWS Marketplace need to conform to our guidelines so that the user experience is uniform when browsing AWS Marketplace\. 
+
+ **Product Logo Specifications** – Your product logo image should have a transparent or white background and be 120 to 640 pixels in size, with a 1:1 or 2:1 \(wide\) ratio\. 
+
+ **Company Logo Specifications** – Your company logo image should have a transparent background and be 220 x 220 pixels in size, allowing for 10 pixels of padding on each side within\. 
 
 ## AWS CloudFormation\-launched Product \(free or paid\) or Usage\-based paid AMI product<a name="aws-cloudformation-launched-product-free-or-paid-or-usage-based-paid-ami-product"></a>
 
@@ -109,7 +117,7 @@
 +  Review and processing of requests typically requires **3 business days**\. We will notify you if there are any issues that require additional action\. 
 +  We request a completed Product Form or Self\-Service Listings request and AMI at least **45 days in advance** of any planned events or releases so we can prioritize the request accordingly\. 
 
- If you have any questions about your request, contact AWS Marketplace Seller Operations at **aws\-marketplace\-seller\-ops@amazon\.com**\. 
+ If you have any questions about your request, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
 ## Submitting AMIs to AWS Marketplace<a name="submitting-amis-to-aws-marketplace"></a>
 
