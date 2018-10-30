@@ -104,7 +104,7 @@
 
  As an AWS Marketplace seller you can list your products in AWS Marketplace\. To list a SaaS product in AWS Marketplace, log into the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) and navigate to the **Listings** tab\. To create a new SaaS listing, in the **Create a New Product** menu, choose either **SaaS Subscriptions** or **SaaS Contracts**\. Required information you must provide includes: 
 
- **For SaaS Contracts: ** 
+ **For SaaS Contracts:** 
 +  Software by, Product title, product description, product logo, EULA, highlights, product category, search keywords, resources, support, refund policy 
 +  The SaaS URL on your details page you want users redirected to \(registration landing page owned by the seller that will be used for accepting new customers coming from AWS Marketplace\) 
 +  Contract Duration \(1 month, 12 months, 24 months, 36 months\) 
@@ -135,6 +135,7 @@
 
  After registering your product, you will have the option to sign up for an SNS topic that will provide notifications about contract creation and modification\. Your application should call `GetEntitlements` on the AWS Marketplace Entitlement Service to retrieve the customer’s entitlement\. 
 
+ **The AWS Marketplace Entitlement Service is available in the us-east-1 region only.**
 ### Registration Process<a name="registration-process-1"></a>
 
  The registration process is similar to consumption\-based products, with some minor differences\. 
