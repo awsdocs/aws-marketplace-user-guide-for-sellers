@@ -129,11 +129,11 @@
 
  **Q: Can we unsubscribe from new report email notifications?** 
 
- **A:** Yes you can\. Send your request for cancel your subscription to **aws\-marketplace\-seller\-ops@amazon\.com**\. 
+ **A:** Yes you can\. To cancel your subscription contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
  **Q: Why didn’t I receive a Daily Customer Subscriber or Daily Business Report today?** 
 
- **A:** Reports are only generated when there is relevant data available that our system can enter in to them\. For example, if you have no subscribers on any of your products, then the Daily Customer Subscriber report won’t be generated\. If you still believe this is an error, contact **aws\-marketplace\-seller\-ops@amazon\.com** and the team will investigate\. 
+ **A:** Reports are only generated when there is relevant data available that our system can enter in to them\. For example, if you have no subscribers on any of your products, then the Daily Customer Subscriber report won’t be generated\. If you still believe this is an error, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team and the team will investigate\. 
 
  **Q: Can you share more information about customers?** 
 
@@ -161,7 +161,7 @@
 
  **Q: Can I download past reports?** 
 
- **A:** You have access to past reports on management portal\. If you don't see the report there, contact **aws\-marketplace\-seller\-ops@amazon\.com** and we will look into it\. 
+ **A:** You have access to past reports on management portal\. If you don't see the report there, ccontact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team and we will look into it\. 
 
  **Q: Do reports include BYOL products?** 
 
@@ -205,4 +205,4 @@
 
  If you wish to receive de\-obfuscated customer information for the purpose of compensating your sales team for sales of products via AWS Marketplace, AWS Marketplace offers an additional Sales Compensation report\. Sales Compensation reports contain additional information such as customer email domain, customer AWS Account ID, and location in order to help you compensate your field, and use of such information is strictly limited to field sales team compensation\. 
 
- For more information about program requirements and how to sign up to receive this data, please review the AWS Marketplace Enhanced Data Sharing Program Guide\. 
+ For more information about program requirements and how to sign up to receive this data, see [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md)\. 

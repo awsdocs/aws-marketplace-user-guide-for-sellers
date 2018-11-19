@@ -81,9 +81,9 @@
 +  Currently, products that use the Clusters and AWS Resources feature cannot use the AWS Marketplace Metering Service\. 
 +  Price, instance type, or region change will follow the regular process as other AWS Marketplace products\.
 +  Products with the AWS Marketplace Metering Service cannot be converted to other pricing models such as hourly, monthly, or BYOL\. 
-+  AWS MArketplace recommends adding IAM policy information in your usage instructions or document\. 
++  AWS Marketplace recommends adding IAM policy information in your usage instructions or document\. 
 
- If you have questions, contact aws\-marketplace\-seller\-ops@amazon\.com 
+ If you have questions, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
 ## Modifying Your Software to Use the Metering Service<a name="modifying-your-software-to-use-the-metering-service"></a>
 

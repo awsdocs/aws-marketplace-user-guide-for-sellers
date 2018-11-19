@@ -13,7 +13,7 @@
  Includes data from the 24\-hour period of the previous day\. 
 
 
-|  **Column Name**  |  **Available for All Aellers**  |  **Available for Sellers Enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
+|  **Column Name**  |  **Available for All Sellers**  |  **Available for Sellers Enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
 | --- | --- | --- | --- | 
 |  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS account number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
 |  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
@@ -29,7 +29,7 @@
 |  Offer ID  |  ✔  |  ✔  |  The identifier for the offer the subscriber signed  | 
 |  Offer Visibility  |  ✔  |  ✔  |  Indicates whether the offer is a public, private, or enterprise contract offer  | 
 |  Customer AWS Account Number  |   |  ✔  |  The AWS account number, associated with the AWS account that software charges are billed to | 
-|  Customer Country  |   |  ✔  |  The billin­g address country associated with the AWS account to which software charges are billed  | 
+|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
 |  Customer State  |   |  ✔  |  The billing address state associated with the AWS account that software charges are billed to | 
 |  Customer City  |   |  ✔  |  The billing address city associated with the AWS account that software charges are billed to | 
 |  Customer Zip Code  |   |  ✔  |  The billing address zip code associated with the AWS account that software charges are billed to  | 
@@ -57,7 +57,7 @@
 |  Currency  |  ✔  |  ✔  |  The currency \(e\.g\. USD\) associated with the estimated revenue  | 
 |  Fee Description  |  ✔  |  ✔  |  The reason for the fee \(e\.g\. monthly fee, annual fee, SaaS Contracts fee, refund, etc\.\)  | 
 |  Customer AWS Account Number  |   |  ✔  |  The AWS account number­­ associated with the AWS account to which software charges are billed  | 
-|  Customer Country  |   |  ✔  |  The billin­g address country associated with the AWS account to which software charges are billed  | 
+|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
 |  Customer State  |   |  ✔  |  The billing address state associated with the AWS account to which software charges are billed  | 
 |  Customer City  |   |  ✔  |  The billing address city associated with the AWS account to which software charges are billed  | 
 |  Customer Zip Code  |   |  ✔  |  The billing address zip code associated with the AWS account to which software charges are billed  | 
@@ -104,7 +104,7 @@
 |  Type  |  ✔  |  ✔  |  The AWS EC2 instance type  | 
 |  Count  |  ✔  |  ✔  |  The count of AWS EC2 instances  | 
 |  Customer AWS Account Number  |   |  ✔  |  The AWS account number­­ associated with the AWS account to which software charges are billed  | 
-|  Customer Country  |   |  ✔  |  The billin­g address country associated with the AWS account to which software charges are billed  | 
+|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
 |  Customer State  |   |  ✔  |  The billing address state associated with the AWS account to which software charges are billed  | 
 |  Customer City  |   |  ✔  |  The billing address city associated with the AWS account to which software charges are billed  | 
 |  Customer Zip Code  |   |  ✔  |  The billing address zip code associated with the AWS account to which software charges are billed  | 
@@ -154,7 +154,7 @@
 |  Offer ID  |  ✔  |  ✔  |  The identifier for the offer the subscriber signed  | 
 |  Offer Visibility  |  ✔  |  ✔  |  Indicates the offer to be a public, private, or enterprise contract offer  | 
 |  Customer AWS Account Number  |   |  ✔  |  The AWS account number­­ associated with the AWS account to which software charges are billed  | 
-|  Customer Country  |   |  ✔  |  The billin­g address country associated with the AWS account to which software charges are billed  | 
+|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
 |  Customer State  |   |  ✔  |  The billing address state associated with the AWS account to which software charges are billed  | 
 |  Customer City  |   |  ✔  |  The billing address city associated with the AWS account to which software charges are billed  | 
 |  Customer Zip Code  |   |  ✔  |  The billing address zip code associated with the AWS account to which software charges are billed  | 

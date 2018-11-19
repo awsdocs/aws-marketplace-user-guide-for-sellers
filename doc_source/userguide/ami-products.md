@@ -42,4 +42,4 @@ After your product is removed, the product appears in your **Request History** l
 
 For listings not created with the Self\-Service Listings tool, edit and upload the Product Load Form for the product\. Links to upload updated Product Load Forms are on the **File Uploads** tab on the AMMP landing page\.
 
- If you have questions about product removals, contact the AWS Marketplace Seller Operations team at aws\-marketplace\-seller\-ops@amazon\.com\.
+ If you have questions about product removals, contact the contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\.

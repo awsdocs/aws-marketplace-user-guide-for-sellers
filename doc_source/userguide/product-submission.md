@@ -138,9 +138,9 @@
 
 1.  View your scan results 
 
- Once your AMI has successfully been scanned, you can follow the current process to submit the AMI for processing by the AWS Marketplace Seller and Catalog Operations team by [uploading](https://aws.amazon.com/marketplace/management/product-load/) your product load form or emailing **aws\-marketplace\-seller\-ops@amazon\.com**\. 
+ Once your AMI has successfully been scanned, you can follow the current process to submit the AMI for processing by the AWS Marketplace Seller and Catalog Operations team by [uploading](https://aws.amazon.com/marketplace/management/product-load/) your product load form\. For any problems, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
- Please note that in order for your AMI to be included in the self\-service AMI scanning list, it must be in the us\-east\-1 \(N\. Virginia\) region and owned by your AWS Marketplace seller account\. If you need additional accounts whitelisted for the AWS Marketplace Management Portal, please contact **aws\-marketplace\-seller\-ops@amazon\.com** with the AWS Account ID that owns the AMI to be scanned\. 
+ Please note that in order for your AMI to be included in the self\-service AMI scanning list, it must be in the us\-east\-1 \(N\. Virginia\) region and owned by your AWS Marketplace seller account\. If you need additional accounts whitelisted for the AWS Marketplace Management Portal, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team with the AWS Account ID that owns the AMI to be scanned\. 
 
 ### AMI Cloning and Product Code Assignment<a name="ami-cloning-and-product-code-assignment"></a>
 
@@ -180,4 +180,4 @@
 +  Pricing is specified for all enabled instance types \(for hourly, hourly\_monthly and hourly\_annual pricing models\) 
 +  Monthly pricing is specified \(for hourly\_monthly and monthly pricing models\) 
 
- If you have any questions or comments about automated AMI building, please contact **aws\-marketplace\-seller\-ops@amazon\.com** 
+ If you have any questions or comments about automated AMI building, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 

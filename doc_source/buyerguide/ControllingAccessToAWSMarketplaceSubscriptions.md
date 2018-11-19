@@ -1,6 +1,6 @@
 # Controlling Access to AWS Marketplace Subscriptions<a name="ControllingAccessToAWSMarketplaceSubscriptions"></a>
 
-The best way to let others in your organization manage subscriptions is to use AWS Identity and Access Management \(IAM\) to create users and groups\. For example, if John should only be allowed to view your subscriptions, you can create an IAM user for him and add his IAM user to the read\-only group\. If John's role in your organization changes or he leaves the company, you can change the group that his IAM user belongs to, or you can change his user's settings in IAM\. 
+The recommended way to let others in your organization manage subscriptions is to use AWS Identity and Access Management \(IAM\) to create users and groups\. For example, if John should only be allowed to view your subscriptions, you can create an IAM user for him and add his IAM user to the read\-only group\. If John's role in your organization changes or he leaves the company, you can change the group that his IAM user belongs to, or you can change his user's settings in IAM\. 
 
 **Important**  
 All of your users work on the same AWS Marketplace account\. Any change that a user makes to manage a software subscription is global and applies to all of your users for that subscription\. 
@@ -64,11 +64,11 @@ If you want the URL for your sign\-in page to contain your company name \(or oth
 
 As users work in AWS Marketplace, AWS enforces the appropriate permissions\. For example, user John might belong to a group that has only read\-only permissions to work with your subscriptions\. When he signs in to AWS Marketplace, he can choose the **Your Software** link at the top of the page\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/AWS-Marketplace-YourSoftwareLink-2.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/buyerguide/images/AWS-Marketplace-YourSoftwareLink-2.png)
 
 When John does this, a message tells him that he does not have permissions to manage software, as shown in the following image\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/AWS-Marketplace-SubscribeError.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/buyerguide/images/AWS-Marketplace-SubscribeError.png)
 
 ## Finding the Account Number for Customer Support<a name="GettingSupport"></a>
 

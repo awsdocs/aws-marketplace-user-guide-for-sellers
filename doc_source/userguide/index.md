@@ -1,4 +1,4 @@
-# AWS Marketplace User Guide 
+# AWS Marketplace User Guide for AWS Marketplace Providers
 
 -----
 *****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
@@ -14,11 +14,10 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [What Is AWS Marketplace?](what-is-marketplace.md)
++ [What Is AWS Marketplace](what-is-marketplace.md)
 + [Getting Started as a Seller](user-guide-for-sellers.md)
    + [Seller Registration Process](seller-registration-process.md)
    + [Controlling AWS Marketplace Management Portal Access](marketplace-management-portal-user-access.md)
-   + [Controlling Access to AWS Marketplace Subscriptions](ControllingAccessToAWSMarketplaceSubscriptions.md)
    + [Seller Toolkit](additional-seller-tools.md)
       + [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md)
       + [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md)

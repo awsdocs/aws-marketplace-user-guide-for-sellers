@@ -5,7 +5,7 @@
  We whitelist the product so that it's visible only to your account and any other accounts that you own and specify\. These accounts can be used to subscribe to your product and confirm that everything is working properly\. 
 
 **Note**  
- If you create a SaaS product for use in the AWS GovCloud \(US\) Region, that SaaS product must be tested and meet the requirements for the AWS GovCloud \(US\) Region\. 
+ If you create a SaaS product for use in the AWS GovCloud \(US\-West\) Region, that SaaS product must be tested and meet the requirements for the AWS GovCloud \(US\) Region\. 
 
 ## Test New Customer Registration<a name="test-new-customer-registration"></a>
 
