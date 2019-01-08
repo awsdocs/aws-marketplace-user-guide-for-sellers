@@ -36,13 +36,11 @@
 
  These 2 types of prices are displayed separately on the AWS Marketplace detail pages to provide customers with a clear understanding of the potential cost of using the products\. For example: 
 
- 
-
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/pricing-image-01.png)
 
 ### Free Trial<a name="free-trial"></a>
 
- Hourly products are eligible for the optional “Free Trial” program, where a customer can subscribe to the product and use a single instance for up to 31 days without paying any software charges on the product\. Applicable AWS infrastructure charges still apply\. Simply define the duration of the trial period \(5 to 31 days\) and notify the AWS Marketplace team at aws\-marketplace\-seller\-ops@amazon\.com\. 
+ Hourly products are eligible for the optional “Free Trial” program, where a customer can subscribe to the product and use a single instance for up to 31 days without paying any software charges on the product\. Applicable AWS infrastructure charges still apply\. Simply define the duration of the trial period \(5 to 31 days\) and notify the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
  When a customer subscribers to a Free Trial product they are sent a Welcome email that includes the term of the Free Trial, a calculated expiration date and details on unsubscribing\. 3 days prior to the expiration date a reminder email is sent\. 
 

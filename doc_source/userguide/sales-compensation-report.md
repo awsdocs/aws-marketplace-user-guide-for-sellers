@@ -37,3 +37,4 @@
 |  Opportunity Description  |  Metadata for the registered opportunity\.  | 
 |  Solution Title  |  The name of the solution  | 
 |  Solution ID  |  The unique identifier for the solution  | 
+|  Payer Reference ID  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 

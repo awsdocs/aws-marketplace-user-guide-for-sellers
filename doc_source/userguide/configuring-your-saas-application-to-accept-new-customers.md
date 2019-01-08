@@ -54,6 +54,6 @@
        }
    ```
 **Note**  
- Do not activate a product subscription unless they receive a SUBSCRIPTION\_SUCCESSFUL notification\. If you do not receive the notification, contact [AWS Marketplace](https://aws.amazon.com/marketplace/management/contact-us/)\. 
+ Do not activate a product subscription unless you receive a SUBSCRIPTION\_SUCCESSFUL notification\. 
 
 1.  You use the customer identiﬁer stored in your database to meter for usage through the AWS Marketplace Metering Service or check for entitlements through the AWS Marketplace Entitlement Service\. 

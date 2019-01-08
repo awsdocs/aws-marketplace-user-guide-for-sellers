@@ -41,6 +41,7 @@
 |  Opportunity Description  |  ✔  |  ✔  |  Metadata for the registered opportunity\.  | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
 
 ## Section 2: Annual Subscriptions<a name="section-2-annual-subscriptions-1"></a>
 
@@ -81,6 +82,7 @@
 |  Opportunity Description  |  ✔  |  ✔  |  Metadata for the registered opportunity\.  | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
 
 ## Section 3: AWS Field Demonstration Usage<a name="section-3-aws-field-demonstration-usage"></a>
 
@@ -124,3 +126,4 @@
 |  \# of Payments  |  ✔  |  ✔  |  Number of payments scheduled for the contract  | 
 |  Invoice Date  |  ✔  |  ✔  |  The date when the invoice is created  | 
 |  Invoice Amount \(USD\)  |  ✔  |  ✔  |  Amount \(in USD\) billed on the invoice  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 

@@ -1,4 +1,4 @@
-# What Is AWS Marketplace<a name="what-is-marketplace"></a>
+# What Is AWS Marketplace?<a name="what-is-marketplace"></a>
 
 AWS Marketplace is a curated digital catalog that makes it easy for customers to find, buy, deploy, and manage third\-party software and services that customers need to build solutions and run their businesses\. AWS Marketplace includes thousands of software listings from popular categories such as security, networking, storage, machine learning, business intelligence, database, and devOps\. AWS Marketplace also simplifies software licensing and procurement with flexible pricing options and multiple deployment methods\. 
 

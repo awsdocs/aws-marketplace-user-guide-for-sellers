@@ -37,6 +37,9 @@
 |  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account to which software charges are billed, e\.g\. “amazon\.com”  | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
+|  Launch Type Description  |  ✔  |  ✔  |  The type of instance launched\. This will be EC2 or Fargate\.  | 
+|  Container Hours  |  ✔  |  ✔  |  The aggregate partial hours per region by launch type\.  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
 
 ## Section 2: Disbursed Amount by Customer Geography<a name="section-2-disbursed-amount-by-customer-geography"></a>
 

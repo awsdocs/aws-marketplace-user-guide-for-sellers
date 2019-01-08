@@ -1,4 +1,4 @@
-# SaaS\-Based Products<a name="buyer-saas-products"></a>
+# SaaS Products<a name="buyer-saas-products"></a>
 
  For software as a service \(SaaS\) products, you subscribe to products through AWS Marketplace, but access the product in software vendor's environment\. AWS Marketplace oﬀers two pricing models for SaaS listings, SaaS subscriptions and SaaS contracts\. 
 

@@ -36,6 +36,7 @@
 |  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account that software charges are billed to \(e\.g\., amazon\.com\) | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
 
 ## Section 2: Fees<a name="section-2-fees"></a>
 
@@ -68,6 +69,7 @@
 |  Dimension  |  ✔  |  ✔  |  The dimension specified in the contract  | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
 
 ## Section 3: Free Trial Conversions<a name="section-3-free-trial-conversions"></a>
 
@@ -111,6 +113,7 @@
 |  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account to which software charges are billed, e\.g\. “amazon\.com”  | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
 
 ## Section 5: New Product Subscribers<a name="section-5-new-product-subscribers"></a>
 
@@ -135,6 +138,7 @@
 |  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account to which software charges are billed, e\.g\. “amazon\.com”  | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
 
 ## Section 6: Canceled Product Subscribers<a name="section-6-canceled-product-subscribers"></a>
 
@@ -161,3 +165,25 @@
 |  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account to which software charges are billed, e\.g\. “amazon\.com”  | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
+
+## Section 6: Usage by Launch Type<a name="section-7-usage-by-launch-type"></a>
+
+### Data Coverage Period<a name="data-coverage-period-6"></a>
+
+ Includes data from the 24\-hour period of the previous day\. 
+
+
+|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+| --- | --- | --- | --- | 
+|  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
+|  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
+|  User’s Country  |  ✔  |  ✔  |  The billing address country associated with the AWS account subscribed to the product  | 
+|  Product Title  |  ✔  |  ✔  |  The title of the product  | 
+|  Product Code  |  ✔  |  ✔  |  A unique identifier representing the individual software product  | 
+|  Launch Type  |  ✔  |  ✔  |  The type of container \(EC2 or Fargate\)  | 
+|  Usage Units  |  ✔  |  ✔  |  The number of units used  | 
+|  Usage Unit Types  |  ✔  |  ✔  |  Unit of measurement used\. Containers are measured by hours and percentage of hours used\.  | 
+|  Offering Description  |   |  ✔  |  Description of the offering measurement types available\. For containers this will always be hourly\.  | 
+|  Estimated Revenue  |   |  ✔  |  The estimated revenue  | 
+|  Currency  |   |  ✔  |  The currency the revenue was generated in  | 

@@ -1,7 +1,7 @@
 # AWS Marketplace User Guide for AWS Marketplace Providers
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -14,7 +14,7 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [What Is AWS Marketplace](what-is-marketplace.md)
++ [What Is AWS Marketplace?](what-is-marketplace.md)
 + [Getting Started as a Seller](user-guide-for-sellers.md)
    + [Seller Registration Process](seller-registration-process.md)
    + [Controlling AWS Marketplace Management Portal Access](marketplace-management-portal-user-access.md)
@@ -29,14 +29,26 @@ Amazon's trademarks and trade dress may not be used in
    + [Consulting Partner Private Offers](consulting-partner-offers.md)
    + [Categories and Metadata](categories-and-metadata.md)
    + [Search Engine Optimization](search-engine-optimization.md)
++ [AWS Marketplace for Desktop Application (AMDA)](amda.md)
 + [AMI-Based Products](ami-products.md)
    + [Product and AMI Policies](product-and-ami-policies.md)
    + [Best Practices for Building AMIs](best-practices-for-building-your-amis.md)
    + [Metering Service](metering-service.md)
    + [AMI-based Delivery Using AWS CloudFormation](cloudformation.md)
-   + [AWS Marketplace for Desktop Application (AMDA)](amda.md)
    + [Private Images](private-images.md)
    + [AMI Listing Checklist](aws-marketplace-listing-checklist.md)
++ [Container-Based Products](container-based-products.md)
+   + [Publishing Container Products](publishing-container-products.md)
+   + [Pricing Container Products](pricing-container-products.md)
+   + [Entitlement and Metering for Paid Products](entitlement-and-metering-for-paid-products.md)
+      + [Integrating Paid Container Software](integrating-your-paid-container-software.md)
+      + [Integrating the AWS SDK Java and RegisterUsage](aws-sdk-java-registerusage-integration.md)
+      + [Java Integration Example](java-integration-example.md)
+      + [Go Dynamic Region Lookup](go-and-python-dynamic-region-lookup.md)
+   + [Frequently Asked Questions](frequently-asked-questions.md)
++ [Machine Learning Products](machine-learning-products.md)
+   + [Listing Algorithms and Model Packages in AWS Marketplace for Machine Learning](listing-algorithms-and-model-packages-in-aws-marketplace-for-machine-learning.md)
+   + [Frequently Asked Questions](machine-learning-frequently-asked-questions.md)
 + [Software-as-a-Service–Based Products](software-as-a-service-based-products-saas.md)
    + [Listing Your SaaS Product](listing-your-saas-product.md)
    + [Pricing for SaaS Subscriptions](saas-subscriptions.md)

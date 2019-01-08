@@ -105,4 +105,4 @@
 
  If no metadata updates are requested, only the installer and associated files are required\. 
 
- If you are updating metadata, send an updated product data load form by email to your MCO point of contact \(**aws\-marketplace\-seller\-ops@amazon\.com**\)\. 
+ If you are updating metadata, send an updated product data load form to the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
