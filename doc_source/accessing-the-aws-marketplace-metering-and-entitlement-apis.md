@@ -1,0 +1,40 @@
+# Accessing the AWS Marketplace Metering and Entitlement Service APIs<a name="accessing-the-aws-marketplace-metering-and-entitlement-apis"></a>
+
+ This section assumes you have access to the AWS Command Line Interface \(AWS CLI\) and have the privileges required to carry forward the integration\. It also assumes that you're registered as a seller in AWS Marketplace and have submitted a SaaS subscriptions product or a SaaS contracts product that has been published to a limited state\. In a limited state, you can use your test accounts to verify proper configuration and function but your product is not available publicly\. 
+
+ For information on setting up the AWS CLI, along with credentials, see [Configuring the AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) in the *AWS Command Line Interface User Guide*\. If you're new to the AWS Python SDK, see the Boto 3 [Quickstart](https://boto3.readthedocs.io/en/latest/guide/quickstart.html)\. 
+
+## IAM User Policy for AWS Marketplace Actions<a name="iam-user-policy-for-aws-marketplace-actions"></a>
+
+To enable the service account that the integration is running under, you need to deﬁne a constrained AWS Identity and Access Management \(IAM\) policy for that user\. Attach the following policy to the IAM user or role that you're using for the integration\. 
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+         {
+         "Action": [
+                 "aws-marketplace:ResolveCustomer",
+                 "aws-marketplace:BatchMeterUsage",
+                 "aws-marketplace:GetEntitlements"
+         ],
+         "Effect": "Allow",
+         "Resource": "*"
+         }
+]
+```
+
+**Note**  
+ The ﬁrst permission is required for all SaaS integrations\. The second and third permissions are needed for the AWS Marketplace Metering Service API and the AWS Marketplace Entitlement Service API, respectively\. 
+
+ For more information about creating IAM users, see [Creating an IAM User in Your AWS Account](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) in the *AWS Identity and Access Management User Guide*\. For more information about creating and assigning policies, see [Changing Permissions for an IAM User](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html)\. 
+
+ This policy grants access to the APIs for the IAM role or user that you attach the policy to\. For brevity, this guide provides code samples that assume that the code is running with the permissions of that user or role\. For more information on how to enable role assumption by another account for these API calls, see [How to Best Architect Your AWS Marketplace SaaS Subscription Across Multiple AWS Accounts](https://aws.amazon.com/blogs/apn/how-to-best-architect-your-aws-marketplace-saas-subscription-across-multiple-aws-accounts/) at the AWS Partner Network \(APN\) Blog\. 
+
+## Metering for Usage<a name="metering-for-usage"></a>
+
+ For SaaS subscriptions, you meter for all usage, and customers are billed by AWS based on the metering records that you provide\. For SaaS contracts, you only meter for usage beyond a customer’s contract entitlements\. When your application meters usage for a customer, your application is providing AWS with a quantity of usage accrued\. Your application meters for the pricing dimensions that you defined when you listed your product, such as gigabytes transferred or hosts scanned in a given hour\. For example, if you charge based on the amount of data sent into your application, you can measure the amount of data and send a corresponding metering record once an hour\. AWS calculates a customer’s bill using the metering data along with the prices that you provided when you created your listing\. 
+
+ We recommend that you send a metering record every hour to give customers as much granular visibility into their usage and costs as possible\. If you aggregate usage in time periods greater than an hour \(e\.g\., day\), continue sending metering records every hour and record a quantity of 0 if there is no usage to report for that hour\. Report usage to AWS on an hourly basis for all of your customers, in batches of up to 25 at a time\. 
+
+ AWS can only bill customers for usage of your product upon receiving metering records from you\. You're responsible for ensuring that your product’s metering records are successfully transmitted and received\. You can use AWS CloudTrail to verify the record or records that you send are accurate\. You can also use the information to perform audits over time\. For more information, see [Logging AWS Marketplace API Calls with CloudTrail](https://docs.aws.amazon.com/marketplace/latest/userguide/logging-using-cloudtrail.html)\. 
