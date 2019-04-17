@@ -1,10 +1,19 @@
 # Daily Business Report<a name="DailyBuisnessReport"></a>
 
- The daily business report helps sellers understand how AWS customers are using their products on a daily basis and projects the estimated revenue expected from that usage\. The data includes a unique identifier per customer that can identify an AWS customer across report types and across days\. With this identifier, sellers can track customer usage patterns and estimated customer spend and gain insights into free trial and annual data\. The report has six sections: 
+ The daily business report helps sellers understand how AWS customers are using their products on a daily basis and projects the estimated revenue expected from that usage\. The data includes a unique identifier per customer that can identify an AWS customer across report types and across days\. With this identifier, sellers can track customer usage patterns and estimated customer spend and gain insights into free trial and annual data\. The sections in this report are: 
+
+**Topics**
++ [Publication Schedule](#publication-schedule)
++ [Section 1: Usage by Instance Type](#section-1-usage-by-instance-type)
++ [Section 2: Fees](#section-2-fees)
++ [Section 3: Free Trial Conversions](#section-3-free-trial-conversions)
++ [Section 4: New Instances](#section-4-new-instances)
++ [Section 5: New Product Subscribers](#section-5-new-product-subscribers)
++ [Section 6: Canceled Product Subscribers](#section-6-canceled-product-subscribers)
 
 ## Publication Schedule<a name="publication-schedule"></a>
 
- Daily, by 5:00 PM Pacific Time\. 
+ This report is published daily, by 5:00 PM Pacific Time\. 
 
 ## Section 1: Usage by Instance Type<a name="section-1-usage-by-instance-type"></a>
 
@@ -40,7 +49,7 @@
 
 ## Section 2: Fees<a name="section-2-fees"></a>
 
- This section includes fee\-based transactions, including Annual, Monthly, and SaaS Contracts products\. 
+ This section includes fee\-based transactions, including annual, monthly, and SaaS contracts products\. 
 
 ### Data Coverage Period<a name="data-coverage-period-1"></a>
 
@@ -166,24 +175,3 @@
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
-
-## Section 6: Usage by Launch Type<a name="section-7-usage-by-launch-type"></a>
-
-### Data Coverage Period<a name="data-coverage-period-6"></a>
-
- Includes data from the 24\-hour period of the previous day\. 
-
-
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
-| --- | --- | --- | --- | 
-|  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
-|  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
-|  User’s Country  |  ✔  |  ✔  |  The billing address country associated with the AWS account subscribed to the product  | 
-|  Product Title  |  ✔  |  ✔  |  The title of the product  | 
-|  Product Code  |  ✔  |  ✔  |  A unique identifier representing the individual software product  | 
-|  Launch Type  |  ✔  |  ✔  |  The type of container \(EC2 or Fargate\)  | 
-|  Usage Units  |  ✔  |  ✔  |  The number of units used  | 
-|  Usage Unit Types  |  ✔  |  ✔  |  Unit of measurement used\. Containers are measured by hours and percentage of hours used\.  | 
-|  Offering Description  |   |  ✔  |  Description of the offering measurement types available\. For containers this will always be hourly\.  | 
-|  Estimated Revenue  |   |  ✔  |  The estimated revenue  | 
-|  Currency  |   |  ✔  |  The currency the revenue was generated in  | 

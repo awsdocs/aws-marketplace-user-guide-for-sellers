@@ -1,52 +1,69 @@
 # Consulting Partner Private Offers<a name="consulting-partner-offers"></a>
 
-AWS Marketplace Consulting Partner Private Offers enables you to resell independent software vendors' \(ISVs'\) products\. Your customers purchase software from you, their trusted consulting partner, directly through AWS Marketplace\. The customer benefits from your knowledge of their business, localized support, and expertise\. Independent software vendors \(ISVs\) authorize you to resell their products in AWS Marketplace\. This enables you to own and maintain the financial and contractual relationship with your customers\. You can create an offer with Seller Private Offers  visible only to your customer, with customized pricing and unique commercial terms to meet your customer's needs\.
+AWS Marketplace consulting partner private offers \(CPPO\) enable you, as a consulting partner, to resell independent software vendors' \(ISVs\) products that are listed on AWS Marketplace\. First, you put an agreement in place with an ISV to resell one or more of their products\. Next, you extend a private offer to your customer for that product\.
 
-The following describes how you can become an authorized reseller and resell products to your customers\.
+CPPO gives benefits for every party involved with the offer\. You benefit because you own and maintain the financial and contractual relationship with your customers\. The ISV benefits because they can better support their channel relationships by providing a channel resale capability through AWS Marketplace\. The customer benefits because they get to purchase the product that they want from the company that they want, combining their software purchases with the relationships and expertise of consulting partners\.
 
-1.  Register as an AWS Marketplace seller to enable you to be listed as the seller of record for the transaction\. To register, visit [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/)\(AMMP\) and choose **Sign Up as an AWS Marketplace Seller**\. Complete the registration process, including the banking and tax wizards\. 
+CPPO\-enabled resales are an extension of the private offers managed through the [AWS Marketplace Seller Private Offers](https://docs.aws.amazon.com/marketplace/latest/userguide/private-offers.html) program\. Private offers are visible only to a single customer, with customized pricing and unique commercial terms to meet that customer's needs\. There are two types of private offers that you can create:
++ Recurring discount private offers
++ Non\-recurring discount private offers
 
-1.  Provide your AWS account ID to the ISV whose product you want to resell\. The ISV extends an invitation to resell to the AWS account ID that you used to register as an AWS Marketplace seller\. The invitation includes the wholesale price for each product, and is expressed as a percentage \(%\) reduction off of the publicly available price in AWS Marketplace\. The ISV can add additional contractual terms on a product\-by\-product basis\. The AWS Marketplace business development team can assist with this process\. 
+With recurring discount private offers, an ISV authorizes you to resell their product or products at an agreed\-to discount from their list price\. The discount is expressed as a percentage off the list price\. With non\-recurring discount private offers, the discount that the ISV gives you can be used only with a specific customer and only once\. In both cases, after the customer pays for the private offer, AWS Marketplace uses the standard process to distribute the funds to you and to the ISV based on the agreed\-to percentages\.
 
-1.  You can accept the invitation to resell or let the invitation expire\. After you accept the offer, you can resell the specified product or products using [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/)\. You can extend an offer with Seller Private Offers to your customers for any of the products you are authorized to resell\. 
+**Important**  
+To participate in a CPPO resale, you must be registered through the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management) as an AWS Marketplace seller\.
 
-The following work flow describes how you can create a private offer\.
+## Putting an Agreement in Place with an ISV<a name="consulting-partner-isv-agreement"></a>
 
-1.  You set the pricing for your offer\. The pricing is expressed as a percentage markup on the wholesale cost\. 
+You and the ISV complete and sign your portions of the AWS Marketplace Reseller Authorization form and return the form to AWS Marketplace\. Email the form to mpcustdesk@amazon\.com or to your AWS Marketplace channel account manager\. The form includes the following information:
++ The product or products that you can resell
++ The percentage \(%\) reduction off the prices listed on AWS Marketplace
++ The AWS account ID that you used to register as an AWS Marketplace seller
 
-1. Once you extend the private offer, your customer can subscribe to the product\. After they subscribe, your customer sees the product as manufactured by the ISV, but with you as the seller of record\.
+Once AWS receives the completed and signed form, you are an authorized reseller for that product\.
 
-1.  AWS Marketplace invoices your customer for the subscription on your customer’s AWS consolidated bill\. 
+## Offering a Recurring Discount Private Offer<a name="consulting-partner-recurring-discount"></a>
 
-1.  After your customer pays AWS Marketplace for the subscription, AWS Marketplace disburses the proceeds to you and the ISV\. 
+For recurring discount private offers, an ISV authorizes you to resell one or more of their products listed on AWS Marketplace\. The discount is an agreed\-to percentage discount off the product’s list price\. You can use the discount with any or as many customers as you want, so it is like a wholesale price to you\.
 
- AWS Marketplace enhanced reporting provides additional details for offers that follow this process\. For the ISV, you're listed as the buyer\. This helps the ISV see the activity and gauge the effectiveness of their channel\. For you, the amount received from the customer is listed as gross revenue, and the amount cost to the ISV and AWS Marketplace processing fee are listed\. 
+When you're ready to extend a private offer \(typically after all negotiations are completed and the customer has agreed to final price and terms\), complete, sign, and email the AWS Marketplace Custom Transaction Request form \(provided by AWS Marketplace\) to mpcustdesk@amazon\.com or to your AWS Marketplace channel account manager\. This form includes information about the transaction including the following:
++ The customer's account ID
++ The product being sold
++ The price that you're setting for the private offer
++ Any custom terms
 
-## Non\-Recurring Discounts<a name="non-recurring-discounts"></a>
+For certain scenarios, both you and your customer are required to sign the form before sending it to AWS Marketplace\. For example, when a private offer includes a multiyear transaction with scheduled payment amounts, you and your customer must sign the form\. If you have any questions, contact AWS Marketplace\.
 
- Once you are authorized to resell a product in AWS Marketplace, the ISV can extend an additional wholesale price reduction to you\. You can use this non\-recurring discount on a single transaction for a specific buyer\.
+## Offering a Non\-Recurring Discount Private Offer<a name="consulting-partner-non-recurring-discount"></a>
 
-The following work flow describes how you can create a non\-recurring discount\. 
+An ISV can extend a one\-time wholesale price to you for the purpose of a specific resale to a designated buyer\. This discount, expressed as a percentage off the list price, becomes the wholesale price to you for a specific transaction to a uniquely identified customer\.
 
-1.  You register your AWS Marketplace opportunity with the ISV using whatever opportunity registration system that the ISV has in place\. You identify it as an opportunity in AWS Marketplace\. 
+The ISV can extend a one\-time wholesale price to you by completing and signing the AWS Marketplace Custom Resale Transaction form, provided by AWS Marketplace\. You agree to the terms by signing the same form\. The form includes:
++ The product or products listed on AWS Marketplace that you can resell privately\.
++ The wholesale cost as determined by the ISV\. The cost is expressed as a percentage \(%\) reduction off the list price on AWS Marketplace\.
++ The account ID that you used to register as an AWS Marketplace seller\.
++ The customer’s name and account ID\.
 
-1.  After the ISV approves the registered opportunity, the ISV provides AWS Marketplace with details of the opportunity\. The registration includes the following information:
-   + The customer’s AWS account ID
-   + Your AWS account ID
-   + The additional discount that the ISV is providing to you for the opportunity
-   + The product or products being sold
-   + The start and end dates for the private offer that the ISV is extending to you
+Either you or the ISV emails the signed authorization form, along with any other agreed\-upon terms specific to the resale relationship on AWS Marketplace\. Email the form to mpcustdesk@amazon\.com or to your AWS Marketplace channel account manager\.
 
-1.  AWS Marketplace contacts you for information on the total customer price\. For example, the amount of mark\-up that you are applying to the specific opportunity\.
+## What Happens After You Submit Your Form?<a name="consulting-partner-after-submitting-form"></a>
 
-1. An AWS Marketplace representative creates and extends an offer to the customer on your behalf\. 
+After you submit your recurring discount private offer or non\-recurring discount private offer, the offer and any disbursement of funds occur in the same manner:
 
-1.  When the customer subscribes to the offer, you are listed as the seller of record\. 
+1. After AWS Marketplace receives the AWS Marketplace Custom Transaction Request form, we create a custom private offer for the customer on your behalf\. For more information on offer discovery and subscription for your customer, see [Experience for the Buyer of a Seller Private Offer](https://docs.aws.amazon.com/marketplace/latest/userguide/private-offers.html#experience-for-the-buyer-of-a-seller-private-offer)\.
 
-1.  AWS Marketplace invoices the customer for the subscription on the customer’s AWS consolidated bill\. 
+1. AWS Marketplace invoices the customer on their existing AWS bill per the terms of the private offer\. If the private offer is extended to an AWS linked account, the invoiced amount appears on the AWS payer account associated with that linked account\.
 
-1.  The customer pays their AWS consolidated bill, paying for the subscription\. 
+1. The customer pays their AWS bill in accordance with the net payment terms that they agreed to with AWS\. The private offer process enables custom terms for each transaction, but net payment terms aren't customizable\. 
 
-1.  AWS Marketplace disburses funds to both you and the ISV based on the amount owed to each of you\. 
+1. After AWS receives payment from the customer, AWS disburses payment to you and the ISV\. The ISV receives the wholesale cost minus the AWS Marketplace listing fee\. You receive your markup minus the AWS Marketplace processing fee\. All fees are percentages applied to the transaction amounts listed\. If you're not sure of the fee percentages and need this information for quoting purposes, contact your AWS Marketplace channel account manager\. If you don’t know who that is, email the AWS Marketplace channel team at aws\-mp\-channel@amazon\.com, and someone on the team will respond to you within 24 hours\. 
 
- AWS Marketplace provides enhanced sales reporting to you and the ISV\. The ISV sees you as the buyer\. You see the cost to the ISV and the amount that the customer was invoiced\. Any business data entered into the opportunity description also appears to both you and the ISV in your reports\. 
+1. AWS Marketplace provides electronic reports to the ISV and to you using the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management)\. These reports have the following differences depending on the type of private offer:
+   + For recurring discount private offers, the ISV sees you as the buyer and you see the customer as the buyer\.
+   + For non\-recurring discount private offers, you and the ISV see the customer as the buyer\.
+
+For more information on AWS Marketplace reporting, see [Seller Reporting](https://docs.aws.amazon.com/marketplace/latest/userguide/Reporting.html)\.
+
+## Additional Information<a name="consulting-partner-additional-information"></a>
+
+For additional information and questions, you and the ISVs that you work with are encouraged to connect with the AWS Marketplace channel team\. If you don’t know who to contact specifically, email aws\-mp\-channel@amazon\.com, and someone on the team will respond to you within 24 hours\.

@@ -1,6 +1,6 @@
 # Submitting Your Listing for Publication<a name="product-submission"></a>
 
-## <a name="w4aac22b3"></a>
+## <a name="w4aac21b3"></a>
 
  Product submission is the process used to make your products available to AWS Marketplace customers\. There are two tools used to submit products for publication in the AWS Marketplace\. The Self\-service Listing \(SSL\) tool is a menu\-driven tool available on the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) \(AMMP\) you use to submit or edit product offerings\. The other tool is the Product Load Form, also available on the AMMP\. Use this table to determine whether you can submit your product using the SSL tool or will need to complete and submit the Product Load Form: 
 

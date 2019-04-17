@@ -328,7 +328,7 @@ The AWS Marketplace Commerce Analytics service returns two responses\. The first
 |  Data Set S3 Location  |  The bucket name and key for the delivered data set\.  | 
 |  Data Set Meta Data S3 Location  |  The bucket name and key for the delivered data set meta data file\.  | 
 
-  This is an example of JSON\-formatted Meta Data Contents\. 
+ This is an example of JSON\-formatted Meta Data Contents\. 
 
 ```
 {
@@ -400,9 +400,7 @@ aws marketplacecommerceanalytics generate-data-set \
 
 1.  Locate the policy with a name that starts with *oneClick\_MarketplaceCommerceAnalyticsRole* and choose **Edit Policy**\. 
 
-1.  In the policy document, locate the section that specifies actions related to the service that you want to modify\. 
-
-   1.  For example, to change your Amazon S3 bucket, locate the section that includes the actions that start with **s3:** and change their respective **Resource** selection to specify your new Amazon S3 bucket\. 
+1.  In the policy document, locate the section that specifies actions related to the service that you want to modify\. For example, to change your Amazon S3 bucket, locate the section that includes the actions that start with **s3:** and change their respective **Resource** selection to specify your new Amazon S3 bucket\.
 
  For additional information about IAM policies, see the following guide: [https://docs\.aws\.amazon\.com/IAM/latest/UserGuide/access\_policies\.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) 
 

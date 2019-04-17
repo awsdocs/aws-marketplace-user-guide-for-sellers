@@ -36,7 +36,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 
 1.  Verify that you can access the service through the network load balancer\. 
 
-1. [Request a certificate from AWS Certificate Manger](http://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request.html) for your user\-friendly DNS name\. Before AWS Certificate Manager \(ACM\) issues a certificate, it validates that you own or control the domain names in your certificate request\. 
+1. [Request a certificate from AWS Certificate Manager](http://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request.html) for your user\-friendly DNS name\. Before AWS Certificate Manager \(ACM\) issues a certificate, it validates that you own or control the domain names in your certificate request\. 
 
 1.  Delegate the subdomain of your user\-friendly DNS name, such as api\.vpce\.example\.com, to the name servers provided to you by the MCO team\. In your DNS system, you must create a name server \(NS\) resource record to point this subdomain to the Route 53 name servers provided by the MCO team so that DNS names \(such as vpce\-0ac6c347a78c90f8\.api\.vpce\.example\.com\) are publicly resolvable\. 
 

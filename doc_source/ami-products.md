@@ -10,7 +10,13 @@ Product codes automatically propagate as customers work with the software\. For 
 
 AWS Marketplace product listings allow for multiple versions of the product to be available to subscribers as part of their subscription as separate AMIs\. The seller can request any number of versions to be available on a product listing\. Once a subscriber has access to an AMI, they always have launch permissions on the AMI, regardless of the visibility or status of that version on the listing\. 
 
- For example, the product Data Cleaner might have versions 1\.0\.0, 1\.2\.5, and 2\.0\.1, all of which can be available to subscribers\. If you request the removal of version 1\.0\.0, no new customers can subscribe to that version, but exisiting customers can access it\. 
+ For example, the product Data Cleaner might have versions 1\.0\.0, 1\.2\.5, and 2\.0\.1, all of which can be available to subscribers\. If you request the removal of version 1\.0\.0, no new customers can subscribe to that version, but existing customers can access it\. 
+
+## AMI File Upload<a name="amis-file-upload"></a>
+
+Self\-service AMI scanning is available in the AWS Marketplace Management Portal\. With this feature, you can initiate scans of your AMIs and receive scanning results quickly—typically in less than an hour—with clear feedback in a single location\. For more information, see [AMI Self\-Service Scanning](https://aws.amazon.com/marketplace/management/manage-products/#/build.build-new)\. 
+
+To upload a new product load form, click the **File Upload** tab at the top of the AWS Marketplace Management Portal\. From there, you can download the most recent product load template\. We strongly recommend checking that the form is the most recent because it's consistently updated with more instance types and regions as they become available\. Using AMI Self\-Service Scanning significantly increases the ease of loading the page\. 
 
 ## Removing Products from AWS Marketplace<a name="removing-products-from-aws-marketplace"></a>
 

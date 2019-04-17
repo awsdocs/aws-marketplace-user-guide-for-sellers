@@ -10,27 +10,27 @@ To allow people in your company to sign in to the AWS Marketplace Management Por
 
 1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
-1. In the left navigation pane, choose **Users**, and then choose **Create New Users**\.
+1. In the left navigation pane, choose **Users** and then choose **Create New Users**\.
 
-1. In the numbered text boxes, type a name for each user that you want to create\.
+1. In the numbered text boxes, enter a name for each user that you want to create\.
 
-1. Clear the **Generate an access key for each user** check box, and then choose **Create**\.
+1. Clear the **Generate an access key for each user** check box and then choose **Create**\.
 
-**To assign a password to each user you just created**
+**To assign a password to each user that you just created**
 
 1. In the list of users, choose the name of a new user\.
 
-1. Choose the **Security Credentials** tab, and then choose **Manage Password**\.
+1. Choose the **Security Credentials** tab and then choose **Manage Password**\.
 
 1. Choose an option for either an auto\-generated password or a custom password\. Optionally, to require the user to choose a new password at the next sign\-in, select the box for **Require user to create a new password at next sign\-in**\. Choose **Apply**\.
 
 1. Choose **Download Credentials** to save the user name, password, and account\-specific sign\-in URL to a comma\-separated values \(CSV\) file on your computer\. Then choose **Close**\.
 
 **Note**  
-To sign in with the IAM user name and password you just created, users must navigate to your account\-specific sign\-in URL\. This URL is in the credentials file that you just downloaded, and is also available in the IAM console\. For more information, see [How IAM Users Sign In to Your AWS Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_sign-in.html) in the *IAM User Guide*\.
+To sign in with the IAM user name and password that you just created, users must navigate to your account\-specific sign\-in URL\. This URL is in the credentials file that you just downloaded and is also available on the IAM console\. For more information, see [How IAM Users Sign In to Your AWS Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_sign-in.html) in the *IAM User Guide*\.
 
 **Tip**  
-Create a user name and password for yourself as well, even though you are the AWS account owner\. It is a recommended best practice for everyone to work in the AWS Marketplace Management Portal as an IAM user, even the account owner\. To learn how to create an IAM user for yourself that has administrative permissions, go to [Creating an Administrators Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the *IAM User Guide*\.
+Create a user name and password for yourself as well, even though you are the AWS account owner\. It's a recommended best practice for everyone to work in AWS Marketplace Management Portal as an IAM user, even the account owner\. To learn how to create an IAM user for yourself that has administrative permissions, go to [Creating an Administrators Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the *IAM User Guide*\.
 
 ## Creating Groups with Appropriate Permissions and Adding Users to those Groups<a name="creating-iam-groups"></a>
 
@@ -98,15 +98,15 @@ After you have created users in IAM, users can sign in with their own user names
 
 1. In the left navigation pane, choose **Dashboard**\.
 
-1. Near the top of the content pane, look for **IAM users sign\-in link:** and take note of the sign\-in link, which will have a format like this:
+1. Near the top of the content pane, find **IAM users sign\-in link:** and take note of the sign\-in link, which has a format like this:
 
    ```
     https://AWS_account_ID.signin.aws.amazon.com/console/
    ```
 **Note**  
-If you want the URL for your sign\-in page to contain your company name \(or other friendly identifier\) instead of your AWS account ID, you can create an alias for your AWS account by choosing **Customize**\. For more information, go to [Your AWS Account ID and Its Alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the *IAM User Guide*\. 
+If you want the URL for your sign\-in page to contain your company name \(or other friendly identifier\) instead of your AWS account ID, you can create an alias for your account by choosing **Customize**\. For more information, see [Your AWS Account ID and Its Alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the *IAM User Guide*\. 
 
-1. Distribute this URL to the people at your company who can work with AWS Marketplace Management Portal, along with the user name and password that you created for each\. Instruct them to use your account's unique sign\-in URL to sign in before they access the AWS Marketplace Management Portal\. 
+1. Distribute this URL to the people at your company who can work with AWS Marketplace Management Portal, along with the user name and password that you created for each\. Instruct them to use your account's unique sign\-in URL to sign in before they access AWS Marketplace Management Portal\. 
 
 ## Permissions Details for the AWS Marketplace Management Portal<a name="detailed-management-portal-permissions"></a>
 

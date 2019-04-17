@@ -133,9 +133,9 @@ Use the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/m
 
  Multi\-AMI solutions are reported on the existing reports\. Each AMI in a solution appears as its own line item on the daily usage reports\. Each solution appears as a single line item on the revenue reports\. Disbursement reports are unchanged\. 
 
-### Are single\-AMI and multi\-AMI AWS CloudFormation templates supported in the AWS GovCloud \(US\) region?<a name="cft-faq-question-07"></a>
+### Are single\-AMI and multi\-AMI AWS CloudFormation templates supported in the AWS GovCloud \(US\-East\) Region?<a name="cft-faq-question-07"></a>
 
- Yes\. The PDT region does support single\-AMI and multi\-AMI CloudFormation templates\. The configuration of the end\-points in the template needs to be directed to the PDT region\. Additionally, both the ISV and purchasing customer must have a AWS GovCloud \(US\) account\. 
+ Yes\. The AWS GovCloud \(US\-East\) Region does support single\-AMI and multi\-AMI CloudFormation templates\. The configuration of the end\-points in the template needs to be directed to the AWS GovCloud \(US\-East\) Region\. Additionally, both the ISV and purchasing customer must have a AWS GovCloud \(US\) account\. 
 
 ### What's the process to enable my templates for the AWS GovCloud \(US\)?<a name="cft-faq-question-08"></a>
 + Provide the AWS Marketplace operations team your AWS GovCloud \(US\) account ID\.

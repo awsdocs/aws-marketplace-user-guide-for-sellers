@@ -56,6 +56,8 @@ For **Enable Tiered Dimensions**, choose how you want you customers to be able t
 |  Additional hosts monitored per hour  |   |   |  $0\.1  | 
 |  Additional containers monitored per hour  |   |   |  $0\.2  | 
 
- After you select a category, unit, and one or more dimensions, you must define the prices for each dimension, as shown in the following image\. The prices can be for the following durations: 1 month, 12 months, 24 months, or 36 months\. You can choose to oﬀer one, two, three, or all four options for your SaaS contracts listing\. The durations must be the same across each dimension\. For example, in a case where you have ReadOnlyUsers and AdminUsers dimensions, if you oﬀer a yearly price for ReadOnlyUsers, you must oﬀer it for AdminUsers, too\.
+ After you select a category, unit, and one or more dimensions, you must define the prices for each dimension, as shown in the following image\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/saas-pricing-contract-options-example.png)
+
+The prices can be for the following durations: 1 month, 12 months, 24 months, or 36 months\. You can choose to oﬀer one, two, three, or all four options for your SaaS contracts listing\. The durations must be the same across each dimension\. For example, in a case where you have ReadOnlyUsers and AdminUsers dimensions, if you oﬀer a yearly price for ReadOnlyUsers, you must oﬀer it for AdminUsers, too\.

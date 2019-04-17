@@ -48,6 +48,16 @@
 +  Funds are disbursed only after they are collected from the customer\. 
 +  If you participate in the AWS Marketplace Tax Calculation Service, any U\.S\. Sales and Use Tax collected from customers will be included in your monthly disbursement\. 
 
+## French Taxes<a name="french-taxes"></a>
+
+You could be liable for French taxes and social security contributions on transactions from, with, or in France\. To help you comply with any potentially applicable French tax obligations, AWS Marketplace sends you the following:
++ A monthly report listing your sales transactions from, with, or in France that occur through AWS Marketplace\. The monthly reports contain the transactions from the previous month\.
++ An annual report summarizing your sales transactions from, with, or in France during a given year\. The annual reports are sent to you no later than January 31 of the following year\.
+
+For more information, consult your tax adviser or see the following websites:
++ [https://www.impots.gouv.fr/portail/node/10841](https://www.impots.gouv.fr/portail/node/10841)
++ [http://www.securite-sociale.fr/Vos-droits-et-demarches-dans-le-cadre-des-activites-economiques-entre-particuliers-Article-87](http://www.securite-sociale.fr/Vos-droits-et-demarches-dans-le-cadre-des-activites-economiques-entre-particuliers-Article-87)
+
 ## Already a Seller?<a name="already-a-seller"></a>
 
  Manage your listing into incremental channel revenue by taking advantage of the go\-to\-market activities made available in the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour)\. 
