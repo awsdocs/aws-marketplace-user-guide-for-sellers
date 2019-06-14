@@ -4,7 +4,7 @@
 
 To verify a customer's entitlement to your product, use the `GetEntitlements` operation in the AWS Marketplace Entitlement Service\. The AWS Marketplace Entitlement Service is available only in the US East \(N\. Virginia\) Region, accessible through entitlement\.marketplace\.us\-east\-1\.amazonaws\.com\. 
 
- `GetEntitlements` accepts a customer identifier and dimension as filters\. `ProductCode` is a required parameter\. The operation returns a paginated list of entitlements\. The result has an `ExpirationDate` field that shows the minimum period of time thatthe entitlement is valid for\. If the customer has set up automatic renewal, the date in the ExpirationDate field is the renewal date\.
+ `GetEntitlements` accepts a customer identifier and dimension as filters\. `ProductCode` is a required parameter\. The operation returns a paginated list of entitlements\. The result has an `ExpirationDate` field that shows the minimum period of time that the entitlement is valid for\. If the customer has set up automatic renewal, the date in the ExpirationDate field is the renewal date\.
 
 The following is an example of a `GetEntitlements` request\. 
 
