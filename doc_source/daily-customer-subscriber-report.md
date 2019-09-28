@@ -1,50 +1,55 @@
 # Daily Customer Subscriber Report<a name="daily-customer-subscriber-report"></a>
 
- This report gives sellers a list of AWS Account IDs for all customers currently subscribed to their products\. 
+ This report lists data for customers that have subscriptions to your products\. This report doesn't specify current or past usage, only that a customer is subscribed to your product\. You only receive this report if relevant information is available\. If you don't receive this report and think that you should have, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\.
 
-## Publication Schedule<a name="publication-schedule-1"></a>
+You can access this report at the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/reports/)\. If you are registered for the [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md), you can also access your reports using the AWS SDK\.
 
- Daily, by 5:00 PM Pacific Time\. 
+The report has two sections: one for hourly and monthly subscriptions and one for annual subscriptions\. The report includes the list of AWS account IDs for all customers who are subscribed to your products\. 
 
-## Section 1: Hourly/Monthly subscriptions<a name="section-1-hourlymonthly-subscriptions"></a>
+## Publication Schedule<a name="daily-customer-subscriber-report-publication-schedule"></a>
 
-### Data Coverage Period<a name="data-coverage-period-6"></a>
+ This report is published daily at 00:00 UTC and covers from 00:00 UTC through 23:59 UTC of the previous day\.
 
- Includes all usage\-based subscriptions as of the previous day at 23:59:59 UTC\. 
+**Topics**
++ [Publication Schedule](#daily-customer-subscriber-report-publication-schedule)
++ [Section 1: Hourly and Monthly Subscriptions](#section-1-hourlymonthly-subscriptions)
++ [Section 2: Variable Length Subscriptions](#section-2-annual-subscriptions)
+
+## Section 1: Hourly and Monthly Subscriptions<a name="section-1-hourlymonthly-subscriptions"></a>
+
+ This section lists data for all usage\-based subscriptions as of the previous day at 23:59:59 UTC\. 
 
 
-|  **Column Name**  |  **Description**  | 
+|  Column Name  |  Description  | 
 | --- | --- | 
-|  Customer AWS Account Number  |  The AWS account number­­ associated with the AWS account which is subscribed to the to the listing\. This is a 12\-digit number, represented by 3 sets of 4 numbers, separated by hyphens, e\.g\. 1234\-5678\-9012  | 
-|  Product Title  |  The title of the product  | 
-|  Product Id  |  A unique identifier representing the individual software product  | 
-|  Product Code  |  A unique identifier representing the individual software product, which is also available in EC2 Instance Metadata  | 
-|  Subscription Start Date  |  The date when the customer subscribed to the listing, formatted as YYYY\-MM\-DD  | 
-|  Offer ID  |  The identifier for the offer the subscriber signed  | 
-|  Offer Visibility  |  Indicates the offer to be a public, private, or enterprise contract offer  | 
-|  Solution Title  |  The name of the solution  | 
-|  Solution ID  |  The unique identifier for the solution  | 
-|  Payer Reference ID  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
+|  Customer AWS Account Number  |  The account that is subscribed to the product\.  | 
+|  Product Title  |  The title of the product\.  | 
+|  Product Id  |  A unique identifier for the software product\.  | 
+|  Product Code  |  The unique identifier for the software product\. | 
+|  Subscription Start Date  |  The start date for the subscription, formatted as YYYY\-MM\-DD\.  | 
+|  Offer ID  |  The identifier for the offer that the subscriber signed\.  | 
+|  Offer Visibility  | Whether the offer is a public, private, or enterprise contract offer\. | 
+|  Solution Title  |  The name of the solution\.  | 
+|  Solution ID  |  The unique identifier for the solution\.  | 
+|  Payer Reference ID  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
 
-## Section 2: Annual subscriptions<a name="section-2-annual-subscriptions"></a>
+## Section 2: Variable Length Subscriptions<a name="section-2-annual-subscriptions"></a>
 
-### Data Coverage Period<a name="data-coverage-period-7"></a>
-
- Includes all fee\-based subscriptions as of the previous day at 23:59:59 UTC\. 
+ This section lists data for all fee\-based subscriptions as of the previous day at 23:59:59 UTC\. 
 
 
-|  **Column Name**  |  **Description**  | 
+|  Column Name  |  Description  | 
 | --- | --- | 
-|  Customer AWS Account Number  |  The AWS account number­­ associated with the AWS account which is subscribed to the to the listing\. This is a 12\-digit number, represented by 3 sets of 4 numbers, separated by hyphens, e\.g\. 1234\-5678\-9012  | 
-|  Product Title  |  The title of the product  | 
-|  Product Id  |  A unique identifier representing the individual software product  | 
-|  Product Code  |  A unique identifier representing the individual software product, which is also available in EC2 Instance Metadata  | 
-|  Annual Subscription Id  |  The ID of the annual subscription  | 
-|  Annual Subscription Quantity  |  The total number of licenses the customer specified as part of the annual purchase  | 
-|  Annual Subscription Type  |  The type of annual subscription  | 
-|  Subscription Start Date  |  The date when the customer subscribed to the listing, formatted as YYYY\-MM\-DD  | 
-|  Offer ID  |  The identifier for the offer the subscriber signed  | 
-|  Offer Visibility  |  Indicates the offer to be a public, private, or enterprise contract offer  | 
-|  Solution Title  |  The name of the solution  | 
-|  Solution ID  |  The unique identifier for the solution  | 
-|  Payer Reference ID  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
+|  Customer AWS Account Number  |  The ID of the account that is subscribed to the product\.  | 
+|  Product Title  |  The title of the product\.  | 
+|  Product Id  |  The unique identifier for the software product\.  | 
+|  Product Code  |  A unique identifier for the software product\. This information is also available as part of the Amazon EC2 instance metadata\.  | 
+|  Subscription Id  |  The ID for the subscription\.  | 
+|  Subscription Quantity  |  The total number of licenses that the customer purchased\.  | 
+|  Subscription Type  |  The type of subscription\.  | 
+|  Subscription Start Date  |  The date when the customer subscribed to the product, formatted as YYYY\-MM\-DD\.  | 
+|  Offer ID  |  The identifier for the offer that the subscriber signed\.  | 
+|  Offer Visibility  |  Whether the offer is a public, private, or enterprise contract offer\.  | 
+|  Solution Title  |  The name of the solution\.  | 
+|  Solution ID  |  The unique identifier for the solution\.  | 
+|  Payer Reference ID  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\. | 

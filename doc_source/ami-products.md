@@ -8,7 +8,7 @@ Product codes automatically propagate as customers work with the software\. For 
 
 ## Multiple Versions<a name="multiple-versions"></a>
 
-AWS Marketplace product listings allow for multiple versions of the product to be available to subscribers as part of their subscription as separate AMIs\. The seller can request any number of versions to be available on a product listing\. Once a subscriber has access to an AMI, they always have launch permissions on the AMI, regardless of the visibility or status of that version on the listing\. 
+You can have multiple versions of a product to be available to subscribers as part of their subscription as separate AMIs\. The seller can request any number of versions to be available on a product\. Once a subscriber has access to an AMI, they always have launch permissions on the AMI, regardless of the visibility or status of that version\.
 
  For example, the product Data Cleaner might have versions 1\.0\.0, 1\.2\.5, and 2\.0\.1, all of which can be available to subscribers\. If you request the removal of version 1\.0\.0, no new customers can subscribe to that version, but existing customers can access it\. 
 
@@ -16,7 +16,7 @@ AWS Marketplace product listings allow for multiple versions of the product to b
 
 Self\-service AMI scanning is available in the AWS Marketplace Management Portal\. With this feature, you can initiate scans of your AMIs and receive scanning results quickly—typically in less than an hour—with clear feedback in a single location\. For more information, see [AMI Self\-Service Scanning](https://aws.amazon.com/marketplace/management/manage-products/#/build.build-new)\. 
 
-To upload a new product load form, click the **File Upload** tab at the top of the AWS Marketplace Management Portal\. From there, you can download the most recent product load template\. We strongly recommend checking that the form is the most recent because it's consistently updated with more instance types and regions as they become available\. Using AMI Self\-Service Scanning significantly increases the ease of loading the page\. 
+To upload a new product load form, go to [File Upload](https://aws.amazon.com/marketplace/management/product-load) in the AWS Marketplace Management Portal\. From there, you can download the most recent product load template\. We strongly recommend checking that the form is the most recent because it's consistently updated with more instance types and regions as they become available\. Using AMI Self\-Service Scanning significantly increases the ease of loading the page\. 
 
 ## Removing Products from AWS Marketplace<a name="removing-products-from-aws-marketplace"></a>
 
@@ -26,15 +26,15 @@ Once your product is published, you can sunset \(remove\) the product from AWS M
 +  Current subscribers are messaged by AWS Marketplace informing of the product take down, reasons, and provide seller contact information\. 
 +  Current subscribed customers *do* retain access to the software until they cancel their subscription\. They aren't impacted in any way\. 
 
-**To remove a product created using the Self\-Service Listings tool**
+**To remove a product created using the AWS Marketplace Management Portal**
 
 1. Open the AWS Marketplace Management Portal at [https://aws.amazon.com/marketplace/management/tour/](https://aws.amazon.com/marketplace/management/tour/) and sign in to your seller account\.
 
-1. Choose the **Listings** tab\.
+1. Choose the **Products** tab, and then choose **Server**\.
 
-1. On your products listing page under **Current Listings**, locate the product that you want to remove\. In the **Actions** column for the listing, on the **Select action** menu, choose **Remove listing**\.
+1. On your product page under **Current server products**, locate the product that you want to remove\. From the **Actions** column on the **Select action** menu, choose **Remove product**\.
 
-1. On the **Remove Product Listing** page, for **Request Reason**, type the reason that you're requesting the product's removal\.
+1. On the **Remove Product** page, for **Request Reason**, type the reason that you're requesting the product's removal\.
 
 1. For **Contact Email**, type the email that AWS can use to contact you with any questions\.
 **Note**  
@@ -42,10 +42,10 @@ You can also provide a replacement product ID, but that field isn't required\.
 
 1. Review the information for accuracy and then choose **Submit Sunset Request**\. 
 
-Once you have submitted the request, you will be taken to a **What’s next** informational page\. The AWS Marketplace Seller Operations team reviews and processes your request\. Check the status of your submission by viewing **Open Requests** on your **Self\-Service Listing** page\.
+Once you have submitted the request, you will be taken to a **What’s next** informational page\. The AWS Marketplace Seller Operations team reviews and processes your request\. Check the status of your submission by viewing **Requests**\.
 
-After your product is removed, the product appears in your **Request History** list and in the **Current Listings** list\. In **Current Listings**, the only action that you can perform is downloading the spreadsheet for the listing\. You can't edit or submit another sunset request\. 
+After your product is removed, the product appears in your **Request History** list and in the **Current Products** list\. In **Current Products**, the only action that you can perform is downloading the spreadsheet for the product\. You can't edit or submit another sunset request\. 
 
-For listings not created with the Self\-Service Listings tool, edit and upload the Product Load Form for the product\. Links to upload updated Product Load Forms are on the **File Uploads** tab on the AMMP landing page\.
+For products not created using the **Products** tab, edit and upload the product load form for the product\. Links to upload updated product load forms are on the **Assets** tab on the AMMP landing page\.
 
- If you have questions about product removals, contact the contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\.
+ If you have questions about product removals, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\.

@@ -1,40 +1,45 @@
 # Sales Compensation Report<a name="sales-compensation-report"></a>
 
- The Sales Compensation Report, which is available to sellers who participate in the Enhanced Data Sharing program, provides monthly billed revenue with additional customer information not found in the standard Monthly Billed Revenue report\. This report shows the total amounts billed to customers by AWS for hourly, annual, or monthly usage of your software\. **The amounts in this report only reflect revenue billed to customers, and not amounts actually collected\.** 
+ The sales compensation report is available to you only if you participate in the [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md)\. The report lists monthly billed revenue with additional customer information that isn't in the standard [Monthly Billed Revenue Report](monthly-billed-revenue-report.md)\. The report lists the total amounts that AWS bills to customers for hourly, annual, or monthly usage of your software\. 
 
- The Sales Compensation report, and the information being shared with you as part of this program, constitute Amazon's Confidential Information under our nondisclosure agreement with you or, if no such agreement exists, the Terms and Conditions for AWS Marketplace Sellers\. It is to be used solely for the purpose of compensating your sales reps by mapping AWS Marketplace revenue to your sales reps by company name, geo and AWS Account ID\. You may use such information for the foregoing purpose, including by sharing such information with employees who have a need to know such information to understand the source of commissions payable to them, provided that your use and sharing of such information complies with the obligations in the agreements specified above, including, without limitation, Section 3\.8 of the Terms and Conditions for AWS Marketplace Sellers\. 
+**Important**  
+ The amounts in this report reflect only revenue that is billed to customers, not amounts that are collected from customers\. 
+
+ The sales compensation report and the information that is shared with you as part of this program constitute Amazon's Confidential Information under our nondisclosure agreement with you or, if no such agreement exists, the Terms and Conditions for AWS Marketplace sellers\. You can use this information only for compensating your sales representatives by mapping AWS Marketplace revenue to the representatives by company name, geography, and AWS account ID\. You can share this information with employees who need to know it to understand the source of commissions that is payable to them\. Your use and sharing of such information must comply with the obligations in our nondisclosure agreement with you and the terms and conditions for AWS Marketplace sellers, including, without limitation, Section 3\.8 of the Terms and Conditions for AWS Marketplace sellers\. 
 
 ## Publication Schedule<a name="publication-schedule-4"></a>
 
- Monthly, on the 15th of the month, by 5:00 PM Pacific Time\. 
+This report is published monthly, on the fifteenth day of each month at 00:00 UTC\. The report covers the previous calendar month from 00:00 UTC through 23:59 UTC of the last calendar day of the month\. For example, the report published on May 15 covers from April 1 at 00:00 UTC through April 30 at 23:59 UTC\.
 
-## Section 1: Billed Revenue<a name="section-1-billed-revenue"></a>
+## Billed Revenue<a name="section-1-billed-revenue"></a>
 
-### Data Coverage Period<a name="data-coverage-period-16"></a>
+ The billed revenue section of this report includes usage and fee\-based software charges from the previous calendar month\. The following are the column names and descriptions\. 
 
- Includes usage and fee\-based software charges from the previous calendar month\. 
+**Note**  
+In this report, *listing fee* is the percentage of transaction proceeds \(except for those from resale by authorized resellers of authorized resale products\) determined in accordance with the tiered listing fee\. 
 
 
-|  **Column Name**  |  **Description**  | 
+|  Column Name  |  Description  | 
 | --- | --- | 
-|  Customer AWS Account Number  |  The AWS account number­­ associated with the AWS account to which software charges are billed  | 
-|  Country  |  The billin­g address country associated with the AWS account to which software charges are billed  | 
-|  State  |  The billing address state associated with the AWS account to which software charges are billed  | 
-|  City  |  The billing address city associated with the AWS account to which software charges are billed  | 
-|  Zip Code  |  The billing address zip code associated with the AWS account to which software charges are billed  | 
-|  Email Domain  |  The email domain associated with the AWS account to which software charges are billed, e\.g\. “amazon\.com”  | 
-|  Product Code  |  A unique identifier for an individual software product  | 
-|  Product Title  |  The title of the product  | 
-|  Gross Revenue  |  The amount billed for the usage or monthly fees  | 
-|  AWS Revenue Share  |  The AWS listing fee amount that will be deducted from the billed amount at settlement time  | 
-|  Gross Refunds  |  The total amount refunded for the transaction \(if applicable\)  | 
-|  AWS Refunds Share  |  The portion of the AWS listing fee refunded for the transaction \(if applicable\)  | 
-|  Net Revenue  |  The net amount billed for this transaction, less AWS listing fees, refunds, and U\.S\. sales and use tax  | 
-|  Currency  |  The currency \(e\.g\. USD\)  | 
-|  AR Period  |  The month and year in which the transaction occurred, in the format “YYYY\-MM”  | 
-|  Transaction Reference ID  |  A unique identifier representing the transaction which can be used to correlate transactions across AWS Marketplace reports  | 
+|  Customer AWS Account Number  |  The account that the software charges are billed to\.  | 
+|  Country  |  The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  State  |  The billing address state that is associated with the account that the software charges are billed to\. | 
+|  City  |  The billing address city that is associated with the account that the software charges are billed to\.  | 
+|  Zip Code  |  The billing address zip code that is associated with the account that the software charges are billed to\.  | 
+|  Email Domain  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Product Code  |  The unique identifier for the software product\.  | 
+|  Product Title  |  The title of the product\.  | 
+|  Gross Revenue  |  The amount that is billed for using the product or the monthly fees for using the product\.  | 
+|  AWS Revenue Share  |  The AWS fee amount that is deducted from the billed amount at settlement time\. It appears in the [Monthly Disbursement Report](monthly-disbursement-report.md)\. | 
+|  Gross Refunds  |  The total amount of any refunds for the transaction\.  | 
+|  AWS Refunds Share  |  The portion of the AWS fee that is refunded for the transaction\.  | 
+|  Net Revenue  |  The net amount that is billed for this transaction, minus AWS fees, refunds, and US sales and use tax\.  | 
+|  Currency  |  The currency of the transaction\. For example, if the transaction is in US dollars, the entry is USD\.  | 
+|  AR Period  |  The month and year of the transaction, in the format of YYYY\-MM\. | 
+|  Transaction Reference ID  |  A unique identifier that represents the transaction, which you can use to correlate transactions across AWS Marketplace reports\. | 
 |  Opportunity Name  |  The unique identifier for a registered opportunity\.  | 
-|  Opportunity Description  |  Metadata for the registered opportunity\.  | 
-|  Solution Title  |  The name of the solution  | 
-|  Solution ID  |  The unique identifier for the solution  | 
-|  Payer Reference ID  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
+|  Opportunity Description  |  Any metadata in the registered opportunity\.  | 
+|  Solution Title  |  The name of the solution\.  | 
+|  Solution ID  |  The unique identifier of the solution\.  | 
+|  Payer Reference ID  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
+|  Payer Address ID  |  A unique identifier that represents the customer's address\. | 

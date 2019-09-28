@@ -39,6 +39,7 @@ You are responsible for securing resell rights for non\-free Linux distributions
 + Be aware of the top 10 vulnerabilities for web applications and build your applications accordingly\. To learn more, visit [Open Web Application Security Project \(OWASP\) \- Top 10 Web Application Security Risks](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)\. When new Internet vulnerabilities are discovered, promptly update any web applications that ship in your AMI\. Examples of resources that include this information are [SecurityFocus](http://www.securityfocus.com/vulnerabilities) and the [NIST National Vulnerability Database](http://nvd.nist.gov/)\.
 
  Resources:
++ [Guidelines for Shared Linux AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/building-shared-amis.html) in the *Amazon EC2 User Guide for Linux Instances*
 +  [AWS Cloud Security](http://aws.amazon.com/security/) 
 +  [The Center for Internet Security \(CIS\): Security Benchmarks](http://benchmarks.cisecurity.org/downloads/benchmarks/) 
 +  [The Open Web Application Security Project \(OWASP\): Secure Coding Practices Quick Reference Guide](https://www.owasp.org/index.php/OWASP_Secure_Coding_Practices_-_Quick_Reference_Guide) 

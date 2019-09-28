@@ -1,30 +1,28 @@
 # Product Support Connection<a name="product-support-connection"></a>
 
-## Product Support Connection<a name="product-support-connection"></a>
-
  AWS Marketplace Product Support Connection \(PSC\) is a feature that allows AWS Marketplace customers to provide contact information in the AWS Marketplace website for the purposes of obtaining and accessing product support from AWS Marketplace Sellers\. AWS Marketplace shares the provided data with participating Sellers via an API to enable a better support experience\. Customers can choose to add contact details during or after a purchase of PSC\-enabled AWS Marketplace products, and Sellers can retrieve the Customer contact data, along with relevant product subscription details, by calling a pull\-based API\. 
 
  Your staff can use the Customer Support Eligibility tool to access near\-real\-time information about a customer's subscription to your products and provide fast, personalized service\. AWS Marketplace Management Portal makes it easy to get started: enter a customer's AWS account ID to retrieve subscription and usage information from their account\. 
 
  You also have the option to enroll your products in AWS Marketplace Product Support Connection \(PSC\)\. For products that are enrolled in PSC, AWS Marketplace customers can choose to provide contact information \(including name, organization, email address, and phone number\) via the AWS Marketplace web site for the purposes of obtaining and accessing product support\. If you enroll in PSC, AWS Marketplace will share the provided data with you via an API to help enable a more seamless support experience\. 
 
-### How does AWS Marketplace Product Support Connection benefit me as a Seller?<a name="how-does-aws-marketplace-product-support-connection-benefit-me-as-a-seller"></a>
+## How does AWS Marketplace Product Support Connection benefit me as a Seller?<a name="how-does-aws-marketplace-product-support-connection-benefit-me-as-a-seller"></a>
 
  Participating in PSC can make it easier for you to provide support to customers that subscribe to your products on AWS Marketplace\. The data available through the program lets you keep customer contact information up to date in your support or CRM system\(s\)\. If an AWS Marketplace customer shares contact information through PSC and then contacts you for support, you will be able to quickly access and verify the customer’s identity and product subscription details\. 
 
-### What information will AWS Marketplace Product Support Connection collect from customers?<a name="what-information-will-aws-marketplace-product-support-connection-collect-from-customers"></a>
+## What information will AWS Marketplace Product Support Connection collect from customers?<a name="what-information-will-aws-marketplace-product-support-connection-collect-from-customers"></a>
 
  We collect first and last name, job title, company name, email address, telephone number, country, and zip code\. Providing contact details is optional, but if a customer chooses to provide contact details, then organization, first and last name, email, and telephone number are required fields\. All provided details, along with the customer’s AWS account number, product ID, product code, and subscription start date, are available to participating Sellers via a pull\-based API\. Customers can add information for up to 5 contacts per product subscription, and they can also edit or delete their contact details later\. 
 
-### Will I receive contact details for every customer subscribed to my product?<a name="will-i-receive-contact-details-for-every-customer-subscribed-to-my-product"></a>
+## Will I receive contact details for every customer subscribed to my product?<a name="will-i-receive-contact-details-for-every-customer-subscribed-to-my-product"></a>
 
  Not necessarily\. Entering and sharing contact information is optional for customers, although we recommend that customers share at least one contact for supported products in order to receive a better product support experience\. 
 
-### At what point in the purchase process does a customer become eligible for PSC?<a name="at-what-point-in-the-purchase-process-does-a-customer-become-eligible-for-psc"></a>
+## At what point in the purchase process does a customer become eligible for PSC?<a name="at-what-point-in-the-purchase-process-does-a-customer-become-eligible-for-psc"></a>
 
- Customers have the option to provide contact details for PSC during or after a subscription to a PSC\-enabled product\. For AMI\-based products, customers that choose Annual or Monthly subscription options are charged for the product when they subscribe; customers that choose hourly subscriptions are charged when they launch an instance\. For more information about what it means for customers to subscribe to a product, please visit the [AWS Marketplace Help Pages](https://aws.amazon.com/marketplace/help/200799470)\. 
+ Customers have the option to provide contact details for PSC during or after a subscription to a PSC\-enabled product\. For AMI\-based products, customers that choose Annual or Monthly subscription options are charged for the product when they subscribe; customers that choose hourly subscriptions are charged when they launch an instance\. For more information about what it means for customers to subscribe to a product, visit the [AWS Marketplace Help Pages](https://aws.amazon.com/marketplace/help/200799470)\. 
 
-### Will I receive data about a customer’s product usage?<a name="will-i-receive-data-about-a-customers-product-usage"></a>
+## Will I receive data about a customer’s product usage?<a name="will-i-receive-data-about-a-customers-product-usage"></a>
 
  No; at this time, PSC collects contact details and subscription information only\. Usage data is not currently collected as part of this program\. 
 
@@ -57,22 +55,22 @@
 ### What information should I include in my description of support processes?<a name="what-information-should-i-include-in-my-description-of-support-processes"></a>
 +  Which product listing\(s\) will you enroll in PSC? 
 +  Have you already built and tested a way to pull data from the API and port it to your support systems? 
-  +  If yes, please describe how you import this data to your support systems? 
-  +  If no, when do you expect to have this implemented? Please describe your planned approach\. 
-+  Please summarize your support process for AWS Marketplace customers that participate in PSC\. 
+  +  If yes, describe how you import this data to your support systems? 
+  +  If no, when do you expect to have this implemented? Describe your planned approach\. 
++ Summarize your support process for AWS Marketplace customers that participate in PSC\. 
   +  How can AWS Marketplace PSC customers contact you to receive support for these products \(email, phone, other methods\)? 
   +  If PSC customers contact you for support, how long will it typically take before they receive a reply? 
-  +  Do you have different support levels for different AWS Marketplace products? If so, please describe your support tiers and what they cover\. 
-  +  What communications do you plan to send to customers under your support policy? If you plan to send proactive communications, please describe what you plan to send\. 
+  +  Do you have different support levels for different AWS Marketplace products? If so, describe your support tiers and what they cover\. 
+  +  What communications do you plan to send to customers under your support policy? If you plan to send proactive communications, describe what you plan to send\. 
   +  After customers enter their data in the AWS Marketplace site, how long will it take for the data to appear in your support system\(s\)? 
   +  If a customer opts out of PSC, what is your process for deleting their contact data? 
-  +  Do you have a web page describing the support you offer for AWS Marketplace customers? If so, please provide it\. 
+  +  Do you have a web page describing the support you offer for AWS Marketplace customers? If so, provide it\. 
 
 ## Enrolling Your Products<a name="enrolling-your-products"></a>
 
 ### How do I enroll products in PSC?<a name="how-do-i-enroll-products-in-psc"></a>
 
- After reviewing the program requirements, contact the AWS Marketplace Seller Catalog Operations team to provide a list of the products you would like to enroll in PSC\. You can enroll new or existing AMI\-based product listings in the program\. Please allow 1\-2 weeks for your request to be processed\. You will need to verify that you have completed integration with the API before your products can be enabled for PSC\. As described above, you must also provide a valid support email address on your product listing page\(s\), and you should provide a writeup describing the data handling and support process you plan to follow for AWS Marketplace customers\. 
+ After reviewing the program requirements, contact the AWS Marketplace Seller Catalog Operations team to provide a list of the products you would like to enroll in PSC\. You can enroll new or existing AMI\-based products in the program\. Allow 1\-2 weeks for your request to be processed\. You will need to verify that you have completed integration with the API before your products can be enabled for PSC\. As described above, you must also provide a valid support email address on your product page\(s\), and you should provide a writeup describing the data handling and support process you plan to follow for AWS Marketplace customers\. 
 
 ## Handling Customer Data<a name="handling-customer-data"></a>
 
@@ -84,45 +82,9 @@
 
  You must handle customer data in accordance with applicable law and your privacy policy; we recommend that customer data should be encrypted in transit and at rest\. The provided customer data constitutes Subscriber Information under the Seller Terms and can only be used for providing product support\. 
 
-## Integrating with the Seller API<a name="integrating-with-the-seller-api"></a>
+## Technical Implementation Guide<a name="technical-implementation-guide"></a>
 
  This section covers API specification details and how to onboard with the API\. The PSC API, “start\-support\-data\-export” is part of the AWS Marketplace Commerce Analytics Service \(CAS\)\. In order to integrate with the API for PSC you must first enroll in CAS\. If you have already enrolled in CAS, you can skip steps 1\-4 below\. If you have already enrolled in CAS, you will need to use the same IAM Role that you created when you first onboarded\. 
-
- If you have not already enrolled in CAS, you must follow the step\-by\-step instructions provided in the [AWS Marketplace Commerce Analytics Service On\-boarding and Technical Guide](https://s3.amazonaws.com/awsmp-loadforms/AWS-Marketplace-Commerce-Analytics-Service-Onboarding-and-Technical-Guide.pdf)\. In particular, you will need to: 
-
-1.  \(Optional\) Create an AWS [Identity and Access Management \(IAM\) User](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html) 
-
-1.  Create a Destination [Amazon Simple Storage Service \(S3\) Bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) 
-
-1.  Create an [Amazon Simple Notification Service \(SNS\)](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html) Topic for Response Notifications 
-
-1.  [Enroll](https://aws.amazon.com/marketplace/management/cas/enroll) in the Commerce Analytics Service program 
-
-1.  \(Recommended\) Make a test call to the service using the [AWS Command Line Interface \(CLI\)](https://aws.amazon.com/cli/) 
-
- See the [CAS On\-boarding guide](https://s3.amazonaws.com/awsmp-loadforms/AWS-Marketplace-Commerce-Analytics-Service-Onboarding-and-Technical-Guide.pdf) for detailed instructions on each of these steps\. 
-
-**Note**  
-The IAM permissions required for PSC are different than those required for CAS\. PSC requires that the IAM user be able to invoke the *marketplacecommerceanalytics:StartSupportDataExport* action\.
-
- **Sample custom policy**: 
-
-```
-        {
-      
-        "Version": "2012-10-17",
-        "Statement": [
-        {
-        "Effect": "Allow",
-        "Action":
-        "marketplacecommerceanalytics:StartSupportDataExport",
-        "Resource": "*"
-        }
-        ]
-        }
-```
-
-## Technical Implementation Guide<a name="technical-implementation-guide"></a>
 
 ### Making requests with the AWS Command Line Interface \(CLI\)<a name="making-requests-with-the-aws-command-line-interface-cli"></a>
 
@@ -160,7 +122,7 @@ The IAM permissions required for PSC are different than those required for CAS\.
 ### Request Parameters<a name="request-parameters"></a>
 
 
-|  **Input**  |  **Description**  | 
+|  Input  |  Description  | 
 | --- | --- | 
 |  Data Set Type  |   The type of dataset requested to be exported\. Valid options for datasets are:   test\_customer\_support\_contacts\_data   customer\_support\_contacts\_data   The test\_customer\_support\_contacts\_data dataset provides sample data for testing and integration purposes and is available immediately\. The customer\_support\_contacts\_data dataset is currently unavailable\. This option will contain actual customer data and be available upon general availability of PSC\.   | 
 |  From Date  |   The earliest date of data to be exported\. The exported data will contain information from the specified From Date to 15 minutes prior to the time of the request\.   The From Date must be expressed as an ISO 8601 date/time string\.   If you would like to receive the full data set, as opposed to a set of updates, specify any date prior to the date when you onboarded to the program\. To receive only incremental data since your last request, specify the endDateTime from the dataSetCoverageRange from the metadata JSON file resulting from your previous request\. See below for more information about the metadata JSON file\.   | 
@@ -174,14 +136,14 @@ The IAM permissions required for PSC are different than those required for CAS\.
  Calls to the API will immediately return a response with the Data Set Request ID\. 
 
 
-|  **Field**  |  **Description**  | 
+|  Field  |  Description  | 
 | --- | --- | 
 |  Data Set Request ID  |  A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
 
  An additional response containing metadata will be posted to the Amazon SNS \(Simple Notification Service\) topic specified in the original request\. The contents of the post are detailed in the table below\. 
 
 
-|  **Field**  |  **Description**  | 
+|  Field  |  Description  | 
 | --- | --- | 
 |  Data Set S3 Location  |  The bucket name and key for the delivered data set\.  | 
 |  Data Set Meta Data S3 Location  |  The bucket name and key for the delivered data set meta data file\.  | 
@@ -192,7 +154,7 @@ The IAM permissions required for PSC are different than those required for CAS\.
  The metadata file is JSON\-formatted and contains the following fields: 
 
 
-|  **Field**  |  **Description**  | 
+|  Field  |  Description  | 
 | --- | --- | 
 |  Data Set Request ID  |  A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
 |  Data Set Coverage Range  |  Defines the start date / time and end date / time for the data coverage range\. These dates are in ISO 8601 format\.  | 
@@ -263,15 +225,15 @@ The IAM permissions required for PSC are different than those required for CAS\.
  If you would like to receive the full data set, as opposed to a set of updates, specify any date prior to the date when you onboarded to the program\. To receive only incremental data since your last request, specify the endDateTime from the dataSetCoverageRange from the metadata JSON file resulting from your previous request\. 
 
 
-|  **Field**  |  **Format**  |  **Description**  | 
+|  Field  |  Format  |  Description  | 
 | --- | --- | --- | 
-|  Product ID  |  36\-character hexadecimal string  |   Unique identifier for the listing in AWS Marketplace \(GUID\)\.   Required field; always appears in every record\.   | 
+|  Product ID  |  36\-character hexadecimal string  |   Unique identifier for the product in AWS Marketplace \(GUID\)\.   Required field; always appears in every record\.   | 
 |  Product Code  |  25\-character alphanumeric string  |   Unique identifier for the product, associated with billing and available in EC2 instance metadata\.   Required field; always appears in every record\.   | 
 |  Customer Guid  |  36\-character hexadecimal string  |   Unique GUID identifying the customer contact data record\. This will be unique for each record that appears in the output file\.   Required field; always appears in every record\.   | 
 |  Subscription Guid  |  36\-character hexadecimal string  |   Unique GUID corresponding to the customer’s product subscription\. A customer can have multiple subscriptions to the same product\.   Required field; always appears in every record\.   | 
 |  Subscription Start Date  |   ISO 8601 date/time, with UTC time zone\.   The format is YYYY\-MM\-DDTHH:mm:ss\.nnnZ, where YYYY is year, MM is month, DD is day, HH is hour from 00\-23, mm is minute of hour from 00\-59, ss is second of minute from 00\-59, and nnn is millisecond of second from 000\-9999, such as “2016\-04\-07T14:05:15\.275Z”   |   Start date of the customer’s product subscription\.   Required field; always appears in every record\.   | 
 |  Organization  |  String with a maximum length of 255 characters  |   Organization name provided by the customer\.   Always appears in records with operation type “Update” or “Create\.” Does not appear in records with operation type “Delete\.”   | 
-|  AWS Customer Id  |  12\-digit numeric string which may include leading zeroes  |   The AWS customer ID for the customer subscribed to the listing\.   Required field; always appears in every record\.   | 
+|  AWS Customer Id  |  12\-digit numeric string which may include leading zeroes  |   The AWS customer ID for the customer subscribed to the product\.   Required field; always appears in every record\.   | 
 |  Given Name  |  String with a maximum length of 100 characters  |   Given name or first name for the point of contact provided by the customer\.   Always appears in records with operation type “Update” or “Create\.” Does not appear in records with operation type “Delete\.”   | 
 |  Surname  |  String with a maximum length of 100 characters  |   Surname \(family name or last name\) for the point of contact provided by the customer\.   Always appears in records with operation type “Update” or “Create\.” Does not appear in records with operation type “Delete\.”   | 
 |  Telephone Number  |  String with a maximum length of 25 characters\. May include international phone numbers\.  |   Telephone number provided by the customer\.   Always appears in records with operation type “Update” or “Create\.” Does not appear in records with operation type “Delete\.”   | 

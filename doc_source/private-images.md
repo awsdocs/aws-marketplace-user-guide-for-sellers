@@ -73,20 +73,20 @@
 
  Once your package group has a status of successful, you have completed this phase and can publish it as a new fulfillment option for your product on AWS Marketplace\. 
 
-## Submitting Your Listing to AWS Marketplace<a name="submitting-your-listing-to-aws-marketplace"></a>
+## Submitting Your Product to AWS Marketplace<a name="submitting-your-listing-to-aws-marketplace"></a>
 
  After you have a package group that is successfully uploaded to AWS Marketplace you can submit a product load form to publish it as a new fulfillment option for your product, or as a new product if it does not already exist\. The load form is an Excel spreadsheet\. The first tab of the spreadsheet provides instructions for providing the metadata needed to publish your product on AWS Marketplace\. 
 
 **To download and complete the load form**
 
-1.  From the [AMMP](https://aws.amazon.com/marketplace/management/tour/), choose the **Listings** tab\. 
+1.  From the [AMMP](https://aws.amazon.com/marketplace/management/tour/), under the **Assets** tab, choose **File upload**\. 
 
-1.  On the **Self\-Service Listings** page, under **Create a New Product**, choose **Private Image** from the pull\-down menu\. 
+1.  On the **File Uploads** page, under **Product load forms and seller guides**, choose **Private Image Form**\. 
 
 1.  Download the product load form\. 
 
- Once you have completed the form, submit the entry to awsmp\-private\-image@amazon\.com\. AWS Marketplace will create or update your product entry on AWS Marketplace\. If there are any questions on your submission, AWS Marketplace will contact you for clarification\. Your product is typically listed or updated within five business days\. 
+ Once you have completed the form, submit the entry to awsmp\-private\-image@amazon\.com\. AWS Marketplace will create or update your product entry on AWS Marketplace\. If there are any questions on your submission, AWS Marketplace will contact you for clarification\. Your product is typically added or updated within five business days\. 
 
  When adding a package group as a new fulfillment option for your product consider the following options: 
-+  Add the package group as an additional fulfillment option to an existing software version, on an existing public listing on Marketplace\. With this approach, the software version on the AMI and package fulfillment options must match\. AWS Marketplace cannot replace an AMI on an existing software version\. 
-+  If the package group has different software than what currently exists on AWS Marketplace, you can list the package group as a new software version on an existing listing\. Using this approach, you must provide a successfully built and scanned AMI from the AMMP **Packages** tab\. You will have the option to test package fulfillment before making the new package group public\. However, the AMI will be visible to customers right away\. This is consistent with the current experience for new software versions\. 
++  Add the package group as an additional fulfillment option to an existing software version, on an existing public product on Marketplace\. With this approach, the software version on the AMI and package fulfillment options must match\. AWS Marketplace cannot replace an AMI on an existing software version\. 
++  If the package group has different software than what currently exists on AWS Marketplace, you can list the package group as a new software version on an existing product\. Using this approach, you must provide a successfully built and scanned AMI from the AMMP **Packages** tab\. You will have the option to test package fulfillment before making the new package group public\. However, the AMI will be visible to customers right away\. This is consistent with the current experience for new software versions\. 

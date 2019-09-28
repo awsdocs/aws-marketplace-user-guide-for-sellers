@@ -1,6 +1,14 @@
 # Daily Business Report<a name="DailyBuisnessReport"></a>
 
- The daily business report helps sellers understand how AWS customers are using their products on a daily basis and projects the estimated revenue expected from that usage\. The data includes a unique identifier per customer that can identify an AWS customer across report types and across days\. With this identifier, sellers can track customer usage patterns and estimated customer spend and gain insights into free trial and annual data\. The sections in this report are: 
+The daily business report helps you understand how AWS customers are using your products on a daily basis and the estimated revenue from that usage\. You only receive this report if relevant information is available\. If you don't receive this report and think that you should have received it, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\.
+
+You can access this report at the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/reports/)\. If you are registered for the [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md), you can also access your reports using the AWS SDK\.
+
+You can use a unique identifier for each customer to identify customers over time and across reports\. The identifier enables you to track customer usage patterns so that you can estimate customer spend, gain insights into free trial usage, and annual usage trends\.
+
+## Publication Schedule<a name="publication-schedule"></a>
+
+ This report is published daily at 00:00 UTC and covers from 00:00 UTC through 23:59 UTC of the previous day\. Any exceptions to the schedule are noted at the introduction of the daily business report section\.
 
 **Topics**
 + [Publication Schedule](#publication-schedule)
@@ -11,167 +19,154 @@
 + [Section 5: New Product Subscribers](#section-5-new-product-subscribers)
 + [Section 6: Canceled Product Subscribers](#section-6-canceled-product-subscribers)
 
-## Publication Schedule<a name="publication-schedule"></a>
-
- This report is published daily, by 5:00 PM Pacific Time\. 
-
 ## Section 1: Usage by Instance Type<a name="section-1-usage-by-instance-type"></a>
 
-### Data Coverage Period<a name="data-coverage-period"></a>
-
- Includes data from the 24\-hour period of the previous day\. 
+ This section lists data with a row for each instance type that the customer uses\. For instance, when the customer uses a product on one instance type and the same product on a different instance type, the report includes a row for each of the two instance types\. 
 
 
-|  **Column Name**  |  **Available for All Sellers**  |  **Available for Sellers Enrolled in the Enhanced Data Sharing Program**  |  **Description**  | 
+|  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
-|  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS account number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
-|  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
-|  User’s Country  |  ✔  |  ✔  |  The billing address country associated with the AWS account subscribed to the product  | 
-|  Product Title  |  ✔  |  ✔  |  The title of the product  | 
-|  Product Code  |  ✔  |  ✔  |  A unique identifier representing the individual software product  | 
-|  Instance Type  |  ✔  |  ✔  |  The instance type associated with usage \(e\.g\., t2\.micro\)  | 
-|  Usage Units  |  ✔  |  ✔  |  The number of units of usage associated with the product  | 
-|  Usage Unit Type  |  ✔  |  ✔  |  The usage units associated with the usage unit count \(e\.g\., hours\)  | 
-|  Offering Description  |  ✔  |  ✔  |  The description of how the product is being offered \(e\.g\., hourly, free trial, annual\)  | 
-|  Estimated Revenue  |  ✔  |  ✔  |  The estimated revenue resulting from associated usage\. This is estimated as the billing is finalized at the end of the month  | 
-|  Currency  |  ✔  |  ✔  |  The currency \(e\.g\. USD\) associated with the estimated revenue  | 
-|  Offer ID  |  ✔  |  ✔  |  The identifier for the offer the subscriber signed  | 
-|  Offer Visibility  |  ✔  |  ✔  |  Indicates whether the offer is a public, private, or enterprise contract offer  | 
-|  Customer AWS Account Number  |   |  ✔  |  The AWS account number, associated with the AWS account that software charges are billed to | 
-|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
-|  Customer State  |   |  ✔  |  The billing address state associated with the AWS account that software charges are billed to | 
-|  Customer City  |   |  ✔  |  The billing address city associated with the AWS account that software charges are billed to | 
-|  Customer Zip Code  |   |  ✔  |  The billing address zip code associated with the AWS account that software charges are billed to  | 
-|  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account that software charges are billed to \(e\.g\., amazon\.com\) | 
-|  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
-|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
-|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
+|  Customer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It helps track usage, revenue, and subscriptions by customers\.  | 
+|  User’s State  |  ✔  |  ✔  |  The billing address state that is associated with the account that is subscribed to the product\.  | 
+|  User’s Country  |  ✔  |  ✔  |  The two\-character country code that is associated with the account that is subscribed to the product\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier for the software product\.  | 
+|  Instance Type  |  ✔  |  ✔  |  The instance type associated with the product usage: for example, t2\.micro\.  | 
+|  Usage Units  |  ✔  |  ✔  |  The number of units of usage that the customer used during the reporting period\.  | 
+|  Usage Unit Type  |  ✔  |  ✔  |  The unit of measurement that meters the customer's usage\. For example, hours or days\.  | 
+|  Offering Description  |  ✔  |  ✔  |  The description for product offering\. For example, the product is offered for hourly usage, free trial usage, or annual usage\.  | 
+|  Estimated Revenue  |  ✔  |  ✔  |  The estimated revenue from the product usage\. The billing is finalized at the end of the month\.  | 
+|  Currency  |  ✔  |  ✔  |  The currency of the transaction\. For example, if the transaction is in US dollars, the entry is USD\.  | 
+|  Offer ID  |  ✔  |  ✔  |  The identifier for the offer that the subscriber signed\.  | 
+|  Offer Visibility  |  ✔  |  ✔  |  Whether the offer is a public, private, or enterprise contract offer\.  | 
+|  Customer AWS Account Number  |   |  ✔  |  The ID of the account that the software charges are billed to\.  | 
+|  Customer Country  |   |  ✔  |  The two\-character country code that is associated with the account that the software charges are billed to\.  | 
+|  Customer State  |   |  ✔  |  The billing address state that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  Customer City  |   |  ✔  |  The billing address city that is associated with the account that software charges are billed to\. | 
+|  Customer Zip Code  |   |  ✔  | The billing address zip code that is associated with the account that the software charges are billed to\.  | 
+|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
+|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\.  | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
+|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 2: Fees<a name="section-2-fees"></a>
 
- This section includes fee\-based transactions, including annual, monthly, and SaaS contracts products\. 
-
-### Data Coverage Period<a name="data-coverage-period-1"></a>
-
- Includes data from the 24\-hour period occurring 72 hours before the report was published\. 
+ This section includes fee\-based transactions that are associated with products: for example, annual, monthly, and SaaS contracts product fees\. The data in this section covers the 24\-hour period 72 hours before the time that the report is generated\. For example, if the report is generated on May 24, the data covers the 24\-hour period for May 21\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
-|  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
-|  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
-|  User’s Country  |  ✔  |  ✔  |  The billing address country associated with the AWS account subscribed to the product  | 
-|  Product Title  |  ✔  |  ✔  |  The title of the product  | 
-|  Product Code  |  ✔  |  ✔  |  A unique identifier representing the individual software product  | 
-|  Amount  |  ✔  |  ✔  |  The software usage fee\. If there is a refund, this value will be negative\. If this entry is for an AWS Marketplace SaaS contract, the amount represents the software fee for the dimension, not the entire contract\.  | 
-|  Currency  |  ✔  |  ✔  |  The currency \(e\.g\. USD\) associated with the estimated revenue  | 
-|  Fee Description  |  ✔  |  ✔  |  The reason for the fee \(e\.g\. monthly fee, annual fee, SaaS Contracts fee, refund, etc\.\)  | 
-|  Customer AWS Account Number  |   |  ✔  |  The AWS account number­­ associated with the AWS account to which software charges are billed  | 
-|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
-|  Customer State  |   |  ✔  |  The billing address state associated with the AWS account to which software charges are billed  | 
-|  Customer City  |   |  ✔  |  The billing address city associated with the AWS account to which software charges are billed  | 
-|  Customer Zip Code  |   |  ✔  |  The billing address zip code associated with the AWS account to which software charges are billed  | 
-|  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account to which software charges are billed, e\.g\. “amazon\.com”  | 
-|  Start Date  |  ✔  |  ✔  |  The start date for an AWS Marketplace SaaS contract  | 
-|  End Date  |  ✔  |  ✔  |  The end date for an AWS Marketplace SaaS contract  | 
-|  Quantity  |  ✔  |  ✔  |  The number of units for a dimension specified in the contract  | 
-|  Dimension  |  ✔  |  ✔  |  The dimension specified in the contract  | 
-|  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
-|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
-|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
+|  Customer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It helps track usage, revenue, and subscriptions by customers\. | 
+|  User’s State  |  ✔  |  ✔  |  The billing address state that is associated with the account that is subscribed to the product\. | 
+|  User’s Country  |  ✔  |  ✔  |  The two\-character country code that is associated with the account that is subscribed to the product\. This report uses ISO 3166\-1 alpha\-2 standard\. | 
+|  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier for the software product\.  | 
+|  Amount  |  ✔  |  ✔  |  The software usage fee\. If there is a refund, this value is negative\. If this entry is for an AWS Marketplace SaaS contract, the amount represents the software fee for the dimension, not the entire contract\.  | 
+|  Currency  |  ✔  |  ✔  |  The currency of the transaction\. For example, if the transaction is in US dollars, the entry is USD\.  | 
+|  Fee Description  |  ✔  |  ✔  |  The reason for the fee: for example, monthly fee, annual fee, or refund\.  | 
+|  Customer AWS Account Number  |   |  ✔  |  The ID of the account that the software charges are billed to\.  | 
+|  Customer Country  |   |  ✔  |  The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  Customer State  |   |  ✔  |  The billing address state that is associated with the account that the software charges are billed to\. | 
+|  Customer City  |   |  ✔  |  The billing address city that is associated with the account that software charges are billed to\. | 
+|  Customer Zip Code  |   |  ✔  |  The billing address zip code that is associated with the account that the software charges are billed to\.  | 
+|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Start Date  |  ✔  |  ✔  |  The start date for an AWS Marketplace SaaS contract\.  | 
+|  End Date  |  ✔  |  ✔  |  The end date for an AWS Marketplace SaaS contract\.  | 
+|  Quantity  |  ✔  |  ✔  |  The number of units for a dimension that the contract specifies\.  | 
+|  Dimension  |  ✔  |  ✔  |  The dimension that the contract specifies\.  | 
+|  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
+|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\. | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
+|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 3: Free Trial Conversions<a name="section-3-free-trial-conversions"></a>
 
-### Data Coverage Period<a name="data-coverage-period-2"></a>
-
- Includes data from the 24\-hour period of the previous day\. 
+ This section lists data for free trial starts, conversions and cancellations, and covers the previous 24\-hour period\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
-|  Product Title  |  ✔  |  ✔  |  The title of the product  | 
-|  Product Code  |  ✔  |  ✔  |  A unique identifier representing the individual software product  | 
-|  New Free Trials  |  ✔  |  ✔  |  The count of the new free trials initiated that day  | 
-|  Total Current Free Trials  |  ✔  |  ✔  |  The total count of all active free trial subscriptions  | 
-|  Converted Free Trials  |  ✔  |  ✔  |  The total count of subscriptions that moved from free trial to paid usage that day  | 
-|  Non\-Converted Free Trials  |  ✔  |  ✔  |  The total count of the total subscriptions that ended the free trial and did not convert to paid usage  | 
-|  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
-|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
+|  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier representing the software product\.  | 
+|  New Free Trials  |  ✔  |  ✔  |  The number of new free trials that are initiated in the reporting period\.  | 
+|  Total Current Free Trials  |  ✔  |  ✔  |  The total number of active free trial subscriptions\.  | 
+|  Converted Free Trials  |  ✔  |  ✔  |  The total number of subscriptions that moved from free trial to paid usage during the reporting period\.  | 
+|  Non\-Converted Free Trials  |  ✔  |  ✔  |  The total number of subscriptions that ended the free trial and didn't convert to paid usage\.  | 
+|  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
+|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\. | 
 
 ## Section 4: New Instances<a name="section-4-new-instances"></a>
 
-### Data Coverage Period<a name="data-coverage-period-3"></a>
-
- Includes data from the 24\-hour period of the previous day\. 
+ This section lists data for new EC2 instance and instances types, and covers the previous 24\-hour period\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
-|  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
-|  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
-|  User’s Country  |  ✔  |  ✔  |  The billing address country associated with the AWS account subscribed to the product  | 
-|  Product Title  |  ✔  |  ✔  |  The title of the product  | 
-|  Product Code  |  ✔  |  ✔  |  A unique identifier representing the individual software product  | 
-|  Type  |  ✔  |  ✔  |  The AWS EC2 instance type  | 
-|  Count  |  ✔  |  ✔  |  The count of AWS EC2 instances  | 
-|  Customer AWS Account Number  |   |  ✔  |  The AWS account number­­ associated with the AWS account to which software charges are billed  | 
-|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
-|  Customer State  |   |  ✔  |  The billing address state associated with the AWS account to which software charges are billed  | 
-|  Customer City  |   |  ✔  |  The billing address city associated with the AWS account to which software charges are billed  | 
-|  Customer Zip Code  |   |  ✔  |  The billing address zip code associated with the AWS account to which software charges are billed  | 
-|  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account to which software charges are billed, e\.g\. “amazon\.com”  | 
-|  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
-|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
-|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
+|  Customer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It helps track usage, revenue, and subscriptions by customers\. | 
+|  User’s State  |  ✔  |  ✔  | The billing address state that is associated with the account that is subscribed to the product\. | 
+|  User’s Country  |  ✔  |  ✔  |  The two\-character country code that is associated with the account that is subscribed to the product\. This report uses ISO 3166\-1 alpha\-2 standard\. | 
+|  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier for the software product\.  | 
+|  Type  |  ✔  |  ✔  |  The Amazon EC2 instance type\.  | 
+|  Count  |  ✔  |  ✔  |  The number of EC2 instances\.  | 
+|  Customer AWS Account Number  |   |  ✔  |  The ID of the account that the software charges are billed to\.  | 
+|  Customer Country  |   |  ✔  |  The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  Customer State  |   |  ✔  |  The billing address state that is associated with the account that the software charges are billed to\. | 
+|  Customer City  |   |  ✔  |  The billing address city that is associated with the account that software charges are billed to\. | 
+|  Customer Zip Code  |   |  ✔  | The billing address zip code that is associated with the account that the software charges are billed to\.  | 
+|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
+|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\. | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
+|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 5: New Product Subscribers<a name="section-5-new-product-subscribers"></a>
 
-### Data Coverage Period<a name="data-coverage-period-4"></a>
-
- Includes data from the 24\-hour period of the previous day\. 
+ This section lists data for new subscribers, and covers the previous 24\-hour period\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
-|  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
-|  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
-|  User’s Country  |  ✔  |  ✔  |  The billing address country associated with the AWS account subscribed to the product  | 
-|  Product Title  |  ✔  |  ✔  |  The title of the product  | 
-|  Product Code  |  ✔  |  ✔  |  A unique identifier representing the individual software product  | 
-|  Offer ID  |  ✔  |  ✔  |  The identifier for the offer the subscriber signed  | 
-|  Offer Visibility  |  ✔  |  ✔  |  Indicates the offer to be a public, private, or enterprise contract offer  | 
-|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
-|  Customer State  |   |  ✔  |  The billing address state associated with the AWS account to which software charges are billed  | 
-|  Customer City  |   |  ✔  |  The billing address city associated with the AWS account to which software charges are billed  | 
-|  Customer Zip Code  |   |  ✔  |  The billing address zip code associated with the AWS account to which software charges are billed  | 
-|  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account to which software charges are billed, e\.g\. “amazon\.com”  | 
-|  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
-|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
-|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
+|  Customer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It helps track usage, revenue, and subscriptions by customers\. | 
+|  User’s State  |  ✔  |  ✔  |  The billing address state that is associated with the account that is subscribed to the product\. | 
+|  User’s Country  |  ✔  |  ✔  |  The two\-character country code that is associated with the account subscribed to the product\. This report uses ISO 3166\-1 alpha\-2 standard\. | 
+|  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier for the software product\.  | 
+|  Offer ID  |  ✔  |  ✔  |  The identifier for the offer the subscriber signed\. | 
+|  Offer Visibility  |  ✔  |  ✔  |  Whether the offer is a public, private, or enterprise contract offer\. | 
+|  Customer Country  |   |  ✔  |  The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  Customer State  |   |  ✔  |  The billing address state that is associated with the account that the software charges are billed to\. | 
+|  Customer City  |   |  ✔  | The billing address city that is associated with the account that software charges are billed to\. | 
+|  Customer Zip Code  |   |  ✔  |  The billing address zip code that is associated with the account that the software charges are billed to\.  | 
+|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
+|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\. | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
+|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 6: Canceled Product Subscribers<a name="section-6-canceled-product-subscribers"></a>
 
-### Data Coverage Period<a name="data-coverage-period-5"></a>
-
- Includes data from the 24\-hour period of the previous day\. 
+ This section lists data for subscriber cancellations, and covers the previous 24\-hour period\. 
 
 
-|  **Column Name**  |  **Available for all sellers**  |  **Available for sellers enrolled in the Enhanced Data Sharing program**  |  **Description**  | 
+|  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
-|  Customer Reference ID  |  ✔  |  ✔  |  A unique ID \(not AWS Account Number\) associated with the AWS account subscribed to the product to help track usage, revenue and subscriptions by customers  | 
-|  User’s State  |  ✔  |  ✔  |  The billing address state associated with the AWS account subscribed to the product  | 
-|  User’s Country  |  ✔  |  ✔  |  The billing address country associated with the AWS account subscribed to the product  | 
-|  Product Title  |  ✔  |  ✔  |  The title of the product  | 
-|  Product Code  |  ✔  |  ✔  |  A unique identifier representing the individual software product  | 
-|  Subscribed Date  |  ✔  |  ✔  |  The date when the subscription started  | 
-|  Offer ID  |  ✔  |  ✔  |  The identifier for the offer the subscriber signed  | 
-|  Offer Visibility  |  ✔  |  ✔  |  Indicates the offer to be a public, private, or enterprise contract offer  | 
-|  Customer AWS Account Number  |   |  ✔  |  The AWS account number­­ associated with the AWS account to which software charges are billed  | 
-|  Customer Country  |   |  ✔  |  The billing address country associated with the AWS account to which software charges are billed  | 
-|  Customer State  |   |  ✔  |  The billing address state associated with the AWS account to which software charges are billed  | 
-|  Customer City  |   |  ✔  |  The billing address city associated with the AWS account to which software charges are billed  | 
-|  Customer Zip Code  |   |  ✔  |  The billing address zip code associated with the AWS account to which software charges are billed  | 
-|  Customer Email Domain  |   |  ✔  |  The email domain associated with the AWS account to which software charges are billed, e\.g\. “amazon\.com”  | 
-|  Solution Title  |  ✔  |  ✔  |  The name of the solution  | 
-|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution  | 
-|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier \(not an AWS account number\) associated with the AWS account to which fees are billed\. These help with tracking usage, revenue, and subscriptions by customers\.  | 
+|  Customer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It helps track usage, revenue, and subscriptions by customers\. | 
+|  User’s State  |  ✔  |  ✔  |  The billing address state that is associated with the account that is subscribed to the product\. | 
+|  User’s Country  |  ✔  |  ✔  |  The two\-character country code that is associated with the account that is subscribed to the product\. This report uses ISO 3166\-1 alpha\-2 standard\. | 
+|  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier for the software product\.  | 
+|  Subscribed Date  |  ✔  |  ✔  |  The date when the subscription started\.  | 
+|  Offer ID  |  ✔  |  ✔  |  The identifier for the offer that the subscriber signed\. | 
+|  Offer Visibility  |  ✔  |  ✔  | Whether the offer is a public, private, or enterprise contract offer\. | 
+|  Customer AWS Account Number  |   |  ✔  |  The ID of the account that the software charges are billed to\.  | 
+|  Customer Country  |   |  ✔  |  The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  Customer State  |   |  ✔  |  The billing address state that is associated with the account that the software charges are billed to\. | 
+|  Customer City  |   |  ✔  |  The billing address city that is associated with the account that software charges are billed to\. | 
+|  Customer Zip Code  |   |  ✔  |  The billing address zip code that is associated with the account that the software charges are billed to\.  | 
+|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
+|  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\. | 
+|  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
+|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 

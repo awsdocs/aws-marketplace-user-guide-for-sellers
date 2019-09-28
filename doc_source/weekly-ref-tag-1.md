@@ -1,20 +1,22 @@
 # Weekly Ref Tag<a name="weekly-ref-tag-1"></a>
 
- This report presents the information from your [Marketing Dashboard](https://aws.amazon.com/marketplace/management/marketing/), summarized by week, and provides insight into clicks and conversions for ref tag links that customers use to get to your AWS Marketplace listing\. 
+ This report lists data from the [Marketing tab](https://aws.amazon.com/marketplace/management/marketing/) of the AWS Marketplace Management Portal\. It provides insight into clicks and conversions for ref tag links that customers use to get to your AWS Marketplace product page\. The report includes only ref tags that contain \_ptnr\_ or SEM/Online ref tags that start with ads\_\.
+
+For more information about how to use this data, watch [Getting Started with AWS Marketplace Marketing Analytics](https://www.youtube.com/watch?v=hOxkyU73hJ0)\. For information about setting up ref tags, see [Suggested ref tags for demand generation to product detail pages](https://aws.amazon.com/marketplace/help/201349870)\. 
 
 ## Publication Schedule<a name="publication-schedule-7"></a>
 
- Weekly, by 5:00PM PST \(UTC \-08:00\)\. Covers the previous calendar week\. 
+ This report is published weekly at 00:00 UTC and covers from 00:00 UTC through 23:59 UTC of the previous calendar week\. 
 
-## Section 1: Clicks and Conversions<a name="section-1-clicks-and-conversions-1"></a>
+## Clicks and Conversions<a name="section-1-clicks-and-conversions-1"></a>
 
- Provides a breakdown of every ref tag used with your products and the amount of clicks and conversions associated with them\. Here are the data fields for the report: 
+ The following table explains the ref tags that are used with your products and the number of clicks and conversions that are associated with them\.
 
 
-|  **Columns**  |  **Purpose**  | 
+|  Columns  |  Purpose  | 
 | --- | --- | 
-|  TITLE  |  Name of the product\.  | 
-|  PRODUCT\_CODE  |  A unique identifier for the product, associated with billing and available in EC2 instance metadata\.  | 
-|  REFTAG  |  Name of the ref tag itself\.  | 
-|  CLICKS  |  Number of visits to page with date, ref tag, and ASIN grouping\.  | 
-|  CONVERSIONS  |  Amount of users who have clicked on the subscribe link on the page after visiting via the ref tag\.  | 
+|  TITLE  |  The name of the product\.  | 
+|  PRODUCT\_CODE  |  A unique identifier for the product that is associated with billing\. It's also available in Amazon EC2 instance metadata\.  | 
+|  REFTAG  |  The name of the ref tag\.  | 
+|  CLICKS  |  The number of visits to your page with date, ref tag, and Amazon Standard Identification Number \(ASIN\) grouping\.  | 
+|  CONVERSIONS  | The number of users who opened the link to subscribe to your product after they used the ref tag to navigate to the product page\.  | 

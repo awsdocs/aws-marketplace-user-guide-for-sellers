@@ -1,4 +1,4 @@
-# AMI Policies<a name="product-and-ami-policies"></a>
+# AMI Security Policies<a name="product-and-ami-policies"></a>
 
 AWS Marketplace maintains the following policies for all products and offerings on AWS Marketplace to promote a safe, secure, and trustworthy platform for our customers\.
 
@@ -9,7 +9,7 @@ All products and metadata are reviewed when they're submitted to ensure that the
 All AMIs must adhere to the following security policies:
 + AMIs must not contain any known vulnerabilities, malware, or viruses as detected by the [self\-service AMI scanning tool](https://aws.amazon.com/marketplace/management/manage-products/#/manage-amis.unshared) or AWS Security\.
 + All instance authentication must use key pair access, not password\-based authentication, even if the password is generated, reset, or defined by the user at launch\. AMIs must not contain passwords, authentication keys, key pairs, security keys, or other credentials for any reason\.
-+ AMIs must not request or use access or secret keys from users to access AWS resources\. If your AMI application requires access to the user account, it must be achieved through an IAM role instantiated through AWS CloudFormation, which creates the instance and associates the appropriate role\. Where single\-AMI launch is enabled for products with an AWS CloudFormation delivery method, corresponding usage instructions must include clear guidance for creating minimally privileged IAM roles\. For more information, see [AMI\-based Delivery Using AWS CloudFormation](cloudformation.md)\.
++ AMIs must not request or use access or secret keys from users to access AWS resources\. If your AMI application requires access to the user account, it must be achieved through an IAM role instantiated through AWS CloudFormation, which creates the instance and associates the appropriate role\. Where single\-AMI launch is enabled for products with an AWS CloudFormation delivery method, corresponding usage instructions must include clear guidance for creating minimally privileged IAM roles\. For more information, see [AMI\-Based Delivery Using AWS CloudFormation](cloudformation.md)\.
 + Linux\-based AMIs must not allow SSH password authentication\. Disable password authentication via your `sshd_config` file by setting `PasswordAuthentication` to `NO`\.
 
 ## Accessibility<a name="accessibility"></a>

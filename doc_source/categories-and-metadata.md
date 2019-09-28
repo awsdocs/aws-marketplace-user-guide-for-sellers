@@ -29,7 +29,7 @@ Keep the following guidelines in mind as you write the product description:
 + Check the spelling and grammar
 + Include only critical, useful information
 
-Example: Smart Solution automatically distributes incoming application traffic across multiple Amazon EC2 instances\. It enables you to achieve even greater fault tolerance in your applications, seamlessly providing the amount of load balancing capacity you need to respond to incoming application traffic\. Smart Solution detects unhealthy instances in a pool and automatically reroutes traffic to healthy instances until the unhealthy instances have been restored\. Customers can enable Smart Solution in a single AWS Availability Zone or across multiple Availability Zones to ensure more consistent application performance\.
+Example: Smart Solution automatically distributes incoming application traffic across multiple Amazon EC2 instances\. It enables you to achieve even greater fault tolerance in your applications, seamlessly providing the amount of load\-balancing capacity you need to respond to incoming application traffic\. Smart Solution detects unhealthy instances in a pool and automatically reroutes traffic to healthy instances until the unhealthy instances have been restored\. Customers can enable Smart Solution in a single AWS Availability Zone or across multiple Availability Zones to ensure more consistent application performance\.
 
 ### Writing the Product Highlights<a name="writing-the-product-highlights"></a>
 
@@ -68,19 +68,19 @@ Keep the following guidelines in mind as you write the usage instructions:
 
 1. Do \*\*\*\*, and then \*\*\*\*\.
 
-1. Check that all plugins used by your project are compatible with version \*\.\*, by doing \*\*\*\. If they aren't compatible then do \*\*\*\.
+1. Check that all plugins used by your project are compatible with version \*\.\*, by doing \*\*\*\. If they aren't compatible, do \*\*\*\.
 
 1. Make a backup of your data, by doing \*\*\*\.
 
 ## Choosing Categories and Keywords<a name="choosing-categories-and-keywords"></a>
 
- When you list your product, you can choose up to three software categories and corresponding subcategories for your product\. This helps customers discover your product as they browse or search the listings on AWS Marketplace\. Choose only categories that are relevant to your product\. In most cases, only one category will apply\. The [Product Load Form](https://s3.amazonaws.com/awsmp-loadforms/ProductDataLoad-Current.xlsx) and the Self\-Service Listings portal both contain a complete list of categories\. 
+ When you list your product, you can choose up to three software categories and corresponding subcategories for your product\. This helps customers discover your product as they browse or search the products on AWS Marketplace\. Choose only categories that are relevant to your product\. In most cases, only one category applies\. The product load form and the **Products** tab both contain a complete list of categories\. 
 
- Categories aren't the same as keywords\. The categories and subcategories available are predefined for AWS Marketplace, and you decide which ones apply to your product by selecting them from a list during the listing process\. Keywords aren't predefined, but are created during the listing process\. You don't need to add the category as a keyword\. 
+ Categories aren't the same as keywords\. The categories and subcategories available are predefined for AWS Marketplace, and you decide which ones apply to your product by selecting them from a list during the product request process\. Keywords aren't predefined, but are created during the process\. You don't need to add the category as a keyword\. 
 
 ### Creating Search Keywords<a name="creating-search-keywords"></a>
 
-During the product listing process, you can enter up to three keywords \(single words or phrases\) to help customers discover your product through site searches\. The keywords field can contain a maximum of 250 characters\. 
+During the product request process, you can enter up to three keywords \(single words or phrases\) to help customers discover your product through site searches\. The keywords field can contain a maximum of 250 characters\. 
 
 The following tips can help you to create a relevant set of search keywords:
 + Use terms that are relevant so that customers can easily find your products\.

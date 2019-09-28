@@ -1,12 +1,12 @@
-# AMI Listing Checklist<a name="aws-marketplace-listing-checklist"></a>
+# AMI Product Checklist<a name="aws-marketplace-listing-checklist"></a>
 
- Before submitting your AMI to be listed through AWS Marketplace, review this checklist\. Validating this information will help to make sure your submission goes through the publication process smoothly\. 
+ Before submitting your AMI product request to AWS Marketplace, review this checklist\. Validating this information will help to make sure your submission goes through the publication process smoothly\. 
 
  Product usage: 
 + Your AMI must be production\-ready\. 
 + Your AMI cannot restrict product usage by time or any other measurements\. 
 + Your AMI must be compatible with the 1\-Click fulfillment experience\. 
-+ Everything required to uses the product is in the software, including client applications\. 
++ Everything required to use the product is in the software, including client applications\. 
 + The default user uses a randomized password, or creating the initial user requires verification that the subscriber is authorized to use the instance using a value unique to the instance such as instance ID\.
 
  For free or paid products:
@@ -28,7 +28,7 @@ AMI preparation:
 + Root login is locked or disabled 
 + No authorized keys, default passwords, or other credentials are included 
 
-Load Form or Self\-service Listings Preparation
+Product Load Form or Product tab
 + All required fields are completed 
 + All values are within specified character limits 
 + All URLs load without error 

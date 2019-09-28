@@ -24,29 +24,7 @@ The AWS Marketplace Commerce Analytics Service allows you to programmatically ac
 
  You must configure your AWS account and AWS services to use the AWS Marketplace Commerce Analytics Service\. First, you configure AWS account\(s\) with the correct permissions\. Next, you configure an Amazon S3 bucket for the data to be delivered to\. Finally, you configure Amazon SNS to send notifications when data is delivered\. 
 
- AWS Marketplace **strongly** recommends using IAM roles to sign in to the AWS Marketplace Management Portal rather than using your root account credentials\. See [Create IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html#intro-identity-users) for details\. By creating individual IAM users for people accessing your account, you can give each IAM user a unique set of security credentials\. You can also grant different permissions to each IAM user\. If necessary, you can change or revoke an IAM user's permissions any time\.
-
-### Configure AWS Account Permissions<a name="set-aws-account-permissions"></a>
-
- To provide a user access to the AWS Marketplace Commerce Analytics Service, you assign an IAM permission policy with the following permissions to a group or role that the user is a member of\. 
-
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-            "iam:Generate*",
-            "iam:Get*",
-            "iam:List*",
-            "iam:Simulate*"
-            ],
-            "Resource": "arn:aws:iam::123456789123:user/goldmine-test-seller-with-customer-support-policy"
-            }
-            ]
-        }
-```
+ AWS Marketplace **strongly** recommends using IAM roles to sign in to the AWS Marketplace Management Portal rather than using your root account credentials\. See [Policies and Permissions AWS Marketplace Providers](detailed-management-portal-permissions.md) for specific IAM permissions for AWS Marketplace Commerce Analytics Service permissions\. See [Create IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html#intro-identity-users) for details\. By creating individual IAM users for people accessing your account, you can give each IAM user a unique set of security credentials\. You can also grant different permissions to each IAM user\. If necessary, you can change or revoke an IAM user's permissions any time\.
 
 ### Create a Destination Amazon S3 Bucket<a name="create-a-destination-amazon-s3-bucket"></a>
 
@@ -192,7 +170,7 @@ try {
 credentials = new ProfileCredentialsProvider().getCredentials();
 } catch (Exception e) {
 throw new AmazonClientException("Cannot load the credentials from the credential profiles "
-+ "file. Please make sure that your credentials file is at the correct "
++ "file. Make sure that your credentials file is at the correct "
 + "location (~/.aws/credentials), and is in valid
 format.", e);
 }
@@ -404,6 +382,39 @@ aws marketplacecommerceanalytics generate-data-set \
 
  For additional information about IAM policies, see the following guide: [https://docs\.aws\.amazon\.com/IAM/latest/UserGuide/access\_policies\.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) 
 
- **My problem isn't listed here\.** 
+**I get an `AccessDeniedException` error when I call the `GenerateDataSet` action**
+
+This can happen if your IAM user doesn't have the permissions necessary to call `GenerateDataSet`\. The following procedure outlines the steps needed to update an IAM policy with those permissions using the IAM console\.
+
+**To get the GenerateDataSet permissions**
+
+1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
+
+1. From the right\-side navigation, choose **Users**
+
+1. Choose the IAM user whose credentials will be used for the `marketplacecommerceanalytics` AWS CLI commands to open the **Summary** page\.
+
+1. From the **Permissions** tab, choose **Add inline policy**
+
+1. Open the **JSON** tab and paste in the following code:
+
+   ```
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Action": "marketplacecommerceanalytics:GenerateDataSet",
+         "Resource": "*",
+       },
+     ],
+   }
+   ```
+
+1. Choose **Review policy**, provide the inline policy with a descriptive name, like *GenerateDataSetPolicy*, and choose **Create policy**\.
+
+After updating the permissions, run the AWS CLI command again with the same credentials as this IAM user to complete the action\.
+
+ **My problem isn't listed here\.**
 
  Contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 

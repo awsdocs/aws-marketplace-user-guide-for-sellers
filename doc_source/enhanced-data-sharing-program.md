@@ -1,13 +1,13 @@
 # AWS Marketplace Enhanced Data Sharing Program<a name="enhanced-data-sharing-program"></a>
 
- The AWS Marketplace Enhanced Data Sharing \(EDS\) program focuses on delivering *enhanced* buyer information, such as buyer email domain, AWS account ID, and location, on a daily and monthly basis to select AWS Marketplace sellers\. The goal of delivering buyer information is to provide a framework for sellers to compensate their sales teams for AWS Marketplace subscription revenue\. Sharing monthly billed revenue information, usage information, and disbursed funds information by buyer provides a mechanism to help you correctly map deals and opportunities to the appropriate sales representative by company, geography and AWS account ID\. 
+ The AWS Marketplace Enhanced Data Sharing \(EDS\) program focuses on delivering *enhanced* buyer information, such as buyer email domain, AWS account ID, and location, on a daily and monthly basis to select AWS Marketplace sellers\. The goal of delivering buyer information is to provide a framework for sellers to compensate their sales teams for AWS Marketplace subscription revenue\. Sharing monthly billed revenue information, usage information, and disbursed funds information by buyer provides a mechanism to help you correctly map deals and opportunities to the appropriate sales representative by company, geography, and AWS account ID\. 
 
 ## Requirements for AWS Marketplace Seller Participation<a name="requirements-for-aws-marketplace-seller-participation"></a>
 
  This program requires that the data only be used to activate and motivate AWS Marketplace seller field sales via formal sales compensation plans\. For more information regarding the program and instructions on how to enroll, contact mpcustdesk@amazon\.com\. 
 
 **Enrollment requirements include**
-+  **Annual pricing** on all of your AWS Marketplace product listings\. 
++  **Annual pricing** on all of your AWS Marketplace products\. 
 +  **Sales compensation plans for all AWS Marketplace subscription revenue** \(hourly, monthly, annual, or metering\)\. 
 +  **Formal announcement of an AWS Marketplace compensation plan **\. 
 +  **Agreement to treat EDS data as confidential information** and not distribute it for the purposes of lead\-generation\. 
@@ -17,21 +17,21 @@
  Benefits of enrolling in EDS include: 
 +  It increases the collective number of sales representatives driving awareness and adoption of AWS Marketplace subscriptions for your products\. 
 +  It provides incentive and compensation to your sales representatives working with AWS customers and prospects\. 
-+  It provides you with customer data to assist in analyzing, growing and compensating sales teams for AWS Marketplace sell\-through\. 
++  It provides you with customer data to assist in analyzing, growing, and compensating sales teams for AWS Marketplace sell\-through\. 
 +  It fosters a collaborative working relationship between the AWS sales and your sales team to better address customer needs\. 
 
 ## Sales Compensation Report: Contents, Timing, and Delivery<a name="sales-compensation-report-contents-timing-and-delivery"></a>
 
- The EDS program offers a sales compensation report which provides buyer data \(email domain, AWS account ID, and location\) in conjunction with monthly billed revenue\. The sales compensation report is available on the 15th of each month and can be downloaded in the [AWS Marketplace Management Portal \(AMMP\)](https://aws.amazon.com/marketplace/management/reports/) or by using the [AWS Marketplace Commerce Analytics Service \(CAS\) API](https://aws.amazon.com/marketplace/management/cas/enroll)\. 
+ The EDS program offers a sales compensation report that provides buyer data \(email domain, AWS account ID, and location\) with monthly billed revenue\. The sales compensation report is available on the fifteenth of each month and can be downloaded in the [AWS Marketplace Management Portal \(AMMP\)](https://aws.amazon.com/marketplace/management/reports/) or by using the [AWS Marketplace Commerce Analytics Service \(CAS\) API](https://aws.amazon.com/marketplace/management/cas/enroll)\. 
 
  In addition, sellers that are enrolled in EDS automatically receive additional buyer data columns including email domain, AWS account ID, and location across their key seller reports\. 
 
 **Information provided includes**
 +  The Daily Business Report \(available every 24 hours\) 
-+  The Monthly Billed Revenue Report \(available on the 15th of each month\) 
-+  The Disbursement Report \(available monthly between the 10th and 13th of the month, depending on the seller\) 
++  The Monthly Billed Revenue Report \(available on the fifteenth of each month\) 
++  The Disbursement Report \(available monthly between the tenth and thirteenth of the month, depending on the seller\) 
 
- By adding sales compensation data to your normal reports, the EDS program enables you to compensate your team on a daily basis, at the time of disbursement, or at the time of billing\. If you compensate your team based on the Daily Business Report, please note that this report reflects estimated usage\. 
+ By adding sales compensation data to your normal reports, the EDS program enables you to compensate your team on a daily basis, at the time of disbursement, or at the time of billing\. If you compensate your team based on the Daily Business Report, note that this report reflects estimated usage\. 
 
 ### Sales Compensation Report Contents<a name="sales-compensation-report-contents"></a>
 
@@ -54,14 +54,14 @@
 
 ### Sales Compensation Report Timing<a name="sales-compensation-report-timing"></a>
 
- The Sales Compensation Report is available on the 15th of each month\. Within the report, the timing of each line item differs based on the subscription type, as outlined below: 
-+  *Hourly Subscriptions* are billed between the 1st and 5th of the month following usage, and are reported in in the Sales Compensation Report within 2 months of the usage date\. For example, January hourly usage would be billed to customers in February and would appear on your Sales Compensation Report issued in March\. \(Note: This report timing also applies to SaaS Subscriptions products and products with Usage\-based pricing\.\) 
-+  *Monthly Subscriptions* are billed at the beginning of each month between the 1st and 5th of the month following usage, and are reported in the Sales Compensation Report within 1 month of the usage date\. For example, you would see January monthly usage in your February Sales Compensation Report\. 
+ The Sales Compensation Report is available on the fifteenth of each month\. Within the report, the timing of each line item differs based on the subscription type, as outlined below: 
++  *Hourly Subscriptions* are billed between the first and fifth of the month following usage, and are reported in the Sales Compensation Report within 2 months of the usage date\. For example, January hourly usage would be billed to customers in February and would appear on your Sales Compensation Report issued in March\. \(Note: This report timing also applies to SaaS Subscriptions products and products with Usage\-based pricing\.\) 
++  *Monthly Subscriptions* are billed at the beginning of each month between the first and fifth of the month following usage, and are reported in the Sales Compensation Report within 1 month of the usage date\. For example, you would see January monthly usage in your February Sales Compensation Report\. 
 +  *Annual Subscriptions* are billed on the purchase date, and are reported in the Sales Compensation Report within 1 month of the transaction date\. For example, an annual subscription purchase in January would appear in your February Sales Compensation Report\. 
 
 ### Sales Compensation Report Delivery<a name="sales-compensation-report-delivery"></a>
 
- For AWS Marketplace Sellers enrolled in the EDS program, the Sales Compensation report is available on the 15th of each month and can be downloaded in the [AWS Marketplace Management Portal \(AMMP\)](https://aws.amazon.com/marketplace/management/reports/) or by using the [AWS Marketplace Commerce Analytics Service \(CAS\) API](https://aws.amazon.com/marketplace/management/cas/enroll)\. You will be notified by email when your report is available for download each month\. The notification is sent to the email address associated with your AWS Account\. 
+ For AWS Marketplace Sellers enrolled in the EDS program, the Sales Compensation report is available on the fifteenth of each month and can be downloaded in the [AWS Marketplace Management Portal \(AMMP\)](https://aws.amazon.com/marketplace/management/reports/) or by using the [AWS Marketplace Commerce Analytics Service \(CAS\) API](https://aws.amazon.com/marketplace/management/cas/enroll)\. You're notified by email when your report is available for download each month\. The notification is sent to the email address associated with your AWS Account\. 
 
 ## Use of the Data<a name="use-of-the-data"></a>
 
@@ -79,7 +79,7 @@
 
  **I prefer to compensate my field based on disbursed revenue, not billed revenue\. How can I map the Sales Compensation Report to my disbursed revenue?** 
 
- AWSMP issues a Disbursement Report each month for every seller with paid product listings; this report covers all disbursed revenue for the month and is available through both [AWS Marketplace Management Portal \(AMMP\)](https://aws.amazon.com/marketplace/management/reports/) and via the [AWS Marketplace Commerce Analytics Service \(CAS\) API](https://aws.amazon.com/marketplace/management/cas/enroll)\. By participating in EDS, you will also receive additional customer data columns \(email domain, location, and AWS account ID\) directly in your monthly Disbursement Report\. 
+ AWSMP issues a Disbursement Report each month for every seller with paid products; this report covers all disbursed revenue for the month and is available through both [AWS Marketplace Management Portal \(AMMP\)](https://aws.amazon.com/marketplace/management/reports/) and via the [AWS Marketplace Commerce Analytics Service \(CAS\) API](https://aws.amazon.com/marketplace/management/cas/enroll)\. By participating in EDS, you will also receive additional customer data columns \(email domain, location, and AWS account ID\) directly in your monthly Disbursement Report\. 
 
  **I prefer to compensate my field based on daily usage data\. How can I do this?** 
 
@@ -87,8 +87,8 @@
 
  **How does the timing of the Sales Compensation Report relate to the timing of the Disbursement Report that I receive from AWSMP?** 
 
- The Sales Compensation Report is available in AMMP and via the CAS API on the 15th day of each month\. Disbursement Reports are typically published between the 10th and 13th of each month\. For questions regarding your specific Disbursement Report delivery schedule, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
+ The Sales Compensation Report is available in AMMP and via the CAS API on the fifteenth day of each month\. Disbursement Reports are typically published between the tenth and thirteenth of each month\. For questions regarding your specific Disbursement Report delivery schedule, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
  **How does the timing of the Sales Compensation Report relate to the timing of the Monthly Billed Revenue Report that I receive from AWSMP?** 
 
- The Sales Compensation Report and Monthly Billed Revenue Report are both published on the 15th day of each month and contain information regarding monthly billed revenue\. The Monthly Billed Revenue Report does not include identifiable customer data; line items from these two reports can be cross\-referenced using the Transaction Reference ID\. 
+ The Sales Compensation Report and Monthly Billed Revenue Report are both published on the fifteenth day of each month and contain information regarding monthly billed revenue\. The Monthly Billed Revenue Report does not include identifiable customer data; line items from these two reports can be cross\-referenced using the Transaction Reference ID\. 

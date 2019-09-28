@@ -4,7 +4,7 @@ The AWS Marketplace website ranks the results of search queries using search\-op
 
 ## Keywords<a name="keywords"></a>
 
-During the product listing process, you can submit up to three keywords \(single words or phrases\) to help customers discover your product through site searches\. The keywords text box can contain up to 250 characters\. Use the following tips to create search keywords:
+During the product creation process, you can submit up to three keywords \(single words or phrases\) to help customers discover your product through site searches\. The keywords text box can contain up to 250 characters\. Use the following tips to create search keywords:
 + Use terms that are relevant so that customers can easily find your products\.
 + Choose keywords from your customers' vocabulary—that is, words and phrases that they're likely to use when thinking about your type of product\.
 + Create keywords based on specific features in your product\.
@@ -15,14 +15,14 @@ Keywords aren't the same as software categories\. Keywords are more specific ter
 
 ## Software Categories<a name="software-categories"></a>
 
-When you list your product, you can choose up to three software categories and corresponding subcategories for your product\. This helps customers discover your product as they browse or search the listings on AWS Marketplace\. Choose only categories that are relevant to your product\. In most cases, only one category applies\. Both the product load form and the self\-service listings portal contain a complete list of categories\.
+When you list your product, you can choose up to three software categories and corresponding subcategories for your product\. This helps customers discover your product as they browse or search the products on AWS Marketplace\. Choose only categories that are relevant to your product\. In most cases, only one category applies\. Both the product load form and the **Products** pages contain a complete list of categories\.
 
 **Note**  
-Categories aren't the same as keywords\. The available categories and subcategories are predefined for AWS Marketplace\. You decide which of them apply to your product by choosing them from a list during the listing process\. Keywords aren't predefined, but are created during the listing process\.
+Categories aren't the same as keywords\. The available categories and subcategories are predefined for AWS Marketplace\. You decide which of them apply to your product by choosing them from a list\. Keywords aren't predefined, but are created during the process\.
 
 ## Highlights Section<a name="highlights-section"></a>
 
-The product details page displays up to three product highlights as bullet points\. Customers can search for products by highlights, so include highlights when you create a product listing\. A highlight should describe the product's primary selling points in brief and informative language\. For example: "Projecting costs: With AnyCompany's Smart Solution, you pay only for what you use\. You're charged for each hour or partial hour that Smart Solution is running\."
+The product details page displays up to three product highlights as bullet points\. Customers can search for products by highlights, so include highlights when you create a product\. A highlight should describe the product's primary selling points in brief and informative language\. For example: "Projecting costs: With AnyCompany's Smart Solution, you pay only for what you use\. You're charged for each hour or partial hour that Smart Solution is running\."
 
 ## Short Description<a name="short-description"></a>
 

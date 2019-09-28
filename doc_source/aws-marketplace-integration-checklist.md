@@ -8,16 +8,16 @@
 |  Access  |  Submitted a seller registration form with the desired AWS account for AWS Marketplace usage\.  | 
 |  Access  |  Completed the seller registration, including terms and conditions, bank account, and W8 or W9 tax form\.  | 
 |  Access  |  Configured cross\-account roles for the registered AWS Marketplace account\.  | 
-|  Product Listing  |  Completed the self\-service listing form in the AWS Marketplace Management Portal\.  | 
-|  Product Listing  |  Provided AWS account IDs for testing in the notes section of the self\-service listing tool\.  | 
-|  Product Listing  |  Provided a URL of the EULA in \.txt format in the self\-service listing tool\.  | 
-|  Product Listing  |  Received your product code and Amazon SNS topic information from AWS Marketplace\.  | 
-|  Product Listing  |  Subscribed to the Amazon SNS topic and created an Amazon SQS queue to subscribe to the Amazon SNS topic\.  | 
+|  Product  |  Completed the product request form in the AWS Marketplace Management Portal\.  | 
+|  Product  |  Provided AWS account IDs for testing in the Notes tab of the Create product wizard in the AMMP\. | 
+|  Product  |  Provided a URL of the EULA in \.txt format in the Products tab\.  | 
+|  Product  |  Received your product code and Amazon SNS topic information from AWS Marketplace\.  | 
+|  Product  |  Subscribed to the Amazon SNS topic and created an Amazon SQS queue to subscribe to the Amazon SNS topic\.  | 
 |  Billing Solution  |  Validated you can send metering records to the BatchMeterUsage operation each hour for each customer for SaaS subscriptions products\. Can send metering records for additional usage by each customer for SaaS contracts products\.  | 
 |  Billing Solution  |  Validated you can verify customer entitlements from the AWS Marketplace Entitlement Service for SaaS contracts products\.  | 
 |  Billing Solution  |  Validated that the costs appear as expected on bills generated for test accounts\.  | 
 |  Billing Solution  |  Tested for situations such as invalid customer IDs and canceled subscriptions\.  | 
-|  Listing  |  Submitted the self\-service listing back to AWS Marketplace for publishing\.  | 
+|  Product  |  Submitted the product request back to AWS Marketplace for publishing\.  | 
 |  Registration  |  Implemented an HTTPS registration page that can accept HTTP POST requests\.  | 
 |  Registration  |  Validated you can accept new customer registrations\.  | 
 |  Registration  |  Validated you are not storing the registration token in a cookie\.  | 

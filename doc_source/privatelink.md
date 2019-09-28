@@ -18,9 +18,9 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 
  When the customer creates their VPC endpoint, they have the option to enable a private DNS name\. By choosing this option, the customer’s VPC service configures a [private hosted zone](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-private.html)\. If you provide the private DNS name, it will be used by the customer when they configure their VPC endpoint to connect to your service\. In the customer’s private hosted zone, the private DNS name \(api\.example\.com\) will point to the randomly generated DNS name\(s\) \(vpce\-11111111111111111\-yyyyyyyy\.api\.vpce\.example\.com\) created for your endpoint service\(s\)\. The benefit for your customer is that the customer’s EC2 instances call the same unified DNS name \(api\.example\.com\) across different VPCs\. Also, if public and private DNS names are same, the AWS Marketplace customer can use the same public name when accessing your service from within or outside of the VPC\. 
 
- The the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team will assist you with making your service available through AWS Marketplace\. When an AWS Marketplace customer subscribes to your service and is creating a VPC endpoint, your service will be listed in **Your AWS Marketplace Services**\. The MCO team uses the user\-friendly DNS name for easy discovery of your service when creating the VPC endpoint\. 
+ The [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team will assist you with making your service available through AWS Marketplace\. When an AWS Marketplace customer subscribes to your service and is creating a VPC endpoint, your service will be in **Your AWS Marketplace Services**\. The MCO team uses the user\-friendly DNS name for easy discovery of your service when creating the VPC endpoint\. 
 
- Your product is created and listed as a software as a service \(SaaS\) product on AWS Marketplace\. Your customer can discover your product through the AWS Marketplace website\. Metering and billing will be the same as with other AWS Marketplace SaaS products\. To provide your customer access to your service offering, you whitelist their account ID\. They establish a VPC endpoint \(configured as an interface\) within their VPC to connect to you\. Only customers who are subscribed and whitelisted will see your product listed when they create a VPC endpoint\. 
+ Your product is created as a software as a service \(SaaS\) product\. Your customer can discover your product through the AWS Marketplace website\. Metering and billing will be the same as with other AWS Marketplace SaaS products\. To provide your customer access to your service offering, you whitelist their account ID\. They establish a VPC endpoint \(configured as an interface\) within their VPC to connect to you\. Only customers who are subscribed and whitelisted will see your product when they create a VPC endpoint\. 
 
 ## Configuring Your Product<a name="configuring-your-product"></a>
 
@@ -48,7 +48,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 
  During the process of publishing your service to AWS Marketplace, you will work with the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team to verify settings are correct and the customer has a good experience\. To submit your PrivateLink\-enabled product: 
 
-1.  Email the following information to the <ulink url="https://aws\.amazon\.com/marketplace/management/contact\-us/"><emphasis role="strong">&MKTlong; Seller Operations</emphasis></ulink> team: 
+1.  Email the following information to the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team: 
 
    1.  The endpoint from Section 2, step 4 and the AWS account used to create the endpoint\. The name will be similar to this: com\.amazonaws\.vpce\.us\-east\-1\.vpce\-svc\-0daa010345a21646 
 
@@ -67,7 +67,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 
  When the customer creates the VPC endpoint, they have the option to associate a private hosted zone with their VPC\. The hosted zone contains a record set for the default private DNS name for the service that resolves to the private IP address of the endpoint network interfaces in their VPC\. 
 
- Any customer\-hosted endpoint, including AWS Marketplace services, can provide permissions to all accounts \(the "\*" permission\)\. However, when you use this approach, the services will not be listed in the **Describe** calls or console unless you search by the service name\. To display the services in the **Describe** calls, the customer's account must be explicitly whitelisted by the service\. 
+ Any customer\-hosted endpoint, including AWS Marketplace services, can provide permissions to all accounts \(the "\*" permission\)\. However, when you use this approach, the services will not be included in the **Describe** calls or console unless you search by the service name\. To display the services in the **Describe** calls, the customer's account must be explicitly whitelisted by the service\. 
 
  To access your service, AWS Marketplace customers: 
 

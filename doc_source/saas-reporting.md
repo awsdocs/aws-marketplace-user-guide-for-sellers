@@ -1,8 +1,8 @@
 # Reporting<a name="saas-reporting"></a>
 
-AWS Marketplace produces reports for your SaaS listings that include data on subscribers, financials, usage, and taxes\. For more information, see [Seller Reports](Reporting.md)\.
+AWS Marketplace produces reports for your SaaS products that include data on subscribers, financials, usage, and taxes\. For more information, see [Seller Reports](Reporting.md)\.
 
-The following sections summarize how financials for SaaS listings are reported\.
+The following sections summarize how financials for SaaS products are reported\.
 
 ## Daily Business Report<a name="saas-daily-business-report"></a>
 

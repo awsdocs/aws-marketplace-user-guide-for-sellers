@@ -2,7 +2,7 @@
 
  For SaaS subscriptions, AWS Marketplace bills your customers based on the metering records that you send to us\. 
 
- When listing a product on the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/), on the **Listings** page, for **Create a New Product**, choose **SaaS Subscriptions**\. 
+ To add a product using the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/), select the **Products** tab and choose **SaaS**\. Then, from **Create SaaS Product** choose **SaaS Subscriptions** from the dropdown menu\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/saas-pricing-subscriptions-screenshot.png)
 

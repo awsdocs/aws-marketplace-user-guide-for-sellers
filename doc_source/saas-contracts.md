@@ -2,7 +2,7 @@
 
  For SaaS contracts, AWS Marketplace bills your customers upfront or by the payment schedule that you define, based on the contract between you and your customer\. After that point, they're entitled to use those resources\. For example, a customer might purchase a quantity of users who can use your application for a 1\-month time period or for 1\-year, 2\-year, or 3\-year time periods\. For additional usage above their contract, AWS Marketplace bills your customers based on the metering records received by us through the AWS Marketplace Metering Service\. 
 
- To list a product using the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/), on the **Listings** page, for **Create a New Product**, choose **SaaS Contracts**\. 
+ To add a product using the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/), select the **Products** tab and choose **SaaS**\. Then, from **Create SaaS Product** choose **SaaS Contracts** from the dropdown menu\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/saas-pricing-contracts-screenshot.png)
 
@@ -30,7 +30,7 @@ For **Enable Tiered Dimensions**, choose how you want you customers to be able t
 
  For each pricing dimension that you add to your contract, you can choose to let customers pay as they go for additional usage of that dimension above their contract\. You can also add additional dimensions without contract prices that customers only consume by paying as they go\. For example, these may be add\-on features that customers use infrequently \(e\.g\., custom reports generated\)\. Another example is if you have a pricing model where the contract dimensions are tiers that include bundles of services \(e\.g\., 50 hosts and 20 containers\), and the additional pay\-as\-you\-go dimensions represent the use of individual services \(per host and per container\)\. Define the following fields:
 +  **Dimension API Name** – The name used when calling the Entitlements API\. This name is visible in billing reports, but because the reports are not external\-facing, the name does not have to be user\-friendly\. The name can be no more than 15 characters and can only include alphanumeric and underscore characters\. After you set the name, you will not be able to change it\. 
-+  **Dimension Display Name**: – The customer\-facing name of a dimension\. This name should help the customer understand the dimension for the product\. The display name is visible on the AWS Marketplace listing to customers \(e\.g\., AdminUsers, Silver Tier, Premier Bundle\)\. The name should be user\-friendly and can be no more than 24 characters\. After the product is published, you will be able to change this display name\. 
++  **Dimension Display Name**: – The customer\-facing name of a dimension\. This name should help the customer understand the dimension for the product\. The display name is visible on the AWS Marketplace product page to customers \(e\.g\., AdminUsers, Silver Tier, Premier Bundle\)\. The name should be user\-friendly and can be no more than 24 characters\. After the product is published, you will be able to change this display name\. 
 +  **Dimension Description**: – The customer\-facing description of a dimension that provides additional information about the dimension for the product\. The description \(up to 10 endpoints, 100–250 API calls, etc\.\) can be no more than 70 characters and should be user\-friendly\. 
 +  **Dimension \- Monthly Price** – The software charge per unit for the 1\-month option for this dimension\. This ﬁeld supports three decimal places\. 
 +  **Dimension \- 1 Year Price** – The software charge per unit for the 12\-month option for this dimension\. This ﬁeld supports three decimal places\. It's not a monthly or yearly charge\. The price must reﬂect the 12\-month one\-time charge price\. 
@@ -40,7 +40,7 @@ For **Enable Tiered Dimensions**, choose how you want you customers to be able t
 
 **Example: Data storage application**  
 
-|   |  **Monthly Price**  |  **12\-month Price**  |  **24\-month Price**  |  **Pay\-as\-you\-go Price for Additional Usage**  | 
+|   |  Monthly Price  |  12\-Month Price  |  24\-Month Price  |  Pay\-as\-You\-Go Price for Additional Usage  | 
 | --- | --- | --- | --- | --- | 
 |  Unencrypted data \(GB\)  |  $1\.50/GB  |  $16\.00/GB  |  $30\.00/GB  |  $0\.1/GB per day  | 
 |  Encrypted data \(GB\)  |  $1\.55/GB  |  $16\.60/GB  |  $31\.20/GB  |  $0\.11/GB per day  | 
@@ -48,7 +48,7 @@ For **Enable Tiered Dimensions**, choose how you want you customers to be able t
 
 **Example: Log monitoring product**  
 
-|   |  **Monthly Price**  |  **12\-month Price**  |  **Pay\-as\-you\-go Price for Additional Usage**  | 
+|   |  Monthly Price  |  12\-Month Price  |  Pay\-as\-You\-Go Price for Additional Usage  | 
 | --- | --- | --- | --- | 
 |  Basic \(10 hosts monitored, 5 containers monitored\)  |  $100  |  $1000  |   | 
 |  Standard \(20 hosts monitored, 10 containers monitored\)  |  $200  |  $2000  |   | 
@@ -60,4 +60,4 @@ For **Enable Tiered Dimensions**, choose how you want you customers to be able t
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/saas-pricing-contract-options-example.png)
 
-The prices can be for the following durations: 1 month, 12 months, 24 months, or 36 months\. You can choose to oﬀer one, two, three, or all four options for your SaaS contracts listing\. The durations must be the same across each dimension\. For example, in a case where you have ReadOnlyUsers and AdminUsers dimensions, if you oﬀer a yearly price for ReadOnlyUsers, you must oﬀer it for AdminUsers, too\.
+The prices can be for the following durations: 1 month, 12 months, 24 months, or 36 months\. You can choose to oﬀer one, two, three, or all four options for your product\. The durations must be the same across each dimension\. For example, in a case where you have ReadOnlyUsers and AdminUsers dimensions, if you oﬀer a yearly price for ReadOnlyUsers, you must oﬀer it for AdminUsers, too\.

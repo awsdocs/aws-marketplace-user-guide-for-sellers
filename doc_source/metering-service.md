@@ -2,8 +2,8 @@
 
  The AWS Marketplace Metering Service is a pricing and metering feature that AWS Marketplace sellers can use to directly charge for their software along one of four usage categories: users, data, bandwidth, or hosts\. The service can be used with you AMI\-based and SaaS\-based products\. All AMI\-based software that uses the Metering Service must meet the following requirements: 
 +  Your software must be launched from the AWS Marketplace through an Amazon Machine Image \(AMI\)\. 
-+  If you have an existing product in the AWS Marketplace, you must submit a new AMI and create a new product listing to enable this feature\. 
-+  All software must be provisioned with an AWS Indentity and Access Management \(IAM\) role\. The end customer will be required to add an IAM role to the Amazon Elastic Compute Cloud \(EC2\) instance the user is provisioning with the software\. Although the use of an IAM role is currently optional when deploying software through the AWS Marketplace, it is required when deploying AWS Marketplace Metering Service software\. 
++  If you have an existing product in the AWS Marketplace, you must submit a new AMI and create a new product to enable this feature\. 
++  All software must be provisioned with an AWS Identity and Access Management \(IAM\) role\. The end customer will be required to add an IAM role to the Amazon Elastic Compute Cloud \(EC2\) instance the user is provisioning with the software\. Although the use of an IAM role is currently optional when deploying software through the AWS Marketplace, it is required when deploying AWS Marketplace Metering Service software\. 
 +  Your software must be able to determine consumption in some way\. 
 
  Products that use the Metering Service must charge customers along a single usage category, but up to eight dimensions of a single category can be defined\. Depending on the category selected, software can be priced by provisioned resources, concurrent resources, or accumulated resource consumption\. All charges are still incurred hourly by the customer\. All usage is calculated and billed monthly using the same mechanism as existing AWS Marketplace software\. 
@@ -18,7 +18,9 @@
   +  Hosts \- Any server, node, instance, endpoint, or other part of a computing system\. This category is appropriate for software that monitors or scans many customer\-owned instances \(for example, performance or security monitoring\)\. 
   +  Data \- Storage or information, measured in MB, GB, or TB\. This category is appropriate for software that manages stored data or processes data in batches\. 
 +  **Usage Unit** – A software product will select a specific usage unit corresponding to the selected usage category\. This is usually more specific and describes the unit your software will charge on\. Examples include: 
-  +  NodesHrs \(corresponding to the Hosts category\) o UserHrs \(corresponding to the User category\) o GBStored \(corresponding to the Data category\) 
+  + NodesHrs \(corresponding to the Hosts category\)
+  + UserHrs \(corresponding to the User category\)
+  + GBStored \(corresponding to the Data category\)
 +  *Consumption* \- Any software product priced through the use of the Metering Service will charge for consumption in one of three ways: 
   +  Provisioned \- The software allows customers to configure a specific amount of resources for use \(for example, number of users or a fixed amount of bandwidth\)\. Each hour, customers pay for what they have provisioned\. 
   +  Concurrent \- The software allows any number of distinct hosts or users to connect to the software\. Each hour, customers pay based on the number of hosts or users who accessed the software\. 
@@ -42,7 +44,7 @@
 +  Single price 
 +  Multiple dimensions \(up to eight\) 
 
- The *Listing Your Product on AWS Marketplace* \(in this portion of the user guide\)describes how to provide a customer\-friendly description of your dimension and pricing\. 
+ [Adding Your Product to AWS Marketplace ](#listing-your-product-on-aws-marketplace) describes how to provide a customer\-friendly description of your dimension and pricing\. 
 
 ### Example: Provisioned Bandwidth with Non\-Linear Pricing<a name="example-provisioned-bandwidth-with-non-linear-pricing"></a>
 
@@ -52,14 +54,14 @@
 
  Imagine you offer software that monitors other Amazon EC2 instances\. You choose to bill by the number of hosts that are being monitored\. For your usage category, select host\. In addition to charging by host, you want to charge for the extra value for monitoring larger hosts\. You can use multiple dimensions within the host category\. You can define a distinct price for micro, small, medium, large, x\-large, 2XL, 4XL, 8XL instances\. Your software is responsible for mapping each particular host to one of your defined dimensions\. Your software is responsible for sending a separate metering record for each dimension of your usage category if applicable\. 
 
-## Listing Your Product on AWS Marketplace<a name="listing-your-product-on-aws-marketplace"></a>
+## Adding Your Product to AWS Marketplace<a name="listing-your-product-on-aws-marketplace"></a>
 
- To take advantage of the Metering Service, you must create a new product listing\. If your software is already listed on the AWS Marketplace, you will need to decide whether the new AWS Marketplace Metering Service product will be made available in addition to your current listing, or if it will replace your current listing as the only version available to new users\. If you choose replacement, the existing product will be removed from the AWS Marketplace so that it is no longer available for new subscribers\. Existing customers will continue to have access to their old product and instances, but they can migrate to the new product at their convenience\. The new product must meter usage to the AWS Marketplace Metering Service, as described in the *Modifying Your Software to Use the Metering Service* section later in this guide\. 
+ To take advantage of the Metering Service, you must create a new product for AWS Marketplace to list\. If your product is already on the AWS Marketplace, you will need to decide whether the new AWS Marketplace Metering Service product will be made available in addition to your current product, or if it will replace your current product as the only version available to new users\. If you choose replacement, the existing product will be removed from the AWS Marketplace so that it is no longer available for new subscribers\. Existing customers will continue to have access to their old product and instances, but they can migrate to the new product at their convenience\. The new product must meter usage to the AWS Marketplace Metering Service, as described in the *Modifying Your Software to Use the Metering Service* section later in this guide\. 
 
  After you have your AMI, follow the standard process to share and scan your AMI using the self\-service tool\. In addition to using the template available on the management portal, fill out the product load form and upload it to start the ingestion process\. 
 
  The following definitions will help you fill out the fields of the product load form for the AWS Marketplace Metering Service\. On the product load form, these fields are labeled as Flexible Consumption Pricing \(FCP\) to differentiate them from hourly and monthly priced products\. 
-+  **Title**: If you already have a listing on AWS Marketplace and you are adding the same listing with the AWS Marketplace Metering Service, include the FCP category/dimension in parenthesis to differentiate the two \(for example, “PRODUCT TITLE \(Data\)”\)\. 
++  **Title**: If you already have a product on AWS Marketplace and you are adding the same product with the AWS Marketplace Metering Service, include the FCP category/dimension in parenthesis to differentiate the two \(for example, “PRODUCT TITLE \(Data\)”\)\. 
 +  **Pricing Model**: From the drop\-down list, choose **Usage**\. 
 +  **FCP Category**: The category in which customers will be charged for paid products with a **Usage** pricing component\. From the drop\-down list, choose **Users**, **Hosts**, **Data**, or **Bandwidth**\. 
 +  **FCP Unit**: The unit of measurement on which customers will be charged for paid products with a **Usage** pricing component\. Options will appear in the drop\-down list based on the FCP category you selected\. The following table lists the valid units for each category\. 
@@ -71,7 +73,7 @@
 |  Hosts  |   HostHrs   | 
 |  Data  |   MB, GB, TB   | 
 |  Bandwidth  |   Mbps, Gbps   | 
-+  **FCP Dimension Name**: The name used when sending metering records by calling MeterUsage API\. It is visible in billing reports, but because it is not external\-facing, the name does not need to be userfriendly\. The name can be no more than 15 characters and can only include alphanumeric and underscore characters\. **After you set the name, you will not be able to change it\. Changing the name requires a new AMI\.** 
++  **FCP Dimension Name**: The name used when sending metering records by calling MeterUsage API\. It is visible in billing reports, but because it is not external\-facing, the name does not need to be user friendly\. The name can be no more than 15 characters and can only include alphanumeric and underscore characters\. **After you set the name, you will not be able to change it\. Changing the name requires a new AMI\.** 
 +  **FCP Dimension Description**: The customer\-facing statement that describes the dimension for the product\. The description \(for example, Administrators per hour, Per Mbps bandwidth provisioned\) can be no more than 70 characters and should be user\-friendly\. **After the product is published, you will not be able to change this description**\. 
 +  **FCP Rate**: The software charge per unit for this product\. This field supports 3 decimal places\. 
 
@@ -95,7 +97,7 @@
 
  For provisioned consumption, this will typically be read from the software configuration as a sampled value, but might also be a maximum configured value, recorded each hour\. For concurrent consumption, this might be either a periodic sample or a maximum value recorded each hour\. For accumulated consumption, this will be a value that is accumulated each hour\. 
 
- For pricing on multiple dimensions, multiple values must be measured and sent to the Metering Service, one per dimension\. This requires your software to be programmed or configured with the known set of dimensions when providing the AMI for listing\. The set of dimensions cannot change after a product is listed\. 
+ For pricing on multiple dimensions, multiple values must be measured and sent to the Metering Service, one per dimension\. This requires your software to be programmed or configured with the known set of dimensions when you provide the AMI\. The set of dimensions cannot change after a product is created\. 
 
  For each pricing scenario, this table describes recommended ways for measuring consumption each hour: 
 
@@ -145,7 +147,7 @@
 
  In addition, your software must call an in\-region AWS Marketplace Metering Service endpoint\. Your product must have a correct regional endpoint setup, so us\-east\-1 sends records to us\-east\-1 endpoint, and us\-west\-2 sends records to us\-west\-2 endpoint\. Making in\-region calls provides buyers with a more stable experience and prevents situations in which an unrelated region’s availability could impact software running in another region\. and 
 
- When you send metering records to the service, you must connect to the AWS Marketplace Metering Service in your region\. Use the **getCurrentRegion\(\)** helper method to determine the region in which the EC2 instance is running, and then pass this region information to the MeteringServiceClient constructor\. If you do not specify a region in the SDK constructor, it will default to the us\-east\-1 region\. If your application attempts to make crossregion calls to the service, it will be rejected\. For more information, see [Determining an Application’s Current Region](https://java.awsblog.com/post/Tx3GBOIEN1JJMQ5/Determining-an-Application-s-Current-Region) and [getCurrentRegion\(\)](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/regions/Regions.html#getCurrentRegion())\. 
+ When you send metering records to the service, you must connect to the AWS Marketplace Metering Service in your region\. Use the **getCurrentRegion\(\)** helper method to determine the region in which the EC2 instance is running, and then pass this region information to the MeteringServiceClient constructor\. If you do not specify a region in the SDK constructor, it will default to the us\-east\-1 region\. If your application attempts to make cross\-region calls to the service, it will be rejected\. For more information, see [Determining an Application’s Current Region](https://java.awsblog.com/post/Tx3GBOIEN1JJMQ5/Determining-an-Application-s-Current-Region) and [getCurrentRegion\(\)](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/regions/Regions.html#getCurrentRegion())\. 
 
 ## Important Information About Failure Handling<a name="important-information-about-failure-handling"></a>
 
@@ -159,7 +161,7 @@
 
  Keep these limitations in mind when designing and submitting your Metering Service\-enabled software: 
 
-1.  **IAM role and Internet gateway requirements for your customers** \- Your customers must have an Internet gateway and must launch your software with an IAM role with specific permissions\. For information about these permissions, see *Appendix B* of this guide\. Your software will be unable to connect to the Metering Service if these two conditions are not met\. 
+1.  **IAM role and Internet gateway requirements for your customers** \- Your customers must have an Internet gateway and must launch your software with an IAM role with specific permissions\. For information on setting IAM permissions, see [AWS Marketplace Metering and Entitlement Service APIs Permissions](iam-user-policy-for-aws-marketplace-actions.md)\. Your software will be unable to connect to the Metering Service if these two conditions are not met\. 
 
 1.  **Inability to add or change new usage category or dimensions to existing Metering Service product** \- When customers subscribe to your software product, they are agreeing to terms and conditions\. Changing the dimensions in products with the Metering Service requires a new product and a new subscription\. 
 

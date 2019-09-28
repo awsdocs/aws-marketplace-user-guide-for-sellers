@@ -3,18 +3,18 @@
  You use the `BatchMeterUsage` operation in the AWS Marketplace Metering Service to deliver metering records to AWS\. Keep the following in mind: 
 +  We require sellers to use batching by using the `BatchMeterUsage` operation\. 
 +  We de\-duplicate metering requests on the hour\. 
-  +  Requests are deduped per product\-customer\-hour\-dimension\. 
+  +  Requests are deduplicated per product\-customer\-hour\-dimension\. 
   +  You can always retry any request, but if you meter for a diﬀerent quantity, the original quantity is billed\. 
   +  If you send multiple requests for the same customer/dimension/hour, they don't accumulate usage\. 
   +  If you are sending daily reports on the number of users consumed, you must send all of them in the same hour, or your customers are charged twice\. 
 +  Your metering records will contain a timestamp that can't be more than 1 hour in the past\. 
-+  The AWS Marketplace Metering Service is available in 14 AWS Regions\. The US East \(N\. Virginia\) Region is enabled by default for SaaS metering products when you request your listing\. If you intend to use other Regions, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. For information, see [BatchMeterUsage](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_BatchMeterUsage.html)\. 
++  The AWS Marketplace Metering Service is available in 14 AWS Regions\. The US East \(N\. Virginia\) Region is enabled by default for SaaS metering products when you request your product\. If you intend to use other Regions, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. For information, see [BatchMeterUsage](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_BatchMeterUsage.html)\. 
 
 ## Authentication and Authorization<a name="authentication-and-authorization"></a>
 
  Your vendor proﬁle on AWS Marketplace is tied to one AWS account\. For both the `BatchMeterUsage` and the `ResolveCustomer` operations, you authenticate using AWS credentials for your seller account\. Like most AWS services, the AWS Marketplace Metering Service uses standard [AWS Signature Version 4](http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html) to authenticate requests\. You can't invoke `BatchMeterUsage` or `ResolveCustomer` using credentials other than those that belong to your seller account\. 
 
- You use AWS Identity and Access Management \(IAM\) to set up AWS credentials\. You can make calls to the AWS Marketplace Metering Service and the AWS Marketplace Entitlement Service using an IAM user or role\. 
+ You use AWS Identity and Access Management \(IAM\) to set up AWS credentials\. You can make calls to the AWS Marketplace Metering Service and the AWS Marketplace Entitlement Service using an IAM user or role\. For more information on publishing, see [Publishing Container Products](publishing-container-products.md)\. For information on setting IAM permissions, see [AWS Marketplace Metering and Entitlement Service APIs Permissions](iam-user-policy-for-aws-marketplace-actions.md)\.
 
 ### Example: Host Scanning<a name="host-scanning-example"></a>
 

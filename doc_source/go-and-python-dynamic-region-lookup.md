@@ -1,4 +1,4 @@
-# Go Dynamic Region Lookup<a name="go-and-python-dynamic-region-lookup"></a>
+# Go and Python Dynamic Region Lookup<a name="go-and-python-dynamic-region-lookup"></a>
 
  The following are examples for how to query the AWS Region from Amazon EC2 instance metadata using Go and Python\. 
 
