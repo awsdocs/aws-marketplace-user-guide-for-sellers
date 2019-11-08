@@ -11,8 +11,8 @@ This documentation helps you understand how to apply the shared responsibility m
 **Topics**
 + [Controlling Access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)
 + [Policies and Permissions AWS Marketplace Providers](detailed-management-portal-permissions.md)
-+ [AWS Commerce Analytics Service Account Permissions](set-aws-iam-cas-permissions.md)
-+ [AWS Product Support Connection Account Permissions](set-aws-iam-psc-permissions.md)
++ [AWS Marketplace Commerce Analytics Service Account Permissions](set-aws-iam-cas-permissions.md)
++ [AWS Marketplace Product Support Connection Account Permissions](set-aws-iam-psc-permissions.md)
 + [Amazon SQS Permissions](set-aws-iam-sqs-permissions.md)
 + [AWS Marketplace Metering and Entitlement Service APIs Permissions](iam-user-policy-for-aws-marketplace-actions.md)
 + [AMI Security Policies](product-and-ami-policies.md)

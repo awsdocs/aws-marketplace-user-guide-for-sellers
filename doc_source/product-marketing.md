@@ -48,10 +48,12 @@
 https://aws.amazon.com/marketplace/pp/ASIN
 ```
 
- Replace ASIN segment of the URL with your product’s ASIN\. For example:
+ Replace ASIN segment of the URL with your product’s ASIN\. 
+
+**Example**  
 
 ```
-[https://aws\.amazon\.com/marketplace/pp/B00635Y2IW](https://aws.amazon.com/marketplace/pp/B00635Y2IW)
+https://aws.amazon.com/marketplace/pp/B00635Y2IW
 ```
 
  The ASIN appears in the URL when you search for your application on [aws\.amazon\.com/marketplace](https://aws.amazon.com/marketplace/)\. Alternatively, you can consult with your account manager to find the ASIN\. 

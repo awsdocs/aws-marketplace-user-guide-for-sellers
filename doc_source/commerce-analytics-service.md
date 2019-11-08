@@ -1,6 +1,6 @@
 # AWS Marketplace Commerce Analytics Service<a name="commerce-analytics-service"></a>
 
-The AWS Marketplace Commerce Analytics Service allows you to programmatically access product and customer data through AWS Marketplace\. Once you enroll in the service, you can access your usage, subscription, and billing reports through the AWS SDK\.
+The AWS Marketplace Commerce Analytics Service lets you programmatically access product and customer data through AWS Marketplace\. After you enroll in the service, you can access your usage, subscription, and billing reports through the AWS SDK\.
 
  ![\[Commerce Analytics Service Overview\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/commerce-analytics-service-overview.png) 
 
@@ -46,9 +46,9 @@ The AWS Marketplace Commerce Analytics Service allows you to programmatically ac
 
 1.  Navigate to the [Commerce Analytics Service enrollment page](https://aws.amazon.com/marketplace/management/cas/enroll)\. 
 
-1.  Enter the Amazon S3 bucket name and Amazon SNS topic ARN, and then choose **Enroll**\. 
+1.  Enter the Amazon S3 bucket name and Amazon SNS topic ARN, and choose **Enroll**\. 
 
-1.  On the permissions page, choose **Allow**\. 
+1.  On the permissions page, choose **Allow**\.
 
 1.  On the AWS Marketplace Management Portal, record the **Role Name ARN** in the success message\. You will need it to call the service\. 
 
@@ -86,11 +86,30 @@ Now that you have completed the configuration to use the AWS Marketplace Commerc
 
 ## Technical Implementation Guide<a name="technical-implementation-guide"></a>
 
- The AWS Marketplace Commerce Analytics service is provided via the [AWS SDK](https://aws.amazon.com/tools/)\. This guide demonstrates how to interact with the service using the [AWS CLI](https://aws.amazon.com/cli/) and the [AWS SDK for Java](https://aws.amazon.com/sdk-for-java/)\. 
+ The AWS Marketplace Commerce Analytics Service is provided through the [AWS SDK](https://aws.amazon.com/tools/)\. This guide shows you how to interact with the service using the [AWS CLI](https://aws.amazon.com/cli/) and the [AWS SDK for Java](https://aws.amazon.com/sdk-for-java/)\.
+
+### IAM Policy for Commerce Analytics Service<a name="aws-marketplace-commerce-analytics-iam-permissions"></a>
+
+To allow your IAM users to use the Commerce Analytics Service, you must attach the following inline policy to your users\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "marketplacecommerceanalytics:GenerateDataSet",
+            "Resource": "*"
+        },
+    ]
+}
+```
+
+For more information, see [Creating Policies in the IAM console](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-json-editor) in the *IAM User Guide*\.
 
 ### Making Requests with the AWS CLI<a name="making-requests-with-aws-cli"></a>
 
- To get started, download the [AWS CLI](https://aws.amazon.com/cli/)\. The following AWS CLI example makes a request for the **Hourly/Monthly Subscriptions** data set for October 1, 2017\. This data set is published to the **demo\-bucket** Amazon S3 bucket using the prefix **demo\-prefix**, and the notification message is delivered to the **demo\-topic** Amazon SNS topic\. 
+To get started, download the [AWS CLI](https://aws.amazon.com/cli/)\. The following AWS CLI example makes a request for the **Hourly/Monthly Subscriptions** data set for October 1, 2017\. This data set is published to the **demo\-bucket** Amazon S3 bucket using the prefix **demo\-prefix**, and the notification message is delivered to the **demo\-topic** Amazon SNS topic\. 
 
 ```
 aws marketplacecommerceanalytics generate-data-set \
@@ -247,7 +266,7 @@ Request successful, unique ID: c59aff81-6875-11e5-a6d8-fd5dbcaa74ab
 |  Data Set Publication Date  |   The date a data set was published\.   For daily data sets, provide a date with day\-level granularity for the desired day\.   For monthly data sets, provide a date with month\-level granularity for the desired month\. The day value is ignored\.   | 
 | Role Name ARN | The ARN of the role with an attached permissions policy that provides the service with access to your resources\. | 
 | Destination Amazon S3 Bucket Name | The name \(the friendly name, not the ARN\) of the destination Amazon S3 bucket\. Your data sets are published to this location\. | 
-| Destination Amazon S3 Prefix |   \(Optional\) The Amazon S3 prefix for the published data set, similar to a directory path in standard file systems\.   For example, if given the bucket name `mybucket` and the prefix `myprefix/mydatasets`, the output file is published to `s3://mybucket/myprefix/mydatasets/outputfile`\.   If the prefix directory structure doesn't exist, it's created\.   If no prefix is provided, the data set is published to the Amazon S3 bucket root\.   | 
+| Destination Amazon S3 Prefix |   \(Optional\) The Amazon S3 prefix for the published data set, similar to a directory path in standard file systems\.   For example, if given the bucket name `mybucket` and the prefix `myprefix/mydatasets`, the output file is published to `s3://awsexamplebucket/myprefix/mydatasets/outputfile`\.   If the prefix directory structure doesn't exist, it's created\.   If no prefix is provided, the data set is published to the Amazon S3 bucket root\.   | 
 | SNS Topic ARN |   The ARN for the Amazon SNS topic that is notified when the data set has been published or if an error occurs\.   | 
 
 ### Responses<a name="responses"></a>
@@ -390,7 +409,7 @@ This can happen if your IAM user doesn't have the permissions necessary to call 
 
 1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
-1. From the right\-side navigation, choose **Users**
+1. From the right\-side navigation, choose **Users**\.
 
 1. Choose the IAM user whose credentials will be used for the `marketplacecommerceanalytics` AWS CLI commands to open the **Summary** page\.
 
@@ -407,13 +426,15 @@ This can happen if your IAM user doesn't have the permissions necessary to call 
          "Action": "marketplacecommerceanalytics:GenerateDataSet",
          "Resource": "*",
        },
-     ],
+     ],a
    }
    ```
 
 1. Choose **Review policy**, provide the inline policy with a descriptive name, like *GenerateDataSetPolicy*, and choose **Create policy**\.
 
-After updating the permissions, run the AWS CLI command again with the same credentials as this IAM user to complete the action\.
+After updating the permissions, run the AWS CLI command again with the same credentials as this IAM user to complete the action\. 
+
+For more information, see [Creating Policies in the IAM console](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-json-editor) in the *IAM User Guide*\.
 
  **My problem isn't listed here\.**
 

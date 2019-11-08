@@ -14,8 +14,22 @@
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/saas-polling-sqs-queue.png)
 
- **Note**: As a *SaaS subscriptions* seller, you must handle four actions: *unsubscribe\-success, subscribe\- fail, unsubscribe\-pending, and unsubscribe\-success\.* As a **SaaS contracts** seller you will also get an *entitlement\-updated* SNS notification to let you know that a customer’s contract has been created, updated, renewed, or expired\. 
+**Note**  
+As a SaaS subscriptions provider, you must handle four actions:  
+`subscribe-success`
+`subscribe-fail`
+`unsubscribe-pending`
+`unsubscribe-success`
+ As a SaaS contracts provider, you will only get an `entitlement-updated` SNS notification to let you know that a customer’s contract has been created, updated, renewed, or expired\. 
 
-## **Updating SaaS Products**<a name="updating-saas-products"></a>
+## Updating SaaS Products<a name="updating-saas-products"></a>
 
- Once your product is on AWS Marketplace, you are responsible for keeping the pricing and product information up\-to\-date\. You make changes to your product page from the [AWS Marketplace Management](https://aws.amazon.com/marketplace/management/) [Portal](https://aws.amazon.com/marketplace/management/)\. To make changes, from the **Products** tab choose **SaaS**\. Then on the **SaaS products** page, you'll find your list of **Current products**\. Choose the product you'd like to update from the list and submit your updated information\.
+After your product is on AWS Marketplace, you are responsible for keeping the pricing and product information up to date\.
+
+**To make changes to your SaaS product**
+
+1. Sign in the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/)\.
+
+1. From the **Products** tab, choose **SaaS**\.
+
+1. On the **SaaS products** page, you'll find your list of **Current products**\. Choose the product and submit your updated information\.

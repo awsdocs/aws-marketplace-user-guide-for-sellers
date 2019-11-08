@@ -12,14 +12,15 @@
 
 **Topics**
 + [Publication Schedule](#publication-schedule-3)
-+ [Section 1: Disbursed Amount by Product](#section-1-disbursed-amount-by-product)
-+ [Section 2: Disbursed Amount by Customer Geography](#section-2-disbursed-amount-by-customer-geography)
-+ [Section 3: Disbursed Amount by Instance Hours](#section-3-disbursed-amount-by-instance-hours)
-+ [Section 4: Age of Uncollected Funds](#section-4-age-of-uncollected-funds)
-+ [Section 5: Age of Past Due Funds](#age-of-past-due-funds)
-+ [Section 6: Age of Disbursed Funds](#section-5-age-of-disbursed-funds)
++ [Section 1: Disbursed Amount by Product](#disbursed-amount-by-product)
++ [Section 2: Disbursed Amount by Customer Geography](#disbursed-amount-by-customer-geography)
++ [Section 3: Disbursed Amount by Instance Hours](#disbursed-amount-by-instance-hours)
++ [Section 4: Age of Uncollected Funds](#age-of-uncollected-funds)
++ [Section 5: Age of Disbursed Funds](#age-of-disbursed-funds)
++ [Section 6: Age of Past Due Funds](#age-of-past-due-funds)
++ [Section 7: Uncollected Funds Breakdown](#uncollected-funds-berakdown)
 
-## Section 1: Disbursed Amount by Product<a name="section-1-disbursed-amount-by-product"></a>
+## Section 1: Disbursed Amount by Product<a name="disbursed-amount-by-product"></a>
 
  This section lists data for disbursements by product\. For each row, the Net Amount column is equal to the SellerRev column minus the AWSRefFee column\. When a refund is given to a customer, the Net Amount column is a negative number that is equal to the SellerRevRefund column minus the AWSRefFeeRefund column\. US sales and use tax that is collected or refunded is in the SellerUSSalesTax or SellerUSSalesTaxRefund column and isn't included in the calculation of the Net Amount column\. 
 
@@ -51,7 +52,7 @@
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
 |  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
 
-## Section 2: Disbursed Amount by Customer Geography<a name="section-2-disbursed-amount-by-customer-geography"></a>
+## Section 2: Disbursed Amount by Customer Geography<a name="disbursed-amount-by-customer-geography"></a>
 
  This section lists data for disbursements by the customer's geographic location\. The amount in the Disbursed Amount column is equal to the sum of the entries in the Postal Code column\. The sum of the entries in the Net Amount By Tax Location column is equal to the sum of the entries in the Postal Code column minus the sum of the entries in the Seller U\.S\. Sales Tax column and the Seller U\.S\. Sales Tax Refund columns\. 
 
@@ -72,7 +73,7 @@
 |  Seller U\.S\. Sales Tax  |  ✔  |  ✔  |  The total amount of US sales and use tax that is disbursed to the seller for the transaction, grouped by location\.  | 
 |  Seller U\.S\. Sales Tax Refund  |  ✔  |  ✔  |  The total amount of US sales and use tax that is refunded to the customer for the transaction, grouped by location\.  | 
 
-## Section 3: Disbursed Amount by Instance Hours<a name="section-3-disbursed-amount-by-instance-hours"></a>
+## Section 3: Disbursed Amount by Instance Hours<a name="disbursed-amount-by-instance-hours"></a>
 
  This section lists data for disbursements by Amazon EC2 instance hours\. 
 
@@ -88,7 +89,7 @@
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\.  | 
 
-## Section 4: Age of Uncollected Funds<a name="section-4-age-of-uncollected-funds"></a>
+## Section 4: Age of Uncollected Funds<a name="age-of-uncollected-funds"></a>
 
  This section lists data for uncollected funds, organized by the age\. Uncollected funds might include amounts that aren't due yet\. 
 
@@ -102,7 +103,21 @@
 |  Uncollected \(> 120 days pending\)  |  ✔  |  ✔  |  The total of funds billed but not collected for more than 120 days\. | 
 |  Uncollected \(overall\)  |  ✔  |  ✔  |  The total of all funds billed but not collected\.  | 
 
-## Section 5: Age of Past Due Funds<a name="age-of-past-due-funds"></a>
+## Section 5: Age of Disbursed Funds<a name="age-of-disbursed-funds"></a>
+
+ This section lists data for collected funds since the previous monthly disbursement\. 
+
+
+|  Column Name  |  Available for All Sellers |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
+| --- | --- | --- | --- | 
+|  Collected \(< 31 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the 0–31 day range\.  | 
+|  Collected \(31–60 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the 31–60 day range\.  | 
+|  Collected \(61–90 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the 61–90 days range\.  | 
+|  Collected \(91–120 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the 91–120 days range\.  | 
+|  Collected \(> 120 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the greater than 120 days range\.  | 
+|  Collected \(overall\)  |  ✔  |  ✔  |  The total of all collected funds\.  | 
+
+## Section 6: Age of Past Due Funds<a name="age-of-past-due-funds"></a>
 
  This section lists data for funds that have been accrued and are payable by the customer, but have not been paid in accordance with the customer's agreement with AWS\. 
 
@@ -116,16 +131,27 @@
 |  Past Due \(> 120 days\)  |  ✔  |  ✔  | The total of funds that have accrued in the last 121 or more days and are due but that the customer hasn't paid\. | 
 |  Past Due \(overall\)  |  ✔  |  ✔  |  The total of funds that have accrued and are due but that the customer hasn't paid\.  | 
 
-## Section 6: Age of Disbursed Funds<a name="section-5-age-of-disbursed-funds"></a>
+## Section 7: Uncollected Funds Breakdown<a name="uncollected-funds-berakdown"></a>
 
- This section lists data for collected funds since the previous monthly disbursement\. 
+This section lists all uncollected funds, sorted by the payment due date\.
 
 
-|  Column Name  |  Available for All Sellers |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
+|  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
-|  Collected \(< 31 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the 0–31 day range\.  | 
-|  Collected \(31–60 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the 31–60 day range\.  | 
-|  Collected \(61–90 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the 61–90 days range\.  | 
-|  Collected \(91–120 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the 91–120 days range\.  | 
-|  Collected \(> 120 days pending\)  |  ✔  |  ✔  |  The total of funds collected that were billed in the greater than 120 days range\.  | 
-|  Collected \(overall\)  |  ✔  |  ✔  |  The total of all collected funds\.  | 
+| Product Code |  ✔  |  ✔  | The unique identifier for the software product\. | 
+| Product |  ✔  |  ✔  | The title of the product\. | 
+| SellerRev |  ✔  |  ✔  | The amount that is billed for using the product or the monthly fees for using the product\. | 
+| AWSRefFee |  ✔  |  ✔  | The AWS fee amount that is deducted from the billed amount at settlement time\. | 
+| SellerRevRefund |  ✔  |  ✔  | The total amount of any refunds for the transaction\. | 
+| AWSRefFeeRefund |  ✔  |  ✔  | The portion of the AWS fee that is refunded from the transaction\. | 
+| Net Amount |  ✔  |  ✔  | The net amount that is billed for this transaction, minus AWS fees, refunds, and US sales and US tax\. | 
+| Currency |  ✔  |  ✔  | The currency of the transaction\. For example, if the transaction is in US dollars, the entry is USD\. | 
+| AR Period |  ✔  |  ✔  | The month and year of the transaction, in the format of YYYY\-MM | 
+| Transaction Reference ID |  ✔  |  ✔  | A unique identifier that represents the transaction, which you can use to correlate transactions across AWS Marketplace reports\. | 
+| Opportunity Name |  ✔  |  ✔  | The unique identifier for a registered opportunity\. | 
+| Opportunity Description |  ✔  |  ✔  | Any metadata in the registered opportunity\. | 
+| Solution Title |  ✔  |  ✔  | The name of the solution\. | 
+| Solution ID |  ✔  |  ✔  | The unique identifier of the solution\. | 
+| Payer Reference ID |  ✔  |  ✔  | A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\. | 
+| Payer Address ID |  ✔  |  ✔  | A unique identifier that represents the customer's address\. | 
+| Payment Due date |  ✔  |  ✔  | The payment due date in the format of YYYY\-MM\-DD\. | 

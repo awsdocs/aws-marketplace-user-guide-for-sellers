@@ -6,8 +6,6 @@ Customers can quickly launch pre\-configured software with just a few clicks, an
 
  You use AWS Marketplace as a subscriber \(buyer\) or as a provider \(seller\), or both\. Anyone with an AWS account can use AWS Marketplace as a consumer, and can register to become a provider\. A provider can be an independent software vendor \(ISV\), value\-added reseller, or individual that has something to offer that works with AWS products and services\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/aws-marketplace-concepts.png)
-
  Every product on AWS Marketplace has been through a curation process\. On the product page, there can be one or more offerings for the product\. When the provider submits a product in AWS Marketplace, they define the price of the product, and the terms and conditions of use\. When a consumer subscribes to a product offering, they agree to the pricing, and terms and conditions set for the offer\. 
 
  The product can be free to use or can have an associated charge\. The charge becomes part of your AWS bill, and after you pay, AWS Marketplace pays the provider\. Products can take many forms\. For instance, a product can be offered as an Amazon Machine Image \(AMI\) that is instantiated using your AWS account\. The product could also be configured to use AWS CloudFormation templates for delivery to the consumer\. The product could also be software as a service \(SaaS\) offerings from an ISV, or a web ACL, set of rules, or conditions for AWS WAF\. 

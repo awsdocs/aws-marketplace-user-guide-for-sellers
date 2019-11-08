@@ -6,13 +6,13 @@
 +  All software must be provisioned with an AWS Identity and Access Management \(IAM\) role\. The end customer will be required to add an IAM role to the Amazon Elastic Compute Cloud \(EC2\) instance the user is provisioning with the software\. Although the use of an IAM role is currently optional when deploying software through the AWS Marketplace, it is required when deploying AWS Marketplace Metering Service software\. 
 +  Your software must be able to determine consumption in some way\. 
 
- Products that use the Metering Service must charge customers along a single usage category, but up to eight dimensions of a single category can be defined\. Depending on the category selected, software can be priced by provisioned resources, concurrent resources, or accumulated resource consumption\. All charges are still incurred hourly by the customer\. All usage is calculated and billed monthly using the same mechanism as existing AWS Marketplace software\. 
+ Products that use the Metering Service must charge customers along a single usage category, but up to 24 dimensions of a single category can be defined\. Depending on the category selected, software can be priced by provisioned resources, concurrent resources, or accumulated resource consumption\. All charges are still incurred hourly by the customer\. All usage is calculated and billed monthly using the same mechanism as existing AWS Marketplace software\. 
 
  The AWS Marketplace Metering Service enables several new scenarios\. For example, if your software monitors hosts, you can charge for each host monitored\. You can have different prices based on the host size, and charge for the number of concurrent hosts monitored each hour\. Similarly, if your software allows many users across an organization to sign in, you can charge by the number of users\. Each hour, the customer would be charged for the total number of provisioned users\. 
 
 ## Metering Service Concepts<a name="metering-service-concepts"></a>
 
- The AWS Marketplace Metering Service enables software sellers to modify their software to send metering records to an endpoint to capture usage\. Sellers can select a usage category and define up to eight dimensions of that one category\. These dimensions are metered once per hour, aggregated, and charged against a price plan defined by the seller\. As a seller, the first thing you need to do is determine which dimension you want to use\. After the AMI is published, you will not be able to change it\. Important service concepts: 
+ The AWS Marketplace Metering Service enables software sellers to modify their software to send metering records to an endpoint to capture usage\. Sellers can select a usage category and define up to 24 dimensions of that one category\. These dimensions are metered once per hour, aggregated, and charged against a price plan defined by the seller\. As a seller, the first thing you need to do is determine which dimension you want to use\. After the AMI is published, you will not be able to change it\. Important service concepts: 
 +  **Usage Category** \- Any software product priced through the use of the Metering Service will select one usage category along which to charge customers, including but not limited to: 
   +  Users \- A defined set of permissions associated with a single identifier\. This category is appropriate for software in which a customer’s users connect to the software directly \(for example, for customer\-relationship management or business intelligence reporting\)\. 
   +  Hosts \- Any server, node, instance, endpoint, or other part of a computing system\. This category is appropriate for software that monitors or scans many customer\-owned instances \(for example, performance or security monitoring\)\. 
@@ -25,7 +25,7 @@
   +  Provisioned \- The software allows customers to configure a specific amount of resources for use \(for example, number of users or a fixed amount of bandwidth\)\. Each hour, customers pay for what they have provisioned\. 
   +  Concurrent \- The software allows any number of distinct hosts or users to connect to the software\. Each hour, customers pay based on the number of hosts or users who accessed the software\. 
   +  Accumulated \- The software allows customers to use any amount of data, either processed or stored\. Each hour, customers pay for the aggregated amount\. 
-+  **Pricing** \- Any software product priced through the use of the Metering Service must specify either a single price or define up to eight dimensions, each with their own price\. 
++  **Pricing** \- Any software product priced through the use of the Metering Service must specify either a single price or define up to 24 dimensions, each with their own price\. 
   +  Single dimension \- This is the simplest pricing option\. Customers pay a single price per resource unit per hour, regardless of size or volume \(for example, $0\.014 per user per hour, or $0\.070 per host per hour\)\. 
   +  Multiple dimensions \- This pricing option is appropriate when the selected usage category varies along multiple axes\. For example, for host monitoring, a different price could be set depending on the size of the host\. Or for user\-based pricing, a different price could be set based on the type of user \(for example, admin, power user, and read\-only user\)\. 
 +  **Metering** \- All usage is recorded as a metering event, once each hour\. Your software must be configured to send the appropriate dimension and usage amount to the AWS Marketplace Metering Service\. 
@@ -42,7 +42,7 @@
 
  Next, you must decide how to price the selected usage category: 
 +  Single price 
-+  Multiple dimensions \(up to eight\) 
++  Multiple dimensions \(up to 24\) 
 
  [Adding Your Product to AWS Marketplace ](#listing-your-product-on-aws-marketplace) describes how to provide a customer\-friendly description of your dimension and pricing\. 
 
@@ -185,7 +185,7 @@
 
 ### How many dimensions can a usage category have?<a name="metering-faq-04"></a>
 
- Up to eight\. 
+ Up to 24\. 
 
 ### Metering Service products require a subscription?<a name="metering-faq-05"></a>
 

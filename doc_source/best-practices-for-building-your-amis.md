@@ -27,8 +27,6 @@ You are responsible for securing resell rights for non\-free Linux distributions
 
  [Amazon Linux AMI](https://aws.amazon.com/amazon-linux-ami/) 
 
- [Linux Forums](http://www.linuxforums.org/) 
-
  [Amazon EC2 Instance Types](http://aws.amazon.com/ec2/instance-types/) and [Instance Types](http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/instance-types.html?r=2153) 
 
 ## Securing an AMI<a name="securing-an-ami"></a>

@@ -1,4 +1,4 @@
-# AWS Marketplace User Guide for AWS Marketplace Providers
+# AWS Marketplace Providers Guide
 
 -----
 *****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
@@ -18,8 +18,8 @@ Amazon's trademarks and trade dress may not be used in
 + [AWS Marketplace Security](security.md)
    + [Controlling Access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)
    + [Policies and Permissions AWS Marketplace Providers](detailed-management-portal-permissions.md)
-   + [AWS Commerce Analytics Service Account Permissions](set-aws-iam-cas-permissions.md)
-   + [AWS Product Support Connection Account Permissions](set-aws-iam-psc-permissions.md)
+   + [AWS Marketplace Commerce Analytics Service Account Permissions](set-aws-iam-cas-permissions.md)
+   + [AWS Marketplace Product Support Connection Account Permissions](set-aws-iam-psc-permissions.md)
    + [Amazon SQS Permissions](set-aws-iam-sqs-permissions.md)
    + [AWS Marketplace Metering and Entitlement Service APIs Permissions](iam-user-policy-for-aws-marketplace-actions.md)
    + [AMI Security Policies](product-and-ami-policies.md)
@@ -31,9 +31,11 @@ Amazon's trademarks and trade dress may not be used in
       + [Product Support Connection](product-support-connection.md)
 + [Preparing Your Product](product-preparation.md)
    + [Product Pricing](pricing.md)
-   + [Seller Private Offers](private-offers-overview.md)
+   + [Private Offers](private-offers-overview.md)
       + [Flexible Payment Scheduler](flexible-payment-scheduler.md)
       + [Consulting Partner Private Offers](consulting-partner-offers.md)
+         + [ISV Setup](consulting-partner-isv-info.md)
+         + [Consulting Partner Setup](consulting-partner-info.md)
    + [Categories and Metadata](categories-and-metadata.md)
    + [Search Engine Optimization](search-engine-optimization.md)
 + [AWS Marketplace for Desktop Application (AMDA)](amda.md)

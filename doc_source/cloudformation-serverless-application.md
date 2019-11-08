@@ -38,7 +38,7 @@ Resources:
     Properties:
       Handler: 'com.sampleproject.SampleHandler::handleRequest'
       Runtime: java8
-      CodeUri: 's3://sample-bucket/2EXAMPLE-1234-4b12-ac37-515EXAMPLEe5-lambda.zip'
+      CodeUri: 's3://awsexamplebucket/2EXAMPLE-1234-4b12-ac37-515EXAMPLEe5-lambda.zip'
       Description: Sample Lambda function
       Timeout: 120
       MemorySize: 1024
@@ -95,7 +95,7 @@ To publish an application, you first upload the application code\. Store your co
                    "Service":  "serverlessrepo.amazonaws.com"
                },
                "Action": "s3:GetObject",
-               "Resource": "arn:aws:s3:::your-bucket-name/*"
+               "Resource": "arn:aws:s3:::awsexamplebucket/*"
            }
        ]
    }]]>
@@ -223,8 +223,8 @@ To submit your AWS CloudFormation template and config/scripts files, grant AWS M
                 "Service":  "assets.marketplace.amazonaws.com"
             },
             "Action": ["s3:GetObject", "s3:ListBucket"]
-            "Resource": ["arn:aws:s3:::your-bucket-name",
-                         "arn:aws:s3:::your-bucket-namee/*"]
+            "Resource": ["arn:aws:s3:::awsexamplebucket",
+                         "arn:aws:s3:::awsexamplebuckete/*"]
         }
     ]
 }]]>

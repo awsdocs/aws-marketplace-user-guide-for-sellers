@@ -1,6 +1,6 @@
-# AWS Commerce Analytics Service Account Permissions<a name="set-aws-iam-cas-permissions"></a>
+# AWS Marketplace Commerce Analytics Service Account Permissions<a name="set-aws-iam-cas-permissions"></a>
 
- To provide a user access to the AWS Marketplace Commerce Analytics Service, assign an IAM permission policy with the following permissions to a group or role that the user is a member of\. 
+You can use the following IAM permission policy to allow an IAM user to access the AWS Marketplace Commerce Analytics Service\.
 
 ```
 {
@@ -8,14 +8,11 @@
     "Statement": [
         {
             "Effect": "Allow",
-            "Action": [
-            "iam:Generate*",
-            "iam:Get*",
-            "iam:List*",
-            "iam:Simulate*"
-            ],
-            "Resource": "arn:aws:iam::123456789123:user/goldmine-test-seller-with-customer-support-policy"
-            }
-            ]
-        }
+            "Action": "marketplacecommerceanalytics:GenerateDataSet",
+            "Resource": "*"
+        },
+    ]
+}
 ```
+
+For more information about this feature, see [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md)\.

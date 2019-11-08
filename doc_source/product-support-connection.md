@@ -1,6 +1,6 @@
 # Product Support Connection<a name="product-support-connection"></a>
 
- AWS Marketplace Product Support Connection \(PSC\) is a feature that allows AWS Marketplace customers to provide contact information in the AWS Marketplace website for the purposes of obtaining and accessing product support from AWS Marketplace Sellers\. AWS Marketplace shares the provided data with participating Sellers via an API to enable a better support experience\. Customers can choose to add contact details during or after a purchase of PSC\-enabled AWS Marketplace products, and Sellers can retrieve the Customer contact data, along with relevant product subscription details, by calling a pull\-based API\. 
+ AWS Marketplace Product Support Connection \(PSC\) is a feature that enables AWS Marketplace customers to provide contact information in the AWS Marketplace website for the purposes of obtaining and accessing product support from AWS Marketplace Sellers\. AWS Marketplace shares the provided data with participating Sellers via an API to enable a better support experience\. Customers can choose to add contact details during or after a purchase of PSC\-enabled AWS Marketplace products, and Sellers can retrieve the Customer contact data, along with relevant product subscription details, by calling a pull\-based API\. 
 
  Your staff can use the Customer Support Eligibility tool to access near\-real\-time information about a customer's subscription to your products and provide fast, personalized service\. AWS Marketplace Management Portal makes it easy to get started: enter a customer's AWS account ID to retrieve subscription and usage information from their account\. 
 
@@ -84,13 +84,34 @@
 
 ## Technical Implementation Guide<a name="technical-implementation-guide"></a>
 
- This section covers API specification details and how to onboard with the API\. The PSC API, “start\-support\-data\-export” is part of the AWS Marketplace Commerce Analytics Service \(CAS\)\. In order to integrate with the API for PSC you must first enroll in CAS\. If you have already enrolled in CAS, you can skip steps 1\-4 below\. If you have already enrolled in CAS, you will need to use the same IAM Role that you created when you first onboarded\. 
+This section covers API specification details and how to onboard with the product support connection feature\. The PSC `start-support-data-export` API is part of the AWS Marketplace Commerce Analytics Service \(CAS\)\. To integrate with the API for PSC, you must first enroll in CAS\. If you are already enrolled in CAS, use the same IAM role that you created when you onboarded\.
+
+### IAM Policy for PSC<a name="allow-iam-users-permission-for-psc"></a>
+
+To allow your IAM users access the AWS Marketplace product support connection feature, you must attach the following inline policy to your users\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "marketplacecommerceanalytics:StartSupportDataExport",
+            "Resource": "*"
+        },
+    ]
+}
+```
+
+For more information, see [Creating Policies in the IAM console](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-json-editor) in the *IAM User Guide*\.
 
 ### Making requests with the AWS Command Line Interface \(CLI\)<a name="making-requests-with-the-aws-command-line-interface-cli"></a>
 
  You can request an export of the PSC data using the [AWS CLI](https://aws.amazon.com/cli/) or any of the [AWS Software Development Kits \(SDKs\)](https://aws.amazon.com/tools/)\. 
 
- If you have already been using CAS to call the *generate\-data\-set* method, you must use the same IAM Role for both *generate\-data\-set* and *start\-support\-data\-export*\. To ensure the security of the customer contact data available through the Product Support Connection program, we recommend that the S3 bucket you use for *start\-support\-data\-export* be separate from the S3 bucket you use for *generate\-data\-set*\. Verify the permissions on your IAM role allow access to all S3 buckets you intend to use\. 
+ If you have already been using CAS to call the *generate\-data\-set* method, you must use the same IAM Role for both *generate\-data\-set* and *start\-support\-data\-export*\. 
+
+To ensure the security of the customer contact data available through the Product Support Connection program, we recommend that the S3 bucket you use for *start\-support\-data\-export* be separate from the S3 bucket you use for *generate\-data\-set*\. Verify the permissions on your IAM role allow access to all S3 buckets you intend to use\. 
 
 ```
         aws marketplacecommerceanalytics start-support-data-export
@@ -104,12 +125,17 @@
 
  A successful response from the service will return the *dataSetRequestId* of the request\. 
 
- **Sample response**: 
+**Example**  
 
+```
+{
 
-|  | 
-| --- |
-|   \{   "dataSetRequestId":   "646dd4ed\-6806\-11e5\-a6d8\-fd5dbcaa74ab"   \}   | 
+"dataSetRequestId":
+
+"646dd4ed-6806-11e5-a6d8-fd5dbcaa74ab"
+
+}
+```
 
 ## API Request Parameters and Responses<a name="api-request-parameters-and-responses"></a>
 
@@ -128,7 +154,7 @@
 |  From Date  |   The earliest date of data to be exported\. The exported data will contain information from the specified From Date to 15 minutes prior to the time of the request\.   The From Date must be expressed as an ISO 8601 date/time string\.   If you would like to receive the full data set, as opposed to a set of updates, specify any date prior to the date when you onboarded to the program\. To receive only incremental data since your last request, specify the endDateTime from the dataSetCoverageRange from the metadata JSON file resulting from your previous request\. See below for more information about the metadata JSON file\.   | 
 |  Role Name ARN  |  The Amazon Resource Name \(ARN\) of the IAM role with an attached permissions policy which provides the service with access to your resources\.  | 
 |  Destination S3 Bucket Name  |  The name \(friendly name, not ARN\) of the destination [Amazon S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)\. Your data sets will be published to this location\.  | 
-|  Destination S3 Prefix  |   \(Optional\) The desired Amazon S3 prefix for the published data set, similar to a directory path in standard file systems\.   For example, if given the bucket name "mybucket" and the prefix "myprefix/mydatasets", the output file "outputfile" would be published to "s3://mybucket/myprefix/mydatasets/outputfile"\.   If the prefix directory structure does not exist, it will be created\.   If no prefix is provided, the data set will be published to the Amazon S3 bucket root\.   | 
+|  Destination S3 Prefix  |   \(Optional\) The desired Amazon S3 prefix for the published data set, similar to a directory path in standard file systems\.   For example, if given the bucket name "mybucket" and the prefix "myprefix/mydatasets", the output file "outputfile" would be published to "s3://*awsexamplebucket*/myprefix/mydatasets/outputfile"\.   If the prefix directory structure does not exist, it will be created\.   If no prefix is provided, the data set will be published to the Amazon S3 bucket root\.   | 
 |  SNS Topic ARN  |  The Amazon Resource Name \(ARN\) for the Amazon SNS topic that will be notified when the data set has been published, or if an error occurs\.  | 
 
 ## Responses<a name="responses"></a>
@@ -164,57 +190,35 @@
 |  Request Received Date Time  |  The date/time at which the request was received, in ISO 8601 format\.  | 
 |  Request Completed Date Time  |  The date/time at which the request was completed, in ISO 8601 format\.  | 
 
- Example JSON\-formatted metadata contents: 
+**Example JSON\-formatted metadata contents**  
 
- \{ 
-
- "dataSetRequestId": "c3c84ee0\-5aba\-11e6\-8d9c\-235dc080841d", 
-
- "dataSetCoverageRange": \{ 
-
- "startDateTime": "2016\-08\-18T00:00:00\.000Z", 
-
- "endDateTime": "2016\-08\-05T03:14:50\.334Z" 
-
- \}, 
-
- "dataSetRequestParameters": \{ 
-
- "fromDate": "2016\-08\-18T00:00:00\.000Z", 
-
- "dataSetType": "test\_customer\_support\_contacts\_data", 
-
- "roleNameArn": "arn:aws:iam::123456789012:role/MarketplaceCommerceAnalyticsRole", 
-
- "destinationS3BucketName": "mybucket", 
-
- "destinationS3Prefix": "mydata", 
-
- "snsTopicArn": "arn:aws:sns:us\-west\-2:123456789012:mynotification" 
-
- \}, 
-
- "dataSetS3Location": \{ 
-
- "bucketName": "mybucket", 
-
- "key": "mydata/test\_customer\_support\_contacts\_data\_2015\-01\-18T00\-00\-00Z\_to\_2016\-08\-05T03\-14\-50Z\.csv" 
-
- \}, 
-
- "dataSetMetaDataS3Location": \{ 
-
- "bucketName": "mybucket", 
-
- "key": "mydata/test\_customer\_support\_contacts\_data\_2015\-01\-18T00\-00\-00Z\_to\_2016\-08\-05T03\-14\-50Z\.meta\.json" 
-
- \}, 
-
- "requestReceivedDateTime": "2016\-08\-05T03:14:50\.108Z", 
-
- "requestCompletedDateTime": "2016\-08\-05T03:14:50\.334Z" 
-
- \} 
+```
+{
+    "dataSetRequestId": "c3c84ee0-5aba-11e6-8d9c-235dc080841d",
+    "dataSetCoverageRange": {
+        "startDateTime": "2016-08-18T00:00:00.000Z",
+        "endDateTime": "2016-08-05T03:14:50.334Z"
+    },
+    "dataSetRequestParameters": {
+        "fromDate": "2016-08-18T00:00:00.000Z",
+        "dataSetType": "test_customer_support_contacts_data",
+        "roleNameArn": "arn:aws:iam::123456789012:role/MarketplaceCommerceAnalyticsRole",
+        "destinationS3BucketName": "mybucket",
+        "destinationS3Prefix": "mydata",
+        "snsTopicArn": "arn:aws:sns:us-west-2:123456789012:mynotification"
+    },
+    "dataSetS3Location": {
+        "bucketName": "mybucket",
+        "key": "mydata/test_customer_support_contacts_data_2015-01-18T00-00-00Z_to_2016-08-05T03-14-50Z.csv"
+    },
+    "dataSetMetaDataS3Location": {
+        "bucketName": "mybucket",
+        "key": "mydata/test_customer_support_contacts_data_2015-01-18T00-00-00Z_to_2016-08-05T03-14-50Z.meta.json"
+    },
+    "requestReceivedDateTime": "2016-08-05T03:14:50.108Z",
+    "requestCompletedDateTime": "2016-08-05T03:14:50.334Z"
+}
+```
 
 ## Output Data Format<a name="output-data-format"></a>
 

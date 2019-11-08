@@ -1,6 +1,6 @@
 # Document History<a name="document-history"></a>
 
-The following table describes the documentation for this release of the *User Guide for AWS Marketplace Providers*\.
+The following table describes the documentation for this release of the *AWS Marketplace Providers Guide*\.
 
 | Change | Description | Date | 
 | --- |--- |--- |
