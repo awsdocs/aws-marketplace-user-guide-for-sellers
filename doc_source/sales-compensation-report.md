@@ -1,6 +1,6 @@
 # Sales Compensation Report<a name="sales-compensation-report"></a>
 
- The sales compensation report is available to you only if you participate in the [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md)\. The report lists monthly billed revenue with additional customer information that isn't in the standard [Monthly Billed Revenue Report](monthly-billed-revenue-report.md)\. The report lists the total amounts that AWS bills to customers for hourly, annual, or monthly usage of your software\. 
+ The sales compensation report is available to you only if you participate in the [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md)\. The report lists monthly billed revenue with additional customer information that isn't in the standard [Monthly Billed Revenue Report](monthly-billed-revenue-report.md)\. The report lists the total amounts that AWS bills to customers for hourly, annual, or monthly usage of your product\. 
 
 **Important**  
  The amounts in this report reflect only revenue that is billed to customers, not amounts that are collected from customers\. 
@@ -13,7 +13,7 @@ This report is published monthly, on the fifteenth day of each month at 00:00 UT
 
 ## Billed Revenue<a name="section-1-billed-revenue"></a>
 
- The billed revenue section of this report includes usage and fee\-based software charges from the previous calendar month\. The following are the column names and descriptions\. 
+ The billed revenue section of this report includes usage and fee\-based charges from the previous calendar month\. The following are the column names and descriptions\. 
 
 **Note**  
 In this report, *listing fee* is the percentage of transaction proceeds \(except for those from resale by authorized resellers of authorized resale products\) determined in accordance with the tiered listing fee\. 
@@ -21,13 +21,13 @@ In this report, *listing fee* is the percentage of transaction proceeds \(except
 
 |  Column Name  |  Description  | 
 | --- | --- | 
-|  Customer AWS Account Number  |  The account that the software charges are billed to\.  | 
-|  Country  |  The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
-|  State  |  The billing address state that is associated with the account that the software charges are billed to\. | 
-|  City  |  The billing address city that is associated with the account that the software charges are billed to\.  | 
-|  Zip Code  |  The billing address zip code that is associated with the account that the software charges are billed to\.  | 
-|  Email Domain  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
-|  Product Code  |  The unique identifier for the software product\.  | 
+|  Customer AWS Account Number  |  The account that the charges are billed to\.  | 
+|  Country  |  The two\-character country code that is associated with the account that the charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  State  |  The billing address state that is associated with the account that the charges are billed to\. | 
+|  City  |  The billing address city that is associated with the account that the charges are billed to\.  | 
+|  Zip Code  |  The billing address zip code that is associated with the account that the charges are billed to\.  | 
+|  Email Domain  |  The email domain that is associated with the account that the charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Product Code  |  The unique identifier for the product\.  | 
 |  Product Title  |  The title of the product\.  | 
 |  Gross Revenue  |  The amount that is billed for using the product or the monthly fees for using the product\.  | 
 |  AWS Revenue Share  |  The AWS fee amount that is deducted from the billed amount at settlement time\. It appears in the [Monthly Disbursement Report](monthly-disbursement-report.md)\. | 

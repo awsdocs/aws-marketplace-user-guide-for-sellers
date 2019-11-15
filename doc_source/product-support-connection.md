@@ -6,6 +6,9 @@
 
  You also have the option to enroll your products in AWS Marketplace Product Support Connection \(PSC\)\. For products that are enrolled in PSC, AWS Marketplace customers can choose to provide contact information \(including name, organization, email address, and phone number\) via the AWS Marketplace web site for the purposes of obtaining and accessing product support\. If you enroll in PSC, AWS Marketplace will share the provided data with you via an API to help enable a more seamless support experience\. 
 
+**Note**  
+Currently, data products don't support this feature\.
+
 ## How does AWS Marketplace Product Support Connection benefit me as a Seller?<a name="how-does-aws-marketplace-product-support-connection-benefit-me-as-a-seller"></a>
 
  Participating in PSC can make it easier for you to provide support to customers that subscribe to your products on AWS Marketplace\. The data available through the program lets you keep customer contact information up to date in your support or CRM system\(s\)\. If an AWS Marketplace customer shares contact information through PSC and then contacts you for support, you will be able to quickly access and verify the customer’s identity and product subscription details\. 

@@ -28,10 +28,10 @@
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
 |  Product  |  ✔  |  ✔  |  The title of the product\.  | 
-|  Product Code  |  ✔  |  ✔  |  The unique identifier for the software product\. | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier for the product\. | 
 |  SellerRev  |  ✔  |  ✔  |  The amount that is billed to the customer for the usage or monthly fees of the product\.  | 
 |  AWSRefFee  |  ✔  |  ✔  |  The amount of the AWS Marketplace fee\.  | 
-|  SellerRevRefund  |  ✔  |  ✔  |  The amount of the software subscription cost that is refunded to customers if any refunds were processed during the data coverage period\.  | 
+|  SellerRevRefund  |  ✔  |  ✔  |  The amount of the subscription cost that is refunded to customers if any refunds were processed during the data coverage period\.  | 
 |  AWSRefFeeRefund  |  ✔  |  ✔  |  The amount of the AWS Marketplace fee that is refunded if any refunds were processed during the data coverage period\. | 
 |  SellerRevCredit  |  ✔  |  ✔  | The AWS credits that AWS Marketplace placed on the customer's account\.  | 
 |  AWSRefFeeCredit  |  ✔  |  ✔  |  The AWS credits that AWS Marketplace placed on your account\.  | 
@@ -39,12 +39,12 @@
 |  Transaction Reference ID  |  ✔  |  ✔  |  A unique identifier for the transaction that helps you correlate transactions across AWS Marketplace reports\.  | 
 |  SellerUSSalesTax  |  ✔  |  ✔  |  The total amount of US sales and use tax that is billed for this transaction\.  | 
 |  SellerUSSalesTaxRefund  |  ✔  |  ✔  |  The total amount of US sales and use tax that is refunded for this transaction if a refund was processed\.  | 
-|  Customer AWS Account Number  |   |  ✔  | The ID of the account that the software charges are billed to\.  | 
-|  Customer Country  |   |  ✔  | The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
-|  Customer State  |   |  ✔  | The billing address state that is associated with the account that the software charges are billed to\. | 
-|  Customer City  |   |  ✔  | The billing address city that is associated with the account that software charges are billed to\. | 
-|  Customer Zip Code  |   |  ✔  | The billing address postal code that is associated with the account that the software charges are billed to\. | 
-|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Customer AWS Account Number  |   |  ✔  | The ID of the account that the charges are billed to\.  | 
+|  Customer Country  |   |  ✔  | The two\-character country code that is associated with the account that the charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  Customer State  |   |  ✔  | The billing address state that is associated with the account that the charges are billed to\. | 
+|  Customer City  |   |  ✔  | The billing address city that is associated with the account that charges are billed to\. | 
+|  Customer Zip Code  |   |  ✔  | The billing address postal code that is associated with the account that the charges are billed to\. | 
+|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\.  | 
 |  Launch Type Description  |  ✔  |  ✔  |  The type of instance that the customer launched\. This is Amazon EC2 or AWS Fargate\.  | 
@@ -64,9 +64,9 @@
 |  Settlement Period End Date  |  ✔  |  ✔  |  The ending date and time of the disbursement period\.  | 
 |  Deposit Date  |  ✔  |  ✔  |  The date and time when the disbursement occurred\.  | 
 |  Disbursed Amount  |  ✔  |  ✔  |  The total amount of the disbursement, and is equal to the total of the Postal Code column in this section of the report\. | 
-|  Country Code  |  ✔  |  ✔  | The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
-|  State or Region  |  ✔  |  ✔  | The billing address state that is associated with the account that the software charges are billed to\. | 
-|  City  |  ✔  |  ✔  | The billing address city that is associated with the account that software charges are billed to\. | 
+|  Country Code  |  ✔  |  ✔  | The two\-character country code that is associated with the account that the charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  State or Region  |  ✔  |  ✔  | The billing address state that is associated with the account that the charges are billed to\. | 
+|  City  |  ✔  |  ✔  | The billing address city that is associated with the account that charges are billed to\. | 
 |  Postal Code  |  ✔  |  ✔  |  The total funds that are disbursed to the seller, grouped by postal code\. The total of this column is equal to the Disbursed Amount column in this section of the report\.  | 
 |  Net Amount by Tax Location  |  ✔  |  ✔  |  The total funds that are disbursed to the seller by tax location, less AWS Marketplace fees, refunds, and US sales and use tax\.  | 
 |  Gross Amount by Tax Location  |  ✔  |  ✔  |  The total funds that are disbursed to the seller by tax location\.  | 
@@ -81,9 +81,9 @@
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
 |  Product  |  ✔  |  ✔  |  The title of the product\. | 
-|  Product Code  |  ✔  |  ✔  |  The unique identifier for the software product\.  | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier for the product\.  | 
 |  Usage Type Description  |  ✔  |  ✔  |  The description of the usage, including offer type, Region, and instance type\.  | 
-|  Rate  |  ✔  |  ✔  |  The software rate per hour for the offer type, Region, and instance type\.  | 
+|  Rate  |  ✔  |  ✔  |  The rate per hour for the offer type, Region, and instance type\.  | 
 |  User Count  |  ✔  |  ✔  |  The number of unique customers using the offer type, Region, and instance type\.  | 
 |  Instance Hours  |  ✔  |  ✔  |  The number of hours that the instance consumed for the offer type, Region, and instance type\.  | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
@@ -138,7 +138,7 @@ This section lists all uncollected funds, sorted by the payment due date\.
 
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
-| Product Code |  ✔  |  ✔  | The unique identifier for the software product\. | 
+| Product Code |  ✔  |  ✔  | The unique identifier for the product\. | 
 | Product |  ✔  |  ✔  | The title of the product\. | 
 | SellerRev |  ✔  |  ✔  | The amount that is billed for using the product or the monthly fees for using the product\. | 
 | AWSRefFee |  ✔  |  ✔  | The AWS fee amount that is deducted from the billed amount at settlement time\. | 

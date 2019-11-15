@@ -2,6 +2,9 @@
 
  AWS Marketplace has three managed policies you can use with AWS Marketplace Management Portal, or a number of permissions that you can use to create your own policy\. 
 
+**Note**  
+To learn about policies and permissions on AWS Data Exchange for data products, see [Identity and Access Management in AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/latest/userguide/auth-access.html) in the *AWS Data Exchange User Guide*\.
+
 ## Policies for AWS Marketplace Providers<a name="seller-managed-policies"></a>
 
 You can use the following managed policies to provide IAM users controlled access to AWS Marketplace Management Portal\.

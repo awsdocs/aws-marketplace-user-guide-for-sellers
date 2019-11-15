@@ -94,7 +94,7 @@ For multi\-AMI products, the following fields are required:
   + Long description \(per template\)
   + Architecture diagram \(per template\)
   + Infrastructure pricing estimate \(per template\)
-  + List of software products/components contained in this AWS CloudFormation template
+  + List of products/components contained in this AWS CloudFormation template
   + List of regions supported by this AWS CloudFormation template
 
 ## Submitting Your Product Request<a name="submitting-your-listing"></a>
@@ -111,7 +111,7 @@ Use the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/m
 
  **Multi\-component products** – For example, a software product that requires a front\-end web server and a middle\-tier application server can be offered as a single combined solution\. Another example is a product that has one server functioning as a controller, with other servers running as a clustered set of workers\. 
 
- **Multi\-product solutions** – For example, a new solution that combines two or more products to deliver a better\-together experience\. In this case, these solutions are distinct from any existing AWS Marketplace products that you already offer, even if those software products are the same or similar\. 
+ **Multi\-product solutions** – For example, a new solution that combines two or more products to deliver a better\-together experience\. In this case, these solutions are distinct from any existing AWS Marketplace products that you already offer, even if those products are the same or similar\. 
 
 ### Which scenarios aren't addressed by multi\-AMI products?<a name="cft-faq-question-02"></a>
 
@@ -119,7 +119,7 @@ Use the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/m
 
 ### Is there any dependency between my single\-AMI and multi\-AMI products?<a name="cft-faq-question-03"></a>
 
- No\. Individual software products and multi\-AMI solutions that include the same software offerings are separate products\. If you update a product, it has no effect on any multi\-AMI solution product\. 
+ No\. Individual products and multi\-AMI solutions that include the same software offerings are separate products\. If you update a product, it has no effect on any multi\-AMI solution product\. 
 
 ### Are there any limitations on where I can offer or deploy these solutions?<a name="cft-faq-question-04"></a>
 

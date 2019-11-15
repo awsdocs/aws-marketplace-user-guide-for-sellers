@@ -8,6 +8,9 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 
 This documentation helps you understand how to apply the shared responsibility model when using AWS Marketplace\. The following topics show you how to configure AWS Identity and Access Management to manage access to AWS Marketplace in order to meet your security and compliance objectives\. You can also learn how to use other AWS services that can help you to monitor and secure your AWS Marketplace resources\. 
 
+**Note**  
+To learn about security on AWS Data Exchange for data products, see [Security](https://docs.aws.amazon.com/data-exchange/latest/userguide/security.html) in the *AWS Data Exchange User Guide*\.
+
 **Topics**
 + [Controlling Access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)
 + [Policies and Permissions AWS Marketplace Providers](detailed-management-portal-permissions.md)

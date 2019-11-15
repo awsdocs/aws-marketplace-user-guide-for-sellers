@@ -25,10 +25,6 @@ The following is general pricing information about products in AWS Marketplace\.
 
 These two types of prices are displayed separately on the AWS Marketplace detail pages to help customers understand the potential cost of using the products\. 
 
-**Example**  
-
-![\[Pricing example in AWS Marketplace.\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/pricing-image-01.png)
-
 ### Free Trial<a name="free-trial"></a>
 
  Hourly products are eligible for the optional Free Trial program, where a customer can subscribe to the product and use a single instance for up to 31 days without paying software charges on the product\. Applicable AWS infrastructure charges still apply\. Simply define the duration of the trial period \(5 to 31 days\) and notify the [AWS Marketplace Managed Catalog Operations \(MCO\)](https://aws.amazon.com/marketplace/management/contact-us/) team\.
@@ -51,7 +47,7 @@ If you offer a Free Trial product in AWS Marketplace, you agree to the specific 
 
 ### Refund Process<a name="refund-process"></a>
 
-Follow this procedure to initiate a software refund for a customer\. 
+Follow this procedure to initiate a product refund for a customer\. 
 
 **To issue a refund**
 

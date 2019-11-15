@@ -14,6 +14,9 @@
 
  AWS Marketplace Product Support Connection \(PSC\) is a feature that enables AWS Marketplace customers to provide contact information on the AWS Marketplace website so they can obtain and access your product support\. When you participate, AWS Marketplace shares the customer\-provided data to you via API, enabling you to provide a better support experience\. 
 
+**Note**  
+Currently, data products don't support this feature\.
+
 ## AWS Marketplace Seller Reports<a name="seller-reports-intro"></a>
 
 AWS Marketplace enables you to retrieve reports for your products\. The information available includes data on your products, customers, financials, usage, and any US sales and use tax collected for use of your software\. Different reports provide data covering daily and monthly time periods\. All reports are generated as \.csv files that you can open with a variety of tools or import into other systems\. 

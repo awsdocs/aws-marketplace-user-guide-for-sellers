@@ -1,6 +1,6 @@
 # Monthly Billed Revenue Report<a name="monthly-billed-revenue-report"></a>
 
- The monthly billed revenue report provides you authoritative information about billed revenue every month for accounting and other financial reporting purposes\. This report shows the total amounts that AWS bills to customers for hourly, annual, or monthly usage of your software\. The report has four sections: billed amounts for hourly usage and monthly fees, variable\-length subscriptions, field demonstration usage, and flexible payments\. 
+ The monthly billed revenue report provides you authoritative information about billed revenue every month for accounting and other financial reporting purposes\. This report shows the total amounts that AWS bills to customers for hourly, annual, or monthly usage of your products\. The report has four sections: billed amounts for hourly usage and monthly fees, variable\-length subscriptions, field demonstration usage, and flexible payments\. 
 
 **Important**  
 The amounts in this report reflect only revenue that we billed to customers, not amounts that we collected\.
@@ -26,15 +26,15 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
 |  Customer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It helps track usage, revenue, and subscriptions by customers\. | 
-|  Country  |  ✔  |  ✔  | The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
-|  State  |  ✔  |  ✔  |  The billing address state that is associated with the account that the software charges are billed to\. | 
-|  City  |  ✔  |  ✔  |  The billing address city that is associated with the account that software charges are billed to\. | 
-|  Zip Code  |  ✔  |  ✔  |  The billing address postal code that is associated with the account that the software charges are billed to\. | 
+|  Country  |  ✔  |  ✔  | The two\-character country code that is associated with the account that the charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  State  |  ✔  |  ✔  |  The billing address state that is associated with the account that the charges are billed to\. | 
+|  City  |  ✔  |  ✔  |  The billing address city that is associated with the account that charges are billed to\. | 
+|  Zip Code  |  ✔  |  ✔  |  The billing address postal code that is associated with the account that the charges are billed to\. | 
 |  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
-|  Product Code  |  ✔  |  ✔  |  The unique identifier for the software product\.  | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier for the product\.  | 
 |  Customer Billed Amount  |  ✔  |  ✔  |  The amount that is billed to the customer for the usage or monthly fees of the product\.  | 
 |  AWS Listing Fee  |  ✔  |  ✔  |  The AWS Marketplace fee amount to be deducted from the billed amount\.  | 
-|  Refunds Amount  |  ✔  |  ✔  |  The total amount of the software subscription cost refunded to customers if any refunds were processed during the data coverage period\.  | 
+|  Refunds Amount  |  ✔  |  ✔  |  The total amount of the subscription cost refunded to customers if any refunds were processed during the data coverage period\.  | 
 |  AWS Fee Refund  |  ✔  |  ✔  |  The portion of the AWS Marketplace fee refunded if any refunds were processed during the data coverage period\.  | 
 |  Cost  |  ✔  |   |  The cost of goods to a reseller: for example, what a reseller pays you when they sell your product\.  | 
 |  Partner Revenue Amount  |  ✔  |  ✔  | The total amount billed for the transaction, net of AWS Marketplace fees, refunds, and US sales and use tax\.  | 
@@ -44,8 +44,8 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 |  U\.S\. Sales Tax Refunds Amount  |  ✔  |  ✔  |  The total amount of US sales and use tax that is refunded for this transaction if a refund was processed\.  | 
 |  Offer ID  |  ✔  |  ✔  |  The identifier for the offer that the subscriber signed\. | 
 |  Offer Visibility  |  ✔  |  ✔  |  Whether the offer is a public, private, or enterprise contract offer\. | 
-|  Customer AWS Account Number  |   |  ✔  | The ID of the account that the software charges are billed to\.  | 
-|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Customer AWS Account Number  |   |  ✔  | The ID of the account that the charges are billed to\.  | 
+|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
 |  Opportunity Name  |  ✔  |  ✔  |  The unique identifier for a registered opportunity\.  | 
 |  Opportunity Description  |  ✔  |  ✔  |  The metadata for the registered opportunity\.  | 
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
@@ -55,18 +55,18 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 
 ## Section 2: Variable Length Subscriptions<a name="section-2-annual-subscriptions-1"></a>
 
- This section lists data for fee\-based software charges\. The data includes details for each subscription, as well as data for usage billing, refunds, fees, and US sales and use tax that is collected\. The amount in the Partner Revenue Amount column is the amount in the Customer Billed Amount column minus the amounts in the AWS Fee, Refunds Amount, AWS Fee Refund, and Cost columns\. The U\.S\. Sales Tax Customer Billed Amount and the U\.S\. Sales Tax Refunds Amount columns aren't included in the Customer Billed Amount or Partner Revenue Amount columns from the previous reporting period\. 
+ This section lists data for fee\-based charges\. The data includes details for each subscription, as well as data for usage billing, refunds, fees, and US sales and use tax that is collected\. The amount in the Partner Revenue Amount column is the amount in the Customer Billed Amount column minus the amounts in the AWS Fee, Refunds Amount, AWS Fee Refund, and Cost columns\. The U\.S\. Sales Tax Customer Billed Amount and the U\.S\. Sales Tax Refunds Amount columns aren't included in the Customer Billed Amount or Partner Revenue Amount columns from the previous reporting period\. 
 
 
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
 |  Customer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It helps track usage, revenue, and subscriptions by customers\. | 
-|  Country  |  ✔  |  ✔  |  The two\-character country code that is associated with the account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
-|  State  |  ✔  |  ✔  |  The billing address state that is associated with the account that the software charges are billed to\. | 
-|  City  |  ✔  |  ✔  |  The billing address city that is associated with the account that software charges are billed to\. | 
-|  Zip Code  |  ✔  |  ✔  | The billing address zip code that is associated with the account that the software charges are billed to\. | 
+|  Country  |  ✔  |  ✔  |  The two\-character country code that is associated with the account that the charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  State  |  ✔  |  ✔  |  The billing address state that is associated with the account that the charges are billed to\. | 
+|  City  |  ✔  |  ✔  |  The billing address city that is associated with the account that charges are billed to\. | 
+|  Zip Code  |  ✔  |  ✔  | The billing address zip code that is associated with the account that the charges are billed to\. | 
 |  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
-|  Product Code  |  ✔  |  ✔  | The unique identifier for the software product\.  | 
+|  Product Code  |  ✔  |  ✔  | The unique identifier for the product\.  | 
 |  Subscription Quantity  |  ✔  |  ✔  |  The number of total licenses that is specified as part of the variable\-length subscription purchase\.  | 
 |  Subscription Start Date  |  ✔  |  ✔  |  The start date of the variable\-length subscription purchase\.  | 
 |  Subscription End Date  |  ✔  |  ✔  |  The end date of the variable\-length subscription purchase\.  | 
@@ -81,8 +81,8 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 |  Transaction Reference ID  |  ✔  |  ✔  |  A unique identifier for the transaction that helps you correlate transactions across AWS Marketplace reports\.  | 
 |  U\.S\. Sales Tax Customer Billed Amount  |  ✔  |  ✔  |  The total amount of US sales and use tax that is billed for this transaction\.  | 
 |  U\.S\. Sales Tax Refunds Amount  |  ✔  |  ✔  |  The total amount of US sales and use tax that is refunded for this transaction if a refund was processed\.  | 
-|  Customer AWS Account Number  |   |  ✔  | The ID of the account that the software charges are billed to\.  | 
-|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  Customer AWS Account Number  |   |  ✔  | The ID of the account that the charges are billed to\.  | 
+|  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
 |  Offer ID  |  ✔  |  ✔  |  The identifier for the offer that the subscriber signed\. | 
 |  Offer Visibility  |  ✔  |  ✔  |  Whether the offer is a public, private, or enterprise contract offer\. | 
 |  Contract Start Date  |  ✔  |  ✔  |  The start date for an AWS Marketplace SaaS contract\.  | 
@@ -102,7 +102,7 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
 |  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
-|  Product Code  |  ✔  |  ✔  |  The unique identifier for the software product\.  | 
+|  Product Code  |  ✔  |  ✔  |  The unique identifier for the product\.  | 
 |  Instance Type  |  ✔  |  ✔  |  The Amazon EC2 instance type that is associated with the field demonstration\.  | 
 |  Usage Units  |  ✔  |  ✔  |  The number of units of usage that is associated with the product\.  | 
 |  Usage Unit Types  |  ✔  |  ✔  |  The usage units that are associated with the usage unit count: for example, hours\.  | 
@@ -114,17 +114,17 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 
 |  Column Name  |  Available for All Sellers |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
-|  Customer AWS Account Number  |   |  ✔  |  The ID of the payer account that the software charges are billed to\. | 
-|  Customer Country  |   |  ✔  |  The two\-character country code that is associated with the payer account that the software charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
-|  Customer State  |   |  ✔  |  The billing address state that is associated with the payer account that the software charges are billed to\. | 
-|  Customer City  |   |  ✔  |  The billing address city that is associated with the payer account that software charges are billed to\. | 
-|  Customer ZIP Code  |   |  ✔  | The billing address zip code that is associated with the payer account that the software charges are billed to\.  | 
-|  Customer Email Domain  |   |  ✔  | The email domain that is associated with the payer account that the software charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
-|  User Reference ID  |  ✔  |  ✔  |  The account of the payer account that the software charges are billed to\.  | 
+|  Customer AWS Account Number  |   |  ✔  |  The ID of the payer account that the charges are billed to\. | 
+|  Customer Country  |   |  ✔  |  The two\-character country code that is associated with the payer account that the charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  Customer State  |   |  ✔  |  The billing address state that is associated with the payer account that the charges are billed to\. | 
+|  Customer City  |   |  ✔  |  The billing address city that is associated with the payer account that charges are billed to\. | 
+|  Customer ZIP Code  |   |  ✔  | The billing address zip code that is associated with the payer account that the charges are billed to\.  | 
+|  Customer Email Domain  |   |  ✔  | The email domain that is associated with the payer account that the charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  User Reference ID  |  ✔  |  ✔  |  The account of the payer account that the charges are billed to\.  | 
 |  User AWS Account Number  |   |  ✔  |  The ID of the account that subscribed to the product\.  | 
-|  Product ID  |  ✔  |  ✔  |  The unique identifier for the software product\.  | 
+|  Product ID  |  ✔  |  ✔  |  The unique identifier for the product\.  | 
 |  Product Title  |  ✔  |  ✔  |  The title of the product\.  | 
-|  Product Type  |  ✔  |  ✔  |  The type of software product\.  | 
+|  Product Type  |  ✔  |  ✔  |  The type of product\.  | 
 |  AWS Marketplace Offer ID  |  ✔  |  ✔  | The identifier for the offer that the subscriber signed\. | 
 |  Contract Create Date  |  ✔  |  ✔  |  The contract creation date, which is the date that an account subscribes to the offer\.  | 
 |  Contract Expiration Date  |  ✔  |  ✔  |  The date when the contract expires\.  | 

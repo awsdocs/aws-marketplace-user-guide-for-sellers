@@ -118,7 +118,7 @@ Scanning and validation can take up to a few hours\.
 After creating and validating your algorithm or model package in Amazon SageMaker, you can put your product on the AWS Marketplace\. This process makes your products available in the AWS Marketplace and the Amazon SageMaker console\.
 
 **Note**  
-If you have not registered to sell on AWS Marketplace, review [Getting Started as a Seller](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html) and complete the registration process\. 
+If you have not registered to sell on AWS Marketplace, review [Getting Started as a Seller](user-guide-for-sellers.md) and complete the registration process\. 
 
 After you've registered, do one of the following to add your product to AWS Marketplace: 
 + From the Amazon SageMaker console, choose the product, choose **Actions**, and choose **Publish new AWS Marketplace listing**\. This carries over your product reference, the Amazon Resource Name \(ARN\), and directs you to the AMMP to create the listing\. 

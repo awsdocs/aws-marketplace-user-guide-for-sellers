@@ -18,7 +18,7 @@
 To read the reports, be familiar with the following terminology\. 
 
 Billed  
-AWS customers are billed at the beginning of every month for the metered usage incurred in the previous month\. Customers are also billed immediately when they purchase annual Amazon Machine Image \(AMI\) subscriptions or software as a service \(SaaS\) contracts\.
+AWS customers are billed at the beginning of every month for the metered usage incurred in the previous month\. Customers are also billed immediately when they purchase annual Amazon Machine Image \(AMI\) subscriptions, software as a service \(SaaS\) contracts, or data product subscriptions\.
 
 Payment  
 Payment is due immediately for AWS customers who pay with a credit card\. Some customers have other payment arrangements with AWS billing that can change when their payment is due: for instance, customers who are invoiced\.

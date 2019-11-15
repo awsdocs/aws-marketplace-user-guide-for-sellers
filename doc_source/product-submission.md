@@ -4,6 +4,9 @@ You use the product submission process to make your product\(s\) available on AW
 + Using the **Products** tab – For products that are less complex, you use the **Products** tab to completely define and submit your request\.
 + Using the **Assets** tab – For products that are more complex and require more definition, you download a product load form, add product details, and then upload the completed form using the **File upload** option\.
 
+**Note**  
+Data product providers must use the AWS Data Exchange console to publish products\. For more information, see [Publishing Products](https://docs.aws.amazon.com/data-exchange/latest/userguide/publishing-products.html) in the *AWS Data Exchange User Guide*\.
+
  We recommend that you start by using the **Products** tab to determine which approach to use\. Existing or new product configurations might be added that might enable you to use the more automated, **Products** tab method\. The following table lists some configuration and the approach you use to submit your request\. The first column is the pricing model for your product, the other three columns are how the product is deployed to the customer\. 
 
 

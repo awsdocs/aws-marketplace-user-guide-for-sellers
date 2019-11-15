@@ -1,8 +1,12 @@
 # US Sales and Use Tax Report<a name="u.s.-sales-and-use-tax-report"></a>
 
- This monthly report provides sellers with information about US sales and use tax that AWS collects from sales and use transactions in AWS Marketplace\. The report includes only products that sellers enroll in the AWS Marketplace US sales tax program\. You receive this report only if you enroll in the AWS Marketplace tax calculation service\. The report includes calculated US sales and use tax for products with a product tax code\. Any products without a product tax code appear in this report with a tax value of $0\.00 USD\. To map transactions between the monthly disbursement report and this report, use the `Transaction Reference ID`\.
+ This monthly report provides sellers with information about US sales and use tax that AWS collects from sales and use transactions in AWS Marketplace\. The report includes both products that sellers enroll in the AWS Marketplace US sales tax collection service and products that AWS is required to collect and remit tax on\.
 
- This report is available on the AWS Marketplace Management Portal under the **Reports** tab\. If you're enrolled in the AWS Marketplace commerce analytics service, you can use API calls to pull down sections of this report\. For more information, see [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md)\. 
+For sales of products enrolled in the tax calculation service, the report includes calculated US sales and use tax for products with a product tax code\. Any products without a product tax code appear in this report with a tax value of $0\.00 USD\. For sales of products that are not eligible for the tax calculation service because of enacted marketplace facilitator rules, you will see amounts that AWS has collected and remitted as `AWS`, based on our internal tax decisions\. For more information, see [AWS Marketplace Sellers & Tax Collection](http://aws.amazon.com/tax-help/marketplace) on Amazon Web Services Tax Help\.
+
+To map transactions between the monthly disbursement report and this report, use the `Transaction Reference ID`\.
+
+This report is available on the AWS Marketplace Management Portal under the **Reports** tab\. If you're enrolled in the AWS Marketplace commerce analytics service, you can use API calls to pull down sections of this report\. For more information, see [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md)\. 
 
 ## Publication Schedule<a name="publication-schedule-5"></a>
 
@@ -50,3 +54,4 @@
 |  Customer Reference ID  |  A unique identifier that isn't the account ID\. It helps track usage, revenue and subscriptions by customers\. | 
 |  Transaction Reference ID  |  A unique identifier for the transaction that helps you correlate transactions across AWS Marketplace reports\.  | 
 |  Payer Reference ID  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\. | 
+| Tax Liable Party | This field will either be populated with Seller or AWS\. If the seller is the tax liable party, they are responsible for their own collection and remittance obligations based on their tax decision\. If AWS is the tax liable party sales tax will be collected and remitted by AWS\. For more information, see [AWS Marketplace Sellers & Tax Collection](http://aws.amazon.com/tax-help/marketplace) on Amazon Web Services Tax Help\. | 
