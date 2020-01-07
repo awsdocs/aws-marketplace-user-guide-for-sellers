@@ -8,7 +8,7 @@
 
 ## Publication Schedule<a name="publication-schedule-3"></a>
 
- This report is published monthly at 00:00 UTC 3 days after a successful disbursement to your bank account\. We consider the disbursement successful after the disbursement settlement is recorded with your bank\. 
+This report is published 3 days after a disbursement has been initiated to transfer funds to your bank\. In general this is a monthly report for sellers who receive disbursements on a monthly cadence\. If there is no disbursement initiated, no disbursement report is generated\.
 
 **Topics**
 + [Publication Schedule](#publication-schedule-3)

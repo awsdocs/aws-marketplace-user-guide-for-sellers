@@ -1,7 +1,7 @@
 # AWS Marketplace Providers Guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -23,6 +23,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Product Support Connection](product-support-connection.md)
 + [Preparing Your Product](product-preparation.md)
    + [Product Pricing](pricing.md)
+      + [Refunds](refunds.md)
    + [Private Offers](private-offers-overview.md)
       + [Flexible Payment Scheduler](flexible-payment-scheduler.md)
       + [Consulting Partner Private Offers](consulting-partner-offers.md)

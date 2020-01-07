@@ -1,6 +1,6 @@
 # Testing Your SaaS Product<a name="testing-your-saas-product"></a>
 
- During the onboarding process, you create a second AWS account ID for testing your product\. You sign in to the test account to view your SaaS product on AWS Marketplace and use it to verify the metering and billing process on an ongoing basis\. You can also use seller reports provided through the AWS Marketplace Management Portal to conﬁrm that metered usage corresponds with the account identiﬁer for your customers\. Any charges that this test account incurs when using your product will be voided\. 
+ During the onboarding process, you create a second AWS account ID for testing your product\. You sign in to the test account to view your SaaS product on AWS Marketplace and use it to verify the metering and billing process on an ongoing basis\. You can also use seller reports provided through the AWS Marketplace Management Portal to conﬁrm that metered usage corresponds with the account identiﬁer for your customers\. Any charges that this test account incurs when testing your product can be voided by submitting a [refund request](http://aws.amazon.com/marketplace/management/support/refund-request)\.
 
  We whitelist the product so that it's visible only to your account and any other accounts that you own and specify\. These accounts can be used to subscribe to your product and confirm that everything is working properly\. 
 

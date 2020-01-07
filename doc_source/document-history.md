@@ -4,6 +4,9 @@ The following table describes the documentation for this release of the *AWS Mar
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Container products now support custom metering and pricing enhancements](/marketplace/latest/userguide/entitlement-and-metering-for-paid-products.html) | If you want to define your own pricing units and meter that usage to us for billing, integrate with the AWS Marketplace MEtering Service's `meterUsage` action\. | November 14, 2019 | 
+| [AWS Marketplace supports data products through AWS Data Exchange](/marketplace/latest/userguide/data-products.html) | You can now provide data products in AWS Marketplace\. | November 13, 2019 | 
+| [Introducing the AWS Marketplace Catalog API service](#document-history) | The AWS Marketplace Catalog API service provides an API interface for approved providers to programmatically manage their products\. | November 12, 2019 | 
 | [AWS Marketplace supports paid hourly containers](https://docs.aws.amazon.com/marketplace/latest/userguide/container-based-products.html) | AWS Marketplace now supports paid hourly containers running on Amazon Elastic Kubernetes Service \(Amazon EKS\)\. | September 25, 2019 | 
 | [Updated AMI product functionality\.](https://docs.aws.amazon.com/marketplace/latest/userguide/cloudformation-serverless-application.html) | You can now deploy AMIs and Lambda functions together using AWS CloudFormation\. | September 11, 2019 | 
 | [Added Security Section\.](https://docs.aws.amazon.com/marketplace/latest/userguide/seller-security.html) | Consolidated security content under a new security section\. | May 7, 2019 | 

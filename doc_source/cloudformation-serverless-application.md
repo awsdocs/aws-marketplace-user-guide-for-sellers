@@ -86,7 +86,7 @@ To publish an application, you first upload the application code\. Store your co
 1. Paste the following example policy statement\. Replace *your\-bucket\-name* in the `Resource` property value with the bucket name for your bucket\.
 
    ```
-   <![CDATA[{
+   {
        "Version": "2012-10-17",
        "Statement": [
            {
@@ -98,7 +98,7 @@ To publish an application, you first upload the application code\. Store your co
                "Resource": "arn:aws:s3:::awsexamplebucket/*"
            }
        ]
-   }]]>
+   }
    ```
 
 1. Choose **Save**\.
@@ -214,7 +214,7 @@ Transform: AWS::Serverless-2016-10-31
 To submit your AWS CloudFormation template and config/scripts files, grant AWS Marketplace permissions to read the Amazon S3 bucket where these files are stored\. To do so, update your bucket policy to include following permissions\.
 
 ```
-<![CDATA[{
+{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -222,12 +222,12 @@ To submit your AWS CloudFormation template and config/scripts files, grant AWS M
             "Principal": {
                 "Service":  "assets.marketplace.amazonaws.com"
             },
-            "Action": ["s3:GetObject", "s3:ListBucket"]
+            "Action": ["s3:GetObject", "s3:ListBucket"],
             "Resource": ["arn:aws:s3:::awsexamplebucket",
-                         "arn:aws:s3:::awsexamplebuckete/*"]
+                         "arn:aws:s3:::awsexamplebucket/*"]
         }
     ]
-}]]>
+}
 ```
 
 ## Update Your AWS Serverless Application Repository Application Permissions<a name="cloudformation-serverless-application-procedure-step-5"></a>
@@ -237,10 +237,10 @@ To submit your AWS Serverless Application Repository application to AWS Marketpl
 + Use the following AWS CLI command to update your application policy:
 
   ```
-  <![CDATA[aws serverlessrepo put-application-policy \
+  aws serverlessrepo put-application-policy \
   --region region \
   --application-id application-arn \
-  --statements Principals=assets.marketplace.amazonaws.com,Actions=Deploy]]>
+  --statements Principals=assets.marketplace.amazonaws.com,Actions=Deploy
   ```
 
 ## Share Your AMI<a name="cloudformation-serverless-application-procedure-step-6"></a>

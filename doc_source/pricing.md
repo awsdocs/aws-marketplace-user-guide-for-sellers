@@ -1,23 +1,11 @@
 # Product Pricing<a name="pricing"></a>
 
-The following is general pricing information about products in AWS Marketplace\. All pricing is based on US dollars \(USD\)\.
+The following is general pricing information about products in AWS Marketplace\. All pricing is based on US dollars \(USD\)\. For information on refunds, see [Refunds](refunds.md)\.
 + For Paid products, AWS Marketplace collects software charges from the customer\. 
 + There is no service fee for Bring Your Own License \(BYOL\) products on AWS Marketplace\. 
 + To deliver on our customer promise of selection, we require that all BYOL products also have a paid option\. This is so that customers who don’t have existing licenses have the option to purchase and use the products\. 
   + For BOYL products, we realize that the online purchase of software is a departure from how some companies do business\. In light of this, for the first 90 days after launch we will relax the requirement that this software is accompanied by a version available for purchase on AWS Marketplace\. During this time, the AWS Marketplace account management teams will work with you to address challenges and to determine if and how the software can be made available for purchase on AWS Marketplace\. 
 +  There is no service fee for Free or Open Source Software that is made available to customers without charge\. 
-
-**Topics**
-+ [AWS Charges Versus Software Charges](#aws-charges-vs-software-charges)
-+ [Annual Pricing](#annual-pricing)
-+ [Usage Pricing](#usage-pricing)
-+ [Private Offers](#private-offers)
-+ [SaaS Subscriptions Pricing](#saas-subscriptions-pricing)
-+ [SaaS Contracts Pricing](#saas-contracts-pricing)
-+ [AMI Pricing Models](#ami-pricing-models)
-+ [Pricing Your Software with SaaS](#pricing-your-software-with-saas)
-+ [Annual Products](#annual-products)
-+ [Refund Policy](#refund-policy-2)
 
 ## AWS Charges Versus Software Charges<a name="aws-charges-vs-software-charges"></a>
 + All AMI\-based products will incur associated AWS infrastructure charges depending on the services and infrastructure used\. These rates and fees are defined and controlled by AWS, and can vary between regions\. For more information, see [Amazon EC2 Pricing](https://aws.amazon.com/ec2/pricing/)\.
@@ -33,52 +21,7 @@ When customers subscribe to a Free Trial product, they receive a welcome email t
 
 If you offer a Free Trial product in AWS Marketplace, you agree to the specific refund policies described under **Refund Policy**\.
 
-### Refunds<a name="refunds"></a>
-
- All Paid products, regardless of pricing model, must have a stated refund policy for software charges\. The policy must include the terms of the refund as well as a method of contacting the seller to request a refund\. While the details of the refund policy are up to the seller, we encourage you to offer customers some manner of refund for usage of the product\. We expect sellers to comply with their posted policies when AWS Marketplace customers request refunds\. 
-+  Except as noted below, all software refunds must be approved by the seller using the [form below](#refund-process), and will be processed and issued upon your direction by AWS\. 
-  + Special cases exist for products using Free Trial, Annual and Usage pricing types where you agree that AWS might initiate and process such refunds without further approval or direction from you\. For more information, see the *Special Guidelines* document in the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/product-load/)\. 
-+ Customers requesting a software refund directly from AWS will be directed to contact the seller\. 
-+ Refunds of any AWS infrastructure charges are up to the discretion of AWS and are handled independently of software refunds\. 
-+ Monthly subscriptions are pro\-rated based on the date the users subscribe and the date they cancel and are processed automatically and require no action on your part\. 
-  + For example, if users sign up on March 1, they will be charged the full rate for March and the full rate for all subsequent months they are subscribed to the software\. If users sign up on March 15, they will be charged half the monthly fee for March \(and then the full monthly fee for April, May, and so on\)\. Pro\-rated refunds associated with cancellations will be issued based on the same tenants\. 
-
- If you use the AWS Marketplace Tax Calculation Service, customers might contact you to request a tax\-only refund\. If a customer requests a tax\-only refund, you can, at your discretion, grant either a tax\-only refund or a full software refund plus tax\. 
-
-### Refund Process<a name="refund-process"></a>
-
-Follow this procedure to initiate a product refund for a customer\. 
-
-**To issue a refund**
-
-1. Record the following information from the customer\.
-
-   1. The customer’s email address \(associated with the AWS account\)\. 
-
-   1. The customer’s AWS account number\. The account number can be found on the customer‘s AWS account activity screen in the upper\-right corner\. 
-
-   1. The billing period\(s\) for which the customer would like a refund\. 
-
-1. Navigate to the [AWS Marketplace seller refund request form](https://aws-portal.amazon.com/gp/aws/html-forms-controller/contactus/AWSMP_VendorRefund)\.
-
-1. Enter the customer’s information in the form\. 
-
-1. Enter the Product ID for the product that you're trying to refund\. You can find the Product ID in your daily Subscription Report\. For annual products where a customer is requesting a refund, upgrade or downgrade, you must complete the following tasks\.
-
-   1. Verify the customer has purchased an annual subscription using your Subscriber Report \(there might be a 24\-hour delay\)\. 
-
-   1. In the comments field, enter a **Subscription Cancellation Date**\. 
-
-   1. In the comments field, enter a description of the change that you're authorizing, such as a refund, upgrade, downgrade\. 
-
-1. Submit the form\. 
-
-   AWS is notified and will process the refund and issue it to the customer\. The refund should appear within 2\-3 hours on the customer’s AWS account\. 
-
-**Note**  
-For **Annual products**, we will also update the end date of the subscription to match that provided in the request form\.
-
-#### Changing Prices<a name="changing-prices"></a>
+### Changing Prices<a name="changing-prices"></a>
 
 You can update prices and metadata through the AWS Marketplace Management Portal\. 
 
@@ -88,7 +31,7 @@ You can update prices and metadata through the AWS Marketplace Management Portal
 
 1. In the **Products** tab, you will find a list of current products that you created\. In the table for your current products, choose the **Action** column to edit your product\. 
 
-#### Changing Pricing Models<a name="changing-pricing-models"></a>
+### Changing Pricing Models<a name="changing-pricing-models"></a>
 
  Changes to pricing models must be reviewed and approved by AWS Marketplace to ensure a positive customer experience and reduced risk to all parties\. Discuss the pricing model changes you want to make by contacting the [AWS Marketplace Managed Catalog Operations \(MCO\)](https://aws.amazon.com/marketplace/management/contact-us/) team\. All requests for pricing model changes can take 30\-90 days to process and review\. 
 
@@ -293,10 +236,6 @@ In addition, your software must call an in\-region AWS Marketplace Metering Serv
 
  As an example of failing partially open, you could continue to allow access to the software but not allow the buyer to modify the software settings\. Or, a buyer could still access the software, but would not be able to create additional users\. Your software is responsible for defining and enforcing this failure mode\. Your software’s failure mode must be included when your AMI is submitted, and it can't be changed later\. 
 
-### Refund policy<a name="refund-policy"></a>
-
-If you list your software as a free trial product, AWS can issue refunds on your behalf for software charges accruing within seven days of a conversion from a free trial to a paid subscription\. Refunds issued in connection with free trial conversions require no action on your part\. By enabling Free Trial on a product, you are agreeing to this policy\. 
-
 ## Annual Products<a name="annual-products"></a>
 
 These guidelines apply to all sellers who are offering a product on AWS Marketplace with annual pricing\. 
@@ -326,7 +265,3 @@ In some cases AWS might issue refunds on your behalf\. No action on your part is
 ### End User License Agreement<a name="end-user-license-agreement"></a>
 
 AWS customer’s usage of software for 12 months under annual subscription is covered by the EULA you have provided on your product’s details page on AWS Marketplace\. 
-
-## Refund Policy<a name="refund-policy-2"></a>
-
-If you meter the usage of your software using the AWS Marketplace Metering Service, AWS can issue refunds on your behalf for software charges resulting from software metering errors\. If these errors are common across multiple customers, AWS may determine an appropriate refund for each customer and apply it directly to each customer\. Refunds issued in connection with the AWS Marketplace Metering Service must be confirmed with the seller once, but does not require the seller to confirm each individual refund\. By using the AWS Marketplace Metering Service with a product, you are agreeing to this policy\. 

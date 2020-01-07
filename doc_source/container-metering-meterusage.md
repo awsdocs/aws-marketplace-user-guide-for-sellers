@@ -21,22 +21,7 @@ Before publishing the product, you must do the following:
 
 1. Fill out the product load form with the necessary dimension information and return it to us for processing\.
 
-1. Create an IAM role for the task or pod running your application with the IAM permissions necessary to call `MeterUsage`, as in the following example:
-
-   ```
-   {
-       "Version": "2012-10-17",
-       "Statement": [
-           {
-               "Action": [
-                   "aws-marketplace:MeterUsage"
-                   ],
-                   "Effect": "Allow",
-                   "Resource": "*"
-           }
-       ]
-   }
-   ```
+1. Use an IAM role for the task or pod running your application with the IAM permissions necessary to call `MeterUsage`\. The IAM managed policy `AWSMarketplaceMeteringRegisterUsage` has these permissions\.
 
 1. \(Optional\) We recommend that you enable CloudTrail logging in the task or pod definition if you want to see logging\.
 

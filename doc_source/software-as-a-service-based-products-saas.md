@@ -1,6 +1,11 @@
 # Software\-as\-a\-Service–Based Products<a name="software-as-a-service-based-products-saas"></a>
 
-For software as a service \(SaaS\) products, you deploy software hosted on AWS infrastructure and you are responsible for granting AWS Marketplace customers access to the software\. There are no AMIs to conﬁgure, and your customers don't have to run your software on their own Amazon EC2 instances\. With SaaS, customers subscribe to products through AWS Marketplace, but access the product in your environment\. AWS Marketplace oﬀers two pricing models for SaaS products:
+For software as a service \(SaaS\) products, you deploy software hosted on AWS infrastructure and you are responsible for granting AWS Marketplace customers access to the software\. There are no AMIs to conﬁgure, and your customers don't have to run your software on their own Amazon EC2 instances\. With SaaS, customers subscribe to products through AWS Marketplace, but access the product in your environment\.
+
+**Important**  
+The content in this chapter is undergoing improvements, and the information available might be out of date\. For the latest information on getting started with your SaaS product on AWS Marketplace, see the [AWS Marketplace SaaS Listing Process & Integration Guide](https://awsmp-loadforms.s3.amazonaws.com/AWS+Marketplace+-+SaaS+Integration+Guide.pdf)\. The integration guide can help you understand each step of getting your product on AWS Marketplace\. You'll find integration diagrams for pricing models, code examples for interacting with our APIs, a list of frequently asked seller questions, and links to external resources that help you deep dive into the concepts presented throughout\.
+
+AWS Marketplace oﬀers two pricing models for SaaS products:
 + SaaS subscriptions
 + SaaS contracts
 

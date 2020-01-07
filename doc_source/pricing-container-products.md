@@ -1,11 +1,11 @@
 # Pricing Container Products<a name="pricing-container-products"></a>
 
-This section outlines the available pricing models for container products\. You can list free products, bring\-your\-own\-license \(BYOL\) products, and paid products for Amazon ECS, Amazon EKS, and Fargate\.You can set only one price per product\.
+This section outlines the available pricing models for container products\. You can list free products, bring\-your\-own\-license \(BYOL\) products, and paid products for Amazon ECS, Amazon EKS, and Fargate\. You can set only one price per product\.
 
 **Note**  
 You use the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html)to enforce entitlement and meter usage for your paid products\. For per task or per pod pricing, usage is metered automatically by AWS\.
 
-When you set a price for a container product, they apply to all AWS Regions\. Whenever you lower the price for a container product, the new price is implemented for your subscribers immediately\. For price increases, existing subscribers are notified about the change 90 days before it will impact their billing\. New subscribers will be billed the new amount\.
+The price you set for a container product applies to all AWS Regions\. Whenever you lower the price for a container product, the new price is implemented for your subscribers immediately\. For price increases, existing subscribers are notified about the change 90 days before it impacts their billing\. New subscribers are billed the new amount\.
 
 ## Pricing Models for Container Products<a name="pricing-models-for-server-products"></a>
 
