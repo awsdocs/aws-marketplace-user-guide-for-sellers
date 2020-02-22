@@ -6,7 +6,13 @@ Here are best practices, tips, and notes on supplying product metadata\. AWS Mar
 
 The information about your product becomes the face of the product to customers\. As you decide on your product name, description, highlights, and so on, consider using information that is compelling and differentiates your software from other software\.
 
-The information that you provide is important to ensure that potential customers have enough information to make informed decisions about choosing and buying your product\.
+The information that you provide is important to ensure that potential customers have enough information to make informed decisions about choosing and buying your product\. The following example shows the text metadata fields support the use of the `<b>`, `<u>`, and `<strong>` HTML tags\.
+
+**Example Example Tags**  
+
+```
+<b>Smart Solution</b> automatically distributes <u>incoming application traffic</u> across multiple <strong>Amazon EC2 instances</strong>.
+```
 
 ### Creating the Product Name<a name="optimizing-the-product-name-field"></a>
 

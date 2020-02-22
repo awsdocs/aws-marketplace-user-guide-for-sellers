@@ -4,7 +4,7 @@ The following is general pricing information about products in AWS Marketplace\.
 + For Paid products, AWS Marketplace collects software charges from the customer\. 
 + There is no service fee for Bring Your Own License \(BYOL\) products on AWS Marketplace\. 
 + To deliver on our customer promise of selection, we require that all BYOL products also have a paid option\. This is so that customers who don’t have existing licenses have the option to purchase and use the products\. 
-  + For BOYL products, we realize that the online purchase of software is a departure from how some companies do business\. In light of this, for the first 90 days after launch we will relax the requirement that this software is accompanied by a version available for purchase on AWS Marketplace\. During this time, the AWS Marketplace account management teams will work with you to address challenges and to determine if and how the software can be made available for purchase on AWS Marketplace\. 
+  + For BYOL products, we realize that the online purchase of software is a departure from how some companies do business\. In light of this, for the first 90 days after launch we will relax the requirement that this software is accompanied by a version available for purchase on AWS Marketplace\. During this time, the AWS Marketplace account management teams will work with you to address challenges and to determine if and how the software can be made available for purchase on AWS Marketplace\. 
 +  There is no service fee for Free or Open Source Software that is made available to customers without charge\. 
 
 ## AWS Charges Versus Software Charges<a name="aws-charges-vs-software-charges"></a>
@@ -70,37 +70,14 @@ In the product load form, relevant columns are named as Flexible Consumption Pri
 
 For AWS Marketplace Metering Service products, note the following: 
 + If your software is already on AWS Marketplace, you will need to create a product to enable an alternate usage dimension\. That is, currently, we are unable to convert a standard product to use the AWS Marketplace Metering Service\. After the new product is published, you can remove the old product or keep both on site\. 
-+ The AWS Marketplace Metering Service requires that your software report usage ever hour, recording the customer usage for the hour\. If there is a failure in the transmission or receipt of metering service records, AWS will be unable to bill for such usage\. You are responsible for ensuring the successful receipt of metering records\. 
++ The AWS Marketplace Metering Service requires that your software reports usage every hour, recording the customer usage for the hour\. If there is a failure in the transmission or receipt of metering service records, AWS will be unable to bill for such usage\. You are responsible for ensuring the successful receipt of metering records\. 
 + At this time, products that use the AWS Marketplace Metering Service don't support 1\-Click\. Subscribers are required to launch your software with an IAM role with specific permissions and have an Internet Gateway\. 
 + Free Trial and Annual Pricing are not compatible with the AWS Marketplace Metering Service at this time\. 
 + Changing dimension \(user, hosts, bandwidth, and data\) or dimension name is not supported\. You will need to create a new product\. 
 
 ## Private Offers<a name="private-offers"></a>
 
-The AWS Marketplace Seller Private Offer program allows AWS Marketplace sellers to negotiate custom pricing and end user license agreements with individual AWS Marketplace customers \(buyers\)\. Once the seller and buyer agree on pricing and EULA terms, the seller can create an offer for a specific buyer\. 
-
-You create private offers through the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/)\. To take advantage of this program, you must be part of the AWS Marketplace Enhanced Data Sharing Program\.
-
-**To create a private offer**
-
-1. Sign in to the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/)\.
-
-1. Choose the **Private Offer** tab\.
-
-1. From the **Manage Private Offer** page, do the following to create an offer\.
-
-   1. Select a product from a dropdown menu and enter the account number for the customer you are making the offer to\.
-
-   1. Enter the pricing and upload a PDF version of the EULA for the offer\. 
-
-   1. Enter a time duration \(number of days\) that the offer will be in effect once the customer accepts and a date by which the customer must accept the offer\. If the customer doesn't accept the offer by that date, the offer is no longer available\. 
-
-   1. Review and edit \(if necessary\) the offer\. 
-
-1. When you are satisfied with your offer, extend the offer to the customer\. The offer takes approximately 45 minutes to process, and appears on the **Manage Private Offer** page\. The offer will have a URL to the fulfillment page for the offer that you can copy, and email to the customer\. The customer can also navigate to your product page, which displays a banner to show that a private offer is available\. 
-
-**Note**  
-After you extend the offer to your customer, you can't edit or cancel the offer\. Instead, if you need to update the terms of an offer you would need to create a new offer\. 
+The AWS Marketplace Seller Private Offer program allows AWS Marketplace sellers to negotiate custom pricing and end user license agreements with individual AWS Marketplace customers \(buyers\)\. For more information, see [Private Offers](private-offers-overview.md)\.
 
 ## SaaS Subscriptions Pricing<a name="saas-subscriptions-pricing"></a>
 
@@ -112,7 +89,7 @@ For SaaS Contracts, the customer initiates a purchase of your software and enter
 
 ## AMI Pricing Models<a name="ami-pricing-models"></a>
 
- AWS Marketplace has multiple pricing models for AMI products\. There are options available for multi\-year and custom duration contracts\. For more information about multi\-year and custom duration contracts, see [Private Offers](private-offers-overview.md) and [Flexible Payment Scheduler](flexible-payment-scheduler.md)\. The following table provides general information about pricing models\.
+ AWS Marketplace has multiple pricing models for AMI products\. With seller private offers, there are options available for multi\-year and custom duration contracts\. For more information about multi\-year and custom duration contracts, see [Private Offers](private-offers-overview.md) and [Flexible Payment Scheduler](flexible-payment-scheduler.md)\. The following table provides general information about pricing models\.
 
 **Note**  
  You must be able to provide a W\-9 tax form \(for U\.S\. based entities\) or a W\-8 form \(for EU\- based entities\) as described in [Seller Registration Process](seller-registration-process.md)\. 

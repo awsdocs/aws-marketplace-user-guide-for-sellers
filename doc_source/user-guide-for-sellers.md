@@ -17,9 +17,9 @@ Registering as an AWS Marketplace seller is a prerequisite to be an AWS Data Exc
 ## Additional Seller Requirements<a name="additional-seller-requirements-for-paid-products"></a>
 
 If you charge for your products, offer bring\-your\-own\-license model \(BYOL\) products, or want to register as an AWS Data Exchange data provider, you must also meet the following requirements and provide this additional information:
-+  You must be a permanent US or European Union \(EU\) resident or citizen, or a business entity organized or incorporated in the United States or member state of the EU\. 
++ You must be either \(i\) a permanent resident or citizen of the United States of America \(US\), United Kingdom \(UK\), or a member state of the European Union \(EU\) or \(ii\) a business entity organized or incorporated in the US, UK, or EU\.
 +  You must provide tax and bank account information\. For US\-based entities, a W\-9 form and a banking account from a US\-based bank are required\. 
-+  European Union state members are required to provide a W\-8 form, value added tax \(VAT\) number, and US bank account\. If you don't have a US bank account, you can register for a virtual US bank account from [Hyperwallet](https://wssellers.hyperwallet.com/)\. 
++ United Kingdom or European Union state members are required to provide a W\-8 form, value added tax \(VAT\) number, and US bank account\. If you don't have a US bank account, you can register for a virtual US bank account from [Hyperwallet](https://wssellers.hyperwallet.com/)\. 
 + To provide data products, you must also request on\-boarding through the [Create case](https://console.aws.amazon.com/support/cases?#/create?issueType=customer-service) wizard for AWS Support\.
 
  To sell into the AWS GovCloud \(US\) Region, sellers must have an [AWS GovCloud \(US\) account](https://aws.amazon.com/govcloud-us/getting-started/)\. For details on ITAR requirements, see the *[AWS GovCloud \(US\) User Guide](https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/getting-started-sign-up.html)*\. 

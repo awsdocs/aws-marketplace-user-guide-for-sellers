@@ -1,9 +1,6 @@
 # Flexible Payment Scheduler<a name="flexible-payment-scheduler"></a>
 
-Flexible payment scheduler enables you to extend private offers with a custom payment schedule\. The schedule can be spread over up to three years, and the customer makes payments in regular installments\. Once subscribed, your customers can see all the payments on the schedule and on their AWS invoice, helping them track their spending\. Flexible payment scheduler is available for private offers on SaaS contracts products\.
-
-**Note**  
-You must be enrolled in the [AWS Marketplace Enhanced Data Sharing Program](https://docs.aws.amazon.com/marketplace/latest/userguide/enhanced-data-sharing.html) to extend private offers\. 
+Flexible payment scheduler enables you to extend private offers with a custom payment schedule\. The schedule can be spread over up to three years, and the customer makes payments in regular installments\. After they are subscribed, your customers can see all the payments on the schedule and on their AWS invoice, helping them track their spending\. Flexible payment scheduler is available for private offers on AMI multi\-year and SaaS contracts products\.
 
 Any customer on invoice terms, for example net\-30 or net\-60 terms, can subscribe to a private offer with a flexible payment schedule\. Customers who pay their AWS bill using a credit card can't\. If you try to create a private offer with a custom payment schedule for a customer who isn't on invoice terms, you receive an error\. 
 
@@ -17,7 +14,7 @@ The process for creating a custom payment schedule using flexible payment schedu
 After the AWS account or accounts are confirmed, customize your offer details on the next page\. Choose the contract duration for this offer and specify the offer details accordingly\.
 
 **Note**  
- For private offers with flexible payment scheduler, for multi\-year and custom duration AMI products, set the number of instances for each instance type included in the offer and the hourly pricing for any additional launched instances\. After the customer launches the specified number of instances, any additional instances launched are charged at the hourly rate specified in the private offer\. 
+ For private offers with flexible payment scheduler, for multi\-year and custom duration Amazon Machine Image \(AMI\) products, set the number of instances for each instance type included in the offer and the hourly pricing for any additional launched instances\. After the customer launches the specified number of instances, any additional instances launched are charged at the hourly rate specified in the private offer\. 
 
 Under **Payment Schedule**, add the invoice dates and invoice amounts for all of the installments that the customer will make\. You can add up to 36 installments\. Each time you add an installment, **Total amount due from buyer** is updated\. 
 
@@ -38,4 +35,4 @@ You can't modify the payment schedule on a private offer that has been extended 
 
 ## Reporting for Flexible Payment Scheduler<a name="fps-reporting"></a>
 
-Reporting for private offers with flexible payment schedules is in the [Monthly Billed Revenue Report](https://docs.aws.amazon.com/marketplace/latest/userguide/monthly-billed-revenue-report.html), under **Contracts Created with Flexible Payment Schedules**\. 
+Reporting for private offers with flexible payment schedules is in the [Section 4: Contracts with Flexible Payment Schedule](monthly-billed-revenue-report.md#section-4-contracts-with-flexible-payments), of the monthly billed revenue report\. 

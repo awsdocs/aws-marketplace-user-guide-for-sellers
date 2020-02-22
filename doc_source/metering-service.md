@@ -1,18 +1,20 @@
 # Metering Service<a name="metering-service"></a>
 
- The AWS Marketplace Metering Service is a pricing and metering feature that AWS Marketplace sellers can use to directly charge for their software along one of four usage categories: users, data, bandwidth, or hosts\. The service can be used with you AMI\-based and SaaS\-based products\. All AMI\-based software that uses the Metering Service must meet the following requirements: 
-+  Your software must be launched from the AWS Marketplace through an Amazon Machine Image \(AMI\)\. 
-+  If you have an existing product in the AWS Marketplace, you must submit a new AMI and create a new product to enable this feature\. 
-+  All software must be provisioned with an AWS Identity and Access Management \(IAM\) role\. The end customer will be required to add an IAM role to the Amazon Elastic Compute Cloud \(EC2\) instance the user is provisioning with the software\. Although the use of an IAM role is currently optional when deploying software through the AWS Marketplace, it is required when deploying AWS Marketplace Metering Service software\. 
+ The AWS Marketplace Metering Service is a pricing and metering feature that sellers can use to directly charge for their software along one of four usage categories: users, data, bandwidth, or hosts\. The service can be used with you AMI\-based, container\-based, and SaaS\-based products\. For more information, see the [https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html)\.
+
+All AMI\-based software that uses the Metering Service must meet the following requirements: 
++  Your software must be launched from AWS Marketplace through an Amazon Machine Image \(AMI\)\. 
++  If you have an existing product in AWS Marketplace, you must submit a new AMI and create a new product to enable this feature\. 
++  All software must be provisioned with an AWS Identity and Access Management \(IAM\) role\. The end customer must add an IAM role to the Amazon EC2 instance the user is provisioning with the software\. Currently, the use of an IAM role is optional when you deploy software through AWS Marketplace\. It is required when you deploy AWS Marketplace Metering Service software\. 
 +  Your software must be able to determine consumption in some way\. 
 
- Products that use the Metering Service must charge customers along a single usage category, but up to 24 dimensions of a single category can be defined\. Depending on the category selected, software can be priced by provisioned resources, concurrent resources, or accumulated resource consumption\. All charges are still incurred hourly by the customer\. All usage is calculated and billed monthly using the same mechanism as existing AWS Marketplace software\. 
+ Products that use the Metering Service must charge customers along a single usage category, but you can define up to 24 dimensions of a single category\. Depending on the category, software can be priced by provisioned resources, concurrent resources, or accumulated resource consumption\. All charges are still incurred hourly by the customer\. All usage is calculated and billed monthly using the same mechanism as existing AWS Marketplace software\. 
 
- The AWS Marketplace Metering Service enables several new scenarios\. For example, if your software monitors hosts, you can charge for each host monitored\. You can have different prices based on the host size, and charge for the number of concurrent hosts monitored each hour\. Similarly, if your software allows many users across an organization to sign in, you can charge by the number of users\. Each hour, the customer would be charged for the total number of provisioned users\. 
+ The AWS Marketplace Metering Service enables several new scenarios\. For example, if your software monitors hosts, you can charge for each host monitored\. You can have different prices based on the host size, and charge for the number of concurrent hosts monitored each hour\. Similarly, if your software allows many users across an organization to sign in, you can charge by the number of users\. Each hour, the customer is charged for the total number of provisioned users\. 
 
 ## Metering Service Concepts<a name="metering-service-concepts"></a>
 
- The AWS Marketplace Metering Service enables software sellers to modify their software to send metering records to an endpoint to capture usage\. Sellers can select a usage category and define up to 24 dimensions of that one category\. These dimensions are metered once per hour, aggregated, and charged against a price plan defined by the seller\. As a seller, the first thing you need to do is determine which dimension you want to use\. After the AMI is published, you will not be able to change it\. Important service concepts: 
+ The AWS Marketplace Metering Service enables software sellers to modify their software to send metering records to an endpoint to capture usage\. Sellers can select a usage category and define up to 24 dimensions of that one category\. These dimensions are metered once per hour, aggregated, and charged against a price plan defined by the seller\. As a seller, the first thing you need to do is determine which dimension you want to use\. After the AMI is published, you will not be able to change it\. Important service concepts include the following: 
 +  **Usage Category** \- Any software product priced through the use of the Metering Service will select one usage category along which to charge customers, including but not limited to: 
   +  Users \- A defined set of permissions associated with a single identifier\. This category is appropriate for software in which a customer’s users connect to the software directly \(for example, for customer\-relationship management or business intelligence reporting\)\. 
   +  Hosts \- Any server, node, instance, endpoint, or other part of a computing system\. This category is appropriate for software that monitors or scans many customer\-owned instances \(for example, performance or security monitoring\)\. 
@@ -21,7 +23,7 @@
   + NodesHrs \(corresponding to the Hosts category\)
   + UserHrs \(corresponding to the User category\)
   + GBStored \(corresponding to the Data category\)
-+  *Consumption* \- Any software product priced through the use of the Metering Service will charge for consumption in one of three ways: 
++  **Consumption** \- Any software product priced through the use of the Metering Service will charge for consumption in one of three ways: 
   +  Provisioned \- The software allows customers to configure a specific amount of resources for use \(for example, number of users or a fixed amount of bandwidth\)\. Each hour, customers pay for what they have provisioned\. 
   +  Concurrent \- The software allows any number of distinct hosts or users to connect to the software\. Each hour, customers pay based on the number of hosts or users who accessed the software\. 
   +  Accumulated \- The software allows customers to use any amount of data, either processed or stored\. Each hour, customers pay for the aggregated amount\. 
@@ -60,10 +62,10 @@
 
  After you have your AMI, follow the standard process to share and scan your AMI using the self\-service tool\. In addition to using the template available on the management portal, fill out the product load form and upload it to start the ingestion process\. 
 
- The following definitions will help you fill out the fields of the product load form for the AWS Marketplace Metering Service\. On the product load form, these fields are labeled as Flexible Consumption Pricing \(FCP\) to differentiate them from hourly and monthly priced products\. 
-+  **Title**: If you already have a product on AWS Marketplace and you are adding the same product with the AWS Marketplace Metering Service, include the FCP category/dimension in parenthesis to differentiate the two \(for example, “PRODUCT TITLE \(Data\)”\)\. 
+Use the following definitions to complete the fields of the product load form for the AWS Marketplace Metering Service\. On the product load form, these fields are labeled as Flexible Consumption Pricing \(FCP\) to differentiate them from hourly and monthly priced products\. 
++  **Title**: If you already have a product on AWS Marketplace and you are adding the same product with the AWS Marketplace Metering Service, include the FCP category/dimension in parentheses to differentiate the two \(for example, “PRODUCT TITLE \(Data\)”\)\. 
 +  **Pricing Model**: From the drop\-down list, choose **Usage**\. 
-+  **FCP Category**: The category in which customers will be charged for paid products with a **Usage** pricing component\. From the drop\-down list, choose **Users**, **Hosts**, **Data**, or **Bandwidth**\. 
++  **FCP Category**: The category in which customers are charged for paid products with a **Usage** pricing component\. From the drop\-down list, choose **Users**, **Hosts**, **Data**, or **Bandwidth**\. 
 +  **FCP Unit**: The unit of measurement on which customers will be charged for paid products with a **Usage** pricing component\. Options will appear in the drop\-down list based on the FCP category you selected\. The following table lists the valid units for each category\. 
 
 
@@ -73,8 +75,8 @@
 |  Hosts  |   HostHrs   | 
 |  Data  |   MB, GB, TB   | 
 |  Bandwidth  |   Mbps, Gbps   | 
-+  **FCP Dimension Name**: The name used when sending metering records by calling MeterUsage API\. It is visible in billing reports, but because it is not external\-facing, the name does not need to be user friendly\. The name can be no more than 15 characters and can only include alphanumeric and underscore characters\. **After you set the name, you will not be able to change it\. Changing the name requires a new AMI\.** 
-+  **FCP Dimension Description**: The customer\-facing statement that describes the dimension for the product\. The description \(for example, Administrators per hour, Per Mbps bandwidth provisioned\) can be no more than 70 characters and should be user\-friendly\. **After the product is published, you will not be able to change this description**\. 
++  **FCP Dimension Name**: The name used when sending metering records by calling MeterUsage API\. It is visible in billing reports, but because it is not external\-facing, the name does not need to be user friendly\. The name can be no more than 15 characters and can only include alphanumeric and underscore characters\. After you set the name, you cannot change it\. Changing the name requires a new AMI\. 
++  **FCP Dimension Description**: The customer\-facing statement that describes the dimension for the product\. The description \(for example, Administrators per hour, Per Mbps bandwidth provisioned\) can be no more than 70 characters and should be user\-friendly\. After the product is published, you cannot change this description\. 
 +  **FCP Rate**: The software charge per unit for this product\. This field supports 3 decimal places\. 
 
  **Notes: ** 
@@ -119,17 +121,14 @@
 
  hour and call the Metering Service\. For information about how to obtain this value, see the *Measuring Consumption* section\. 
 
- To wake up each hour at the start\-minute, your software will need to use one of three approaches: 
-
-1.  A thread within your software\. 
-
-1.  A daemon process that starts up with the instance or software\. 
-
-1.  A cron job that is configured during application start\-up\. 
+ To wake up each hour at the start\-minute, your software must use one of three approaches: 
++  A thread within your software\. 
++  A daemon process that starts up with the instance or software\. 
++  A cron job that is configured during application startup\. 
 **Note**  
  Your software must call the AWS Marketplace Metering Service using the IAM role configured on the customer’s instance and specify the consumption dimension and amount\. 
 
-**Your software can use the AWS SDK to call the AWS Marketplace Metering Service, similar to this example implementation**
+ Your software can use the AWS SDK to call the AWS Marketplace Metering Service, similar to this example implementation\. 
 
 1.  Use the instance profile to create a service client\. This requires the role configured for the EC2 instance\. 
 
@@ -139,74 +138,28 @@
 
 1.  Each hour, read your software configuration and state to determine consumption values for that hour\. This might include collecting a value\-per\-dimension\. 
 
-1.  Call the **meterUsage** method on the SDK client with the following parameters \(call additionally for each dimension that has usage\): 
-   +  **timestamp**: timestamp of the hour being recorded\. \(Use UTC\.\) 
-   +  **productCode**: product code assigned to the software\. 
-   +  **dimension**: dimension\(s\) assigned to the software 
-   +  **quantity**: consumption value for the hour 
+1.  Call the `meterUsage` method on the SDK client with the following parameters \(call additionally for each dimension that has usage\): 
+   +  `timestamp`: timestamp of the hour being recorded\. \(Use UTC\.\) 
+   +  `productCode`: product code assigned to the software\. 
+   +  `dimension`: dimension \(or dimensions\) assigned to the software 
+   +  `quantity`: consumption value for the hour 
 
- In addition, your software must call an in\-region AWS Marketplace Metering Service endpoint\. Your product must have a correct regional endpoint setup, so us\-east\-1 sends records to us\-east\-1 endpoint, and us\-west\-2 sends records to us\-west\-2 endpoint\. Making in\-region calls provides buyers with a more stable experience and prevents situations in which an unrelated region’s availability could impact software running in another region\. and 
+ In addition, your software must call an in\-region AWS Marketplace Metering Service endpoint\. Your product must have a correct regional endpoint set up, so `us-east-1` sends records to a `us-east-1` endpoint, and `us-west-2` sends records to a `us-west-2` endpoint\. Making in\-region calls provides buyers with a more stable experience and prevents situations in which an unrelated region’s availability could impact software running in another region\. 
 
- When you send metering records to the service, you must connect to the AWS Marketplace Metering Service in your region\. Use the **getCurrentRegion\(\)** helper method to determine the region in which the EC2 instance is running, and then pass this region information to the MeteringServiceClient constructor\. If you do not specify a region in the SDK constructor, it will default to the us\-east\-1 region\. If your application attempts to make cross\-region calls to the service, it will be rejected\. For more information, see [Determining an Application’s Current Region](https://java.awsblog.com/post/Tx3GBOIEN1JJMQ5/Determining-an-Application-s-Current-Region) and [getCurrentRegion\(\)](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/regions/Regions.html#getCurrentRegion())\. 
+ When you send metering records to the service, you must connect to the AWS Marketplace Metering Service in your region\. Use the `getCurrentRegion()` helper method to determine the region in which the EC2 instance is running, and then pass this region information to the `MeteringServiceClient` constructor\. If you do not specify an AWS Region in the SDK constructor, the default, `us-east-1`, is used\. If your application attempts to make cross\-region calls to the service, the calls are rejected\. For more information, see [Determining an Application’s Current Region](https://java.awsblog.com/post/Tx3GBOIEN1JJMQ5/Determining-an-Application-s-Current-Region) and [getCurrentRegion\(\)](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/regions/Regions.html#getCurrentRegion())\. 
 
 ## Important Information About Failure Handling<a name="important-information-about-failure-handling"></a>
 
- Your product must send metering records to the service, a public internet endpoint, so that usage can be captured and billed\. **Because it is possible for a customer to modify network settings in a way that prevents your metering records from being delivered, your product should account for this by choosing a failure mode\. ** 
+ Your product must send metering records to the service, a public internet endpoint, so that usage can be captured and billed\. Because it is possible for a customer to modify network settings in a way that prevents your metering records from being delivered, your product should account for this by choosing a failure mode\. 
 
- Typically, software can fail open \(provide a warning message but maintain full functionality\) or fail closed \(disable all functionality in the application until a connection has been reestablished\)\. You can choose to fail open, closed, or something specific to your application\. **We strongly recommend that you refrain from failing closed after less than two hours of metering failures\.** 
+ Typically, software can fail open \(provide a warning message but maintain full functionality\) or fail closed \(disable all functionality in the application until a connection has been reestablished\)\. You can choose to fail open, closed, or something specific to your application\. We strongly recommend that you refrain from failing closed after less than two hours of metering failures\. 
 
- As an example of failing partially open, you could continue to allow access to the software but not allow the buyer to modify the software settings\. Or, a buyer could still access the software, but would not be able to create additional users\. **Your software is responsible for defining and enforcing this failure mode\.** Your software’s failure mode must be included when your AMI is submitted, and it cannot be changed later\. 
+ As an example of failing partially open, you could continue to allow access to the software but not allow the buyer to modify the software settings\. Or, a buyer could still access the software, but would not be able to create additional users\. Your software is responsible for defining and enforcing this failure mode\. Your software’s failure mode must be included when your AMI is submitted, and it cannot be changed later\. 
 
 ## Limitations<a name="limitations"></a>
 
  Keep these limitations in mind when designing and submitting your Metering Service\-enabled software: 
-
-1.  **IAM role and Internet gateway requirements for your customers** \- Your customers must have an Internet gateway and must launch your software with an IAM role with specific permissions\. For information on setting IAM permissions, see [AWS Marketplace Metering and Entitlement Service APIs Permissions](iam-user-policy-for-aws-marketplace-actions.md)\. Your software will be unable to connect to the Metering Service if these two conditions are not met\. 
-
-1.  **Inability to add or change new usage category or dimensions to existing Metering Service product** \- When customers subscribe to your software product, they are agreeing to terms and conditions\. Changing the dimensions in products with the Metering Service requires a new product and a new subscription\. 
-
-1.  **Lack of free trial and annual** **subscriptions** \- Metering Service products will not support free trials and annual subscriptions at launch\. 
-
-1.  **Multi\-instance or cluster\-based deployment considerations** \- Some software will be deployed as part of a multi\-instance deployment\. When you design your software, consider how and where consumption is measured and where metering records are emitted\. 
-
-## Frequently Asked Questions<a name="metering-frequently-asked-questions"></a>
-
-### How many usage categories can I use for billing?<a name="metering-faq-01"></a>
-
- One\. You must select users, hosts, bandwidth, or data\. 
-
-### Which types of pricing scenarios are supported?<a name="metering-faq-02"></a>
-
- AWS Marketplace Metering Service supports provisioned resources, concurrent resources, and accumulated resource consumption scenarios\. 
-
-### Which pricing scenarios are supported at launch?<a name="metering-faq-03"></a>
-
- Six pricing scenarios are initially supported: provisioned user/hour, concurrent user/hour, provisioned bandwidth/hour, provisioned host/hour, concurrent host/hour, and accumulated data/hour\. 
-
-### How many dimensions can a usage category have?<a name="metering-faq-04"></a>
-
- Up to 24\. 
-
-### Metering Service products require a subscription?<a name="metering-faq-05"></a>
-
- Yes\. As with all AWS Marketplace software products, customers must be subscribed to the product before they can launch the AMI\. 
-
-### Will Metering Service products support 1\-Click?<a name="metering-faq-06"></a>
-
- No\. Metering Service products must be launched with an IAM role, and therefore, are not supported by AWS Marketplace 1\-Click\. 
-
-### Can customers use Metering Service products in a private VPC without an Internet gateway?<a name="metering-faq-07"></a>
-
- No\. These products must have access to the Metering Service, which has an endpoint on the public Internet\. Customers must configure their VPC to allow an outbound HTTPS connection from the product to the public Internet\. 
-
-### How can my software determine if a customer has a valid subscription to my product?<a name="metering-faq-08"></a>
-
- To determine if a customer has a valid subscription to your product, make a request with the Boolean field dryRun set to true\. 
-
-### Is there a difference between the API call used for testing and the API call for released products?<a name="metering-faq-09"></a>
-
- Yes\. You can test the API call for products that use AWS Marketplace Metering before you submit your AMI to AWS Marketplace for production, but the two calls are not identical\. When testing, you can use IAM user credentials for authentication\. Non\-test \(released\) products must be called from Amazon EC2 instances using an IAM role attached to the instance\. Because this can be a tedious method for testing the API, we provide a mechanism in which we whitelist seller accounts and test product codes so you can make API calls from your desktop \(using IAM credentials\)\. The difference between test and production calls is that AWS Marketplace whitelists your test account and test product code for direct API calls using IAM user credentials\. Your calls do not have to come from an EC2 instance\. This makes testing faster for you\. You can test the production authentication experience by launching an EC2 instance and metering with EC2Role credentials instead of IAM user credentials\. 
-
-### Is Metering Service available in the AWS GovCloud \(US\) region?<a name="metering-faq-10"></a>
-
- Yes, Metering Service is available for the AWS GovCloud \(US\) region provided that the seller has a AWS GovCloud \(US\) account\. 
++ ** IAM role and internet gateway requirements for your customers** \- Your customers must have an internet gateway and must launch your software with an IAM role with specific permissions\. For more information, see [AWS Marketplace Metering and Entitlement Service APIs Permissions](iam-user-policy-for-aws-marketplace-actions.md)\. Your software cannot connect to the Metering Service if these two conditions are not met\. 
++  **Inability to add or change new usage category or dimensions to existing Metering Service product** \- When customers subscribe to your software product, they are agreeing to terms and conditions\. Changing the dimensions in products with the Metering Service requires a new product and a new subscription\. 
++  **Lack of free trial and annual subscriptions** \- Metering Service products do not support free trials and annual subscriptions at launch\. 
++  **Multi\-instance or cluster\-based deployment considerations** \- Some software is deployed as part of a multi\-instance deployment\. When you design your software, consider how and where consumption is measured and where metering records are emitted\. 

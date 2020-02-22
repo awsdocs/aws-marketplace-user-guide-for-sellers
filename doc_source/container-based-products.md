@@ -8,4 +8,4 @@ You can run paid container products on the orchestration services [Amazon ECS](h
 
 ## Getting Help<a name="container-help"></a>
 
-For assitance with your container products, contact your business development partner for AWS Marketplace or [contact us](https://aws.amazon.com/marketplace/management/contact-us/)\.
+For assistance with your container products, contact your business development partner for AWS Marketplace or [contact us](https://aws.amazon.com/marketplace/management/contact-us/)\.

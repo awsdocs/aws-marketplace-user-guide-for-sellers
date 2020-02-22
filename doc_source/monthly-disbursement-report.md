@@ -22,7 +22,7 @@ This report is published 3 days after a disbursement has been initiated to trans
 
 ## Section 1: Disbursed Amount by Product<a name="disbursed-amount-by-product"></a>
 
- This section lists data for disbursements by product\. For each row, the Net Amount column is equal to the SellerRev column minus the AWSRefFee column\. When a refund is given to a customer, the Net Amount column is a negative number that is equal to the SellerRevRefund column minus the AWSRefFeeRefund column\. US sales and use tax that is collected or refunded is in the SellerUSSalesTax or SellerUSSalesTaxRefund column and isn't included in the calculation of the Net Amount column\. 
+ This section lists data for disbursements by product\.
 
 
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
@@ -50,11 +50,11 @@ This report is published 3 days after a disbursement has been initiated to trans
 |  Launch Type Description  |  ✔  |  ✔  |  The type of instance that the customer launched\. This is Amazon EC2 or AWS Fargate\.  | 
 |  Container Hours  |  ✔  |  ✔  |  The aggregate partial hours per Region by launch type\.  | 
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
-|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
+|  Payer Address ID  |  ✔  |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 2: Disbursed Amount by Customer Geography<a name="disbursed-amount-by-customer-geography"></a>
 
- This section lists data for disbursements by the customer's geographic location\. The amount in the Disbursed Amount column is equal to the sum of the entries in the Postal Code column\. The sum of the entries in the Net Amount By Tax Location column is equal to the sum of the entries in the Postal Code column minus the sum of the entries in the Seller U\.S\. Sales Tax column and the Seller U\.S\. Sales Tax Refund columns\. 
+ This section lists data for disbursements by the customer's geographic location\.
 
 
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program |  Description  | 
@@ -63,15 +63,15 @@ This report is published 3 days after a disbursement has been initiated to trans
 |  Settlement Period Start Date  |  ✔  |  ✔  |  The starting date and time of the disbursement period\.  | 
 |  Settlement Period End Date  |  ✔  |  ✔  |  The ending date and time of the disbursement period\.  | 
 |  Deposit Date  |  ✔  |  ✔  |  The date and time when the disbursement occurred\.  | 
-|  Disbursed Amount  |  ✔  |  ✔  |  The total amount of the disbursement, and is equal to the total of the Postal Code column in this section of the report\. | 
+|  Disbursed Amount  |  ✔  |  ✔  |  The total amount of the disbursement\. | 
 |  Country Code  |  ✔  |  ✔  | The two\-character country code that is associated with the account that the charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
 |  State or Region  |  ✔  |  ✔  | The billing address state that is associated with the account that the charges are billed to\. | 
 |  City  |  ✔  |  ✔  | The billing address city that is associated with the account that charges are billed to\. | 
-|  Postal Code  |  ✔  |  ✔  |  The total funds that are disbursed to the seller, grouped by postal code\. The total of this column is equal to the Disbursed Amount column in this section of the report\.  | 
+|  Postal Code  |  ✔  |  ✔  | The billing address postal code that is associated with the account that the software charges are billed to\. | 
 |  Net Amount by Tax Location  |  ✔  |  ✔  |  The total funds that are disbursed to the seller by tax location, less AWS Marketplace fees, refunds, and US sales and use tax\.  | 
 |  Gross Amount by Tax Location  |  ✔  |  ✔  |  The total funds that are disbursed to the seller by tax location\.  | 
-|  Seller U\.S\. Sales Tax  |  ✔  |  ✔  |  The total amount of US sales and use tax that is disbursed to the seller for the transaction, grouped by location\.  | 
-|  Seller U\.S\. Sales Tax Refund  |  ✔  |  ✔  |  The total amount of US sales and use tax that is refunded to the customer for the transaction, grouped by location\.  | 
+|  Seller U\.S\. Sales Tax  |  ✔  |  ✔  | The total amount of US sales and use tax that is billed for this transaction on behalf of the Seller\. \(That is, related records in US Sales and Tax reports show “tax liable party” == “SELLER”\.\) | 
+|  Seller U\.S\. Sales Tax Refund  |  ✔  |  ✔  | The total amount of US sales and use tax that is refunded for this transaction if a refund was processed, when such taxes were collected on behalf of the Seller\. \(That is, related records in US Sales and Tax reports show “tax liable party” == “SELLER”\.\) | 
 
 ## Section 3: Disbursed Amount by Instance Hours<a name="disbursed-amount-by-instance-hours"></a>
 
@@ -138,15 +138,15 @@ This section lists all uncollected funds, sorted by the payment due date\.
 
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
 | --- | --- | --- | --- | 
+| Payer AWS Account Number |  ✔  |  ✔  | The account that the software charges are billed to\. | 
 | Product Code |  ✔  |  ✔  | The unique identifier for the product\. | 
-| Product |  ✔  |  ✔  | The title of the product\. | 
-| SellerRev |  ✔  |  ✔  | The amount that is billed for using the product or the monthly fees for using the product\. | 
-| AWSRefFee |  ✔  |  ✔  | The AWS fee amount that is deducted from the billed amount at settlement time\. | 
-| SellerRevRefund |  ✔  |  ✔  | The total amount of any refunds for the transaction\. | 
-| AWSRefFeeRefund |  ✔  |  ✔  | The portion of the AWS fee that is refunded from the transaction\. | 
-| Net Amount |  ✔  |  ✔  | The net amount that is billed for this transaction, minus AWS fees, refunds, and US sales and US tax\. | 
+| Gross Revenue |  ✔  |  ✔  | The amount that is billed for using the product or the monthly fees for using the product\. | 
+| AWS Revenue Share |  ✔  |  ✔  | The AWS fee amount that is deducted from the billed amount at settlement time\. | 
+| Gross Refunds |  ✔  |  ✔  | The total amount of any refunds for the transaction\. | 
+| AWS Refunds Share |  ✔  |  ✔  | The portion of the AWS fee that is refunded for the transaction\. | 
+| Net Revenue |  ✔  |  ✔  | The net amount that is billed for this transaction, minus AWS fees, refunds, and US sales and use tax\.  | 
 | Currency |  ✔  |  ✔  | The currency of the transaction\. For example, if the transaction is in US dollars, the entry is USD\. | 
-| AR Period |  ✔  |  ✔  | The month and year of the transaction, in the format of YYYY\-MM | 
+| AR Period |  ✔  |  ✔  | The month and year of the transaction, in the format of YYYY\-MM\. | 
 | Transaction Reference ID |  ✔  |  ✔  | A unique identifier that represents the transaction, which you can use to correlate transactions across AWS Marketplace reports\. | 
 | Opportunity Name |  ✔  |  ✔  | The unique identifier for a registered opportunity\. | 
 | Opportunity Description |  ✔  |  ✔  | Any metadata in the registered opportunity\. | 

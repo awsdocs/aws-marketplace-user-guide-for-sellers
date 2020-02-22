@@ -20,7 +20,7 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 
 ## Section 1: Billing and Revenue Data<a name="section-1-billing-and-revenue-data"></a>
 
- This section lists data for usage billing, refunds, fees, and US sales and use tax that is collected\. The amount in the Partner Revenue Amount column is the amount in the Customer Billed Amount column minus the amounts in the AWS Fee, Refunds Amount, AWS Fee Refund, and Cost columns\. The U\.S\. Sales Tax Customer Billed Amount and the U\.S\. Sales Tax Refunds Amount columns aren't included in the Customer Billed Amount or Partner Revenue Amount columns\. 
+ This section lists data for usage billing, refunds, fees, and US sales and use tax that is collected\.
 
 
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
@@ -40,8 +40,8 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 |  Partner Revenue Amount  |  ✔  |  ✔  | The total amount billed for the transaction, net of AWS Marketplace fees, refunds, and US sales and use tax\.  | 
 |  Currency  |  ✔  |  ✔  |  The currency of the transaction\. For example, if the transaction is in US dollars, the entry is USD\.  | 
 |  Transaction Reference ID  |  ✔  |  ✔  |  A unique identifier for the transaction that helps you correlate transactions across AWS Marketplace reports\.  | 
-|  U\.S\. Sales Tax Customer Billed Amount  |  ✔  |  ✔  |  The total amount of US sales and use tax that is billed for this transaction\.  | 
-|  U\.S\. Sales Tax Refunds Amount  |  ✔  |  ✔  |  The total amount of US sales and use tax that is refunded for this transaction if a refund was processed\.  | 
+|  U\.S\. Sales Tax Customer Billed Amount  |  ✔  |  ✔  | The total amount of US sales and use tax that is billed for this transaction on behalf of the Seller\. \(That is, related records in US Sales and Tax reports show “tax liable party” == “SELLER”\.\)  | 
+|  U\.S\. Sales Tax Refunds Amount  |  ✔  |  ✔  | The total amount of US sales and use tax that is refunded for this transaction if a refund was processed, when such taxes were collected on behalf of the Seller\. \(That is, related records in US Sales and Tax reports show “tax liable party” == “SELLER”\.\) | 
 |  Offer ID  |  ✔  |  ✔  |  The identifier for the offer that the subscriber signed\. | 
 |  Offer Visibility  |  ✔  |  ✔  |  Whether the offer is a public, private, or enterprise contract offer\. | 
 |  Customer AWS Account Number  |   |  ✔  | The ID of the account that the charges are billed to\.  | 
@@ -51,11 +51,11 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\.  | 
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
-|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
+|  Payer Address ID  |  ✔  |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 2: Variable Length Subscriptions<a name="section-2-annual-subscriptions-1"></a>
 
- This section lists data for fee\-based charges\. The data includes details for each subscription, as well as data for usage billing, refunds, fees, and US sales and use tax that is collected\. The amount in the Partner Revenue Amount column is the amount in the Customer Billed Amount column minus the amounts in the AWS Fee, Refunds Amount, AWS Fee Refund, and Cost columns\. The U\.S\. Sales Tax Customer Billed Amount and the U\.S\. Sales Tax Refunds Amount columns aren't included in the Customer Billed Amount or Partner Revenue Amount columns from the previous reporting period\. 
+ This section lists data for fee\-based charges\.
 
 
 |  Column Name  |  Available for All Sellers  |  Available for Sellers in the Enhanced Data Sharing Program  |  Description  | 
@@ -79,8 +79,8 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 |  Partner Revenue Amount  |  ✔  |  ✔  |  The total amount that is billed for this transaction, net of AWS Marketplace fees, refunds, and US sales and use tax\.  | 
 |  Currency  |  ✔  |  ✔  |  The currency of the transaction\. For example, if the transaction is in US dollars, the entry is USD\. | 
 |  Transaction Reference ID  |  ✔  |  ✔  |  A unique identifier for the transaction that helps you correlate transactions across AWS Marketplace reports\.  | 
-|  U\.S\. Sales Tax Customer Billed Amount  |  ✔  |  ✔  |  The total amount of US sales and use tax that is billed for this transaction\.  | 
-|  U\.S\. Sales Tax Refunds Amount  |  ✔  |  ✔  |  The total amount of US sales and use tax that is refunded for this transaction if a refund was processed\.  | 
+|  U\.S\. Sales Tax Customer Billed Amount  |  ✔  |  ✔  |  The total amount of US sales and use tax that is billed for this transaction on behalf of the Seller\. \(That is, related records in US Sales and Tax reports show “tax liable party” == “SELLER”\.\) | 
+|  U\.S\. Sales Tax Refunds Amount  |  ✔  |  ✔  |  The total amount of US sales and use tax that is refunded for this transaction if a refund was processed, when such taxes were collected on behalf of the Seller\. \(That is, related records in US Sales and Tax reports show “tax liable party” == “SELLER”\.\) | 
 |  Customer AWS Account Number  |   |  ✔  | The ID of the account that the charges are billed to\.  | 
 |  Customer Email Domain  |   |  ✔  |  The email domain that is associated with the account that the charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
 |  Offer ID  |  ✔  |  ✔  |  The identifier for the offer that the subscriber signed\. | 
@@ -92,7 +92,7 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\.  | 
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\. | 
-|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
+|  Payer Address ID  |  ✔  |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 3: AWS Field Demonstration Usage<a name="section-3-aws-field-demonstration-usage"></a>
 

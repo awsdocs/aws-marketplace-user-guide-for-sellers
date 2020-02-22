@@ -4,11 +4,11 @@ Private offers are a purchasing program that allows providers and subscribers to
 
 ## How Private Offers Work<a name="private-offer-how-it-works"></a>
 
-In order to make private offers on AWS Marketplace, you must be enrolled in the [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md)\. You can contact your AWS Marketplace representative to participate in this program\. In addition to private offers, you can also offer enterprise contract private offers, which use the enterprise contract EULA\.
+You can create and manage all of your private offers from the **Offers** page in the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management)\. You specify the product that the offer is being made for and the AWS account ID \(or IDs\) for the subscriber \(or subscribers\) you're creating the offer for\. AWS Marketplace Management Portal generates a unique ID and URL for the offer\.
 
-You can create and manage all of your private offers from the **Offers** page in the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management)\. You specify the product that the offer is being made for and the AWS account ID for the subscriber\(s\) you're creating the offer for\. AWS Marketplace Management Portal generates a unique ID and URL for the offer\.
+In addition to private offers, you can also offer enterprise contract private offers, which use the enterprise contract EULA\.
 
- When you create a private offer, you can extend the offer to up to 25 accounts, and the offer is only visible to the accounts that you create the offer for\. You can't view the offer unless you extend the offer to your account when creating the private offer\. You can't force service limits in the offer, so the subscriber can use as much of your product at the negotiated prices as they want, unless you enforce a limit within your product\.
+ When you create a private offer, you can extend the offer to up to 25 accounts\. The offer is visible only to the accounts that you create the offer for\. Subscribers can't view the offer unless you extend the offer to either their linked account or to their master payer account\. You can't force service limits in the offer, so the subscriber can use as much of your product at the negotiated prices as they want, unless you enforce a limit in your product\.
 
 **Note**  
 The subscriber isn't notified that you created a private offer\. You can provide the URL for the custom offer to the subscriber, or they can navigate to your product through AWS Marketplace\.
@@ -19,17 +19,15 @@ Private offers are tracked in seller reports\. For more information, see [Report
 
 ### Private Offer Experience for Subscriber<a name="private-offer-sub-experience"></a>
 
-After you create a private offer and notify the potential subscriber, they will have steps they must perform to accept the offer\. For more information on the subscriber experience for private offers, see [Private Offers](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers.html) in the *AWS Marketplace Subscribers Guide*\.
+After you create a private offer and notify the potential subscriber, they will have steps they must perform to accept the offer\. For more information about the subscriber experience for private offers, see [Private Offers](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers.html) in the *AWS Marketplace Subscribers Guide*\.
 
-**Note**  
-In order to receive the terms of the offer, the subscriber must accept the offer\. As the provider, you can provide a URL to the fulfillment page for the offer, or the customer can navigate to your product page on AWS Marketplace and choose the link in the banner to view the private offer\.
+To receive the terms of the offer, the subscriber must accept the offer before the offer expiration date\. After the offer expires, the terms are no longer valid\. You must re\-create the private offer for the subscriber to accept the terms\. As the provider, you can provide a URL to the fulfillment page for the offer, or the customer can navigate to your product page on AWS Marketplace and choose the link in the banner to view the private offer\.
 
 ## Private Offer Limitations<a name="private-offer-limitations"></a>
 
 When working with private offers, keep the following limitations in mind:
 +  You can't create private offers for second party \(2P\), AMI monthly, SaaS redirect, or AMI\-based delivery using AWS CloudFormation products, or for limiting customer usage\. 
-+ Buyers must be on invoicing terms in order to receive private offers\.
-+ Private offers are not available to subscribers set up for credit card billing with AWS\. 
++ For private offers with the flexible payment scheduler, it is possible to break upfront commitments into multiple payments over time if subscribers are on invoicing terms with AWS\.
 
 ## Supported Product Types<a name="supported-products-private-offers"></a>
 
@@ -64,9 +62,9 @@ For more information, see [Consulting Partner Private Offers](consulting-partner
 
 1. On the **Manage Private Offer** page, choose **CREATE AN OFFER**\. 
 
-1. On the **Create Private Offer** page, select the product from the drop\-down list and enter the AWS account ID of the AWS Marketplace subscriber\. If your subscriber is paying for the product in installments, select **Allow buyers to pay for this product in installments \(ISV only\)**\. Verify the information that you entered and then choose **NEXT**\. 
+1. On the **Create Private Offer** page, select the product from the drop\-down list and enter the AWS account ID \(or IDs\) of the AWS Marketplace subscriber\. If your subscriber is paying for the product in installments, select **Allow buyers to pay for this product in installments \(ISV only\)**\. Verify the information that you entered and then choose **NEXT**\. 
 **Note**  
-Selecting **Allow buyers to pay for this product in installments \(ISV only\)** enables you to offer your subscriber a payment schedule with annual payments that aren't evenly distributed, multiple payments for a multi\-year deal, or quarterly payments\. For instructions on configuring your private offer for installment payments, see [Flexible Payment Scheduler](flexible-payment-scheduler.md)\.
+Selecting **Allow buyers to pay for this product in installments \(ISV only\)** enables you to offer your subscriber a payment schedule with annual payments that aren't evenly distributed, multiple payments for a multi\-year deal, or quarterly payments\. Subscribers must be on invoicing terms with AWS to receive a flexible payment schedule on their private offer\. For more information, see [Flexible Payment Scheduler](flexible-payment-scheduler.md)\.
 
 1. On the **Create an Offer** page, verify the product name and subscriber ID\.
 
@@ -74,7 +72,7 @@ Selecting **Allow buyers to pay for this product in installments \(ISV only\)** 
 **Note**  
  The duration of the offer can be up to 1,095 days\. 
 
-1.  In **Input offer price**, enter the pricing information that you negotiated with the customer\. If you have installment payments for the private offer, specify the number of units and the payment schedule for the contract duration\. For more information on installment payments, see [Flexible Payment Scheduler](flexible-payment-scheduler.md)\. 
+1.  In **Input offer price**, enter the pricing information that you negotiated with the customer\. If you have installment payments for the private offer, specify the number of units and the payment schedule for the contract duration\. For more information about installment payments, see [Flexible Payment Scheduler](flexible-payment-scheduler.md)\. 
 
 1. In **Upload End User License Agreement**, drag and drop or upload your EULA PDF file\.
 

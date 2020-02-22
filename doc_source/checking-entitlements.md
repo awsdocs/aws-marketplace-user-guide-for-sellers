@@ -32,13 +32,3 @@ The following is an example of a `GetEntitlements` request\.
 ### Example: Data Storage Product<a name="example-data-storage-application"></a>
 
  You offer a product that enables customers to store a certain amount of data in encrypted or unencrypted form\. The customer can view a dashboard that displays the amount of data existing and allocated in your product\. Your dashboard retrieves the allocation amount through `GetEntitlements`\. 
-
-## Frequently Asked Questions<a name="api-check-entitlements-frequently-asked-questions"></a>
-
-### How Can I Audit My Existing Entitlements?<a name="how-can-i-audit-my-existing-entitlements"></a>
-
- You can create a job to periodically call `GetEntitlements` for all customer identifiers in your database\. AWS throttles your call volume to 10 TPS\. 
-
-### Should I Revoke Access on the Expiration Date Indicated in the Entitlement Document If I Don’t Receive a Notification That the Entitlement Document Has Been Updated?<a name="should-i-revoke-access-on-the-expiration-date-indicated"></a>
-
- No\. Your product should wait for an entitlement update or periodically check `GetEntitlements` to verify that the allocation should be revoked\. Use the expiration field only to notify customers of a possible loss in allocated resources\. Don't use the information in this field to limit functionality\. Amazon SNS notifications are delivered with best effort, so your product should check `GetEntitlements` before revoking access\. 

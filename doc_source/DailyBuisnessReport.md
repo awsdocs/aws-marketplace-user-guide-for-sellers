@@ -48,7 +48,7 @@ You can use a unique identifier for each customer to identify customers over tim
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\.  | 
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
-|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
+|  Payer Address ID  |  ✔  |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 2: Fees<a name="section-2-fees"></a>
 
@@ -78,7 +78,7 @@ You can use a unique identifier for each customer to identify customers over tim
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\. | 
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
-|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
+|  Payer Address ID  |  ✔  |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 3: Free Trial Conversions<a name="section-3-free-trial-conversions"></a>
 
@@ -119,7 +119,7 @@ You can use a unique identifier for each customer to identify customers over tim
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\. | 
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
-|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
+|  Payer Address ID  |  ✔  |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 5: New Product Subscribers<a name="section-5-new-product-subscribers"></a>
 
@@ -143,7 +143,7 @@ You can use a unique identifier for each customer to identify customers over tim
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\. | 
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
-|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
+|  Payer Address ID  |  ✔  |  ✔  |  A unique identifier that represents the customer's address\. | 
 
 ## Section 6: Canceled Product Subscribers<a name="section-6-canceled-product-subscribers"></a>
 
@@ -169,4 +169,4 @@ You can use a unique identifier for each customer to identify customers over tim
 |  Solution Title  |  ✔  |  ✔  |  The name of the solution\.  | 
 |  Solution ID  |  ✔  |  ✔  |  The unique identifier for the solution\. | 
 |  Payer Reference ID  |  ✔  |  ✔  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
-|  Payer Address ID  |   |  ✔  |  A unique identifier that represents the customer's address\. | 
+|  Payer Address ID  |  ✔  |  ✔  |  A unique identifier that represents the customer's address\. | 

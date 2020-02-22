@@ -7,7 +7,7 @@
 
  You can change other product information \(name, website, description\) on AWS Marketplace after the product is created\. You can also use AWS Identity and Access Management \(AWS IAM\) to configure your primary AWS account to allow multiple users with various permissions to access the AMMP\. For more information visit [Controlling Access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)\. 
 
-## US Bank Account for European Union State Member Sellers<a name="us-bank-account-for-eu-sellers"></a>
+## US Bank Account for United Kingdom and European Union State Member Sellers<a name="us-bank-account-for-eu-sellers"></a>
 
  A US bank account is required for EU\-based sellers that wish to sell paid software in AWS Marketplace\. AWS Marketplace only disburses to US bank accounts\. If you do not already have a US bank account, you may be able to obtain one through Hyperwallet\. [Hyperwallet](https://wssellers.hyperwallet.com/) can provide you with a US account, which you can provide to AWS Marketplace for your AWS Marketplace disbursements\. 
 
@@ -43,7 +43,8 @@
  For more information, visit [AWS Marketplace Sellers](https://aws.amazon.com/tax-help/marketplace/) on [Amazon Web Service Tax Help](https://aws.amazon.com/tax-help/) to learn more about where AWS collects sales tax, VAT, or GST on your sales and remits such taxes to the local tax authorities, in the name of AWS, Inc\. 
 
 ### Disbursement<a name="disbursement"></a>
-+  A valid [payment method](https://portal.aws.amazon.com/gp/aws/developer/account?ie=UTF8&action=payment-method), a [registered US bank account](https://aws.amazon.com/marketplace/management/seller-settings/account/bank), and a submitted W9 form are required for disbursement\. If you're EU\-based, follow [this process](https://portal.aws.amazon.com/ec2/ri/seller_registration)\. 
++  A valid [payment method](https://portal.aws.amazon.com/gp/aws/developer/account?ie=UTF8&action=payment-method), a [registered US bank account](https://aws.amazon.com/marketplace/management/seller-settings/account/bank), and a submitted W9 form are required for disbursement\.
++ European Union state members are required to provide a W\-8, Value Added Tax \(VAT\) number, and a US bank account\. [Hyperwallet](https://wssellers.hyperwallet.com/) can provide you with a US bank account, which you can provide to AWS Marketplace for your AWS Marketplace disbursements\. 
 +  AWS disburses payments monthly directly to the bank account associated with the seller account, minus AWS Marketplace service fees\. Payment is disbursed on a rolling monthly basis based off of when the seller account was created, not the beginning of each month\. 
 +  Funds are disbursed only after they are collected from the customer\. 
 +  If you participate in the AWS Marketplace Tax Calculation Service, any US sales and use tax collected from customers will be included in your monthly disbursement\. 

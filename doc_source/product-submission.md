@@ -34,7 +34,7 @@ Data product providers must use the AWS Data Exchange console to publish product
  You track the status of your requests under the **Requests** tab\. The status will be one of the following: 
 +  Draft – you have started the request process but have not submitted your request\. 
 +  Submitted – you have completed and submitted your request and it is under review\. 
-+  Action Required – AWS Marketplace has reviewed your request and needs additional information\. 
++  Action Required – AWS Marketplace has reviewed your request and needs more information\. 
 +  Approval Required – AWS Marketplace has created the limited listing URL for your product and you must review and approve or reject the URL before AWS Marketplace will publish\. If you approve, the status changes to **Publishing Pending** while the site gets published\. If you reject, the status returns to **Draft** so you can modify the request\. 
 +  Publishing Pending – You have approved the mock\-up of your request and AWS Marketplace is publishing your product\.
 +  Expired – You started the request process, but did not complete within six months so the request expired\. 
@@ -82,34 +82,34 @@ Your product submission is reviewed for policy and security compliance, software
 ## Product Changes and Updates<a name="product-changes-and-updates"></a>
 
  Sellers can submit changes to their product at any time, and they will be processed as described above\. However, some changes can only be made every 90 or 120 days, or when pending changes are in place\. Examples include price changes, and region/instance type changes\. Common changes include: 
-+  **New Version \-** New versions of the software, roll\-outs of patches or updates\. At your request, we can notify customers who have subscribed to Your Marketplace Content about the availability of new versions or send upgrade instructions on your behalf\. 
++  **New Version** \- New versions of the software, rollouts of patches or updates\. At your request, we can notify customers who have subscribed to Your Marketplace Content about the availability of new versions or send upgrade instructions on your behalf\. 
 +  **Metadata change** \- Changes to product information \(Description, URLs, and Usage Instructions\)\. 
 +  **Pricing Change** \- A change to the pricing amount\. A notification to current customers is sent once the request is complete\. 
-+  **Pricing Model Change** \- A change to the pricing model \(i\.e\. Hourly, Free, Hourly\_Annual\)\. Not all pricing model changes are supported and all requests to change models must be reviewed and approved by AWS Marketplace\. **Note**: Any change from a free to a paid model presents significant impact to existing customers\. An alternative is to propose a new product with additional features and encourage current customers to migrate\. 
-+  **Region or Instance change** \- Adding or removing instances types or regions\. 
-+  **Product takedown \-** Remove a product page from AWS Marketplace to prevent new customers from subscribing\. A notification to current customers is sent once the request is complete\. 
++  **Pricing Model Change** \- A change to the pricing model \(for example, Hourly, Free, Hourly\_Annual\)\. Not all pricing model changes are supported and all requests to change models must be reviewed and approved by AWS Marketplace\. Any change from a free to a paid model presents significant impact to existing customers\. An alternative is to propose a new product with additional features and encourage current customers to migrate\. 
++  **Region or Instance change** \- Adding or removing instances types or Regions\. 
++  **Product takedown \-** Remove a product page from AWS Marketplace to prevent new customers from subscribing\. A notification to current customers is sent after the request is complete\. 
 
 ## Timing and Expectations<a name="timing-and-expectations"></a>
 
  While we strive to process requests as quickly as possible, requests can require multiple iterations and review by the seller and AWS Marketplace teams\. Use the following as guidance for how long it will take to complete the process: 
-+  Total request time normally takes **2\-4 weeks of calendar time;** more complex requests or products can add additional time to allow for multiple iterations and adjustments to product metadata and software\. 
-+  Review and processing of requests typically requires **3 business days**\. We will notify you if there are any issues that require additional action\. 
-+  We require a completed product request and AMI at least **45 days in advance** of any planned events or releases so we can prioritize the request accordingly\. 
++  Total request time normally takes 2\-4 weeks of calendar time\. More complex requests or products can take longer, due to multiple iterations and adjustments to product metadata and software\. 
++  Review and processing of requests typically requires 3 business days\. We will notify you if there are any issues that require additional action\. 
++  We require a completed product request and AMI at least 45 days in advance of any planned events or releases so we can prioritize the request accordingly\. 
 
  If you have any questions about your request, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
 ## Submitting AMIs to AWS Marketplace<a name="submitting-amis-to-aws-marketplace"></a>
 
- **ALL** AMIs built and submitted to AWS Marketplace must adhere to all product policies\. We suggest a few final checks of your AMI prior to submission: 
+ All AMIs built and submitted to AWS Marketplace must adhere to all product policies\. We suggest a few final checks of your AMI prior to submission: 
 +  Remove all user credentials from the system; all default passwords, authorization keys, key pairs, security keys or other credentials\. 
-+  Ensure that root login is disabled / locked; only sudo access accounts are allowed\. 
++  Ensure that root login is disabled or locked\. Only sudo access accounts are allowed\. 
 +  If you are submitting an AMI to be deployed into the AWS GovCloud \(US\) region, you need to [have an active AWS GovCloud account](http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/getting-started-sign-up.html) and agree to the [AWS GovCloud Requirements](https://aws.amazon.com/service-terms/), including applicable export control requirements\. 
 
 ### AMI Self\-Service Scanning<a name="ami-self-service-scanning"></a>
 
  Self\-service AMI scanning is available within the AWS Marketplace Management Portal\. With this feature, you can initiate scans of your AMIs and receive scanning results quickly – typically in less than an hour – with clear feedback in a single location\. 
 
- **To begin sharing and scanning your AMI with this new service:** 
+**To begin sharing and scanning your AMI with this new service**
 
 1. Navigate to [https://aws\.amazon\.com/marketplace/management/manage\-products/](https://aws.amazon.com/marketplace/management/manage-products/)\. 
 
@@ -117,17 +117,17 @@ Your product submission is reviewed for policy and security compliance, software
 
 1. View your scan results\.
 
- Once your AMI has successfully been scanned, you can follow the current process to submit the AMI for processing by the AWS Marketplace Seller and Catalog Operations team by [uploading](https://aws.amazon.com/marketplace/management/product-load/) your product load form\. For any problems, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
+After your AMI has successfully been scanned, you can follow the current process to submit it to the AWS Marketplace Seller and Catalog Operations team by [uploading](https://aws.amazon.com/marketplace/management/product-load/) your product load form\. If you have any issues, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
-Note that in order for your AMI to be included in the self\-service AMI scanning list, it must be in the us\-east\-1 \(N\. Virginia\) region and owned by your AWS Marketplace seller account\. If you need additional accounts whitelisted for the AWS Marketplace Management Portal, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team with the AWS Account ID that owns the AMI to be scanned\. 
+To include your AMI in the self\-service scanning list, the AMI must be in the `us-east-1` \(N\. Virginia\) Region and owned by your AWS Marketplace seller account\. If you need to grant other accounts access to the AWS Marketplace Management Portal, you must register those accounts as sellers\. For more information, see [Seller Registration Process](seller-registration-process.md)\. 
 
 ### AMI Cloning and Product Code Assignment<a name="ami-cloning-and-product-code-assignment"></a>
 
- Once your AMI is submitted, AWS Marketplace will create cloned AMIs for each region that you have indicated that software should be available\. During this cloning and publishing process, AWS Marketplace will attach a product code to the cloned AMIs\. The product code is used to both control access and to meter usage\. All submissions must go through this AMI cloning process\. 
+After your AMI is submitted, AWS Marketplace will create cloned AMIs for each region that you have indicated that software should be available\. During this cloning and publishing process, AWS Marketplace will attach a product code to the cloned AMIs\. The product code is used to both control access and to meter usage\. All submissions must go through this AMI cloning process\. 
 
 ## Final Checklist<a name="final-checklist"></a>
 
- Use this checklist prior to submitting your product request to help avoid delays in publishing your product\. 
+ To help avoid delays in publishing your product, use this checklist before you submit your product request\. 
 
  **Product usage** 
 +  Production\-ready 
