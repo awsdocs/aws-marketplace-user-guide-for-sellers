@@ -21,17 +21,18 @@
    The following is an example of a response to a `ResolveCustomer` call\.
 
    ```
-           
-       ##### Resolving Customer Registration Token ##### 
-       formFields = urlparse.parse_qs(postBody):
-       if formFields.has_key('x-amzn-marketplace-token'):
-       marketplaceClient = boto3.client('meteringmarketplace') 
-       customerData = marketplaceClient.resolve_customer( 
-       RegistrationToken=formFields['x-amzn-marketplace-
-       token']) productCode = customerData['ProductCode']
-       customerId = customerData['CustomerIdentifier']
-       # TODO: Store information away with your customer record
-       # TODO: Validate no other accounts share this identifier
+    #####
+    Resolving Customer Registration Token#####
+    formFields = urlparse.parse_qs(postBody):
+      if formFields.has_key('x-amzn-marketplace-token'):
+      marketplaceClient = boto3.client('meteringmarketplace')
+    customerData = marketplaceClient.resolve_customer(
+        RegistrationToken = formFields['x-amzn-marketplace-
+          token ']) productCode = customerData['
+          ProductCode ']
+          customerId = customerData['CustomerIdentifier']
+   # TODO: Store information away with your customer record
+   # TODO: Validate no other accounts share this identifier
    ```
 
 1.  Your website validates that the product code matches your SaaS product identity\. 

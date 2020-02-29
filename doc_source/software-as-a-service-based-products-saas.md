@@ -30,3 +30,12 @@ To review some example applications, see the following products on the AWS Marke
 ### SaaS Contract Application Examples<a name="saas-contracts-examples"></a>
 + [Informatica ETL for AWS SaaS Contract](https://aws.amazon.com/marketplace/pp/B06XXM7JJT)
 + [Cisco Stealthwatch Cloud \| Public Cloud Monitoring \- Contracts](https://aws.amazon.com/marketplace/pp/B076J22YD8)
+
+### SaaS Amazon API Gateway Products<a name="saas-api-gateway"></a>
+
+You can sell your Amazon API Gateway APIs on AWS Marketplace as SaaS products\. For more information on developing your API product, see the following:
+
+#### Related Resources<a name="saas-api-gateway-resources"></a>
++ [API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) 
++ [Sell Your API Gateway APIs through AWS Marketplace](https://docs.aws.amazon.com/apigateway/latest/developerguide/sell-api-as-saas-on-aws-marketplace.html) in the *API Gateway Developer Guide* 
++ [A Serverless Developer Portal for easily publishing and cataloging APIs](https://github.com/awslabs/aws-api-gateway-developer-portal) on *GitHub* 
