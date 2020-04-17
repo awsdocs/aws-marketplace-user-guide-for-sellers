@@ -1,4 +1,4 @@
-# Best Practices for Sample Input Data and Sample Notebooks<a name="best-practices-sample-ml"></a>
+# Best practices for sample input data and sample notebooks<a name="best-practices-sample-ml"></a>
 
 It is important that developers, as well as machine learning practitioners, find it easy to try your models and algorithms\. We strongly recommend that you provide the following information with your product\.
 
@@ -10,7 +10,7 @@ It is important that developers, as well as machine learning practitioners, find
 
 1. From the usage information section of your models, provide a code snippet that shows data preparation steps and usage of the Invoke\-endpoint \(CLI/Python\) API call to perform inference on the endpoint created from your model\. This is crucial for your customers to know exactly how the payload should be sent\.
 
-   **Example Model Usage Information**
+   **Example model usage information**
    + Supported content types: image/jpeg, image/png, image/bmp
    + Supported response types: application/json \(default\), image/jpeg
    + Example CLI command:
@@ -21,7 +21,7 @@ It is important that developers, as well as machine learning practitioners, find
 
    If your models require data pre\-processing, provide the necessary Python code snippet\.
 
-   **Example Data Pre\-Processing Information**
+   **Example data preprocessing information**
 
    ```
    import base64

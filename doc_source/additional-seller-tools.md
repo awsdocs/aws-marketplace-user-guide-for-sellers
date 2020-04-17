@@ -1,4 +1,4 @@
-# Seller Toolkit<a name="additional-seller-tools"></a>
+# Seller toolkit<a name="additional-seller-tools"></a>
 
  The [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) is your primary tool\. These other tools and reports can give you more insight into your customer base and help you better understand your sales\. 
 
@@ -8,7 +8,7 @@
 
 ## AWS Marketplace Enhanced Data Sharing Program<a name="enhanced-data-sharing-intro"></a>
 
- The AWS Marketplace enhanced data sharing program provides you with more buyer information, such as buyer email domain, AWS account ID, and location, on a daily and monthly basis\. This data can help you correctly map deals and opportunities to the appropriate sales representative by company, geography, and account ID\. 
+ The AWS Marketplace Enhanced Data Sharing Program provides you with more buyer information, such as buyer email domain, AWS account ID, and location, on a daily and monthly basis\. This data can help you correctly map deals and opportunities to the appropriate sales representative by company, geography, and account ID\. 
 
 ## AWS Marketplace Product Support Connection<a name="product-support-connection-intro"></a>
 
@@ -17,6 +17,6 @@
 **Note**  
 Currently, data products don't support this feature\.
 
-## AWS Marketplace Seller Reports<a name="seller-reports-intro"></a>
+## AWS Marketplace seller reports<a name="seller-reports-intro"></a>
 
 AWS Marketplace enables you to retrieve reports for your products\. The information available includes data on your products, customers, financials, usage, and any U\.S\. sales and use tax collected for use of your software\. Different reports provide data covering daily and monthly time periods\. All reports are generated as \.csv files that you can open with various tools or import into other systems\. 

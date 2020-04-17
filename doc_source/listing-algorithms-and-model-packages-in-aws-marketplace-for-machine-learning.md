@@ -1,15 +1,15 @@
-# Putting Your Algorithms and Model Packages on the AWS Marketplace<a name="listing-algorithms-and-model-packages-in-aws-marketplace-for-machine-learning"></a>
+# Putting your algorithms and model packages on the AWS Marketplace<a name="listing-algorithms-and-model-packages-in-aws-marketplace-for-machine-learning"></a>
 
 To distribute your products to AWS customers using AWS Marketplace, you must perform these steps\.
 
 **Topics**
-+ [Package Your Code Using Docker](#package-algorithms-Docker)
-+ [Create Your Algorithm in Amazon SageMaker](#create-algorithms-in-sage-maker)
-+ [Create Your Model Package in Amazon SageMaker](#create-model-package)
-+ [Add Your Algorithm or Model Package to AWS Marketplace](#listing-your-algorithm-or-model-package-in-aws-marketplace)
-+ [Monetize Your Algorithm or Model Package](#monetizing-your-algorithm-or-model-package)
++ [Package your code using Docker](#package-algorithms-Docker)
++ [Create your algorithm in Amazon SageMaker](#create-algorithms-in-sage-maker)
++ [Create your model package in Amazon SageMaker](#create-model-package)
++ [Add your algorithm or model package to AWS Marketplace](#listing-your-algorithm-or-model-package-in-aws-marketplace)
++ [Monetize your algorithm or model package](#monetizing-your-algorithm-or-model-package)
 
-## Package Your Code Using Docker<a name="package-algorithms-Docker"></a>
+## Package your code using Docker<a name="package-algorithms-Docker"></a>
 
 Amazon SageMaker is a fully managed machine learning platform that provides flexibility for training and deploying models\. Executable code – packaged using Docker containers – are run in secure and scalable infrastructure\. Depending on your use case, Amazon SageMaker can be used in one of the following ways:
 
@@ -23,7 +23,7 @@ Amazon SageMaker builds and maintains the containers for the first and second us
 
 Your Docker image size is governed by the [Amazon ECR service limits](https://docs.aws.amazon.com/AmazonECR/latest/userguide/service_limits.html) in the *Amazon Elastic Container Registry User Guide*\. The Docker image size affects the start\-up time during training, batch transform, and endpoint creation jobs\. For better performance, we recommend that you maintain the optimal Docker image size\.
 
-### Package Your Algorithm Code<a name="package-algorithms"></a>
+### Package your algorithm code<a name="package-algorithms"></a>
 
 Before packaging your image as a usable Amazon SageMaker product, we strongly recommend that you use Amazon SageMaker to test your custom training, batch transform, and real\-time inference images\. To package an algorithm or model on AWS Marketplace, you must provide a self\-contained Docker image\. By packaging an algorithm in a container, you can use almost any code in Amazon SageMaker, regardless of programming language, environment, framework, or dependencies\.
 
@@ -32,7 +32,7 @@ After packaging your code into a Docker image, create the algorithm by entering 
 **Important**  
 When a buyer subscribes to your containerized product, the Docker containers are run in an isolated environment without internet\. When you create your containers, do not rely on making outgoing calls over the internet as they will fail\. Calls to AWS services will also fail\.
 
-### Package Your Inference Code<a name="package-inference-code"></a>
+### Package your inference code<a name="package-inference-code"></a>
 
 A model package can include the following elements:
 + An inference container
@@ -40,7 +40,7 @@ A model package can include the following elements:
 
 You create an inference container the same way as the algorithm container\. Providing the location of the model artifacts in Amazon S3 is optional\. You can choose to bundle your model artifacts within the inference container or let Amazon SageMaker retrieve them from your model storage location in Amazon S3\.
 
-## Create Your Algorithm in Amazon SageMaker<a name="create-algorithms-in-sage-maker"></a>
+## Create your algorithm in Amazon SageMaker<a name="create-algorithms-in-sage-maker"></a>
 
 An Amazon SageMaker algorithm has a training image and an inference image\. You can use the same image to perform both training and inference, or you can choose to separate them\. Training and inference images must remain compatible with each other and the model produced by the training image must be usable by the inference image\. We recommend that you verify the validation outputs, specifically the batch transform output\.
 
@@ -60,7 +60,7 @@ After packaging your code in Docker images, upload the images into Amazon Elasti
 
 Metadata helps buyers understand how to use your product and enables Amazon SageMaker to validate buyer requests synchronously after they have subscribed to your product\.
 
-### Validate Your Algorithm<a name="validate-your-algorithm"></a>
+### Validate your algorithm<a name="validate-your-algorithm"></a>
 
 To ensure that buyers and sellers can be confident that products work in Amazon SageMaker, we require that you validate your algorithms before listing them on AWS Marketplace\. To validate your algorithms, use your validation profile and sample data to run the following validation tasks:
 
@@ -77,7 +77,7 @@ To see the status of the jobs in your account, in the Amazon SageMaker console, 
 **Note**  
 Scanning and validation can take up to a few hours\.
 
-## Create Your Model Package in Amazon SageMaker<a name="create-model-package"></a>
+## Create your model package in Amazon SageMaker<a name="create-model-package"></a>
 
 After you have packaged your code as an inference container, and have the optional model artifacts stored in Amazon S3, you are ready to create the model package in Amazon SageMaker\. To do this, use the following procedure:
 
@@ -91,7 +91,7 @@ After you have packaged your code as an inference container, and have the option
 
 To finish creating your model package, provide inference image and validation specifications, and your Docker images will be scanned for known vulnerabilities\.
 
-### Validate Your Model Package<a name="validate-model-package"></a>
+### Validate your model package<a name="validate-model-package"></a>
 
 Before listing model packages on AWS Marketplace, you must validate them\. This ensures that buyers and sellers can be confident that products work in Amazon SageMaker\. You can list products on AWS Marketplace only if validation succeeds\. 
 
@@ -113,12 +113,12 @@ To see the status of the jobs in your account, in the Amazon SageMaker console, 
 **Note**  
 Scanning and validation can take up to a few hours\.
 
-## Add Your Algorithm or Model Package to AWS Marketplace<a name="listing-your-algorithm-or-model-package-in-aws-marketplace"></a>
+## Add your algorithm or model package to AWS Marketplace<a name="listing-your-algorithm-or-model-package-in-aws-marketplace"></a>
 
 After creating and validating your algorithm or model package in Amazon SageMaker, you can put your product on the AWS Marketplace\. This process makes your products available in the AWS Marketplace and the Amazon SageMaker console\.
 
 **Note**  
-If you have not registered to sell on AWS Marketplace, review [Getting Started as a Seller](user-guide-for-sellers.md) and complete the registration process\. 
+If you have not registered to sell on AWS Marketplace, review [Getting started as a seller](user-guide-for-sellers.md) and complete the registration process\. 
 
 After you've registered, do one of the following to add your product to AWS Marketplace: 
 + From the Amazon SageMaker console, choose the product, choose **Actions**, and choose **Publish new AWS Marketplace listing**\. This carries over your product reference, the Amazon Resource Name \(ARN\), and directs you to the AMMP to create the listing\. 
@@ -129,23 +129,23 @@ When adding a product on AWS Marketplace, you'll provide the following:
 + Launch option 
 + Pricing and terms 
 
- **General Product Information** 
+ **General product information** 
 
 Enter the product description, promotional resources, support information, and region availability\. This information will appear on the AWS Marketplace product detail page\. It is searchable in AWS Marketplace\. 
 
-The resources for your product must include sample input data and sample notebooks that customers can use to get started with your model or algorithm\. For more information, see [Best Practices for Sample Input Data and Sample Notebooks](best-practices-sample-ml.md)\.
+The resources for your product must include sample input data and sample notebooks that customers can use to get started with your model or algorithm\. For more information, see [Best practices for sample input data and sample notebooks](best-practices-sample-ml.md)\.
 
- **Launch Option** 
+ **Launch option** 
 
 Define general usage information, a customer\-facing version number, and release notes\. Review the Amazon SageMaker metadata, such as Amazon SageMaker content types, MIME types, supported input methods, and hyperparameters\. 
 
- **Pricing and Terms** 
+ **Pricing and terms** 
 
 Define a EULA, pricing, the product tax code, and the refund policy\. When you provide a paid algorithm, you can enter a training price for the algorithm and real\-time and batch inference prices for the inference image packaged with the algorithm\. When you list a model package, you can define real\-time and batch inference prices for the package\. 
 
 For both algorithms and model packages, you can define prices for each supported instance type per hour\. You can enable a free\-trial and specify the number of days for its duration\.
 
- **Product Publishing** 
+ **Product publishing** 
 
 You publish products through the AWS Marketplace Management Portal\. The publishing process has a few steps, which allows you to review your product information one last time before it's available for customers\.
 
@@ -155,6 +155,6 @@ After testing has completed, you can choose **Sign off and publish** and select 
 
 Making your product public can take 30 to 60 minutes\. If you try to access the AWS Marketplace product detail page during the publishing process, you might get a 404 error\. This is expected while the information propagates through multiple systems\. 
 
-## Monetize Your Algorithm or Model Package<a name="monetizing-your-algorithm-or-model-package"></a>
+## Monetize your algorithm or model package<a name="monetizing-your-algorithm-or-model-package"></a>
 
 For algorithms and model packages, AWS Marketplace has an hourly pricing model per instance type\. Algorithms have two prices: training price and inference price\. Model packages have only an inference price\. Amazon SageMaker supports real\-time and batch inference modes, and you can set different prices for each mode\. Buyer usage is metered and billed in one\-second increments\. 

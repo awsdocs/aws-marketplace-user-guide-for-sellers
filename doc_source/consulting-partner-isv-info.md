@@ -1,4 +1,4 @@
-# ISV Setup<a name="consulting-partner-isv-info"></a>
+# ISV setup<a name="consulting-partner-isv-info"></a>
 
 An ISV can extend a one\-time discount price to a consulting partner for the purpose of a specific resale to a designated buyer\. This percentage gets added to the recurring discount to create the total discount off the product price, and becomes the price for a specific transaction\.
 

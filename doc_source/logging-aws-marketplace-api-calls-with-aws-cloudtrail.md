@@ -1,4 +1,4 @@
-# Logging AWS Marketplace API Calls with AWS CloudTrail<a name="logging-aws-marketplace-api-calls-with-aws-cloudtrail"></a>
+# Logging AWS Marketplace API calls with AWS CloudTrail<a name="logging-aws-marketplace-api-calls-with-aws-cloudtrail"></a>
 
  The AWS Marketplace SaaS subscription service enables you to create software as a service \(SaaS\) products that are billed based on usage in one of four categories: users, data, bandwidth, or hosts\. You send billing information to AWS Marketplace using the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html) API\. You must send billing information hourly to bill the customer\. Using CloudTrail, you can monitor activity to ensure that your billing information is being sent to AWS Marketplace\. 
 
@@ -6,7 +6,7 @@
 
  To learn more about CloudTrail, including how to conﬁgure and enable it, see the [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\. 
 
-## AWS Marketplace Information in CloudTrail<a name="aws-marketplace-information-in-cloudtrail"></a>
+## AWS Marketplace information in CloudTrail<a name="aws-marketplace-information-in-cloudtrail"></a>
 
  CloudTrail is enabled on your AWS account when you create the account\. When supported event activity occurs in AWS Marketplace, that activity is recorded in a CloudTrail event along with other AWS service events in **Event history**\. You can view, search, and download recent events in your account\. For more information, see [Viewing Events with CloudTrail Event History](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html)\. 
 
@@ -23,7 +23,7 @@
 
  For more information, see the [CloudTrail userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\. 
 
-## Example: AWS Marketplace Log File Entries<a name="example-aws-marketplace-log-file-entries"></a>
+## Example: AWS Marketplace log file entries<a name="example-aws-marketplace-log-file-entries"></a>
 
  A trail is a conﬁguration that enables delivery of events as log ﬁles to an Amazon S3 bucket that you specify\. CloudTrail log ﬁles contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log ﬁles aren't an ordered stack trace of the public API calls, so they don't appear in any speciﬁc order\. The following example shows a CloudTrail log entry that demonstrates the action\. 
 

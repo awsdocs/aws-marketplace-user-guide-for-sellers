@@ -1,4 +1,4 @@
-# Hourly Metering<a name="container-metering-registerusage"></a>
+# Hourly metering<a name="container-metering-registerusage"></a>
 
 If your container product uses per\-hour task/pod pricing instead of custom metered pricing dimensions, you don't have to define custom metering dimensions\.
 
@@ -6,7 +6,7 @@ If your container product uses per\-hour task/pod pricing instead of custom mete
 
 The AWS Marketplace Metering Control Plane continues to bill customers for running Amazon ECS tasks and Amazon EKS pods, regardless of the customers subscription state, removing the need for your software to perform entitlement checks after the initial successful launch of the task or pod\. 
 
-## Hourly Metering Prerequisites<a name="hourly-metering-prereqs"></a>
+## Hourly metering prerequisites<a name="hourly-metering-prereqs"></a>
 
 Before publishing the product, you must do the following:
 
@@ -20,14 +20,14 @@ Before publishing the product, you must do the following:
 
 1. Make a test call to the `RegisterUsage` action with a record for all of the pricing dimensions you define\.
 
-## Product Load Form for Hourly Metering<a name="hourly-metering-product-load-form"></a>
+## Product load form for hourly metering<a name="hourly-metering-product-load-form"></a>
 
 When filling out the product load form for hourly metering, fill out the following fields for your product, in addition to the other required and optional fields that define your product\.
 + `Hourly Price` This is the price for your product, per hour\.
-+ `Dimension Long Term Rate` – The software price per unit for this product when subscribers pay upfront for a long term contract\.
++ `Dimension Long Term Rate` – The software price per unit for this product when buyers pay upfront for a long term contract\.
 + `Long Term Duration (Days)` – The duration, in days, for the long term contract\.
 
-## Testing Integration and Preview Mode for RegisterUsage<a name="hourly-metering-preview-mode"></a>
+## Testing integration and preview mode for RegisterUsage<a name="hourly-metering-preview-mode"></a>
 
 Use the `RegisterUsage` action to test your integration before submitting your image to AWS Marketplace for publishing\.
 
@@ -38,7 +38,7 @@ If your product supports both Amazon ECS and Amazon EKS, you only need to launch
 
 You can't fully test the integration until your product is published with all the required metadata and pricing information\. If requested, the AWS Marketplace catalog operations team can verify receipt of your metering records in preview mode\.
 
-## Error Handling for RegisterUsage<a name="hourly-metering-entitlement-error-handling"></a>
+## Error handling for RegisterUsage<a name="hourly-metering-entitlement-error-handling"></a>
 
 If your container image integrates with the AWS Marketplace Metering service and receives an exception other than `ThrottlingException` at container startup, you should terminate the container to prevent unauthorized use\.
 

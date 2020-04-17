@@ -1,14 +1,14 @@
-# Marketing Your Product<a name="product-marketing"></a>
+# Marketing your product<a name="product-marketing"></a>
 
- You can contribute to the success of your product by driving awareness of AWS Marketplace and by driving traffic directly to your product pages on AWS Marketplace\. The following provides information and support to help you market the product or products that you have listed on AWS Marketplace\. For more information, see [AWS Marketplace Go\-to\-Market Program Guide](https://s3.amazonaws.com/awsmp-loadforms/AWS_MP_GTM_ProgramGuide.pdf) and [AWS Marketplace Go\-to\-Market Best Practices Guide](https://s3.amazonaws.com/awsmp-loadforms/GTM_Best_Practice_Guide.pdf)\. 
+ You can contribute to the success of your product by driving awareness of AWS Marketplace and by driving traffic directly to your product pages on AWS Marketplace\. The following provides information and support to help you market the product or products that you have listed on AWS Marketplace\. For more information, see [AWS Marketplace Go\-to\-Market Program Guide](https://s3.amazonaws.com/awsmp-loadforms/AWS_MP_GTM_ProgramGuide.pdf)\.
 
-## Announcing Your Product's Availability<a name="AnnouncingYourProductsAvailability"></a>
+## Announcing your product's availability<a name="AnnouncingYourProductsAvailability"></a>
 
  We encourage you to broadly announce the availability of your product on AWS Marketplace\. You can do this via press releases, tweets, blogs, or any other preferred media channels\. We have provided sample text that you can to include, along with guidelines and instructions for using our trademarks and issuing press releases\. 
 
  We will review your blogs, tweets, and other non\-press release announcements before going public to ensure consistency with AWS messaging and brand guidelines or voice\. Submit your request for review to your AWS account manager\. The review takes up to 10 business days to complete\. Notify us when you post any tweets, blogs, or press releases, and we will do our best to repost to increase their visibility\. 
 
-## AWS Marketplace Messaging<a name="AWSMarketplaceMessaging"></a>
+## AWS Marketplace messaging<a name="AWSMarketplaceMessaging"></a>
 
  In your customer communications you might want to describe the purpose, goals, and benefits of purchasing your product using AWS Marketplace\. Use the following messaging when referring to AWS Marketplace\. 
 
@@ -18,15 +18,15 @@
 
  **Why would a customer shop on AWS Marketplace?** 
 
- Finding and deploying software can be challenging\. AWS Marketplace features a wide selection of commercial and free IT and business software, including software infrastructure such as databases and application servers, developer tools, and business applications, from popular sellers\. AWS Marketplace enables customers to compare options, read reviews, and quickly find the software they want\. Then they can deploy it to their own Amazon Elastic Compute Cloud instance using 1\-Click or using the AWS Marketplace Management Portal\. 
+ Finding and deploying software can be challenging\. AWS Marketplace features a wide selection of commercial and free IT and business software, including software infrastructure such as databases and application servers, IoT solutions, developer tools, and business applications, from popular sellers\. AWS Marketplace enables customers to compare options, read reviews, and quickly find the software they want\. Then they can deploy it to their own Amazon Elastic Compute Cloud instance using 1\-Click or using the AWS Marketplace Management Portal\. 
 
  Software prices are clearly posted on the website and customers can purchase most software immediately, with payment instruments already on file with Amazon Web Services\. Software charges appear on the same monthly bill as AWS infrastructure charges\. 
 
- **Why would software or SaaS providers sell on AWS Marketplace?** 
+ **Why would software or SaaS sellers sell on AWS Marketplace?** 
 
- With AWS Marketplace, software and software as a service \(SaaS\) providers with offerings that run on AWS can benefit from increased customer awareness, simplified deployment, and automated billing\. 
+ With AWS Marketplace, software and software as a service \(SaaS\) sellers with offerings that run on AWS can benefit from increased customer awareness, simplified deployment, and automated billing\. 
 
- AWS Marketplace helps software and SaaS providers that sell software and services that run on AWS find new customers by exposing their products to some of the hundreds of thousands of AWS customers, ranging from individual software developers to large enterprises\. 
+ AWS Marketplace helps software and SaaS sellers of software and services that run on AWS find new customers by exposing their products to some of the hundreds of thousands of AWS customers, ranging from individual software developers to large enterprises\. 
 
  Selling on AWS Marketplace enables independent software vendors \(ISVs\) to add hourly billing for their software without undertaking costly code changes\. They simply upload an Amazon Machine Image \(AMI\) to AWS and provide the hourly cost\. Billing is managed by AWS Marketplace, relieving sellers of the responsibility of metering usage, managing customer accounts, and processing payments, leaving software developers more time to focus on building great software\. 
 
@@ -36,7 +36,7 @@
 
  AWS Marketplace provides the ability for customers to submit reviews on your product\. We also provide the ability for syndicated reviewers such as G2, a business\-to\-business marketplace that curates independent product reviews, to integrate their syndicated reviews on AWS Marketplace\.
 
-AWS Marketplace customer reviews must meet the review guidelines listed in the user guide for subscribers\. Review submissions are not released on AWS Marketplace until after the submission is reviewed to verify it meets our review criteria\. For more information on review guidelines, see [Product Reviews](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-product-reviews.html)\. Syndicated review organizations use their own unique processes to validate their reviews and aren't reviewed by AWS Marketplace before release\. If you think that a syndicated review on your product doesn't meet the product review guidelines, or if you think a review on your product contains objectionable content, [contact the seller operations team](https://aws.amazon.com/marketplace/management/contact-us/)\.
+AWS Marketplace customer reviews must meet the review guidelines listed in the user guide for buyers\. Review submissions are not released on AWS Marketplace until after the submission is reviewed to verify it meets our review criteria\. For more information on review guidelines, see [Product Reviews](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-product-reviews.html)\. Syndicated review organizations use their own unique processes to validate their reviews and aren't reviewed by AWS Marketplace before release\. If you think that a syndicated review on your product doesn't meet the product review guidelines, or if you think a review on your product contains objectionable content, [contact the seller operations team](https://aws.amazon.com/marketplace/management/contact-us/)\.
 
 The reviewer can also provide a star rating for your product based on a five\-star rating system\. The ratings are averaged to give the overall star rating for your product\. Syndicated reviews can also include a star rating, but star ratings from syndicated reviews are not averaged in with the AWS customer star ratings\.
 
@@ -51,11 +51,11 @@ The following are additional key points about the product review feature:
 
  Your company likely has a web presence where it describes and promotes your product\. We encourage you to highlight that the product is available to run on AWS and can be purchased using AWS Marketplace\. To simplify the process for your customers to discover and deploy your software, we have provided instructions for linking your customers to your product\. 
 
-## Using the AWS Marketplace Logo<a name="using-the-aws-marketplace-logo"></a>
+## Using the AWS Marketplace logo<a name="using-the-aws-marketplace-logo"></a>
 
  The AWS Marketplace logo is a way to easily tell your customers that your software runs on AWS and is available in AWS Marketplace\. If you would like to promote your software in AWS Marketplace, [download the archived folder \(\.zip file\)](https://s3.amazonaws.com/awsmp-logos/AWS_Marketplace-Logos-AllFormats-171006.zip), which contains multiple color treatments and file formats\. 
 
-## Linking Directly to Your Product on AWS Marketplace<a name="linking-directly-to-your-product-on-aws-marketplace"></a>
+## Linking directly to your product on AWS Marketplace<a name="linking-directly-to-your-product-on-aws-marketplace"></a>
 
  You can send your customers directly to the product’s information page on AWS Marketplace by including deep links on your website or collateral\. Use the following example link structure for browser\-based linking\.
 
@@ -76,7 +76,7 @@ https://aws.amazon.com/marketplace/pp/B00635Y2IW
 **Note**  
  Test the links before using them to make sure that they direct your customers to the correct page\. 
 
-## Press Releases<a name="press-releases"></a>
+## Press releases<a name="press-releases"></a>
 
  We encourage you to announce your product’s availability on AWS Marketplace through any channel you prefer\. However, all press releases that reference AWS Marketplace must be reviewed and signed off on by Amazon before any publication or announcement is made\. While we encourage you to make announcements, we can't support joint press releases with AWS Marketplace sellers\. We will, on a case\-by\-case basis, support press releases with a quote from AWS\. The quote must meet several conditions, including but not limited to: it announces a new product or service listed on AWS Marketplace or it includes a customer reference that uses AWS Marketplace\. 
 
@@ -96,7 +96,7 @@ https://aws.amazon.com/marketplace/pp/B00635Y2IW
 
  Have your press release reviewed by submitting it in text format to your account manager\. Additionally, review the [Amazon Web Services trademark guidelines](https://aws.amazon.com/trademark-guidelines/) before using any AWS trademarks\. Guidelines specific to the AWS Marketplace trademark are in the following section\. 
 
-## AWS Marketplace Trademark Usage Guidelines<a name="aws-marketplace-trademark-usage-guidelines"></a>
+## AWS Marketplace trademark usage guidelines<a name="aws-marketplace-trademark-usage-guidelines"></a>
 
  These Guidelines apply to your use of the AWS Marketplace logo and trademark, \(each the “Trademark” and collectively the “Trademarks”\) in materials that have been approved in advance by Amazon\.com, Inc\. and/or its affiliates \(“Amazon”\)\. Strict compliance with these Guidelines is required at all times, and any use of a Trademark in violation of these Guidelines will automatically terminate any license related to your use of the Trademarks\. 
 

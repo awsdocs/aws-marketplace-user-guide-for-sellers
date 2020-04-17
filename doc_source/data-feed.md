@@ -1,6 +1,6 @@
-# Data Feed<a name="data-feed"></a>
+# Data feed<a name="data-feed"></a>
 
- The data feed collects and delivers a CSV\-formatted file each day to an encrypted S3 bucket that you provide\. The data feed includes detailed information about your customer and a unique identifier for each entry\. The name of the unique identifier is address\_id and is the same as the Payer Address ID column in the [Sales Compensation Report](sales-compensation-report.md)\. You use that field to map the details in the reports with the detailed customer information provided in the data feed\.
+ The data feed collects and delivers a CSV\-formatted file each day to an encrypted S3 bucket that you provide\. The data feed includes detailed information about your customer and a unique identifier for each entry\. The name of the unique identifier is address\_id and is the same as the Payer Address ID column in the [Sales compensation report](sales-compensation-report.md)\. You use that field to map the details in the reports with the detailed customer information provided in the data feed\.
 
 **Important**  
  Use of the information from the data feed is subject to the terms and conditions of participating in the [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md)\.
@@ -12,18 +12,18 @@
 
 You can also provide the ARN for an Amazon SNS topic to receive a notification when we deliver a new file to your S3 bucket\. 
 
-## Configuring Your Environment<a name="data-feed-configuring"></a>
+## Configuring your environment<a name="data-feed-configuring"></a>
 
- To configure your environment, we recommend that you use this [AWS CloudFormation template](https://aws-marketplace-reports-resources.s3.amazonaws.com/DataFeedsResources.yaml)\. The template sets up the AWS resources required to receive the data feed\. Specifically, the template helps to set up an encrypted S3 bucket, AWS KMS key, and an optional SNS topic under your AWS account ID\. You add the ARNs for these services to the data feed configuration page for the data feed feature\. To configure the data feed feature, from [Setup customer data storage](https://aws.amazon.com/marketplace/management/reports/data-feed-configuration), enter the resource ARNs and choose **Submit**\. If you choose to use existing resources, you must create an IAM role that grants access to AWS Marketplace services\.
+ To configure your environment, we recommend that you use this [AWS CloudFormation template](https://s3.amazonaws.com/aws-marketplace-reports-resources/DataFeedsResources.yaml)\. The template sets up the AWS resources required to receive the data feed\. Specifically, the template helps to set up an encrypted S3 bucket, AWS KMS key, and an optional SNS topic under your AWS account ID\. You add the ARNs for these services to the data feed configuration page for the data feed feature\. To configure the data feed feature, from [Setup customer data storage](https://aws.amazon.com/marketplace/management/reports/data-feed-configuration), enter the resource ARNs and choose **Submit**\. If you choose to use existing resources, you must create an IAM role that grants access to AWS Marketplace services\.
 
-## Data Fields<a name="data-feed-data-fields"></a>
+## Data fields<a name="data-feed-data-fields"></a>
 
  There are several data feed columns\. The address\_id column lists the same information as the Payer Address ID column in the sales compensation report\. The data in this field is key to finding the address of your customer at the time of the transaction\. 
 
 The data feed is delivered daily and contains all of the information that is collected for your customers\. Each time a new transaction occurs, the customer address for the transaction is scanned, and if it's not in your data feed, a new entry is added to your data feed file\. The following table explains the names and descriptions of the data feed's columns\. 
 
 
-|  Column Name  |  Description  | 
+|  Column name  |  Description  | 
 | --- | --- | 
 |  address\_id  |  The unique key of the address\.  | 
 |  aws\_account\_id  |  The account number of this address\.  | 
@@ -44,7 +44,7 @@ The data feed is delivered daily and contains all of the information that is col
 
  Address information is immutable, so the valid\_to and delete\_date columns are always blank\. 
 
-## Sample Data<a name="data-feed-sample-data"></a>
+## Sample data<a name="data-feed-sample-data"></a>
 
  The address data feed is a \.csv file that follows [4180 standards](https://tools.ietf.org/html/rfc4180) and is delivered to the encrypted S3 bucket that you provide the ARN for\. The file has the following characteristics:
 +  It's formatted as a UTF\-8 file that isn't BOM encoded\. 
@@ -78,6 +78,6 @@ The data feed is delivered daily and contains all of the information that is col
 
  The last five columns document the history of the data\. Addresses in the data feed are immutable, so you don't need to process the information in those fields\. They're included as a common history schema and accompany all future data feeds\. 
 
-## Amazon SNS Topic Notifications<a name="data-feed-sns-notification"></a>
+## Amazon SNS topic notifications<a name="data-feed-sns-notification"></a>
 
  If you provided the ARN for an Amazon SNS topic, you receive a notification that the file transfer to your S3 bucket was successful, skipped, or failed\. The details of the notification provide information you can use to troubleshoot a failure\. 

@@ -1,11 +1,11 @@
-# Policies and Permissions AWS Marketplace Providers<a name="detailed-management-portal-permissions"></a>
+# Policies and permissions for AWS Marketplace sellers<a name="detailed-management-portal-permissions"></a>
 
  AWS Marketplace has three managed policies you can use with AWS Marketplace Management Portal, or a number of permissions that you can use to create your own policy\. 
 
 **Note**  
 To learn about policies and permissions on AWS Data Exchange for data products, see [Identity and Access Management in AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/latest/userguide/auth-access.html) in the *AWS Data Exchange User Guide*\.
 
-## Policies for AWS Marketplace Providers<a name="seller-managed-policies"></a>
+## Policies for AWS Marketplace sellers<a name="seller-managed-policies"></a>
 
 You can use the following managed policies to provide IAM users controlled access to AWS Marketplace Management Portal\.
 
@@ -19,9 +19,9 @@ Allows a user read\-only access to the [Products](https://aws.amazon.com/marketp
 Allows a user full access to all of the pages in the AWS Marketplace Management Portal and other AWS services, such as AMI management\.
 
 **Important**  
-There are managed policies for AWS Marketplace subscribers to manage the subscriptions they purchase\. The managed policies you use with AWS Marketplace Management Portal start with `AWSMarketplaceSeller`\. If you search for policies in IAM, make sure to search for policies that start with `AWSMarketplaceSeller`\. 
+There are managed policies for AWS Marketplace buyers to manage the subscriptions they purchase\. The managed policies you use with AWS Marketplace Management Portal start with `AWSMarketplaceSeller`\. If you search for policies in IAM, make sure to search for policies that start with `AWSMarketplaceSeller`\. 
 
-## Permissions for AWS Marketplace Providers<a name="seller-ammp-permissions"></a>
+## Permissions for AWS Marketplace sellers<a name="seller-ammp-permissions"></a>
 
 You can use the following permissions in IAM policies for the AWS Marketplace Management Portal\.
 

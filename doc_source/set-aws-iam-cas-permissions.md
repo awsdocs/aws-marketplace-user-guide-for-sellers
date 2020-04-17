@@ -1,4 +1,4 @@
-# AWS Marketplace Commerce Analytics Service Account Permissions<a name="set-aws-iam-cas-permissions"></a>
+# AWS Marketplace Commerce Analytics Service account permissions<a name="set-aws-iam-cas-permissions"></a>
 
 You can use the following IAM permission policy to allow an IAM user to access the AWS Marketplace Commerce Analytics Service\.
 

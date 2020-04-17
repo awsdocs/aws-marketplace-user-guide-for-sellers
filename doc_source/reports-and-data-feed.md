@@ -1,4 +1,4 @@
-# Seller Reports and Data Feed<a name="reports-and-data-feed"></a>
+# Seller reports and data feed<a name="reports-and-data-feed"></a>
 
  AWS Marketplace gives you three tools to gather information about your product sales, customers, financials, and customer usage\.
 +  A group of reports that are automatically created and available through the AWS Marketplace Management Portal 
@@ -18,7 +18,7 @@ Here are some key points about reports:
 
  AWS Marketplace provides as much data as possible while adhering to the Amazon standards and tenets for protecting customer data\. To protect customer privacy and trust, in most cases we don't share personally identifiable information \(PII\)\. 
 
-## AWS Marketplace Enhanced Data Sharing<a name="reporting-enhanced-data-sharing"></a>
+## AWS Marketplace Enhanced Data Sharing program<a name="reporting-enhanced-data-sharing"></a>
 
  If you participate in the [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md), we share certain entity\-level information about your customers\. This information enables you to match specific sales to customers so that you can compensate your staff\. You can also configure your account in AWS Marketplace Management Portal to receive the data feed\. The data feed provides additional details about your customers\. 
 
@@ -28,9 +28,9 @@ Here are some key points about reports:
 +  The customer's location 
 
 **Important**  
-By participating in the enhanced data sharing program, you agree to use enhanced data sharing program data according to the terms outlined in[Use of the Data](enhanced-data-sharing-program.md#use-of-the-data)\. 
+By participating in the enhanced data sharing program, you agree to use enhanced data sharing program data according to the terms outlined in[Use of the data](enhanced-data-sharing-program.md#use-of-the-data)\. 
 
-## List of Reports<a name="report-list"></a>
+## List of reports<a name="report-list"></a>
 
  The following is a list of reports and their purpose\. We recommend that you download and view the [sample reports](https://s3.amazonaws.com/awsmp-loadforms/AWS+Marketplace+-+Seller+Reporting+Examples.zip) to become more familiar with each report\. 
 
@@ -40,14 +40,14 @@ Daily customer subscriber report
 Daily business report  
  Lists the daily usage by AWS customers and projects the estimated revenue that is expected from customer usage\. 
 
+Disbursement report  
+Lists the money that was collected and disbursed to you for usage of your software product since your previous disbursement\.
+
 Monthly billed revenue report  
  Lists the revenue that has been billed to customers for usage of your software product, based on hourly usage\. The report also lists any annual and monthly fees that are billed to customers\. 
 
 Sales compensation report  
  Lists monthly billed revenue with additional customer information that isn't in the standard monthly billed revenue report\. This report is available only if you're enrolled in the [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md)\.
-
-Monthly disbursement report  
-Lists the money that was collected and disbursed to you for usage of your software product since your previous disbursement\.
 
 US sales and use tax report  
  Reports on US sales and use tax that are calculated for your products\. It's part of the AWS Marketplace tax calculation service\.

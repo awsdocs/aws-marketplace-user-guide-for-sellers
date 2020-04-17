@@ -9,11 +9,11 @@
 **Note**  
 Currently, data products don't support this feature\.
 
-## Technical Implementation Guide<a name="technical-implementation-guide"></a>
+## Technical implementation guide<a name="technical-implementation-guide"></a>
 
 This section covers API specification details and how to onboard with the product support connection feature\. The PSC `start-support-data-export` API is part of the AWS Marketplace Commerce Analytics Service \(CAS\)\. To integrate with the API for PSC, you must first enroll in CAS\. If you are already enrolled in CAS, use the same IAM role that you created when you onboarded\.
 
-### IAM Policy for PSC<a name="allow-iam-users-permission-for-psc"></a>
+### IAM policy for PSC<a name="allow-iam-users-permission-for-psc"></a>
 
 To allow your IAM users access the AWS Marketplace product support connection feature, you must attach the following inline policy to your users\.
 
@@ -64,15 +64,15 @@ To ensure the security of the customer contact data available through the Produc
 }
 ```
 
-## API Request Parameters and Responses<a name="api-request-parameters-and-responses"></a>
+## API request parameters and responses<a name="api-request-parameters-and-responses"></a>
 
-### StartSupportDataExport Method<a name="startsupportdataexport-method"></a>
+### StartSupportDataExport method<a name="startsupportdataexport-method"></a>
 
  The StartSupportDataExport method allows you to request contact details that customers have submitted for your PSC\-enabled products\. Data will be exported from the start date specified in the request up to 15 minutes prior to the time of the request\. A successful request will result in the dataset being published to the Amazon S3 bucket specified\. 
 
  At this time, you can query the API to request the test\_customer\_support\_contacts\_data data set\. This will export a static test data set containing data that does not correspond to any real customer data\. You should use the test data for testing and integration\. The customer\_support\_contacts\_data option, which will return the real customer contact data for your PSC\-enabled products, will not be available until after the General Availability of this feature later in 2016\. 
 
-### Request Parameters<a name="request-parameters"></a>
+### Request parameters<a name="request-parameters"></a>
 
 
 |  Input  |  Description  | 
@@ -147,7 +147,7 @@ To ensure the security of the customer contact data available through the Produc
 }
 ```
 
-## Output Data Format<a name="output-data-format"></a>
+## Output data format<a name="output-data-format"></a>
 
  The output data contains customer contact records, product code, product ID, subscription start date, and the AWS account ID of the customer\. A summary of the fields is shown below\. Each output file contains a comma\-separated header, followed by the records containing customer data and subscription information\. Each record contains a “Create”, “Update”, or “Delete” operation type to indicate whether the record is newly created, modified, or deleted since the “From Date” indicated in the API request\. The overall file format adheres to the RFC4180 standard\. 
 
@@ -193,14 +193,9 @@ To ensure the security of the customer contact data available through the Produc
 
  \.\.\. 
 
-## A Note about the “Delete” Operation Type<a name="a-note-about-the-delete-operation-type"></a>
-
- When a customer deletes their contact information from the PSC program, you will see a record in the output csv file that indicates an operation type “DELETE\.” After a customer deletes their data, the API will no longer transmit contact information such as name, telephone number, email, and so forth\. Each delete record consists of the data required to uniquely identify the record to be deleted\. Delete records contain product ID, product code, operation time, customer GUID, subscription GUID, subscription start date, AWS Customer ID, operation time, and operation type\. 
-
- If a customer opts out of Product Support Connection by deleting their contact information, you should also remove the contact information from your records\. Since the customer contact data will not be included in the DELETE record, you will need to look up the record in your system by using the unique Customer GUID\. 
-
+**Note**  
+When a customer deletes their contact information from the PSC program, you will see a record in the output csv file that indicates an operation type “DELETE\.” After a customer deletes their data, the API will no longer transmit contact information such as name, telephone number, email, and so forth\. Each delete record consists of the data required to uniquely identify the record to be deleted\. Delete records contain product ID, product code, operation time, customer GUID, subscription GUID, subscription start date, AWS Customer ID, operation time, and operation type\.   
+ If a customer opts out of Product Support Connection by deleting their contact information, you should also remove the contact information from your records\. Since the customer contact data will not be included in the DELETE record, you will need to look up the record in your system by using the unique Customer GUID\.   
  A delete record will also be sent if a customer terminates a subscription\. 
-
-## More Questions?<a name="more-questions"></a>
 
  If you have questions or would like more information about participating in AWS Marketplace Product Support Connection, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 

@@ -1,11 +1,12 @@
-# Getting Started as a Seller<a name="user-guide-for-sellers"></a>
+# Getting started as a seller<a name="user-guide-for-sellers"></a>
 
  If you want to sell your software on AWS Marketplace, review the requirements and then follow the steps to register as a seller\. There are different registration requirements based on where you reside and what type of products you're selling\. To register as a seller on AWS Marketplace, you can use an existing AWS account or create a new account\. All AWS Marketplace interactions are tied to the account that you choose\. 
 
-**Note**  
+**Notes**  
 Registering as an AWS Marketplace seller is a prerequisite to be an AWS Data Exchange data provider\. For more information on these requirements, see [Providing Data Products on AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/latest/userguide/providing-data-sets.html) in the *AWS Data Exchange User Guide*\.
+For information on the permissions that AWS Marketplace sellers need, see [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md)\.
 
-## Seller Requirements for Publishing Free Software Products on AWS Marketplace<a name="seller-requirements-for-publishing-free-products"></a>
+## Seller requirements for publishing free software products<a name="seller-requirements-for-publishing-free-products"></a>
 
  Whether you charge for your product or not, when you offer it on AWS Marketplace, you're selling that product\. The cost to the customer is $0\.00, but you and the customer agree to a mutual contract for use of the product\. If you offer only free products, you don't have to provide banking information to AWS Marketplace\. To create and offer free products on AWS Marketplace, you must: 
 +  Sell publicly available, full\-feature production\-ready software 
@@ -14,12 +15,12 @@ Registering as an AWS Marketplace seller is a prerequisite to be an AWS Data Exc
 +  Follow best practices and guidelines when marketing your product on AWS Marketplace 
 +  Be an AWS customer in good standing and meet the requirements in the terms and conditions for AWS Marketplace sellers 
 
-## Additional Seller Requirements<a name="additional-seller-requirements-for-paid-products"></a>
+## Additional seller requirements for paid products<a name="additional-seller-requirements-for-paid-products"></a>
 
 If you charge for your products, offer bring\-your\-own\-license model \(BYOL\) products, or want to register as an AWS Data Exchange data provider, you must also meet the following requirements and provide this additional information:
-+ You must be either \(i\) a permanent resident or citizen of the United States of America \(US\), United Kingdom \(UK\), or a member state of the European Union \(EU\) or \(ii\) a business entity organized or incorporated in the US, UK, or EU\.
++ You must be either \(i\) a permanent resident or citizen of the United States of America \(US\), United Kingdom \(UK\), a member state of the European Union \(EU\), Australia \(AU\), or New Zealand \(NZ\) or \(ii\) a business entity organized or incorporated in one of those areas\.
 +  You must provide tax and bank account information\. For US\-based entities, a W\-9 form and a banking account from a US\-based bank are required\. 
-+ United Kingdom or European Union state members are required to provide a W\-8 form, value added tax \(VAT\) number, and US bank account\. If you don't have a US bank account, you can register for a virtual US bank account from [Hyperwallet](https://wssellers.hyperwallet.com/)\. 
++ United Kingdom, European Union state members, Australia, and New Zealand sellers are required to provide a \(i\) W\-8 form, value added tax \(VAT\) or goods and services tax \(GST\) registration number, and \(ii\) US bank information\. If you don't have a US bank account, you can register for a virtual US bank account from [Hyperwallet](https://wssellers.hyperwallet.com/)\. 
 + To provide data products, you must also request on\-boarding through the [Create case](https://console.aws.amazon.com/support/cases?#/create?issueType=customer-service) wizard for AWS Support\.
 
  To sell into the AWS GovCloud \(US\) Region, sellers must have an [AWS GovCloud \(US\) account](https://aws.amazon.com/govcloud-us/getting-started/)\. For details on ITAR requirements, see the *[AWS GovCloud \(US\) User Guide](https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/getting-started-sign-up.html)*\. 

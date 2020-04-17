@@ -1,4 +1,4 @@
-# Search Engine Optimization<a name="search-engine-optimization"></a>
+# Search engine optimization<a name="search-engine-optimization"></a>
 
 The AWS Marketplace website ranks the results of search queries using search\-optimization techniques similar to those used across the industry\. By understanding how AWS Marketplace ranks and returns search results, you can create product details optimized for the AWS Marketplace search engine\. We recommend taking this guidance into consideration when you create your product detail pages\.
 
@@ -13,18 +13,18 @@ During the product creation process, you can submit up to three keywords \(singl
 **Note**  
 Keywords aren't the same as software categories\. Keywords are more specific terms that are related to your product\.
 
-## Software Categories<a name="software-categories"></a>
+## Software categories<a name="software-categories"></a>
 
 When you list your product, you can choose up to three software categories and corresponding subcategories for your product\. This helps customers discover your product as they browse or search the products on AWS Marketplace\. Choose only categories that are relevant to your product\. In most cases, only one category applies\. Both the product load form and the **Products** pages contain a complete list of categories\.
 
 **Note**  
 Categories aren't the same as keywords\. The available categories and subcategories are predefined for AWS Marketplace\. You decide which of them apply to your product by choosing them from a list\. Keywords aren't predefined, but are created during the process\.
 
-## Highlights Section<a name="highlights-section"></a>
+## Highlights section<a name="highlights-section"></a>
 
 The product details page displays up to three product highlights as bullet points\. Customers can search for products by highlights, so include highlights when you create a product\. A highlight should describe the product's primary selling points in brief and informative language\. For example: "Projecting costs: With AnyCompany's Smart Solution, you pay only for what you use\. You're charged for each hour or partial hour that Smart Solution is running\."
 
-## Short Description<a name="short-description"></a>
+## Short description<a name="short-description"></a>
 
 The product description lists the product's features, benefits, and usage instructions, along with other relevant and specific product information\. Keep the following guidelines in mind as you create the product description:
 + Avoid unnecessary capitalization and punctuation marks

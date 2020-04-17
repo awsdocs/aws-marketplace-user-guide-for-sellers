@@ -1,4 +1,4 @@
-# Creating Your SaaS Product<a name="listing-your-saas-product"></a>
+# Creating your SaaS product<a name="listing-your-saas-product"></a>
 
 To create a new SaaS product, log in to the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) and choose **Products** and then choose **SaaS** from the dropdown menu\. On the **SaaS products** page, choose **SaaS Subscriptions** or **SaaS Contracts** and provide the following information:
 + Your business name, product title, product description, product logo, EULA, highlights, product category, search keywords, resources, support, refund policy\.

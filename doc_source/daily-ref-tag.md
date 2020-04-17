@@ -1,19 +1,19 @@
-# Daily Ref Tag<a name="daily-ref-tag"></a>
+# Daily ref tag<a name="daily-ref-tag"></a>
 
  This report lists data from the [Marketing tab](https://aws.amazon.com/marketplace/management/marketing/) of the AWS Marketplace Management Portal and provides insight into clicks and conversions for ref tag links that customers use to get to your AWS Marketplace product\. This reports isn't automatically emailed to you, and you can't use the AWS Commerce Analytics Service to pull the data in the report\.
 
 For more information about how to use this data, watch [Getting Started with AWS Marketplace Marketing Analytics](https://www.youtube.com/watch?v=hOxkyU73hJ0)\.
 
-## Publication Schedule<a name="publication-schedule-6"></a>
+## Publication schedule<a name="publication-schedule-6"></a>
 
  This report is published daily at 00:00 UTC and covers from 00:00 UTC through 23:59 UTC of the previous day\. 
 
-## Clicks and Conversions<a name="section-1-clicks-and-conversions"></a>
+## Clicks and conversions<a name="section-1-clicks-and-conversions"></a>
 
 The following table explains the ref tags that are used with your products and the number of clicks, conversions, estimated usage, and estimated revenue that are associated with them\. 
 
 
-|  Column Name |  Description  | 
+|  Column name |  Description  | 
 | --- | --- | 
 |  DATETIME\_DAY  |  The day that we received the ref tag link\.  | 
 |  TITLE  |  The name of the product\.  | 

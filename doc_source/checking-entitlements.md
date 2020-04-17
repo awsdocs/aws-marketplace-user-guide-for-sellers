@@ -1,4 +1,4 @@
-# Checking Entitlements<a name="checking-entitlements"></a>
+# Checking entitlements<a name="checking-entitlements"></a>
 
  If your product is a SaaS contracts product, your product calls the AWS Marketplace Entitlement Service to retrieve the customer’s entitlement\. Your product should verify subsequent usage on that account against the AWS Marketplace Entitlement Service\. For example, if the customer provisions 10 users on the account, your product should check the AWS Marketplace Entitlement Service for entitlement to that capacity\. 
 
@@ -21,14 +21,14 @@ The following is an example of a `GetEntitlements` request\.
 
  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/saas-getentitlements-response.png) 
 
-## Retrieving Entitlement on User Actions<a name="retrieving-entitlement-on-user-actions"></a>
+## Retrieving entitlement on user actions<a name="retrieving-entitlement-on-user-actions"></a>
 
  The following examples can help you better understand the process for retrieving entitlement on user actions\. 
 
-### Example: User\-based Product<a name="example-user-based-application"></a>
+### Example: User\-based product<a name="example-user-based-application"></a>
 
  You offer a product that allows a number of accounts to exist for a given customer\. The customer can visit a dashboard to provision new users \(for example, to assign credentials\)\. When your website displays this dashboard, your website calls `GetEntitlements` for the customer identifier to show the customer how much capacity is available\. When the customer provisions a new user, your product calls `GetEntitlements` to verify that the capacity exists\. If it does not, you can call the AWS Marketplace Metering Service to bill for additional users\. 
 
-### Example: Data Storage Product<a name="example-data-storage-application"></a>
+### Example: Data storage product<a name="example-data-storage-application"></a>
 
  You offer a product that enables customers to store a certain amount of data in encrypted or unencrypted form\. The customer can view a dashboard that displays the amount of data existing and allocated in your product\. Your dashboard retrieves the allocation amount through `GetEntitlements`\. 

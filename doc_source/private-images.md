@@ -1,14 +1,16 @@
-# Private Images<a name="private-images"></a>
+# Private images<a name="private-images"></a>
 
- AWS Marketplace Private Image Build is now in public beta and enables AWS customers to purchase your installable software products through AWS Marketplace, and then install those products on a gold image or AMI they choose from the images available to their AWS account\. For the purposes of this document, a *gold image* is a customer\-provided server image that includes a base operating system with modifications applied to help ensure the software adheres to the customer’s IT standards\. Gold images allow customers to better meet their internal security, compliance, and management requirements\. 
+You can use private image builds to let buyers purchase your installable software products through AWS Marketplace, and then install those products on a gold image or AMI they choose from the images available to their AWS account\. A *gold image* is a buyer\-provided server image that includes a base operating system with modifications applied to help ensure the software adheres to the buyer’s IT standards\. Gold images allow buyers to better meet their internal security, compliance, and management requirements\. 
 
- With Private Image Build, you use the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/) \(AMMP\) to upload your software binaries and/or scripts and create an installable package group for each OS your software will run on\. AWS Marketplace does a test build by installing the package group on a base operating system \(OS\) you specify and scans the resulting image for certain known vulnerabilities\. Once the image build and scan has completed successfully, you can use the product load form to submit the package group and required metadata as a new private image fulfillment option to awsmp\-private\-image@amazon\.com\. 
+You use the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/) \(AMMP\) to upload your software binaries and/or scripts and create an installable package group for each OS your software will run on\. AWS Marketplace does a test build by installing the package group on a base operating system \(OS\) you specify and scans the resulting image for certain known vulnerabilities\. Once the image build and scan has completed successfully, you can use the product load form to submit the package group and required metadata as a new private image fulfillment option to **awsmp\-private\-image@amazon\.com**\. 
 
- Figure : AWS Marketplace Private Image Build flow\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/private-image-build-image01.png) 
+The following shows the private image build flow\.
 
- When a customer wants to fulfill your software product but use their gold image, the customer specifies build parameters and uses the AWS Marketplace Private Image Build Service to install your product on an image of their choosing to create a new private image that is available to their AWS account only\. The customer can then launch the AMI from the Private Image configuration panes or within Amazon EC2\. 
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/private-image-build-image01.png) 
 
-## Package Group Requirements<a name="package-group-requirements"></a>
+When a buyer wants to fulfill your software product but use their gold image, they specify build parameters and use the AWS Marketplace Private Image Build Service to install your product on an image they choose to create a new private image that is available to their AWS account only\. They can then launch the AMI from the private image configuration panes or within Amazon EC2\. 
+
+## Package group requirements<a name="package-group-requirements"></a>
 
  You can submit your package group for use on either AWS Marketplace base Linux AMIs or AWS Marketplace base Windows Server AMIs\. 
 
@@ -25,7 +27,7 @@
 +  The installer cannot require a reboot during the installation\. A reboot would kill the agent that tracks the test and scan process for packages\. If your installer reboots, the agent is killed and the test and scan will fail\. 
 +  The installer must not affect the network routing on the instance in such a way that the host becomes unreachable\. 
 
-## Submitting Your Package Group<a name="submitting-your-package-group"></a>
+## Submitting your package group<a name="submitting-your-package-group"></a>
 
 **To submit a package group to AWS Marketplace for use with Private Image Build**
 
@@ -43,13 +45,13 @@
 
     For each package group you submit, a build process is completed for each OS version you chose\. Once you submit your package group, you will automatically be redirected to the **Scan status** page where you can check progress of the image building and scanning process for each package group\. 
 
-## Scan Status<a name="scan-status"></a>
+## Scan status<a name="scan-status"></a>
 
  Once you have submitted your package group, you can check the current status on the **Scan status** tab\. Each package group you have submitted will be listed\. Click on the arrow next to the package group to expand the list and show the build and scan status for each package group you selected\. 
 
  Each entry will show the AMI ID, date you submitted the package group, and the status of the package group \(or build\)\. During the process, you can track the state of package groups and individual builds you have submitted\. There are four states your package group submission can be in, and five states individual builds can be in\. 
 
-### Package Group State<a name="package-group-state"></a>
+### Package group state<a name="package-group-state"></a>
 
  The package group state updates as automated steps complete\. You can return to the **Scan status** page to check on progress, or if the page is open you can choose **Refresh status** to update the information on the page\. The package group states are: 
 +  **Building** – You have submitted your package group and the corresponding image\(s\) are being built\. 
@@ -60,7 +62,7 @@
 
  **Note**: If your status remains in the **Investigating** state four business days or more, contact awsmp\-private\-image@amazon\.com\. 
 
-### OS Build State<a name="os-build-state"></a>
+### OS build state<a name="os-build-state"></a>
 
  On the **Scan status** page you can click on the arrow next to the package group name to expand the entry to show each OS build that is part of the package group\. The OS build states are: 
 +  **Building** – The build of your software on the OS is in progress\. This might take up to an hour to complete for each build\. 
@@ -73,7 +75,7 @@
 
  Once your package group has a status of successful, you have completed this phase and can publish it as a new fulfillment option for your product on AWS Marketplace\. 
 
-## Submitting Your Product to AWS Marketplace<a name="submitting-your-listing-to-aws-marketplace"></a>
+## Submitting your product to AWS Marketplace<a name="submitting-your-listing-to-aws-marketplace"></a>
 
  After you have a package group that is successfully uploaded to AWS Marketplace you can submit a product load form to publish it as a new fulfillment option for your product, or as a new product if it does not already exist\. The load form is an Excel spreadsheet\. The first tab of the spreadsheet provides instructions for providing the metadata needed to publish your product on AWS Marketplace\. 
 
@@ -89,4 +91,4 @@
 
  When adding a package group as a new fulfillment option for your product consider the following options: 
 +  Add the package group as an additional fulfillment option to an existing software version, on an existing public product on Marketplace\. With this approach, the software version on the AMI and package fulfillment options must match\. AWS Marketplace cannot replace an AMI on an existing software version\. 
-+  If the package group has different software than what currently exists on AWS Marketplace, you can list the package group as a new software version on an existing product\. Using this approach, you must provide a successfully built and scanned AMI from the AMMP **Packages** tab\. You will have the option to test package fulfillment before making the new package group public\. However, the AMI will be visible to customers right away\. This is consistent with the current experience for new software versions\. 
++  If the package group has different software than what currently exists on AWS Marketplace, you can list the package group as a new software version on an existing product\. Using this approach, you must provide a successfully built and scanned AMI from the AMMP **Packages** tab\. You will have the option to test package fulfillment before making the new package group public\. However, the AMI will be visible to buyers right away\. This is consistent with the current experience for new software versions\. 

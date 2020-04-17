@@ -6,7 +6,7 @@ The AWS Marketplace Commerce Analytics Service lets you programmatically access 
 
  The data you request using the SDK tools is delivered to your AWS account as data sets\. Most of the data sets correspond to the same data as the text\-based reports available on the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour)\. You can request data sets for a specific date, and the data is delivered to the provided Amazon S3 bucket\. Notification of data delivery is provided by the Amazon Simple Notification Service \(Amazon SNS\)\. 
 
-## Terms and Conditions<a name="terms-and-conditions"></a>
+## Terms and conditions<a name="terms-and-conditions"></a>
 
  These AWS Marketplace Commerce Analytics Service Terms and Conditions \(these "**CAS Terms**”\) contain the terms and conditions specific to your use of and access to the AWS Marketplace Commerce Analytics Service \("**CA Service**”\) and are effective as of the date you click an "I Accept” button or check box presented with these CAS Terms or, if earlier, when you use any CA Service offerings\. These CAS Terms are an addendum to the Terms and Conditions for AWS Marketplace Sellers \(the "**AWS Marketplace Seller Terms**”\) between you and Amazon Web Services, Inc\. \("**AWS**,” "**we**,” "**us**” or "**our**”\), the terms of which are hereby incorporated herein\. In the event of a conflict between these CAS Terms and the AWS Marketplace Seller Terms, the terms and conditions of these CAS Terms apply, but only to the extent of such conflict and solely with respect to your use of the CA Service\. Capitalized terms used herein but not defined herein shall have the meanings set forth in the AWS Marketplace Seller Terms\. 
 
@@ -20,25 +20,25 @@ The AWS Marketplace Commerce Analytics Service lets you programmatically access 
 
 1.  **Termination\.** These CAS Terms and the rights to use CAS Data granted herein will terminate, with or without notice to you upon termination of your AWS Marketplace Seller Terms for any reason\. In addition, we may stop providing the CA Services or terminate your access to the CA Services at any time for any or no reason\. 
 
-## On\-boarding Guide<a name="on-boarding-guide"></a>
+## Onboarding guide<a name="on-boarding-guide"></a>
 
- You must configure your AWS account and AWS services to use the AWS Marketplace Commerce Analytics Service\. First, you configure AWS account\(s\) with the correct permissions\. Next, you configure an Amazon S3 bucket for the data to be delivered to\. Finally, you configure Amazon SNS to send notifications when data is delivered\. 
+You must configure your AWS account and AWS services to use the AWS Marketplace Commerce Analytics Service\. First, you configure AWS account\(s\) with the correct permissions\. Next, you configure an Amazon S3 bucket for the data to be delivered to\. Finally, you configure Amazon SNS to send notifications when data is delivered\. 
 
- AWS Marketplace **strongly** recommends using IAM roles to sign in to the AWS Marketplace Management Portal rather than using your root account credentials\. See [Policies and Permissions AWS Marketplace Providers](detailed-management-portal-permissions.md) for specific IAM permissions for AWS Marketplace Commerce Analytics Service permissions\. See [Create IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html#intro-identity-users) for details\. By creating individual IAM users for people accessing your account, you can give each IAM user a unique set of security credentials\. You can also grant different permissions to each IAM user\. If necessary, you can change or revoke an IAM user's permissions any time\.
+ AWS Marketplace **strongly** recommends using IAM roles to sign in to the AWS Marketplace Management Portal rather than using your root account credentials\. See [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md) for specific IAM permissions for AWS Marketplace Commerce Analytics Service permissions\. See [Create IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html#intro-identity-users) for details\. By creating individual IAM users for people accessing your account, you can give each IAM user a unique set of security credentials\. You can also grant different permissions to each IAM user\. If necessary, you can change or revoke an IAM user's permissions any time\.
 
-### Create a Destination Amazon S3 Bucket<a name="create-a-destination-amazon-s3-bucket"></a>
+### Create a destination Amazon S3 bucket<a name="create-a-destination-amazon-s3-bucket"></a>
 
- The Commerce Analytics Service delivers the data you request to an Amazon S3 bucket that you specify\. If you don't have an Amazon S3 bucket or you want to create an Amazon S3 bucket specifically for this data, guidance can be found at [How do I Create an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html)\. If you already have an Amazon S3 bucket to use, proceed to the next step\. 
+The Commerce Analytics Service delivers the data you request to an Amazon S3 bucket that you specify\. If you don't have an Amazon S3 bucket or you want to create an Amazon S3 bucket specifically for this data, guidance can be found at [How do I Create an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html)\. If you already have an Amazon S3 bucket to use, proceed to the next step\. 
 
-### Create an Amazon SNS Topic for Response Notifications<a name="create-an-amazon-sns-topic-for-response-notifications"></a>
+### Create an Amazon SNS topic for response notifications<a name="create-an-amazon-sns-topic-for-response-notifications"></a>
 
- The Commerce Analytics Service delivers response notifications using Amazon SNS\. The service publishes messages to this topic to notify you when your data sets are available or if an error occurred\. If you don't have an Amazon SNS topic configured for this service, configure one now\. Guidance can be found at [Create a Topic](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\. If you already have an Amazon SNS topic for this purpose, proceed to the next step\. 
+The Commerce Analytics Service delivers response notifications using Amazon SNS\. The service publishes messages to this topic to notify you when your data sets are available or if an error occurred\. If you don't have an Amazon SNS topic configured for this service, configure one now\. Guidance can be found at [Create a Topic](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\. If you already have an Amazon SNS topic for this purpose, proceed to the next step\. 
 
  Record the topic Amazon Resource Name \(ARN\) for the topic you created, as it will be required to call the service\. 
 
-### Enroll in the Commerce Analytics Service Program<a name="enroll-in-the-commerce-analytics-service-program"></a>
+### Enroll in the Commerce Analytics Service program<a name="enroll-in-the-commerce-analytics-service-program"></a>
 
- The Commerce Analytics Service accesses the Amazon S3 bucket and Amazon SNS topic once you configure the service with the ARN for the topic and name of the bucket\.
+The Commerce Analytics Service accesses the Amazon S3 bucket and Amazon SNS topic once you configure the service with the ARN for the topic and name of the bucket\.
 
 **To enable access**
 
@@ -52,7 +52,7 @@ The AWS Marketplace Commerce Analytics Service lets you programmatically access 
 
 1.  On the AWS Marketplace Management Portal, record the **Role Name ARN** in the success message\. You will need it to call the service\. 
 
-### Verify Your Configuration<a name="verify-your-configuration"></a>
+### Verify your configuration<a name="verify-your-configuration"></a>
 
 Now that you have completed the configuration to use the AWS Marketplace Commerce Analytics Service, you should verify it\.
 
@@ -84,11 +84,11 @@ Now that you have completed the configuration to use the AWS Marketplace Commerc
 }
 ```
 
-## Technical Implementation Guide<a name="technical-implementation-guide"></a>
+## Technical implementation guide<a name="technical-implementation-guide"></a>
 
  The AWS Marketplace Commerce Analytics Service is provided through the [AWS SDK](https://aws.amazon.com/tools/)\. This guide shows you how to interact with the service using the [AWS CLI](https://aws.amazon.com/cli/) and the [AWS SDK for Java](https://aws.amazon.com/sdk-for-java/)\.
 
-### IAM Policy for Commerce Analytics Service<a name="aws-marketplace-commerce-analytics-iam-permissions"></a>
+### IAM policy for Commerce Analytics Service<a name="aws-marketplace-commerce-analytics-iam-permissions"></a>
 
 To allow your IAM users to use the Commerce Analytics Service, you must attach the following inline policy to your users\.
 
@@ -129,7 +129,7 @@ aws marketplacecommerceanalytics generate-data-set \
 }
 ```
 
-### Making Requests with the AWS SDK for Java<a name="making-requests-with-aws-java-sdk"></a>
+### Making requests with the AWS SDK for Java<a name="making-requests-with-aws-java-sdk"></a>
 
  To start, download the [AWS Java SDK](https://aws.amazon.com/sdk-for-java/)\. The following AWS SDK for Java example makes a request for the **Hourly/Monthly Subscriptions** data set for October 1, 2015\. This data set is published to the **demo\-bucket** Amazon S3 bucket using the prefix **demo\-prefix**, and the notification message is delivered to the **demo\-topic** Amazon SNS topic\. 
 
@@ -253,20 +253,20 @@ date Sun Jun 08 17:00:00 PDT 2014.
 Request successful, unique ID: c59aff81-6875-11e5-a6d8-fd5dbcaa74ab
 ```
 
-## Technical Documentation<a name="technical-documentation"></a>
+## Technical documentation<a name="technical-documentation"></a>
 
  The service exposes one method, `GenerateDataSet`, which enables you to request data sets to be published to your Amazon S3 bucket\. The following table lists the parameters for `GenerateDataSet`\.
 
 
-**Data Set Parameters**  
+**Data set parameters**  
 
 | **Field** | **Description** | 
 | --- | --- | 
 | Data Set Type | This data set will be returned as the result of the request\. | 
-|  Data Set Publication Date  |   The date a data set was published\.   For daily data sets, provide a date with day\-level granularity for the desired day\.   For monthly data sets, provide a date with month\-level granularity for the desired month\. The day value is ignored\.   | 
+| Data Set Publication Date  |  The date a data set was published\.  For daily data sets, provide a date with day\-level granularity for the desired day\.  For monthly data sets, provide a date with month\-level granularity for the desired month\. The day value is ignored\.   | 
 | Role Name ARN | The ARN of the role with an attached permissions policy that provides the service with access to your resources\. | 
 | Destination Amazon S3 Bucket Name | The name \(the friendly name, not the ARN\) of the destination Amazon S3 bucket\. Your data sets are published to this location\. | 
-| Destination Amazon S3 Prefix |   \(Optional\) The Amazon S3 prefix for the published data set, similar to a directory path in standard file systems\.   For example, if given the bucket name `mybucket` and the prefix `myprefix/mydatasets`, the output file is published to `s3://awsexamplebucket/myprefix/mydatasets/outputfile`\.   If the prefix directory structure doesn't exist, it's created\.   If no prefix is provided, the data set is published to the Amazon S3 bucket root\.   | 
+| Destination Amazon S3 Prefix |  \(Optional\) The Amazon S3 prefix for the published data set, similar to a directory path in standard file systems\.  For example, if given the bucket name `mybucket` and the prefix `myprefix/mydatasets`, the output file is published to `s3://awsexamplebucket/myprefix/mydatasets/outputfile`\.  If the prefix directory structure doesn't exist, it's created\.  If no prefix is provided, the data set is published to the Amazon S3 bucket root\.   | 
 | SNS Topic ARN |   The ARN for the Amazon SNS topic that is notified when the data set has been published or if an error occurs\.   | 
 
 ### Responses<a name="responses"></a>
@@ -274,26 +274,26 @@ Request successful, unique ID: c59aff81-6875-11e5-a6d8-fd5dbcaa74ab
 The AWS Marketplace Commerce Analytics service returns two responses\. The first is synchronous, which is returned immediately, and the second is asynchronous, which is returned using the Amazon SNS\. The synchronous response will look similar to this example\.
 
 
-**Data Set Parameters**  
+**Data set parameters**  
 
 | **Field** | **Description** | 
 | --- | --- | 
-|  Data Set Request ID  |  A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
+| Data Set Request ID  | A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
 
- The asynchronous response is posted as a JSON\-formatted document to your Amazon SNS topic and will look similar to this example\.
+The asynchronous response is posted as a JSON\-formatted document to your Amazon SNS topic and will look similar to this example\.
 
 
-**Data Set Parameters**  
+**Data set parameters**  
 
 |  **Field**  |  **Description**  | 
 | --- | --- | 
-|  Data Set S3 Location  |  The bucket name and key for the delivered data set\.  | 
-|  Data Set Meta Data S3 Location  |  The bucket name and key for the delivered data set meta data file\.  | 
-|  Data Set Request ID  |  A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
-|  Success  |  True if the operation succeeded, false if not\.  | 
-|  Message  |  \(Optional\) If an error occurred \(i\.e\., "Success” is "false”\), this message will contain information about the failure\.  | 
+| Data Set S3 Location  | The bucket name and key for the delivered data set\.  | 
+| Data Set Meta Data S3 Location  | The bucket name and key for the delivered data set meta data file\.  | 
+| Data Set Request ID  | A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
+| Success  | True if the operation succeeded, false if not\.  | 
+| Message  | \(Optional\) If an error occurred \(i\.e\., "Success” is "false”\), this message will contain information about the failure\.  | 
 
- **Example JSON\-formatted Asynchronous Response**: 
+ **Example JSON\-formatted asynchronous response**: 
 
 ```
  {    
@@ -315,17 +315,17 @@ The AWS Marketplace Commerce Analytics service returns two responses\. The first
  After a successful request, the requested data set is delivered to your Amazon S3 bucket as a \.csv file\. A JSON\-formatted metadata file is published to the same location as the data set file\. The metadata file provides useful information about the data set and original request parameters\. The metadata file has the same name as the data set file, but ends with the extension \.meta\.json\. The following table lists the meta data fields in the \.csv file\.
 
 
-**Meta Data Fields**  
+**Meta data fields**  
 
 |  **Field**  |  **Description**  | 
 | --- | --- | 
-|  Data Set Request ID  |  A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
-|  Data Set Coverage Range  |  Defines the start date/time and end date/time for the data coverage range\. These dates are in ISO 8601 format\.  | 
-|  Data Set Request Parameters  |  The original request parameters to the GenerateDataSet method\.  | 
-|  Data Set S3 Location  |  The bucket name and key for the delivered data set\.  | 
-|  Data Set Meta Data S3 Location  |  The bucket name and key for the delivered data set meta data file\.  | 
+| Data Set Request ID  | A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
+| Data Set Coverage Range  | Defines the start date/time and end date/time for the data coverage range\. These dates are in ISO 8601 format\.  | 
+| Data Set Request Parameters  | The original request parameters to the GenerateDataSet method\.  | 
+| Data Set S3 Location  | The bucket name and key for the delivered data set\.  | 
+| Data Set Meta Data S3 Location  | The bucket name and key for the delivered data set meta data file\.  | 
 
- This is an example of JSON\-formatted Meta Data Contents\. 
+This is an example of JSON\-formatted meta data contents\. 
 
 ```
 {
@@ -354,7 +354,7 @@ The AWS Marketplace Commerce Analytics service returns two responses\. The first
 }
 ```
 
- For a complete list of available data sets, including availability dates, refer to the [AWS SDK documentation](https://docs.aws.amazon.com/cli/latest/reference/marketplacecommerceanalytics/generate-data-set.html#options)\. 
+For a complete list of available data sets, including availability dates, refer to the [AWS SDK documentation](https://docs.aws.amazon.com/cli/latest/reference/marketplacecommerceanalytics/generate-data-set.html#options)\. 
 
 ## Troubleshooting<a name="troubleshooting"></a>
 

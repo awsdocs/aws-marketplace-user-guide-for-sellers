@@ -1,12 +1,12 @@
-# Integrating Your Container Product With the AWS Marketplace Metering Service Using the AWS SDK for Java<a name="java-integration-example-registerusage"></a>
+# Integrating your container product with the AWS Marketplace Metering Service using the AWS SDK for Java<a name="java-integration-example-registerusage"></a>
 
-The following steps outline an example implementation using the AWS SDK for Java to integrate with the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html)'s `RegisterUsage` action\. For the full source code, see [RegisterUsage Java Example](#registerusage-java-example)\. Many of these steps apply regardless of the language\. 
+The following steps outline an example implementation using the AWS SDK for Java to integrate with the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html)'s `RegisterUsage` action\. For the full source code, see [RegisterUsage Java example](#registerusage-java-example)\. Many of these steps apply regardless of the language\. 
 
 **Example steps for AWS Marketplace Metering Service integration**
 
 1. Sign into the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour)\.
 
-1. From **Assets** choose **Containers** to start creating a new container product\. Creating the product generates the product code for the product to integrate with your container image\. For more information about publishing, see [Publishing Container Products](container-product-getting-started.md#container-product-publishing)\. For information about setting IAM permissions, see [AWS Marketplace Metering and Entitlement Service APIs Permissions](iam-user-policy-for-aws-marketplace-actions.md)\.
+1. From **Assets** choose **Containers** to start creating a new container product\. Creating the product generates the product code for the product to integrate with your container image\. For more information about publishing, see [Publishing container products](container-product-getting-started.md#container-product-publishing)\. For information about setting IAM permissions, see [AWS Marketplace metering and entitlement API permissions](iam-user-policy-for-aws-marketplace-actions.md)\.
 
 1.  Download the public [AWS Java SDK](https://aws.amazon.com/sdk-for-java/)\. 
 **Important**  
@@ -103,7 +103,7 @@ The following steps outline an example implementation using the AWS SDK for Java
 
 1. When you get a valid response back from `RegisterUsage`, you can begin creating your container product\. For questions, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
-## RegisterUsage Java Example<a name="registerusage-java-example"></a>
+## RegisterUsage Java example<a name="registerusage-java-example"></a>
 
 The following example uses the AWS SDK for Java and AWS Marketplace Metering Service to call the `RegisterUsage` operation\. Signature verification is optional, but if you want to perform signature verification, you must include the required digital signature verification libraries\. This example is for illustrative purposes only\. 
 

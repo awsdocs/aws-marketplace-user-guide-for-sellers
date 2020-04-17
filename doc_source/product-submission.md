@@ -1,4 +1,4 @@
-# Submitting Your Product for Publication<a name="product-submission"></a>
+# Submitting your product for publication<a name="product-submission"></a>
 
 You use the product submission process to make your product\(s\) available on AWS Marketplace\. Products can be quite simple, for example a single Amazon Machine Image \(AMI\) that has one price structure\. Or, can be quite complicated, with multiple AMIs, AWS CloudFormation templates, and complex pricing options and payment schedules\. You define your product offering and submit it through the AWS Marketplace Management Portal in one of two ways\.
 + Using the **Products** tab – For products that are less complex, you use the **Products** tab to completely define and submit your request\.
@@ -10,7 +10,7 @@ Data product providers must use the AWS Data Exchange console to publish product
  We recommend that you start by using the **Products** tab to determine which approach to use\. Existing or new product configurations might be added that might enable you to use the more automated, **Products** tab method\. The following table lists some configuration and the approach you use to submit your request\. The first column is the pricing model for your product, the other three columns are how the product is deployed to the customer\. 
 
 
-|  Pricing Model  |  Products Launched Using Single\-Node AMI |  Products Launched with AWS CloudFormation |  Products Launched as Software as a Service \(SaaS\) | 
+| Pricing model  | Products launched using single\-node AMI | Products launched with AWS CloudFormation | Products launched as software as a service \(SaaS\) | 
 | --- | --- | --- | --- | 
 |  Bring Your Own License \(BYOL\)  |  Products tab  |  Assets tab  |     | 
 |  Free  |  Products tab  |  Assets tab  |     | 
@@ -25,7 +25,7 @@ Data product providers must use the AWS Data Exchange console to publish product
 
  You can submit products individually, or, if you use a product load form can submit multiple products or product updates at the same time\. You cannot submit multiple products at the same time using the **Products** tab\. If you are unclear on what products can be submitted in what manner, start by using the **Products** tab\. If you have any problems making your submissions, contact the [AWS Marketplace Managed Catalog Operations \(MCO\)](https://aws.amazon.com/marketplace/management/contact-us/) team\.
 
-## Using the Products Tab<a name="using-the-products-tab"></a>
+## Using the Products tab<a name="using-the-products-tab"></a>
 
  To access the **Products** tab, log in to the AWS Marketplace Management Portal\. From the **Products** tab, choose either **Server**, **SaaS**, or **Machine learning**, depending on the type of product you are managing\. A dashboard for that product type appears that contains all of your current products\. If you choose the **Requests** tab, the dashboard displays any outstanding requests you have, as well as view your completed request history\. Once you start creating a new product request, you can save your work in progress, and if necessary, create your request in several different sessions\.
 
@@ -43,7 +43,7 @@ Data product providers must use the AWS Data Exchange console to publish product
 
  To add your product in the AWS GovCloud \(U\.S\.\) region, you must [have an active AWS GovCloud \(U\.S\.\) account](http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/getting-started-sign-up.html) and comply with the AWS GovCloud \(U\.S\.\) requirements, including export control requirements\. 
 
-## Company and Product Logo Requirements<a name="seller-and-product-logos"></a>
+## Company and product logo requirements<a name="seller-and-product-logos"></a>
 
  Your company logo and the logo for your products need to conform to our guidelines so that the user experience is uniform when browsing AWS Marketplace\. 
 
@@ -51,11 +51,11 @@ Data product providers must use the AWS Data Exchange console to publish product
 
  **Company Logo Specifications** – Your company logo image should have a transparent background and be 220 x 220 pixels in size, allowing for 10 pixels of padding on each side within\. 
 
-## AWS CloudFormation\-Launched Product \(Free or Paid\) or Usage\-Based Paid AMI Product<a name="aws-cloudformation-launched-product-free-or-paid-or-usage-based-paid-ami-product"></a>
+## AWS CloudFormation\-launched product \(free or paid\) or usage\-based paid AMI product<a name="aws-cloudformation-launched-product-free-or-paid-or-usage-based-paid-ami-product"></a>
 
  Products that AWS Marketplace customer launch by using AWS CloudFormation templates must be submitted using the **Product Load Form** available through the AMMP\. 
 
-### Submitting Your Product<a name="submitting-your-product"></a>
+### Submitting your product<a name="submitting-your-product"></a>
 
 1.  From the [AMMP](https://aws.amazon.com/marketplace/management/products/?), download the Product Load Form for your product\. 
 
@@ -65,7 +65,7 @@ Data product providers must use the AWS Data Exchange console to publish product
 
 AWS Marketplace reviews your product for policy and security compliance, software vulnerabilities, and product usability\. If there are any questions or issues with a request, the AWS Marketplace team will contact you via email to discuss your request\. Once approved, a mock\-up of your product's page is created\. After your review the page, you accept or reject the mock\-up\. Once approved, we add the page to the AWS Marketplace\.
 
-### Updating Your Product<a name="updating-your-product"></a>
+### Updating your product<a name="updating-your-product"></a>
 
  The Product Load Form is used to make one or more changes to the products you created using the Product Load Form\. You can make changes to the original product load form you completed, or, if not available you can start with a new load form\. Just like using the **Products** tab, you can add a new version, remove existing versions, and update pricing, instance types, region availability, and metadata\. To make an update, you prepare any updated product the same way you do new products\. Once the product is prepared: 
 
@@ -79,7 +79,7 @@ AWS Marketplace reviews your product for policy and security compliance, softwar
 
 Your product submission is reviewed for policy and security compliance, software vulnerabilities, and product usability\. If there are any questions or issues with a request, the AWS Marketplace team will contact you via email\. Updates to existing product pages are processed and released directly without additional reviews\.
 
-## Product Changes and Updates<a name="product-changes-and-updates"></a>
+## Product changes and updates<a name="product-changes-and-updates"></a>
 
  Sellers can submit changes to their product at any time, and they will be processed as described above\. However, some changes can only be made every 90 or 120 days, or when pending changes are in place\. Examples include price changes, and region/instance type changes\. Common changes include: 
 +  **New Version** \- New versions of the software, rollouts of patches or updates\. At your request, we can notify customers who have subscribed to Your Marketplace Content about the availability of new versions or send upgrade instructions on your behalf\. 
@@ -89,7 +89,7 @@ Your product submission is reviewed for policy and security compliance, software
 +  **Region or Instance change** \- Adding or removing instances types or Regions\. 
 +  **Product takedown \-** Remove a product page from AWS Marketplace to prevent new customers from subscribing\. A notification to current customers is sent after the request is complete\. 
 
-## Timing and Expectations<a name="timing-and-expectations"></a>
+## Timing and expectations<a name="timing-and-expectations"></a>
 
  While we strive to process requests as quickly as possible, requests can require multiple iterations and review by the seller and AWS Marketplace teams\. Use the following as guidance for how long it will take to complete the process: 
 +  Total request time normally takes 2\-4 weeks of calendar time\. More complex requests or products can take longer, due to multiple iterations and adjustments to product metadata and software\. 
@@ -105,7 +105,7 @@ Your product submission is reviewed for policy and security compliance, software
 +  Ensure that root login is disabled or locked\. Only sudo access accounts are allowed\. 
 +  If you are submitting an AMI to be deployed into the AWS GovCloud \(US\) region, you need to [have an active AWS GovCloud account](http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/getting-started-sign-up.html) and agree to the [AWS GovCloud Requirements](https://aws.amazon.com/service-terms/), including applicable export control requirements\. 
 
-### AMI Self\-Service Scanning<a name="ami-self-service-scanning"></a>
+### AMI self\-service scanning<a name="ami-self-service-scanning"></a>
 
  Self\-service AMI scanning is available within the AWS Marketplace Management Portal\. With this feature, you can initiate scans of your AMIs and receive scanning results quickly – typically in less than an hour – with clear feedback in a single location\. 
 
@@ -119,13 +119,13 @@ Your product submission is reviewed for policy and security compliance, software
 
 After your AMI has successfully been scanned, you can follow the current process to submit it to the AWS Marketplace Seller and Catalog Operations team by [uploading](https://aws.amazon.com/marketplace/management/product-load/) your product load form\. If you have any issues, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
-To include your AMI in the self\-service scanning list, the AMI must be in the `us-east-1` \(N\. Virginia\) Region and owned by your AWS Marketplace seller account\. If you need to grant other accounts access to the AWS Marketplace Management Portal, you must register those accounts as sellers\. For more information, see [Seller Registration Process](seller-registration-process.md)\. 
+To include your AMI in the self\-service scanning list, the AMI must be in the `us-east-1` \(N\. Virginia\) Region and owned by your AWS Marketplace seller account\. If you need to grant other accounts access to the AWS Marketplace Management Portal, you must register those accounts as sellers\. For more information, see [Seller registration process](seller-registration-process.md)\. 
 
-### AMI Cloning and Product Code Assignment<a name="ami-cloning-and-product-code-assignment"></a>
+### AMI Cloning and product code assignment<a name="ami-cloning-and-product-code-assignment"></a>
 
 After your AMI is submitted, AWS Marketplace will create cloned AMIs for each region that you have indicated that software should be available\. During this cloning and publishing process, AWS Marketplace will attach a product code to the cloned AMIs\. The product code is used to both control access and to meter usage\. All submissions must go through this AMI cloning process\. 
 
-## Final Checklist<a name="final-checklist"></a>
+## Final checklist<a name="final-checklist"></a>
 
  To help avoid delays in publishing your product, use this checklist before you submit your product request\. 
 
@@ -134,14 +134,14 @@ After your AMI is submitted, AWS Marketplace will create cloned AMIs for each re
 +  Does not restrict product usage by time or other restrictions 
 +  Compatible with 1\-click fulfillment experience 
 +  Everything required to utilize the product is contained within the software including client applications 
-+  Default user utilizes a randomized password and/or creation of initial user requires verification that the subscriber is authorized to use the instance using a value unique to the instance such as instance ID 
++  Default user utilizes a randomized password and/or creation of initial user requires verification that the buyer is authorized to use the instance using a value unique to the instance such as instance ID 
 
- **For Free or Paid products:** 
+ **For free or paid products:** 
 +  No additional license is required to use the product 
-+  Subscriber does not have to provide personally identifiable information \(e\.g\. email address\) to use the product **AMI preparation** 
++  Buyer does not have to provide personally identifiable information \(e\.g\. email address\) to use the product **AMI preparation** 
 +  Utilizes hardware virtual machine \(HVM\) virtualization and 64\-bit architecture 
 +  Does not contain any known vulnerabilities, malware or viruses 
-+  Subscribers have OS\-level administration access to the AMI 
++  Buyers have OS\-level administration access to the AMI 
 +  Run your AMI through AMI Self Service Scanning 
 
  **For Windows AMIs:** 

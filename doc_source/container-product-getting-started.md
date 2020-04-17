@@ -1,15 +1,15 @@
-# Getting Started with Container Products<a name="container-product-getting-started"></a>
+# Getting started with container products<a name="container-product-getting-started"></a>
 
 This topic outlines how to get started with a container product, and goes through all the steps related to creating, testing, and publishing your first container product\. For this exercise, we assume that you already have at least one container created in Amazon ECS, Amazon EKS, or Fargate, and that you have links for the associated images\. We recommend that you plan your pricing, entitlement, and metering strategy well in advance of publicly publishing your product\.
 
 **Topics**
-+ [Creating a Container Product](#create-container-product)
-+ [Downloading and Filling Out the Product Load Form for Container Products](#container-product-load-form)
-+ [Integrating Metering for Your Container Product](#getting-started-integrate-metering)
-+ [Publishing Container Products](#container-product-publishing)
-+ [Container Product Scans](#container-security)
++ [Creating a container product](#create-container-product)
++ [Downloading and filling out the product load form for container products](#container-product-load-form)
++ [Integrating metering for your container product](#getting-started-integrate-metering)
++ [Publishing container products](#container-product-publishing)
++ [Container product scans](#container-security)
 
-## Creating a Container Product<a name="create-container-product"></a>
+## Creating a container product<a name="create-container-product"></a>
 
 The following procedure outlines how to create a new container product in the AWS Marketplace Management Portal\.
 
@@ -27,7 +27,7 @@ The following procedure outlines how to create a new container product in the AW
 
 1. Provide a customer\-facing name for your container group\. We strongly recommend that each container group within a product have a unique name\.
 
-1. In **Image location**, provide the URL for one image in this container group, and choose **Add and scan**\. When you submit a container image URL, we scan it and check for security vulnerabilities\. Typically, this scan takes 20 to 25 minutes\. For more information, see [Container Product Scans](#container-security)\.
+1. In **Image location**, provide the URL for one image in this container group, and choose **Add and scan**\. When you submit a container image URL, we scan it and check for security vulnerabilities\. Typically, this scan takes 20 to 25 minutes\. For more information, see [Container product scans](#container-security)\.
 
    These URL links can be the name of a public external repository on Docker Hub or a URL to a private repository such as Amazon ECR\. You can have up to four links to deployment templates for each fulfillment option\.
 
@@ -43,11 +43,11 @@ The following procedure outlines how to create a new container product in the AW
 
 1. \(Optional\) Create additional container groups\. Each container product can have up to 4 container groups, one for each fulfilment option\.
 
-You've now created your container product\. When you first create a container product it is not automatically published\. AWS Marketplace publishes your product once you have submitted the completed product load form with your product metadata and your container images have been successfully scanned\. For more information, see [Publishing Container Products](#container-product-publishing)\.
+You've now created your container product\. When you first create a container product it is not automatically published\. AWS Marketplace publishes your product once you have submitted the completed product load form with your product metadata and your container images have been successfully scanned\. For more information, see [Publishing container products](#container-product-publishing)\.
 
 Next, you'll need to perform two different processes, downloading and filling out the product load form, and integrate and test metering into your software\. These two steps can be done in any order, or in parallel\.
 
-## Downloading and Filling Out the Product Load Form for Container Products<a name="container-product-load-form"></a>
+## Downloading and filling out the product load form for container products<a name="container-product-load-form"></a>
 
 The following procedure outlines what to do with the product load form\.
 
@@ -66,8 +66,8 @@ The following procedure outlines what to do with the product load form\.
 When viewing the product load form in Microsoft Excel, hover over each of the fields to show comments that provide guidance on how to fill in each field\. 
 
    You must provide pricing and metering dimensions, based on your pricing model for your product\. For more information, see the following:
-   + [Product Load Form For Custom Metering](container-metering-meterusage.md#custom-metering-product-load-form)
-   + [Product Load Form for Hourly Metering](container-metering-registerusage.md#hourly-metering-product-load-form)
+   + [Product load form for custom metering](container-metering-meterusage.md#custom-metering-product-load-form)
+   + [Product load form for hourly metering](container-metering-registerusage.md#hourly-metering-product-load-form)
 
 1. Save your product load form\.
 
@@ -83,16 +83,16 @@ When viewing the product load form in Microsoft Excel, hover over each of the fi
 
 1. Your uploaded product load form will appear in a table at the bottom of the page\.
 
-## Integrating Metering for Your Container Product<a name="getting-started-integrate-metering"></a>
+## Integrating metering for your container product<a name="getting-started-integrate-metering"></a>
 
-You use the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html) for both checking entitlement to use your product and metering usage for billing\. For more information, see [AWS Marketplace Metering Service Integration](entitlement-and-metering-for-paid-products.md)\.
+You use the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html) for both checking entitlement to use your product and metering usage for billing\. For more information, see [AWS Marketplace Metering Service integration](entitlement-and-metering-for-paid-products.md)\.
 
-## Publishing Container Products<a name="container-product-publishing"></a>
+## Publishing container products<a name="container-product-publishing"></a>
 
 When you publicly publish a container product, you make it visible to all AWS customers who can then subscribe and launch your product\. The pricing model can't be changed for publicly published products\. Before you can publish a product, you'll need to have completed the following previous steps:
-+ [Creating a Container Product](#create-container-product)
-+ [Downloading and Filling Out the Product Load Form for Container Products](#container-product-load-form)
-+ [Integrating Metering for Your Container Product](#getting-started-integrate-metering)
++ [Creating a container product](#create-container-product)
++ [Downloading and filling out the product load form for container products](#container-product-load-form)
++ [Integrating metering for your container product](#getting-started-integrate-metering)
 
 We will review the information in your product load form, as well as your test calls to the AWS Marketplace Metering Service\. After that, we publish your product in a limited visibility state for your review and approval\. As a parallel effort, you would also complete the necessary engineering integration for your product and related offers\. During this time you should review your product including image links, deployment templates, descriptions, and prices to ensure accuracy\.
 
@@ -107,7 +107,7 @@ mp-account-#.dkr.us-east-1.amazonaws.com/product_id/container_group_id/container
 **Note**  
 The account that you use is the AWS Marketplace account that the secure Amazon ECR repository is created with\. That account Id can change across images and product versions\.
 
-## Container Product Scans<a name="container-security"></a>
+## Container product scans<a name="container-security"></a>
 
 When you submit a container image URL, we scan it and check for security vulnerabilities\. We examine the images you provide for known security vulnerabilities\. To do this, we perform a layer\-by\-layer static scan on the image\. If we find critical vulnerabilities with remotely exploitable risk vectors, we present the list of found issues\. We strongly recommend that you perform your own security analysis using a container image scanner such as Clair, Twistlock, Aqua Security, or Trend Micro to avoid delays in the ingestion and publishing process\. 
 

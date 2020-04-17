@@ -1,4 +1,4 @@
-# Best Practices for Building AMIs<a name="best-practices-for-building-your-amis"></a>
+# Best practices for building AMIs<a name="best-practices-for-building-your-amis"></a>
 
 All Amazon Machine Images \(AMIs\) built and submitted to AWS Marketplace must adhere to all &MKT product policies\. To share your AMI and verify that it meets all AWS Marketplace requirements, use the self\-service [AMI scanning tool](https://aws.amazon.com/marketplace/management/manage-products/#/manage-amis.unshared)\. This topic provides some best practices and references to help you build AMIs\.
 

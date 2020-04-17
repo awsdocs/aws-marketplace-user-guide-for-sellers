@@ -1,10 +1,10 @@
-# Flexible Payment Scheduler<a name="flexible-payment-scheduler"></a>
+# Flexible payment scheduler<a name="flexible-payment-scheduler"></a>
 
 Flexible payment scheduler enables you to extend private offers with a custom payment schedule\. The schedule can be spread over up to three years, and the customer makes payments in regular installments\. After they are subscribed, your customers can see all the payments on the schedule and on their AWS invoice, helping them track their spending\. Flexible payment scheduler is available for private offers on AMI multi\-year and SaaS contracts products\.
 
 Any customer on invoice terms, for example net\-30 or net\-60 terms, can subscribe to a private offer with a flexible payment schedule\. Customers who pay their AWS bill using a credit card can't\. If you try to create a private offer with a custom payment schedule for a customer who isn't on invoice terms, you receive an error\. 
 
-## Creating a Payment Schedule<a name="creating-a-payment-schedule"></a>
+## Creating a payment schedule<a name="creating-a-payment-schedule"></a>
 
 The process for creating a custom payment schedule using flexible payment scheduler is part of the process for creating a private offer\. While creating the private offer, as you are adding product and buyer account information, choose **Allow Buyers to pay for this product in installments**\. This enables you to create an offer with a flexible payment schedule\. When you choose **Next** to continue, the flexible payment scheduler feature validates that any AWS account that you added is an account on invoice terms\. If you have provided an account that isn't on invoice terms, you receive an error message\. 
 
@@ -33,6 +33,6 @@ Your customer is invoiced based on the schedule that you defined, and invoices s
 **Note**  
 You can't modify the payment schedule on a private offer that has been extended to and subscribed by a buyer\. To make changes, you must create a new offer\. 
 
-## Reporting for Flexible Payment Scheduler<a name="fps-reporting"></a>
+## Reporting for flexible payment scheduler<a name="fps-reporting"></a>
 
-Reporting for private offers with flexible payment schedules is in the [Section 4: Contracts with Flexible Payment Schedule](monthly-billed-revenue-report.md#section-4-contracts-with-flexible-payments), of the monthly billed revenue report\. 
+Reporting for private offers with flexible payment schedules is in the [Section 4: Contracts with flexible payment schedule](monthly-billed-revenue-report.md#section-4-contracts-with-flexible-payments), of the monthly billed revenue report\. 

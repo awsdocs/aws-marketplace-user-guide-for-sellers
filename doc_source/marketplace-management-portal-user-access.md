@@ -1,6 +1,6 @@
-# Controlling Access to AWS Marketplace Management Portal<a name="marketplace-management-portal-user-access"></a>
+# Controlling access to AWS Marketplace Management Portal<a name="marketplace-management-portal-user-access"></a>
 
- AWS Identity and Access Management \(IAM\) is an AWS service that helps you control access to AWS resources\. If you are an IAM administrator, you control who can be *authenticated* \(signed in\) and *authorized* \(have permissions\) to use AWS Marketplace resources\. IAM is an AWS service that you can use with no additional charge\. 
+AWS Identity and Access Management \(IAM\) is an AWS service that helps you control access to AWS resources\. If you are an IAM administrator, you control who can be *authenticated* \(signed in\) and *authorized* \(have permissions\) to use AWS Marketplace resources\. IAM is an AWS service that you can use with no additional charge\. 
 
 The recommended way to control who can do what in AWS Marketplace Management Portal is to use IAM to create users and groups\. Then you add the users to the groups, and manage the groups\. For example, if John should be allowed to view your products, create an IAM user for him and add his IAM user to a group you create for read\-only access\. You can assign a policy or permissions to the group that provide read\-only permissions\. If you have other users that need read\-only access, you can add them to the group you created rather than adding permissions to their user account\. If John's role changes and he no longer needs read\-only access, you can remove John's user account from the group\. 
 
@@ -9,7 +9,7 @@ A *policy* is a document that defines the permissions that apply to a user, grou
 **Important**  
 All of the IAM users that you create authenticate by using their credentials\. However, they use the same AWS account\. Any change that a user makes can impact the whole account\. 
 
- AWS Marketplace has permissions defined to control the actions that someone with those permissions can take in AWS Marketplace Management Portal\. There are also policies that AWS Marketplace created and manage that combine several permissions\. For example, the `aws-marketplace-management:ViewMarketing` permission gives a user access to the **Marketing** tab in AWS Marketplace Management Portal\. The `AWSMarketplaceSellerProductsFullAccess` policy gives the user full access to the different **Products** in the AWS Marketplace Management Portal\. 
+ AWS Marketplace has permissions defined to control the actions that someone with those permissions can take in AWS Marketplace Management Portal\. There are also policies that AWS Marketplace created and manage that combine several permissions\. For example, the `aws-marketplace-management:ViewMarketing` permission gives a user access to the **Marketing** tab in AWS Marketplace Management Portal\. The `AWSMarketplaceSellerProductsFullAccess` policy gives the user full access to products in the AWS Marketplace Management Portal\. 
 
  The following resources provide more information about getting started and using IAM\. 
 +  [Creating Your First IAM Admin User and Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) 
@@ -21,7 +21,7 @@ All of the IAM users that you create authenticate by using their credentials\. H
 
  The following provides some high\-level guidance for creating users and groups, and logging in as an IAM user\. 
 
-## Creating Users<a name="creating-iam-users"></a>
+## Creating users<a name="creating-iam-users"></a>
 
 To allow people in your company to sign in to the AWS Marketplace Management Portal, create an IAM user for each person who needs access\.
 
@@ -51,7 +51,7 @@ To sign in with the IAM user name and password that you just created, users must
 **Tip**  
 Create a user name and password for yourself as well, even though you're the AWS account owner\. It's a recommended best practice for everyone to work in the AWS Marketplace Management Portal as an IAM user, even the account owner\. To learn how to create an IAM user for yourself that has administrative permissions, go to [Creating an Administrators Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the *IAM User Guide*\.
 
-## Creating or Using Groups<a name="creating-iam-groups"></a>
+## Creating or using groups<a name="creating-iam-groups"></a>
 
  After you create users, create groups, create permissions to access the pages in the AWS Marketplace Management Portal, add those permissions to the groups, and then add users to the groups\. 
 
@@ -119,7 +119,7 @@ Create a user name and password for yourself as well, even though you're the AWS
 
 1. Select the check box next to each user to add to the group and then choose **Add Users**\.
 
-## Signing In as an IAM User<a name="signing-in-using-iam-user"></a>
+## Signing in as an IAM user<a name="signing-in-using-iam-user"></a>
 
 After you have created users in IAM, users can sign in with their own user names and passwords\. To do so, they need to use the unique URL that is associated with your AWS account\. You can get and distribute the sign\-in URL to your users\.
 

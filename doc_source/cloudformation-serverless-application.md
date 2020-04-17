@@ -1,27 +1,27 @@
-# Adding Serverless Application Components<a name="cloudformation-serverless-application"></a>
+# Adding serverless application components<a name="cloudformation-serverless-application"></a>
 
 You can create a product that includes one or more AMIs, delivered using one or more AWS CloudFormation templates, with serverless components incorporated into the product\. For example, you can create a product with one AMI configured as a controller server and another AMI configured as a worker server, delivered as a AWS CloudFormation stack\. The AWS CloudFormation template used to create the stack can include the definition to set up an AWS Lambda function that is triggered by an event in one of the servers\.
 
 When you use this approach to design your product, you can simplify the architecture and make it easier for your customers to launch\. This approach can also make it easier for you to update your product\.
 
-For information about creating AMIs for your product, see [AMI\-Based Products](ami-products.md)\. For information about completing AWS CloudFormation templates for your product, see [AMI\-Based Delivery Using AWS CloudFormation](cloudformation.md)\.
+For information about creating AMIs for your product, see [AMI\-based products](ami-products.md)\. For information about completing AWS CloudFormation templates for your product, see [AMI\-based delivery using AWS CloudFormation](cloudformation.md)\.
 
 When you define your serverless application, you use an AWS Serverless Application Model \(AWS SAM\) template that you store in the AWS Serverless Application Repository\. AWS SAM is an open\-source framework for building serverless applications\. During deployment, AWS SAM transforms and expands the SAM syntax into AWS CloudFormation syntax\. The AWS Serverless Application Repository is a managed repository for serverless applications\. It makes it possible for you to store and share reusable applications so customers can assemble and deploy serverless architectures\. To create and offer this type of product, complete the following steps:
 
 **Topics**
-+ [Create a Serverless Application](#cloudformation-serverless-application-procedure-step-1)
-+ [Publish Your Application to the Repository](#cloudformation-serverless-application-procedure-step-2)
-+ [Create the AWS CloudFormation Template](#cloudformation-serverless-application-procedure-step-3)
-+ [Submit Your AWS CloudFormation Templates and Config Files](#cloudformation-serverless-application-procedure-step-4)
-+ [Update Your AWS Serverless Application Repository Application Permissions](#cloudformation-serverless-application-procedure-step-5)
-+ [Share Your AMI](#cloudformation-serverless-application-procedure-step-6)
-+ [Submit Your AWS CloudFormation Product with AMI and Serverless Application](#cloudformation-serverless-application-procedure-step-7)
++ [Create a serverless application](#cloudformation-serverless-application-procedure-step-1)
++ [Publish your application to the repository](#cloudformation-serverless-application-procedure-step-2)
++ [Create the AWS CloudFormation template](#cloudformation-serverless-application-procedure-step-3)
++ [Submit your AWS CloudFormation templates and config files](#cloudformation-serverless-application-procedure-step-4)
++ [Update your AWS Serverless Application Repository application permissions](#cloudformation-serverless-application-procedure-step-5)
++ [Share your AMI](#cloudformation-serverless-application-procedure-step-6)
++ [Submit your AWS CloudFormation product with AMI and serverless application](#cloudformation-serverless-application-procedure-step-7)
 
 AWS Marketplace reviews and validates your product before your listing is created\. We will email you if there are issues you must resolve before the offer is listed\.
 
 As part of fulfilling a subscription, we copy the AMIs, serverless applications, and AWS CloudFormation templates to an AWS Marketplace\-owned repository in each AWS Region\. When a customer subscribes to your product, we give your customer access, and also notify them when you update your software\.
 
-## Create a Serverless Application<a name="cloudformation-serverless-application-procedure-step-1"></a>
+## Create a serverless application<a name="cloudformation-serverless-application-procedure-step-1"></a>
 
 Your first step is to package the AWS Lambda functions used to create your serverless application\. Your application is a combination of Lambda functions, event sources, and other resources that work together to perform tasks\. A serverless application can be as simple as one Lambda function or contain multiple functions with other resources, such as APIs, databases, and event source mappings\.
 
@@ -69,7 +69,7 @@ Resources:
       RoleName: "SampleFunctionRole"
 ```
 
-## Publish Your Application to the Repository<a name="cloudformation-serverless-application-procedure-step-2"></a>
+## Publish your application to the repository<a name="cloudformation-serverless-application-procedure-step-2"></a>
 
 To publish an application, you first upload the application code\. Store your code artifacts \(for example, Lambda functions, scripts, configuration files\) in an Amazon S3 bucket your account owns\. When you upload your application, it is initially set to private, meaning it is only available to the AWS account that created it\. You'll need to create an IAM policy that grants AWS Serverless Application Repository permissions to access the artifacts you uploaded\.
 
@@ -126,7 +126,7 @@ To publish subsequent versions of your application:
 
 For more information, see [Publishing serverless Applications Using the AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template-publishing-applications.html)\.
 
-## Create the AWS CloudFormation Template<a name="cloudformation-serverless-application-procedure-step-3"></a>
+## Create the AWS CloudFormation template<a name="cloudformation-serverless-application-procedure-step-3"></a>
 
 To build your AWS CloudFormation templates, you must meet the template prerequisites and provide the required input and security parameters\. For more information, see [Template Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) in the *AWS CloudFormation User Guide*\.
 
@@ -209,7 +209,7 @@ Resources:
 Transform: AWS::Serverless-2016-10-31
 ```
 
-## Submit Your AWS CloudFormation Templates and Config Files<a name="cloudformation-serverless-application-procedure-step-4"></a>
+## Submit your AWS CloudFormation templates and config files<a name="cloudformation-serverless-application-procedure-step-4"></a>
 
 To submit your AWS CloudFormation template and config/scripts files, grant AWS Marketplace permissions to read the Amazon S3 bucket where these files are stored\. To do so, update your bucket policy to include following permissions\.
 
@@ -230,7 +230,7 @@ To submit your AWS CloudFormation template and config/scripts files, grant AWS M
 }
 ```
 
-## Update Your AWS Serverless Application Repository Application Permissions<a name="cloudformation-serverless-application-procedure-step-5"></a>
+## Update your AWS Serverless Application Repository application permissions<a name="cloudformation-serverless-application-procedure-step-5"></a>
 
 To submit your AWS Serverless Application Repository application to AWS Marketplace, you must grant AWS Marketplace permissions to read your application\. To do that, add permissions to a policy associated with your serverless application\. There are two ways to update your application policy\.
 + Go to the [AWS Serverless Application Repository](https://serverlessrepo.aws.amazon.com)\. Find your serverless application\. From **Share with AWS accounts**, choose **Add**\. In the input text field, provide the following service principal, `assets.marketplace.amazonaws.com`, and then choose **Save**\.
@@ -243,15 +243,15 @@ To submit your AWS Serverless Application Repository application to AWS Marketpl
   --statements Principals=assets.marketplace.amazonaws.com,Actions=Deploy
   ```
 
-## Share Your AMI<a name="cloudformation-serverless-application-procedure-step-6"></a>
+## Share your AMI<a name="cloudformation-serverless-application-procedure-step-6"></a>
 
 All AMIs built and submitted to AWS Marketplace must adhere to all product policies\. Self\-service AMI scanning is available in the AWS Marketplace Management Portal\. With this feature, you can initiate scans of your AMIs and receive scanning results quickly \(typically, in less than an hour\) with clear feedback in a single location\. After your AMI has been successfully scanned, submit the AMI for processing by the AWS Marketplace Seller and Catalog Operations team by uploading your product load form\. 
 
-## Submit Your AWS CloudFormation Product with AMI and Serverless Application<a name="cloudformation-serverless-application-procedure-step-7"></a>
+## Submit your AWS CloudFormation product with AMI and serverless application<a name="cloudformation-serverless-application-procedure-step-7"></a>
 
 After you've performed all the previous steps, you're ready to submit your product\. Keep the following mind before you submit your product:
 + You must provide a topology diagram for each template\. The diagram must use the AWS product icons for each AWS service deployed through the AWS CloudFormation template, and it must include metadata for the services\. To download our official AWS architecture icons, see [AWS Architecture Icons](https://aws.amazon.com/architecture/icons)\.
-+ The infrastructure cost estimate for each template displayed to customers is based on an estimate that you provide by using the [AWS Simple Monthly Calculator](https://calculator.s3.amazonaws.com/index.html)\. The estimate should include the list of services to be deployed as part of the template, along with the default values for a typical deployment\.
++ The infrastructure cost estimate for each template displayed to customers is based on an estimate that you provide by using the [AWS Simple Monthly Calculator](https://calculator.s3.amazonaws.com/calc5.html)\. The estimate should include the list of services to be deployed as part of the template, along with the default values for a typical deployment\.
 + Complete the product load form\. You can find the product load form from the AWS Marketplace Management Portal\. A different product load form is required for single AMI products and multiple AMI products\. In the product load form, you will provide a public URL to your AWS CloudFormation template\. AWS CloudFormation templates must be submitted in the form of a public URL\.
 + Use the AWS Marketplace Management Portal to submit your listing\. From **Assets**, choose **File upload**, attach your file, and then choose **Upload**\. After we receive your template and metadata, we start processing your request\.
 

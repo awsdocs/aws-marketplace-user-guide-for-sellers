@@ -6,7 +6,7 @@
 
 ## Introduction<a name="introduction"></a>
 
- As an AWS Marketplace vendor, you can provide AWS customers access to your service through an Amazon VPC endpoint\. This approach provides customers with access to your service across the Amazon network using [AWS PrivateLink](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html#what-is-privatelink) technology\. If you use AWS Marketplace to create and deliver this offering, your customer will be able to discover your service in AWS Marketplace\. Your customer will also find your product in the list of available services for creating a VPC endpoint\. 
+ As an AWS Marketplace seller, you can provide AWS customers access to your service through an Amazon VPC endpoint\. This approach provides customers with access to your service across the Amazon network using [AWS PrivateLink](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html#what-is-privatelink) technology\. If you use AWS Marketplace to create and deliver this offering, your customer will be able to discover your service in AWS Marketplace\. Your customer will also find your product in the list of available services for creating a VPC endpoint\. 
 
  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/private-endpoint-diagram.png) 
 
@@ -22,7 +22,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 
  Your product is created as a software as a service \(SaaS\) product\. Your customer can discover your product through the AWS Marketplace website\. Metering and billing will be the same as with other AWS Marketplace SaaS products\. To provide your customer access to your service offering, you whitelist their account ID\. They establish a VPC endpoint \(configured as an interface\) within their VPC to connect to you\. Only customers who are subscribed and whitelisted will see your product when they create a VPC endpoint\. 
 
-## Configuring Your Product<a name="configuring-your-product"></a>
+## Configuring your product<a name="configuring-your-product"></a>
 
  To configure your product to be available through an Amazon VPC endpoint: 
 
@@ -44,7 +44,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 
     **Note**: You can use a supported SDK or this CLI command to automate the whitelisting of accounts: aws vpcev2 modify\-vpc\-endpoint\-service\-permissions \-\-service\-id vpce\-svc\-0123456789abcdef1 \-\-add\-allowed\-principals arn:aws:iam::111111111111:root arn:aws:iam::222222222222:root\. 
 
-## Submitting Your Product to AWS Marketplace<a name="submitting-your-product-to-aws-marketplace"></a>
+## Submitting your product to AWS Marketplace<a name="submitting-your-product-to-aws-marketplace"></a>
 
  During the process of publishing your service to AWS Marketplace, you will work with the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team to verify settings are correct and the customer has a good experience\. To submit your PrivateLink\-enabled product: 
 
@@ -58,7 +58,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 
        The AWS Marketplace MCO team will verify your company’s identity \(your company name\) and the DNS name to use for the service you are registering \(such as api\.vpce\.example\.com\)\. After the information is verified, the DNS name will override the default base endpoint DNS name assigned in Section 2, step 4\. 
 
-## Customer Access to VPC Endpoints<a name="customer-access-to-vpc-endpoints"></a>
+## Customer access to VPC endpoints<a name="customer-access-to-vpc-endpoints"></a>
 
  AWS Marketplace customers will discover your service in a way that is similar to the way they discover other AWS services when creating a VPC endpoint\. Customers creating a VPC endpoint cannot discover your service unless: 
 +  You follow the process described in Section 3 to create or use an existing product\. 
@@ -76,7 +76,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 1.  Use the AWS Command Line Interface \(CLI\), API, or the Amazon VPC console to discover your service and then establish a VPC endpoint to connect to your service in the subnets and AZs your customers choose\. The endpoints will appear as elastic network interfaces in the subnets\. Local IP addresses and region and zonal DNS names are assigned to the endpoints\. 
 
 
-|  **Client\-side DNS Name**  |  **Name**  | 
+|  **Client\-side DNS name**  |  **Name**  | 
 | --- | --- | 
 |   Regional   |   Vpce<0dc9a211a78c90f8>\.api\.vpce\.example\.com   | 
 |   IAD2 \(1a \)   |   **us\-east\-1a**\-Vpce<0dc9a211a78c90f8>\.api\.vpce\.example\.com   | 
@@ -85,7 +85,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
  If you provided a default private DNS name and if the customer chooses **Enable Private DNS Name** \(associated a private hosted zone\) when creating a VPC endpoint, the customer will see the regional default private DNS name to connect to your service: 
 
 
-|  **Name**  |  **Alias**  |  **Alias Hosted Zone ID**  |  **\(Notes\)**  | 
+|  **Name**  |  **Alias**  |  **Alias hosted zone ID**  |  **\(Notes\)**  | 
 | --- | --- | --- | --- | 
 |  api\.example\.com  |  vpce<0dc9a211a78c90f8>\. api\.vpce\.example\.com  |  Z00AABBCCDD  |   IAD1   IAD2   | 
 
@@ -93,7 +93,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 
  Use the following checklists to ensure that you have completed the configuration and testing of your product before you submit it to the MCO team\. 
 
-### Product Creation Checklist<a name="product-creation-checklist"></a>
+### Product creation checklist<a name="product-creation-checklist"></a>
 +  Create \(or use an existing\) VPC and then configure it\. 
 +  Create and configure a network load balancer within the VPC\. 
 +  Register your service with your network load balancer by creating a VPC endpoint service\. 
@@ -105,7 +105,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
   +  AWS Marketplace customer’s AWS account ID\. 
   +  Whitelist the customer’s AWS account ID \(for example, account: arn:aws:iam::123456789012:root\)\. 
 
-### Product Testing<a name="product-testing"></a>
+### Product testing<a name="product-testing"></a>
 +  Verify your service is configured and reachable\. 
 +  Verify your service is reachable over the network load balancer\. 
 +  Verify your customer’s ability to create a VPC endpoint and access your service\. \(Use an account you own, but different from the one used to set up your service\.\) 

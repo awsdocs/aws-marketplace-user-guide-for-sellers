@@ -1,4 +1,4 @@
-# Pricing for SaaS Subscriptions<a name="saas-subscriptions"></a>
+# Pricing for SaaS subscriptions<a name="saas-subscriptions"></a>
 
  For SaaS subscriptions, AWS Marketplace bills your customers based on the metering records that you send to us\. 
 

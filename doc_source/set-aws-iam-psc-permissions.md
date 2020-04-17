@@ -1,4 +1,4 @@
-# AWS Marketplace Product Support Connection Account Permissions<a name="set-aws-iam-psc-permissions"></a>
+# AWS Marketplace Product Support Connection account permissions<a name="set-aws-iam-psc-permissions"></a>
 
  The AWS Marketplace product support connection feature makes it possible for customers to provide contact information in the AWS Marketplace website so that you can offer them support for your products\. AWS Marketplace shares the data that the customer provides to you through an API\. Customers can choose to add contact details during or after they purchase a product that you enrolled in AWS Marketplace product support connection\. You use the API to retrieve the customer's contact data, along with relevant product subscription details\.
 
@@ -14,7 +14,7 @@
 
 1.  \(Recommended\) Make a test call to the service using the [AWS Command Line Interface \(AWS CLI\)](https://aws.amazon.com/cli/)\. 
 
-For instructions, see the [On\-boarding Guide](commerce-analytics-service.md#on-boarding-guide)\. 
+For instructions, see the [Onboarding guide](commerce-analytics-service.md#on-boarding-guide)\. 
 
 **Note**  
 The IAM permissions required for product support connection are different from those required for commerce analytics service\. Product support connection requires that the IAM user can call the `marketplacecommerceanalytics:StartSupportDataExport` action\.

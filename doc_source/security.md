@@ -1,4 +1,4 @@
-# AWS Marketplace Security<a name="security"></a>
+# AWS Marketplace security<a name="security"></a>
 
 Cloud security at AWS is the highest priority\. As an AWS customer, you benefit from a data center and network architecture that is built to meet the requirements of the most security\-sensitive organizations\.
 
@@ -12,10 +12,10 @@ This documentation helps you understand how to apply the shared responsibility m
 To learn about security on AWS Data Exchange for data products, see [Security](https://docs.aws.amazon.com/data-exchange/latest/userguide/security.html) in the *AWS Data Exchange User Guide*\.
 
 **Topics**
-+ [Controlling Access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)
-+ [Policies and Permissions AWS Marketplace Providers](detailed-management-portal-permissions.md)
-+ [AWS Marketplace Commerce Analytics Service Account Permissions](set-aws-iam-cas-permissions.md)
-+ [AWS Marketplace Product Support Connection Account Permissions](set-aws-iam-psc-permissions.md)
-+ [Amazon SQS Permissions](set-aws-iam-sqs-permissions.md)
-+ [AWS Marketplace Metering and Entitlement Service APIs Permissions](iam-user-policy-for-aws-marketplace-actions.md)
-+ [AMI Security Policies](product-and-ami-policies.md)
++ [Controlling access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)
++ [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md)
++ [AWS Marketplace Commerce Analytics Service account permissions](set-aws-iam-cas-permissions.md)
++ [AWS Marketplace Product Support Connection account permissions](set-aws-iam-psc-permissions.md)
++ [Amazon SQS permissions](set-aws-iam-sqs-permissions.md)
++ [AWS Marketplace metering and entitlement API permissions](iam-user-policy-for-aws-marketplace-actions.md)
++ [AMI security policies](product-and-ami-policies.md)

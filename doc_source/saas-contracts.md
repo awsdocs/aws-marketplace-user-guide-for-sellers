@@ -1,4 +1,4 @@
-# Pricing for SaaS Contracts<a name="saas-contracts"></a>
+# Pricing for SaaS contracts<a name="saas-contracts"></a>
 
  For SaaS contracts, AWS Marketplace bills your customers upfront or by the payment schedule that you define, based on the contract between you and your customer\. After that point, they're entitled to use those resources\. For example, a customer might purchase a quantity of users who can use your application for a 1\-month time period or for 1\-year, 2\-year, or 3\-year time periods\. For additional usage above their contract, AWS Marketplace bills your customers based on the metering records received by us through the AWS Marketplace Metering Service\. 
 
@@ -33,14 +33,14 @@ For **Enable Tiered Dimensions**, choose how you want you customers to be able t
 +  **Dimension Display Name**: – The customer\-facing name of a dimension\. This name should help the customer understand the dimension for the product\. The display name is visible on the AWS Marketplace product page to customers \(e\.g\., AdminUsers, Silver Tier, Premier Bundle\)\. The name should be user\-friendly and can be no more than 24 characters\. After the product is published, you will be able to change this display name\. 
 +  **Dimension Description**: – The customer\-facing description of a dimension that provides additional information about the dimension for the product\. The description \(up to 10 endpoints, 100–250 API calls, etc\.\) can be no more than 70 characters and should be user\-friendly\. 
 +  **Dimension \- Monthly Price** – The software charge per unit for the 1\-month option for this dimension\. This ﬁeld supports three decimal places\. 
-+  **Dimension \- 1 Year Price** – The software charge per unit for the 12\-month option for this dimension\. This ﬁeld supports three decimal places\. It's not a monthly or yearly charge\. The price must reﬂect the 12\-month one\-time charge price\. 
++  **Dimension \- 1 Year Price** – The software charge per unit for the 12\-month option for this dimension\. This ﬁeld supports three decimal places\. It's not a monthly charge\. The price must reﬂect the 12\-month one\-time charge price\. 
 +  **Dimension \- 2 Years Price** – The software charge per unit for the 24\-month option for this dimension\. This ﬁeld supports three decimal places\. It's not a monthly or yearly charge\. The price must reﬂect the 24\-month one\-time charge price\. 
 +  **Dimension \- 3 Years Price** – The software charge per unit for the 36\-month option for this dimension\. This ﬁeld supports three decimal places\. It's not a monthly or yearly charge\. The price must reﬂect the 36\-month one\-time charge price\. 
 
 
 **Example: Data storage application**  
 
-|   |  Monthly Price  |  12\-Month Price  |  24\-Month Price  |  Pay\-as\-You\-Go Price for Additional Usage  | 
+|   | Monthly price  | 12\-month price  | 24\-month price  | Pay\-as\-you\-go price for additional usage  | 
 | --- | --- | --- | --- | --- | 
 |  Unencrypted data \(GB\)  |  $1\.50/GB  |  $16\.00/GB  |  $30\.00/GB  |  $0\.1/GB per day  | 
 |  Encrypted data \(GB\)  |  $1\.55/GB  |  $16\.60/GB  |  $31\.20/GB  |  $0\.11/GB per day  | 
@@ -48,7 +48,7 @@ For **Enable Tiered Dimensions**, choose how you want you customers to be able t
 
 **Example: Log monitoring product**  
 
-|   |  Monthly Price  |  12\-Month Price  |  Pay\-as\-You\-Go Price for Additional Usage  | 
+|   | Monthly price  | 12\-month price  | Pay\-as\-you\-go price for additional usage  | 
 | --- | --- | --- | --- | 
 |  Basic \(10 hosts monitored, 5 containers monitored\)  |  $100  |  $1000  |   | 
 |  Standard \(20 hosts monitored, 10 containers monitored\)  |  $200  |  $2000  |   | 

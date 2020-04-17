@@ -1,19 +1,19 @@
-# Custom Metering<a name="container-metering-meterusage"></a>
+# Custom metering<a name="container-metering-meterusage"></a>
 
 AWS Marketplace container products can have custom metering on up to 24 different pricing dimensions per product\. Each dimension can have a long term contract price associated with it\. Custom metering is enabled by integrating your container product with the AWS Marketplace Metering Service\. If you want to define your own pricing units and custom metering for that usage to us for billing, integrate with [https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html)\.
 
 Price dimensions are defined in two locations, once in the product load form and once through the `MeterUsage` API\. This two factor method ensures that the subsequent offers are working as intended before they're made available to the public\.
 
-To setup custom metering, you'll need to choose the usage category, the unit type, and pricing dimensions\. The category helps subscribers understand what your product is and how to use it\. The unit type defines the unit of measure for billing \(for example, bandwidth measured in GBps or MBps, the number of hosts, or data measured in MB, GB, or TB\)\. If your product pricing doesn't fit with any of the predefined categories or unit types, you can choose the generic `units` category and use the dimension description to describe what the unit is\.
+To setup custom metering, you'll need to choose the usage category, the unit type, and pricing dimensions\. The category helps buyers understand what your product is and how to use it\. The unit type defines the unit of measure for billing \(for example, bandwidth measured in GBps or MBps, the number of hosts, or data measured in MB, GB, or TB\)\. If your product pricing doesn't fit with any of the predefined categories or unit types, you can choose the generic `units` category and use the dimension description to describe what the unit is\.
 
-The pricing dimensions represents a feature or service that you've set a per\-unit price for \(for example users, scans, vCPUs, or deployed agents\)\. Pricing dimensions are public, however you can still define private and BYOL offers for public products\. Don't send pricing in the metering records\. You meter the quantity of units, and we use that along with the prices you defined when creating your product to compute the subscriber's bill\.
+The pricing dimensions represents a feature or service that you've set a per\-unit price for \(for example users, scans, vCPUs, or deployed agents\)\. Pricing dimensions are public, however you can still define private and BYOL offers for public products\. Don't send pricing in the metering records\. You meter the quantity of units, and we use that along with the prices you defined when creating your product to compute the buyer's bill\.
 
-We recommend that you send a metering record every hour, however you can aggregate usage over daily or monthly periods as well\. If you experience an outage you can aggregate subscriber software use and send it in the following hours metering\. Note that you can't send more than one record per hour\.
+We recommend that you send a metering record every hour, however you can aggregate usage over daily or monthly periods as well\. If you experience an outage you can aggregate buyer software use and send it in the following hours metering\. Note that you can't send more than one record per hour\.
 
 **Important**  
-Free trial and prepaid entitlement are tracked on an hourly level so sending these records in separately might lead to the subscriber being overcharged\.
+Free trial and prepaid entitlement are tracked on an hourly level so sending these records in separately might lead to the buyer being overcharged\.
 
-## Custom Metering Prerequisites<a name="custom-metering-prereqs"></a>
+## Custom metering prerequisites<a name="custom-metering-prereqs"></a>
 
 Before publishing the product, you must do the following:
 
@@ -27,16 +27,16 @@ Before publishing the product, you must do the following:
 
 1. Make a test call to the `MeterUsage` action with a record for all of the pricing dimensions you define\.
 
-## Product Load Form For Custom Metering<a name="custom-metering-product-load-form"></a>
+## Product load form for custom metering<a name="custom-metering-product-load-form"></a>
 
 When filling out the product load form for custom metering each product can have up to 24 dimensions\. Those dimensions are defined in these fields:
-+ `Dimension Name` – The name used when your container application is sending metering records to the AWS Marketplace Metering Service\. This name indicates which dimension your subscriber will use\. This name is visible in billing reports\. After you set the name, you can't change it\.
-+ `Dimension Description` – The subscriber\-facing description for the dimension\. The description can be no more than 70 characters\. After the product is published publicly to subscribers this field can't be changed\.
-+ `Dimension Rate` –The software price per unit for this product when subscribers pay as they go\. This ﬁeld supports three decimal places\.
-+ `Dimension Long Term Rate` – The software price per unit for this product when subscribers pay upfront for a long term contract\.
++ `Dimension Name` – The name used when your container application is sending metering records to the AWS Marketplace Metering Service\. This name indicates which dimension your buyer will use\. This name is visible in billing reports\. After you set the name, you can't change it\.
++ `Dimension Description` – The buyer\-facing description for the dimension\. The description can be no more than 70 characters\. After the product is published publicly to buyers, this field can't be changed\.
++ `Dimension Rate` –The software price per unit for this product when buyers pay as they go\. This ﬁeld supports three decimal places\.
++ `Dimension Long Term Rate` – The software price per unit for this product when buyers pay upfront for a long term contract\.
 + `Long Term Duration (Days)` – The duration, in days, for the long term contract\.
 
-## Testing MeterUsage Integration and Preview Mode<a name="custom-metering-preview-mode"></a>
+## Testing MeterUsage integration and preview mode<a name="custom-metering-preview-mode"></a>
 
 Use the `MeterUsage` action to test your integration before submitting your image to AWS Marketplace for publishing\.
 
@@ -47,7 +47,7 @@ If your product supports both Amazon ECS and Amazon EKS, you only need to launch
 
 You can't fully test the integration until your product is published with all the required metadata and pricing information\. If requested, the AWS Marketplace catalog operations team can verify receipt of your metering records in preview mode\.
 
-## Error Handling for MeterUsage<a name="custom-metering-entitlement-error-handling"></a>
+## Error handling for MeterUsage<a name="custom-metering-entitlement-error-handling"></a>
 
 If your container image integrates with the `MeterUsage` action and receives an exception other than `ThrottlingException` at container startup, you should terminate the container to prevent unauthorized use\.
 
