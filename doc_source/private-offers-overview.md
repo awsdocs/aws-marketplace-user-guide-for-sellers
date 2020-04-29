@@ -2,11 +2,12 @@
 
 Private offers are a purchasing program that allows sellers and buyers to negotiate custom prices and end user licensing agreement \(EULA\) terms for software purchases in AWS Marketplace\.
 
+**Tip**  
+You can negotiate EULA terms for each private offer, or you can use or amend [standardized license terms](standardized-license-terms.md) to simplify the procurement process\.
+
 ## How private offers work<a name="private-offer-how-it-works"></a>
 
 You can create and manage all of your private offers from the **Offers** page in the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management)\. You specify the product that the offer is being made for and the AWS account ID \(or IDs\) for the buyer you're creating the offer for\. AWS Marketplace Management Portal generates a unique ID and URL for the offer\.
-
-In addition to private offers, you can also offer enterprise contract private offers, which use the enterprise contract EULA\.
 
  When you create a private offer, you can extend the offer to up to 25 accounts\. The offer is visible only to the accounts that you create the offer for\. Buyers can't view the offer unless you extend the offer to either their linked account or to their master payer account\. You can't force service limits in the offer, so the buyer can use as much of your product at the negotiated prices as they want, unless you enforce a limit in your product\.
 
@@ -83,7 +84,7 @@ This is the date that the offer becomes null and void\. On that date, the buyer 
 
 1.  Choose **REVIEW OFFER**\. 
 
-1.  On the **Review Offer** page, verify the offer information and the PDF file\. Then do one of the following:
+1.  On the **Review Offer** page, verify the offer information and the PDF file, and then do one of the following:
    +  If the offer is correct, choose **EXTEND OFFER**\. 
    +  If the offer is incorrect, choose **EDIT OFFER** and make any required changes\. 
 

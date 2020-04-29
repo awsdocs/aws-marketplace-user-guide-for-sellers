@@ -29,6 +29,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Consulting partner private offers](consulting-partner-offers.md)
          + [ISV setup](consulting-partner-isv-info.md)
          + [Consulting partner setup](consulting-partner-info.md)
+   + [Standardized license terms](standardized-license-terms.md)
    + [Categories and metadata](categories-and-metadata.md)
    + [Search engine optimization](search-engine-optimization.md)
 + [AWS Marketplace for Desktop Applications (AMDA)](amda.md)

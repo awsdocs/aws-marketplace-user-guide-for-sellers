@@ -4,6 +4,7 @@ The following table describes the documentation for this release of the *AWS Mar
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Standardized license terms are now available](https://docs.aws.amazon.com/marketplace/latest/userguide/standardized-license-terms.html) | You can offer standardized license terms in place of custom EULAs to simplify the contracting process\. | April 28, 2020 | 
 | [Australia and New Zealand are eligible jurisdictions](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html#additional-seller-requirements-for-paid-products) | The following are now eligible to become sellers on AWS Marketplace: \(i\) Permanent residents and citizens of Australia \(AU\) New Zealand \(NZ\) or \(ii\) business entities organized or incorporated in one of those areas\. | April 2, 2020 | 
 | [Container products now support custom metering and pricing enhancements](/marketplace/latest/userguide/entitlement-and-metering-for-paid-products.html) | If you want to define your own pricing units and meter that usage to us for billing, integrate with the AWS Marketplace Metering Service's `meterUsage` action\. | November 14, 2019 | 
 | [AWS Marketplace supports data products through AWS Data Exchange](/marketplace/latest/userguide/data-products.html) | You can now provide data products in AWS Marketplace\. | November 13, 2019 | 
