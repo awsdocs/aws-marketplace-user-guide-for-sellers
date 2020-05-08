@@ -1,8 +1,8 @@
 # AMI\-based products<a name="ami-products"></a>
 
-Each product in AWS Marketplace is assigned a unique product ID\. This product ID is used to identify your product in the AWS Marketplace catalog, in customer billing, and in seller reports\.
+[Amazon Machine Images \(AMIs\)](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#AmazonMachineImage) provide the information required to launch an Amazon EC2 instance\.
 
-A unique product code is assigned to all AMIs submitted to AWS Marketplace\. Product codes are not product IDs\. Sellers can obtain the product code while they develop their software so it can be used for extra security, such as validating the product code at product start\. you cannot make API calls to an AMI's product code until the product has been published into a limited state for testing\. 
+Each product in AWS Marketplace is assigned a unique product ID\. This product ID is used to identify your product in the AWS Marketplace catalog, in customer billing, and in seller reports\. A unique product code is assigned to all AMIs submitted to AWS Marketplace\. Product codes are not product IDs\. Sellers can obtain the product code while they develop their software so it can be used for extra security, such as validating the product code at product start\. you cannot make API calls to an AMI's product code until the product has been published into a limited state for testing\. 
 
 Product codes are propagated automatically as customers work with the software\. For example, a customer subscribes and launches an AMI, configures it, and produces a new AMI\. The new AMI still contains the original product code, so correct billing and permissions remains in place\. For more information, see [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
 

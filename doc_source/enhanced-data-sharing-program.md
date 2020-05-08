@@ -4,7 +4,7 @@
 
 ## Requirements for participation<a name="requirements-for-aws-marketplace-seller-participation"></a>
 
- This program requires that the data is used only to activate and motivate AWS Marketplace seller field sales through formal sales compensation plans\. For more information about the program, including how to enroll, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. Select the **Commercial Marketplace**, **Reporting**, **Enhanced Data Sharing \(EDS\)** options of the contact form\.
+ This program requires that the data is used only to activate and motivate AWS Marketplace seller field sales through formal sales compensation plans\. For more information about the program, including how to enroll, contact us at mpcustdesk@amazon\.com\. 
 
 Enrollment requirements include:
 +  Annual pricing on all of your AWS Marketplace products\. 

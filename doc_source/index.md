@@ -91,4 +91,4 @@ Amazon's trademarks and trade dress may not be used in
    + [AWS Marketplace metering and entitlement API permissions](iam-user-policy-for-aws-marketplace-actions.md)
    + [AMI security policies](product-and-ami-policies.md)
 + [Document history](document-history.md)
-+ [AWS Glossary](glossary.md)
++ [AWS glossary](glossary.md)

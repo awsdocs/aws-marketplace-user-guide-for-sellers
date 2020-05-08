@@ -8,7 +8,7 @@ This report is available on the AWS Marketplace Management Portal under the **Re
 
 ## Publication schedule<a name="publication-schedule-3"></a>
 
-This report is published 3 days after a disbursement has been initiated to transfer funds to your bank\. In general, this is a report for sellers who receive disbursements on a monthly cadence\. If there is no disbursement initiated, no disbursement report is generated\.
+This report is published 3\-5 days after a disbursement has been initiated to transfer funds to your bank\. In general, this is a report for sellers who receive disbursements on a monthly cadence\. If there is no disbursement initiated, no disbursement report is generated\.
 
 **Topics**
 + [Publication schedule](#publication-schedule-3)
