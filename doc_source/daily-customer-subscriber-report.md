@@ -32,6 +32,8 @@ The report has two sections: one for hourly and monthly subscriptions and one fo
 |  Solution Title  |  The name of the solution\.  | 
 |  Solution ID  |  The unique identifier for the solution\.  | 
 |  Payer Reference ID  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
+| Reseller account ID | The unique identifier for the consulting partner reseller\. | 
+| Reseller account name | The name of the consulting partner reseller\. | 
 
 ## Section 2: Variable length subscriptions<a name="section-2-annual-subscriptions"></a>
 
@@ -53,3 +55,5 @@ The report has two sections: one for hourly and monthly subscriptions and one fo
 |  Solution Title  |  The name of the solution\.  | 
 |  Solution ID  |  The unique identifier for the solution\.  | 
 |  Payer Reference ID  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\. | 
+| Reseller account ID | The unique identifier for the consulting partner reseller\. | 
+| Reseller account name | The name of the consulting partner reseller\. | 
