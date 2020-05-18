@@ -19,3 +19,4 @@ To learn about security on AWS Data Exchange for data products, see [Security](h
 + [Amazon SQS permissions](set-aws-iam-sqs-permissions.md)
 + [AWS Marketplace metering and entitlement API permissions](iam-user-policy-for-aws-marketplace-actions.md)
 + [AMI security policies](product-and-ami-policies.md)
++ [Logging AWS Marketplace API calls with AWS CloudTrail](logging-aws-marketplace-api-calls-with-aws-cloudtrail.md)

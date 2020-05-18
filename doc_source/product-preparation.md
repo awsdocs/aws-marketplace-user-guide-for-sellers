@@ -38,7 +38,7 @@ The following list describes the ways you can deliver products, how AWS Marketpl
 
   Buyers find these products using the **SaaS** delivery method filter\.
 
-  For more information, see [Software\-as\-a\-service–based products](software-as-a-service-based-products-saas.md)\.
+  For more information, see [Software as a service \(SaaS\)–based products](saas-products.md)\.
 
 Each delivery method has several options for packaging, pricing, and delivery\. Some methods are not available to you as a seller on AWS Marketplace until you register for the program supporting it\. You can create products with a standard list price and end user license agreement \(EULA\), and you can create private offers for individual customers with custom pricing and EULAs\. If you need to make additional changes to the terms of the contract, you can work with the AWS Marketplace team to create a custom private offer\. 
 

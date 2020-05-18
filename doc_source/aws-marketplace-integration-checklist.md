@@ -1,6 +1,6 @@
-# AWS Marketplace integration checklist<a name="aws-marketplace-integration-checklist"></a>
+# SaaS product integration checklist<a name="aws-marketplace-integration-checklist"></a>
 
-Before submitting your product to AWS Marketplace, use this checklist to verify you have completed the required configuration\.
+Before your SaaS product goes live, use this checklist to verify that you have completed the required configuration\.
 
 
 |  **Category**  |  **Requirements**  | 

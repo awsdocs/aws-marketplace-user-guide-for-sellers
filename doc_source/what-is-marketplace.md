@@ -26,7 +26,7 @@ For more information about creating the product types in AWS Marketplace, see th
 + [AMI\-based products](ami-products.md)
 + [Container\-based products](container-based-products.md)
 + [Machine learning products](machine-learning-products.md)
-+ [Software\-as\-a\-service–based products](software-as-a-service-based-products-saas.md)
++ [Software as a service \(SaaS\)–based products](saas-products.md)
 
 For more information about data products, see [What Is AWS Data Exchange?](https://docs.aws.amazon.com/data-exchange/latest/userguide/what-is.html) in the *AWS Data Exchange User Guide*\.
 

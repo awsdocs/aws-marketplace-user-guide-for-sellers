@@ -8,7 +8,7 @@ To create a consulting partner private offer, you must be registered through the
 
 If you're new to providing products on AWS Marketplace, the following topics can help you better understand the kinds of products available:
 + [AMI\-based products](ami-products.md)
-+ [Software\-as\-a\-service–based products](software-as-a-service-based-products-saas.md)
++ [Software as a service \(SaaS\)–based products](saas-products.md)
 
 ## Putting an agreement in place with an ISV<a name="consulting-partner-isv-agreement"></a>
 

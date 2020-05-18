@@ -1,6 +1,0 @@
-# Creating your SaaS product<a name="listing-your-saas-product"></a>
-
-To create a new SaaS product, log in to the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) and choose **Products** and then choose **SaaS** from the dropdown menu\. On the **SaaS products** page, choose **SaaS Subscriptions** or **SaaS Contracts** and provide the following information:
-+ Your business name, product title, product description, product logo, EULA, highlights, product category, search keywords, resources, support, refund policy\.
-+ Accounts to Whitelist – The AWS account ID or IDs that you will use for testing your product integration\. If you own multiple accounts that you want to whitelist to preview this product, enter all of the accounts as a comma\-separated list\. The account that you're using to create this product request is whitelisted by default\. 
-+ SaaS URL – The URL that customers land on after subscribing to your product on AWS Marketplace\. You must configure this page to accept a registration token from AWS that contains the customer’s billing identifier\. You use the billing identifier when interacting with the AWS Marketplace APIs, the AWS Marketplace Entitlement Service, and the AWS Marketplace Metering Service\. 
