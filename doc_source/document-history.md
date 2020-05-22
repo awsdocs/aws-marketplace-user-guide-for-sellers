@@ -1,12 +1,28 @@
 # Document history<a name="document-history"></a>
 
-The following table describes the documentation for this release of the *AWS Marketplace Buyer Guide*\.
+The following table describes the documentation for this release of the *AWS Marketplace Seller Guide*\.
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [AWS Marketplace supports data products through AWS Data Exchange](#document-history) | You can now subscribe to AWS Data Exchange data products in AWS Marketplace\. | November 13, 2019 | 
-| [AWS Marketplace supports paid hourly containers](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-what-is-aws-marketplace-for-containers.html) | AWS Marketplace now supports paid hourly containers running on Amazon Elastic Kubernetes Service \(Amazon EKS\)\. | September 25, 2019 | 
-| [Updated private offers on AWS Marketplace](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers.html) | Updated content to provide more information on accepting different types of private offers\. | March 29, 2019 | 
-| [Updated Security on AWS Marketplace](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-security.html) | Updated IAM policies information, restructured section for readability\. | March 25, 2019 | 
-| [Added content for the private marketplace feature](https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html) | Added content supporting the release of *Private Marketplace*\. | November 27, 2018 | 
-| [Initial release of the user guide for buyers](https://docs.aws.amazon.com/marketplace/latest/buyerguide/) | Initial release of the *AWS Marketplace Buyer Guide*\. | November 16, 2018 | 
+| [More information is available in data feeds](https://docs.aws.amazon.com/marketplace/latest/userguide/data-feed.html) | More information from reports is broken down into smaller data feeds to simplify finding and analyzing data\.  | May 21, 2020 | 
+| [Standardized license terms are now available](https://docs.aws.amazon.com/marketplace/latest/userguide/standardized-license-terms.html) | You can offer standardized license terms in place of custom EULAs to simplify the contracting process\. | April 28, 2020 | 
+| [Australia and New Zealand are eligible jurisdictions](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html#additional-seller-requirements-for-paid-products) | The following are now eligible to become sellers on AWS Marketplace: \(i\) Permanent residents and citizens of Australia \(AU\) New Zealand \(NZ\) or \(ii\) business entities organized or incorporated in one of those areas\. | April 2, 2020 | 
+| [Container products now support custom metering and pricing enhancements](/marketplace/latest/userguide/entitlement-and-metering-for-paid-products.html) | If you want to define your own pricing units and meter that usage to us for billing, integrate with the AWS Marketplace Metering Service's `meterUsage` action\. | November 14, 2019 | 
+| [AWS Marketplace supports data products through AWS Data Exchange](/marketplace/latest/userguide/data-products.html) | You can now provide data products in AWS Marketplace\. | November 13, 2019 | 
+| [Introducing the AWS Marketplace Catalog API service](#document-history) | The AWS Marketplace Catalog API service provides an API interface for approved sellers to programmatically manage their products\. | November 12, 2019 | 
+| [AWS Marketplace supports paid hourly containers](https://docs.aws.amazon.com/marketplace/latest/userguide/container-based-products.html) | AWS Marketplace now supports paid hourly containers running on Amazon Elastic Kubernetes Service \(Amazon EKS\)\. | September 25, 2019 | 
+| [Updated AMI product functionality](https://docs.aws.amazon.com/marketplace/latest/userguide/cloudformation-serverless-application.html) | You can now deploy AMIs and Lambda functions together using AWS CloudFormation\. | September 11, 2019 | 
+| [Added Security section](https://docs.aws.amazon.com/marketplace/latest/userguide/seller-security.html) | Consolidated security content under a new Security section\. | May 7, 2019 | 
+| [Updated AMI security policies](https://docs.aws.amazon.com/marketplace/latest/userguide/product-and-ami-policies.html) | Updated the security policies for AMI products | April 11, 2019 | 
+| [Added versioning information to Machine Learning Products section](#document-history) | Added content describing product version capability for machine learning products\. | March 21, 2019 | 
+| [Added Machine Learning Products section](https://docs.aws.amazon.com/marketplace/latest/userguide/machine-learning-products.html) | Added content for publishing machine learning products | November 28, 2018 | 
+| [Added Container\-Based Products section](https://docs.aws.amazon.com/marketplace/latest/userguide/container-based-products.html) | Added content for publishing container\-based products\. | November 27, 2018 | 
+| [Updated link for submitting seller help request](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html#additional-seller-requirements-for-paid-products) | Changed email address to webform address\. | October 22, 2018 | 
+| [Added SaaS contracts with consumption content](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-contracts.html) | Restructured SaaS content and added content to support release of SaaS contracts with consumption features\. | October 18, 2018 | 
+| [Added content about flexible payment schedule for private offers](https://docs.aws.amazon.com/marketplace/latest/userguide/flexible-payment-scheduler.html) | Added content to support release of flexible payment scheduler for private offers content\. | October 15, 2018 | 
+| [Updated IAM permissions content](https://docs.aws.amazon.com/marketplace/latest/userguide/marketplace-management-portal-user-access.html#detailed-management-portal-permissions) | Added content to support of new IAM permission for AMMP read only access\. | October 9, 2018 | 
+| [Added content about consulting partner private offers](https://docs.aws.amazon.com/marketplace/latest/userguide/consulting-partner-offers.html) | Added content to support Consulting Partner Private Offers feature release\. | October 9, 2018 | 
+| [Added content about private image builds](https://docs.aws.amazon.com/marketplace/latest/userguide/private-images.html) | Added content to support release of Private Image Build for AMIs feature\. | August 13, 2018 | 
+| [Added search engine optimization guidance for sellers\.](https://docs.aws.amazon.com/marketplace/latest/userguide/search-engine-optimization.html) | Added guidance for sellers who want to optimize their product for search\. | July 3, 2018 | 
+| [Updated link to AWS Marketplace logos](https://docs.aws.amazon.com/marketplace/latest/userguide/product-marketing.html#using-the-aws-marketplace-logo) | Updated link to point to new AWS Marketplace logos\. | June 12, 2018 | 
+| [Added seller guides](https://docs.aws.amazon.com/marketplace/latest/userguide/what-is-marketplace.html) | Converted all PDF seller guides to online content\. | May 9, 2018 | 
