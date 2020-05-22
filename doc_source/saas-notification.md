@@ -23,15 +23,13 @@ Each message for the SaaS product Amazon SNS notifications has the following for
 
 ## SaaS product Amazon SNS actions<a name="saas-sns-actions"></a>
 
-As a SaaS contract provider, you'll receive messages with the `aws-mp-entitlement-action` action\.
+As a SaaS contract provider, you'll receive messages with the `aws-mp-entitlement-action` action\. When you get one of these messages, a subsequent call to the [GetEntitlement](https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/API_GetEntitlements.html) AWS Marketplace Entitlement Service action is required to discover the content of the update\.
 
 If you provide a SaaS subscription product \(or a SaaS contract with consumption product\), you'll receive messages with the following actions:
 + `subscribe-success`
 + `subscribe-fail`
 + `unsubscribe-pending`
 + `unsubscribe-success`
-
-When you get one of these messages, a subsequent call to the [GetEntitlement](https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/API_GetEntitlements.html) AWS Marketplace Entitlement Service action is required to discover the content of the update\.
 
 ## Subscribing an SQS queue to the SNS topic<a name="subscribing-an-sqs-queue-to-the-sns-topic"></a>
 
