@@ -1,0 +1,3 @@
+# Metering\-enabled AMI products<a name="buyer-ami-metering-enabled-products"></a>
+
+Some products listed on AWS Marketplace are billed on usage measured by the software application\. Examples of metered usage dimensions include Data usage, Host/Agent usage, or Bandwidth usage\. These products require extra configuration to function correctly\. An IAM role with the permission to meter usage must be associated with your AWS Marketplace Amazon Elastic Compute Cloud \(Amazon EC2\) instance at the time of launch\. For more information about IAM roles for Amazon EC2, see [IAM Roles for Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)\. 

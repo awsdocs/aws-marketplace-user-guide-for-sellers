@@ -1,0 +1,5 @@
+# Using AWS free usage tier with AWS Marketplace<a name="buyer-aws-free-tier"></a>
+
+ To help new Amazon Web Services \(AWS\) customers get started in the cloud, AWS introduced a free usage tier\. The free tier can be used for anything you want to run in the cloud: launch new applications, test existing applications in the cloud, or simply gain hands\-on experience with AWS\. When the free usage period expires \(or if the application use exceeds the free usage tier limits\), you simply pay the standard, pay\-as\-you\-go service rates\. For more information, see [AWS Free Tier](http://aws.amazon.com/free/)\.
+
+ AWS Free Tier customers are eligible to use free AWS Marketplace software for up to 750 hours of Amazon Elastic Compute Cloud \(Amazon EC2\) usage each month for one year\. To get started, see [AWS Marketplace](http://aws.amazon.com/marketplace/)\.

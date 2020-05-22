@@ -1,0 +1,3 @@
+# Desktop products<a name="buyer-desktop-products"></a>
+
+AWS Marketplace for Desktop Apps is a section of AWS Marketplace where you can find applications to use with Amazon WorkSpaces\. AWS Marketplace for Desktop Apps includes applications you can subscribe to on a monthly basis, including applications from companies such as Microsoft, Corel, and Foxit Software, as well as popular open\-source titles\. 

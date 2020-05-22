@@ -1,0 +1,3 @@
+# AMI subscriptions<a name="buyer-ami-subscriptions"></a>
+
+Some AMI\-based software products offer an annual subscription pricing model, in which you make a one\-time upfront payment and then pay no hourly usage fee for the next 12 months\. You can apply one annual subscription to an AWS Marketplace software product to one Amazon EC2 instance\. You can also continue to launch and run AWS Marketplace software products using hourly pricing\. Charges for using Amazon EC2 and other services from AWS are separate and in addition to what you pay to purchase AWS Marketplace software products\.
