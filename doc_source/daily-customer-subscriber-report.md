@@ -33,7 +33,7 @@ The report has two sections: one for hourly and monthly subscriptions and one fo
 |  Solution ID  |  The unique identifier for the solution\.  | 
 |  Payer Reference ID  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
 | Reseller account ID | The unique identifier for the consulting partner reseller\. | 
-| Reseller account name | The name of the consulting partner reseller\. | 
+| Reseller account name | The name of the consulting partner reseller\.  | 
 
 ## Section 2: Variable length subscriptions<a name="section-2-annual-subscriptions"></a>
 
@@ -49,8 +49,10 @@ The report has two sections: one for hourly and monthly subscriptions and one fo
 |  Subscription Id  |  The ID for the subscription\.  | 
 |  Subscription Quantity  |  The total number of licenses that the customer purchased\.  | 
 |  Subscription Type  |  The type of subscription\.  | 
-|  Subscription Start Date  |  The date when the customer subscribed to the product, formatted as YYYY\-MM\-DD\.  | 
+| Subscription Intent | Whether this offer is an upgrade or renewal of an earlier offer\. | 
 |  Offer ID  |  The identifier for the offer that the buyer signed\.  | 
+|  Subscription Start Date  |  The date when the customer subscribed to the product, formatted as YYYY\-MM\-DD\.  | 
+| Previous Offer ID | The ID of the offer that preceded the upgrade or renewal offer, if one exists\.  | 
 |  Offer Visibility  |  Whether the offer is a public, private, or enterprise contract offer\.  | 
 |  Solution Title  |  The name of the solution\.  | 
 |  Solution ID  |  The unique identifier for the solution\.  | 

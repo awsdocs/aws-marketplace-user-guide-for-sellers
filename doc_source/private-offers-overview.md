@@ -14,13 +14,15 @@ You can create and manage all of your private offers from the **Offers** page in
 **Note**  
 The buyer isn't notified that you created a private offer\. You can provide the URL for the custom offer to the buyer, or they can navigate to your product through AWS Marketplace\.
 
-When the buyer navigates to your product's subscription page, a banner indicates that a private offer is available\. After the buyer accepts the offer, they're invoiced for the purchase using the same portal tools used for all AWS Marketplace transactions\. 
+When the buyer navigates to your product's subscription page, a banner indicates that a private offer is available\. After the buyer accepts the offer, they're invoiced for the purchase using the same portal tools used for all AWS Marketplace transactions\. Accepted offers become *agreements*, and are also referred to as *contracts* or *subscriptions*\.
+
+For SaaS contract and SaaS contract with consumption products, you can offer upgrades and renewals on agreements that were made when buyers accepted private offers\. For example, you can do this to grant new entitlements, offer pricing discounts, adjust payment schedules, or change the end user license agreement \(EULA\) to use standardized license terms\. For more information, see [Private offer upgrades and renewals](private-offers-upgrades-and-renewals.md)\.
 
 Private offers are tracked in seller reports\. For more information, see [Reporting for private offers](#reporting-for-seller-private-offers)\.
 
 ### Private offer experience for buyer<a name="private-offer-sub-experience"></a>
 
-After you create a private offer and notify the potential buyer, they will have steps they must perform to accept the offer\. For more information about the buyer experience for private offers, see [Private Offers](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers.html) in the *AWS Marketplace Buyer Guide*\.
+After you create a private offer and notify the potential buyer, they will have steps they must perform to accept the offer\. For more information about the buyer experience for private offers, see [Private offers](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers.html) in the *AWS Marketplace Buyer Guide*\.
 
 To receive the terms of the offer, the buyer must accept the offer before the offer expiration date\. After the offer expires, the terms are no longer valid\. You must re\-create the private offer for the buyer to accept the terms\. As the seller, you can provide a URL to the fulfillment page for the offer, or the customer can navigate to your product page on AWS Marketplace and choose the link in the banner to view the private offer\.
 

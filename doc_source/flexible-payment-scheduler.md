@@ -9,7 +9,7 @@ Any customer on invoice terms, for example net\-30 or net\-60 terms, can subscri
 The process for creating a custom payment schedule using flexible payment scheduler is part of the process for creating a private offer\. While creating the private offer, as you are adding product and buyer account information, choose **Allow Buyers to pay for this product in installments**\. This enables you to create an offer with a flexible payment schedule\. When you choose **Next** to continue, the flexible payment scheduler feature validates that any AWS account that you added is an account on invoice terms\. If you have provided an account that isn't on invoice terms, you receive an error message\. 
 
 **Note**  
- If the account is in a consolidated billing family, the account that you list must be the master account\. For more information, see [Consolidated Billing for Organizations](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) in the *AWS Billing and Cost Management User Guide*\. 
+If the account is in an AWS Organizations billing family, the targeted account can be any account that is on net payment terms with AWS\. For more information, see [Consolidated Billing for AWS Organizations](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) in the *AWS Billing and Cost Management User Guide*\. 
 
 After the AWS account or accounts are confirmed, customize your offer details on the next page\. Choose the contract duration for this offer and specify the offer details accordingly\.
 

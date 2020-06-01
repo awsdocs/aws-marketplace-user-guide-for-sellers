@@ -4,6 +4,7 @@ The following table describes the documentation for this release of the *AWS Mar
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [You can offer upgrades and renewals on accepted private offers](https://docs.aws.amazon.com/marketplace/latest/userguide/private-offers-upgrades-and-renewals.html) | For SaaS contract and SaaS contracts with consumption products, you can offer upgrades and renewals using private offers on previously\-accepted private offers\. | May 28, 2020 | 
 | [More information is available in data feeds](https://docs.aws.amazon.com/marketplace/latest/userguide/data-feed.html) | More information from reports is broken down into smaller data feeds to simplify finding and analyzing data\.  | May 21, 2020 | 
 | [Standardized license terms are now available](https://docs.aws.amazon.com/marketplace/latest/userguide/standardized-license-terms.html) | You can offer standardized license terms in place of custom EULAs to simplify the contracting process\. | April 28, 2020 | 
 | [Australia and New Zealand are eligible jurisdictions](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html#additional-seller-requirements-for-paid-products) | The following are now eligible to become sellers on AWS Marketplace: \(i\) Permanent residents and citizens of Australia \(AU\) New Zealand \(NZ\) or \(ii\) business entities organized or incorporated in one of those areas\. | April 2, 2020 | 
