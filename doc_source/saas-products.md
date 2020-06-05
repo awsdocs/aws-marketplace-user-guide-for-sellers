@@ -14,3 +14,4 @@ For assistance with your SaaS products, [contact us](https://aws.amazon.com/mark
 + [Accessing the AWS Marketplace Metering and Entitlement Service APIs](saas-integration-metering-and-entitlement-apis.md)
 + [Reporting](saas-reporting.md)
 + [Code examples](saas-code-examples.md)
++ [Using AWS PrivateLink with AWS Marketplace](privatelink.md)
