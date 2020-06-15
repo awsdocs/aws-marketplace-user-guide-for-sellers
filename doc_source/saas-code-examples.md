@@ -106,8 +106,8 @@ The following code example is relevant for SaaS subscription and contract with c
 ```
 # NOTE: Your application will need to aggregate usage for the 
 #       customer for the hour and set the quantity as seen below. 
-#       AWS Marketplace can only accept records for up to three 
-#       hours in the past. 
+#       AWS Marketplace can only accept records for up to an 
+#       hour in the past. 
 #
 # productCode is supplied after the AWS Marketplace Ops team has 
 # published the product to limited
