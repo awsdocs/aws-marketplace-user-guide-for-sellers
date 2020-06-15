@@ -29,7 +29,7 @@ The following procedure outlines how to create a new container product in the AW
 
 1. In **Image location**, provide the URL for one image in this container group, and choose **Add and scan**\. When you submit a container image URL, we scan it and check for security vulnerabilities\. Typically, this scan takes 20 to 25 minutes\. For more information, see [Container product scans](#container-security)\.
 
-   These URL links can be the name of a public external repository or a URL to a private repository such as Amazon Elastic Container Registry (ECR)\. For images in Amazon ECR, you must specify the image tag\. You can have up to four links to deployment templates for each fulfillment option\.
+   These URL links can be the name of a public external repository or a URL to a private repository such as Amazon Elastic Container Registry \(Amazon ECR\)\. For images in Amazon ECR, you must specify the image tag\. You can have up to four links to deployment templates for each fulfillment option\.
 
    For example, you could use either of the following formats as pointers to your images: 
    +  `nginx:mytag` 
