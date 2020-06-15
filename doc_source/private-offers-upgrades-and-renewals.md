@@ -44,7 +44,7 @@ The new private offer appears on the **Manage Private Offer** page in approximat
 Similar to the process for creating a private offer, the buyer isn't notified that you created a new private offer\. Instead, you provide the URL for the new private offer to the buyer\. From there, the buyer has the option to accept it or to continue to operate under the original agreement:
 + If the buyer accepts the private offer upgrade or renewal, the new agreement takes effect immediately and the agreement is listed on the **Agreements** page in the AWS Marketplace Management Portal\. Any remaining scheduled payments from previous agreements are cancelled\.
 
-  Buyers accept agreement\-based private pffers the same way they accept private offers\. For more information about the buyer experience for private offers, see [Private offers](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers.html) in the *AWS Marketplace Buyer Guide*\.
+  Buyers accept agreement\-based private offers the same way they accept private offers\. For more information about the buyer experience for private offers, see [Private offers](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers.html) in the *AWS Marketplace Buyer Guide*\.
 + If the buyer doesn't accept the private offer upgrade or renewal before it expires, the original agreement remains in effect with no changes\. 
 
 ## Reporting for upgrades and renewals<a name="private-offers-upgrades-and-renewals-reporting"></a>
