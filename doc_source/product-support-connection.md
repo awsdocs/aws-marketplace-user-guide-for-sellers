@@ -2,20 +2,20 @@
 
  AWS Marketplace Product Support Connection \(PSC\) is a feature that enables AWS Marketplace customers to provide contact information in the AWS Marketplace website for the purposes of obtaining and accessing product support from AWS Marketplace Sellers\. AWS Marketplace shares the provided data with participating Sellers via an API to enable a better support experience\. Customers can choose to add contact details during or after a purchase of PSC\-enabled AWS Marketplace products, and Sellers can retrieve the Customer contact data, along with relevant product subscription details, by calling a pull\-based API\. 
 
- Your staff can use the Customer Support Eligibility tool to access near\-real\-time information about a customer's subscription to your products and provide fast, personalized service\. AWS Marketplace Management Portal makes it easy to get started: enter a customer's AWS account ID to retrieve subscription and usage information from their account\. 
+ Your staff can use the Customer Support Eligibility tool to access near\-real\-time information about a customer's subscription to your products and provide fast, personalized service\. AWS Marketplace Management Portal makes it easy to get started: Enter a customer's AWS account ID to retrieve subscription and usage information from their account\. 
 
- You also have the option to enroll your products in AWS Marketplace Product Support Connection \(PSC\)\. For products that are enrolled in PSC, AWS Marketplace customers can choose to provide contact information \(including name, organization, email address, and phone number\) via the AWS Marketplace web site for the purposes of obtaining and accessing product support\. If you enroll in PSC, AWS Marketplace will share the provided data with you via an API to help enable a more seamless support experience\. 
+ You also have the option to enroll your products in AWS Marketplace Product Support Connection \(PSC\)\. For products that are enrolled in PSC, AWS Marketplace customers can choose to provide contact information \(including name, organization, email address, and phone number\) via the AWS Marketplace website for the purposes of obtaining and accessing product support\. If you enroll in PSC, AWS Marketplace shares the provided data with you via an API to help enable a more seamless support experience\. 
 
 **Note**  
 Currently, data products don't support this feature\.
 
 ## Technical implementation guide<a name="technical-implementation-guide"></a>
 
-This section covers API specification details and how to onboard with the product support connection feature\. The PSC `start-support-data-export` API is part of the AWS Marketplace Commerce Analytics Service \(CAS\)\. To integrate with the API for PSC, you must first enroll in CAS\. If you are already enrolled in CAS, use the same IAM role that you created when you onboarded\.
+This section covers API specification details and how to onboard with the product support connection feature\. The PSC `start-support-data-export` API is part of the AWS Marketplace Commerce Analytics Service \(CAS\)\. To integrate with the API for PSC, you must first enroll in CAS\. If you are already enrolled in CAS, use the same AWS Identity and Access Management \(IAM\) role that you created when you onboarded\.
 
 ### IAM policy for PSC<a name="allow-iam-users-permission-for-psc"></a>
 
-To allow your IAM users access the AWS Marketplace product support connection feature, you must attach the following inline policy to your users\.
+To allow your IAM users to access the AWS Marketplace product support connection feature, you must attach the following inline policy to your users\.
 
 ```
 {
@@ -36,9 +36,9 @@ For more information, see [Creating Policies in the IAM console](https://docs.aw
 
  You can request an export of the PSC data using the [AWS CLI](https://aws.amazon.com/cli/) or any of the [AWS Software Development Kits \(SDKs\)](https://aws.amazon.com/tools/)\. 
 
- If you have already been using CAS to call the *generate\-data\-set* method, you must use the same IAM Role for both *generate\-data\-set* and *start\-support\-data\-export*\. 
+ If you have already been using CAS to call the `generate-data-set` operation,you must use the same IAM role for both `generate-data-set` and `start-support-data-export`\. 
 
-To ensure the security of the customer contact data available through the Product Support Connection program, we recommend that the S3 bucket you use for *start\-support\-data\-export* be separate from the S3 bucket you use for *generate\-data\-set*\. Verify the permissions on your IAM role allow access to all S3 buckets you intend to use\. 
+To ensure the security of the customer contact data available through the Product Support Connection program, we recommend that the Amazon Simple Storage Service \(Amazon S3\) bucket you use for `start-support-data-export` be separate from the S3 bucket you use for `generate-data-set`\. Verify the permissions on your IAM role allow access to all S3 buckets you intend to use\. 
 
 ```
         aws marketplacecommerceanalytics start-support-data-export
@@ -50,7 +50,7 @@ To ensure the security of the customer contact data available through the Produc
         --sns-topic-arn “{YOUR-SNS-TOPIC-ARN}”
 ```
 
- A successful response from the service will return the *dataSetRequestId* of the request\. 
+ A successful response from the service returns the `dataSetRequestId`*dataSetRequestId* of the request\. 
 
 **Example**  
 
@@ -68,9 +68,9 @@ To ensure the security of the customer contact data available through the Produc
 
 ### StartSupportDataExport method<a name="startsupportdataexport-method"></a>
 
- The StartSupportDataExport method allows you to request contact details that customers have submitted for your PSC\-enabled products\. Data will be exported from the start date specified in the request up to 15 minutes prior to the time of the request\. A successful request will result in the dataset being published to the Amazon S3 bucket specified\. 
+ The `StartSupportDataExport` method allows you to request contact details that customers have submitted for your PSC\-enabled products\. Data is exported from the start date specified in the request up to 15 minutes prior to the time of the request\. A successful request results in the dataset being published to the Amazon S3 bucket specified\. 
 
- At this time, you can query the API to request the test\_customer\_support\_contacts\_data data set\. This will export a static test data set containing data that does not correspond to any real customer data\. You should use the test data for testing and integration\. The customer\_support\_contacts\_data option, which will return the real customer contact data for your PSC\-enabled products, will not be available until after the General Availability of this feature later in 2016\. 
+ At this time, you can query the API to request the test\_customer\_support\_contacts\_data dataset\. This will export a static test dataset containing data that does not correspond to any real customer data\. You should use the test data for testing and integration\. The customer\_support\_contacts\_data option, which will return the real customer contact data for your PSC\-enabled products, will not be available until after the General Availability of this feature later in 2016\. 
 
 ### Request parameters<a name="request-parameters"></a>
 
@@ -80,8 +80,8 @@ To ensure the security of the customer contact data available through the Produc
 |  Data Set Type  |   The type of dataset requested to be exported\. Valid options for datasets are:   test\_customer\_support\_contacts\_data   customer\_support\_contacts\_data   The test\_customer\_support\_contacts\_data dataset provides sample data for testing and integration purposes and is available immediately\. The customer\_support\_contacts\_data dataset is currently unavailable\. This option will contain actual customer data and be available upon general availability of PSC\.   | 
 |  From Date  |   The earliest date of data to be exported\. The exported data will contain information from the specified From Date to 15 minutes prior to the time of the request\.   The From Date must be expressed as an ISO 8601 date/time string\.   If you would like to receive the full data set, as opposed to a set of updates, specify any date prior to the date when you onboarded to the program\. To receive only incremental data since your last request, specify the endDateTime from the dataSetCoverageRange from the metadata JSON file resulting from your previous request\. See below for more information about the metadata JSON file\.   | 
 |  Role Name ARN  |  The Amazon Resource Name \(ARN\) of the IAM role with an attached permissions policy which provides the service with access to your resources\.  | 
-|  Destination S3 Bucket Name  |  The name \(friendly name, not ARN\) of the destination [Amazon S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)\. Your data sets will be published to this location\.  | 
-|  Destination S3 Prefix  |   \(Optional\) The desired Amazon S3 prefix for the published data set, similar to a directory path in standard file systems\.   For example, if given the bucket name "mybucket" and the prefix "myprefix/mydatasets", the output file "outputfile" would be published to "s3://*awsexamplebucket*/myprefix/mydatasets/outputfile"\.   If the prefix directory structure does not exist, it will be created\.   If no prefix is provided, the data set will be published to the Amazon S3 bucket root\.   | 
+|  Destination S3 Bucket Name  |  The name \(friendly name, not ARN\) of the destination [Amazon S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)\. Your datasets will be published to this location\.  | 
+|  Destination S3 Prefix  |   \(Optional\) The desired Amazon S3 prefix for the published dataset, similar to a directory path in standard file systems\.   For example, if given the bucket name "mybucket" and the prefix "myprefix/mydatasets", the output file "outputfile" would be published to "s3://*awsexamplebucket*/myprefix/mydatasets/outputfile"\.   If the prefix directory structure does not exist, it will be created\.   If no prefix is provided, the data set will be published to the Amazon S3 bucket root\.   | 
 |  SNS Topic ARN  |  The Amazon Resource Name \(ARN\) for the Amazon SNS topic that will be notified when the data set has been published, or if an error occurs\.  | 
 
 ## Responses<a name="responses"></a>
@@ -93,18 +93,18 @@ To ensure the security of the customer contact data available through the Produc
 | --- | --- | 
 |  Data Set Request ID  |  A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
 
- An additional response containing metadata will be posted to the Amazon SNS \(Simple Notification Service\) topic specified in the original request\. The contents of the post are detailed in the table below\. 
+ An additional response containing metadata will be posted to the Amazon Simple Notification Service \(Amazon SNS\) topic specified in the original request\. The contents of the post are detailed in the following table\. 
 
 
 |  Field  |  Description  | 
 | --- | --- | 
-|  Data Set S3 Location  |  The bucket name and key for the delivered data set\.  | 
-|  Data Set Meta Data S3 Location  |  The bucket name and key for the delivered data set meta data file\.  | 
+|  Data Set S3 Location  |  The bucket name and key for the delivered dataset\.  | 
+|  Data Set Meta Data S3 Location  |  The bucket name and key for the delivered dataset meta data file\.  | 
 |  Data Set Request ID  |  A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
-|  Success  |  True if the operation succeeded, false if not\.  | 
-|  Message  |  \(Optional\) If an error occurred \(i\.e\., “Success” is “false”\), this message will contain information about the failure\.  | 
+|  Success  |  "True" if the operation succeeded; "false " if not\.  | 
+|  Message  |  \(Optional\) If an error occurred \(for example, “Success” is “false”\), this message will contain information about the failure\.  | 
 
- The metadata file is JSON\-formatted and contains the following fields: 
+ The metadata file is JSON\-formatted and contains the following fields\. 
 
 
 |  Field  |  Description  | 
@@ -112,8 +112,8 @@ To ensure the security of the customer contact data available through the Produc
 |  Data Set Request ID  |  A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
 |  Data Set Coverage Range  |  Defines the start date / time and end date / time for the data coverage range\. These dates are in ISO 8601 format\.  | 
 |  Data Set Request Parameters  |  The original request parameters to the GenerateDataSet method\.  | 
-|  Data Set S3 Location  |  The bucket name and key for the delivered data set\.  | 
-|  Data Set Meta Data S3 Location  |  The bucket name and key for the delivered data set meta data file\.  | 
+|  Data Set S3 Location  |  The bucket name and key for the delivered dataset\.  | 
+|  Data Set Meta Data S3 Location  |  The bucket name and key for the delivered dataset metadata file\.  | 
 |  Request Received Date Time  |  The date/time at which the request was received, in ISO 8601 format\.  | 
 |  Request Completed Date Time  |  The date/time at which the request was completed, in ISO 8601 format\.  | 
 
@@ -149,17 +149,17 @@ To ensure the security of the customer contact data available through the Produc
 
 ## Output data format<a name="output-data-format"></a>
 
- The output data contains customer contact records, product code, product ID, subscription start date, and the AWS account ID of the customer\. A summary of the fields is shown below\. Each output file contains a comma\-separated header, followed by the records containing customer data and subscription information\. Each record contains a “Create”, “Update”, or “Delete” operation type to indicate whether the record is newly created, modified, or deleted since the “From Date” indicated in the API request\. The overall file format adheres to the RFC4180 standard\. 
+ The output data contains customer contact records, product code, product ID, subscription start date, and the AWS account ID of the customer\. A summary of the fields is shown in the following table\. Each output file contains a comma\-separated header, followed by the records containing customer data and subscription information\. Each record contains a “Create”, “Update”, or “Delete” operation type to indicate whether the record is newly created, modified, or deleted since the “From Date” indicated in the API request\. The overall file format adheres to the RFC4180 standard\. 
 
  If multiple operations have occurred on a record in the time frame specified by the “from\-date” parameter API request, only the most recent data will be reflected or exported\. For example, if a customer creates and then updates a record, the record returned will be different depending on the specified “from\-date”\. If the “from\-date” is prior to the date at which the record was created, only a CREATE record will be passed in the output data set, and the record will reflect the most recently entered details\. If the “from\-date” is after the record was created, but before it was updated, only an UPDATE record will be passed in the output data set\. If the from\-date is after the record was updated, no record will be passed\. Likewise, if a customer creates and then deletes a record, only the “DELETE” will appear in the output file\. 
 
- If you would like to receive the full data set, as opposed to a set of updates, specify any date prior to the date when you onboarded to the program\. To receive only incremental data since your last request, specify the endDateTime from the dataSetCoverageRange from the metadata JSON file resulting from your previous request\. 
+ If you would like to receive the full dataset, as opposed to a set of updates, specify any date prior to the date when you onboarded to the program\. To receive only incremental data since your last request, specify the `endDateTime` from the `dataSetCoverageRange` from the metadata JSON file resulting from your previous request\. 
 
 
 |  Field  |  Format  |  Description  | 
 | --- | --- | --- | 
 |  Product ID  |  36\-character hexadecimal string  |   Unique identifier for the product in AWS Marketplace \(GUID\)\.   Required field; always appears in every record\.   | 
-|  Product Code  |  25\-character alphanumeric string  |   Unique identifier for the product, associated with billing and available in EC2 instance metadata\.   Required field; always appears in every record\.   | 
+|  Product Code  |  25\-character alphanumeric string  |   Unique identifier for the product, associated with billing and available in Amazon Elastic Compute Cloud \(Amazon EC2\) instance metadata\.   Required field; always appears in every record\.   | 
 |  Customer Guid  |  36\-character hexadecimal string  |   Unique GUID identifying the customer contact data record\. This will be unique for each record that appears in the output file\.   Required field; always appears in every record\.   | 
 |  Subscription Guid  |  36\-character hexadecimal string  |   Unique GUID corresponding to the customer’s product subscription\. A customer can have multiple subscriptions to the same product\.   Required field; always appears in every record\.   | 
 |  Subscription Start Date  |   ISO 8601 date/time, with UTC time zone\.   The format is YYYY\-MM\-DDTHH:mm:ss\.nnnZ, where YYYY is year, MM is month, DD is day, HH is hour from 00\-23, mm is minute of hour from 00\-59, ss is second of minute from 00\-59, and nnn is millisecond of second from 000\-9999, such as “2016\-04\-07T14:05:15\.275Z”   |   Start date of the customer’s product subscription\.   Required field; always appears in every record\.   | 
@@ -194,8 +194,8 @@ To ensure the security of the customer contact data available through the Produc
  \.\.\. 
 
 **Note**  
-When a customer deletes their contact information from the PSC program, you will see a record in the output csv file that indicates an operation type “DELETE\.” After a customer deletes their data, the API will no longer transmit contact information such as name, telephone number, email, and so forth\. Each delete record consists of the data required to uniquely identify the record to be deleted\. Delete records contain product ID, product code, operation time, customer GUID, subscription GUID, subscription start date, AWS Customer ID, operation time, and operation type\.   
- If a customer opts out of Product Support Connection by deleting their contact information, you should also remove the contact information from your records\. Since the customer contact data will not be included in the DELETE record, you will need to look up the record in your system by using the unique Customer GUID\.   
+When a customer deletes their contact information from the PSC program, you will see a record in the output \.csv file that indicates an operation type “DELETE\.” After a customer deletes their data, the API no longer transmits contact information such as name, telephone number, email, and so forth\. Each delete record consists of the data required to uniquely identify the record to be deleted\. Delete records contain product ID, product code, operation time, customer GUID, subscription GUID, subscription start date, AWS Customer ID, operation time, and operation type\.   
+ If a customer opts out of Product Support Connection by deleting their contact information, you should also remove the contact information from your records\. Because the customer contact data will not be included in the DELETE record, you will need to look up the record in your system by using the unique Customer GUID\.   
  A delete record will also be sent if a customer terminates a subscription\. 
 
  If you have questions or would like more information about participating in AWS Marketplace Product Support Connection, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 

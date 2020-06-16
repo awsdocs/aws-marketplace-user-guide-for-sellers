@@ -23,7 +23,7 @@ The following table explains the names and descriptions of the data feed's colum
 | action | The type of action for this event\. Possible values are as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html) | 
 | transaction\_type | The type of transaction\. For examples, see [Taxing scenarios](#data-feeds-billing-event-tax-examples)\. Possible values are as follows:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
 | parent\_billing\_event\_id | If the action is DISBURSEMENT or FORGIVEN and the transaction\_type is DISBURSEMENT, this is the billing\_event\_id that initiated this billing event\. If action has another value, this field is null\.  | 
-| disbursement\_billing\_event\_id | The related disbursement when the action is INVOICED AND the transaction\_type is DISBURSEMENT\. Otherwise, this value is null\. | 
+| disbursement\_billing\_event\_id | The related disbursement when the `action` is `DISBURSED` AND one of the following is true:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html) In all other cases, this value is null\. | 
 | amount | The billing event amount\.  | 
 | currency | The ISO 639 currency code\. | 
 | balance\_impacting | Whether the amount is taken into account in calculating seller disbursements\. A value of 0 indicates the amount is shown for informational purposes and has no effect on the balance\. A value of 1 indicates that this amount takes into account in determining seller disbursements\.  | 
@@ -46,7 +46,7 @@ The taxation model that is in place for the country and state of the buyer and s
 
 This section shows examples of the billing event data period at the time of invoicing and one month later\. Note the following for all tables in this section: 
 + In data feeds, `billing_event_id` values are 40\-character alphanumeric strings\. They're shown here as two\-character strings for readability\. 
-+ Not all columns from the billing event data feed are shown\. 
++ In the data feed, this information is presented in a single table\. For readability, the data is shown in multiple tables here, and all columns aren't shown\. 
 
 For the examples in this section, assume the following: 
 + Arnav is the buyer\.
@@ -64,46 +64,77 @@ For the examples in this section, assume the following:
 
 As the seller of record, Paulo invoices the buyer, Arnav\. 
 
-The following table shows the relevant information in Paulo's data feed when he invoices Arnav\.
+The following tables show the relevant information in Paulo's data feed when he invoices Arnav\.
 
 
-| billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | 
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| I0 | 73739998888 | 777788889999 | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE |  |  | 100 | USD | 
-| I1 | 73739998888 | AWS | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE |  |  | 20\.6 | USD | 
-| I2 | 777788889999 | 111122223333 | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE |  |  | \-80 | USD | 
-| I3 | 777788889999 | AWS | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE |  |  | \-0\.2 | USD | 
-
-The following table shows the relevant information in Paulo's data feed at the end of the month, after Arnav pays the invoice\.
+| billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | 
+| --- | --- | --- | --- | --- | --- | --- | 
+| I0 | 73739998888 | 777788889999 | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
+| I1 | 73739998888 | AWS | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE | 
+| I2 | 777788889999 | 111122223333 | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
+| I3 | 777788889999 | AWS | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE | 
 
 
-| billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | 
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| I10 | 73739998888 | 777788889999 | 73739998888 |  | INVOICED | SELLER\_REV\_SHARE | I0 | I14 | \-100 | USD | 
-| I12 | 777788889999 | 111122223333 | 73739998888 |  | INVOICED | SELLER\_REV\_SHARE | I2 | I14 | 80 | USD | 
-| I13 | 777788889999 | AWS | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | I3 | I14 | 0\.2 | USD | 
-| I14 | AWS | 777788889999 |  |  | DISBURSED | DISBURSEMENT |  |  | 19\.8 | USD | 
+| parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | invoice\_date | invoice\_id | 
+| --- | --- | --- | --- | --- | --- | 
+|  |  | 100 | USD | 2018\-12\-31T00:00:00Z | 781216640 | 
+|  |  | 20\.6 | USD | 2018\-12\-31T00:00:00Z | 781216640 | 
+|  |  | \-80 | USD | 2018\-12\-31T00:04:07Z | 788576665 | 
+|  |  | \-0\.2 | USD | 2018\-12\-31T00:04:07Z | 788576665 | 
+
+The following tables show the relevant information in Paulo's data feed at the end of the month, after Arnav pays the invoice\.
+
+
+| billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | 
+| --- | --- | --- | --- | --- | --- | --- | 
+| I10 | 73739998888 | 777788889999 | 73739998888 |  | INVOICED | SELLER\_REV\_SHARE | 
+| I12 | 777788889999 | 111122223333 | 73739998888 |  | INVOICED | SELLER\_REV\_SHARE | 
+| I13 | 777788889999 | AWS | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | 
+| I14 | AWS | 777788889999 |  |  | DISBURSED | DISBURSEMENT | 
+
+
+| parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | invoice\_date | invoice\_id | 
+| --- | --- | --- | --- | --- | --- | 
+| I0 | I14 | \-100 | USD | 2018\-12\-31T00:00:00Z | 781216640 | 
+| I2 | I14 | 80 | USD | 2018\-12\-31T00:04:07Z | 788576665 | 
+| I3 | I14 | 0\.2 | USD | 2018\-12\-31T00:04:07Z | 788576665 | 
+|  |  | 19\.8 | USD |  |  | 
 
 ### Billing event data feed for manufacturer<a name="billing-event-example-manufacturer"></a>
 
-The following table shows the relevant information in the Jane's data feed when Paulo invoices Arnav\.
+The following tables show the relevant information in the Jane's data feed when Paulo invoices Arnav\.
 
 
-| billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | 
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| I5 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE |  |  | 73\.5 |  | 
-| I6 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | INVOICED | SELLER\_TAX\_SHARE |  |  | 6\.5 |  | 
-| I7 | 777788889999 | AWS |  | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE |  |  | \-7\.35 |  | 
-
-The following table shows the relevant information in Jane's data feed at the end of the month, after the invoice is paid\.
+| billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | 
+| --- | --- | --- | --- | --- | --- | --- | 
+| I5 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
+| I6 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | INVOICED | SELLER\_TAX\_SHARE | 
+| I7 | 777788889999 | AWS |  | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | 
 
 
-| billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | 
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| I30 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | DISBURSED | SELLER\_REV\_SHARE | I5 | I33 | \-73\.5 | USD | 
-| I31 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | DISBURSED | SELLER\_TAX\_SHARE | I6 | I33 | \-6\.5 | USD | 
-| I32 | 777788889999 | AWS |  | prod\-o4grxfafcxxxx | DISBURSED | AWS\_REV\_SHARE | I7 | I33 | 7\.35 | USD | 
-| I33 | AWS | 777788889999 |  |  | DISBURSED | DISBURSEMENT |  |  | 72\.65 | USD | 
+| parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | invoice\_date | invoice\_id | 
+| --- | --- | --- | --- | --- | --- | 
+|  |  | 73\.5 |  | 2018\-12\-31T00:04:07Z | 788576665 | 
+|  |  | 6\.5 |  | 2018\-12\-31T00:04:07Z | 788576665 | 
+|  |  | \-7\.35 |  | 2018\-12\-31T00:04:07Z | 788576665 | 
+
+The following tables show the relevant information in Jane's data feed at the end of the month, after the invoice is paid\.
+
+
+| billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | 
+| --- | --- | --- | --- | --- | --- | --- | 
+| I30 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | DISBURSED | SELLER\_REV\_SHARE | 
+| I31 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | DISBURSED | SELLER\_TAX\_SHARE | 
+| I32 | 777788889999 | AWS |  | prod\-o4grxfafcxxxx | DISBURSED | AWS\_REV\_SHARE | 
+| I33 | AWS | 777788889999 |  |  | DISBURSED | DISBURSEMENT | 
+
+
+| parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | invoice\_date | invoice\_id | 
+| --- | --- | --- | --- | --- | --- | 
+| I5 | I33 | \-73\.5 | USD |  |  | 
+| I6 | I33 | \-6\.5 | USD |  |  | 
+| I7 | I33 | 7\.35 | USD |  |  | 
+|  |  | 72\.65 | USD |  |  | 
 
 ## Example queries<a name="data-feeds-billing-event-query-examples"></a>
 

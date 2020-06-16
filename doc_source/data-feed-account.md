@@ -26,6 +26,6 @@ The following shows an example of the account data feed\. For readability, the d
 
 | account\_id  | aws\_account\_id  | encrypted\_account\_id | mailing\_address\_id | tax\_address\_id | tax\_registration\_number | tax\_legal\_name | 
 | --- | --- | --- | --- | --- | --- | --- | 
-| xk0CSmiAm6PQ4QqEog9iiaochIzuPlkMfba7a1oDlZ | 444456660000 | Zf7oMzheGWpH | 25o3k46eN6eViOfFiiqtxwX8e3kaOiPalUiofjyFa3 | ViOfFiiqtxX8e3kaOiPaIUofjyFa3 |  |  | 
+| xk0CSmiAm6PQ4QqEog9iiaochIzuPlkMfba7a1oDlZ | 444456660000 | Zf7oMzheGWpH | 25o3k46eN6eViOfFiiqtxwX8e3kaOiPalUiofjyFa3 |  |  |  | 
 | 7nyo5jwTRoPlyX81vx9ji04eEwTurO1Ff8biQi88W8 | 555567679999 | 373vuQUqmQ8v | 5oJ6vTjSzMrrF2gvh2Vj9HfqiM800MuLEHmyFY5Lr42s8 | 5oJ6vTjSzMrrF2gvh2Vj9HfqiM800MuLEHmyFY5Lr42s8 | SE823935083345 |  | 
-| VIeGa2t9j3MuxioH9wc8lsndXXCgGCGUreeXriocM5 | 666678001111 | 8SPxAYmi8MwX | NLUc5UeiMlGFTrDWCoftDPhDUF1oaSd8xgl5QM8Db7 | V5NhBYBiYogwy0WMhndGU4AfMggmuoTC2j7Pm8ZKKNNyT | DE469558025 |  | 
+| VIeGa2t9j3MuxioH9wc8lsndXXCgGCGUreeXriocM5 | 73739998888 | 8SPxAYmi8MwX | NLUc5UeiMlGFTrDWCoftDPhDUF1oaSd8xgl5QM8Db7 | V5NhBYBiYogwy0WMhndGU4AfMggmuoTC2j7Pm8ZKKNNyT | DE469558025 |  | 

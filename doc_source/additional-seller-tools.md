@@ -4,7 +4,7 @@
 
 ## AWS Marketplace Commerce Analytics Service<a name="commerce-analytics-intro"></a>
 
- The AWS Marketplace Commerce Analytics Service makes it possible for you to programmatically access product and customer data through AWS Marketplace\. The data is delivered as data sets\. Most of the data sets provide the same data as the text\-based reports you can access through the AWS Marketplace Management Portal\. 
+ The AWS Marketplace Commerce Analytics Service makes it possible for you to programmatically access product and customer data through AWS Marketplace\. The data is delivered as datasets\. Most of the datasets provide the same data as the text\-based reports you can access through the AWS Marketplace Management Portal\. 
 
 ## AWS Marketplace Enhanced Data Sharing Program<a name="enhanced-data-sharing-intro"></a>
 
@@ -12,7 +12,7 @@
 
 ## AWS Marketplace Field Demonstration Program<a name="field-demonstration-program"></a>
 
-The AWS Marketplace Field Demonstration Program \(FDP\) allows internally approved AWS employees to use some Independent Software Vendor \(ISV\) solutions through AWS Marketplace at no charge\. Examples of approved AWS employees may include solution architects, and sales and marketing professionals\. The FDP allows these employees to demonstrate product capabilities for education and potential inclusion in customer workloads\.
+The AWS Marketplace Field Demonstration Program \(FDP\) allows internally approved AWS employees to use some Independent Software Vendor \(ISV\) solutions through AWS Marketplace at no charge\. Examples of approved AWS employees may include solutions architects, and sales and marketing professionals\. The FDP allows these employees to demonstrate product capabilities for education and potential inclusion in customer workloads\.
 
 The FDP includes only products that ISVs contractually agreed to make available at no charge to the AWS field team for educational and demonstration purposes\. The following product types are supported:
 + [Amazon Machine Images \(AMIs\)](ami-products.md) 
@@ -26,7 +26,7 @@ To view information about product usage under this program, see the [AWS field d
 
 ## AWS Marketplace Product Support Connection<a name="product-support-connection-intro"></a>
 
- AWS Marketplace Product Support Connection \(PSC\) is a feature that makes it possible for AWS Marketplace customers to provide contact information on the AWS Marketplace website so they can obtain and access your product support\. When you participate, AWS Marketplace shares the customer\-provided data to you through API, enabling you to provide a better support experience\. 
+ AWS Marketplace Product Support Connection \(PSC\) is a feature that makes it possible for AWS Marketplace customers to provide contact information on the AWS Marketplace website so they can obtain and access your product support\. When you participate, AWS Marketplace shares the customer\-provided data to you through an API, enabling you to provide a better support experience\. 
 
 **Note**  
 Currently, data products don't support this feature\.

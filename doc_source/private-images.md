@@ -2,7 +2,7 @@
 
 You can use private image builds to let buyers purchase your installable software products through AWS Marketplace, and then install those products on a gold image or AMI they choose from the images available to their AWS account\. A *gold image* is a buyer\-provided server image that includes a base operating system with modifications applied to help ensure the software adheres to the buyer’s IT standards\. Gold images allow buyers to better meet their internal security, compliance, and management requirements\. 
 
-You use the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/) \(AMMP\) to upload your software binaries and/or scripts and create an installable package group for each OS your software will run on\. AWS Marketplace does a test build by installing the package group on a base operating system \(OS\) you specify and scans the resulting image for certain known vulnerabilities\. Once the image build and scan has completed successfully, you can use the product load form to submit the package group and required metadata as a new private image fulfillment option to **awsmp\-private\-image@amazon\.com**\. 
+This page describes how to use the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour/) \(AMMP\) to upload your software binaries and/or scripts and create an installable package group for each OS your software will run on\. AWS Marketplace does a test build by installing the package group on a base operating system \(OS\) you specify and scans the resulting image for certain known vulnerabilities\. After the image build and scan completes, you can use the AMMP to submit your product\. 
 
 The following shows the private image build flow\.
 
@@ -35,7 +35,7 @@ When a buyer wants to fulfill your software product but use their gold image, th
 
 1.  Under **Manage packages**, choose **Start package**\. 
 
-1. In **Enter a unique name for your package group**, type the name of your product\. **Note**: the name must be less than 100 characters, and can only contain alphanumeric characters, underscores, and dashes\. Each product name associated with the AWS account used to create and publish package groups must be unique\. Once you have used a name \(even if the build is unsuccessful\), you cannot use the name again\. We recommend using a naming convention with a revision number included in the file name\. For example: *\[product\_group\_name\]<product\_name><version><platform><revision\_number>*\.
+1. In **Enter a unique name for your package group**, type the name of your product\. **Note**: the name must be less than 100 characters, and can only contain alphanumeric characters, underscores, and dashes\. Each product name associated with the AWS account used to create and publish package groups must be unique\. After you've used a name \(even if the build is unsuccessful\), you can't use the name again\. We recommend using a naming convention with a revision number included in the file name\. For example: **\[product\_group\_name\]<product\_name><version><platform><revision\_number>**\.
 
 1.  In **Select one or more packages**, select a package from the dropdown list or choose **Browse** to locate and select the package group you want to upload\. 
 
@@ -43,11 +43,11 @@ When a buyer wants to fulfill your software product but use their gold image, th
 
 1.  Under **Select supported operating systems**, choose all the OSes that your package group will support, and then choose **Submit**\. 
 
-    For each package group you submit, a build process is completed for each OS version you chose\. Once you submit your package group, you will automatically be redirected to the **Scan status** page where you can check progress of the image building and scanning process for each package group\. 
+    For each package group you submit, a build process is completed for each OS version you chose\. After you submit your package group, you are redirected to the **Scan status** page, where you can check progress of the image building and scanning process for each package group\. 
 
 ## Scan status<a name="scan-status"></a>
 
- Once you have submitted your package group, you can check the current status on the **Scan status** tab\. Each package group you have submitted will be listed\. Click on the arrow next to the package group to expand the list and show the build and scan status for each package group you selected\. 
+After you submit your package group, you can check the current status on the **Scan status** tab\. Each package group you've submitted is listed\. Choose the arrow next to the package group to expand the list and show the build and scan status for each package group you selected\. 
 
  Each entry will show the AMI ID, date you submitted the package group, and the status of the package group \(or build\)\. During the process, you can track the state of package groups and individual builds you have submitted\. There are four states your package group submission can be in, and five states individual builds can be in\. 
 
@@ -60,7 +60,8 @@ When a buyer wants to fulfill your software product but use their gold image, th
 +  **Issues Found** – One or more builds for your submission failed that require your attention\. Choose the **information** icon next to the status for additional troubleshooting information\. 
 +  **Investigating** – There was a problem uncovered during the build and scan process\. AWS Marketplace is investigating\. 
 
- **Note**: If your status remains in the **Investigating** state four business days or more, contact awsmp\-private\-image@amazon\.com\. 
+**Note**  
+If your status remains in the **Investigating** state for four or more business days, contact the [AWS Marketplace Seller Operations team](https://aws.amazon.com/marketplace/management/contact-us/)\.
 
 ### OS build state<a name="os-build-state"></a>
 
@@ -68,26 +69,33 @@ When a buyer wants to fulfill your software product but use their gold image, th
 +  **Building** – The build of your software on the OS is in progress\. This might take up to an hour to complete for each build\. 
 +  **Scanning** – The build process completed successfully and the scan is in progress\. This might take several hours to complete\. 
 +  **Successful** – The build and scan process completed successfully\. No further action on your part\. 
-+  **Issues found** – There was a problem with the build or the scan process that require your attention\. Choose the **information** icon next to the status for additional troubleshooting information\. 
++  **Issues found** – There was a problem with the build or the scan process that require your attention\. Choose the **Information** icon next to the status for additional troubleshooting information\. 
 +  **Investigating** – The build or scan process failed\. AWS Marketplace is investigating\. 
 
- **Note**: If your status remains in the **Investigating** state four business days or more, contact awsmp\-private\-image@amazon\.com\. 
+**Note**  
+If your status remains in the **Investigating** state for four or more business days, contact the [AWS Marketplace Seller Operations team](https://aws.amazon.com/marketplace/management/contact-us/)\.
 
- Once your package group has a status of successful, you have completed this phase and can publish it as a new fulfillment option for your product on AWS Marketplace\. 
+When your package group shows a status of **Successful**, this phase is complete\. Next, you can publish your package group as a new fulfillment option for your product on AWS Marketplace\.
 
 ## Submitting your product to AWS Marketplace<a name="submitting-your-listing-to-aws-marketplace"></a>
 
- After you have a package group that is successfully uploaded to AWS Marketplace you can submit a product load form to publish it as a new fulfillment option for your product, or as a new product if it does not already exist\. The load form is an Excel spreadsheet\. The first tab of the spreadsheet provides instructions for providing the metadata needed to publish your product on AWS Marketplace\. 
+After you upload a package group AWS Marketplace you can submit a product load form to publish it as a new fulfillment option for your product, or as a new product if it does not already exist\. The load form is an Excel spreadsheet\. The first tab of the spreadsheet provides instructions for providing the metadata needed to publish your product on AWS Marketplace\. 
 
 **To download and complete the load form**
 
 1.  From the [AMMP](https://aws.amazon.com/marketplace/management/tour/), under the **Assets** tab, choose **File upload**\. 
 
-1.  On the **File Uploads** page, under **Product load forms and seller guides**, choose **Private Image Form**\. 
+1. On the **File Uploads** page, under **Product load forms and seller guides**, choose **Private Image Form**\. 
 
-1.  Download the product load form\. 
+1. Download the product load form\. 
 
- Once you have completed the form, submit the entry to awsmp\-private\-image@amazon\.com\. AWS Marketplace will create or update your product entry on AWS Marketplace\. If there are any questions on your submission, AWS Marketplace will contact you for clarification\. Your product is typically added or updated within five business days\. 
+1. Complete the form\.
+
+1. From the AMMP **Assets** tab, choose **File upload**\.
+
+1. Choose the files you want to submit and enter a brief description\. 
+
+AWS Marketplace creates or update your product entry\. If there are any questions on your submission, AWS Marketplace will contact you for clarification\. Your product is typically added or updated within five business days\. 
 
  When adding a package group as a new fulfillment option for your product consider the following options: 
 +  Add the package group as an additional fulfillment option to an existing software version, on an existing public product on Marketplace\. With this approach, the software version on the AMI and package fulfillment options must match\. AWS Marketplace cannot replace an AMI on an existing software version\. 

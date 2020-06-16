@@ -93,6 +93,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Offer product data feed](data-feed-offer-product.md)
       + [Offer target data feed](data-feed-offer-target.md)
       + [Product data feed](data-feed-product.md)
+      + [Tax item data feed](data-feed-tax-item.md)
 + [AWS Marketplace security](security.md)
    + [Controlling access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)
    + [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md)
