@@ -4,7 +4,7 @@ The following table describes the documentation for this release of the *AWS Mar
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [More eligible jurisdictions](https://docs.aws.amazon.com/marketplace/latest/userguide/eligible-jurisdictions.html) | The following are now eligible to become sellers on AWS Marketplace: Bahrain, Norway, Switzerland, and the United Arab Emirates \(UAE\)\. | June 17, 2020 | 
+| [More eligible jurisdictions](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html#eligible-jurisdictions) | The following are now eligible to become sellers on AWS Marketplace: Bahrain, Norway, Switzerland, and the United Arab Emirates \(UAE\)\. | June 17, 2020 | 
 | [You can offer upgrades and renewals on accepted private offers](https://docs.aws.amazon.com/marketplace/latest/userguide/private-offers-upgrades-and-renewals.html) | For SaaS contract and SaaS contracts with consumption products, you can offer upgrades and renewals using private offers on previously\-accepted private offers\. | May 28, 2020 | 
 | [More information is available in data feeds](https://docs.aws.amazon.com/marketplace/latest/userguide/data-feed.html) | More information from reports is broken down into smaller data feeds to simplify finding and analyzing data\.  | May 21, 2020 | 
 | [Standardized license terms are now available](https://docs.aws.amazon.com/marketplace/latest/userguide/standardized-license-terms.html) | You can offer standardized license terms in place of custom EULAs to simplify the contracting process\. | April 28, 2020 | 
