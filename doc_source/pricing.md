@@ -226,13 +226,13 @@ You can change annual prices \(the $ value, for example $1000/year to $1200/year
 For uniform and great customer experience, AWS requires sellers to implement the following cancellation/change windows: 
 
 
-|  Applicable policy  |  Time period or window  |  Who can authorize it  | 
+| Applicable policy  | Time period or window  | Who can authorize it  | 
 | --- | --- | --- | 
-|   Full refund cancellation   \(Cancel with 100% refund\)   |  Within 48 hours of purchase  |  AWS customer support or the seller  | 
-|   Pro\-rata refund cancellation   \(Cancel with pro\-rata refund\)   |  Within 14 days of purchase  |  Seller only  | 
-|  Downgrade subscription \(Replace existing subscriptions with less expensive subscription\)  |  Within 30 days of purchase  |  Seller only  | 
-|  Upgrade subscription \(Replace existing subscriptions with more expensive or same priced subscription\)  |  Any time during 12 months  |  AWS customer support or the seller  | 
-|  Full refund cancellation in case of auto\-renewal  |  Within 14 days of purchase  |  AWS customer support or the seller  | 
+| Full refund cancellation \(cancel with 100% refund\) | Within 48 hours of purchase  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/pricing.html)  | 
+| Pro\-rata refund cancellation \(cancel with pro\-rata refund\) | Within 14 days of purchase  | Seller only  | 
+| Downgrade subscription \(replace existing subscriptions with less expensive subscription\)  | Within 30 days of purchase  | Seller only  | 
+| Upgrade subscription \(replace existing subscriptions with more expensive or same priced subscription\)  | Any time during 12 months  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/pricing.html)  | 
+| Full refund cancellation in case of auto\-renewal  | Within 14 days of purchase  | AWS customer support or the seller  | 
 
 **Note**  
 You should not include windows length and other details in product details/description\. 

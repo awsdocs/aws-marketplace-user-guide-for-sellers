@@ -28,7 +28,7 @@ For a list of all AWS Marketplace supported AWS Regions, see [Region Table](http
 
 When integrating your container with either `MeterUsage` or `RegisterUsage` for metering, don't configure the AWS SDK to use a specific AWS Region\. The AWS Region must be obtained dynamically at runtime\. For example, if a customer launches an Amazon ECS task or Amazon EKS pod, and `RegisterUsage` is called in an AWS Region that differs from that of where the Amazon ECS task or Amazon EKS pod was launched, `RegisterUsage` will throw `InvalidRegionException`\.
 
-AWS SDK languages do not determine the `AWS_REGION` in a consistent manner\. For example, the AWS SDK for Java automatically uses [Amazon EC2 instance metadata](AWSEC2/latest/UserGuide/ec2-instance-metadata.html) \(specifically, `ec2InstanceMetadata`\) to obtain the AWS Region when environment variables or other configuration are not present\. In this instance, only call `ec2InstanceMetadata` if the `AWS_REGION` environment variable isn’t present\.
+AWS SDK languages do not determine the `AWS_REGION` in a consistent manner\. For example, the AWS SDK for Java automatically uses [Amazon EC2 instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) \(specifically, `ec2InstanceMetadata`\) to obtain the AWS Region when environment variables or other configuration are not present\. In this instance, only call `ec2InstanceMetadata` if the `AWS_REGION` environment variable isn’t present\.
 
 For information on how to dynamically obtain an AWS Region at runtime, refer to the [AWS SDK Developer Guide](http://aws.amazon.com/tools) for your programming language\.
 
