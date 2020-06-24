@@ -96,7 +96,7 @@ This report is published monthly on the fifteenth day of each month at 00:00 UTC
 
 ## Section 3: AWS field demonstration usage<a name="section-3-aws-field-demonstration-usage"></a>
 
- The section lists data for AWS [field demonstration usage](additional-seller-tools.md#field-demonstration-program) of your product\. You can configure your product to allow us to demonstrate your product to potential customers\. Any usage from the demonstrations is listed here\.
+ The section lists data for AWS [field demonstration usage](field-demonstration-program.md) of your product\. You can configure your product to allow us to demonstrate your product to potential customers\. Any usage from the demonstrations is listed here\.
 
 
 |  Column name  |  Description  | 

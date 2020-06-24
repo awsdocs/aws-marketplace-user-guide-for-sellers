@@ -20,6 +20,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Seller toolkit](additional-seller-tools.md)
       + [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md)
       + [AWS Marketplace Enhanced Data Sharing Program](enhanced-data-sharing-program.md)
+      + [AWS Marketplace Field Demonstration Program](field-demonstration-program.md)
       + [Product Support Connection](product-support-connection.md)
 + [Preparing your product](product-preparation.md)
    + [Product pricing](pricing.md)
