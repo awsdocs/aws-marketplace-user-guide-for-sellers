@@ -1,20 +1,20 @@
 # AMI\-based delivery using AWS CloudFormation<a name="cloudformation"></a>
 
-AWS Marketplace vendors can list AMI\-based products that are delivered to AWS Marketplace customers by using AWS CloudFormation templates\. This feature was previously known as Clusters and AWS Resources \(CAR\)\. You can use the templates to define a cluster or distributed architecture for the products or to select different AMI combinations or product configurations\. The AWS CloudFormation templates can be configured to deliver a single Amazon Machine Image \(AMI\) or multiple AMIs along with associated config files and Lambda functions\. Customers can browse the selection of solutions on AWS Marketplace, subscribe with one click, and deploy by using AWS CloudFormation templates that you provide\.
+AWS Marketplace sellers can list AMI\-based products that are delivered to AWS Marketplace buyersby u sing AWS CloudFormation templates\. This feature was previously known as Clusters and AWS Resources \(CAR\)\. You can use the templates to define a cluster or distributed architecture for the products or to select different AMI combinations or product configurations\. The AWS CloudFormation templates can be configured to deliver a single Amazon Machine Image \(AMI\) or multiple AMIs along with associated config files and Lambda functions\. Buyers can browse the selection of solutions on AWS Marketplace, buy with one click, and deploy by using AWS CloudFormation templates that you provide\.
 
-Multi\-AMI solutions can contain up to 20 AMIs and up to 20 AWS CloudFormation templates\. Each AWS CloudFormation template can reference any combination or subset of the AMIs contained in the solution\. The customer subscribes to a single solution that entitles them to all of the AMIs in that product\. When the product has multiple AMIs, each AMI has its own unique product code and can be priced and metered separately\. However, individual components of a solution aren't discoverable or procurable outside the context of the product\.
+Multi\-AMI solutions can contain up to 20 AMIs and up to 20 AWS CloudFormation templates\. Each AWS CloudFormation template can reference any combination or subset of the AMIs contained in the solution\. The buyer purchases a single solution that entitles them to all of the AMIs in that product\. When the product has multiple AMIs, each AMI has its own unique product code and can be priced and metered separately\. However, individual components of a solution aren't discoverable or procurable outside the context of the product\.
 
 If you have existing single\-AMI products, you can't migrate or combine them into a new multi\-AMI listing\. However, your new solution can feature the same software or copies of AMIs used by existing products\. Each listing created on AWS Marketplace is a listing with new product codes\.
 
- You can also include Lambda functions in a Serverless Application with your AMI so that they can be easily deployed together with a few clicks by customers through CloudFormation\. For step by step instructions on how to include Lambda functions and Serverless Applications with your AMI, see [Adding serverless application components](cloudformation-serverless-application.md)\. 
+You can also include Lambda functions in a Serverless Application with your AMI so that buyers can deploy them through CloudFormation\. For instructions on how to include Lambda functions and serverless applications with your AMI, see [Adding serverless application components](cloudformation-serverless-application.md)\. 
 
 ## Building your product listing<a name="building-your-product-listing"></a>
 
-To submit your product, you need to prepare and validate your AMI\(s\), create your AWS CloudFormation template\(s\), create a topology diagram, complete the product load form, and submit the materials to AWS Marketplace\. We recommend that you start by creating and validating your AMI\(s\) and then complete and validate the AWS CloudFormation template\(s\)\. After those steps are complete, you should create a topology diagram and estimate the software and infrastructure price\. AWS Marketplace validates your submission and works with you to make your product public\. Use the [AWS Pricing Calculator](https://calculator.aws/#/) to help estimate the infrastructure cost for your template\. Provide AWS Marketplace with a link to your saved calculator configuration\. The following are limitations of multi\-AMI solution products:
-+  Updating existing AWS Marketplace products from a standalone product to a multi\-AMI product isn't supported\. To make a product available in a multi\-AMI product, copy the AMI and submit it as a component to a new multi\-AMI product\. The resulting AMI has a unique product code, different from that of the previous product\.
+To submit your product, you need to prepare and validate your AMI\(s\), create your AWS CloudFormation template\(s\), create a topology diagram, complete the product load form, and submit the materials to AWS Marketplace\. We recommend that you start by creating and validating your AMI\(s\) and then complete and validate the AWS CloudFormation template\(s\)\. After you complete those steps, you should create a topology diagram and estimate the software and infrastructure price\. AWS Marketplace validates your submission and works with you to make your product public\. Use the [AWS Pricing Calculator](https://calculator.aws/#/) to help estimate the infrastructure cost for your template\. Provide AWS Marketplace with a link to your saved calculator configuration\. The following are limitations of multi\-AMI solution products:
++ Updating existing AWS Marketplace products from a standalone product to a multi\-AMI product isn't supported\. To make a product available in a multi\-AMI product, copy the AMI and submit it as a component to a new multi\-AMI product\. The resulting AMI has a unique product code that's different from the previous product's code\.
 + Multi\-AMI solutions aren't visible on the **AWS Marketplace** tab of the **Launch Instance** page in the Amazon Elastic Compute Cloud \(Amazon EC2\) console\. 
 + An AWS CloudFormation template must not launch AMIs outside of those listed in the multi\-AMI solution\.
-+  AWS CloudFormation templates must be submitted in the form of a public URL\. All nested template URLs contained in the template must also be publicly accessible\. 
++ AWS CloudFormation templates must be submitted in the form of a public URL\. All nested template URLs contained in the template must also be publicly accessible\. 
 
 ## Preparing your AWS CloudFormation template<a name="aws-cloudformation-template-preparation"></a>
 
@@ -24,7 +24,7 @@ To build your AWS CloudFormation templates, you must meet the template prerequis
 + Verify that the template is launched successfully through the AWS CloudFormation console **in all Regions enabled for your product**\. You can use this tool to test your templates: [https://github\.com/aws\-quickstart/taskcat](https://github.com/aws-quickstart/taskcat)\.
 + If you are creating a single\-AMI product, the template must contain only one AMI\.
 + AMIs must be in a [mapping table](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/mappings-section-structure.html) for each region\. The AWS Marketplace team updates the AMI IDs after they're cloned\.
-+ Build templates so that they do not depend on the use in a particular Availability Zone \(AZ\)\. Not all customers have access to all AZs, and AZs are mapped differently for different accounts\.
++ Build templates so that they do not depend on the use in a particular availability zone \(AZ\)\. Not all customers have access to all AZs, and AZs are mapped differently for different accounts\.
 + You can include dependencies such as Lambda functions, config files, and scripts with your AMI\. For more information, see [Create a serverless application](cloudformation-serverless-application.md#cloudformation-serverless-application-procedure-step-1)\.
 + If you're building a clustered solution using an Auto Scaling group, we recommend that you account for a scaling event\. The new node should join the running cluster automatically\.
 + Even for single\-node products, we recommend using an [Auto Scaling group](http://docs.aws.amazon.com/autoscaling/latest/userguide/create-asg-from-instance.html)\.
@@ -51,7 +51,7 @@ After your template is received, AWS Marketplace validates the product configura
 
 The infrastructure cost estimate for each template displayed to customers is based on an estimate that you provide by using the [AWS Pricing Calculator](https://calculator.aws/#/)\. The estimation should include the list of services to be deployed as part of the template, along with the default values for a typical deployment\.
 
-After you have calculated the template's estimated monthly cost, provide AWS Marketplace with the **Save and Share** link for the US East \(N\. Virginia\) Region\. This is part of the submission process\.
+After you calculate the template's estimated monthly cost, provide AWS Marketplace with the **Save and Share** link for the US East \(N\. Virginia\) Region\. This is part of the submission process\.
 
 ## Topology diagram<a name="topology-diagram"></a>
 
@@ -99,6 +99,6 @@ For multi\-AMI products, the following fields are required:
 
 ## Submitting your product request<a name="submitting-your-listing"></a>
 
-Use the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) to submit your product\. On the **Assets** tab, choose **File Upload**\. Upload any files you want to submit and enter a brief description\. After we receive your template and metadata, we start processing your product request\. Allow three to five weeks for the following:
+Use the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) to submit your product\. On the **Assets** tab, choose **File Upload**\. Upload any files you want to submit and enter a brief description\. Allow three to five weeks for request processing, including:
 + Review of the AWS CloudFormation template, AMI, and metadata for the AMI and AWS CloudFormation template
 + Publication of your AWS CloudFormation template to AWS Marketplace products

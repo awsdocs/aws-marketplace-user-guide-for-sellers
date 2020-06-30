@@ -1,10 +1,10 @@
 # AWS Marketplace for Desktop Applications \(AMDA\)<a name="amda"></a>
 
-AWS Marketplace for Desktop Applications \(AMDA\) is a catalog of virtualized desktop applications that run on Amazon WorkSpaces\. AMDA makes it easy to find and subscribe to free and paid applications across 11 software categories\. Applications run in virtualized containers as if they were natively installed and customers are charged on a per\-user, per\-month basis\. 
+AWS Marketplace for Desktop Applications \(AMDA\) is a catalog of virtualized desktop applications that run on Amazon WorkSpaces\. AMDA makes it easy to find and subscribe to free and paid applications across 11 software categories\. Applications run in virtualized containers as if they were natively installed and buyers are charged on a per\-user, per\-month basis\. 
 
- Customers use the Amazon WorkSpaces Application Manager \(WAM\) console to deploy desktop applications to their WorkSpaces\. The applications are delivered to each user’s WorkSpace through the WAM client application\. 
+Buyers use the Amazon WorkSpaces Application Manager \(WAM\) console to deploy desktop applications to their WorkSpaces\. The applications are delivered to each WorkSpace through the WAM client application\. 
 
- The virtualization technology enables fast delivery of programs, often without a reboot, so that users can quickly launch and use their subscribed applications\. Users are charged only for those applications they have been assigned, and charges accrue monthly from when they are first launched until the assignment is revoked\. Additional information: 
+The virtualization technology enables fast delivery of programs, often without a reboot, so that users can quickly launch and use their subscribed applications\. Users are charged only for those applications they have been assigned, and charges accrue monthly from when they are first launched until the assignment is revoked\. Additional information: 
 +  [Amazon WorkSpaces product pages](https://aws.amazon.com/workspaces/) 
 +  [Amazon WorkSpaces testimonials](https://aws.amazon.com/workspaces/testimonials/) 
 +  [AMDA help pages and frequently asked questions](https://aws.amazon.com/marketplace/help/buyer-desktop-apps?ref=help_ln_sibling) 
@@ -12,15 +12,15 @@ AWS Marketplace for Desktop Applications \(AMDA\) is a catalog of virtualized de
 
 ## Starting the onboarding process<a name="beginning-the-onboarding-process"></a>
 
- Under the terms of our AWS Marketplace for Desktop Applications Publisher Addendum \(the “AMDA Addendum”\), Amazon Web Services, Inc\. is the seller of record for applications you choose to make available through the AMDA channel\. As the seller of record, AWS will need to know the price you will charge AWS for the products you plan to have on AWS Marketplace\. Pricing should be on a per\-month basis, per user\. AWS will help you to determine the final price to customers\. 
+Under the terms of our AWS Marketplace for Desktop Applications Publisher Addendum \(the “AMDA Addendum”\), Amazon Web Services, Inc\. is the seller of record for applications you choose to make available through the AMDA channel\. As the seller of record, AWS will need to know the price you will charge AWS for the products you plan to have on AWS Marketplace\. Pricing should be on a per\-month basis, per user\. AWS will help you to determine the final price to buyers\. 
 
  In order to have your product published in non\-US Regions, AWS will also need you to provide certain export classification information, including the applicable [Export Control Classification Number](https://www.bis.doc.gov/index.php/licensing/commerce-control-list-classification/export-control-classification-number-eccn) \(ECCN\)\. 
 
- During and after the initial testing of your product\(s\), a member of the AMDA Business Development team be available to answer any question you might have\. You will then receive an em ail from aws\-mp\-amda\-contract@amazon\.com with the AMDA Addendum for you to fill out, sign, and return for counter signature\. Note that the AMDA Addendum is an addendum to the Terms and Conditions for AWS Marketplace Sellers, so you will need to establish an AWS Marketplace seller account and click through these terms prior to beginning the onboarding process to have your applications made available on AMDA\. 
+During and after the initial testing of your product\(s\), a member of the AMDA Business Development team be available to answer any question you might have\. You will then receive an em ail from aws\-mp\-amda\-contract@amazon\.com with the AMDA Addendum for you to fill out, sign, and return for counter signature\. Note that the AMDA Addendum is an addendum to the Terms and Conditions for AWS Marketplace Sellers, so you will need to establish an AWS Marketplace seller account and click through these terms prior to beginning the onboarding process to have your applications made available on AMDA\. 
 
 ## Product submission and packaging<a name="product-submission-and-packaging"></a>
 
- Virtualization and packaging are handled by the AWS Marketplace Managed Catalog Operations \(MCO\) team\. AMDA vendors provide the software installer, installation instructions, and product metadata\. MCO will work with you to complete the packaging and complete the process for AMDA\. Currently, all AMDA software must be packaged by using an MCO administrative account with permissions to the Amazon S3 bucket that will store the package\. AWS is unable to accept shared packages\. Review the following guidelines before you submit your product\. MCO will start processing your packaging request upon receipt of these items: 
+Virtualization and packaging are handled by the AWS Marketplace Managed Catalog Operations \(MCO\) team\. AMDA vendors provide the software installer, installation instructions, and product metadata\. MCO will work with you to complete the packaging and complete the process for AMDA\. Currently, all AMDA software must be packaged by using an MCO administrative account with permissions to the Amazon S3 bucket that will store the package\. AWS is unable to accept shared packages\. Review the following guidelines before you submit your product\. MCO will start processing your packaging request upon receipt of these items: 
 
 1.  Software installer and license key: 
 
