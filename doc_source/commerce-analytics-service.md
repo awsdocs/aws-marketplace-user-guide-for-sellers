@@ -22,22 +22,37 @@ The AWS Marketplace Commerce Analytics Service lets you programmatically access 
 
 ## Onboarding guide<a name="on-boarding-guide"></a>
 
-You must configure your AWS account and AWS services to use the AWS Marketplace Commerce Analytics Service: 
-+ First, you configure your AWS account with the correct permissions\.
-+ Next, you configure an Amazon S3 bucket for the data to be delivered to\.
-+ Finally, you configure Amazon SNS to send notifications when data is delivered\. 
+You must configure your AWS account and AWS services to use the AWS Marketplace Commerce Analytics Service\. 
 
- AWS Marketplace **strongly** recommends using AWS Identity and Access Management \(IAM\) roles to sign in to the AWS Marketplace Management Portal rather than using your root account credentials\. See [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md) for specific IAM permissions for AWS Marketplace Commerce Analytics Service permissions\. See [Create IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html#intro-identity-users) for details\. By creating individual IAM users for people accessing your account, you can give each IAM user a unique set of security credentials\. You can also grant different permissions to each IAM user\. If necessary, you can change or revoke an IAM user's permissions any time\.
+**To use the AWS Marketplace Commerce Analytics Service**
+
+1. [Set up your AWS account with permissions](#permissions-for-commerce-analytics)\.
+
+1. [Create a destination Amazon S3 bucket](#create-a-destination-amazon-s3-bucket)\.
+
+1. [Configure an Amazon SNS topic for response notifications](#create-an-amazon-sns-topic-for-response-notifications)\. 
+
+1. [Enroll in the Commerce Analytics Service program](#enroll-in-the-commerce-analytics-service-program)\.
+
+1. [Verify your configuration](#verify-your-configuration)\.
+
+### Set up your AWS account with permissions<a name="permissions-for-commerce-analytics"></a>
+
+AWS Marketplace **strongly** recommends using AWS Identity and Access Management \(IAM\) roles to sign in to the AWS Marketplace Management Portal rather than using your root account credentials\. See [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md) for specific IAM permissions for AWS Marketplace Commerce Analytics Service permissions\. See [Create IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html#intro-identity-users) for details\. By creating individual IAM users for people accessing your account, you can give each IAM user a unique set of security credentials\. You can also grant different permissions to each IAM user\. If necessary, you can change or revoke an IAM user's permissions any time\.
 
 ### Create a destination Amazon S3 bucket<a name="create-a-destination-amazon-s3-bucket"></a>
 
-The Commerce Analytics Service delivers the data you request to an Amazon S3 bucket that you specify\. If you don't have an Amazon S3 bucket or you want to create an Amazon S3 bucket specifically for this data, guidance can be found at [How do I Create an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html)\. If you already have an Amazon S3 bucket to use, proceed to the next step\. 
+The Commerce Analytics Service delivers the data you request to an Amazon S3 bucket that you specify\. If you already have an Amazon S3 bucket to use, proceed to the next step\.
+
+If you don't have an Amazon S3 bucket or you want to create an Amazon S3 bucket specifically for this data, see [How do I Create an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html)\. 
 
 ### Configure an Amazon SNS topic for response notifications<a name="create-an-amazon-sns-topic-for-response-notifications"></a>
 
-The Commerce Analytics Service delivers response notifications using Amazon SNS\. The service publishes messages to this topic to notify you when your datasets are available or if an error occurred\. If you don't have an Amazon SNS topic configured for this service, configure one now\. Guidance can be found at [Create a Topic](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\. If you already have an Amazon SNS topic for this purpose, proceed to the next step\. 
+The Commerce Analytics Service delivers response notifications using Amazon SNS\. The service publishes messages to this topic to notify you when your datasets are available or if an error occurred\. If you already have an Amazon SNS topic for this purpose, proceed to the next step\.
 
- Record the topic Amazon Resource Name \(ARN\) for the topic you created, because it will be required to call the service\. 
+If you don't have an Amazon SNS topic configured for this service, configure one now\. For instructions, see [Create a Topic](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\.
+
+Record the topic Amazon Resource Name \(ARN\) for the topic you created, because the ARN is required to call the service\. 
 
 ### Enroll in the Commerce Analytics Service program<a name="enroll-in-the-commerce-analytics-service-program"></a>
 
@@ -45,19 +60,19 @@ The Commerce Analytics Service accesses the Amazon S3 bucket and Amazon SNS topi
 
 **To enable access**
 
-1.  Log in to the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) with the AWS account you use to manage your AWS Marketplace products\. 
+1. Log in to the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) with the AWS account you use to manage your AWS Marketplace products\. 
 
-1.  Navigate to the [Commerce Analytics Service enrollment page](https://aws.amazon.com/marketplace/management/cas/enroll)\. 
+1. Navigate to the [Commerce Analytics Service enrollment page](https://aws.amazon.com/marketplace/management/cas/enroll)\. 
 
-1.  Enter the Amazon S3 bucket name and Amazon SNS topic ARN, and choose **Enroll**\. 
+1. Enter the Amazon S3 bucket name and Amazon SNS topic ARN, and choose **Enroll**\. 
 
-1.  On the permissions page, choose **Allow**\.
+1. On the permissions page, choose **Allow**\.
 
-1.  On the AWS Marketplace Management Portal, record the **Role Name ARN** in the success message\. You will need it to call the service\. 
+1. On the AWS Marketplace Management Portal, record the **Role Name ARN** in the success message\. You need the ARN to call the service\. 
 
 ### Verify your configuration<a name="verify-your-configuration"></a>
 
-Now that you have completed the configuration to use the AWS Marketplace Commerce Analytics Service, you should verify it\.
+The last step is to verify that your configuration works as expected\.
 
 **To test your configuration**
 
@@ -75,11 +90,11 @@ Now that you have completed the configuration to use the AWS Marketplace Commerc
    --sns-topic-arn "{YOUR-SNS-TOPIC-ARN}"
    ```
 +  For `--data-set-publication-date`, replace `{TODAY'S DATE}` with the current date using ISO\-8601 format, `YYYY-MM-DDT00:00:00Z`, where `YYYY` is the four\-digit year, `MM` is the two\-digit month, and `DD` is the two\-digit day\. 
-+  For `--role-name-arn`, replace `{YOUR-ROLE-NAME-ARN}` with the ARN of the role you received from the enrollment process in **Enroll in the Commerce Analytics Service program**\. 
-+  For *\-\-destination\-s3\-bucket\-name*, replace *\{YOUR\-S3\-BUCKET\}* with the Amazon S3 bucket you created in **Create a Destination Amazon S3** Bucket\. 
-+  For *–sns\-topic\-arn*, replace *\{YOUR\-SNS\-TOPIC\-ARN\}* with the Amazon SNS topic you created in **Configure an Amazon SNS** Topic\. 
++  For `--role-name-arn`, replace `{YOUR-ROLE-NAME-ARN}` with the ARN of the role you received from the enrollment process in [Enroll in the Commerce Analytics Service program](#enroll-in-the-commerce-analytics-service-program)\. 
++  For *\-\-destination\-s3\-bucket\-name*, replace *\{YOUR\-S3\-BUCKET\}* with the Amazon S3 bucket you created in [Create a destination Amazon S3 bucket](#create-a-destination-amazon-s3-bucket)\. 
++  For *–sns\-topic\-arn*, replace *\{YOUR\-SNS\-TOPIC\-ARN\}* with the Amazon SNS topic you created in [Configure an Amazon SNS topic for response notifications](#create-an-amazon-sns-topic-for-response-notifications)\. 
 
- If you receive a response including the *dataSetRequestId* response from the service you have successfully completed the on\-boarding process\. A successful response looks like this: 
+If you receive a response including the *dataSetRequestId* response from the service, you've completed the on\-boarding process\. A successful response looks like this: 
 
 ```
 {
@@ -93,7 +108,7 @@ Now that you have completed the configuration to use the AWS Marketplace Commerc
 
 ### IAM policy for Commerce Analytics Service<a name="aws-marketplace-commerce-analytics-iam-permissions"></a>
 
-To allow your IAM users to use the Commerce Analytics Service, you must attach the following inline policy to your users\.
+To allow your IAM users to use the Commerce Analytics Service, attach the following inline policy to your users\.
 
 ```
 {
@@ -134,7 +149,7 @@ aws marketplacecommerceanalytics generate-data-set \
 
 ### Making requests with the AWS SDK for Java<a name="making-requests-with-aws-java-sdk"></a>
 
- To start, download the [AWS Java SDK](https://aws.amazon.com/sdk-for-java/)\. The following AWS SDK for Java example makes a request for the **Hourly/Monthly Subscriptions** dataset for October 1, 2015\. This dataset is published to the **demo\-bucket** Amazon S3 bucket using the prefix **demo\-prefix**, and the notification message is delivered to the **demo\-topic** Amazon SNS topic\. 
+To start, download the [AWS Java SDK](https://aws.amazon.com/sdk-for-java/)\. The following AWS SDK for Java example makes a request for the **Hourly/Monthly Subscriptions** dataset for October 1, 2015\. This dataset is published to the **demo\-bucket** Amazon S3 bucket using the prefix **demo\-prefix**, and the notification message is delivered to the **demo\-topic** Amazon SNS topic\. 
 
 ```
 /*
@@ -274,7 +289,7 @@ Request successful, unique ID: c59aff81-6875-11e5-a6d8-fd5dbcaa74ab
 
 ### Responses<a name="responses"></a>
 
-The AWS Marketplace Commerce Analytics service returns two responses\. The first is synchronous, which is returned immediately, and the second is asynchronous, which is returned using the Amazon SNS\. The synchronous response will look similar to this example\.
+The AWS Marketplace Commerce Analytics service returns two responses\. The first is synchronous, which is returned immediately, and the second is asynchronous, which is returned using the Amazon SNS\. The synchronous response is similar to this example\.
 
 
 **Data set parameters**  
@@ -283,7 +298,7 @@ The AWS Marketplace Commerce Analytics service returns two responses\. The first
 | --- | --- | 
 | Data Set Request ID  | A unique identifier representing a specific request to the service\. This identifier can be used to correlate a request with notifications on the Amazon SNS topic\.  | 
 
-The asynchronous response is posted as a JSON\-formatted document to your Amazon SNS topic and will look similar to this example\.
+The asynchronous response is posted as a JSON\-formatted document to your Amazon SNS topic and is similar to this example\.
 
 
 **Dataset parameters**  
@@ -315,7 +330,7 @@ The asynchronous response is posted as a JSON\-formatted document to your Amazon
 
 ### Outputs<a name="outputs"></a>
 
- After a successful request, the requested dataset is delivered to your Amazon S3 bucket as a \.csv file\. A JSON\-formatted metadata file is published to the same location as the dataset file\. The metadata file provides useful information about the dataset and original request parameters\. The metadata file has the same name as the dataset file, but ends with the extension \.meta\.json\. The following table lists the metadata fields in the \.csv file\.
+After a successful request, the requested dataset is delivered to your Amazon S3 bucket as a \.csv file\. A JSON\-formatted metadata file is published to the same location as the dataset file\. The metadata file provides useful information about the dataset and original request parameters\. The metadata file has the same name as the dataset file, but ends with the extension \.meta\.json\. The following table lists the metadata fields in the \.csv file\.
 
 
 **Metadata fields**  
@@ -361,19 +376,21 @@ For a complete list of available datasets, including availability dates, refer t
 
 ## Troubleshooting<a name="troubleshooting"></a>
 
+This sections describes solutions to issues you may encounter with using the AWS Marketplace Commerce Analytics Service\. 
+
  **I can't access the service because of an allow list issue\.** 
 
- If you're not yet registered as a seller on the AWS Marketplace, visit [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management) to register\. If you have already registered as a seller on AWS Marketplace, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
+If you're not yet registered as a seller on the AWS Marketplace, visit [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management) to register\. If you have already registered as a seller on AWS Marketplace, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
- **I can't request datasets for a date in the past, even though the SDK documentation says it should be available for this date\.** 
+**I can't request datasets for a date in the past, even though the SDK documentation says it should be available for this date\.** 
 
- Even though datasets are listed as being available for certain dates in the past, we have data only since the time that you joined AWS Marketplace\. If you believe that this is in error, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
+Even though datasets are listed as being available for certain dates in the past, we have data only since the time that you joined AWS Marketplace\. If you believe that this is in error, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
  **When I call the service, I receive the error message "Could not connect to the endpoint URL: https://marketplacecommerceanalytics\.eu\-central\-1\.amazonaws\.com/”** 
 
- Currently, the AWS Marketplace Commerce Analytics Service is available only in the US East \(N\. Virginia\) Region\. You must make all calls to the Commerce Analytics Service to the `us-east-1` endpoint\. 
+Currently, the AWS Marketplace Commerce Analytics Service is available only in the US East \(N\. Virginia\) Region\. You must make all calls to the Commerce Analytics Service to the `us-east-1` endpoint\. 
 
- If you're using the AWS CLI, add the "`--region` flag to each call and specify the AWS Region as `us-east-1`, as shown in the following example\.
+If you're using the AWS CLI, add the "`--region` flag to each call and specify the AWS Region as `us-east-1`, as shown in the following example\.
 
 ```
 aws marketplacecommerceanalytics generate-data-set \
@@ -388,7 +405,7 @@ aws marketplacecommerceanalytics generate-data-set \
 
  **I want to use a different Amazon S3 bucket or Amazon SNS topic than the ones I selected when I went through the on\-boarding process\.** 
 
- When enrolling in the AWS Marketplace Commerce Analytics Service, you specified an Amazon S3 bucket and Amazon SNS topic\. The on\-boarding process configures your IAM permissions to allow the service access to only these specific resources, so if you want to use different resources, make a change to your policy document\. To modify your IAM policy: 
+When enrolling in the AWS Marketplace Commerce Analytics Service, you specified an Amazon S3 bucket and Amazon SNS topic\. The onboarding process configures your IAM permissions to allow the service access to only these specific resources\. To use different resources, you need to modify your IAM policy: 
 
 1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
@@ -412,13 +429,13 @@ This can happen if your IAM user doesn't have the permissions necessary to call 
 
 1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
-1. From the right\-side navigation, choose **Users**\.
+1. From the navigation pane on the right, choose **Users**\.
 
-1. Choose the IAM user whose credentials will be used for the `marketplacecommerceanalytics` AWS CLI commands to open the **Summary** page\.
+1. Choose the IAM user whose credentials you want to use for the `marketplacecommerceanalytics` AWS CLI commands to open the **Summary** page\.
 
 1. From the **Permissions** tab, choose **Add inline policy**
 
-1. Open the **JSON** tab and paste in the following code:
+1. Open the **JSON** tab and paste the following code:
 
    ```
    {
