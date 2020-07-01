@@ -446,7 +446,7 @@ This can happen if your IAM user doesn't have the permissions necessary to call 
          "Action": "marketplacecommerceanalytics:GenerateDataSet",
          "Resource": "*",
        },
-     ],a
+     ],
    }
    ```
 
