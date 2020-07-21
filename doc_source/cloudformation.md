@@ -49,7 +49,7 @@ After your template is received, AWS Marketplace validates the product configura
 
 ## Getting the cost estimate for your template infrastructure<a name="template-infrastructure-cost-estimate"></a>
 
-The infrastructure cost estimate for each template displayed to customers is based on an estimate that you provide by using the [AWS Pricing Calculator](https://calculator.aws/#/)\. The estimation should include the list of services to be deployed as part of the template, along with the default values for a typical deployment\.
+The infrastructure cost estimate for each template displayed to customers is based on an estimate that you provide by using the [AWS Pricing Calculator](https://calculator.s3.amazonaws.com/index.html)\. The estimation should include the list of services to be deployed as part of the template, along with the default values for a typical deployment\.
 
 After you calculate the template's estimated monthly cost, provide AWS Marketplace with the **Save and Share** link for the US East \(N\. Virginia\) Region\. This is part of the submission process\.
 
