@@ -6,7 +6,7 @@ Here are some key points about report generation:
 + Reports are generated daily, weekly, or monthly, depending on the report\. 
 + Reports are generated at 00:00 UTC and cover through 24:00 UTC of the previous day\. 
 + Reports are generated as \.csv files\. 
-+ You can configure Amazon SNS to notify you when data is delivered to your encrypted S3 bucket\. After you configure notifications, AWS sends notifications to the email address that is associated with the AWS account that you egistered with on AWS Marketplace\.
++ You can configure Amazon SNS to notify you when data is delivered to your encrypted S3 bucket\. After you configure notifications, AWS sends notifications to the email address that is associated with the AWS account that you registered with on AWS Marketplace\.
 
   For information on how to configure notifications, see [Getting started with Amazon SNS](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html) in the *Amazon Simple Notification Service Developer Guide\.*
 
