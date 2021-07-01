@@ -56,7 +56,7 @@ After you've created the product, you must conduct in\-depth AWS integration tes
 1. After they're onboarded, send metering records to AWS for billing purposes using the `BatchMeterUsage` action in the AWS Marketplace Metering Service\. We recommend using AWS CloudTrail to monitor activity to ensure that billing information is being sent to AWS\. Keep the following in mind when sending metering records:
    + Metering requests are de\-duplicated on the hour\.
    + Records sent every hour are cumulative\.
-   + Even if there where no records in the last hour, we strongly recommend as a best practice that you send metering send records every hour\.
+   + Even if there were no records in the last hour, we strongly recommend as a best practice that you send metering send records every hour\.
 
 1. Test for subscription changes by setting up an Amazon SQS queue and subscribing to your product's Amazon SNS topic\. The Amazon SNS topic provides notifications about changes to customer subscriptions\. This enables you to know when to provide and revoke access for specific customers\. Possible scenarios include unsubscribes, successful subscriptions, and failed subscriptions\.
 
