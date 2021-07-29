@@ -82,7 +82,7 @@ To access your service, buyers do the following:
 |  IAD2 \(1a \)   |   **us\-east\-1a**\-Vpce<0dc9a211a78c90f8>\.api\.vpce\.example\.com   | 
 |  IAD2 \(1b \)   |   **us\-east\-1b**\-Vpce<0dc9a211a78c90f8>\.api\.vpce\.example\.com   | 
 
-If you provided a default private DNS name and the buyer chooses **Enable Private DNS Name** \(associated a private hosted zone\) when creating a VPC endpoint, the buyer sees the regional default private DNS name to onnect to your service\. 
+If you provided a default private DNS name and the buyer chooses **Enable Private DNS Name** \(associated a private hosted zone\) when creating a VPC endpoint, the buyer sees the regional default private DNS name to connect to your service\. 
 
 
 |  **Name**  |  **Alias**  |  **Alias hosted zone ID**  |  **\(Notes\)**  | 
