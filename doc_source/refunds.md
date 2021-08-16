@@ -10,7 +10,9 @@ Customers can request different kinds of refunds for AWS Marketplace products\. 
 
 ## Refund approvals<a name="refund-approval"></a>
 
-Most software refunds must be approved by you through the [Refund Request Form](http://aws.amazon.com/marketplace/management/support/refund-request), and will be processed and issued upon your direction by AWS\. Special cases where your approval is not needed exist for the following product types:
+Most software refunds must be approved by you through the refund request form, and will be processed and issued upon your direction by AWS\. To access the refund request form, you must be signed into your AWS account and then go to [Refund Request Form](http://aws.amazon.com/marketplace/management/support/refund-request)\.
+
+Special cases where your approval is not needed exist for the following product types:
 + Pro\-rated subscription cancellations
 + Usage\-based pricing
 + Free trials

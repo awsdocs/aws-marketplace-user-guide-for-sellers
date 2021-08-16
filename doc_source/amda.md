@@ -5,8 +5,8 @@ AWS Marketplace for Desktop Applications \(AMDA\) is a catalog of virtualized de
 Buyers use the Amazon WorkSpaces Application Manager \(WAM\) console to deploy desktop applications to their WorkSpaces\. The applications are delivered to each WorkSpace through the WAM client application\. 
 
 The virtualization technology enables fast delivery of programs, often without a reboot, so that users can quickly launch and use their subscribed applications\. Users are charged only for those applications they have been assigned, and charges accrue monthly from when they are first launched until the assignment is revoked\. Additional information: 
-+  [Amazon WorkSpaces product pages](https://aws.amazon.com/workspaces/) 
-+  [Amazon WorkSpaces testimonials](https://aws.amazon.com/workspaces/testimonials/) 
++  [WorkSpaces product pages](https://aws.amazon.com/workspaces/) 
++  [WorkSpaces testimonials](https://aws.amazon.com/workspaces/testimonials/) 
 +  [AMDA help pages and frequently asked questions](https://aws.amazon.com/marketplace/help/buyer-desktop-apps?ref=help_ln_sibling) 
 +  [AWS Marketplace for Desktop Applications catalog](https://aws.amazon.com/marketplace/desktop/search?ref_=footer_nav_desktop_view_products) 
 

@@ -1,8 +1,11 @@
-# ISV setup<a name="consulting-partner-isv-info"></a>
+# ISV setup of resell opportunities<a name="consulting-partner-isv-info"></a>
 
-An ISV can extend a one\-time discount price to a consulting partner for the purpose of a specific resale to a designated buyer\. This percentage gets added to the recurring discount to create the total discount off the product price, and becomes the price for a specific transaction\.
+As an ISV, you can authorize consulting partners to resell your products by creating a resale *opportunity* for that partner\. You can specify a discount percentage or custom price per product dimension to create a wholesale price for the consulting partner\. The partner can mark up the wholesale price when creating their consulting partner private offer for a buyer\. For more information about consulting partner private offers, see [Extending a private offer based on an opportunity](consulting-partner-info.md#consulting-partner-recurring-discount)\.
 
-The following procedure outlines how ISVs can create an opportunity for a consulting partner\.
+**Note**  
+If the particular terms of the authorization that you want to create are not possible using the AWS Marketplace Management Portal, you can fill out an * AWS Marketplace Reseller Author form*\. To request and return the form, reach out to your AWS Marketplace channel account manager or send an email message to [mpcustdesk@amazon\.com](mailto://mpcustdesk@amazon.com)\.
+
+The following procedure outlines how ISVs can create an opportunity for a consulting partner\. To use this feature, you must have permissions to use the **Partners** tab in the AWS Marketplace Management Portal\. For more information, see [Policies for AWS Marketplace sellers](detailed-management-portal-permissions.md#seller-managed-policies)\.
 
 **To create an opportunity for a consulting partner**
 
@@ -10,8 +13,18 @@ The following procedure outlines how ISVs can create an opportunity for a consul
 
 1. Choose the **Partners** tab, and then choose **Create opportunity**\.
 
-1. Fill out the partner and product information, including the additional discount on top of the existing contract discount for the consulting partner\.
+1. Enter the **Opportunity name** and **Opportunity description**, and the **Duration** of the opportunity\.
 **Note**  
-The information the ISV puts in the **Opportunity name** and **Opportunity description** will be visible to consulting partners in their seller reports\.
+The information you enter in **Opportunity name** and **Opportunity description** will be visible to consulting partners in their seller reports\.
 
-Once created, opportunities can't have their dates extended, however an ISV can revoke an opportunity and recreate it at any time\. When an ISV revokes an opportunity, new offers can't make use of that discount\. But any offers already created are unaffected and they retain their opportunity discount\.
+1. Choose the **Resellers** that you want to authorize\. You can select resellers by name or account ID\.
+**Note**  
+If a reseller doesn't appear in the list, they may need to register first\. Only registered resellers can be authorized for an opportunity\. For more information, see [Consulting partner setup of resell opportunities](consulting-partner-info.md)\.
+
+1. Select which of your **Products** are part of this opportunity, and the **Discount** that you want to apply\. Optionally, set one or more **Buyer account IDs** to specify that the opportunity is only for those buyers\.
+
+1. Select **Review opportunity**, and make sure that the information is correct\.
+
+1. Select **Create opportunity** to finalize the opportunity and authorize the consulting partners\.
+
+Once created, opportunities can't have their dates extended\. However, you can revoke an opportunity and recreate it at any time\. When you revoke an opportunity, new offers can't make use of that discount\. Any existing offers are unaffected and retain their opportunity discount\.

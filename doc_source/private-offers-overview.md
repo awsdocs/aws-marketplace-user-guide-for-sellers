@@ -9,7 +9,7 @@ You can negotiate EULA terms for each private offer, or you can use or amend [st
 
 You can create and manage all of your private offers from the **Offers** page in the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management)\. You specify the product that the offer is being made for and the AWS account ID \(or IDs\) for the buyer you're creating the offer for\. AWS Marketplace Management Portal generates a unique ID and URL for the offer\. For instructions on creating private offers, see [Consulting partner creates](https://s3.us-west-2.amazonaws.com/external-mp-channel-partners/Consulting+Partner+Creates+(1).pdf)\. 
 
- When you create a private offer, you can extend the offer to up to 25 accounts\. The offer is visible only to the accounts that you create the offer for\. Buyers can't view the offer unless you extend the offer to either their linked account or to their master payer account\. You can't force service limits in the offer, so the buyer can use as much of your product at the negotiated prices as they want, unless the product already has a limit\.
+When you create a private offer, you can extend the offer to up to 25 accounts\. The offer is visible only to the accounts that you create the offer for\. Buyers can't view the offer unless you extend the offer to either their linked account or to their management account\. You can't force service limits in the offer, so the buyer can use as much of your product at the negotiated prices as they want, unless the product already has a limit\.
 
 AWS Marketplace buyers can access third\-party financing for private offers\. For more information, see [Customer financing is now available in AWS Marketplace](https://s3.us-west-2.amazonaws.com/external-mp-channel-partners/Financing+External+Briefing+Document+Customer+Facing.pdf)\.
 
@@ -18,7 +18,7 @@ The buyer isn't notified that you created a private offer\. You can provide the 
 
 When the buyer navigates to your product's subscription page, a banner indicates that a private offer is available\. After the buyer accepts the offer, they're invoiced for the purchase using the same portal tools used for all AWS Marketplace transactions\. Accepted offers become *agreements*, and are also referred to as *contracts* or *subscriptions*\.
 
-For SaaS contract and SaaS contract with consumption products, you can offer upgrades and renewals on agreements that were made when buyers accepted private offers\. For example, you can do this to grant new entitlements, offer pricing discounts, adjust payment schedules, or change the end user license agreement \(EULA\) to use standardized license terms\. For more information, see [Private offer upgrades and renewals](private-offers-upgrades-and-renewals.md)\.
+For software as a service \(SaaS\) contracts and SaaS contracts with consumption products, you can offer upgrades and renewals on agreements that were made when buyers accepted private offers\. For example, you can do this to grant new entitlements, offer pricing discounts, adjust payment schedules, or change the end user license agreement \(EULA\) to use standardized license terms\. For more information, see [Private offer upgrades and renewals](private-offers-upgrades-and-renewals.md)\.
 
 Private offers are tracked in seller reports\. For more information, see [Reporting for private offers](#reporting-for-seller-private-offers) and the [Seller reports guide](https://s3.us-west-2.amazonaws.com/external-mp-channel-partners/Seller+Reports+Guide.pdf)\.
 
@@ -37,22 +37,37 @@ For more information, see [Consulting partner private offers](consulting-partner
 ## Notes about private offers<a name="private-offer-limitations"></a>
 
 When working with private offers, keep the following in mind:
-+  You can't create private offers for second party \(2P\), AMI monthly, SaaS redirect, or AMI\-based delivery using AWS CloudFormation products, or for limiting customer usage\. 
-+ For private offers with the flexible payment scheduler, it is possible to break upfront commitments into multiple payments over time if buyers are on invoicing terms with AWS\.
++  You can't create private offers for second party, Amazon Machine Image \(AMI\) monthly, or multi\-AMI\-based delivery using AWS CloudFormation products, or for limiting customer usage\. 
++ For private offers with the flexible payment scheduler, it is possible to break upfront payments into multiple payments over time if buyers are on invoicing terms with AWS\.
++ If the buyer account for your private offer is managed through a private marketplace, you must include both the buyer's account and the account that includes their private marketplace administrator in the offer\.
 
 ## Supported product types<a name="supported-products-private-offers"></a>
 
-Currently, AMI and SaaS products are supported for private offers\.
+AMI, container, professional services, and SaaS products are supported for private offers\.
 
 ### Private offers for AMI products<a name="ami-private-offers"></a>
 
 You can provide private offers pricing for AMI contracts\. The offer can be any custom duration in days, up to 3 years \(1,095 days\)\. License entitlements begin on the date the buyer accepts the private offer\. For AMI private offers with flexible payment schedules, you can set the number of instances agreed to in the contract, for the duration of the contract\. You can also define a custom hourly price for those same instances if the buyer uses more\. 
 
+**Note**  
+Private offers are not available for monthly billing contracts\.
+
+### Private offers for container products<a name="container-private-offers"></a>
+
+You can provide private offers pricing for container\-based product contracts\. The offer can be any custom duration in days, up to 3 years \(1,095 days\)\. License entitlements begin on the date the buyer accepts the private offer\. For container private offers with flexible payment schedules, you can set the number units agreed to in the contract, for the duration of the contract\. You can also define a custom hourly price for those same units if the buyer uses more\.
+
+**Note**  
+Private offers are not available for monthly billing contracts\.
+
+### Private offers for professional services products<a name="proserv-private-offers"></a>
+
+All professional services product offerings are done through private offers\. For more information, see [Creating private offers](proserv-getting-started.md#proserv-create-offer)\.
+
 ### Private offers for SaaS products<a name="saas-private-offers"></a>
 
 SaaS private offer products can't change the pricing level for a given pricing tier based on timing\. For example, an offer can't charge $0\.80/hour for three months and then change pricing to $0\.60/hour thereafter for the same pricing tier\. For SaaS contracts, private offers don't monitor usage\.
 
-Buyers can manually upgrade to new contracts levels at any time, but it is up to the independent software vendor \(ISV\) to define contract tiers, enforce service limitations, and advise buyers to manually upgrade to higher contract tiers when needed\. The duration dimensions that appear on a SaaS contract private offer matches the durations enabled when the public product listing was created\. For SaaS contracts, this can be 1 month, 1 year, 2 years, and/or 3 years\. 
+Buyers can manually upgrade to new contract levels at any time\. However, it is up to the independent software vendor \(ISV\) to define contract tiers, enforce service limitations, and advise buyers to manually upgrade to higher contract tiers when needed\. The contract duration of the private offer can match the public product listing, or can be a custom duration in months \(up to 60\)\. 
 
 ## Offer submission process<a name="offer-submission-process"></a>
 
@@ -70,9 +85,9 @@ Selecting **Allow buyers to pay for this product in installments \(ISV only\)** 
 
 1. On the **Create an Offer** page, verify the product name and buyer ID\.
 
-1. If the product offering is for an AMI hourly or AMI annual pricing model, specify the **Contract duration**, by choosing a radio button or entering a custom duration in number of days\.
+1. If the product offering is for an AMI hourly, AMI annual, or SaaS contract pricing model, specify the **Contract duration**, by choosing an option button or entering a custom duration in number of days for AMI products or number of months for SaaS contracts\.
 **Note**  
- The duration of the offer can be up to 1,095 days\. 
+ The duration of the offer can be up to 1,095 days for AMI products or up to 60 months for SaaS contracts\. 
 
 1.  In **Input offer price**, enter the pricing information that you negotiated with the customer\. If you have installment payments for the private offer, specify the number of units and the payment schedule for the contract duration\. For more information about installment payments, see [Flexible payment scheduler](flexible-payment-scheduler.md)\. 
 

@@ -1,6 +1,15 @@
 # Marketing your product<a name="product-marketing"></a>
 
- You can contribute to the success of your product by driving awareness of AWS Marketplace and by driving traffic directly to your product pages on AWS Marketplace\. The following provides information and support to help you market the product or products that you have listed on AWS Marketplace\. For more information, see [AWS Marketplace Go\-to\-Market Program Guide](https://s3.amazonaws.com/awsmp-loadforms/AWS_MP_GTM_ProgramGuide.pdf)\.
+ You can contribute to the success of your product by driving awareness of AWS Marketplace and by driving traffic directly to your product pages on AWS Marketplace\. The following provides information and support to help you market the product or products that you have listed on AWS Marketplace\.
+
+## 180\-day GTM Academy<a name="gtm-academy"></a>
+
+The 180\-day GTM Academy is available to all AWS Marketplace sellers, and it provides self\-service go\-to\-market \(GTM\) resources to help you build, activate, and track demand generation campaigns for your offering in AWS Marketplace\. You can:
++ Fast track demand for your listings\.
++ Improve marketing return on investment and enhance customer messaging by integrating AWS and AWS Marketplace value proposition into your messaging\.
++ You can progress toward or within the [AWS Marketplace Go\-to\-Market Program Guide](https://s3.amazonaws.com/awsmp-loadforms/AWS_MP_GTM_ProgramGuide.pdf)\.
+
+You can access the 180\-day GTM Academy from the **Marketplace Resources** section of the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/)\.
 
 ## Announcing your product's availability<a name="AnnouncingYourProductsAvailability"></a>
 

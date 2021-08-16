@@ -11,8 +11,8 @@ The following table explains the names and descriptions of the data feed's colum
 
 | Column name  | Description  | 
 | --- | --- | 
-| address\_id  | The unique key of the address\.  | 
-| aws\_account\_id  | The AWS account number of this address\.  | 
+| address\_id  | The unique key of the address\. Can be used to join from the `Billing_Event` data feed on the `billing_address_id` field, or from the `Account` data feed on the `mailing_address_id` or `tax_address_id` fields\. | 
+| aws\_account\_id  | The AWS account number of this address\. Can be used to join to the `Account` data feed on the `aws_account_id` field\. | 
 | email\_domain  | The domain for the email address on file for this account\.  | 
 | company\_name  | The company name on file for this account\.  | 
 | country  | The ISO 3166 alpha\-2 country code on file for this address\.  | 
@@ -35,8 +35,11 @@ The following shows an example of the address data feed\. In the data feed, this
 | NLUc5UeiMlGFTrDWCoftDPhDUF1oaSd8xgl5QM8Db7 | 555567679999 | c\.com | Our Seller | US | NY | New York | 89475 | 
 
 
+
+
 | address\_line\_1  | address\_line\_2  | address\_line\_3  | 
 | --- | --- | --- | 
 |   |   |  | 
 |  |   |  | 
 |  | 19th Floor |  | 
+

@@ -10,7 +10,7 @@ You can also include Lambda functions in a Serverless Application with your AMI 
 
 ## Building your product listing<a name="building-your-product-listing"></a>
 
-To submit your product, you need to prepare and validate your AMI\(s\), create your AWS CloudFormation template\(s\), create a topology diagram, complete the product load form, and submit the materials to AWS Marketplace\. We recommend that you start by creating and validating your AMI\(s\) and then complete and validate the AWS CloudFormation template\(s\)\. After you complete those steps, you should create a topology diagram and estimate the software and infrastructure price\. AWS Marketplace validates your submission and works with you to make your product public\. Use the [AWS Pricing Calculator](https://calculator.aws/#/) to help estimate the infrastructure cost for your template\. Provide AWS Marketplace with a link to your saved calculator configuration\. The following are limitations of multi\-AMI solution products:
+To submit your product, you need to prepare and validate your AMI\(s\), create your AWS CloudFormation template\(s\), create a topology diagram, complete the product load form, and submit the materials to AWS Marketplace\. We recommend that you start by creating and validating your AMI\(s\) and then complete and validate the AWS CloudFormation template\(s\)\. After you complete those steps, you should create a topology diagram and estimate the software and infrastructure price\. AWS Marketplace validates your submission and works with you to make your product public\. Use the [AWS Pricing Calculator](https://calculator.s3.amazonaws.com/index.html) to help estimate the infrastructure cost for your template\. Provide AWS Marketplace with a link to your saved calculator configuration\. The following are limitations of multi\-AMI solution products:
 + Updating existing AWS Marketplace products from a standalone product to a multi\-AMI product isn't supported\. To make a product available in a multi\-AMI product, copy the AMI and submit it as a component to a new multi\-AMI product\. The resulting AMI has a unique product code that's different from the previous product's code\.
 + Multi\-AMI solutions aren't visible on the **AWS Marketplace** tab of the **Launch Instance** page in the Amazon Elastic Compute Cloud \(Amazon EC2\) console\. 
 + An AWS CloudFormation template must not launch AMIs outside of those listed in the multi\-AMI solution\.
@@ -35,7 +35,7 @@ To build your AWS CloudFormation templates, you must meet the template prerequis
 ### Template input parameters<a name="template-input-parameters"></a>
 + Input parameters to the template must not include the AWS Marketplace customer's AWS credentials \(such as passwords, public keys, private keys, or certificates\) or personal information such as email address\.
 + Do not set defaults for parameters such as remote access, CIDR/IP, or passwords for databases\. The customer must provide these as input parameters\.
-+ For sensitive inputs such as passwords, choose the `No Echo` property and enable stronger regular expression\. For other inputs, set the most common inputs along with appropriate helper text\.
++ For sensitive inputs such as passwords, choose the `NoEcho` property and enable stronger regular expression\. For other inputs, set the most common inputs along with appropriate helper text\.
 + Use AWS CloudFormation parameter types for inputs where available\.
 + Use `AWS::CloudFormation::Interface` to group and sort input parameters\.
 
@@ -49,7 +49,7 @@ After your template is received, AWS Marketplace validates the product configura
 
 ## Getting the cost estimate for your template infrastructure<a name="template-infrastructure-cost-estimate"></a>
 
-The infrastructure cost estimate for each template displayed to customers is based on an estimate that you provide by using the [AWS Pricing Calculator](https://calculator.aws/#/)\. The estimation should include the list of services to be deployed as part of the template, along with the default values for a typical deployment\.
+The infrastructure cost estimate for each template displayed to customers is based on an estimate that you provide by using the [AWS Pricing Calculator](https://calculator.s3.amazonaws.com/index.html)\. The estimation should include the list of services to be deployed as part of the template, along with the default values for a typical deployment\.
 
 After you calculate the template's estimated monthly cost, provide AWS Marketplace with the **Save and Share** link for the US East \(N\. Virginia\) Region\. This is part of the submission process\.
 

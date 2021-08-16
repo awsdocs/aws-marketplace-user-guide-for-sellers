@@ -1,6 +1,6 @@
 # Adding serverless application components<a name="cloudformation-serverless-application"></a>
 
-You can create a product that includes one or more AMIs, delivered using one or more AWS CloudFormation templates, with serverless components incorporated into the product\. For example, you can create a product with one AMI configured as a controller server and another AMI configured as a worker server, delivered as a AWS CloudFormation stack\. The AWS CloudFormation template used to create the stack can include the definition to set up an AWS Lambda function that is triggered by an event in one of the servers\.
+You can create a product that includes one or more Amazon Machine Images \(AMIs\), delivered using one or more AWS CloudFormation templates, with serverless components incorporated into the product\. For example, you can create a product with one AMI configured as a controller server and another AMI configured as a worker server, delivered as a AWS CloudFormation stack\. The AWS CloudFormation template used to create the stack can include the definition to set up an AWS Lambda function that is triggered by an event in one of the servers\.
 
 When you use this approach to design your product, you can simplify the architecture and make it easier for your buyers to launch\. This approach can also make it easier for you to update your product\.
 
@@ -17,7 +17,7 @@ When you define your serverless application, you use an AWS Serverless Applicati
 + [Share your AMI](#cloudformation-serverless-application-procedure-step-6)
 + [Submit your AWS CloudFormation product with AMI and serverless application](#cloudformation-serverless-application-procedure-step-7)
 
-AWS Marketplace reviews and validates your product before your listing is created\. We will email you if there are issues you must resolve before the offer is listed\.
+AWS Marketplace reviews and validates your product before your listing is created\. We will send you an email message if there are issues you must resolve before the offer is listed\.
 
 As part of fulfilling a subscription, we copy the AMIs, serverless applications, and AWS CloudFormation templates to an AWS Marketplace\-owned repository in each AWS Region\. When a buyer subscribes to your product, we give them access, and also notify them when you update your software\.
 
@@ -25,7 +25,7 @@ As part of fulfilling a subscription, we copy the AMIs, serverless applications,
 
 Your first step is to package the AWS Lambda functions used to create your serverless application\. Your application is a combination of Lambda functions, event sources, and other resources that work together to perform tasks\. A serverless application can be as simple as one Lambda function or contain multiple functions with other resources, such as APIs, databases, and event source mappings\.
 
-Use the AWS SAM to define a model for your serverless application\. For descriptions of property names and types, see [AWS::Serverless::Application](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication) in AWSLabs on GitHub\. The following is an example of an AWS SAM template with a single Lambda function and IAM role\.
+Use the AWS SAM to define a model for your serverless application\. For descriptions of property names and types, see [AWS::Serverless::Application](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication) in AWSLabs on GitHub\. The following is an example of an AWS SAM template with a single Lambda function and AWS Identity and Access Management \(IAM\) role\.
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -38,7 +38,7 @@ Resources:
     Properties:
       Handler: 'com.sampleproject.SampleHandler::handleRequest'
       Runtime: java8
-      CodeUri: 's3://awsexamplebucket/2EXAMPLE-1234-4b12-ac37-515EXAMPLEe5-lambda.zip'
+      CodeUri: 's3://DOC-EXAMPLE-BUCKET/2EXAMPLE-1234-4b12-ac37-515EXAMPLEe5-lambda.zip'
       Description: Sample Lambda function
       Timeout: 120
       MemorySize: 1024
@@ -83,7 +83,7 @@ To publish an application, you first upload the application code\. Store your co
 
 1. Choose **Bucket Policy**\.
 
-1. Paste the following example policy statement\. Replace *your\-bucket\-name* in the `Resource` property value with the bucket name for your bucket\.
+1. Paste the following example policy statement\. Replace *DOC\-EXAMPLE\-BUCKET* in the `Resource` property value with the bucket name for your bucket\. Replace *123456789012* in the `Condition` element with your AWS accound ID\. The `Condition` element ensuress that AWS Serverless Application Repository only has permission to access applications from the specified AWS account\.
 
    ```
    {
@@ -95,7 +95,12 @@ To publish an application, you first upload the application code\. Store your co
                    "Service":  "serverlessrepo.amazonaws.com"
                },
                "Action": "s3:GetObject",
-               "Resource": "arn:aws:s3:::awsexamplebucket/*"
+               "Resource": "arn:aws:s3:::DOC-EXAMPLE-BUCKET/*",
+               "Condition" : {
+                   "StringEquals": {
+                       "aws:SourceAccount": "123456789012"
+                   }
+               }
            }
        ]
    }
@@ -165,6 +170,9 @@ The AWS SAM template contains the following elements\.
 +  `SemanticVersion`: The version of your serverless application\. You can find this from the **My Applications** section of the AWS Serverless Application Repository\.
 +  `Parameter` \(optional\): Application parameters\.
 
+**Note**  
+For `ApplicationID` and `SemanticVersion`, [intrinsic functions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html) are not supported\. You must hard code those strings\. The `ApplicationID` will be updated when it is cloned by AWS Marketplace\.
+
 If you are planning to reference config/script files in your AWS CloudFormation template, follow the format shown below\. For nested templates \(AWS::Cloudformation::Stack\), only TemplateURLs without intrinsic functions are supported\. Note the `Parameters` content in the template\.
 
 ```
@@ -211,7 +219,7 @@ Transform: AWS::Serverless-2016-10-31
 
 ## Submit your AWS CloudFormation templates and config files<a name="cloudformation-serverless-application-procedure-step-4"></a>
 
-To submit your AWS CloudFormation template and config/scripts files, grant AWS Marketplace permissions to read the Amazon S3 bucket where these files are stored\. To do so, update your bucket policy to include following permissions\.
+To submit your AWS CloudFormation template and config/scripts files, grant AWS Marketplace permissions to read the Amazon S3 bucket where these files are stored\. To do so, update your bucket policy to include the following permissions\.
 
 ```
 {
@@ -223,8 +231,8 @@ To submit your AWS CloudFormation template and config/scripts files, grant AWS M
                 "Service":  "assets.marketplace.amazonaws.com"
             },
             "Action": ["s3:GetObject", "s3:ListBucket"],
-            "Resource": ["arn:aws:s3:::awsexamplebucket",
-                         "arn:aws:s3:::awsexamplebucket/*"]
+            "Resource": ["arn:aws:s3:::DOC-EXAMPLE-BUCKET",
+                         "arn:aws:s3:::DOC-EXAMPLE-BUCKET/*"]
         }
     ]
 }
@@ -232,9 +240,9 @@ To submit your AWS CloudFormation template and config/scripts files, grant AWS M
 
 ## Update your AWS Serverless Application Repository application permissions<a name="cloudformation-serverless-application-procedure-step-5"></a>
 
-To submit your AWS Serverless Application Repository application to AWS Marketplace, you must grant AWS Marketplace permissions to read your application\. To do that, add permissions to a policy associated with your serverless application\. There are two ways to update your application policy\.
-+ Go to the [AWS Serverless Application Repository](https://serverlessrepo.aws.amazon.com)\. Find your serverless application\. From **Share with AWS accounts**, choose **Add**\. In the input text field, provide the following service principal, `assets.marketplace.amazonaws.com`, and then choose **Save**\.
-+ Use the following AWS CLI command to update your application policy:
+To submit your AWS Serverless Application Repository application to AWS Marketplace, you must grant AWS Marketplace permissions to read your application\. To do that, add permissions to a policy associated with your serverless application\. There are two ways to update your application policy:
++ Go to the [AWS Serverless Application Repository](https://console.aws.amazon.com/serverlessrepo/home)\. Choose your serverless application from the list\. Select the **Sharing** tab, and choose **Create Statement**\. On the **Statement configuration** page, enter the following service principal, **assets\.marketplace\.amazonaws\.com**,in the **Account Ids** field\. Finally choose **Save**\.
++ Use the following AWS CLI command to update your application policy\.
 
   ```
   aws serverlessrepo put-application-policy \
@@ -251,7 +259,7 @@ All AMIs built and submitted to AWS Marketplace must adhere to all product polic
 
 Keep the following in mind before you submit your product:
 + You must provide a topology diagram for each template\. The diagram must use the AWS product icons for each AWS service deployed through the AWS CloudFormation template, and it must include metadata for the services\. To download our official AWS architecture icons, see [AWS Architecture Icons](https://aws.amazon.com/architecture/icons)\.
-+ The infrastructure cost estimate for each template displayed to buyers is based on an estimate that you provide by using the [AWS Pricing Calculator](https://calculator.aws/#/)\. The estimate should include the list of services to be deployed as part of the template, along with the default values for a typical deployment\.
++ The infrastructure cost estimate for each template displayed to buyers is based on an estimate that you provide by using the [AWS Pricing Calculator](https://calculator.s3.amazonaws.com/index.html)\. The estimate should include the list of services to be deployed as part of the template, along with the default values for a typical deployment\.
 + Complete the product load form\. You can find the product load form from the AWS Marketplace Management Portal\. A different product load form is required for single AMI products and multiple AMI products\. In the product load form, you will provide a public URL to your AWS CloudFormation template\. AWS CloudFormation templates must be submitted in the form of a public URL\.
 + Use the AWS Marketplace Management Portal to submit your listing\. From **Assets**, choose **File upload**, attach your file, and then choose **Upload**\. After we receive your template and metadata, AWS starts processing your request\.
 

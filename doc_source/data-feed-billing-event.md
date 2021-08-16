@@ -16,14 +16,14 @@ The following table explains the names and descriptions of the data feed's colum
 | Column name  | Description  | 
 | --- | --- | 
 | billing\_event\_id | An identifier for a billing event\. This ID is unique in the seller's environment\.  | 
-| from\_account\_id | The account that initiated the billing event\. If transction\_type is SELLER\_REV\_SHARE, it is the buyer's payer account\. This is a foreign key to the [account](data-feed-account.md) data feed\. | 
-| to\_account\_id | The account that receives the transaction amount for the product\. This is a foreign key to the account data feed\. | 
-| end\_user\_account\_id | The account that uses the product\. This account may be different from the buyer and payer accounts\. | 
-| product\_id | The identifier of the product\. This is a foreign key to the [product](data-feed-product.md) data feed\. | 
-| action | The type of action for this event\. Possible values are as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html) | 
-| transaction\_type | The type of transaction\. For examples, see [Taxing scenarios](#data-feeds-billing-event-tax-examples)\. Possible values are as follows:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
+| from\_account\_id | The account that initiated the billing event\. If transction\_type is SELLER\_REV\_SHARE, it is the buyer's payer account\. This is a foreign key to the [account](data-feed-account.md) data feed\.Can be used to join to the `Account` data feed on the `account_id` field\. | 
+| to\_account\_id | The account that receives the transaction amount for the product\. This is a foreign key to the account data feed\.Can be used to join to the `Account` data feed on the `account_id` field\. | 
+| end\_user\_account\_id | The account that uses the product\. This account may be different from the buyer and payer accounts\.Can be used to join to the `Account` data feed on the `account_id` field\. | 
+| product\_id | The identifier of the product\. This is a foreign key to the [product](data-feed-product.md) data feed\.Can be used to join to the `Product` data feed on the `product_id` field\. | 
+| action |  The type of action for this event\. Possible values are as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
+| transaction\_type |  The type of transaction\. For examples, see [Taxing scenarios](#data-feeds-billing-event-tax-examples)\. Possible values are as follows:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
 | parent\_billing\_event\_id | If the action is DISBURSEMENT or FORGIVEN and the transaction\_type is DISBURSEMENT, this is the billing\_event\_id that initiated this billing event\. If action has another value, this field is null\.  | 
-| disbursement\_billing\_event\_id | The related disbursement when the `action` is `DISBURSED` AND one of the following is true:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html) In all other cases, this value is null\. | 
+| disbursement\_billing\_event\_id |  The related disbursement when the `action` is `DISBURSED` AND one of the following is true:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html) In all other cases, this value is null\.  | 
 | amount | The billing event amount\.  | 
 | currency | The ISO 639 currency code\. | 
 | balance\_impacting | Whether the amount is taken into account in calculating seller disbursements\. A value of 0 indicates the amount is shown for informational purposes and has no effect on the balance\. A value of 1 indicates that this amount takes into account in determining seller disbursements\.  | 
@@ -32,8 +32,9 @@ The following table explains the names and descriptions of the data feed's colum
 | usage\_period\_start\_date | The start date for the period in the record\. | 
 | usage\_period\_end\_date | The end date for the period in the record\. | 
 | invoice\_id | The AWS invoice ID\. | 
-| billing\_address\_id | The payer's billing address reference in the address data feed\. | 
-| transaction\_reference\_id | An identifier that allows you to cross\-reference data from the following reports: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
+| billing\_address\_id | The payer's billing address reference in the address data feed\.Can be used to join to the `Address` data feed on the `address_id` field\. | 
+| transaction\_reference\_id |  An identifier that allows you to cross\-reference data from the following reports: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
+| bank\_trace\_id | For disbursement transactions \(transaction\_type = 'DISBURSEMENT' and action = 'DISBURSED'\), the trace ID assigned by the bank\. The trace ID can be used to correlate with bank\-provided reports from the seller bank\. | 
 
 ## Taxing scenarios<a name="data-feeds-billing-event-tax-examples"></a>
 
@@ -50,7 +51,7 @@ This section shows examples of the billing event data period at the time of invo
 
 For the examples in this section, assume the following: 
 + Arnav is the buyer\.
-  + His account ID is `73739998888`\.
+  + His account ID is `737399998888`\.
   + He's located in France, which is subject to marketplace facilitator laws\. For more information, see [Amazon Web Service Tax Help](https://aws.amazon.com/tax-help/)\.
   + He purchased `prod-o4grxfafcxxxx` and was invoiced $120\.60 for his monthly usage of that product\.
   + He paid the invoice within the month\.
@@ -69,10 +70,12 @@ The following tables show the relevant information in Paulo's data feed when he 
 
 | billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | 
 | --- | --- | --- | --- | --- | --- | --- | 
-| I0 | 73739998888 | 777788889999 | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
-| I1 | 73739998888 | AWS | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE | 
-| I2 | 777788889999 | 111122223333 | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
-| I3 | 777788889999 | AWS | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE | 
+| I0 | 737399998888 | 777788889999 | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
+| I1 | 737399998888 | AWS | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE | 
+| I2 | 777788889999 | 111122223333 | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
+| I3 | 777788889999 | AWS | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE | 
+
+
 
 
 | parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | invoice\_date | invoice\_id | 
@@ -87,10 +90,12 @@ The following tables show the relevant information in Paulo's data feed at the e
 
 | billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | 
 | --- | --- | --- | --- | --- | --- | --- | 
-| I10 | 73739998888 | 777788889999 | 73739998888 |  | INVOICED | SELLER\_REV\_SHARE | 
-| I12 | 777788889999 | 111122223333 | 73739998888 |  | INVOICED | SELLER\_REV\_SHARE | 
-| I13 | 777788889999 | AWS | 73739998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | 
+| I10 | 737399998888 | 777788889999 | 737399998888 |  | INVOICED | SELLER\_REV\_SHARE | 
+| I12 | 777788889999 | 111122223333 | 737399998888 |  | INVOICED | SELLER\_REV\_SHARE | 
+| I13 | 777788889999 | AWS | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | 
 | I14 | AWS | 777788889999 |  |  | DISBURSED | DISBURSEMENT | 
+
+
 
 
 | parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | invoice\_date | invoice\_id | 
@@ -112,6 +117,8 @@ The following tables show the relevant information in the Jane's data feed when 
 | I7 | 777788889999 | AWS |  | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | 
 
 
+
+
 | parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | invoice\_date | invoice\_id | 
 | --- | --- | --- | --- | --- | --- | 
 |  |  | 73\.5 |  | 2018\-12\-31T00:04:07Z | 788576665 | 
@@ -126,7 +133,9 @@ The following tables show the relevant information in Jane's data feed at the en
 | I30 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | DISBURSED | SELLER\_REV\_SHARE | 
 | I31 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | DISBURSED | SELLER\_TAX\_SHARE | 
 | I32 | 777788889999 | AWS |  | prod\-o4grxfafcxxxx | DISBURSED | AWS\_REV\_SHARE | 
-| I33 | AWS | 777788889999 |  |  | DISBURSED | DISBURSEMENT | 
+| I33 | AWS | 111122223333 |  |  | DISBURSED | DISBURSEMENT | 
+
+
 
 
 | parent\_billing\_event\_id | disbursement\_billing\_event\_id | amount | currency | invoice\_date | invoice\_id | 
@@ -178,8 +187,10 @@ To find out how much AWS can collect on a seller's behalf, minus any refunds, cr
 ```
 SELECT sum(amount) FROM billing_event 
 WHERE
-  transaction_type like 'SELLER_%' -- what is invoiced on behalf of SELLER, incl. refunds/ credits and cost of goods
-  and action in ('INVOICED','FORGIVEN') -- FORGIVEN action records will "negate" related INVOICED
+  -- what is invoiced on behalf of SELLER, incl. refunds/ credits and cost of goods
+  transaction_type like 'SELLER_%' 
+  -- FORGIVEN action records will "negate" related INVOICED
+  and action in ('INVOICED','FORGIVEN') 
 ;
 ```
 
@@ -231,7 +242,7 @@ WHERE
 ;
 ```
 
-## Example 6: Amount pending disbursement<a name="data-feed-example-query-pending-dibursement"></a>
+## Example 6: Amount pending disbursement<a name="data-feed-example-query-pending-disbursement"></a>
 
 To find out the amount that's pending disbursement, you can run a query like the following\. This query removes amounts that have already been disbursed\. 
 
@@ -294,7 +305,7 @@ from
     -- do not take into account failed disbursements
     AND not exists
       (select 1 from billing_event failed_disbursement
-       where disbursed_invoices.disbursement_billing_event_id =  failed_disbursement.parent_billing_event_id
+       where disbursed_invoices.disbursement_billing_event_id = failed_disbursement.parent_billing_event_id
       )
    GROUP BY billed_invoices.billing_event_id
 );
@@ -307,7 +318,8 @@ To learn the sum of a set of invoices, you can run a query like the following:
 ```
 SELECT invoice_id, sum(amount) FROM billing_event targeted
 WHERE
-  --invoice_id is only not null for invoiced records AND disbursed records linking them to related disbursement -> no need to filter more precisely
+  -- invoice_id is only not null for invoiced records AND disbursed records 
+  -- linking them to related disbursement -> no need to filter more precisely
   invoice_id in ('XXX','YYY') 
   -- filter out failed disbursements 
   AND not exists

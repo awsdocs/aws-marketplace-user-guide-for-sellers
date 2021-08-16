@@ -10,7 +10,7 @@ You can use the following IAM permission policy to allow an IAM user to access t
             "Effect": "Allow",
             "Action": "marketplacecommerceanalytics:GenerateDataSet",
             "Resource": "*"
-        },
+        }
     ]
 }
 ```
