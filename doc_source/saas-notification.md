@@ -16,8 +16,8 @@ Each message for the SaaS product Amazon SNS notifications has the following for
 ```
 {
     "action": "action-name",
-    "CustomerIdentifier": " X01EXAMPLEX",
-    "ProductCode": "n0123EXAMPLEXXXXXXXXXXXX"
+    "customer-identifier": " X01EXAMPLEX",
+    "product-code": "n0123EXAMPLEXXXXXXXXXXXX"
 }
 ```
 
