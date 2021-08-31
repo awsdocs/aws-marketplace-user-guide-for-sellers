@@ -11,8 +11,8 @@ The following table explains the names and descriptions of the data feed's colum
 
 | Column name  | Description  | 
 | --- | --- | 
-| offer\_id | The friendly identifier for the offer\. | 
-| offer\_revision | The offer revision\. This field and the offer\_id field combine to form the primary key\. | 
+| offer\_id | The friendly identifier for the offer\.Can used to join to the `offer_id` field of the `Offer_Product` data feed\. | 
+| offer\_revision | The offer revision\. This field and the offer\_id field combine to form the primary key\.With `offer_id`, can used to join to the `offer_id` and `offer_revision` fields of the `Target_Offer` data feed\. | 
 | name | The seller\-defined name of the offer\.  | 
 | expiration\_date | The date and time that the offer expires\. | 
 | opportunity\_name | Any opportunity data linked to this offer\. If the offer is bound to an AWS opportunity, this field is populated\. | 

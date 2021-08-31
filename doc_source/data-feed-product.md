@@ -11,8 +11,8 @@ The following table explains the names and descriptions of the data feed's colum
 
 | Column name  | Description  | 
 | --- | --- | 
-| product\_id | The friendly identifier of the product\. | 
-| manufacturer\_account\_id | The identifier of the product owner\. This is a foreign key to the [Account](data-feed-account.md) data feed\. | 
+| product\_id | The friendly identifier of the product\.Can used to join to the `product_id` fields of the `Account`, `Billing_Event`, and `Offer_Product` data feeds\. | 
+| manufacturer\_account\_id | The identifier of the product owner\. This is a foreign key to the [Account](data-feed-account.md) data feed\.Can used to join to the `account_id` field of the `Account` data feed\. | 
 | product\_code | The existing entitlement product code used to meter the product\. This value is also used to join data with a report, or to reference what is provided in AWS Marketplace Metering Service\. | 
 | title | The title of the product\.  | 
 

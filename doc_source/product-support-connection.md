@@ -7,7 +7,7 @@
  You also have the option to enroll your products in AWS Marketplace Product Support Connection \(PSC\)\. For products that are enrolled in PSC, AWS Marketplace customers can choose to provide contact information \(including name, organization, email address, and phone number\) via the AWS Marketplace website for the purposes of obtaining and accessing product support\. If you enroll in PSC, AWS Marketplace shares the provided data with you via an API to help enable a more seamless support experience\. 
 
 **Note**  
-Currently, data products don't support this feature\.
+Data products don't support this feature\.
 
 ## Technical implementation guide<a name="technical-implementation-guide"></a>
 
@@ -81,7 +81,7 @@ To ensure the security of the customer contact data available through the Produc
 |  From Date  |   The earliest date of data to be exported\. The exported data will contain information from the specified From Date to 15 minutes prior to the time of the request\.   The From Date must be expressed as an ISO 8601 date/time string\.   If you would like to receive the full data set, as opposed to a set of updates, specify any date prior to the date when you onboarded to the program\. To receive only incremental data since your last request, specify the endDateTime from the dataSetCoverageRange from the metadata JSON file resulting from your previous request\. See below for more information about the metadata JSON file\.   | 
 |  Role Name ARN  |  The Amazon Resource Name \(ARN\) of the IAM role with an attached permissions policy which provides the service with access to your resources\.  | 
 |  Destination S3 Bucket Name  |  The name \(friendly name, not ARN\) of the destination [Amazon S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)\. Your datasets will be published to this location\.  | 
-|  Destination S3 Prefix  |   \(Optional\) The desired Amazon S3 prefix for the published dataset, similar to a directory path in standard file systems\.   For example, if given the bucket name "mybucket" and the prefix "myprefix/mydatasets", the output file "outputfile" would be published to "s3://*awsexamplebucket*/myprefix/mydatasets/outputfile"\.   If the prefix directory structure does not exist, it will be created\.   If no prefix is provided, the data set will be published to the Amazon S3 bucket root\.   | 
+|  Destination S3 Prefix  |   \(Optional\) The desired Amazon S3 prefix for the published dataset, similar to a directory path in standard file systems\.   For example, if given the bucket name "mybucket" and the prefix "myprefix/mydatasets", the output file "outputfile" would be published to "s3://*DOC\-EXAMPLE\-BUCKET*/myprefix/mydatasets/outputfile"\.   If the prefix directory structure does not exist, it will be created\.   If no prefix is provided, the data set will be published to the Amazon S3 bucket root\.   | 
 |  SNS Topic ARN  |  The Amazon Resource Name \(ARN\) for the Amazon SNS topic that will be notified when the data set has been published, or if an error occurs\.  | 
 
 ## Responses<a name="responses"></a>

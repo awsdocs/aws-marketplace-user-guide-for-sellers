@@ -4,7 +4,7 @@ The disbursement report provides information about funds that we collected and d
 
 Refunds appear as negative amounts because the money is returned to your customer after you authorize a refund\. 
 
-This report is available on the AWS Marketplace Management Portal under the **Reports** tab\. If you're enrolled in the AWS Marketplace commerce analytics service, you can use API calls to pull down sections of this report\. For more information, see [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md)\. 
+This report is available on the AWS Marketplace Management Portal under the **Reports** tab\.  To create your own report similar to this one you can use the AWS Marketplace [Data feeds](data-feed.md), including the [Example 1: Disbursements by product](data-feed-full-examples.md#data-feed-example-disbursement-by-product) as a base report to customize to meet your needs\.
 
 ## Publication schedule<a name="publication-schedule-3"></a>
 
@@ -47,8 +47,6 @@ This section lists data for disbursements by product\.
 | Customer Email Domain  | The email domain that is associated with the account that the charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
 | Solution Title  | The name of the solution\.  | 
 | Solution ID  | The unique identifier for the solution\.  | 
-| Launch Type Description  | The type of instance that the customer launched\. This is Amazon EC2 or AWS Fargate\.  | 
-| Container Hours  | The aggregate partial hours per Region by launch type\.  | 
 | Payer Reference ID  | A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 
 | Payer Address ID  | A unique identifier that represents the customer's address\. | 
 

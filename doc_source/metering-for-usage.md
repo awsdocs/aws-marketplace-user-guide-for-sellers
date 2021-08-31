@@ -1,6 +1,9 @@
 # Metering for usage<a name="metering-for-usage"></a>
 
-For SaaS subscriptions, you meter for all usage, and then customers are billed by AWS based on the metering records that you provide\. For SaaS contracts, you only meter for usage beyond a customer’s contract entitlements\. When your application meters usage for a customer, your application is providing AWS with a quantity of usage accrued\. Your application meters for the pricing dimensions that you defined when you created your product, such as gigabytes transferred or hosts scanned in a given hour\. For example, if you charge based on the amount of data sent into your application, you can measure the amount of data and send a corresponding metering record once an hour\. AWS calculates a customer’s bill using the metering data along with the prices that you provided when you created your product\.
+For software as a service \(SaaS\) subscriptions, you meter for all usage, and then customers are billed by AWS based on the metering records that you provide\. For SaaS contracts, you only meter for usage beyond a customer’s contract entitlements\. When your application meters usage for a customer, your application is providing AWS with a quantity of usage accrued\. Your application meters for the pricing dimensions that you defined when you created your product, such as gigabytes transferred or hosts scanned in a given hour\. For example, if you charge based on the amount of data sent into your application, you can measure the amount of data and send a corresponding metering record once an hour\. AWS calculates a customer’s bill using the metering data along with the prices that you provided when you created your product\.
+
+**Note**  
+Optionally, you can split the usage across properties that you track\. These properties are exposed to the buyer as tags\. These tags allow the buyer to view their costs split into usage by the tag values\. For example, if you charge by the user, and users have a "Department" property, you could create a usage allocations with tags that have a key of "Department", and one allocation per value\. This does not change the price, dimensions, or the total usage that you report, but allows your customer to view their costs by categories appropriate to your product\.
 
 We recommend that you send a metering record every hour to give customers as much granular visibility into their usage and costs as possible\. If you aggregate usage in time periods greater than an hour \(for example, one day\), continue sending metering records every hour and record a quantity of 0 if there is no usage to report for that hour\. Report usage to AWS on an hourly basis for all of your customers, in batches of up to 25 at a time\. 
 
@@ -13,11 +16,12 @@ AWS can only bill customers for usage of your product upon receiving metering re
 +  We deduplicate metering requests on the hour\. 
   +  Requests are deduplicated per product/customer/hour/dimension\. 
   +  You can always retry any request, but if you meter for a different quantity, the original quantity is billed\. 
-  +  If you send multiple requests for the same customer/dimension/hour, they don't accumulate usage\. 
+  +  If you send multiple requests for the same customer/dimension/hour, the records are not aggregated\. 
 +  Your metering records contain a timestamp that can't be later than 1 hour in the past\. 
-+  The AWS Marketplace Metering Service is available in 14 AWS Regions\. The US East \(N\. Virginia\) Region is enabled by default for SaaS metering products when you request your product\. If you intend to use other Regions, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. For more information, see [BatchMeterUsage](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_BatchMeterUsage.html)\. 
++ `BatchMeterUsage` payloads must not exceed 1MB\. Choose the number of usage records to send in a `BatchMeterUsage` request so that you don't exceed the size of the payload\.
++  The AWS Marketplace Metering Service is available in 14 AWS Regions\. By default, the US East \(N\. Virginia\) Region is enabled for SaaS metering products when you request your product\. If you intend to use other Regions, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. For more information, see [BatchMeterUsage](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_BatchMeterUsage.html)\. 
 
-For code samples, see [Code examples](saas-code-examples.md)\.
+For code examples, see [Code examples](saas-code-examples.md)\.
 
 ### Example: Host scanning<a name="host-scanning-example"></a>
 

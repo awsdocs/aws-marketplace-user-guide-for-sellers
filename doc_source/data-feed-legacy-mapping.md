@@ -25,3 +25,4 @@ The following shows an example of the legacy mapping data feed\. For readability
 | OFFER | 8a806c74\-dbd6\-403e\-9362\-bb08f417ff37 | offer\-dacpxznflfwin | 
 | PRODUCT | 1368541d\-890b\-4b6c\-9bb9\-4a55306ab642 | prod\-o4grxfafcxxxy | 
 | OFFER | 558d8382\-6b3a\-4c75\-8345\-a627b552f5f1 | offer\-gszhmle5npzip | 
+

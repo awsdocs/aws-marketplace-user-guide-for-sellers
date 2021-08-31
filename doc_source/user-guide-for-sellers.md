@@ -17,7 +17,7 @@ For information about the permissions that AWS Marketplace sellers need, see [Po
 
 ## Additional seller requirements for paid products<a name="additional-seller-requirements-for-paid-products"></a>
 
-If you charge for your products, offer Bring\-Your\-Own\-License model \(BYOL\) products, or want to register as an AWS Data Exchange data provider, you must also meet the following requirements and provide this additional information:
+If you charge for your products or offer Bring Your Own License model \(BYOL\) products, you must also meet the following requirements and provide this additional information:
 + You must be a permanent resident or citizen in an [eligible jurisdiction](#eligible-jurisdictions), or a business entity organized or incorporated in one of those areas\.
 +  You must provide tax and bank account information\. For US\-based entities, a W\-9 form and a banking account from a US\-based bank are required\. 
 + Non\-US sellers are required to provide a \(i\) W\-8 form, value\-added tax \(VAT\) or goods and services tax \(GST\) registration number, and \(ii\) US bank information\. If you don't have a US bank account, you can register for a virtual US bank account from [Hyperwallet](https://wssellers.hyperwallet.com/)\. 
@@ -29,22 +29,27 @@ If you charge for your products, offer Bring\-Your\-Own\-License model \(BYOL\) 
 
 ### Eligible jurisdictions for paid products<a name="eligible-jurisdictions"></a>
 
-To sell paid software in AWS Marketplace, you must be a permanent resident or citizen in one of the following countries, or a business entity organized or incorporated therein: 
+To sell paid software in AWS Marketplace, you must be a permanent resident or citizen in one of the following countries or SARs, or a business entity organized or incorporated therein: 
 + Australia¹
 + Bahrain¹ ²
 + European Union \(EU\) member state¹
++ Hong Kong SAR
++ Japan² ³
 + New Zealand¹
 + Norway¹ ²
++ Qatar
 + Switzerland¹ ²
 + United Arab Emirates \(UAE\)¹ ²
 + United Kingdom \(UK\)¹
 + United States \(US\)
 
-¹ Sellers of paid products in these countries must provide VAT information\. 
+¹ Sellers of paid products in these countries must provide VAT registration information in country of establishment\. 
 
-² In these countries, sellers may need to provide an invoice to buyers\.
+² If you as a seller are located in the same country as the buyer, you may be responsible for tax invoicing, collections, and remittances\. Please consult with your tax advisor\.
 
-For more information on VAT and invoicing, see [AWS Marketplace Sellers](https://aws.amazon.com/tax-help/marketplace/) on [Amazon Web Service Tax Help](https://aws.amazon.com/tax-help/)\.
+³ Sellers based in Japan have an obligation to self\-account for the Japanese Consumption Tax \(JCT\) on the listing fee charges\. Sellers based in other jurisdictions may have similar obligations\. Please consult with your tax advisor\.
+
+For more information about VAT, invoicing, and your tax obligations as a seller, see [AWS Marketplace Sellers](https://aws.amazon.com/tax-help/marketplace/) on [Amazon Web Service Tax Help](https://aws.amazon.com/tax-help/)\.
 
 ## AWS Marketplace Management Portal<a name="management-portal"></a>
 

@@ -7,6 +7,8 @@ The report lists monthly billed revenue with additional customer information tha
 
  The sales compensation report and the information that is shared with you as part of this program constitute Amazon's Confidential Information under our nondisclosure agreement with you or, if no such agreement exists, the Terms and Conditions for AWS Marketplace sellers\. You can use this information only for compensating your sales representatives by mapping AWS Marketplace revenue to the representatives by company name, geography, and AWS account ID\. You can share this information with employees who need to know it to understand the source of commissions that is payable to them\. Your use and sharing of such information must comply with the obligations in our nondisclosure agreement with you and the terms and conditions for AWS Marketplace sellers, including, without limitation, Section 3\.8 of the Terms and Conditions for AWS Marketplace sellers\. 
 
+To create your own report similar to this one you can use the AWS Marketplace [Data feeds](data-feed.md), including the [Example 2: Sales compensation report](data-feed-full-examples.md#data-feed-example-sales-compensation) as a base report to customize to meet your needs\.
+
 ## Publication schedule<a name="publication-schedule-4"></a>
 
 This report is published monthly, on the fifteenth day of each month at 00:00 UTC\. The report covers the previous calendar month from 00:00 UTC through 23:59 UTC of the last calendar day of the month\. For example, the report published on May 15 covers from April 1 at 00:00 UTC through April 30 at 23:59 UTC\.

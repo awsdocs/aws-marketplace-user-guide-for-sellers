@@ -5,7 +5,7 @@ With software as a service \(SaaS\) products, you deploy software hosted on AWS 
 For assistance with your SaaS products, [contact us](https://aws.amazon.com/marketplace/management/contact-us/)\.
 
 **Topics**
-+ [Getting started](saas-getting-started.md)
++ [Getting started with SaaS products](saas-getting-started.md)
 + [Plan your SaaS product](saas-prepare.md)
 + [SaaS product guidelines](saas-guidelines.md)
 + [Pricing SaaS products](saas-pricing-models.md)

@@ -1,51 +1,26 @@
 # AMI\-based products<a name="ami-products"></a>
 
-[Amazon Machine Images \(AMIs\)](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#AmazonMachineImage) provide the information required to launch an Amazon EC2 instance\.
+One way of delivering your products to buyers is with [Amazon Machine Images \(AMIs\)](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#AmazonMachineImage)\. An AMI provides the information required to launch an Amazon Elastic Compute Cloud \(Amazon EC2\) instance\. You create a custom AMI for your product, and buyers can use it to create EC2 instances with your product already installed and ready to use\.
 
-Each product in AWS Marketplace is assigned a unique product ID\. This product ID is used to identify your product in the AWS Marketplace catalog, in customer billing, and in seller reports\. A unique product code is assigned to all AMIs submitted to AWS Marketplace\. Product codes are not product IDs\. Sellers can obtain the product code while they develop their software so it can be used for extra security, such as validating the product code at product start\. you cannot make API calls to an AMI's product code until the product has been published into a limited state for testing\. 
+When buyers use the AMI that you provide, they are billed for any instances that they create, following the pricing and metering options that you create for your product\. Buyers can use your product AMI in the same way that they use other AMIs in AWS, including making new custom versions of the AMI\. EC2 instances created from the AMI are still billed as your product, based on the AMI product code\.
 
-Product codes are propagated automatically as customers work with the software\. For example, a customer subscribes and launches an AMI, configures it, and produces a new AMI\. The new AMI still contains the original product code, so correct billing and permissions remains in place\. For more information, see [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
+See the following resources:
++ For more information about pricing AWS Marketplace products, see [Product pricing](pricing.md)\.
++ For more information about creating custom metering for your product, see [Metering service](metering-service.md)\.
 
-## Multiple versions<a name="multiple-versions"></a>
+## AMI\-based product delivery methods<a name="ami-product-delivery-methods"></a>
 
-You can provide multiple versions of a product as separate AMIs to buyers as part of their purchase\. The seller can make available any number of versions for a product\. After a buyer has access to an AMI, they always have launch permissions on the AMI, regardless of the visibility or status of that version\.
+You can deliver your AMI\-based product in one of three ways:
++ **Single AMI** – Buyers select and use the AMI as a template for an EC2 instance\. Buyers can find these products using the **Amazon Machine Image** delivery method filter\. 
 
- For example, the product Data Cleaner might have versions 1\.0\.0, 1\.2\.5, and 2\.0\.1, all of which can be available to buyers\. If you request the removal of version 1\.0\.0, no new customers can buy that version, but existing customers can access it\. 
+  For more information, see [Single\-AMI products](ami-single-ami-products.md)\.
++ **AWS CloudFormation templates** – You create templates that allow buyers to install a system of multiple instances with different roles as a single unit\. Buyers can find these products using the **CloudFormation** delivery method filter\. 
 
-## AMI file upload<a name="amis-file-upload"></a>
+  For more information, see [AMI\-based delivery using AWS CloudFormation](cloudformation.md)\.
++ **Private image build** – This approach allows buyers to install your product on a base gold image that meets their internal needs for operating system configuration\. They create a new AMI, with your product code for tracking and billing\. Buyers can find these products using the **Private Amazon Machine Image** delivery method filter\.
 
-Self\-service AMI scanning is available in the AWS Marketplace Management Portal\. With this feature, you can initiate scans of your AMIs and receive scanning results quickly—typically in less than an hour—with clear feedback in a single location\. For more information, see [AMI Self\-Service Scanning](https://aws.amazon.com/marketplace/management/manage-products/#/build.build-new)\. 
+  For more information, see [Private images](private-images.md)\.
 
-To upload a new product load form, go to [File Upload](https://aws.amazon.com/marketplace/management/product-load) in the AWS Marketplace Management Portal\. From there, you can download the most recent product load template\. We strongly recommend checking that the form is the most recent because it's consistently updated with more instance types and regions as they become available\. Using AMI Self\-Service Scanning significantly increases the ease of loading the page\. 
-
-## Removing products from AWS Marketplace<a name="removing-products-from-aws-marketplace"></a>
-
-After your product is published, you can remove \(also referred to as *sunset*\) the product from AWS Marketplace\. To remove a product, identify the product and submit a request to remove it, along with a reason for removal and a contact email address for you\. You can also provide a replacement product ID if you're replacing the current product with a new one\. After you request product removal, new customers will no longer be able to subscribe\. You're required to support any existing customers for a minimum of 90 days\. We process requests for product removal from AWS Marketplace with the following conditions: 
-+ The product is removed from AWS Marketplace search, browse, and other discovery tools\. Any Subscribe button or functionality is disabled, and messaging on the page clearly indicates the product is no longer available\. Note that the product detail page is still accessible using the URL and may be indexed in public search engines\. 
-+ A reason for removal must be specified \(for example, end of support, end of product updates, or replacement product\)\. For the requirements for continuing support for removed products, see [Terms and Conditions for AWS Marketplace Sellers](https://aws.amazon.com/marketplace/management/terms?)\. 
-+ Current buyers are messaged by AWS Marketplace informing of the product removal, reasons for the removal, and provide seller contact information\. 
-+  Current buyers *do* retain access to the software until they cancel their subscription\. They aren't impacted in any way by the product removal\. 
-
-**To remove a product created using the AWS Marketplace Management Portal**
-
-1. Open the AWS Marketplace Management Portal at [https://aws.amazon.com/marketplace/management/tour/](https://aws.amazon.com/marketplace/management/tour/), and then sign in to your seller account\.
-
-1. Choose the **Products** tab, and then choose **Server**\.
-
-1. On your product page under **Current server products**, locate the product that you want to remove\. From the **Actions** column on the **Select action** menu, choose **Remove product**\.
-
-1. On the **Remove Product** page, for **Request Reason**, type the reason that you're requesting the product's removal\.
-
-1. For **Contact Email**, type the email that AWS can use to contact you with any questions\.
-**Note**  
-You can also provide a replacement product ID, but that field isn't required\.
-
-1. Review the information for accuracy, and then choose **Submit Sunset Request**\. 
-
-A **What’s next** informational page displays after you submit the product removal request\. The AWS Marketplace Seller Operations team reviews and processes your request\. Check the status of your submission by viewing **Requests**\.
-
-After your product is removed, the product appears in your **Request History** list and in the **Current Products** list\. In **Current Products**, the only action that you can perform is downloading the spreadsheet for the product\. You can't edit or submit another sunset request\. 
-
-For products not created using the **Products** tab, edit and upload the product load form for the product\. Links to upload updated product load forms are on the **Assets** tab on the AWS Marketplace Management Portal landing page\.
-
- If you have questions about product removals, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\.
+See the following resources:
++ For more information about how your AMIs are tracked as buyers use them, see [AMI product codes](ami-getting-started.md#ami-product-codes)\.
++ For more information about the details of AMI\-based products, and their lifecycle, see [Understanding AMI\-based products](ami-getting-started.md)\.
