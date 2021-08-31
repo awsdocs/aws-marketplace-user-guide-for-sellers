@@ -13,9 +13,9 @@ The following table explains the names and descriptions of the data feed's colum
 
 | Column name  | Description  | 
 | --- | --- | 
-| offer\_id | The friendly identifier of this offer\. | 
+| offer\_id | The friendly identifier of this offer\.Can used to join to the `offer_id` field of the `Offer` data feed\. | 
 | offer\_revision | Combines with offer\_id field to form the foreign key to the offer revision\. | 
-| product\_id | The friendly identifier of the product, this is the foreign key to the product that this offer exposes\.  | 
+| product\_id | The friendly identifier of the product, this is the foreign key to the product that this offer exposes\. Can used to join to the `product_id` field of the `Product` data feed\. | 
 
 ## Example of Offer product data feed<a name="data-feed-offer-product-sample-data"></a>
 

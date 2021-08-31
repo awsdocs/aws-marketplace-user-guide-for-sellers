@@ -14,7 +14,7 @@ To use this feature, you must have permissions to use the **Agreements** tab in 
 
 ## Supported product types<a name="private-offers-upgrades-and-renewals-supported-products"></a>
 
-Currently the following product types support private offer renewals and upgrades:
+The following product types support private offer renewals and upgrades:
 + SaaS contracts
 + SaaS contracts with consumption
 
@@ -53,4 +53,4 @@ Upgrade and renewal private offers appear on the existing seller reports and in 
 
 In the Daily customer subscriber report, the **Subscription intent** field indicates whether the report entry is a new private offer\. The **Previous offer ID** field indicates the ID of the offer that preceded the new offer, if one exists\. For all private offers, the entry is marked private\. 
 
-Currently, agreements data is not shown in data feeds\.
+Agreements data is not shown in data feeds\.

@@ -44,6 +44,8 @@ The following steps outline an example implementation using the AWS SDK for Java
                                  //            replay attacks
    }
    ```
+**Note**  
+It is possible to see transient issues in connecting to the AWS Marketplace Metering Service\. AWS Marketplace strongly recommends implementing retries for up to 30 minutes, with exponential back off, to avoid short\-term outages or network issues\.
 
 1.  `RegisterUsage` generates an RSA\-PSS digital signature using SHA\-256 that you can use to verify request authenticity\. The signature includes the following fields: `ProductCode`, `PublicKeyVersion`, and `Nonce`\. To verify the digital signature, you must retain these fields from the request\. The following code is an example response to a `RegisterUsage` call\. 
 

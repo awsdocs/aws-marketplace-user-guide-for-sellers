@@ -6,7 +6,7 @@
 
 1. Complete the wizard with the necessary information\.
 
-To set your pricing, choose one or more contract durations you offer customers\. You can enter different prices for each contract duration\. Your options are monthly, 1\-year, 2\-year, and 3\-year durations\. 
+To set your pricing, choose one or more contract durations you offer customers\. You can enter different prices for each contract duration\. Your options are monthly, 1\-year, 2\-year, and 3\-year durations, or a custom duration in months \(up to 60 months\)\. 
 
  Choose the category that best describes your product’s pricing\. The pricing category appears to customers on the AWS Marketplace website\. You can choose from bandwidth \(GB/s, MB/s\), data \(GB, MB, TB\), hosts, requests, tiers, or users\. If none of the predefined categories fit your needs, you can choose the more generic **units** category\. 
 

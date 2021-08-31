@@ -6,6 +6,8 @@ AWS Marketplace supports AWS PrivateLink, a technology that allows you to use th
 
 ## Introduction<a name="introduction"></a>
 
+ 
+
  As an AWS Marketplace seller, you can provide buyers access to your service through an Amazon VPC endpoint\. This approach provides buyers with access to your service across the Amazon network using [AWS PrivateLink](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html#what-is-privatelink) technology\. If you use AWS Marketplace to create and deliver this offering, buyers can discover your service in AWS Marketplace\. Your buyers can also find your product in the list of available services for creating a VPC endpoint\. 
 
  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/private-endpoint-diagram.png) 
@@ -38,7 +40,7 @@ To configure your product to be available through an Amazon VPC endpoint:
 
 1. [Request a certificate from AWS Certificate Manager \(ACM\)](http://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request.html) for your user\-friendly DNS name\. Before ACM issues a certificate, it validates that you own or control the domain names in your certificate request\. 
 
-1. Delegate the subdomain of your user\-friendly DNS name, such as api\.vpce\.example\.com, to the name servers provided to you by the MCO team\. In your DNS system, you must create a name server \(NS\) resource record to point this subdomain to the Amazon Route 53 name servers provided by the MCO team so that DNS names \(such as vpce\-0ac6c347a78c90f8\.api\.vpce\.example\.com\) are publicly resolvable\. 
+1. Delegate the subdomain of your user\-friendly DNS name, such as api\.vpce\.example\.com, to the name servers provided to you by the MCO team\. In your DNS system, you must create a name server \(NS\) resource record to point this subdomain to the Amazon Route 53 name servers provided by the MCO team so that DNS names \(such as vpce\-0ac6c347a78c90f8\.api\.vpce\.example\.com\) are publicly resolvable\. 
 
 1. Allow access to your buyers' AWS accounts\. 
 

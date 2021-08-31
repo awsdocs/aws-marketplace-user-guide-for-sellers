@@ -27,7 +27,7 @@ Keep the following guidelines in mind as you write the product description:
 + Check spelling and grammar
 + Include only critical, useful information
 
-Example product solution: Smart Solution automatically distributes incoming application traffic across multiple Amazon EC2 instances\. It enables you to achieve even greater fault tolerance in your applications, providing the amount of load\-balancing capacity you need to respond to incoming application traffic\. Smart Solution detects unhealthy instances in a pool and automatically reroutes traffic to healthy instances until the unhealthy instances are restored\. You can enable Smart Solution in a single AWS availability zone or across multiple availability zones to ensure more consistent application performance\.
+Example product solution: Smart Solution automatically distributes incoming application traffic across multiple Amazon EC2 instances\. It enables you to achieve even greater fault tolerance in your applications, providing the amount of load\-balancing capacity you need to respond to incoming application traffic\. Smart Solution detects unhealthy instances in a pool and automatically reroutes traffic to healthy instances until the unhealthy instances are restored\. You can enable Smart Solution in a single AWS Availability Zone or across multiple Availability Zones to ensure more consistent application performance\.
 
 ### Writing the product highlights<a name="writing-the-product-highlights"></a>
 
@@ -44,11 +44,11 @@ Each time you update an AMI product, you must provide a description of the chang
 Provide usage instructions that help ensure that the buyer can successfully configure and run the software\. The usage instructions you provide are shown during the AMI configuration process\.
 
 To write effective usage instructions, follow these guidelines:
-+ Write them with a new or moderately technical audfience\.
++ Write them with a new or moderately technical audience\.
 + Don't assume that the user has prior experience with or extensive knowledge of the product, computer operating systems, engineering, or IT operations\.
 + Take the buyer from launching to using the product, including any configuration or special steps to get the application running\.
 
- Example usage insgtructions: 
+ Example usage instructions: 
 
 1. Launch the product via 1\-Click\.
 

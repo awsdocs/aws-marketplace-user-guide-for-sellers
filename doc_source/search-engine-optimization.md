@@ -13,6 +13,8 @@ During the product creation process, you can submit up to three keywords \(singl
 **Note**  
 Keywords aren't the same as software categories\. Keywords are more specific terms that are related to your product\.
 
+You can edit keywords after you create a product by editing the metadata for the product\. For products that you created using a Product Load Form \(PLF\), you also use the PLF to make changes to those products\. For products that you created using the **Products** tab in AWS Marketplace Management Portal, you also use the **Products** tab to make changes\. For more information, see [Product changes and updates](product-submission.md#product-changes-and-updates)\.
+
 ## Software categories<a name="software-categories"></a>
 
 When you list your product, you can choose up to three software categories and corresponding subcategories for your product\. This helps customers discover your product as they browse or search the products on AWS Marketplace\. Choose only categories that are relevant to your product\. In most cases, only one category applies\. Both the product load form and the **Products** pages contain a complete list of categories\.
