@@ -4,6 +4,9 @@ The following table describes the documentation for this release of the *AWS Mar
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Refund policy and approvals](https://docs.aws.amazon.com/marketplace/latest/userguide/refunds.html) | Documentation\-only update to clarify the refund policy and move all refund information to one central location in the *AWS Marketplace Seller Guide*\. | August 20, 2021 | 
+| [Select or upload EULA for consulting partner private offers](https://docs.aws.amazon.com/marketplace/latest/userguide/consulting-partner-isv-info.html) | Independent software vendors can now select or upload an End User License Agreement \(EULA\) when creating resale opportunities for consulting partners\. | August 17, 2021 | 
+| [Custom product dimensions for SaaS contract products](https://docs.aws.amazon.com/marketplace/latest/userguide/consulting-partner-isv-info.html) | Independent software vendors \(ISVs\) can now customize SaaS contract product dimensions when creating resale opportunties for consulting partners\. | August 17, 2021 | 
 | [AWS Marketplace Field Demonstration Program](https://docs.aws.amazon.com/marketplace/latest/userguide/field-demonstration-program.html) | Documentation\-only update to clarify the requirements for AWS Data Exchange dataset products for the AWS Marketplace Field Demonstration Program\. | August 3, 2021 | 
 | [SaaS product guidelines update](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-guidelines.html) | Product guidelines for SaaS products have been updated\. | July 29, 2021 | 
 | [Container\-based product requirements update](https://docs.aws.amazon.com/marketplace/latest/userguide/container-product-policies.html) | Container\-based product requirements have been updated\. | July 29, 2021 | 

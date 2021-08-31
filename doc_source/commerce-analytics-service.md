@@ -448,7 +448,7 @@ This can happen if your IAM user doesn't have the permissions necessary to call 
      "Statement": [
        {
          "Effect": "Allow",
-         "Action": "marketplacecommerceanalytics:GenerateDataSet"
+         "Action": "marketplacecommerceanalytics:GenerateDataSet",
          "Resource": "*"
        }
      ]

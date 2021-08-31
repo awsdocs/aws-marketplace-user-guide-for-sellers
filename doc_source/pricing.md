@@ -49,7 +49,7 @@ Considerations when working with an annual subscription include the following:
 + All Annual instance types must also have an Hourly instance type defined\. AWS Marketplace doesn't offer Annual\-only pricing or Hourly without Annual on the same product\. For any product offering Annual pricing, Hourly pricing also needs to be specified\. 
 + A $0 Annual price is allowed on a specific instance type, if the Hourly price is also $0 and there are other non\-$0 Annual instance types defined\. 
 + At the end of the annual subscription period, the customer will start being charged at the hourly price\. 
-+  If a customer buys X Annual subscriptions but is running Y software on Y instances, then the customer will be charged at Hourly software price for \(Y\-X\) instances which are not covered by Annual subscriptions\. As such, an Hourly rate must be included for all Annual pricing instance types\. 
++ If a customer buys X Annual subscriptions but is running Y software on Y instances, then the customer will be charged at Hourly software price for \(Y\-X\) instances which are not covered by Annual subscriptions\. As such, an Hourly rate must be included for all Annual pricing instance types\. 
 + Using seller private offers, you can offer a multi\-year \(up to 3 years\) or custom duration AMI with upfront payment, or flexible payment schedule\. For more information about multi\-year and custom duration contracts, see [Private offers](private-offers-overview.md) and [Flexible payment scheduler](flexible-payment-scheduler.md)\.
 
 If you offer an Annual product in AWS Marketplace, you agree to the specific refund policies for Annual products, located in the **File Uploader** documents section in the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour)\. 
@@ -124,7 +124,7 @@ AWS Marketplace has multiple pricing models for AMI products\. With seller priva
  After you have your AMI, follow the standard process to share and scan your AMI using the self\-service tool\. In addition, using the template available on the management portal, fill out the product load form and upload it to start the ingestion process\. 
 
  The following definitions will help you fill out the fields of the product load form for the AWS Marketplace Metering Service\. On the product load form, these fields are labeled as Flexible Consumption Pricing \(FCP\) to differentiate them from hourly and monthly priced products\. 
-+ **Title** – If you already have a product, and you are adding the same product with the AWS Marketplace Metering Service, include the FCP category/dimension in parenthesis to differentiate the two \(for example, “PRODUCT TITLE \(Data\)”\)\. 
++ **Title** – If you already have a product, and you are adding the same product with the AWS Marketplace Metering Service, include the FCP category/dimension in parentheses to differentiate the two\. For example, “PRODUCT TITLE \(Data\)”\. 
 + **Pricing Model** – From the dropdown list, choose **Usage**\.
 + **FCP Category** – The category in which customers will be charged for paid products with a **Usage** pricing component\. From the dropdown menu, choose **Users**, **Hosts**, **Data**, or **Bandwidth**\.
 + **FCP Unit** – The unit of measurement on which customers will be charged for paid products with a **Usage** pricing component\. Options will appear in the dropdown menu based on the FCP category that you chose\. 
@@ -218,24 +218,6 @@ These guidelines apply to all sellers who are offering a product on AWS Marketpl
 ### Price change<a name="price-change"></a>
 
 You can change annual prices \(the $ value, for example $1000/year to $1200/year\) whenever desired but with 90 day notice to existing customers of annual pricing\. The new price will apply to new subscriptions but will have no impact on existing subscriptions\. Price changes will be effective for auto\-renewals only if the price was changed at least 90 days before the auto\-renewal date\. The customer will receive an email message prior to auto\-renewal that includes the new price\. 
-
-### Refund / cancellation / upgrade / downgrade<a name="refund-cancellation-upgrade-downgrade"></a>
-
-For a uniform customer experience, AWS requires sellers to implement the following cancellation and change windows\. 
-
-
-| Applicable policy  | Time period or window  | Who can authorize it  | 
-| --- | --- | --- | 
-| Full refund cancellation \(cancel with 100 percent refund\) | Within 48 hours of purchase  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/pricing.html)  | 
-| Pro\-rata refund cancellation \(cancel with pro\-rata refund\) | Within 14 days of purchase  | Seller only  | 
-| Downgrade subscription \(replace existing subscriptions with less expensive subscription\)  | Within 30 days of purchase  | Seller only  | 
-| Upgrade subscription \(replace existing subscriptions with more expensive or same priced subscription\)  | Any time during 12 months  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/pricing.html)  | 
-| Full refund cancellation in case of auto\-renewal  | Within 14 days of purchase  | AWS Support or the seller  | 
-
-**Note**  
-You should not include windows length and other details in the product details and description\. 
-Upgrade or downgrade is a 2\-step process for the customer: buy new subscriptions and request cancellation of old subscription with a refund\. 
-In some cases, AWS might issue refunds on your behalf\. No action on your part is required to process those refunds\. 
 
 ### End user license agreement<a name="end-user-license-agreement"></a>
 

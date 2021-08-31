@@ -135,12 +135,12 @@ For more information, see [Publishing serverless Applications Using the AWS SAM 
 
 To build your AWS CloudFormation templates, you must meet the template prerequisites and provide the required input and security parameters\. For more information, see [Template Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) in the *AWS CloudFormation User Guide*\.
 
-In your AWS CloudFormation template, you can reference your serverless application and your AMI\. You can also use nested AWS CloudFormation templates and reference serverless applications both in the master template and the nested templates\. To reference the serverless application, you use the AWS Serverless Application Model \(AWS SAM\) template\. You can automatically generate the AWS SAM template for your application from the AWS Serverless Application Repository\. The following is an example template\.
+In your AWS CloudFormation template, you can reference your serverless application and your AMI\. You can also use nested AWS CloudFormation templates and reference serverless applications both in the root template and the nested templates\. To reference the serverless application, you use the AWS Serverless Application Model \(AWS SAM\) template\. You can automatically generate the AWS SAM template for your application from the AWS Serverless Application Repository\. The following is an example template\.
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: An example master template for a SAR application
+Description: An example root template for a SAR application
 
 Resources:
   SampleSARApplication:

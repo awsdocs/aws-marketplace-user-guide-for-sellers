@@ -9,11 +9,11 @@ The following procedure outlines how ISVs can create an opportunity for a consul
 
 **To create an opportunity for a consulting partner**
 
-1. Sign into the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/)\.
+1. Sign in to the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/)\.
 
 1. Choose the **Partners** tab, and then choose **Create opportunity**\.
 
-1. Enter the **Opportunity name** and **Opportunity description**, and the **Duration** of the opportunity\.
+1. Enter the **Opportunity name** and **Opportunity description**\.
 **Note**  
 The information you enter in **Opportunity name** and **Opportunity description** will be visible to consulting partners in their seller reports\.
 
@@ -21,7 +21,15 @@ The information you enter in **Opportunity name** and **Opportunity description*
 **Note**  
 If a reseller doesn't appear in the list, they may need to register first\. Only registered resellers can be authorized for an opportunity\. For more information, see [Consulting partner setup of resell opportunities](consulting-partner-info.md)\.
 
-1. Select which of your **Products** are part of this opportunity, and the **Discount** that you want to apply\. Optionally, set one or more **Buyer account IDs** to specify that the opportunity is only for those buyers\.
+1. Select which of your **Products** are part of this opportunity and the **Discount** that you want to apply\. 
+
+1. Select the **Duration** of the opportunity\.
+
+1. \(Optional\) For SaaS contract products, add or remove custom **Product dimensions** and modify the **Additional usage fees** to customize your opportunity\.
+
+1. \(Optional\) Set one or more **Buyer account IDs** to specify that the opportunity is only for those buyers\.
+
+1. \(Optional\) Select the **End User License Agreement** \(EULA\) version or upload the EULA to be included in the opportunity\.
 
 1. Select **Review opportunity**, and make sure that the information is correct\.
 
