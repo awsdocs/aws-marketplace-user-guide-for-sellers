@@ -16,7 +16,7 @@ A [VPC endpoint](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpo
 
 For each region where you want to offer your service, you create or use existing resources to configure a VPC, set up your service instances, set up a network load balancer, and register your services with the network load balancer by creating a service endpoint\. After you complete those steps and test your offering, you provide your configuration information to the the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
-AWS recommends that provide a private DNS name that your buyers can use when they create VPC endpoints\. 
+AWS recommends that you provide a private DNS name that your buyers can use when they create VPC endpoints\. 
 
  When buyers create their VPC endpoints, they have the option to enable a private DNS name\. By choosing this option, the buyer’s VPC service configures a [private hosted zone](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-private.html)\. If you provide the private DNS name, buyers can use it when configuring VPC endpoints to connect to your service\. In the buyer’s private hosted zone, the private DNS name \(api\.example\.com\) will point to the randomly generated DNS name\(s\) \(vpce\-11111111111111111\-yyyyyyyy\.api\.vpce\.example\.com\) created for your endpoint service\(s\)\. The buyer's EC2 instances call the same unified DNS name \(api\.example\.com\) across different VPCs\. Also, if public and private DNS names are same, the buyer can use the same public name when accessing your service from within or outside of the VPC\. 
 
@@ -84,7 +84,7 @@ To access your service, buyers do the following:
 |  IAD2 \(1a \)   |   **us\-east\-1a**\-Vpce<0dc9a211a78c90f8>\.api\.vpce\.example\.com   | 
 |  IAD2 \(1b \)   |   **us\-east\-1b**\-Vpce<0dc9a211a78c90f8>\.api\.vpce\.example\.com   | 
 
-If you provided a default private DNS name and the buyer chooses **Enable Private DNS Name** \(associated a private hosted zone\) when creating a VPC endpoint, the buyer sees the regional default private DNS name to onnect to your service\. 
+If you provided a default private DNS name and the buyer chooses **Enable Private DNS Name** \(associated a private hosted zone\) when creating a VPC endpoint, the buyer sees the regional default private DNS name to connect to your service\. 
 
 
 |  **Name**  |  **Alias**  |  **Alias hosted zone ID**  |  **\(Notes\)**  | 
