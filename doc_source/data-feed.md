@@ -47,9 +47,13 @@ The following shows an example of these columns\.
 
 |  valid\_from  |  valid\_to  |  insert\_date  |  update\_date  |  delete\_date  | 
 | --- | --- | --- | --- | --- | 
-|  2018\-12\-12T02:32:00Z  |   |  2019\-03\-29T02:00:00Z  |  2019\-03\-29T02:00:00Z  |   | 
-|  2018\-12\-20T02:32:00Z  |   |  2019\-03\-29T02:00:00Z  |  2019\-03\-29T02:00:00Z  |   | 
-|  2019\-01\-12T02:32:00Z  |   |  2019\-03\-28T03:00:00Z  |  2019\-03\-28T03:00:00Z  |   | 
+|  2018\-12\-12T02:00:00Z  |   |  2018\-12\-12T02:00:00Z  |  2018\-12\-12T02:00:00Z  |   | 
+|  2019\-03\-29T03:00:00Z  |   |  2019\-03\-29T03:00:00Z  |  2019\-03\-29T03:00:00Z  |   | 
+|  2019\-03\-29T03:00:00Z  |   |  2019\-03\-29T03:00:00Z  |  2019\-04\-28T03:00:00Z  |   | 
+
+The `valid_from` and `update_date` field together form a *bi\-temporal data model*\. The `valid_from` field, as it is named, tells you when the item is valid from\. If the item was edited, it can have multiple records in the feed, each with a different `update_date`, but the same `valid_from` date\. For example, to find the current value for an item, you would find the record with the most recent `update_date`, from the list of records with the most recent `valid_from` date\.
+
+In the example above, the record was originally created 2018\-12\-12\. It was then changed on 2019\-03\-29 \(for example, if the address in the record changed\)\. Later, on 2019\-04\-28, the address change was corrected \(so the `valid_from` didn't change, but the `update_date` did\)\. Correcting the address \(a rare event\) retroactively changes the record from the original `valid_from` date, so that field didn't change\. A query to find the most recent `valid_from` would return two records, the one with the latest `update_date` gives you the actual current record\.
 
 ## Accessing data feeds<a name="data-feed-accessing"></a>
 

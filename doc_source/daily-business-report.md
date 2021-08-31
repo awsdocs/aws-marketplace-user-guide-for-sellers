@@ -1,5 +1,7 @@
 # Daily business report<a name="daily-business-report"></a>
 
+
+
 The daily business report helps you understand how AWS customers are using your products on a daily basis and the estimated revenue from that usage\. You only receive this report if relevant information is available\. If you don't receive this report and think that you should have received it, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\.
 
 You can access this report at the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/reports/)\. If you are registered for the [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md), you can also access your reports using the AWS SDK\.

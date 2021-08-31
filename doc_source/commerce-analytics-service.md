@@ -70,6 +70,9 @@ The Commerce Analytics Service accesses the Amazon S3 bucket and Amazon SNS topi
 
 1. On the AWS Marketplace Management Portal, record the **Role Name ARN** in the success message\. You need the ARN to call the service\. 
 
+**Note**  
+Onboarding onto Commerce Analytics Service creates an IAM role in your AWS account that allows AWS Marketplace to write to the Amazon S3 bucket and publish notifications to the Amazon SNS Topic\.
+
 ### Verify your configuration<a name="verify-your-configuration"></a>
 
 The last step is to verify that your configuration works as expected\.
@@ -118,7 +121,7 @@ To allow your IAM users to use the Commerce Analytics Service, attach the follow
             "Effect": "Allow",
             "Action": "marketplacecommerceanalytics:GenerateDataSet",
             "Resource": "*"
-        },
+        }
     ]
 }
 ```
@@ -284,7 +287,7 @@ Request successful, unique ID: c59aff81-6875-11e5-a6d8-fd5dbcaa74ab
 | Data Set Publication Date  |  The date a dataset was published\.  For daily datasets, provide a date with day\-level granularity for the desired day\.  For monthly datasets, provide a date with month\-level granularity for the desired month\. The day value is ignored\.   | 
 | Role Name ARN | The ARN of the role with an attached permissions policy that provides the service with access to your resources\. | 
 | Destination Amazon S3 Bucket Name | The name \(the friendly name, not the ARN\) of the destination Amazon S3 bucket\. Your datasets are published to this location\. | 
-| Destination Amazon S3 Prefix |  \(Optional\) The Amazon S3 prefix for the published dataset, similar to a directory path in standard file systems\.  For example, if given the bucket name `mybucket` and the prefix `myprefix/mydatasets`, the output file is published to `s3://awsexamplebucket/myprefix/mydatasets/outputfile`\.  If the prefix directory structure doesn't exist, it's created\.  If no prefix is provided, the dataset is published to the Amazon S3 bucket root\.   | 
+| Destination Amazon S3 Prefix |  \(Optional\) The Amazon S3 prefix for the published dataset, similar to a directory path in standard file systems\.  For example, if given the bucket name `mybucket` and the prefix `myprefix/mydatasets`, the output file is published to `s3://DOC-EXAMPLE-BUCKET/myprefix/mydatasets/outputfile`\.  If the prefix directory structure doesn't exist, it's created\.  If no prefix is provided, the dataset is published to the Amazon S3 bucket root\.   | 
 | SNS Topic ARN |   The ARN for the Amazon SNS topic that is notified when the dataset has been published or if an error occurs\.   | 
 
 ### Responses<a name="responses"></a>
@@ -388,7 +391,7 @@ Even though datasets are listed as being available for certain dates in the past
 
  **When I call the service, I receive the error message "Could not connect to the endpoint URL: https://marketplacecommerceanalytics\.eu\-central\-1\.amazonaws\.com/”** 
 
-Currently, the AWS Marketplace Commerce Analytics Service is available only in the US East \(N\. Virginia\) Region\. You must make all calls to the Commerce Analytics Service to the `us-east-1` endpoint\. 
+The AWS Marketplace Commerce Analytics Service is available only in the US East \(N\. Virginia\) Region\. You must make all calls to the Commerce Analytics Service to the `us-east-1` endpoint\. 
 
 If you're using the AWS CLI, add the "`--region` flag to each call and specify the AWS Region as `us-east-1`, as shown in the following example\.
 
@@ -407,7 +410,9 @@ aws marketplacecommerceanalytics generate-data-set \
 
 When enrolling in the AWS Marketplace Commerce Analytics Service, you specified an Amazon S3 bucket and Amazon SNS topic\. The onboarding process configures your IAM permissions to allow the service access to only these specific resources\. To use different resources, you need to modify your IAM policy: 
 
-1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
+1. 
+
+   Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
 1.  Choose ** Roles** on the left side of the IAM console\. 
 
@@ -443,10 +448,10 @@ This can happen if your IAM user doesn't have the permissions necessary to call 
      "Statement": [
        {
          "Effect": "Allow",
-         "Action": "marketplacecommerceanalytics:GenerateDataSet",
-         "Resource": "*",
-       },
-     ],a
+         "Action": "marketplacecommerceanalytics:GenerateDataSet"
+         "Resource": "*"
+       }
+     ]
    }
    ```
 

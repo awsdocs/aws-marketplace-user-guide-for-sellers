@@ -15,8 +15,8 @@ Here are some key points about report generation:
 
 ## Accessing reports<a name="reports-accessing"></a>
 
- AWS Marketplace provides two ways to access your reports:
+ AWS Marketplace provides two ways to configure your reports:
 + Using an API interface\. The [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md) enables you to automatically access the data in your reports through an API interface\. You can automate ingesting your information and download a portion of a report instead of the whole report\. The service returns data asynchronously to a file in Amazon Simple Storage Service \(Amazon S3\) rather than directly as with a traditional API\. The data is delivered in a machine\-readable format so that you can import or incorporate the data into your systems\.
 + Using the reports dashboard in the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/reports/)\. This dashboard provides reports for previous reporting periods\. 
 
- You can control access to reports by using AWS Identity and Access Management \(IAM\) permissions\. 
+ You can control access to reports by using AWS Identity and Access Management \(IAM\) permissions\.

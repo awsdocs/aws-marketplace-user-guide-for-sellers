@@ -8,7 +8,7 @@ AWS Marketplace offers the following options for providing standardized license 
   This option is available to all AWS Marketplace sellers and is accessible to all buyers\.
 + [Enterprise Contract for AWS Marketplace \(ECMP\)](#enterprise-contracts) – These license terms are intended to meet the more stringent requirements of enterprise buyers\. 
 
-  This option is availble for all AWS Marketplace sellers to enroll in, and it's accessible only to enrolled enterprise buyers\. When you enroll as a seller in the ECMP program, you can still offer SCMP to non\-enterprise buyers\.
+  This option is available for all AWS Marketplace sellers to enroll in, and it's accessible only to enrolled enterprise buyers\. When you enroll as a seller in the ECMP program, you can still offer SCMP to non\-enterprise buyers\.
 
 **Disclaimer**  
 You are responsible for determining whether these documents meet your specific requirements\. These documents should not be construed as legal advice for any particular facts or circumstances\.

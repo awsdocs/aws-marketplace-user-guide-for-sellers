@@ -24,6 +24,8 @@ All SaaS products must adhere to the following product usage guidelines:
 + If a customer already has an account in the SaaS application, they must have the ability to log in from the fulfillment landing page\.
 + Customers must be able to see the status of their subscription within the SaaS application, including any relevant contract or subscription usage information\.
 + Customers must be able to easily get help with issues such as: using the application, troubleshooting, and requesting refunds \(if applicable\)\. Support contact options must be specified on the fulfillment landing page\.
++ Product software and metadata must not contain language that redirects users to other cloud platforms, additional products, or up sell services that aren't available on AWS Marketplace\.
++ If your product is an add\-on to another ISV’s product, your product description must indicate that it extends the functionality of the other product and that without it, your product has very limited utility\. For example, *This product extends the functionality of <product name> and without it, this product has very limited utility\. Please note that <product name> might require its own license for full functionality with this listing\.*
 
 ## Architecture guidelines<a name="saas-architecture"></a>
 
@@ -34,6 +36,7 @@ All SaaS products must adhere to the following architecture guidelines:
   + Provide additional documentation including a description of all provisioned AWS services, IAM policy statements, and how an IAM role or user is deployed and used in the customer’s account\. 
   + Include a notification in the product description that explains that if the customer incurs additional AWS infrastructure charges separate from their AWS Marketplace transaction, they're responsible for paying the additional infrastructure charges\.
   + If your product deploys an agent, you must provide instructions to the customer that describe how to deploy it in their AWS account\.
+  + Applications that require resources running in the customer's infrastructure will have an additional review by AWS Marketplace, which can take 2\-4 weeks\.
 + Successfully call the AWS Marketplace APIs from the AWS account that registered as a provider and submitted the SaaS publishing request\. The SaaS pricing model determines which APIs should be called:
   + SaaS contracts – [GetEntitlements](https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/API_GetEntitlements.html) in the AWS Marketplace Entitlement Service\.
   + SaaS contracts with consumption – [GetEntitlements](https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/API_GetEntitlements.html) in the AWS Marketplace Entitlement Service and [BatchMeterUsage](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_BatchMeterUsage.html) in the AWS Marketplace Metering Service\.
