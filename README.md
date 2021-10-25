@@ -1,6 +1,6 @@
-## AWS Marketplace User Guide
+## AWS Marketplace Seller Guide
 
-This is the open source version of the documentation for AWS Marketplace. You can submit feedback & requests for changes by submitting issues in this repo or by making proposed changes & submitting a pull request.
+This is the open source version of the documentation for AWS Marketplace for Sellers. You can submit feedback & requests for changes by submitting issues in this repo or by making proposed changes & submitting a pull request.
 
 ## License Summary
 
