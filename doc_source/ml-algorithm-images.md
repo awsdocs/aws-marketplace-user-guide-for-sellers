@@ -346,7 +346,7 @@ sudo docker run \
 +  `--detach`: Run the container in the background\. 
 +  `--name my-inference-container`: Give this running container a name\. 
 +  `my-inference-image`: Run the built image\. 
-+  `Serve`: Run the same script SageMaker runs when running the container\. 
++  `serve`: Run the same script SageMaker runs when running the container\. 
 
  After running this command, Docker creates a container from the inference image and runs it in the background\. The container runs the `serve` script, which starts your web server for testing purposes\. 
 

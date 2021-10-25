@@ -31,11 +31,11 @@ The following procedure outlines how a consulting partner can extend a private o
 
 1. Sign into the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/)\.
 
-1. Choose the **Offers** tab\.
+1. Choose **Partner** from the menu at the top of the screen\.
 
-1. Choose the **Product for private offer**, the **Buyer account id\(s\)**, and then choose **Next**\.
+1. From the **Opportunities you received** list, choose the opportunity with the product and discount you want to offer to the buyer, and then select **Create Offer**\.
 
-1. Choose the pricing details of the offer \(including the marked\-up price by a percentage\), provide the End User License Agreement \(EULA\), and the dates for the offer\. Then, choose **Review Offer**\.
+1. Step through the **Create Private Offer** screens, entering required information, including the buyer's account, the pricing details of the offer \(including the marked\-up price by a percentage\), the End User License Agreement \(EULA\), and the dates for the offer\. Then, choose **Review Offer**\.
 
 1. Review the offer, and then choose **Extend Offer**\.
 

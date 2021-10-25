@@ -12,6 +12,7 @@ You can run Paid container products on the orchestration services [Amazon Elasti
 + [Container\-based product requirements](container-product-policies.md)
 + [Pricing container products](pricing-container-products.md)
 + [AWS Marketplace Metering Service integration](entitlement-and-metering-for-paid-products.md)
++ [Amazon SNS notifications for container products](container-notification.md)
 
 ## Getting help<a name="container-help"></a>
 

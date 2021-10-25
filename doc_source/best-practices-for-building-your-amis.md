@@ -36,7 +36,7 @@ For more information about creating an AMI, see the following resources:
 
  [Creating a Custom Windows AMI](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/Creating_EBSbacked_WinAMI.html) in the *Amazon EC2 User Guide for Windows Instances* 
 
- [How do I create an Amazon Machine Image \(AMI\) from an EBS\-backed Windows instance?](https://aws.amazon.com/premiumsupport/knowledge-center/create-ami-ebs-backed-windows/) 
+ [How do I create an Amazon Machine Image \(AMI\) from an EBS\-backed instance?](https://aws.amazon.com/premiumsupport/knowledge-center/create-ami-ebs-backed/) 
 
  [Amazon Linux AMI](https://aws.amazon.com/amazon-linux-ami/) 
 

@@ -47,7 +47,7 @@ To learn how to make the product available publicly, see [Editing product visibi
 
 ## Creating private offers<a name="proserv-create-offer"></a>
 
-When a potential buyer views your product on AWS Marketplace, they can't purchase it directly\. When they attempt to subscribe, they are redirected to request a [private offer](marketplace/latest/userguide/private-offers-overview.html) from you\. AWS Marketplace sends an email message to your AWS Marketplace seller account root user email address, informing you that the customer has requested a private offer\. The following procedure describes how to respond to this request\.
+When a potential buyer views your product on AWS Marketplace, they can't purchase it directly\. When they attempt to subscribe, they are redirected to request a [private offer](https://docs.aws.amazon.com/marketplace/latest/userguide/private-offers-overview.html) from you\. AWS Marketplace sends an email message to your AWS Marketplace seller account root user email address, informing you that the customer has requested a private offer\. The following procedure describes how to respond to this request\.
 
 **Note**  
 You can create private offers with prices up to $250,000 through the AWS Marketplace Management Portal\. To create a private offer higher than $250,000, approval is required\. For more information, contact your AWS Marketplace Business Development representative, or send an email message with your details to the AWS Marketplace Business operations team at [ mpcustdesk@amazon\.com](mailto:mpcustdesk@amazon.com)\.
@@ -62,7 +62,7 @@ You can create private offers with prices up to $250,000 through the AWS Marketp
 
 1. On the **Create private offer** page, select the product that you want to create a private offer for\. Only currently available products are included\.
 
-1. Enter the **Buyer account Ids**that you want to extend a private offer to\. You can include up to 25 accounts in a single private offer\. If the buyer used the request an offer feature, the email message that you received includes the buyer account Id for the requesting account\.
+1. Enter the **Buyer account Ids** that you want to extend a private offer to\. You can include up to 25 accounts in a single private offer\. If the buyer used the request an offer feature, the email message that you received includes the buyer account Id for the requesting account\.
 
 1. Choose whether to allow buyers to pay for the product in installments\. Typically, short contracts are paid in one payment\. Longer contracts may have the option to pay in installments, but this is part of the agreement that you come to with the buyer\. Select **Next**\.
 
@@ -75,7 +75,7 @@ You can create private offers with prices up to $250,000 through the AWS Marketp
 **Note**  
 If you want to create a zero dollar offer, you must select **I want to enable zero dollar prices** for confirmation\. This precaution helps to prevent you from accidentally creating a free offer\.
    + **Service agreement** – Documents that define your service agreement with the customer\. The documents that you upload \(in text or PDF formats\) are appended together into a single PDF document, so make sure that the file name is not required to understand the content\.
-   + **Offer expiration date** – The date the offer expires\. This determines how long the buyer has to accept the offer and is unrelated to when the professional service will be available\.
+   + **Offer expiration date** – The date the offer expires\. This determines how long the buyer has to accept the offer and is unrelated to when the professional service will be available\. You can extend the offer expiration date after your offer has been created\.
 
 1. Select **Next** when you're done editing the options\.
 
@@ -125,7 +125,7 @@ You can only add new pricing dimensions through the AWS Marketplace Management P
 
 ## Editing product visibility<a name="proserv-edit-visibility"></a>
 
-By default, products are created with limited visibility—a new product is only visible from your account\. You can add other test accounts, or make the product publicly visible in the AWS Marketplace\.The following procedure describes how to edit the visibility of an existing professional services product in the AWS Marketplace Management Portal\.
+By default, products are created with limited visibility—a new product is only visible from your account\. You can add other test accounts, or make the product publicly visible in the AWS Marketplace\. The following procedure describes how to edit the visibility of an existing professional services product in the AWS Marketplace Management Portal\.
 
 **To edit product visibility**
 
@@ -140,7 +140,7 @@ By default, products are created with limited visibility—a new product is only
 1. Add details of your request, including whether you want the product to be public or private\. If private, provide the account IDs you want to access, and then select **Submit** to send your request,
 
 **Note**  
-To make a product visible in the public AWS Marketplacecatalog requires a product review by the AWS Marketplace Seller Operations team to ensure that the product meets the product guidelines \(see [Requirements for professional services products ](proserv-product-guidelines.md)\)\. The request can take several days to complete\.
+To make a product visible in the public AWS Marketplace catalog requires a product review by the AWS Marketplace Seller Operations team to ensure that the product meets the product guidelines \(see [Requirements for professional services products ](proserv-product-guidelines.md)\)\. The request can take several days to complete\.
 
 ## Removing a professional services product<a name="proserv-remove-product"></a>
 

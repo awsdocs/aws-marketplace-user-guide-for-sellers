@@ -15,7 +15,8 @@ To learn more about security and other policies regarding the products that you 
 + [Requirements for professional services products ](proserv-product-guidelines.md) 
 
 **Note**  
-To learn about security on AWS Data Exchange for data products, see [Security](https://docs.aws.amazon.com/data-exchange/latest/userguide/security.html) in the *AWS Data Exchange User Guide*\.
+To learn about security on AWS Data Exchange for data products, see [Security](https://docs.aws.amazon.com/data-exchange/latest/userguide/security.html) in the *AWS Data Exchange User Guide*\.  
+To learn about security for buyers in AWS Marketplace, see [Security on AWS Marketplace](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-security.html) in the *AWS Marketplace Buyer Guide*\.
 
 **Topics**
 + [Controlling access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)

@@ -309,7 +309,9 @@ When you make changes to your product's information, you sometimes run into erro
 
   For more information about submitting products and version change requests, see [Submitting your product for publication](product-submission.md)\.
 + **Product Load Form \(PLF\) issues** – PLFs contain instructions that are included in the spreadsheet\. Overall instructions are provided in the Instructions table\. Each field has instructions for how to fill it out—select the field to reveal the instructions\.
-+ **Request in Progress** – You can only have one request in progress for a product at a time\. You can see all of your requests still under review on the **Requests** tab of the **Server products** page in AWS Marketplace Management Portal\. If you have a pending request that you did not intend, you can cancel it and then submit a new request with the change that you want to make\.
++ **Request in Progress** – Some requests cannot happen in parallel\. You can only have one request to update specific information in progress for a product at a time\. You can see all of your requests still under review on the **Requests** tab of the **Server products** page in AWS Marketplace Management Portal\. If you have a pending request that you did not intend, you can cancel it and then submit a new request with the change that you want to make\.
+  + You can't update version information when an update \(to add or restrict\) a version is ongoing\.
+  + If there is a request pending from the AWS Marketplace Seller Operations team, you can't submit any new changes\.
 + **Unexplained error** – If your submission fails with no explanation, try again\. Occasionally, server load causes a submission to fail\.
 
 If you're still having problems with a change request, contact the [ AWS Marketplace Seller Operations team](https://aws.amazon.com/marketplace/management/contact-us/)\.

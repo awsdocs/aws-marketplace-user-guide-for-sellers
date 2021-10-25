@@ -59,12 +59,9 @@ In the example above, the record was originally created 2018\-12\-12\. It was th
 
 To access data feeds, you need to configure your environment to receive data feeds to an encrypted Amazon S3 bucket\. AWS Marketplace provides an [AWS CloudFormation template](https://s3.amazonaws.com/aws-marketplace-reports-resources/DataFeedsResources.yaml) that you can use to simplify configuration\.
 
-**Note**  
-To access data feeds, you need an IAM role that grants access to AWS Marketplace\. You'll use that role as you complete the AWS CloudFormation template\. If you don't already have an IAM role, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in the *IAM User Guide*\. 
-
 **To use the AWS CloudFormation template to configure your environment to receive data feeds**
 
-1. Go to [Set up customer data storage](https://aws.amazon.com/marketplace/management/reports/data-feed-configuration)\.
+1. Open a web browser and sign into the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/), then go to [Set up customer data storage](https://aws.amazon.com/marketplace/management/reports/data-feed-configuration)\.
 
 1. Choose **Create resources with AWS CloudFormation template** to open the template in the AWS CloudFormation console in another window\.
 
@@ -73,20 +70,77 @@ To access data feeds, you need an IAM role that grants access to AWS Marketplace
    + Amazon S3 bucket name – The bucket for storing data feeds\.
    + \(Optional\) Amazon SNS topic name – The topic for receiving notifications when AWS delivers new data to the Amazon S3 bucket\.
 
-1. On the **Review** page, confirm your entries and choose **Create stack**\. 
+1. On the **Review** page, confirm your entries and choose **Create stack**\. This will open a new page with the CloudFormation status and details\.
 
-1. On the next screen, choose the IAM role you created to use with AWS Marketplace \(see the [Note](#data-feed-note) the precedes this procedure\) and then choose **Next**\.
-
-1. From the **Resources** tab, copy Amazon Resource Names \(ARNs\) for the following resources into the fields on the AWS Marketplace [Set up customer data storage](https://aws.amazon.com/marketplace/management/reports/data-feed-configuration) page:
+1. From the **Resources** tab, copy Amazon Resource Names \(ARNs\) for the following resources from the CloudFormation page into the fields on the AWS Marketplace [Set up customer data storage](https://aws.amazon.com/marketplace/management/reports/data-feed-configuration) page:
    + Amazon S3 bucket for storing data feeds
    + AWS KMS key for encrypting the Amazon S3 bucket
    + \(Optional\) Amazon SNS topic for receiving notifications when AWS delivers new data to the Amazon S3 bucket
 
 1. On the **Set up customer data storage** page, choose **Submit**\.
 
+1. \(Optional\) Edit the policies created by the CloudFormation template\. See [Data feed policies](#data-feed-policies) for more details\.
+
 You are now subscribed to data feeds\. The next time data feeds are generated, you can access the data\.
 
 For more information about AWS CloudFormation templates, see [Working with AWS CloudFormation templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-guide.html) in the *AWS CloudFormation User Guide*\.
+
+### Data feed policies<a name="data-feed-policies"></a>
+
+When your Amazon S3 bucket is created by the CloudFormation template, it will create policies for access attached to that bucket, the AWS KMS key, and the Amazon SNS topic\. The policies allow the AWS Marketplace reports service to write to your bucket and SNS topic with the data feed information\. Each policy will have a section like the following \(this example is from the Amazon S3 bucket\)\.
+
+```
+        {
+            "Sid": "AwsMarketplaceDataFeedsAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "reports.marketplace.amazonaws.com"
+            },
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:GetEncryptionConfiguration",
+                "s3:GetBucketAcl",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": [
+                "arn:aws:s3:::datafeed-bucket",
+                "arn:aws:s3:::datafeed-bucket/*"
+            ]
+        },
+```
+
+In this policy, `reports.marketplace.amazonaws.com` is the service principal that AWS Marketplace uses to push data to the Amazon S3 bucket\. The **datafeed\-bucket** is the bucket that you specified in the CloudFormation template\.
+
+When the AWS Marketplace reports service calls Amazon S3, AWS KMS, or Amazon SNS, it will provide the ARN of the data it is intending to write to the bucket when it does\. To ensure that the only data written to your bucket is data written on your behalf, you can specify the `aws:SourceArn` in the condition of the policy\. In the following example, you must replace the *account\-id* with the ID for your AWS account\.
+
+```
+        {
+            "Sid": "AwsMarketplaceDataFeedsAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "reports.marketplace.amazonaws.com"
+            },
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:GetEncryptionConfiguration",
+                "s3:GetBucketAcl",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": [
+                "arn:aws:s3:::datafeed-test-bucket",
+                "arn:aws:s3:::datafeed-test-bucket/*"
+            ],
+            "Condition": {
+                "ArnLike": {
+                    "aws:SourceArn": "arn:aws:aws-marketplace::account-id:AWSMarketplace/SellerDataSubscription/DataFeeds_V1"
+                }
+            }
+        },
+```
 
 ## Using data feeds<a name="data-feed-using"></a>
 
