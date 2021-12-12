@@ -5,6 +5,8 @@ This section discusses how you can work with products in AWS Marketplace that ar
 **Topics**
 + [Prerequisites](#single-ami-prerequisites)
 + [Creating your product](#single-ami-creating-product)
++ [Integrating AWS Marketplace Metering Service for your AMI product](#ami-integrate-metering)
++ [Integrating AWS License Manager for your AMI product](#ami-integrate-LM)
 + [Creating a change request](#single-ami-creating-change-request)
 + [Getting status of a request](#single-ami-getting-change-request-status)
 + [Updating product information](#single-ami-updating-product)
@@ -40,14 +42,21 @@ Create AMI\-based products by using the AWS Marketplace Management Portal\.
    + **Free** – A product that is free for your subscribers to use\. \(They will still pay charges for any associated Amazon Elastic Compute Cloud \(Amazon EC2\) instance or other AWS resources\.\)
    + **Paid hourly or hourly\-annual** – A product that the buyer pays for either on an hourly basis or hourly with an annual contract\. AWS does the metering based on the product code on the AMI\.
    + **Paid monthly** – A product that the buyer is billed for monthly by AWS\.
+   + **Paid usage pricing** – This licensing type applies when your product integrates with the AWS Marketplace Metering Service to provide custom metering based on your customers' usage\. To create a product that has usage\-based pricing, you must download, complete, and upload a Product Load Form \(PLF\)\.
+
+     For more information about PLFs, see [Product Load Forms](ami-getting-started.md#ami-product-load-forms)\.
+   + **Single AMI with CloudFormation Stack** – A single AMI that uses an AWS CloudFormation template with pay\-as\-you go pricing\.
+   + **Multi AMI with CloudFormation Stack** – Multiple AMIs that use a CloudFormation template with pay\-as\-you\-go pricing\.
+   + **AMI with contract pricing** – A single AMI product or single AMI with CloudFormation stack that the buyer pays an upfront fee for\.
+
+     For more information about integrating with License Manager, see [ AWS License Manager integration](ami-license-manager-integration.md)\.
 **Note**  
-There is one other type of licensing for AMI\-based products: Usage\-based\. This licensing type applies when your product integrates with the AWS Marketplace Metering Service to provide custom metering based on your customers' usage\. To create a product that has usage\-based pricing, you must to download, complete, and upload a Product Load Form \(PLF\)\.  
-For more information about PLFs, see [Product Load Forms](ami-getting-started.md#ami-product-load-forms)\.  
-For more information about the different types of licensing, see [AMI pricing models](pricing.md#ami-pricing-models)\.
+For more information about the different types of licensing, see [AMI pricing models](pricing-ami-products.md#pricing-models-for-ami-products)\.
 
 1. Based on your selection, fill out the information for the new product, and choose **Submit**\.
 **Note**  
-If you select **Paid monthly**, you will be asked to download a Product Load Form \(PLF\)\.
+If you select **Paid monthly** or **AMI with contract pricing**, you will be asked to download a Product Load Form \(PLF\)\.  
+For more information about PLFs, see [Product Load Forms](ami-getting-started.md#ami-product-load-forms)\.
 
 1. Verify that the request appears on the **Requests** tab with the **Under Review** status\. You can return to this page to see the status of your request as it is processed\.
 **Note**  
@@ -65,6 +74,16 @@ For more information about preparing your AMI for submission to AWS Marketplace,
 + [Best practices for building AMIs](best-practices-for-building-your-amis.md)
 + [AMI product checklist](aws-marketplace-listing-checklist.md)
 + [AMI security policies](product-and-ami-policies.md)
+
+## Integrating AWS Marketplace Metering Service for your AMI product<a name="ami-integrate-metering"></a>
+
+For AMI\-based products with usage pricing, you use the AWS Marketplace Metering Service API to check the entitlement to use with your product and to meter the usage of your product for billing\. You must meter for the pricing model that you created when setting your pricing information\. For more information, see [AWS Marketplace Metering Service integration](metering-service.md)\.
+
+## Integrating AWS License Manager for your AMI product<a name="ami-integrate-LM"></a>
+
+For AMI\-based products with contract pricing, you use AWS License Manager to associate licenses with your product\. 
+
+For more information about integrating with License Manager, see [ AWS License Manager integration](ami-license-manager-integration.md)\.
 
 ## Creating a change request<a name="single-ami-creating-change-request"></a>
 
@@ -84,7 +103,7 @@ You can also create change requests using the [AWS Marketplace Catalog API](http
 For most change requests, you simply fill out the UI form and submit\. However, for certain changes, you must download, complete, and then upload a Product Load Form \(PLF\)\. This is a spreadsheet that contains a form for you to fill out with the required information\. When you choose one of these change requests, you will be prompted to download the correct PLF for the request you are attempting to create\. The PLF is pre\-populated with information from your existing product details\. You can upload your completed PLF to the AWS Marketplace Management Portal [ File upload](https://aws.amazon.com/marketplace/management/product-load) page\.
 
 **Note**  
-We strongly recommend that you download and use the most recent PLF\. The form is regularly updated with new information, including instance types and Regions as they become available\. You can find the latest PLF for a product from the **Server products** page, by selecting the product and then choosing **Download Product Load Form**\.
+We strongly recommend that you download and use the most recent PLF\. The form is regularly updated with new information, including instance types and AWS Regions as they become available\. You can find the latest PLF for a product from the **Server products** page, by selecting the product and then choosing **Download Product Load Form**\.
 
 For more information about the status of a change request, see [Getting status of a request](#single-ami-getting-change-request-status)\. For insight into potential issues with change requests, see [Common errors when submitting change requests](#request-errors-and-issues)\.
 
@@ -100,7 +119,7 @@ After you submit a change request, you can see the status of your request from t
 + **Under review** means that your request is being reviewed\. Some requests require manual review by the AWS Marketplace team but most are reviewed automatically in the system\.
 + **Succeeded** means that your request is complete\. Your product or version has been updated as you requested\.
 + **Action required** means that you need to update your request to fix an issue or answer a question about the request\. Select the request to see the details, including any issues\.
-+ **Failed** means that something went wrong with the request, and you should create a new request for the change, with the same data\.\.
++ **Failed** means that something went wrong with the request, and you should create a new request for the change, with the same data\.
 
 ## Updating product information<a name="single-ami-updating-product"></a>
 
@@ -185,8 +204,8 @@ For information about creating an AMI for AWS Marketplace, see [Best practices f
 1. In the **New Amazon Machine Image \(AMI\)** section, provide the following information:
    + **Amazon Machine Image ID** – Enter the AMI ID for the AMI that you want to use for this version\. You can find the AMI ID from the [ list of AMIs in the console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:sort=name)\. The AMI must exist in the US East \(N\. Virginia\) Region, and in your AWS Marketplace Seller account\.
    + **IAM access role ARN** – Enter the Amazon Resource Name \(ARN\) for an AWS Identity and Access Management \(IAM\) role that allows AWS Marketplace to gain access to your AMI\. For instructions on how to create the IAM role, see [Giving AWS Marketplace access to your AMI](#single-ami-marketplace-ami-access)\. Use the standard format for an IAM ARN, for example: *arn:aws:iam::123456789012:role/RoleName*\. The ARN must exist in your AWS Marketplace Seller account\.
-   + **OS user name** – For Linux\-based AMIs, enter the name of a user that can be used to sign into the instance\. We recommend using *ec2\-user*\.
-   + **Scanning port** – Enter the port number that can be used to log into the operating system: the SSH port for a Linux AMI or the RDP port for a Windows AMI\.
+   + **OS user name** – For Linux\-based AMIs, enter the name of a user that can be used to sign in to the instance\. We recommend using *ec2\-user*\.
+   + **Scanning port** – Enter the port number that can be used to log in to the operating system: the SSH port for a Linux AMI or the RDP port for a Windows AMI\.
 
 1. If it is not already, expand the **Configuration settings to publish the AMI to the AWS Marketplace customer website** section, then provide the following information:
    + **Usage instructions** – Enter instructions for using the AMI or a link to more information about using the AMI\. For example: *To get started with the product, navigate to https://example\.com/usage\.htm\.*
@@ -202,7 +221,7 @@ For information about creating an AMI for AWS Marketplace, see [Best practices f
 
 You can check the status of your request at any time from the **Requests** tab of the [ Server Products](https://aws.amazon.com/marketplace/management/products/server) page\. The new version will be reviewed and, if successful, published as a new public version of your product\. If there is an issue, the status may show **Action required**\. Select the request to see details, including any issues\.
 
-If your request is successful, your existing users will receive an email notifying them the new version is available, linking to the version's release notes, and suggesting that they upgrade to the latest version\. You will also receive a copy of the email in your root AWS account email\.
+If your request is successful, your existing users will receive an email message notifying them that the new version is available, linking to the version's release notes, and suggesting that they upgrade to the latest version\. You will also receive a copy of the email message in your root AWS account email\.
 
 ## Giving AWS Marketplace access to your AMI<a name="single-ami-marketplace-ami-access"></a>
 
@@ -228,7 +247,7 @@ You can use permissions boundaries to limit the access that you give AWS Marketp
 
 1. Provide a name for the role, and select **Create role**\.
 
-1. You should see "The role *rolename* has been created" at the top of the page, and the role should appear in the list of roles\.
+1. You see "The role *rolename* has been created" at the top of the page, and the role appears in the list of roles\.
 
 On this page, when you select the role that you just created, you can see its ARN in the form *arn:aws:iam::123456789012:role/exampleRole*\. Use the ARN for the **IAM access role ARN** when you create change requests, for example, when [adding a new version](#single-ami-adding-version) to your product\.
 
@@ -261,12 +280,12 @@ You can check the status of your request at any time from the **Requests** tab o
 **Note**  
 Restricting a version can take up to 3 days to complete\.
 
-If your request is successful, your existing users will receive an email notifying them of the version restriction, and suggesting that they use the most recent version available\. You will also receive a copy of the email in your root AWS account email\.
+If your request is successful, your existing users will receive an email message notifying them of the version restriction, and suggesting that they use the most recent version available\. You will also receive a copy of the email in your root AWS account email\.
 
 ## Removing a product from AWS Marketplace<a name="removing-products-from-aws-marketplace"></a>
 
-After your product is published, you can remove \(also referred to as *sunset*\) it from AWS Marketplace\. To remove a product, identify the product and submit a request to remove it, along with a reason for removal and a contact email address for you\. You can also provide a replacement product ID if you're replacing the current product with a new one\. After you request product removal, new customers will no longer be able to subscribe to the product\. You're required to support any existing customers for a minimum of 90 days\. We process requests for product removal from AWS Marketplace with the following conditions: 
-+ The product is removed from AWS Marketplace search, browse, and other discovery tools\. Any Subscribe button or functionality is disabled, and messaging on the page clearly indicates the product is no longer available\. Note that the product detail page is still accessible using the URL and may be indexed in public search engines\. 
+After your product is published, you can remove \(also referred to as *sunset*\) it from AWS Marketplace\. To remove a product, identify the product and submit a request to remove it, along with a reason for removal and a contact email address for you\. If you're replacing the current product with a new one, you can also provide a replacement product ID\. After you request product removal, new customers will no longer be able to subscribe to the product\. You're required to support any existing customers for a minimum of 90 days\. We process requests for product removal from AWS Marketplace with the following conditions: 
++ The product is removed from AWS Marketplace search, browse, and other discovery tools\. Any **Subscribe** button or functionality is disabled, and messaging on the page clearly indicates the product is no longer available\. The product detail page is still accessible using the URL and may be indexed in public search engines\. 
 + A reason for removal must be specified \(for example, end of support, end of product updates, or replacement product\)\. For the requirements for continuing support for removed products, see [ Terms and Conditions for AWS Marketplace Sellers](https://aws.amazon.com/marketplace/management/terms)\. 
 + AWS Marketplace contacts current buyers via email message informing them of the product removal, reasons for the removal, and to provide seller contact information\. 
 + Current buyers *do* retain access to the software until they cancel their subscription\. They aren't affected in any way by the product's removal\. 
@@ -295,7 +314,7 @@ If you have questions about product removals, contact the [AWS Marketplace Selle
 
 ## Common errors when submitting change requests<a name="request-errors-and-issues"></a>
 
-When you make changes to your product's information, you sometimes run into errors\. Following are some common issues and suggestions for how to fix them:
+When you make changes to your product's information, you sometimes run into errors\. This section describes some common issues and provides suggestions for how to fix them\.
 + **Scanning your AMI** – Several issues could happen when scanning your AMI:
   + You have not granted AWS Marketplace permissions to scan your AMI\. Grant AWS Marketplace permissions to access it\. Or you have granted permissions, but the permissions boundary is too restrictive\. For more information, see [Giving AWS Marketplace access to your AMI](#single-ami-marketplace-ami-access)\.
   + If scanning finds security issues or Common Vulnerabilities and Exposures \(CVEs\) in your AMI, make sure you're using the latest patches for the operating system in your image\. For more information, see [AMI security policies](product-and-ami-policies.md)\.

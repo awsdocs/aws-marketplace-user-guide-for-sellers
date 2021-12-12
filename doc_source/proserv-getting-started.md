@@ -16,7 +16,7 @@
 To sell professional services on AWS Marketplace, you must complete the following prerequisites:
 + Have access to the AWS Marketplace Management Portal\. This is the tool that you use to register as a seller and manage the products that you sell on AWS Marketplace\. To learn more about getting access to the AWS Marketplace Management Portal, see [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md)\.
 + Register as an AWS Marketplace seller, and, if you want to charge for your products, submit your tax and banking information\. To learn more about becoming an seller, see [Getting started as a seller](user-guide-for-sellers.md)\.
-+ You must have a professional services product to offer that is related to at least one public product in AWS Marketplace\. Your product must either directly support those products, or offer services that drive subscriptions to that AWS Marketplace product\.
++ You must have a professional services product to offer that is related to an AWS services or at least one public product in AWS Marketplace\. Your product must either directly support those products, or offer services that drive subscriptions to those products\.
 
 **Note**  
 Your product must be listed in at least one of these primary categories: Assessments, Implementation, Managed services, Premium support, or Training\.   
@@ -32,7 +32,7 @@ The following procedure describes how to create a new professional services prod
 
 1. From the **Products** menu, select **Professional services**\. This page shows you all professional services products that you have already created, as well as any requests you have made for creating or modifying these products\.
 
-1. On the **Current professional service products** tab, select **Create professional service product**\.
+1. On the **Professional Services products** tab, select **Create professional services product**\.
 
 1. On the **Create product** page, provide the information for your product, and select **Submit**\. For more information about the details that you must provide, see [Providing details for a professional services product](proserv-product-details.md)\.
 

@@ -1,6 +1,9 @@
 # Accessing the AWS Marketplace Metering and Entitlement Service APIs<a name="saas-integration-metering-and-entitlement-apis"></a>
 
-This section outlines the process of integrating with the AWS Marketplace Metering Service or AWS Marketplace Entitlement Service, used to ensure your billing and reporting of customer usage of your SaaS products is accurate\. It's assumed that you've submitted a SaaS subscriptions product or a SaaS contracts product that has been published to a limited state\. In a limited state, you can use your test accounts to verify proper configuration and function but your product is not available publicly\. 
+This section outlines the process of integrating with the AWS Marketplace Metering Service or AWS Marketplace Entitlement Service, used to ensure your billing and reporting of customer usage of your software as a service \(SaaS\) products is accurate\. It's assumed that you've submitted a SaaS subscriptions product or a SaaS contracts product that has been published to a limited state\. In a limited state, you can use your test accounts to verify proper configuration and function but your product is not available publicly\. 
+
+**Note**  
+If your SaaS product is integrated with another AWS managed service that handles metering in a different way \(such as Amazon SageMaker Ground Truth, or AWS WAF\), then you do not need to integrate with AWS Marketplace metering service\. Metering for your product should only happen in one system to avoid double billing your customer\.
 
 **Topics**
 + [Metering for usage](metering-for-usage.md)

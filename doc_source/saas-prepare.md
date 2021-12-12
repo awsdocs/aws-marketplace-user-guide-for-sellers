@@ -12,7 +12,7 @@ There are three pricing options for SaaS products on AWS Marketplace\. Choosing 
 + **SaaS contracts** – Buyers are either billed in advance for the use of your software, or you can offer them a flexible payment schedule\. 
 + **SaaS contracts with pay\-as\-you\-go** – This option is similar to a standard contract, however your customers can also pay for additional usage above their contract\. This is a blended pricing option, that gives your customers the most pricing options and it requires the most integration code on your end\.
 
-For more information on pricing, see [Pricing SaaS products](saas-pricing-models.md)\.
+For more information on pricing, see [SaaS product pricing](saas-pricing-models.md)\.
 
 ## Plan your billing integration<a name="saas-plan-integration"></a>
 

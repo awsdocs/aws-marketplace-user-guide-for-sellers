@@ -1,4 +1,4 @@
-# Pricing machine learning products<a name="machine-learning-pricing"></a>
+# Machine learning product pricing<a name="machine-learning-pricing"></a>
 
 You can choose from several available pricing models for your Amazon SageMaker products\. Buyers who subscribe to your product run it in SageMaker within their own AWS account\. The price for your buyers is a combination of the infrastructure costs for the resources running in their AWS account and the product pricing that you set\.
 
@@ -44,12 +44,12 @@ For inference pricing, AWS Marketplace only charges buyer for requests where the
 
 ### Free trial<a name="ml-pricing-free-trial"></a>
 
-Optionally, you can create a free trial for your product and define the number of days of the free trial \(free trials can be 5–120 days\)\. During the free trial, buyers can run your software as much as they want and aren't charged for your software\. Buyers are charged for the infrastructure costs during the free trial\. After the trial ends, they are charged your normal software price, along with the infrastructure costs\.
+Optionally, you can create a free trial for your product and define the number of days of the free trial\. Free trials can be 5–120 days\. During the free trial, buyers can run your software as much as they want and aren't charged for your software\. Buyers are charged for the infrastructure costs during the free trial\. After the trial ends, they are charged your normal software price, along with the infrastructure costs\.
 
 **Note**  
 You can only create a free trial for offers that are charged hourly\. You can't create a free trial for a product with inference pricing\.
 
-When buyers subscribe to a product with a free trial, they receive a welcome email message that includes the term of the free trial, a calculated expiration date, and details on unsubscribing\. A reminder email message is sent three days before the expiration date\.
+When buyers subscribe to a product with a free trial, they receive a welcome email message\. The message includes the term of the free trial, a calculated expiration date, and details on unsubscribing\. A reminder email message is sent three days before the expiration date\.
 
 If you offer a free trial for your product in AWS Marketplace, you agree to the specific [ refund policy](https://docs.aws.amazon.com/marketplace/latest/userguide/refunds.html#refund-policy) for free trials\.
 
@@ -59,7 +59,7 @@ You can create private offers for your machine learning products\. A private off
 
 Private offers work in one of two ways:
 + **Hourly** – Private offers can be an hourly rate that is different from the publicly displayed hourly rate\.
-+ **Contract** – Private offers can be a contract with a fixed upfront fee for a specified number of days\. The buyer is allowed to use an unlimited number of instances for the entire duration of the contract\. At the end of the contract, if any instances continue to run, those instances will be billed at the hourly rate that you set in the private offer\. For example, you can create a contract with a fixed upfront fee for 365 days of unlimited use\. You also set an hourly rate for the private offer\. When the buyer accepts this private offer, they pay that upfront fee\. When the contract ends, any instances still running are billed at that hourly rate\.
++ **Contract** – Private offers can be a contract with a fixed upfront fee for a specified number of days\. The buyer is allowed to use an unlimited number of instances for the entire duration of the contract\. At the end of the contract, any instances that continue to run are billed at the hourly rate that you set in the private offer\. For example, you can create a contract with a fixed upfront fee for 365 days of unlimited use\. You also set an hourly rate for the private offer\. When the buyer accepts this private offer, they pay that upfront fee\. When the contract ends, any instances still running are billed at that hourly rate\.
 
 The set of terms and agreement between you and the buyer in private offers can differ from the one in the public offer or other private offers\.
 

@@ -4,7 +4,7 @@
 
 When creating your product, you provide a URL to your registration landing page\. We use that URL to redirect customers to your registration landing page after they subscribe\. On your software's registration URL, you collect whatever information is required to create an account for the customer\. We recommend collecting your customer’s email addresses if you plan to contact them through email for usage notifications\.
 
-The registration landing page needs to be able to identify and accept the `x-amzn-marketplace-token` token in the form data from AWS Marketplace with the customer’s identiﬁer for billing\. It should then pass that token value to the AWS Marketplace Metering Service and AWS Marketplace Entitlement Service APIs to resolve for the unique customer identiﬁer and corresponding product code\. For a code example, see [ResolveCustomer code example](saas-code-examples.md#saas-resolvecustomer-example)\.
+The registration landing page needs to be able to identify and accept the `x-amzn-marketplace-token` token in the form data from AWS Marketplace with the customer’s identiﬁer for billing\. It should then pass that token value to the AWS Marketplace Metering Service and AWS Marketplace Entitlement Service APIs to resolve for the unique customer identiﬁer and corresponding product code\. For a code example, see [`ResolveCustomer` code example](saas-code-examples.md#saas-resolvecustomer-example)\.
 
 ## Configuring your SaaS product to accept new buyers<a name="configuring-your-saas-application-to-accept-new-customers"></a>
 
@@ -22,7 +22,7 @@ You're responsible for correctly configuring your SaaS software to accept new cu
 
 1. To redeem this token for a customer identifier and a product code, your website must call [ResolveCustomer](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_ResolveCustomer.html) on the AWS Marketplace Metering Service\. The customer identiﬁer isn't the customer’s AWS account ID, but it's universal between products\. The product code is a unique string for your SaaS product that AWS provides to you\. Each AWS product has one unique product code, which is assigned to you during registration\.
 **Note**  
-To see an example of a `ResolveCustomer` call, see [ResolveCustomer code example](saas-code-examples.md#saas-resolvecustomer-example)\.
+To see an example of a `ResolveCustomer` call, see [`ResolveCustomer` code example](saas-code-examples.md#saas-resolvecustomer-example)\.
 
 1. Your website validates that the product code matches your SaaS product identity\. Your website must keep this customer identiﬁer in the customer’s session\. It can be stored temporarily on your server, or it can be part of a signed session cookie on the customer’s browser\. 
 

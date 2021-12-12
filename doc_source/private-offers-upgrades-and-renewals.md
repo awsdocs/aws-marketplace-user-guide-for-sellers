@@ -1,12 +1,10 @@
 # Private offer upgrades and renewals<a name="private-offers-upgrades-and-renewals"></a>
 
-For SaaS contract and SaaS contract with consumption products, you can offer upgrades and renewals by using a private offer on any active agreements\. For example, you can do this to grant new entitlements, offer pricing discounts, adjust payment schedules, or change the end user license agreement \(EULA\) to use [standardized license terms](standardized-license-terms.md)\. You can also change the number of units and payment schedule, and add a custom end date\. 
+For AMI contract, container contract, software as a service \(SaaS\) contract and SaaS contract with consumption products, you can offer upgrades and renewals by using a private offer on any active agreements\. For example, you can do this to grant new entitlements, offer pricing discounts, adjust payment schedules, or change the end user license agreement \(EULA\) to use [standardized license terms](standardized-license-terms.md)\. You can also change the number of units and payment schedule, and add a custom end date\. 
 
 The difference between an *offer* and an *agreement* is whether the buyer accepted its terms:
 + An **offer** is a set of terms for a buyer's use of a product\. Offers can be public or private\. 
 + An **agreement ** is an offer that a buyer accepted\. Agreements include purchased and free products that a seller made available via a public or private offer\. 
-
-This page describes how to amend active agreements for SaaS contract and SaaS contract with consumption products\.
 
 This feature is available to all AWS Marketplace sellers, including independent software vendors \(ISVs\) and consulting partners\. You can't amend an agreement to specify a seller of record that's different from the seller of record from the original agreement\. 
 
@@ -17,6 +15,8 @@ To use this feature, you must have permissions to use the **Agreements** tab in 
 The following product types support private offer renewals and upgrades:
 + SaaS contracts
 + SaaS contracts with consumption
++ AMI contracts
++ Container contracts
 
 ## Submission process for upgrades and renewals<a name="private-offers-upgrades-and-renewals-process"></a>
 
@@ -51,6 +51,6 @@ Similar to the process for creating a private offer, the buyer isn't notified th
 
 Upgrade and renewal private offers appear on the existing seller reports and in the reports relevant to the offer\. The [Daily customer subscriber report](daily-customer-subscriber-report.md) report and [Daily business report](daily-business-report.md) report are generated daily\. The [Monthly billed revenue report](monthly-billed-revenue-report.md) report is generated monthly\.
 
-In the Daily customer subscriber report, the **Subscription intent** field indicates whether the report entry is a new private offer\. The **Previous offer ID** field indicates the ID of the offer that preceded the new offer, if one exists\. For all private offers, the entry is marked private\. 
+In the Daily customer subscriber report, the **Subscription intent** field indicates whether the report entry is a new private offer\. The **Previous offer ID** field indicates the ID of the offer that preceded the new offer, if one exists\. For all private offers, the entry is marked "private"\. 
 
 Agreements data is not shown in data feeds\.

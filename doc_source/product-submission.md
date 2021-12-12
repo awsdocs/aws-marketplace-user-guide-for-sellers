@@ -14,11 +14,12 @@ Data product providers must use the AWS Data Exchange console to publish product
 | --- | --- | --- | --- | 
 |  Bring Your Own License \(BYOL\)  |  Products tab  |  Assets tab  |     | 
 |  Free  |  Products tab  |  Assets tab  |     | 
-|  Hourly  |  Products tab  |  Assets tab  |     | 
-|  Hourly with Annual  |  Products tab  |  Assets tab  |     | 
-|  Monthly  |  Assets tab  |  Assets tab  |     | 
+| Paid Hourly  |  Products tab  |  Assets tab  |     | 
+| Paid Hourly with Annual  |  Products tab  |  Assets tab  |     | 
+| Paid Monthly  |  Products tab  |  Assets tab  |     | 
 |  Hourly with Monthly  |  Assets tab  |  Assets tab  |     | 
-|  Usage \(AWS Marketplace Metering Service\) |  Assets tab  |  Assets tab  |     | 
+| Paid Usage \(AWS Marketplace Metering Service\) |  Products tab  |  Assets tab  |     | 
+| Contract Pricing | Products tab |  |  | 
 |  SaaS Subscription  |     |     |  Products tab  | 
 |  SaaS Contract  |     |     |  Products tab  | 
 |  SaaS Legacy  |     |     |  Assets tab  | 
@@ -80,7 +81,7 @@ The AWS Marketplace team reviews your product for policy and security compliance
 
 ### Updating your product<a name="updating-your-product"></a>
 
- For products that you created by using the product load form \(PLF\), you also use the PLF to make changes to those products\. You can make changes to the original PLF you completed or, if it's not available, you can start with a new PLF\. Just like using the **Products** tab, you can add a new version, remove existing versions, and update pricing, instance types, AWS Region availability, and metadata\. To make an update, you prepare any updated product the same way you prepare a new product\. After the product update is prepared, follow these steps: 
+ For products that you created by using the product load form \(PLF\), you also use the PLF to make changes to those products\. You can make changes to the original PLF you completed or, if it's not available, you can start with a new PLF\. Just like using the **Products** tab, you can add a new version, remove existing versions, and update pricing, instance types, Region availability, and metadata\. To make an update, you prepare any updated product the same way you prepare a new product\. After the product update is prepared, follow these steps: 
 
 1.  Use your existing PLF or, from the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/), under the **Assets** tab, choose **File upload**\. Under **Product load forms and seller guides**, you can download the PLF for your product\.
 

@@ -1,6 +1,6 @@
 # Integrating your container product with the AWS Marketplace Metering Service using the AWS SDK for Java<a name="java-integration-example-meterusage"></a>
 
-The following example outlines an implementation that uses the AWS SDK for Java to integrate with the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html) `MeterUsage` operation\. For complete details, see [MeterUsage Java examples](#meterusage-java-example)\. Many of the following steps apply regardless of the language\. 
+The following example outlines an implementation that uses the AWS SDK for Java to integrate with the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html) `MeterUsage` operation\. For complete details, see [`MeterUsage` Java examples](#meterusage-java-example)\. Many of the following steps apply regardless of the language\. 
 
 **Example: AWS Marketplace Metering Service integration**
 
@@ -10,9 +10,9 @@ The following example outlines an implementation that uses the AWS SDK for Java 
 
 1.  Download the public [AWS Java SDK](https://aws.amazon.com/sdk-for-java/)\. 
 **Important**  
- To call the metering APIs from Amazon Elastic Kubernetes Service \(Amazon EKS\), you must [use a supported AWS SDK](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html) and run on an Amazon EKS cluster running Kubernetes 1\.13 or later\. 
+ To call the metering API operations from Amazon Elastic Kubernetes Service \(Amazon EKS\), you must [use a supported AWS SDK](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html) and run on an Amazon EKS cluster running Kubernetes 1\.13 or later\. 
 
-1. Call the `MeterUsage` operation from the task or pod once every hour for the each dimension usage\. The API operation accepts one metering record for a unique combination of `Dimension`, `Resource`, and `Hour`\. The resource is either an Amazon Elastic Container Service \(Amazon ECS\) task or an Amazon EKS pod\.
+1. Call the `MeterUsage` operation from the task or pod once every hour for each dimension usage\. The API operation accepts one metering record for a unique combination of `Dimension`, `Resource`, and `Hour`\. The resource is either an Amazon Elastic Container Service \(Amazon ECS\) task or an Amazon EKS pod\.
 
    ```
    {
@@ -28,9 +28,9 @@ It is possible to see transient issues in connecting to the AWS Marketplace Mete
 
 1. Rebuild a new version of your Docker container image that includes the `MeterUsage` call, tag the container, and push it to any Docker registry that is compatible with Amazon ECS or Amazon EKS, such as Amazon Elastic Container Registry \(Amazon ECR\) or Docker Hub\. If you are using Amazon ECR, ensure that the account launching the Amazon ECS task or Amazon EKS pod has permissions on the Amazon ECR repository\. Otherwise, the operation fails\.
 **Note**  
- If you use a private Docker Hub repository, follow the steps in [Private Registry Authentication for Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/private-auth.html) in the *Amazon Elastic Container Service Developer Guide*\. 
+ If you use a private Docker Hub repository, follow the steps in [Private registry authentication for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/private-auth.html) in the *Amazon Elastic Container Service Developer Guide*\. 
 
-1.  Create an [IAM](https://aws.amazon.com/iam/) role that grants permission for your container to call `MeterUsage`, as defined in the following code example\. You must supply this IAM role in the [Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_role_arn) parameter of the Amazon ECS task or Amazon EKS pod definition\.
+1.  Create an [IAM](https://aws.amazon.com/iam/) role that grants permission for your container to call `MeterUsage`, as defined in the following code example\. You must supply this AWS Identity and Access Management \(IAM\) role in the [Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_role_arn) parameter of the Amazon ECS task or Amazon EKS pod definition\.
 
    ```
    {
@@ -49,13 +49,13 @@ It is possible to see transient issues in connecting to the AWS Marketplace Mete
 
 1. Create an Amazon ECS task or Amazon EKS pod definition that references the container that has integrated with AWS Marketplace and references the IAM role that you created in step 6\. If you want to see logging, enable AWS CloudTrail logging in the task definition\. 
 
-1. Create an Amazon ECS or Amazon EKS cluster to run your task or pod\. For more information about creating an Amazon ECS cluster, see [Creating a Cluster](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create_cluster.html) in the *Amazon Elastic Container Service Developer Guide*\. For more information about creating an Amazon EKS cluster \(using Kubernetes version 1\.1\.3\.x or later\), see [Creating an Amazon EKS Cluster](https://docs.aws.amazon.com/eks/latest/userguide/create_cluster.html)\.
+1. Create an Amazon ECS or Amazon EKS cluster to run your task or pod\. For more information about creating an Amazon ECS cluster, see [Creating a cluster](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create_cluster.html) in the *Amazon Elastic Container Service Developer Guide*\. For more information about creating an Amazon EKS cluster \(using Kubernetes version 1\.1\.3\.x or later\), see [Creating an Amazon EKS Cluster](https://docs.aws.amazon.com/eks/latest/userguide/create_cluster.html)\.
 
 1. Configure the Amazon ECS or Amazon EKS cluster and launch the Amazon ECS task definition or Amazon EKS pod that you created in step 8, in the us\-east\-1 AWS Region\. It's only during this testing process, before the product is live, that you have to use this Region\.
 
 1. When you get a valid response from `MeterUsage` for each of the dimensions being published for the product, you can begin creating your container product\. For questions, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
-## MeterUsage Java examples<a name="meterusage-java-example"></a>
+## `MeterUsage` Java examples<a name="meterusage-java-example"></a>
 
 The following code examples use the AWS SDK for Java and AWS Marketplace Metering Service to call the `MeterUsage` operation\.
 

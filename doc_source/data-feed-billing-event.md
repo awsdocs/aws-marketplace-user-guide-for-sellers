@@ -73,7 +73,7 @@ The following tables show the relevant information in Paulo's data feed when he 
 | I0 | 737399998888 | 777788889999 | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
 | I1 | 737399998888 | AWS | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE | 
 | I2 | 777788889999 | 111122223333 | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
-| I3 | 777788889999 | AWS | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_TAX\_SHARE | 
+| I3 | 777788889999 | AWS | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | 
 
 
 
@@ -90,9 +90,9 @@ The following tables show the relevant information in Paulo's data feed at the e
 
 | billing\_event\_id  | from\_account\_id  | to\_account\_id  | end\_user\_account\_id | product\_id | action | transaction\_type | 
 | --- | --- | --- | --- | --- | --- | --- | 
-| I10 | 737399998888 | 777788889999 | 737399998888 |  | INVOICED | SELLER\_REV\_SHARE | 
-| I12 | 777788889999 | 111122223333 | 737399998888 |  | INVOICED | SELLER\_REV\_SHARE | 
-| I13 | 777788889999 | AWS | 737399998888 | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | 
+| I10 | 737399998888 | 777788889999 | 737399998888 |  | DISBURSED | SELLER\_REV\_SHARE | 
+| I12 | 777788889999 | 111122223333 | 737399998888 |  | DISBURSED | SELLER\_REV\_SHARE | 
+| I13 | 777788889999 | AWS | 737399998888 | prod\-o4grxfafcxxxx | DISBURSED | AWS\_REV\_SHARE | 
 | I14 | AWS | 777788889999 |  |  | DISBURSED | DISBURSEMENT | 
 
 
@@ -114,7 +114,7 @@ The following tables show the relevant information in the Jane's data feed when 
 | --- | --- | --- | --- | --- | --- | --- | 
 | I5 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | INVOICED | SELLER\_REV\_SHARE | 
 | I6 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | INVOICED | SELLER\_TAX\_SHARE | 
-| I7 | 777788889999 | AWS |  | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | 
+| I7 | 111122223333 | AWS |  | prod\-o4grxfafcxxxx | INVOICED | AWS\_REV\_SHARE | 
 
 
 
@@ -132,7 +132,7 @@ The following tables show the relevant information in Jane's data feed at the en
 | --- | --- | --- | --- | --- | --- | --- | 
 | I30 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | DISBURSED | SELLER\_REV\_SHARE | 
 | I31 | 777788889999 | 111122223333 |  | prod\-o4grxfafcxxxx | DISBURSED | SELLER\_TAX\_SHARE | 
-| I32 | 777788889999 | AWS |  | prod\-o4grxfafcxxxx | DISBURSED | AWS\_REV\_SHARE | 
+| I32 | 111122223333 | AWS |  | prod\-o4grxfafcxxxx | DISBURSED | AWS\_REV\_SHARE | 
 | I33 | AWS | 111122223333 |  |  | DISBURSED | DISBURSEMENT | 
 
 

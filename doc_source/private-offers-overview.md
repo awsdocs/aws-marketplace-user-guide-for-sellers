@@ -47,14 +47,36 @@ AMI, container, professional services, and SaaS products are supported for priva
 
 ### Private offers for AMI products<a name="ami-private-offers"></a>
 
-You can provide private offers pricing for AMI contracts\. The offer can be any custom duration in days, up to 3 years \(1,095 days\)\. License entitlements begin on the date the buyer accepts the private offer\. For AMI private offers with flexible payment schedules, you can set the number of instances agreed to in the contract, for the duration of the contract\. You can also define a custom hourly price for those same instances if the buyer uses more\. 
+You can provide private offers pricing for AMI products\. 
+
+The offer can be any custom duration for the following:
++ AMI hourly or AMI annual private offers: up to 3 years \(1,095 days\)
++ AMI contract private offers: up to 5 years \(60 months\)
+
+  For AMI contracts, private offers don't monitor usage\.
+
+  Buyers can manually upgrade to new contract levels at any time\. However, it is up to the independent software vendor \(ISV\) to define contract tiers, enforce service limitations, and advise buyers to manually upgrade to higher contract tiers when needed\. The contract duration of the private offer can match the public product listing, or can be a custom duration in months \(up to 60\)\. 
+
+License entitlements begin on the date the buyer accepts the private offer\. 
+
+For AMI private offers with flexible payment schedules, you can set the number of annual instance types agreed to in the contract, for the duration of the contract\.
 
 **Note**  
 Private offers are not available for monthly billing contracts\.
 
 ### Private offers for container products<a name="container-private-offers"></a>
 
-You can provide private offers pricing for container\-based product contracts\. The offer can be any custom duration in days, up to 3 years \(1,095 days\)\. License entitlements begin on the date the buyer accepts the private offer\. For container private offers with flexible payment schedules, you can set the number units agreed to in the contract, for the duration of the contract\. You can also define a custom hourly price for those same units if the buyer uses more\.
+You can provide private offers pricing for container\-based product contracts\. 
+
+The offer can be any custom duration for the following:
++ Container hourly or AMI annual private offers – Up to 3 years \(1,095 days\)
++ Container contract private offers – Up to 5 years \(60 months\)
+
+  For Container contracts, private offers don't monitor usage\.
+
+  Buyers can manually upgrade to new contract levels at any time\. However, the independent software vendor \(ISV\) defines the contract tiers, enforces service limitations, and advises buyers to manually upgrade to higher contract tiers when needed\. The contract duration of the private offer can match the public product listing, or it can be a custom duration in months \(up to 60 months\)\. 
+
+License entitlements begin on the date the buyer accepts the private offer\. For container private offers with flexible payment schedules, you can set the number of units agreed to in the contract, for the duration of the contract\. You can also define a custom hourly price for those same units if the buyer uses more\.
 
 **Note**  
 Private offers are not available for monthly billing contracts\.
@@ -65,13 +87,13 @@ All professional services product offerings are done through private offers\. Fo
 
 ### Private offers for SaaS products<a name="saas-private-offers"></a>
 
-SaaS private offer products can't change the pricing level for a given pricing tier based on timing\. For example, an offer can't charge $0\.80/hour for three months and then change pricing to $0\.60/hour thereafter for the same pricing tier\. For SaaS contracts, private offers don't monitor usage\.
+Software as a service \(SaaS\) private offer products can't change the pricing level for a given pricing tier based on timing\. For example, an offer can't charge $0\.80/hour for three months and then change pricing to $0\.60/hour thereafter for the same pricing tier\. For SaaS contracts, private offers don't monitor usage\.
 
-Buyers can manually upgrade to new contract levels at any time\. However, it is up to the independent software vendor \(ISV\) to define contract tiers, enforce service limitations, and advise buyers to manually upgrade to higher contract tiers when needed\. The contract duration of the private offer can match the public product listing, or can be a custom duration in months \(up to 60\)\. 
+Buyers can manually upgrade to new contract levels at any time\. However, the independent software vendor \(ISV\) defines contract tiers, enforces service limitations, and advises buyers to manually upgrade to higher contract tiers when needed\. The contract duration of the private offer can match the public product listing, or it can be a custom duration in months \(up to 60 months\)\. 
 
 ## Offer submission process<a name="offer-submission-process"></a>
 
- You can create simple private offers using the AWS Marketplace Management Portal using the following procedure\. 
+ You can create simple private offers using the AWS Marketplace Management Portal by using the following procedure\. 
 
 **To create a private offer**
 
@@ -79,19 +101,25 @@ Buyers can manually upgrade to new contract levels at any time\. However, it is 
 
 1. On the **Manage Private Offer** page, choose **CREATE AN OFFER**\. 
 
-1. On the **Create Private Offer** page, select the product from the drop\-down list and enter the AWS account ID \(or IDs\) of the AWS Marketplace buyer\. If your buyer is paying for the product in installments, select **Allow buyers to pay for this product in installments**\. Verify the information that you entered and then choose **NEXT**\. 
+1. On the **Create Private Offer** page, select the product from the dropdown list and enter the AWS account ID \(or IDs\) of the AWS Marketplace buyer\. If your buyer is paying for the product in installments, select **Allow buyers to pay for this product in installments**\. Verify the information that you entered, and then choose **NEXT**\. 
 **Note**  
 Selecting **Allow buyers to pay for this product in installments \(ISV only\)** enables you to offer your buyer a payment schedule with annual payments that aren't evenly distributed, multiple payments for a multi\-year deal, or quarterly payments\. Buyers must be on invoicing terms with AWS to receive a flexible payment schedule on their private offer\. For more information, see [Flexible payment scheduler](flexible-payment-scheduler.md)\.
 
 1. On the **Create an Offer** page, verify the product name and buyer ID\.
 
-1. If the product offering is for an AMI hourly, AMI annual, or SaaS contract pricing model, specify the **Contract duration**, by choosing an option button or entering a custom duration in number of days for AMI products or number of months for SaaS contracts\.
+1. Specify the **Contract duration**: 
+
+   1. If the product offer is for an AMI hourly or AMI annual pricing model, choose a **Duration** option or enter a custom duration in number of days\.
 **Note**  
- The duration of the offer can be up to 1,095 days for AMI products or up to 60 months for SaaS contracts\. 
+ The duration of the private offer can be up to 1,095 days for the AMI hourly or the AMI annual pricing model\. 
+
+   1. If the product offer is for a SaaS contract pricing model, AMI contract pricing model, or container contract pricing model, choose a **Duration** option or enter a custom duration in number of months\. 
+**Note**  
+ The duration of the private offer can be up to 60 months for the SaaS contract pricing model, AMI contract pricing model, or container contract pricing model\. 
 
 1.  In **Input offer price**, enter the pricing information that you negotiated with the customer\. If you have installment payments for the private offer, specify the number of units and the payment schedule for the contract duration\. For more information about installment payments, see [Flexible payment scheduler](flexible-payment-scheduler.md)\. 
 
-1. In **Upload End User License Agreement**, select from available options or upload your EULA PDF file\.
+1. In **Upload End User License Agreement**, select from available options or upload your EULA \.pdf file\.
 
 1. In **Offer Expiration and Acceptance Date**, enter the number of days that the offer is valid for\.
 **Note**  
@@ -103,7 +131,7 @@ This is the date that the offer becomes null and void\. On that date, the buyer 
 
 1.  Choose **REVIEW OFFER**\. 
 
-1.  On the **Review Offer** page, verify the offer information and the PDF file, and then do one of the following:
+1.  On the **Review Offer** page, verify the offer information and the \.pdf file, and then do one of the following:
    +  If the offer is correct, choose **EXTEND OFFER**\. 
    +  If the offer is incorrect, choose **EDIT OFFER** and make any required changes\. 
 

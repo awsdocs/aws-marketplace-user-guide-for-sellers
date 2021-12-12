@@ -25,7 +25,7 @@ Data feeds are generated and stored as follows:
 + As each daily data feed is generated, it is appended to the existing CSV file for that month\. When a new month starts, a new CSV file is generated for each data feed\. 
 + Information in data feeds is backfilled from 2010/01/01 to 2020/04/30 \(inclusive\) and is available in the [CSV file](#data-feed-details) in the `year=2010/month=01` subfolder\.
 
-  You may notice cases where the current month's file for a given data feed contains only only column headers, and no data\. This means that there were no new entries for that month for the feed\. This can happen with data feeds that are updated less frequently, like the product feed\. In these cases, data is available in the backfilled folder\. 
+  You may notice cases where the current month's file for a given data feed contains only column headers, and no data\. This means that there were no new entries for that month for the feed\. This can happen with data feeds that are updated less frequently, like the product feed\. In these cases, data is available in the backfilled folder\. 
 + In Amazon S3, you can create an [Amazon S3 lifecycle policy](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-lifecycle.html) to manage how long to keep files in the bucket\. 
 + You can configure Amazon SNS to notify you when data is delivered to your encrypted S3 bucket\. For information on how to configure notifications, see [Getting started with Amazon SNS](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html) in the *Amazon Simple Notification Service Developer Guide*\.
 
@@ -117,9 +117,9 @@ When the AWS Marketplace reports service calls Amazon S3, AWS KMS, or Amazon SNS
 
 ```
         {
-            "Sid": "AwsMarketplaceDataFeedsAccess",
-            "Effect": "Allow",
-            "Principal": {
+           "Sid": "AwsMarketplaceDataFeedsAccess",
+           "Effect": "Allow",
+           "Principal": {
                 "Service": "reports.marketplace.amazonaws.com"
             },
             "Action": [
@@ -133,12 +133,14 @@ When the AWS Marketplace reports service calls Amazon S3, AWS KMS, or Amazon SNS
             "Resource": [
                 "arn:aws:s3:::datafeed-test-bucket",
                 "arn:aws:s3:::datafeed-test-bucket/*"
-            ],
+            ,
             "Condition": {
-                "ArnLike": {
-                    "aws:SourceArn": "arn:aws:aws-marketplace::account-id:AWSMarketplace/SellerDataSubscription/DataFeeds_V1"
+                "StringEquals": {
+                        "aws:SourceAccount": "account-id",
+                        "aws:SourceArn": ["arn:aws:marketplace::account-id:AWSMarketplace/SellerDataSubscription/DataFeeds_V1",
+                        "arn:aws:marketplace::account-id:AWSMarketplace/SellerDataSubscription/Example-Report"]
+                        }
                 }
-            }
         },
 ```
 

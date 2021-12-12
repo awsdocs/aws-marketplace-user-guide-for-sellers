@@ -6,7 +6,7 @@ To verify a customer's entitlement to your product, use the `GetEntitlements` op
 
  `GetEntitlements` accepts a customer identifier and dimension as filters\. `ProductCode` is a required parameter\. The operation returns a paginated list of entitlements\. The result has an `ExpirationDate` field that shows the minimum period of time that the entitlement is valid for\. If the customer has set up automatic renewal, the date in the ExpirationDate field is the renewal date\.
 
-For code samples, see [Code examples](saas-code-examples.md)\.
+For code samples, see [Code examples for SaaS product integration](saas-code-examples.md)\.
 
 ## Retrieving entitlement on user actions<a name="retrieving-entitlement-on-user-actions"></a>
 

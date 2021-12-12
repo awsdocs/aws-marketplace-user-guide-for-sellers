@@ -3,12 +3,12 @@
  If you want to sell your software in AWS Marketplace, review the requirements and then follow the steps to register as a seller\. There are different registration requirements based on where you reside and what type of products you're selling\. To register as a seller in AWS Marketplace, you can use an existing AWS account or create a new account\. All AWS Marketplace interactions are tied to the account that you choose\. 
 
 **Notes**  
-Registering as an AWS Marketplace seller is a prerequisite to be an AWS Data Exchange data provider\. For more information about these requirements, see [Providing Data Products on AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/latest/userguide/providing-data-sets.html) in the *AWS Data Exchange User Guide*\.
+Registering as an AWS Marketplace seller is a prerequisite to listing data products on AWS Data Exchange and making them available on AWS Marketplace\. For more information about these requirements, see [Providing Data Products on AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/latest/userguide/providing-data-sets.html) in the *AWS Data Exchange User Guide*\.
 For information about the permissions that AWS Marketplace sellers need, see [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md)\.
 
 ## Seller requirements for publishing free software products<a name="seller-requirements-for-publishing-free-products"></a>
 
- Whether you charge for your product or not, when you offer it in AWS Marketplace, you're selling that product\. The cost to the customer is $0\.00, but you and the customer agree to a mutual contract for use of the product\. If you offer only free products, you don't have to provide banking information to AWS Marketplace\. To create and offer free products in AWS Marketplace, you must: 
+ Regardless of whether you charge for your product when you offer it in AWS Marketplace, you're selling that product\. The cost to the customer is $0\.00, but you and the customer agree to a mutual contract for use of the product\. If you offer only free products, you don't have to provide banking information to AWS Marketplace\. To create and offer free products in AWS Marketplace, you must: 
 +  Sell publicly available, full\-feature production\-ready software\. 
 +  Have a defined customer support process and support organization\. 
 +  Provide a means to keep software regularly updated and free of vulnerabilities\. 
@@ -53,7 +53,7 @@ For more information about VAT, invoicing, and your tax obligations as a seller,
 
 ## AWS Marketplace Management Portal<a name="management-portal"></a>
 
- The [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour) is the tool that you use to register as an AWS Marketplace seller and then to manage the products that you sell in AWS Marketplace\. You can complete the following tasks on the portal:
+ The [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/tour) is the tool that you use to register as an AWS Marketplace seller\. Then, you can use the portal to manage the products that you sell in AWS Marketplace\. You can complete the following tasks on the portal:
 +  Register as an AWS Marketplace seller\. 
 +  Use the **Products** page to submit new software products and update existing software products\. 
 +  Monitor the status of your requests\. 
@@ -61,7 +61,7 @@ For more information about VAT, invoicing, and your tax obligations as a seller,
 +  Manage your software products into incremental channel revenue by taking advantage of the go\-to\-market activities\. 
 +  Measure the results of your marketing efforts within hours of launch, including the usage and revenue driven by your campaigns\. 
 + Enable customer service representatives to retrieve customer data in real time\.
-+  Initiate an automatic AMI scan to detect vulnerabilities\. 
++  Initiate an automatic Amazon Machine Image \(AMI\) scan to detect vulnerabilities\. 
 
 **Note**  
 Data products are published and managed from the AWS Data Exchange console\. AWS Data Exchange providers can use the AWS Marketplace Management Portal to register as a seller, request AWS Data Exchange on\-boarding, access seller reports, and submit refund requests\.
@@ -70,4 +70,4 @@ Data products are published and managed from the AWS Data Exchange console\. AWS
 
  AWS Marketplace strongly recommends using AWS Identity and Access Management \(IAM\) roles to sign in to the AWS Marketplace Management Portal rather than using your root account credentials\. For more information, see [IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html#intro-identity-users) in the *IAM User Guide*\. 
 
- To enable people in your company to sign in to the AWS Marketplace Management Portal, create an IAM user for each person you want to have access and define access permissions to the AWS Marketplace Management Portal\. We also recommend creating a *root* or account owner IAM to use for access\.
+ To enable people in your company to sign in to the AWS Marketplace Management Portal, create an IAM user for each person you want to have access and define access permissions to the AWS Marketplace Management Portal\. We also recommend creating an AWS account root user role to use for access\. For more information, see [AWS account root user credentials and IAM user credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) in the *AWS General Reference*\.

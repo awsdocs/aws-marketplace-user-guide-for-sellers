@@ -4,18 +4,18 @@
 
  Your staff can use the Customer Support Eligibility tool to access near\-real\-time information about a customer's subscription to your products and provide fast, personalized service\. AWS Marketplace Management Portal makes it easy to get started: Enter a customer's AWS account ID to retrieve subscription and usage information from their account\. 
 
- You also have the option to enroll your products in AWS Marketplace Product Support Connection \(PSC\)\. For products that are enrolled in PSC, AWS Marketplace customers can choose to provide contact information \(including name, organization, email address, and phone number\) via the AWS Marketplace website for the purposes of obtaining and accessing product support\. If you enroll in PSC, AWS Marketplace shares the provided data with you via an API to help enable a more seamless support experience\. 
+ You also have the option to enroll your products in AWS Marketplace PSC\. For products that are enrolled in PSC, AWS Marketplace customers can choose to provide contact information \(including name, organization, email address, and phone number\) through the AWS Marketplace website for the purposes of obtaining and accessing product support\. If you enroll in PSC, AWS Marketplace shares the provided data with you through an API to help enable a more seamless support experience\. 
 
 **Note**  
 Data products don't support this feature\.
 
 ## Technical implementation guide<a name="technical-implementation-guide"></a>
 
-This section covers API specification details and how to onboard with the product support connection feature\. The PSC `start-support-data-export` API is part of the AWS Marketplace Commerce Analytics Service \(CAS\)\. To integrate with the API for PSC, you must first enroll in CAS\. If you are already enrolled in CAS, use the same AWS Identity and Access Management \(IAM\) role that you created when you onboarded\.
+This section covers API specification details and how to onboard with the PSC feature\. The PSC `start-support-data-export` API operation is part of the AWS Marketplace Commerce Analytics Service \(CAS\)\. To integrate with the API for PSC, you must first enroll in CAS\. If you are already enrolled in CAS, use the same AWS Identity and Access Management \(IAM\) role that you created when you onboarded\.
 
 ### IAM policy for PSC<a name="allow-iam-users-permission-for-psc"></a>
 
-To allow your IAM users to access the AWS Marketplace product support connection feature, you must attach the following inline policy to your users\.
+To allow your IAM users to access the AWS Marketplace PSC feature, you must attach the following inline policy to your users\.
 
 ```
 {
@@ -32,11 +32,11 @@ To allow your IAM users to access the AWS Marketplace product support connection
 
 For more information, see [Creating Policies in the IAM console](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-json-editor) in the *IAM User Guide*\.
 
-### Making requests with the AWS Command Line Interface \(CLI\)<a name="making-requests-with-the-aws-command-line-interface-cli"></a>
+### Making requests with the AWS CLI<a name="making-requests-with-the-aws-command-line-interface-cli"></a>
 
  You can request an export of the PSC data using the [AWS CLI](https://aws.amazon.com/cli/) or any of the [AWS Software Development Kits \(SDKs\)](https://aws.amazon.com/tools/)\. 
 
- If you have already been using CAS to call the `generate-data-set` operation,you must use the same IAM role for both `generate-data-set` and `start-support-data-export`\. 
+ If you have already been using CAS to call the `generate-data-set` operation, you must use the same IAM role for both `generate-data-set` and `start-support-data-export`\. 
 
 To ensure the security of the customer contact data available through the Product Support Connection program, we recommend that the Amazon Simple Storage Service \(Amazon S3\) bucket you use for `start-support-data-export` be separate from the S3 bucket you use for `generate-data-set`\. Verify the permissions on your IAM role allow access to all S3 buckets you intend to use\. 
 
@@ -50,7 +50,7 @@ To ensure the security of the customer contact data available through the Produc
         --sns-topic-arn “{YOUR-SNS-TOPIC-ARN}”
 ```
 
- A successful response from the service returns the `dataSetRequestId`*dataSetRequestId* of the request\. 
+ A successful response from the service returns the `dataSetRequestId` of the request\. 
 
 **Example**  
 
@@ -66,11 +66,11 @@ To ensure the security of the customer contact data available through the Produc
 
 ## API request parameters and responses<a name="api-request-parameters-and-responses"></a>
 
-### StartSupportDataExport method<a name="startsupportdataexport-method"></a>
+### `StartSupportDataExport` method<a name="startsupportdataexport-method"></a>
 
- The `StartSupportDataExport` method allows you to request contact details that customers have submitted for your PSC\-enabled products\. Data is exported from the start date specified in the request up to 15 minutes prior to the time of the request\. A successful request results in the dataset being published to the Amazon S3 bucket specified\. 
+ The `StartSupportDataExport` method allows you to request contact details that customers have submitted for your PSC\-enabled products\. Data is exported from the start date specified in the request up to 15 minutes prior to the time of the request\. A successful request results in the dataset being published to the Amazon Simple Storage Service\(Amazon S3\) bucket specified\. 
 
- At this time, you can query the API to request the test\_customer\_support\_contacts\_data dataset\. This will export a static test dataset containing data that does not correspond to any real customer data\. You should use the test data for testing and integration\. The customer\_support\_contacts\_data option, which will return the real customer contact data for your PSC\-enabled products, will not be available until after the General Availability of this feature later in 2016\. 
+ At this time, you can query the API to request the `test_customer_support_contacts_data` dataset\. This will export a static test dataset containing data that does not correspond to any real customer data\. You should use the test data for testing and integration\. The `customer_support_contacts_data` option, which will return the real customer contact data for your PSC\-enabled products, will not be available until after the General Availability of this feature later in 2016\. 
 
 ### Request parameters<a name="request-parameters"></a>
 

@@ -88,7 +88,7 @@ The next step in publishing your product is to set the pricing and terms\.
 
 1.  Choose **Add offer**\. 
 
-1.  Set your **Pricing**\. You can provide your software for free, set your paid pricing, or enable a free trial period\. For more information, see [Pricing machine learning products](machine-learning-pricing.md)\. 
+1.  Set your **Pricing**\. You can provide your software for free, set your paid pricing, or enable a free trial period\. For more information, see [Machine learning product pricing](machine-learning-pricing.md)\. 
 
 1.  Upload a plaintext file to use as your End User License Agreement \(EULA\)\. 
 

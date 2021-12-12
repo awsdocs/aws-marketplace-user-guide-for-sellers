@@ -18,9 +18,9 @@ The following diagram shows the private image build flow\.
 
 ## Package group requirements<a name="package-group-requirements"></a>
 
- You can submit your package group for use on either AWS Marketplacebase Linux AMIs or AWS Marketplace base Windows Server AMIs\. 
+ You can submit your package group for use on either AWS Marketplace base Linux AMIs or AWS Marketplace base Windows Server AMIs\. 
 
- When you select the OS platform for your product, you will have the option to select multiple OSes and OS versions on which your package group will run\. Windows Server packages will not run on Linux OSes and vice versa, so if you want your product to support private images for both OS platforms, you will need to define at least two package groups\. When you define your package group, you upload the installation packages or scripts and AMMP will build and scan a test image for each OS you choose\. 
+ When you select the OS platform for your product, you will have the option to select multiple OSs and OS versions on which your package group will run\. Windows Server packages will not run on Linux OSs and vice versa, so if you want your product to support private images for both OS platforms, you will need to define at least two package groups\. When you define your package group, you upload the installation packages or scripts and AMMP will build and scan a test image for each OS you choose\. 
 
  For your package group to successfully complete the build and scan process, you must adhere to these guidelines: 
 +  The package group must have one of the packages or scripts marked as the installer\. For example, the installer may be a batch file or script that orchestrates the installation of the other packages and provides the required parameters for an unattended installation\. 
@@ -47,7 +47,7 @@ The following diagram shows the private image build flow\.
 
 1.  Under **Select supported operating system platform**, choose either **AWS Marketplace base Linux AMIs** or **AWS Marketplace base Windows AMIs**\. 
 
-1.  Under **Select supported operating systems**, choose all the OSes that your package group will support, and then choose **Submit**\. 
+1.  Under **Select supported operating systems**, choose all the OSs that your package group will support, and then choose **Submit**\. 
 
     For each package group you submit, a build process is completed for each OS version you chose\. After you submit your package group, you are redirected to the **Scan status** page, where you can check progress of the image building and scanning process for each package group\. 
 
@@ -71,7 +71,7 @@ If your status remains in the **Investigating** state for four or more business 
 
 ### OS build state<a name="os-build-state"></a>
 
- On the **Scan status** page you can choose the arrow next to the package group name to expand the entry to show each OS build that is part of the package group\. The OS build states are: 
+ On the **Scan status** page, you can choose the arrow next to the package group name to expand the entry to show each OS build that is part of the package group\. The OS build states are: 
 +  **Building** – The build of your software on the OS is in progress\. This might take up to an hour to complete for each build\. 
 +  **Scanning** – The build process completed successfully and the scan is in progress\. This might take several hours to complete\. 
 +  **Successful** – The build and scan process completed successfully\. No further action on your part\. 

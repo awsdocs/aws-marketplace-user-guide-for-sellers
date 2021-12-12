@@ -2,11 +2,11 @@
 
 One way of delivering your products to buyers is with [Amazon Machine Images \(AMIs\)](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#AmazonMachineImage)\. An AMI provides the information required to launch an Amazon Elastic Compute Cloud \(Amazon EC2\) instance\. You create a custom AMI for your product, and buyers can use it to create EC2 instances with your product already installed and ready to use\.
 
-When buyers use the AMI that you provide, they are billed for any instances that they create, following the pricing and metering options that you create for your product\. Buyers can use your product AMI in the same way that they use other AMIs in AWS, including making new custom versions of the AMI\. EC2 instances created from the AMI are still billed as your product, based on the AMI product code\.
+When buyers use the AMI that you provide, they're billed for instances that they create, following the pricing and metering options that you create for your product\. Buyers can use your product AMI in the same way that they use other AMIs in AWS, including making new custom versions of the AMI\. EC2 instances created from the AMI are still billed as your product, based on the AMI product code\.
 
 See the following resources:
 + For more information about pricing AWS Marketplace products, see [Product pricing](pricing.md)\.
-+ For more information about creating custom metering for your product, see [Metering service](metering-service.md)\.
++ For more information about creating custom metering for your product, see [AWS Marketplace Metering Service integration](metering-service.md)\.
 
 ## AMI\-based product delivery methods<a name="ami-product-delivery-methods"></a>
 

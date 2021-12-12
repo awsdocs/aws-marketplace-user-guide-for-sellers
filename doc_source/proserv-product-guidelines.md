@@ -13,6 +13,7 @@ All professional services products must adhere to the following product setup gu
 + Besides the required professional services categories, your product should also be correctly categorized by choosing other appropriate categories that fit into services offered\.
 + Your product's logo must not be designed to confuse with the AWS logo, or any logo from an unrelated third party\.
 + Your product details must not contain offensive or explicit material\. They must comply with the AWS Acceptable Use Policy available at [https://aws\.amazon\.com/aup/](https://aws.amazon.com/aup/)\.
++ Your professional service product must be related to at least one public product in AWS Marketplace\. Your product must either directly support those products, or offer services that drive subscriptions to those products\.
 
 ## Customer information requirements<a name="proserv-guidelines-customer-info"></a>
 
@@ -32,7 +33,7 @@ All professional services products must adhere to the following product usage gu
 ## Architecture guidelines<a name="proserv-guidelines-architecture"></a>
 
 All professional services products must adhere to the following architecture guidelines:
-+ Professional services products must be related to at least one public AWS Marketplace product \(up to four\) in which the product offers services for those related products directly or offers services that drive more subscribers to that AWS Marketplace product\.
++ Professional services products must be related to an AWS service or at least one public AWS Marketplace product \(up to four\) in which the product offers services for those related products directly or offers services that drive more subscribers to those related products\.
 + If the services offered require additional resources in the customer's infrastructure, follow these guidelines:
   + Provision resources in a secure way, such as by using the AWS Security Token Service or AWS Identity and Access Management \(IAM\)\.
   + Provide additional documentation including a description of all provisioned AWS services, IAM policy statements, and how an IAM role or user is deployed and used in the customer account\.

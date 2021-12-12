@@ -25,7 +25,7 @@ The S3 URL that you provide must be publicly available\. This is a property of t
 + **Highlights** – A set of one to three short points about your product, describing its key features or differentiators\. At least one highlight is required\.
 + **Product categories** – The types of service that you provide\. You must choose at least one, and up to three, categories\. There are many categories to choose from, but professional services products must include at least one of the following:  
 **Assessment**  
-Evaluation of the customer's current operating environment to find the the right solutions for their organization\.  
+Evaluation of the customer's current operating environment to find the right solutions for their organization\.  
 **Implementation**  
 Help with configuration, setup, and deployment of third\-party software\.  
 **Premium support**  
@@ -35,7 +35,7 @@ End\-to\-end environment management on the customer's behalf\.
 **Training**  
 Tailored workshops, programs, and educational tools provided by experts to help the customer employees learn best practices\.
 + **Keywords for search results** – Provide up to three keywords that buyers might use to search for your product\. You can list keywords in a comma\-separated list, up to 250 characters\.
-+ **Associated products** – Include at least one public product from AWS Marketplace that your service either works with or supports\. AWS Marketplace uses these products as input when selecting products to show on your product's details page or in **Related products** for those products\.
++ **Associated products** – *optional* – Include at least one public product from AWS Marketplace that your service either works with or supports\. AWS Marketplace uses these products as input when selecting products to show on your product's details page or in **Related products** for those products\.
 
 ## Additional resources<a name="proserv-additional-resources"></a>
 

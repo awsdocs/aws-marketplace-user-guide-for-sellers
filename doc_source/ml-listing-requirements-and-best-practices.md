@@ -33,7 +33,7 @@ Before creating a machine learning product listing, ensure that you have the fol
   +  How your model was trained or the amount of data that was used 
   +  What the performance metrics are and the validation data used 
   +  If medical, whether or not your model is for diagnostic use 
-+  Optionally, for paid products, offer a free trial of 14–30 days for customers to try your product\. For more information, see [Pricing machine learning products](machine-learning-pricing.md)\. 
++  Optionally, for paid products, offer a free trial of 14–30 days for customers to try your product\. For more information, see [Machine learning product pricing](machine-learning-pricing.md)\. 
 +  Optionally, for model package products, if you want to enable a real\-time product demo on your product listing page, contact [AWS Marketplace Seller Operations](http://aws.amazon.com/marketplace/management/contact-us/)\. The product demo allows a prospective buyer to try your model directly on the listing page without subscribing to or deploying the model themselves\. 
 
 ## Requirements for usage information<a name="ml-requirements-for-usage-information"></a>

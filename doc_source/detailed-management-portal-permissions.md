@@ -43,6 +43,15 @@ Allows access to the [File Upload](https://aws.amazon.com/marketplace/management
 **`aws-marketplace-management:viewSettings`**  
 Allows access to the [Settings](https://aws.amazon.com/marketplace/management/seller-settings/account) page in the AWS Marketplace Management Portal\. 
 
+**`aws-marketplace:ListEntities`**  
+Allows access to list objects in AWS Marketplace Management Portal\. Required to access the [Offers](https://aws.amazon.com/marketplace/management/offers) and [Partners](https://aws.amazon.com/marketplace/management/partners) pages in the AWS Marketplace Management Portal\. 
+
+**`aws-marketplace:DescribeEntity`**  
+Allows access to see details of objects in AWS Marketplace Management Portal\. Required to access the [Offers](https://aws.amazon.com/marketplace/management/offers), [Partners](https://aws.amazon.com/marketplace/management/partners), and [Agreements](https://aws.amazon.com/marketplace/management/agreements) pages in the AWS Marketplace Management Portal\. 
+
+**`aws-marketplace:StartChangeSet`**  
+Allows access to create product changes in AWS Marketplace Management Portal\. Required to make changes in the [Offers](https://aws.amazon.com/marketplace/management/offers), [Partners](https://aws.amazon.com/marketplace/management/partners), and [**Agreements**](private-offers-upgrades-and-renewals.md) pages in the AWS Marketplace Management Portal\. 
+
 **`aws-marketplace:SearchAgreements`**  
 Allows viewing the high\-level list of agreements on the [**Agreements**](private-offers-upgrades-and-renewals.md) page, as well as opportunities between ISVs and consulting partners on the [**Partners**](consulting-partner-offers.md) page\.
 
@@ -87,7 +96,9 @@ To grant permissions to view and use the **Agreements** page to create upgrades 
             "Action": [
                 "aws-marketplace:SearchAgreements",
                 "aws-marketplace:DescribeAgreement",
-                "aws-marketplace:GetAgreementTerms"
+                "aws-marketplace:GetAgreementTerms",
+                "aws-marketplace:DescribeEntity",
+                "aws-marketplace:StartChangeSet"
             ],
             "Effect": "Allow",
             "Resource": "*",
@@ -101,6 +112,27 @@ To grant permissions to view and use the **Agreements** page to create upgrades 
                     ]
                 }
             }
+        }
+    ]
+}
+```
+
+### Example 3: Permissions to access the Offers page and create new private offers<a name="seller-ammp-permissions-example3"></a>
+
+To grant permissions to view and use the **Offers** page to view existing and create new private offers, use a policy similar to the following example\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "aws-marketplace:ListEntities",
+                "aws-marketplace:DescribeEntity",
+                "aws-marketplace:StartChangeSet"
+            ],
+            "Effect": "Allow",
+            "Resource": "*",
         }
     ]
 }
