@@ -60,16 +60,18 @@ linux-machine ~]$ aws license-manager checkout-license\
 
 ```
 {
-  "ProductSku": "2205b290-19e6-4c76-9eea-377d6bf7la47",
-  "Fingerprint": "aws:294406891311:AWS/Marketplace:issuer-fingerprint", "CheckoutType": "PERPETUAL",
+  "CheckoutType": "PERPETUAL",
   "EntitlementsAllowed": [
     {      
-      "Name": "DataConsumption", "Count": 10,
-      "Units": "Count"
+      "Name": "DataConsumption", 
+      "Count": 10,
+      "Units": "Count",
+      "Value": "Enabled"
     }
 },
   "Expiration":    "2021-04-22Tl9:02: 36",
   "IssuedAt": "2021-04-22Tl8:02:36",
+  "LicenseArn": "arn:aws:license-manager::294406891311:license:l-16bf01b...",
   "LicenseConsumptionToken":  "AKIAIOSFODNN7EXAMPLE"
 }
 ```
@@ -104,16 +106,18 @@ linux-machine ~]$ aws license-manager checkout-license\
 
 ```
 {
-  "ProductSku": "2205b290-19e6-4c76-9eea-377d6bf7la47",
-  "Fingerprint": "aws:294406891311:AWS/Marketplace:issuer-fingerprint", "CheckoutType": "PROVISIONAL",
+  "CheckoutType": "PROVISIONAL",
   "EntitlementsAllowed": [
     {
-      "Name": "ReadOnlyUsers", "Count": 10,
-      "Units": "Count"
+      "Name": "ReadOnlyUsers", 
+      "Count": 10,
+      "Units": "Count",
+      "Value": "Enabled"
     }
 },
   "Expiration": "2021-04-22Tl9:02: 36",
   "IssuedAt": "2021-04-22Tl8:02:36",
+  "LicenseArn": "arn:aws:license-manager::294406891311:license:l-16bf01b...",
   "LicenseConsumptionToken": "AKIAIOSFODNN7EXAMPLE"
 }
 ```
@@ -148,15 +152,16 @@ linux-machine  ~]$ aws  license-manager   checkout-license\
 
 ```
 {
-  "ProductSku": "2205b290-19e6-4c76-9eea-377d6bf7la47",
-  "Fingerprint": "aws:294406891311:AWS/Marketplace:issuer-fingerprint", "CheckoutType": "PROVISIONAL",
+  "CheckoutType": "PROVISIONAL",
   "EntitlementsAllowed": [
     {
-      "Name": "IntermediateTier", "Units": "None"
+      "Name": "IntermediateTier", 
+      "Units": "None"
     }
 },
   "Expiration": "2021-04-22Tl9:02:36",
-  "IssuedAt": "2021-04-22Tl8:02:36",  
+  "IssuedAt": "2021-04-22Tl8:02:36",
+  "LicenseArn": "arn:aws:license-manager::294406891311:license:l-16bf01b...",
   "LicenseConsumptionToken": "AKIAIOSFODNN7EXAMPLE"
 }
 ```

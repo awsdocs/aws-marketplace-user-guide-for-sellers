@@ -13,7 +13,7 @@ All professional services products must adhere to the following product setup gu
 + Besides the required professional services categories, your product should also be correctly categorized by choosing other appropriate categories that fit into services offered\.
 + Your product's logo must not be designed to confuse with the AWS logo, or any logo from an unrelated third party\.
 + Your product details must not contain offensive or explicit material\. They must comply with the AWS Acceptable Use Policy available at [https://aws\.amazon\.com/aup/](https://aws.amazon.com/aup/)\.
-+ Your professional service product must be related to at least one public product in AWS Marketplace\. Your product must either directly support those products, or offer services that drive subscriptions to those products\.
++ Your professional service product must directly support or offer services related to third\-party software products listed on AWS Marketplace or help customers achieve specific outcomes related to the adoption or management of their AWS Cloud\.
 
 ## Customer information requirements<a name="proserv-guidelines-customer-info"></a>
 

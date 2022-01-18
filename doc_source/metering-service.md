@@ -49,7 +49,7 @@ Next, you must decide how to price the selected usage category:
 + Single price 
 + Multiple dimensions \(up to 24\) 
 
-[Adding your product to AWS Marketplace ](#listing-your-product-on-aws-marketplace) describes how to provide a customer\-friendly description of your dimension and pricing\. 
+[Adding your product to AWS Marketplace](#listing-your-product-on-aws-marketplace) describes how to provide a customer\-friendly description of your dimension and pricing\. 
 
 ### Example: Provisioned bandwidth with nonlinear pricing<a name="example-provisioned-bandwidth-with-non-linear-pricing"></a>
 

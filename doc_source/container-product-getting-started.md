@@ -356,7 +356,7 @@ When you initially create your product, its availability is limited to just your
 **Note**  
 Before publishing publicly, you should review your product to ensure accuracy, including image links, deployment templates, descriptions, and pricing\. Your pricing model can't be changed for publicly published products\.
 
-To publish your limited product to additional accounts or for public availability, contact the [ AWS Marketplace Seller Operations team](https://aws.amazon.com/marketplace/management/contact-us/)\. In your request, provide the product ID and describe the changes that you want to make\.
+To publish your limited product to additional accounts or for public availability, contact the [AWS Marketplace Seller Operations team](https://aws.amazon.com/marketplace/management/contact-us/)\. In your request, provide the product ID and describe the changes that you want to make\.
 
 **Note**  
 You can also choose to restrict a version that you no longer want available to buyers\. You can include this in a request to publish a product publicly, to avoid test versions appearing in public products\.  

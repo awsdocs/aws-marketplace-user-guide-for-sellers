@@ -6,12 +6,6 @@ To set your pricing, choose one or more contract durations that you offer custom
 
 Choose the category that best describes your product’s pricing\. The pricing category appears to customers on the AWS Marketplace website\. You can choose from **Bandwidth** \(GB/s, MB/s\), **Data** \(GB, MB, TB\), **Hosts**, **Requests**, **Tiers**, or **Users**\. If none of the predefined categories fit your needs, you can choose the more generic **Units** category\. 
 
-For **Contracts Dimension Allow Multiple Purchases**, choose from the following options: 
-+  **True** – Configurable pricing
-+  **False** – Feature\-based pricing
-
-For each pricing dimension that you add to your contract, you can choose to let customers pay as they go for additional usage of that dimension above their contract\. You can also add additional dimensions without contract prices that customers only consume by paying as they go\.
-
 The offer allows for up to 24 dimensions to be added to it\. Each dimension requires the following data:
 + **Contracts Category** – The contract category is used to measure or meter your product if the product supports consumption\-based metering on top of contract pricing\. For contract products with no consumption\-based pricing, you can choose a category which most closely resembles the category of dimension in the contract or choose **Units** if no values resemble the units for the dimension in the contract
 + **Contracts Unit** – The Contract Unit is used along with the Contracts Category for metering if the product supports consumption\-based metering\. Choose one of the available values for the units that closely matches your dimensions based on the Category selected\.
@@ -24,8 +18,8 @@ The offer allows for up to 24 dimensions to be added to it\. Each dimension requ
   Setting a value of *true* for this field indicates that the offer is a non\-tiered offer\. Setting a value of *false* for this field indicates that the offer is a tiered offer\.
 
 When using the Product Load Form \(PLF\) to create the contracts for your AMI product, you must define the following fields for your pricing dimensions:
-+  **Contracts DimensionX API Name** – The name that should appear in the license generated in the buyer’s AWS License Manager account\.
-+  **Contracts DimensionX Display Name** – The customer\-facing name of the dimension that will be displayed on the product detail and procurement pages of the AWS Marketplace website\. This name is also used as the value for `Name` in `Entitlement` in the `CheckoutLicense` API call\. Create a name that is be user\-friendly\. The name's maximum length is 24 characters\. After the listing is public, the value of `Name`can't be changed\.
++  **Contracts DimensionX API Name** – The name that should appear in the license generated in the buyer’s AWS License Manager account\. This name is also used as the value for `Name` in `Entitlement` in the `Checkoutlicense` API call\.
++  **Contracts DimensionX Display Name** – The customer\-facing name of the dimension that will be displayed on the product detail and procurement pages of the AWS Marketplace website\. Create a name that is be user\-friendly\. The name's maximum length is 24 characters\. After the listing is public, the value of `Name`can't be changed\.
 +  **Contracts DimensionX Description** – The customer\-facing description of a dimension that provides additional information about the dimension for the product, such as the capabilities that the specific dimension provides\. The maximum length for the description is 70 characters\.
 +  **Contracts DimensionX Quantity** – This is used to calculate proration in cases of agreement amendments to a product\. This value of this field should be set to 1 for all contract offers\. It should not be edited\. 
 +  **Contracts DimensionX **1\-Month Rate**** – The contract rate to be charged for onemonth of entitlements against this dimension\. For non\-tiered offers, this rate is charged for each unit of the dimension that is procured\. This ﬁeld supports three decimal places\.

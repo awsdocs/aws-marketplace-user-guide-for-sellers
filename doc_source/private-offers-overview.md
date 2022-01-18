@@ -40,6 +40,7 @@ When working with private offers, keep the following in mind:
 +  You can't create private offers for second party, Amazon Machine Image \(AMI\) monthly, or multi\-AMI\-based delivery using AWS CloudFormation products, or for limiting customer usage\. 
 + For private offers with the flexible payment scheduler, it is possible to break upfront payments into multiple payments over time if buyers are on invoicing terms with AWS\.
 + If the buyer account for your private offer is managed through a private marketplace, you must include both the buyer's account and the account that includes their private marketplace administrator in the offer\.
++ Private offers don't support the Bring Your Own License model \(BYOL\) or BYOL product types\.
 
 ## Supported product types<a name="supported-products-private-offers"></a>
 

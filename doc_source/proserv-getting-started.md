@@ -16,7 +16,7 @@
 To sell professional services on AWS Marketplace, you must complete the following prerequisites:
 + Have access to the AWS Marketplace Management Portal\. This is the tool that you use to register as a seller and manage the products that you sell on AWS Marketplace\. To learn more about getting access to the AWS Marketplace Management Portal, see [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md)\.
 + Register as an AWS Marketplace seller, and, if you want to charge for your products, submit your tax and banking information\. To learn more about becoming an seller, see [Getting started as a seller](user-guide-for-sellers.md)\.
-+ You must have a professional services product to offer that is related to an AWS services or at least one public product in AWS Marketplace\. Your product must either directly support those products, or offer services that drive subscriptions to those products\.
++ You must have a professional services product to offer that is related to an AWS service or at least one public product in AWS Marketplace\. Your product must either directly support those products, or offer services that drive subscriptions to those products\.
 
 **Note**  
 Your product must be listed in at least one of these primary categories: Assessments, Implementation, Managed services, Premium support, or Training\.   
@@ -115,7 +115,7 @@ The following procedure describes how to edit the pricing information for an exi
 
 1. Select an existing product that you would like to edit, then from the **Request changes** menu, select **Update pricing dimensions**\.
 **Note**  
-You can only add new pricing dimensions through the AWS Marketplace Management Portal\. To modify or remove previously created dimensions, contact the [ AWS Marketplace Seller Operations team](https://aws.amazon.com/marketplace/management/contact-us/) with your request\. In your request, include the product ID and details about what dimensions you want to change or remove\.
+You can only add new pricing dimensions through the AWS Marketplace Management Portal\. To modify or remove previously created dimensions, contact the [AWS Marketplace Seller Operations team](https://aws.amazon.com/marketplace/management/contact-us/) with your request\. In your request, include the product ID and details about what dimensions you want to change or remove\.
 
 1. Add any new pricing dimensions that you want\. For more information about the pricing fields, see [Providing details for a professional services product](proserv-product-details.md)\.
 

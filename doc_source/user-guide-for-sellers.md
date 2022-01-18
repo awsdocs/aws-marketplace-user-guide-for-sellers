@@ -22,6 +22,11 @@ If you charge for your products or offer Bring Your Own License model \(BYOL\) p
 +  You must provide tax and bank account information\. For US\-based entities, a W\-9 form and a banking account from a US\-based bank are required\. 
 + Non\-US sellers are required to provide a \(i\) W\-8 form, value\-added tax \(VAT\) or goods and services tax \(GST\) registration number, and \(ii\) US bank information\. If you don't have a US bank account, you can register for a virtual US bank account from [Hyperwallet](https://wssellers.hyperwallet.com/)\. 
 + To provide data products, you must also request on\-boarding through the [Create case](https://console.aws.amazon.com/support/cases?#/create?issueType=customer-service) wizard for AWS Support\.
++ To sell products to customers whose AWS accounts are based in countries and territories in Europe, the Middle East, and Africa \(EMEA\) \(excluding Turkey and South Africa\) through Amazon Web Services EMEA SARL:
+  + You must [complete the **Know Your Customer** process](seller-registration-process.md#completing-the-know-your-customer-process)\.
+  + You receive up to two disbursements \(for transactions through AWS Inc\. and Amazon Web Services EMEA SARL\)\.
+  + You may be taxed on the listing fee for certain transactions, depending on location\. For more information about taxes, see the [AWS Marketplace Sellers Tax](https://aws.amazon.com/tax-help/marketplace/) help page\. If value\-added tax \(VAT\) on your listing fee is assessed, AWS Marketplace will provide a tax\-compliant invoice\.
+  + For more information about Amazon Web Services EMEA SARL, see AWS EMEA Marketplace \- Sellers on the [Amazon Web Services Euorpe FAQs](https://aws.amazon.com/legal/aws-emea/) website\.
 
  To sell into the AWS GovCloud \(US\) Region, sellers must have an [AWS GovCloud \(US\) account](https://aws.amazon.com/govcloud-us/getting-started/)\. For details on ITAR requirements, see the *[AWS GovCloud \(US\) User Guide](https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/getting-started-sign-up.html)*\. 
 

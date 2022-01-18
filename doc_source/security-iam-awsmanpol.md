@@ -410,5 +410,5 @@ View details about updates to AWS managed policies for AWS Marketplace since thi
 | Change | Description | Date | 
 | --- | --- | --- | 
 |   [AWSMarketplaceSellerFullAccess](#security-iam-awsmanpol-awsmarketplacesellerfullaccess) and [AWSMarketplaceSellerProductsFullAccess](#security-iam-awsmanpol-awsmarketplacesellerproductsfullaccess) – Update to existing policies   | AWS Marketplace updated the policies so that the iam:PassedToService condition is only applied to iam:PassRole\. | November 22, 2021 | 
-|   [ AWSMarketplaceFullAccess](#security-iam-awsmanpol-awsmarketplacefullaccess) – Update to an existing policy   |   AWS Marketplace removed a duplicate `ec2:DescribeAccountAttributes` permission from `AWSMarketplaceFullAccess` policy\.   | July 20, 2021 | 
+|   [AWSMarketplaceFullAccess](#security-iam-awsmanpol-awsmarketplacefullaccess) – Update to an existing policy   |   AWS Marketplace removed a duplicate `ec2:DescribeAccountAttributes` permission from `AWSMarketplaceFullAccess` policy\.   | July 20, 2021 | 
 |  AWS Marketplace started tracking changes  |  AWS Marketplace started tracking changes for its AWS managed policies\.  | April 20, 2021 | 

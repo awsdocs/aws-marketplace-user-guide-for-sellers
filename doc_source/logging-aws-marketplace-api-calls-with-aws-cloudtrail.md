@@ -11,14 +11,14 @@
 
 AWS Marketplace supports logging the `BatchMeterUsage` operation as events in CloudTrail log ﬁles\.
 
-## Example: AWS Marketplace Log File Entries<a name="example-aws-marketplace-log-file-entries"></a>
+## AWS Marketplace log file entry examples<a name="example-aws-marketplace-log-file-entries"></a>
+
+### Example: BatchMeterUsage<a name="example-aws-marketplace-log-file-entries-batchmeterusage"></a>
 
 The following example shows a CloudTrail log entry that demonstrates the `BatchMeterUsage` action from the AWS Marketplace Metering Service\. 
 
 ```
-    {
-"Records": [
-        {
+{
             "eventVersion": "1.05",
             "userIdentity": { 
                 "type": "IAMUser",
@@ -68,6 +68,162 @@ The following example shows a CloudTrail log entry that demonstrates the `BatchM
        }
     ]
   }
+```
+
+### Example: RegisterUsage for containers<a name="example-aws-marketplace-log-file-entries-registerusage-containers"></a>
+
+The following example shows a CloudTrail log entry that demonstrates the `RegisterUsage` action from the AWS Marketplace Metering Service\. 
+
+```
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "EX_PRINCIPAL_ID:botocore-session-1111111111",
+        "arn": "arn:aws:sts::123456789012:assumed-role/Alice/botocore-session-1111111111",
+        "accountId": "123456789012",
+        "accessKeyId": "EXAMPLE_KEY_ID",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "EX_PRINCIPAL_ID",
+                "arn": "arn:aws:iam::123456789012:role/Alice",
+                "accountId": "123456789012",
+                "userName": "Alice"
+            },
+            "webIdFederationData": {
+                "federatedProvider": "arn:aws:iam::123456789012:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/EXAMPLEFA1C58F08CDB049167EXAMPLE",
+                "attributes": {}
+            },
+            "attributes": {
+                "mfaAuthenticated": "false",
+                "creationDate": "2020-07-23T02:19:34Z"
+            }
+        }
+    },
+    "eventTime": "2020-07-23T02:19:46Z",
+    "eventSource": "metering-marketplace.amazonaws.com",
+    "eventName": "RegisterUsage",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "1.2.3.4",
+    "userAgent": "aws-cli/1.18.103 Python/3.8.2 Linux/4.14.181-142.260.amzn2.x86_64 botocore/1.17.26",
+    "requestParameters": {
+        "productCode": "EXAMPLE_proCode",
+        "publicKeyVersion": 1
+    },
+    "responseElements": {
+        "signature": "eyJhbGciOiJQUzI1Ni..."
+    },
+    "requestID": "dEXAMPLE-251d-11e7-8d11-1f3EXAMPLE8b",
+    "eventID": "cEXAMPLE-e6c2-465d-b47f-150EXAMPLE97",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "123456789012"
+}
+```
+
+### Example: MeterUsage for containers on Amazon EKS<a name="example-aws-marketplace-log-file-entries-meterusage"></a>
+
+The following example shows a CloudTrail log entry that demonstrates the `MeterUsage` action from the AWS Marketplace Metering Service for containers on Amazon EKS\. 
+
+```
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "EX_PRINCIPAL_ID:botocore-session-1111111111",
+        "arn": "arn:aws:sts::123456789012:assumed-role/Alice/botocore-session-1111111111",
+        "accountId": "123456789012",
+        "accessKeyId": "EXAMPLE_KEY_ID",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "EX_PRINCIPAL_ID",
+                "arn": "arn:aws:iam::123456789012:role/Alice",
+                "accountId": "123456789012",
+                "userName": "Alice"
+            },
+            "webIdFederationData": {
+                "federatedProvider": "arn:aws:iam::123456789012:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/EXAMPLEFA1C58F08CDB049167EXAMPLE",
+                "attributes": {}
+            },
+            "attributes": {
+                "mfaAuthenticated": "false",
+                "creationDate": "2020-07-23T01:03:26Z"
+            }
+        }
+    },
+    "eventTime": "2020-07-23T01:38:13Z",
+    "eventSource": "metering-marketplace.amazonaws.com",
+    "eventName": "MeterUsage",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "1.2.3.4",
+    "userAgent": "aws-cli/1.18.103 Python/3.8.2 Linux/4.14.181-142.260.amzn2.x86_64 botocore/1.17.26",
+    "requestParameters": {
+        "timestamp": "Jul 23, 2020 1:35:44 AM",
+        "usageQuantity": 1,
+        "usageDimension": "Dimension1",
+        "productCode": "EXAMPLE_proCode"
+    },
+    "responseElements": {
+        "meteringRecordId": "bEXAMPLE-98f0-4e90-8bd2-bf0EXAMPLE1e"
+    },
+    "requestID": "dEXAMPLE-251d-11e7-8d11-1f3EXAMPLE8b",
+    "eventID": "cEXAMPLE-e6c2-465d-b47f-150EXAMPLE97",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "123456789012"
+}
+```
+
+### Example: MeterUsage on AMIs<a name="example-aws-marketplace-log-file-entries-meterusage-amis"></a>
+
+The following example shows a CloudTrail log entry that demonstrates the `MeterUsage` action from the AWS Marketplace Metering Service for AMIs\. 
+
+```
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "EX_PRINCIPAL_ID:i-exampled859aa775c",
+        "arn": "arn:aws:sts::123456789012:assumed-role/Alice/i-exampled859aa775c",
+        "accountId": "123456789012",
+        "accessKeyId": "EXAMPLE_KEY_ID",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "EX_PRINCIPAL_ID",
+                "arn": "arn:aws:iam::123456789012:role/Alice",
+                "accountId": "123456789012",
+                "userName": "Alice"
+            },
+            "webIdFederationData": {},
+            "attributes": {
+                "mfaAuthenticated": "false",
+                "creationDate": "2020-07-10T23:05:20Z"
+            },
+            "ec2RoleDelivery": "1.0"
+        }
+    },
+    "eventTime": "2020-07-10T23:06:42Z",
+    "eventSource": "metering-marketplace.amazonaws.com",
+    "eventName": "MeterUsage",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "1.2.3.4",
+    "userAgent": "aws-cli/1.16.102 Python/2.7.16 Linux/4.14.133-113.112.amzn2.x86_64 botocore/1.12.92",
+    "requestParameters": {
+        "productCode": "EXAMPLE_proCode",
+        "timestamp": "Jul 10, 2020 11:06:41 PM",
+        "usageDimension": "Dimension1",
+        "usageQuantity": 1,
+        "dryRun": false
+    },
+    "responseElements": {
+        "meteringRecordId": "bEXAMPLE-98f0-4e90-8bd2-bf0EXAMPLE1e"
+    },
+    "requestID": "dEXAMPLE-251d-11e7-8d11-1f3EXAMPLE8b",
+    "eventID": "cEXAMPLE-e6c2-465d-b47f-150EXAMPLE97",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "123456789012"
+}
 ```
 
 ## Related Topics<a name="saas-ct-related-topics"></a>

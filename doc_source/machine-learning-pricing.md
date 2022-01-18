@@ -65,7 +65,7 @@ The set of terms and agreement between you and the buyer in private offers can d
 
 You can create and extend multiple private offers to a single buyer\. Buyers that you extend the private offers to have the option to choose between the private offers and the public offer\. Buyers can only be subscribed to one offer at any given time\. They can't be subscribed to both a private offer and the public offer at the same time\.
 
-To create a private offer for a specific buyer for SageMaker products, contact [ AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/)\.
+To create a private offer for a specific buyer for SageMaker products, contact [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/)\.
 
 **Note**  
 For more details about limitations of private offers, see [Notes about private offers](private-offers-overview.md#private-offer-limitations)\.

@@ -21,8 +21,8 @@
 ## Permissions required<a name="ml-permissions-required"></a>
 
  To publish an Amazon SageMaker product, the AWS Identity and Access Management \(IAM\) user or role you are logged in as requires one or both of the following IAM actions:
-+  **sagemaker:DescribeModelPackage** — for listing a model package 
-+  **sagemaker:DescribeAlgorithm** — for listing an algorithm 
++  **sagemaker:DescribeModelPackage** – For listing a model package 
++  **sagemaker:DescribeAlgorithm** – For listing an algorithm 
 
  For the AWS Marketplace permissions needed, or for managing your seller account, see [Policies and permissions for AWS Marketplace sellers](https://docs.aws.amazon.com/marketplace/latest/userguide/detailed-management-portal-permissions.html)\. 
 
@@ -45,7 +45,15 @@ After you have created your listing, you must provide general product informatio
 
 **Step 1: To provide general product information**
 
-1. Choose **Add** for **Product descriptions**\. Enter the details, including the title, short description, product overview, and other details\. For product descriptions, see [Requirements and best practices for creating machine learning products](ml-listing-requirements-and-best-practices.md)\. Choose **Continue** when complete\. You can change these values later\. 
+1. Choose **Add** for **Product descriptions**\. 
+
+   1. For the **Product visibility** section, choose one of the following options:
+      + **Public** – The product will initially be available to a limited set of AWS accounts for testing\. After you sign off and publish it, the product will be publicly discoverable and available for subscription by all customers\. 
+      + **Private** – The product will only be visible to the AWS accounts that you specify\. You will not be able to make this product public in the future\.
+
+   1. Enter **Product title**, **Short product description**, **Product overview**,** Product category 1**, and other details\. For product descriptions, see [Requirements and best practices for creating machine learning products](ml-listing-requirements-and-best-practices.md)\. 
+
+   1. Choose **Continue** when complete\. You can change these values later\. 
 
 1. Continue to **Promotional Resources**, and provide a product logo and relevant links\. Choose **Continue** when complete\. You can change these values later\. 
 

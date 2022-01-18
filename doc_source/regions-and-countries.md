@@ -10,7 +10,7 @@ When you create a product in AWS Marketplace, you choose the AWS Regions where i
 
  For machine learning products, you can either select specific Regions, or all Regions including future Regions as they become available\.
 
- For more information about AWS Regions, see [ AWS service endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the AWS General Reference\.
+ For more information about AWS Regions, see [AWS service endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the AWS General Reference\.
 
 ## Countries<a name="product-countries"></a>
 

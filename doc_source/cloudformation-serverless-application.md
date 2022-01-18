@@ -84,6 +84,8 @@ To publish an application, you first upload the application code\. Store your co
 1. Choose **Bucket Policy**\.
 
 1. Copy and paste the following example policy statement\. 
+**Note**  
+The example policy statement will produce an error until values for `aws:SourceAccount` and `Resource` are updated in following steps\.
 
    ```
    {

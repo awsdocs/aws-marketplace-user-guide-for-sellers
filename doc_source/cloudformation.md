@@ -23,7 +23,20 @@ To build your AWS CloudFormation templates, you must meet the template prerequis
 ### Template prerequisites<a name="template-prerequisites"></a>
 + Verify that the template is launched successfully through the AWS CloudFormation console **in all Regions enabled for your product**\. You can use this tool to test your templates: [https://github\.com/aws\-quickstart/taskcat](https://github.com/aws-quickstart/taskcat)\.
 + If you are creating a single\-AMI product, the template must contain only one AMI\.
-+ AMIs must be in a [mapping table](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/mappings-section-structure.html) for each Region\. The AWS Marketplace team updates the AMI IDs after they're cloned\.
++ AMIs must be in a [mapping table](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/mappings-section-structure.html) for each Region\. The AWS Marketplace team updates the AMI IDs after they're cloned\. Your source AMI must be in `us-east-1` and the other regions can use placeholders\. See the following YAML example\.
+
+  ```
+  Mappings: 
+    RegionMap: 
+        us-east-1: 
+            ImageId: ami-0123456789abcdef0
+        us-west-1: 
+            ImageId: ami-xxxxxxxxxxxxxxxxx
+        eu-west-1: 
+            ImageId: ami-xxxxxxxxxxxxxxxxx
+        ap-southeast-1: 
+            ImageId: ami-xxxxxxxxxxxxxxxxx
+  ```
 + Build templates so that they do not depend on the use in a particular availability zone \(AZ\)\. Not all customers have access to all AZs, and AZs are mapped differently for different accounts\.
 + You can include dependencies such as Lambda functions, config files, and scripts with your AMI\. For more information, see [Create a serverless application](cloudformation-serverless-application.md#cloudformation-serverless-application-procedure-step-1)\.
 + If you're building a clustered solution using an Auto Scaling group, we recommend that you account for a scaling event\. The new node should join the running cluster automatically\.
