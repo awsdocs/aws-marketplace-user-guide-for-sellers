@@ -26,7 +26,7 @@ For batch transform, the maximum size of the input data per invocation is 100 MB
 
 ## Processing time for inference<a name="ml-processing-time-for-inference"></a>
 
-For an endpoint, the processing time per invocation is 60 seconds\. If your software requires longer processing times, your buyers can request a change to this value\. To increase this value to 120 seconds, which is the maximum value, your buyers can contact [AWS Support](https://console.aws.amazon.com/support/home)\. The buyer must provide your AWS account ID and the AWS Region where they request the increase\. If an increase request by buyers is necessary, make this clear in the usage information of your product listing\. If your software requires even longer processing times, your buyers can deploy endpoints configured for [Amazon SageMaker Asynchronous Inference](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html)\. If Asynchronous Inference is needed, provide detailed usage information so that your buyers configure the endpoint properly\.
+For an endpoint, the maximum processing time per invocation is 60 seconds\. If your software requires longer processing times, your buyers can deploy endpoints configured for [Amazon SageMaker Asynchronous Inference](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html)\. If Asynchronous Inference is needed, provide detailed usage information so that your buyers configure the endpoint properly\.
 
 For batch transform, the maximum processing time per invocation is 60 minutes\. This value can't be adjusted\. 
 

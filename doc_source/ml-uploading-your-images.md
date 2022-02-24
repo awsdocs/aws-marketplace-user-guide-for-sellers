@@ -9,8 +9,8 @@
 ## What IAM permissions are required?<a name="ml-what-iam-permissions-are-required"></a>
 
  The following steps assume that the local machine has the correct AWS credentials for an AWS Identity and Access Management \(IAM\) role or user in the seller AWS account\. The role or user must have the correct policies in place for both AWS Marketplace and Amazon ECR\. For example, you could use the following AWS managed policies: 
-+  **AWSMarketplaceSellerProductsFullAccess** — For access to AWS Marketplace 
-+  **AmazonEC2ContainerRegistryFullAccess** — For access to Amazon ECR 
++  AWSMarketplaceSellerProductsFullAccess – For access to AWS Marketplace 
++  AmazonEC2ContainerRegistryFullAccess – For access to Amazon ECR 
 
 ## Log your Docker client into AWS<a name="ml-log-in-your-docker-client"></a>
 
@@ -26,7 +26,7 @@ region=us-east-2
 account=$(aws sts get-caller-identity --query Account --output text)
 ```
 
- To authenticate your Docker CLI client with your AWS account’s Amazon ECR Docker registry for your Region, run the following command\.
+ To authenticate your Docker CLI client with your AWS account Amazon ECR Docker registry for your Region, run the following command\.
 
 ```
 aws ecr get-login-password \
@@ -59,7 +59,7 @@ aws ecr --region ${region} create-repository --repository-name "${repo}"
 
  To push the image to the repository, you must tag it with the full name of the repository location\. 
 
- Set a variable for the full name of the image repository location along with the **latest** tag\. 
+ Set a variable for the full name of the image repository location along with the `latest` tag\. 
 
 ```
 fullname="${account}.dkr.ecr.${region}.amazonaws.com/${repo}:latest"
@@ -81,7 +81,7 @@ sudo docker push ${fullname}
 
 ## Scan your uploaded image<a name="ml-scan-your-uploaded-image"></a>
 
- In the [Amazon ECR console](https://console.aws.amazon.com/ecr/repositories?region=us-east-2), choose the AWS Region that you are publishing from, and open the repository that the image was uploaded to\. Select your uploaded image and start a scan to check for known vulnerabilities\. AWS Marketplace checks the Amazon ECR scan results of the container images used in your Amazon SageMaker resource before publishing it\. Before you can create your product, you must fix container images that have vulnerabilities with either a “Critical” or “High” severity\. 
+ In the [Amazon ECR console](https://console.aws.amazon.com/ecr/repositories?region=us-east-2), choose the AWS Region that you are publishing from, and open the repository that the image was uploaded to\. Select your uploaded image and start a scan to check for known vulnerabilities\. AWS Marketplace checks the Amazon ECR scan results of the container images used in your Amazon SageMaker resource before publishing it\. Before you can create your product, you must fix container images that have vulnerabilities with either a Critical or High severity\. 
 
  After your images are scanned successfully, they can be used to create a model package or algorithm resource\. 
 

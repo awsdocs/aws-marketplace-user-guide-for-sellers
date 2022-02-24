@@ -34,7 +34,8 @@ The following table explains the names and descriptions of the data feed's colum
 | invoice\_id | The AWS invoice ID\. | 
 | billing\_address\_id | The payer's billing address reference in the address data feed\.Can be used to join to the `Address` data feed on the `address_id` field\. | 
 | transaction\_reference\_id |  An identifier that allows you to cross\-reference data from the following reports: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
-| bank\_trace\_id | For disbursement transactions \(transaction\_type = 'DISBURSEMENT' and action = 'DISBURSED'\), the trace ID assigned by the bank\. The trace ID can be used to correlate with bank\-provided reports from the seller bank\. | 
+| bank\_trace\_id | For disbursement transactions \(transaction\_type = DISBURSEMENT and action = DISBURSED\), the trace ID assigned by the bank\. The trace ID can be used to correlate with bank\-provided reports from the seller bank\. | 
+| broker\_id |  An identifier of the business entity which facilitated the transaction\. Possible values are as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
 
 ## Taxing scenarios<a name="data-feeds-billing-event-tax-examples"></a>
 
@@ -151,7 +152,7 @@ As described in [Using data feeds](data-feed.md#data-feed-using), you can use [ 
 
 ## Example 1: Amount invoiced, including taxes<a name="data-feed-example-query-tax-invoice"></a>
 
-To find out how much buyers were invoiced, including taxes, you can run a query like the following: 
+To find out how much buyers were invoiced, including taxes, you can run a query as shown in the following example\. 
 
 ```
 SELECT sum(amount) FROM billing_event 
@@ -169,7 +170,7 @@ WHERE
 
 ## Example 2: Amount invoiced to buyers on seller's behalf<a name="data-feed-example-query-invoice-for-seller"></a>
 
-To find out how much buyers were invoiced on a seller's behalf, you can run a query like the following:
+To find out how much buyers were invoiced on a seller's behalf, you can run a query as shown in the following example\.
 
 ```
 SELECT sum(amount) FROM billing_event 
@@ -182,7 +183,7 @@ WHERE
 
 ## Example 3: Amount AWS can collect on seller's behalf<a name="data-feed-example-query-aws-collect"></a>
 
-To find out how much AWS can collect on a seller's behalf, minus any refunds, credits, and forgiven accounts, you can run a query like the following:
+To find out how much AWS can collect on a seller's behalf, minus any refunds, credits, and forgiven accounts, you can run a query as shown in the following example\.
 
 ```
 SELECT sum(amount) FROM billing_event 
@@ -196,7 +197,7 @@ WHERE
 
 ## Example 4: Amount seller can collect<a name="data-feed-example-query-seller-collect"></a>
 
-To find out how much sellers can collect, you can run a query like the following\. This example removes listing fees and taxes that AWS collects, and adds any exceptional balance adjustments\. 
+To find out how much sellers can collect, you can run a query as shown in the following example\. This example removes listing fees and taxes that AWS collects, and adds any exceptional balance adjustments\. 
 
 ```
 SELECT sum(amount) FROM billing_event
@@ -209,7 +210,7 @@ WHERE
 ;
 ```
 
-You can also use the following query to collect the same information:
+You can also use the following query to collect the same information, as shown in the following example\.
 
 ```
 SELECT sum(amount) FROM billing_event
@@ -219,7 +220,7 @@ WHERE
 ;
 ```
 
-The following example shows the same information, but is restricted to 2018 transactions and assumes all buyers paid their invoices: 
+The following example shows the same information, but is restricted to 2018 transactions and assumes all buyers paid their invoices\. 
 
 ```
 SELECT sum(amount) FROM billing_event
@@ -232,7 +233,7 @@ WHERE
 
 ## Example 5: Amount of disbursements<a name="data-feed-example-query-disbursements"></a>
 
-To find out the amount that's been disbursed, you can run a query like the following:
+To find out the amount that's been disbursed, you can run a query as shown in the following example\.
 
 ```
 select sum(amount) FROM billing_event
@@ -244,7 +245,7 @@ WHERE
 
 ## Example 6: Amount pending disbursement<a name="data-feed-example-query-pending-disbursement"></a>
 
-To find out the amount that's pending disbursement, you can run a query like the following\. This query removes amounts that have already been disbursed\. 
+To find out the amount that's pending disbursement, you can run a query as shown in the following example\. This query removes amounts that have already been disbursed\. 
 
 ```
 SELECT sum(amount) FROM billing_event targeted 
@@ -270,7 +271,7 @@ WHERE
 ;
 ```
 
-Another way to get the same information is to run a query like the following to get the seller's balance:
+Another way to get the same information is to run a query to get the seller's balance, as shown in the following example\.
 
 ```
 SELECT sum(amount) FROM billing_event
@@ -279,7 +280,7 @@ WHERE
 ;
 ```
 
-The following query extends our example\. It restricts the results to 2018 transactions and returns more details about the transactions\.
+The following query extends our example\. It restricts the results to 2018 transactions and returns additional details about the transactions\.
 
 ```
 select sum(residual_amount_per_transaction)
@@ -313,7 +314,7 @@ from
 
 ## Example 7: Balance of set of invoices<a name="data-feed-example-query-balance-invoice-set"></a>
 
-To learn the sum of a set of invoices, you can run a query like the following:
+To learn the sum of a set of invoices, you can run a query as shown in the following example\.
 
 ```
 SELECT invoice_id, sum(amount) FROM billing_event targeted

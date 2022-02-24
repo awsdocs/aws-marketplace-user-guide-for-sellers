@@ -19,3 +19,4 @@ Before you get started, you must complete the following prerequisites:
 + [Integrate your SaaS subscription product](saas-integrate-subscription.md)
 + [Integrate your SaaS contract product](saas-integrate-contract.md)
 + [Integrate your SaaS contract with pay\-as\-you\-go product](saas-integrate-contract-with-pay.md)
++ [Deploy a serverless SaaS integration solution](deploy-serverless-saas.md)

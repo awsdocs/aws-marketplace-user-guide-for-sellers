@@ -52,7 +52,7 @@ The VAT information section is only available if you are in an AWS Region that s
 
 ## Providing US bank account information<a name="us-bank-account-for-eu-sellers"></a>
 
-A US bank account is required for all sellers who want to sell paid software products in AWS Marketplace\. AWS Marketplace only disburses to US bank accounts\.
+A US bank account is required for all sellers who want to sell paid products in AWS Marketplace\. AWS Marketplace only disburses to US bank accounts\.
 
 **Note**  
 For a list of countries where you can offer paid products in AWS Marketplace, see [Eligible jurisdictions for paid products](user-guide-for-sellers.md#eligible-jurisdictions)\.
@@ -101,6 +101,8 @@ For you as a seller to transact through Amazon Web Services EMEA SARL, you are r
 Choose the **Info** link to see how to change your country\.
 
 1. Choose **Go to KYC information** or select the **Know your customer \(KYC\)** tab and then choose **Start KYC Compliance** and you will be re\-directed to the KYC registration portal\.
+
+   For more information about how information is used and shared by AWS Marketplace, see the [Amazon Payments Europe Privacy Notice](https://sellercentral-europe.amazon.com/gp/help/external/201190420?language=en_GB&ref=efph_201190420_cont_201200780)\. 
 
 1. Choose **Go to KYC overview**\.
 
@@ -162,7 +164,7 @@ To receive disbursements from Amazon Payments Europe \(APE\), you must provide a
 
 For sellers who use [Hyperwallet's virtual bank account solution](https://docs.aws.amazon.com/marketplace/latest/userguide/seller-registration-process.html#us-bank-account-for-eu-sellers), you can download the Hyperwallet bank statement by using the following procedure\. Then, you can upload the bank document as directed in [Completing bank account verification process](#completing-bank-account-verification)\.
 
-**To download your bank account validation statement from Hyperwallet**
+**To download your bank statement from Hyperwallet**
 
 1. Sign into your [Hyperwallet account](https://wssellers.hyperwallet.com/hw2web/landing.xhtml?faces-redirect=true&refreshme=true)\.
 

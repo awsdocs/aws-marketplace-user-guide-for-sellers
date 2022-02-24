@@ -16,11 +16,11 @@ Before you begin, make sure you've chosen the right pricing model for your softw
 
 When a customer subscribes to your product, they are redirected to your registration URL, which is an HTTP POST request with a temporary `x-amzn-marketplace-token` token\. Respond to this request in the following ways:
 
-1. Exchange the token for a customer ID by calling the `[ ResolveCustomer](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_ResolveCustomer.html)` API operation in the AWS Marketplace Metering Service\.
+1. Exchange the token for a `CustomerIdentifier`, `CustomerAWSAccountId`, and `ProductCode` by calling the `[ ResolveCustomer](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_ResolveCustomer.html)` API operation in the AWS Marketplace Metering Service\.
 
 1. Verify the subscription and quantity \(if applicable\) the customer has access to by calling the `[ GetEntitlements](https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/API_GetEntitlements.html)` action in the AWS Marketplace Entitlement Service\.
 
-1. Persist the customer ID in your system for future calls\. Store whether the customer has a valid subscription, along with whatever information you need about the customer\.
+1. Persist the `CustomerIdentifier`, `CustomerAWSAccountId`, and `ProductCode` in your system for future calls\. Store whether the customer has a valid subscription, along with whatever information you need about the customer\.
 
 1. As a response to the request, you must show your user's first use experience \(as applicable for your service\)\.
 

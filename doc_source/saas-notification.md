@@ -3,15 +3,15 @@
 To receive notifications, you subscribe to the AWS Marketplace Amazon Simple Notification Service \(Amazon SNS\) topics provided to you during product creation\. The topics provide notifications about changes to customers’ subscriptions and contract entitlements for your products\. This enables you to know when to provide and revoke access for specific customers\. 
 
 The following Amazon SNS topics are available to software as a service \(SaaS\) products:
-+ [Amazon SNS topic: aws\-mp\-entitlement\-notification](#saas-sns-message-body) – This topic notifies you when buyers create a new contract, upgrade it, renew it, or it expires\. This is only available for products with pricing models that include a contract\.
-+ [Amazon SNS topic: aws\-mp\-subscription\-notification](#saas-sns-subscription-message-body) – This topic notifies you when a buyer subscribes or unsubscribes to a product\. This is available for all pricing models, including contracts and subscriptions\.
++ [Amazon SNS topic: `aws-mp-entitlement-notification`](#saas-sns-message-body) – This topic notifies you when buyers create a new contract, upgrade it, renew it, or it expires\. This is only available for products with pricing models that include a contract \(also known as **SaaS Contracts** and **SaaS Contracts with Consumption \(Overages\)**\)\.
++ [Amazon SNS topic: `aws-mp-subscription-notification`](#saas-sns-subscription-message-body) – This topic notifies you when a buyer subscribes to or unsubscribes from a product and includes the `offer-identifier` for private offers\. This is available for all pricing models, including contracts and subscriptions \(also known as **SaaS Subscriptions** and **SaaS Contracts with Consumption \(Overages\)**\)\.
 
 To learn more about the scenarios in which you respond to these notifications, see the following topics:
 + [Integrate your SaaS subscription product](saas-integrate-subscription.md)
 + [Integrate your SaaS contract product](saas-integrate-contract.md)
 + [Integrate your SaaS contract with pay\-as\-you\-go product](saas-integrate-contract-with-pay.md)
 
-## Amazon SNS topic: aws\-mp\-entitlement\-notification<a name="saas-sns-message-body"></a>
+## Amazon SNS topic: `aws-mp-entitlement-notification`<a name="saas-sns-message-body"></a>
 
 Each message in the `aws-mp-entitlement-notification` topic has the following format\.
 
@@ -25,9 +25,13 @@ Each message in the `aws-mp-entitlement-notification` topic has the following fo
 
 The *<action\-name>* will always be ` entitlement-updated`\. 
 
+**Note**  
+For entitlement messages, regardless of the action \(new, upgrade, renewal, or expired\), the message is the same\. A subsequent call to `GetEntitlement` is required to discover the content of the update\.
+For **SaaS Contract with Consumption \(Overages\)**, sellers are provided with the [`aws-mp-subscription-notification` SNS topic](#saas-sns-subscription-message-body)\. This is an extra notification that a seller receives when they add on overage pricing\. When a seller acquires new customers, instead of only getting `entitlement-updated` \(which may refer to any kind of action\), the seller receives a subscribe message indicating that this is a new customer\.
+
 Products with contract pricing \(including contracts with pay\-as\-you\-go\) must respond to these messages\. For more information about how to respond, see [Scenario: Monitor changes to user subscriptions](saas-integrate-contract.md#saas-contract-monitor-changes)\.
 
-## Amazon SNS topic: aws\-mp\-subscription\-notification<a name="saas-sns-subscription-message-body"></a>
+## Amazon SNS topic: `aws-mp-subscription-notification`<a name="saas-sns-subscription-message-body"></a>
 
 Each message in the `aws-mp-subscription-notification` topic has the following format\.
 
@@ -43,10 +47,13 @@ Each message in the `aws-mp-subscription-notification` topic has the following f
 The `offer-identifier` only appears in the notification if the offer is a *private offer*\.
 
 The *<action\-name>* will vary depending on the notification\. Possible actions are:
-+ `subscribe-success`
-+ `subscribe-fail`
-+ `unsubscribe-pending`
-+ `unsubscribe-success`
++ `subscribe-success` – The `subscribe-success` message signals when the seller can begin sending metering records\.
++ `subscribe-fail` – If the `subscribe-fail` message is generated, payment might have failed even though the buyer has already transitioned from the AWS Marketplace to the seller's SaaS landing page\. The seller should wait for the `subscribe-success` message before allowing consumption of the product\.
++ `unsubscribe-pending` – When a buyer unsubscribes, an `unsubscribe-pending` message is sent first\. This indicates that the seller has a limited time \(about one hour\) to get final metering records sent before the buyer is cancelled completely\. 
++ `unsubscribe-success` – The `unsubscribe-success` message signals the completion of cancellation, after which no further metering records will be accepted\.
+
+**Note**  
+If a buyer unsubscribes and then immediately successfully re\-subscribes before the final `unsubscribe-success` message is sent, the final `unsubscribe-success` message will not be sent and a `subscribe-success` message will be sent instead\. 
 
 Products with subscription pricing \(including contracts with pay\-as\-you\-go\) must respond to these messages\. For more information about how to respond, see the following topics:
 + [Integrate your SaaS subscription product](saas-integrate-subscription.md)

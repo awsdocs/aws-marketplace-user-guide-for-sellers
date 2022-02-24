@@ -55,11 +55,3 @@ For example, in a case where you have `ReadOnlyUsers` and `AdminUsers` dimension
 ## Automatic renewals<a name="ami-contracts-automatic-renewals"></a>
 
  When a customer purchases your product through AWS Marketplace using AMI contracts, they can agree to automatic renewal of the contract terms\. The customer continues to pay for the entitlements every month or for 1, 2, or 3 years\. The customer always has the option to modify the renewal settings\. They can cancel the renewal or renew the contract different quantities and durations\. 
-
-## When an AMI contract ends<a name="ami-contract-ends"></a>
-
-An AMI contract product has a contract expiry\. When a contract ends, the following events occur: 
-
-1.  Your AMI product receives an `entitlement-updated` notification indicating their entitlement has changed, and the AWS Marketplace Entitlement Service returns an empty response\. 
-
-1.  You have one hour to meter any remaining usage for the customer\. After this, you can no longer send metering records for this customer\. 

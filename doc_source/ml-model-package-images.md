@@ -1,6 +1,6 @@
 # Model package images<a name="ml-model-package-images"></a>
 
- A SageMaker model package is a pre\-trained model that makes predictions and does not require any further training by the buyer\. 
+ An Amazon SageMakerSageMaker model package is a pre\-trained model that makes predictions and does not require any further training by the buyer\. 
 
  A model package includes the following components: 
 +  An inference image stored in [Amazon Elastic Container Registry](http://aws.amazon.com/ecr/) \(Amazon ECR\) 
@@ -32,7 +32,7 @@ The following example uses a web service, [Flask](https://pypi.org/project/Flask
 
  For the inference image to be compatible with SageMaker, the Docker image must expose HTTP endpoints\. While your container is running, SageMaker passes buyer inputs for inference to the container’s HTTP endpoint\. The inference results are returned in the body of the HTTP response\. 
 
- The following walkthrough uses Docker CLI in a development environment using a Linux Ubuntu distribution\. 
+ The following walkthrough uses the Docker CLI in a development environment using a Linux Ubuntu distribution\. 
 + [Create the web server script](#ml-create-the-web-server-script)
 + [ Create the script for the container run](#ml-create-the-script-for-the-container-run)
 + [Create the `Dockerfile`](#ml-create-the-dockerfile)
@@ -46,10 +46,10 @@ The following example uses a web service, [Flask](https://pypi.org/project/Flask
 [Flask](https://pypi.org/project/Flask/) is used here for simplicity\. It is not considered a production\-ready web server\.
 
  Create a Flask web server script that serves the two HTTP endpoints on TCP port 8080 that SageMaker uses\. The following are the two expected endpoints: 
-+  **/ping** – SageMaker makes HTTP GET requests to this endpoint to check if your container is ready\. When your container is ready, it responds to HTTP GET requests at this endpoint with an HTTP 200 response code\. 
-+  **/invocations** – SageMaker makes HTTP POST requests to this endpoint for inference\. The input data for inference is sent in the body of the request\. The user\-specified content type is passed in the HTTP header\. The body of the response is the inference output\. For details about timeouts, see [Requirements and best practices for creating machine learning products](ml-listing-requirements-and-best-practices.md)\. 
++  `/ping` – SageMaker makes HTTP GET requests to this endpoint to check if your container is ready\. When your container is ready, it responds to HTTP GET requests at this endpoint with an HTTP 200 response code\. 
++  `/invocations` – SageMaker makes HTTP POST requests to this endpoint for inference\. The input data for inference is sent in the body of the request\. The user\-specified content type is passed in the HTTP header\. The body of the response is the inference output\. For details about timeouts, see [Requirements and best practices for creating machine learning products](ml-listing-requirements-and-best-practices.md)\. 
 
- **\./web\_app\_serve\.py** 
+ **`./web_app_serve.py`** 
 
 ```
 # Import modules
@@ -86,7 +86,7 @@ def endpoint_invocations():
 
 In the previous example, there is no actual inference logic\. For your actual inference image, add the inference logic into the web app so it processes the input and returns the actual prediction\.
 
-Your inference image must contain all of its required dependencies because it will not have internet access, nor will it be able to make calls to any AWS services\.\.
+Your inference image must contain all of its required dependencies because it will not have internet access, nor will it be able to make calls to any AWS services\.
 
 **Note**  
 This same code is called for both real\-time and batch inferences
@@ -95,7 +95,7 @@ This same code is called for both real\-time and batch inferences
 
  Create a script named `serve` that SageMaker runs when it runs the Docker container image\. The following script starts the HTTP web server\. 
 
- **\./serve** 
+ **`./serve`** 
 
 ```
 #!/bin/bash
@@ -149,7 +149,7 @@ ENV PATH=/opt/program:${PATH}
 
  If you want to package your model artifacts with the inference image, include the artifacts in the `Dockerfile`\. 
 
- If you want to load your model artifacts dynamically, store those artifacts separately in a compressed file \(\.tar\.gz\) in Amazon S3\. When creating the model package, specify the location of the compressed file, and SageMaker extracts and copies the contents to the container directory `/opt/ml/model/` when running your container\. When publishing your model package, those artifacts are published as well and stored in AWS Marketplace owned Amazon S3 buckets inaccessible by the buyer directly\. 
+ If you want to load your model artifacts dynamically, store those artifacts separately in a compressed file \(\.tar\.gz\) in Amazon S3\. When creating the model package, specify the location of the compressed file, and SageMaker extracts and copies the contents to the container directory `/opt/ml/model/` when running your container\. When publishing your model package, those artifacts are published and stored in AWS Marketplace owned Amazon S3 buckets that are inaccessible by the buyer directly\. 
 
 ### Step 2: Building and testing the image locally<a name="ml-step-2-building-and-testing-the-image-locally"></a>
 
@@ -157,7 +157,7 @@ ENV PATH=/opt/program:${PATH}
 +  `./Dockerfile` 
 +  `./web_app_serve.py` 
 +  `./serve` 
-+  *Your inference logic and \(optional\) dependencies* 
++  Your inference logic and \(optional\) dependencies 
 
  Next build, run, and test the container image\. 
 
@@ -191,12 +191,12 @@ sudo docker run \
 ```
 
  The following are details about the command: 
-+ `--rm`: Automatically remove the container after it stops\.
-+ `--publish 8080:8080/tcp`: Expose port 8080 to simulate the port that SageMaker sends HTTP requests to\.
-+ `--detach`: Run the container in the background\.
-+ `--name my-inference-container`: Give this running container a name\.
-+ `my-inference-image`: Run the built image\.
-+ `serve`: Run the same script that SageMaker runs when running the container\.
++ `--rm` – Automatically remove the container after it stops\.
++ `--publish 8080:8080/tcp` – Expose port 8080 to simulate the port that SageMaker sends HTTP requests to\.
++ `--detach` – Run the container in the background\.
++ `--name my-inference-container` – Give this running container a name\.
++ `my-inference-image` – Run the built image\.
++ `serve` – Run the same script that SageMaker runs when running the container\.
 
  After running this command, Docker creates a container from the inference image you built and runs it in the background\. The container runs the `serve` script, which launches your web server for testing purposes\. 
 
@@ -220,7 +220,7 @@ Date: Mon, 21 Oct 2019 06:58:54 GMT
 
 #### Test the inference HTTP endpoint<a name="ml-test-the-inference-http-endpoint"></a>
 
- When the container indicates it is ready by returning a 200 status code to your ping, SageMaker passes the inference data to the **/invocations** HTTP endpoint via a `POST` request\. Test the inference point by running the following command\. 
+ When the container indicates it is ready by returning a 200 status code to your ping, SageMaker passes the inference data to the `/invocations` HTTP endpoint via a `POST` request\. Test the inference point by running the following command\. 
 
 ```
 curl \

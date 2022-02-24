@@ -23,11 +23,11 @@ To sell software as a service \(SaaS\) products, you create the SaaS product in 
 
 1. **Submit your product for integration**
 
-   [Create an initial SaaS product page](saas-create-product-page.md) from your seller account using AWS Marketplace Management Portal\. AWS Marketplace will publish your product as a limited product, which means that it's only available to your accounts to use for integration and testing\. The AWS Marketplace Operations Team will send you an email message with your product code, Amazon Simple Notification Service \(Amazon SNS\) topics, and product page URL\. With that information, you will have an environment to use for creating and testing your integration with AWS Marketplace in your product\. Use the email you received from the AWS Marketplace Operations team for correspondence regarding the product\.
+   [Create an initial SaaS product page](saas-create-product-page.md) from your seller account using AWS Marketplace Management Portal\. AWS Marketplace will publish your product as a limited product, which means that it's only available to your accounts to use for integration and testing\. The AWS Marketplace Operations Team will send you an email message with your product code, Amazon Simple Notification Service \(Amazon SNS\) topics, and product page URL\. With that information, you will have an environment to use for creating and testing your integration with AWS Marketplace in your product\. Use the email message that you received from the AWS Marketplace Operations team for correspondence regarding the product\.
 
 1. **Integrate with AWS Marketplace**
 
-   Your product must support customers onboarding and using your product, including validating their subscription before giving them access, and, in some cases, metering for their usage\. How you integrate with AWS Marketplace depends on the offer type you're using for your product\. For more information about integration, based on offer type, see the following topics\.
+   Your product must support customers onboarding and using your product, including validating their subscription before giving them access, and, in some cases, metering for their usage\. How you integrate with AWS Marketplace depends on the offer type you're using for your product\. For more information about integration, based on offer type, see the following topics:
    + [ Subscription integration](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-integrate-subscription.html)
    + [ Contract integration](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-integrate-contract.html)
    + [ Contract with pay\-as\-you\-go integration](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-integrate-contract-consumption.html)

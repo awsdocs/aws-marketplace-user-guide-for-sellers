@@ -10,7 +10,7 @@ The following code examples can help you integrate your software as a service \(
 
 ## `ResolveCustomer` code example<a name="saas-resolvecustomer-example"></a>
 
-The following code example is relevant for all pricing models\. The Python example exchanges a `x-amzn-marketplace-token` token for a `customerID`\. This code runs in an application on your registration website, when you are redirected there from the AWS Marketplace Management Portal\. The redirect is a POST request that includes the token\. 
+The following code example is relevant for all pricing models\. The Python example exchanges a `x-amzn-marketplace-token` token for a `CustomerIdentifier`, `ProductCode`, and `CustomerAWSAccountId`\. The `CustomerAWSAccountId` is the AWS account Id associated with the subscription\. This code runs in an application on your registration website, when you are redirected there from the AWS Marketplace Management Portal\. The redirect is a POST request that includes the token\. 
 
 For more information about `ResolveCustomer`, see [ResolveCustomer](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_ResolveCustomer.html) in the *AWS Marketplace Metering Service API Reference*\.
 
@@ -29,7 +29,8 @@ if (regToken):
     customerData = marketplaceClient.resolve_customer(regToken)
     productCode = customerData['ProductCode']
     customerID = customerData['CustomerIdentifier']
-    
+    customerAWSAccountId = customerData['CustomerAWSAccountId']
+
     # TODO: Store customer information 
     # TODO: Validate no other accounts share the same customerID
 ```
@@ -39,6 +40,7 @@ if (regToken):
 ```
 {
     'CustomerIdentifier': 'string',
+    'CustomerAWSAccountId':'string',
     'ProductCode': 'string'
 }
 ```

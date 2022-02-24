@@ -48,6 +48,6 @@ All products and their related metadata are reviewed when submitted to ensure th
 ## Architecture requirements<a name="container-architecture-requirements"></a>
 
  All container\-based products must adhere to the following architecture requirements: 
-+ Source container images for AWS Marketplace must be provided from either a public container registry or Amazon Elastic Container Registry \(Amazon ECR\)\.
++ Source container images for AWS Marketplace must be pushed to the Amazon Elastic Container Registry \(Amazon ECR\) repository owned by AWS Marketplace\. You can create these repositories in the AWS Marketplace Management Portal under server products for each of your container product listings\.
 + Container images must be based on Linux\.
 + Paid container\-based products must be able to be deployed on [Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html), [Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html), or [AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html)\.

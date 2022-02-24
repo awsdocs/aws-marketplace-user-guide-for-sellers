@@ -1,6 +1,6 @@
 # Private offer upgrades and renewals<a name="private-offers-upgrades-and-renewals"></a>
 
-For AMI contract, container contract, software as a service \(SaaS\) contract and SaaS contract with consumption products, you can offer upgrades and renewals by using a private offer on any active agreements\. For example, you can do this to grant new entitlements, offer pricing discounts, adjust payment schedules, or change the end user license agreement \(EULA\) to use [standardized license terms](standardized-license-terms.md)\. You can also change the number of units and payment schedule, and add a custom end date\. 
+For software as a service \(SaaS\) contract and SaaS contract with consumption products, you can offer upgrades and renewals by using a private offer on any active agreements\. For example, you can do this to grant new entitlements, offer pricing discounts, adjust payment schedules, or change the end user license agreement \(EULA\) to use [standardized license terms](standardized-license-terms.md)\. You can also change the number of units and payment schedule, and add a custom end date\. 
 
 The difference between an *offer* and an *agreement* is whether the buyer accepted its terms:
 + An **offer** is a set of terms for a buyer's use of a product\. Offers can be public or private\. 
@@ -15,8 +15,6 @@ To use this feature, you must have permissions to use the **Agreements** tab in 
 The following product types support private offer renewals and upgrades:
 + SaaS contracts
 + SaaS contracts with consumption
-+ AMI contracts
-+ Container contracts
 
 ## Submission process for upgrades and renewals<a name="private-offers-upgrades-and-renewals-process"></a>
 

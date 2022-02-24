@@ -42,7 +42,7 @@ Clear usage information that describes the expected inputs and outputs of your p
 
 With each new version of your resource that you add to your product listing, you must provide usage information\. 
 
-To add usage information for a new product that you are publishing for the first time, sign into the AWS Marketplace Management Portal console\. From the Products dropdown, choose Machine learning\. Select your product\. In the **Product Overview** under **Launch option**, provide the ARN of your model package or algorithm resource, and choose **Add**\. 
+To add usage information for a new product that you are publishing for the first time, sign into the AWS Marketplace Management Portal console\. From the Products dropdown, choose **Machine learning**\. Select your product\. In the **Product Overview** under **Launch option**, provide the ARN of your model package or algorithm resource, and choose **Add**\. 
 
 To edit the existing usage information for a specific version, choose **Edit** under **Launch option** and then **Edit version**\. 
 

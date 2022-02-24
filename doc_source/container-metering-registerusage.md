@@ -1,4 +1,4 @@
-# Hourly metering<a name="container-metering-registerusage"></a>
+# Hourly metering with AWS Marketplace Metering Service<a name="container-metering-registerusage"></a>
 
 If your container product uses per\-hour task/pod pricing instead of custom metered pricing dimensions, you don't have to define custom metering dimensions\.
 

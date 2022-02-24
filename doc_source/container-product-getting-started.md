@@ -30,7 +30,7 @@ Before you get started, you must complete the following prerequisites:
    We recommend that you plan your pricing, entitlement, and metering strategy well in advance of publicly publishing your product\.
    + For information about the requirements for container\-based products, see [Container\-based product requirements](container-product-policies.md)\.
    + For information about setting the pricing for your product, see [Container product pricing](pricing-container-products.md)\.
-   + For information about custom metering for your paid container\-based product, see [AWS Marketplace Metering Service integration](entitlement-and-metering-for-paid-products.md)\.
+   + For information about custom metering for your paid container\-based product, see [Hourly and custom metering with AWS Marketplace Metering Service](container-products-billing-integration.md#entitlement-and-metering-for-paid-products)\.
 
 ## Creating a container product<a name="create-container-product"></a>
 
@@ -84,7 +84,7 @@ To update the pricing details for your container product, you must use a product
 
 **Note**  
 For more information about pricing models for container products, see [Container product pricing](pricing-container-products.md)\.  
-Your pricing and metering must be aligned\. For more information about metering with container products, see [AWS Marketplace Metering Service integration](entitlement-and-metering-for-paid-products.md)\.
+Your pricing and metering must be aligned\. For more information about metering with container products, see [Hourly and custom metering with AWS Marketplace Metering Service](container-products-billing-integration.md#entitlement-and-metering-for-paid-products)\.
 
 **To update pricing for your container product by using the product load form**
 
@@ -127,13 +127,13 @@ After you create the pricing details for your product, you can add other product
 
 ## Integrating AWS Marketplace Metering Service for your container product<a name="getting-started-integrate-metering"></a>
 
-For container\-based products with usage pricing, you use the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html) for both checking entitlement to use your product and metering usage for billing\. You must meter for the pricing model that you created when setting your pricing information\. For more information, see [AWS Marketplace Metering Service integration](entitlement-and-metering-for-paid-products.md)\.
+For container\-based products with usage pricing, you use the [AWS Marketplace Metering Service](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html) for both checking entitlement to use your product and metering usage for billing\. You must meter for the pricing model that you created when setting your pricing information\. For more information, see [Hourly and custom metering with AWS Marketplace Metering Service](container-products-billing-integration.md#entitlement-and-metering-for-paid-products)\.
 
 ## Integrating AWS License Manager for your container product<a name="container-integrate-LM"></a>
 
 For container\-based products with contract pricing, you use the AWS License Manager to associate licenses with your product\. 
 
-For more information about integrating with AWS License Manager, see [AWS License Manager integration](container-license-manager-integration.md)\.
+For more information about integrating with AWS License Manager, see [Contract pricing with AWS License Manager](container-license-manager-integration.md)\.
 
 ## Adding a new version of your product<a name="container-add-version"></a>
 
@@ -144,21 +144,19 @@ You can't add a version to your product until you have created the product ID an
 
 Creating a version of your product involves the following steps:
 
-1. Add any needed repositories in AWS Marketplace\.
-
-1. Upload container images and other artifacts to the repositories\.
-
-1. Add a new version to your product\.
+**Topics**
++ [Step 1: Adding repositories](#add-repositories)
++ [Step 2: Uploading container images and artifacts to repositories](#upload-resources)
++ [Step 3: Adding a new version to your container product](#add-new-version)
 
 Your container images and other artifacts for your product are stored in repositories in AWS Marketplace\. Typically, you create one repository for each artifact needed, but the repository can store multiple versions of the artifact \(with different tags\)\. 
 
 **Note**  
 All images in your product deployment must use images from the AWS Marketplace repositories\.
 
-The following procedure describes how to add a repository to AWS Marketplace\. If you already created any necessary repositories \(for example, you're creating a new version and will use existing repositories\), you can skip this procedure\.
+### Step 1: Adding repositories<a name="add-repositories"></a>
 
-**Note**  
-If you previously created repositories that use group IDs, you will need to create new repositories for new versions\. AWS Marketplace no longer uses Group IDs\. Your existing repositories will continue to work for versions you previously added\.
+ The following procedure describes how to add any needed repositories in AWS Marketplace\.
 
 **To add repositories**
 
@@ -179,14 +177,13 @@ You can have up to 50 repositories per product\.
 
 A new request is created and shown on the **Requests** tab\. When it's completed, within minutes, you can start adding container images and other artifacts to the repositories you have created\.
 
-**Note**  
-Your container images are scanned automatically to see if they meet the [Container\-based product requirements](container-product-policies.md)\. For more information, see [Container product scans for security issues](#container-security)\.
+### Step 2: Uploading container images and artifacts to repositories<a name="upload-resources"></a>
 
 **To upload container images and artifacts to repositories**
 
 1. Sign in to the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/)\.
 
-1. Select **Server** from the **Products** menu\.
+1. From the **Products** menu, choose **Server**\.
 
 1. On the **Server products** tab, select the product you want to modify\.
 
@@ -194,17 +191,79 @@ Your container images are scanned automatically to see if they meet the [Contain
 
 1. Choose **View existing repositories**\.
 
-1. Select the repository to which you want to upload\. Then select **View push commands** to see a list of instructions, including commands you can use to push Docker container images and Helm charts to that repository\.
+1. Select the repository to which you want to upload\.
+
+1. Select **View push commands** to open a list of instructions, including commands you can use to push Docker container images and Helm charts to that repository\. 
+
+   For general information about how to push container images and other artifacts to repositories, refer to [Pushing an image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-push.html) in the *Amazon Elastic Container Registry User Guide*\.
+**Note**  
+You can use the following Amazon Elastic Container Registry \(Amazon ECR\) API operations when calling `docker pull` or `docker push`:  
+`DescribeImages` – Use this to review the metadata about the images in a repository\.
+`GetAuthorizationToken` – Use to authenticate before uploading artifacts to the repository, then use `docker pull` or `docker push` commands\.
+`ListImages` – Use to view a list of images you pushed\.
 
 1. Use the commands listed to push any needed artifacts from your local repository to the AWS Marketplace repository for your product\.
 **Note**  
-The **tag** that you provide in the push commands is used to differentiate the version of the artifact that you are uploading to the repository\. Use a tag that makes sense for the version the artifacts are a part of\.
+The **tag** that you provide in the `push` commands is used to differentiate the version of the artifact that you are uploading to the repository\. Use a tag that makes sense for the version the artifacts are a part of\.
 
 1. Repeat for each container image or artifact you need in your version\.
 **Note**  
-Your version can include up to 50 container images or artifacts in each delivery option\. See the following procedure for more information about delivery options\.
+Your version can include up to 50 container images or artifacts in each delivery option\. Refer to the following procedure for more information about delivery options\.
 
-After you have uploaded your artifacts, you're ready to create the version of your product\.
+After you upload your artifacts, you're ready to create the version of your product\. 
+
+**Note**  
+Your container images are scanned automatically to see if they meet the [Container\-based product requirements](container-product-policies.md)\. For more information, refer to [Container product scans for security issues](#container-security)\.
+
+#### Adding a new delivery option without a template<a name="add-delivery-option"></a>
+
+1. To add a new delivery option without a template, choose **Add delivery option**\. After adding an option, follow the instructions in the following steps to configure it\.
+
+1. Choose a delivery method for the delivery option\. The delivery method determines how buyers will launch your software\.
+   + For a **Container image** delivery option, provide paths to container images in an Amazon Elastic Container Registry \(Amazon ECR\) repository that was created in the AWS Marketplace console\. Buyers use the container image paths to launch the software by pulling the images directly into their environments\.
+   + For a **Helm chart** delivery option, provide paths to Helm charts in an Amazon ECR repository that was created in the AWS Marketplace console\. Buyers install the Helm charts in their deployment environment to launch the software\.
+
+1. To add a **Container image** delivery option, perform the following steps:
+
+   1. In **Container images**, add the Amazon ECR URL to the container images that contain the product version software\.
+
+   1. In **Delivery option title** and **Deployment option description**, enter a title and description for this delivery option\.
+
+   1. In **Usage instructions**, enter detailed information to help your buyers use your software after launching it\.
+
+   1. In **Supported services**, select the environments that buyers can launch the software in\.
+
+   1. In **Deployment templates**, add resources that buyers can use to launch the software\. Enter a title and a URL to the resource for each template\.
+
+1. To add a **Helm chart** delivery option, perform the following steps:
+
+   1. In **Helm chart**, add the Amazon ECR URL to the Helm chart that buyers will install in their deployment environment to launch your software\.
+
+   1. In **Container images**, add the Amazon ECR URL to the container images that contain the product version software\.
+
+   1. In **Delivery option title** and **Deployment option description**, enter a title and description for this delivery option\.
+
+   1. In **Usage instructions**, enter detailed information to help your buyers use your software after launching it\.
+
+   1. In **Supported services**, select the environments that buyers can launch the software in\.
+
+   1. *Optional \- * In **Helm release name**, enter the name of the Kubernetes namespace where the Helm chart will be installed\.
+
+   1. *Optional \- * In **Helm installation namespace**, enter the name for the Helm release that will be used by the `helm install` command\.
+
+   1. *Optional \- * In **Kubernetes service account name**, enter the name of the Kubernetes service account that will be used to connect to AWS Identity and Access Management \(IAM\)\. The Kubernetes service account calls AWS services such as licensing or metering\.
+
+   1. Choose to enable **QuickLaunch** on this product version\. QuickLaunch is a feature in AWS Marketplace\. Buyers can use QuickLaunch to create an Amazon EKS cluster quickly and launch your software on it by using AWS CloudFormation\. For more information, see [QuickLaunch in AWS Marketplace](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-configuring-a-product.html#buyer-launch-container-quicklaunch)\.
+
+   1. In **Override parameters**, enter parameters that will be used in the Helm CLI commands that launch the software\. Buyers can override the provided default values\. If you have enabled QuickLaunch, also enter a parameter name and description for the CloudFormation form\.
+
+   1. Choose **Hide passwords and secrets** to mask sensitive information in consoles, command line tools, and APIs\. For more information, see the `NoEcho` parameter documentation in [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) in the *AWS CloudFormation User Guide*\.
+
+1. If needed, choose **Add delivery option** to add additional delivery options and perform the instructions in the previous steps to configure them\.
+
+1. Select **Submit**\.
+
+### Step 3: Adding a new version to your container product<a name="add-new-version"></a>
 
 **To add a new version to your container product**
 
@@ -273,7 +332,16 @@ Your request for a new version is created and should complete within minutes\. Y
 **Note**  
 Your new version is available to all of your buyers\. If your product is currently set to limited availability, your version is available to the set of buyers that the product is available for\. If your product is currently set to public availability, then your new version is available to all AWS Marketplace buyers\.
 
+If this was your first version set, your product is now ready to be published\. For information about how to publish a product, see [Publishing container products](#container-product-publishing)\.
+
+Your request for a new version is created and should complete within minutes\. You can track the request from the **Requests** tab of the **Server products** page\.
+
+**Note**  
+Your new version is available to all of your buyers\. If your product is currently set to limited availability, your version is available to the set of buyers that the product is available for\. If your product is currently set to public availability, then your new version is available to all AWS Marketplace buyers\.
+
 If this was your first version set, your product is now ready to be published\. The next topic describes publishing your product\.
+
+If this was your first version set, your product is now ready to be published, see [Publishing container products](#container-product-publishing)\.
 
 ## Updating version information<a name="container-product-updating-version"></a>
 

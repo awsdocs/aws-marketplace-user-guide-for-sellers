@@ -13,8 +13,7 @@ You can run Paid container products on these orchestration services: [Amazon Ela
 + [Getting started with container products](container-product-getting-started.md)
 + [Container\-based product requirements](container-product-policies.md)
 + [Container product pricing](pricing-container-products.md)
-+ [AWS Marketplace Metering Service integration](entitlement-and-metering-for-paid-products.md)
-+ [AWS License Manager integration](container-license-manager-integration.md)
++ [Billing, metering, and licensing integrations](container-products-billing-integration.md)
 + [Amazon SNS notifications for container products](container-notification.md)
 
 ## Getting help<a name="container-help"></a>

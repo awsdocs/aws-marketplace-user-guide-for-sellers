@@ -1,19 +1,19 @@
 # Algorithm images<a name="ml-algorithm-images"></a>
 
- A SageMaker algorithm requires that the buyer bring their own data to train before it makes predictions\. 
+ An Amazon SageMaker algorithm requires that the buyer bring their own data to train before it makes predictions\. 
 
  An algorithm includes the following components: 
 +  A training image stored in [Amazon ECR](http://aws.amazon.com/ecr/) 
-+  An inference image stored in Amazon ECR 
++  An inference image stored in Amazon Elastic Container Registry \(Amazon ECR\) 
 
 **Note**  
  For algorithm products, the training container generates model artifacts that are loaded into the inference container on model deployment\. 
 
  The following is an overview of how buyers use an algorithm and its components: 
 
-1.  The buyer creates a training job with a compatible dataset and appropriate hyperparameter values\. Amazon SageMaker runs the training image and loads the training data and hyperparameters into the training container\. When the training job completes, the model artifacts located in **/opt/ml/model/** are compressed and copied out to the buyer’s [Amazon S3](http://aws.amazon.com/s3/) bucket\. 
+1.  The buyer creates a training job with a compatible dataset and appropriate hyperparameter values\. SageMaker runs the training image and loads the training data and hyperparameters into the training container\. When the training job completes, the model artifacts located in `/opt/ml/model/` are compressed and copied to the buyer’s [Amazon S3](http://aws.amazon.com/s3/) bucket\. 
 
-1.  The buyer creates a model package with the model artifacts from the training stored in Amazon S3 and deploys the model\. SageMaker runs the inference image, extracts the compressed model artifacts, and loads the files into the inference container directory path **/opt/ml/model/** where it is consumed by the code that serves the inference\. 
+1.  The buyer creates a model package with the model artifacts from the training stored in Amazon S3 and deploys the model\. SageMaker runs the inference image, extracts the compressed model artifacts, and loads the files into the inference container directory path `/opt/ml/model/` where it is consumed by the code that serves the inference\. 
 
 1.  Whether the model deploys as an endpoint or a batch transform job, SageMaker passes the data for inference on behalf of the buyer to the container via the container’s HTTP endpoint and returns the prediction results\. 
 
@@ -24,9 +24,9 @@
 
  This section provides a walkthrough for packaging your training code into a training image\. A training image is required to create an algorithm product\. 
 
- A training image is a Docker image containing your training algorithm\. The container adheres to a specific file structure to allow SageMaker to copy data to and from your container\. 
+ A *training image* is a Docker image containing your training algorithm\. The container adheres to a specific file structure to allow SageMaker to copy data to and from your container\. 
 
- Both the training and inference images are required when publishing an algorithm product\. After creating your training image, you must create an inference image\. The two images can be combined into one image or remain as separate images\. Whether to combine the images or separate them is up to you\. Typically, inference is simpler than training, and you may want separate images to help with inference performance\.
+ Both the training and inference images are required when publishing an algorithm product\. After creating your training image, you must create an inference image\. The two images can be combined into one image or remain as separate images\. Whether to combine the images or separate them is up to you\. Typically, inference is simpler than training, and you might want separate images to help with inference performance\.
 
 **Note**  
  The following is only one example of packaging code for a training image\. For more information, see [Use your own algorithms and models with the AWS Marketplace](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-marketplace.html) and the [AWS Marketplace SageMaker examples](https://github.com/aws/amazon-sagemaker-examples/tree/master/aws_marketplace) on GitHub\.
@@ -40,7 +40,7 @@
 + [ Prepare your program to read data inputs](#ml-prepare-your-program-to-read-data-inputs)
 + [ Prepare your program to write training outputs](#ml-prepare-your-program-to-write-training-outputs)
 + [ Create the script for the container run](#ml-create-the-script-for-the-container-run-1)
-+ [Create the Dockerfile](#ml-create-the-dockerfile-1)
++ [Create the `Dockerfile`](#ml-create-the-dockerfile-1)
 
 #### Prepare your program to read configuration inputs<a name="ml-prepare-your-program-to-read-configuration-inputs"></a>
 
@@ -60,12 +60,12 @@
 +  `/opt/ml/input/data/<channel_name>/` contains the input data for that channel\. The channels are created based on the call to the `CreateTrainingJob` operation, but it's generally important that channels match what the algorithm expects\. The files for each channel are copied from [Amazon S3](http://aws.amazon.com/s3/) to this directory, preserving the tree structure indicated by the Amazon S3 key structure\. 
 
  **Pipe mode** 
-+  `/opt/ml/input/data/<channel_name>_<epoch_number>` is the pipe for a given epoch\. Epochs start at zero and go up by one each time you read them\. There is no limit to the number of epochs that you can run, but you must close each pipe before reading the next epoch\. 
++  `/opt/ml/input/data/<channel_name>_<epoch_number>` is the pipe for a given epoch\. Epochs start at zero and increase by one each time you read them\. There is no limit to the number of epochs that you can run, but you must close each pipe before reading the next epoch\. 
 
 #### Prepare your program to write training outputs<a name="ml-prepare-your-program-to-write-training-outputs"></a>
 
  The output of the training is written to the following container directories: 
-+  `/opt/ml/model/` is the directory where you write the model or the model artifacts that your training algorithm generates\. Your model can be in any format that you want\. It can be a single file or a whole directory tree\. SageMaker packages any files in this directory into a compressed file \(\.tar\.gz\)\. This file is available at the Amazon S3 location returned by the `DescribeTrainingJob` operation\. 
++  `/opt/ml/model/` is the directory where you write the model or the model artifacts that your training algorithm generates\. Your model can be in any format that you want\. It can be a single file or a whole directory tree\. SageMaker packages any files in this directory into a compressed file \(\.tar\.gz\)\. This file is available at the Amazon S3 location returned by the `DescribeTrainingJob` API operation\. 
 +  `/opt/ml/output/` is a directory where the algorithm can write a `failure` file that describes why the job failed\. The contents of this file are returned in the `FailureReason` field of the `DescribeTrainingJob` result\. For jobs that succeed, there is no reason to write this file because it’s ignored\. 
 
 #### Create the script for the container run<a name="ml-create-the-script-for-the-container-run-1"></a>
@@ -84,7 +84,7 @@
 #
 ```
 
-#### Create the Dockerfile<a name="ml-create-the-dockerfile-1"></a>
+#### Create the `Dockerfile`<a name="ml-create-the-dockerfile-1"></a>
 
  Create a `Dockerfile` in your build context\. This example uses Ubuntu 18\.04 as the base image, but you can start from any base image that works for your framework\. 
 
@@ -120,13 +120,13 @@ ENV PATH=/opt/program:${PATH}
  In the build context, the following files now exist: 
 + `./Dockerfile`
 + `./train`
-+ *Your training dependencies and logic*
++ Your training dependencies and logic
 
  Next you can build, run, and test this container image\. 
 
 #### Build the image<a name="ml-build-the-image-1"></a>
 
- Run the Docker command in the build context to build and tag the image\. This example uses the tag **my\-training\-image**\. 
+ Run the Docker command in the build context to build and tag the image\. This example uses the tag `my-training-image`\. 
 
 ```
 sudo docker build --tag my-training-image ./
@@ -155,13 +155,13 @@ sudo docker run \
 ```
 
  The following are command details: 
-+  `--rm`: Automatically remove the container after it stops\. 
-+  `--volume '<path_to_input>:/opt/ml/input:ro'`: Make test input directory available to container as read\-only\. 
-+  `--volume '<path_to_model>:/opt/ml/model'`: Bind mount the path where the model artifacts are stored on the host machine when the training test is complete\. 
-+  `--volume '<path_to_output>:/opt/ml/output'`: Bind mount the path where the failure reason in a `failure` file is written to on the host machine\. 
-+  `--name my-training-container`: Give this running container a name\. 
-+  `my-training-image`: Run the built image\. 
-+  `train`: Run the same script SageMaker runs when running the container\. 
++  `--rm` – Automatically remove the container after it stops\. 
++  `--volume '<path_to_input>:/opt/ml/input:ro'` – Make test input directory available to container as read\-only\. 
++  `--volume '<path_to_model>:/opt/ml/model'` – Bind mount the path where the model artifacts are stored on the host machine when the training test is complete\. 
++  `--volume '<path_to_output>:/opt/ml/output'` – Bind mount the path where the failure reason in a `failure` file is written to on the host machine\. 
++  `--name my-training-container` – Give this running container a name\. 
++  `my-training-image` – Run the built image\. 
++  `train` – Run the same script SageMaker runs when running the container\. 
 
  After running this command, Docker creates a container from the training image you built and runs it\. The container runs the `train` script, which starts your training program\. 
 
@@ -175,7 +175,7 @@ sudo docker run \
 
  The inference image is a Docker image containing your inference logic\. The container at runtime exposes HTTP endpoints to allow SageMaker to pass data to and from your container\. 
 
- Both the training and inference images are required when publishing an algorithm product\. If you have not already done so, see the previous section about [Creating a training image for algorithms](#ml-creating-a-training-image-for-algorithms)\. The two images can be combined into one image or remain as separate images\. Whether to combine the images or separate them is up to you\. Typically, inference is simpler than training, and you may want separate images to help with inference performance\.
+ Both the training and inference images are required when publishing an algorithm product\. If you have not already done so, see the previous section about [Creating a training image for algorithms](#ml-creating-a-training-image-for-algorithms)\. The two images can be combined into one image or remain as separate images\. Whether to combine the images or separate them is up to you\. Typically, inference is simpler than training, and you might want separate images to help with inference performance\.
 
 **Note**  
  The following is only one example of packaging code for an inference image\. For more information, see [ Use your own algorithms and models with the AWS Marketplace](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-marketplace.html) and the [AWS Marketplace SageMaker examples](https://github.com/aws/amazon-sagemaker-examples/tree/master/aws_marketplace) on GitHub\.  
@@ -199,10 +199,10 @@ The following example uses a web service, [Flask](https://pypi.org/project/Flask
 [Flask](https://pypi.org/project/Flask/) is used here for simplicity\. It is not considered a production\-ready web server\.
 
  Create the Flask web server script that serves the two HTTP endpoints on TCP port 8080 that SageMaker uses\. The following are the two expected endpoints: 
-+  **/ping** – SageMaker makes HTTP GET requests to this endpoint to check if your container is ready\. When your container is ready, it responds to HTTP GET requests at this endpoint with an HTTP 200 response code\. 
-+  **/invocations** – SageMaker makes HTTP POST requests to this endpoint for inference\. The input data for inference is sent in the body of the request\. The user\-specified content type is passed in the HTTP header\. The body of the response is the inference output\. 
++  `/ping` – SageMaker makes HTTP GET requests to this endpoint to check if your container is ready\. When your container is ready, it responds to HTTP GET requests at this endpoint with an HTTP 200 response code\. 
++  `/invocations` – SageMaker makes HTTP POST requests to this endpoint for inference\. The input data for inference is sent in the body of the request\. The user\-specified content type is passed in the HTTP header\. The body of the response is the inference output\. 
 
- **\./web\_app\_serve\.py** 
+ **`./web_app_serve.py`** 
 
 ```
 # Import modules
@@ -293,9 +293,9 @@ ENV PATH=/opt/program:${PATH}
 
 #### Preparing your program to dynamically load model artifacts<a name="ml-preparing-your-program-to-dynamically-load-model-artifacts"></a>
 
- For algorithm products, the buyer uses their own datasets with your training image to generate unique model artifacts\. When the training process completes, your training container outputs model artifacts to the container directory` /opt/ml/model/`\. SageMaker compresses the contents in that directory into a \.tar\.gz and stores it in the buyer’s AWS account in Amazon S3\.
+ For algorithm products, the buyer uses their own datasets with your training image to generate unique model artifacts\. When the training process completes, your training container outputs model artifacts to the container directory` /opt/ml/model/`\. SageMaker compresses the contents in that directory into a \.tar\.gz file and stores it in the buyer’s AWS account in Amazon S3\.
 
- When the model deploys, SageMaker runs your inference image, extracts the model artifacts from the \.tar\.gz stored in the buyer’s account in Amazon S3,and loads them into the inference container in the **/opt/ml/model/** directory\. At runtime, your inference container code uses the model data\. 
+ When the model deploys, SageMaker runs your inference image, extracts the model artifacts from the \.tar\.gz file stored in the buyer’s account in Amazon S3,and loads them into the inference container in the `/opt/ml/model/` directory\. At runtime, your inference container code uses the model data\. 
 
 **Note**  
  To protect any intellectual property that might be contained in the model artifact files, you can choose to encrypt the files before outputting them\. For more information, see [ Security and intellectual property](ml-security-and-intellectual-property.md)\. 
@@ -340,13 +340,13 @@ sudo docker run \
 ```
 
  The following are command details: 
-+  `--rm`: Automatically remove the container after it stops\. 
-+  `--publish 8080:8080/tcp`: Expose port 8080 to simulate the port SageMaker sends HTTP requests to\. 
-+  `--volume '<path_to_model>:/opt/ml/model:ro'`: Bind mount the path to where the test model artifacts are stored on the host machine as read\-only to make them available to your inference code in the container\. 
-+  `--detach`: Run the container in the background\. 
-+  `--name my-inference-container`: Give this running container a name\. 
-+  `my-inference-image`: Run the built image\. 
-+  `serve`: Run the same script SageMaker runs when running the container\. 
++  `--rm` – Automatically remove the container after it stops\. 
++  `--publish 8080:8080/tcp` – Expose port 8080 to simulate the port SageMaker sends HTTP requests to\. 
++  `--volume '<path_to_model>:/opt/ml/model:ro'` – Bind mount the path to where the test model artifacts are stored on the host machine as read\-only to make them available to your inference code in the container\. 
++  `--detach` – Run the container in the background\. 
++  `--name my-inference-container` – Give this running container a name\. 
++  `my-inference-image` – Run the built image\. 
++  `serve` – Run the same script SageMaker runs when running the container\. 
 
  After running this command, Docker creates a container from the inference image and runs it in the background\. The container runs the `serve` script, which starts your web server for testing purposes\. 
 
@@ -372,7 +372,7 @@ Date: Mon, 21 Oct 2019 06:58:54 GMT
 
 #### Test the inference HTTP endpoint<a name="ml-test-the-inference-http-endpoint-1"></a>
 
- When the container indicates it is ready by returning a 200 status code, SageMaker passes the inference data to the **/invocations** HTTP endpoint via a `POST` request\. 
+ When the container indicates it is ready by returning a 200 status code, SageMaker passes the inference data to the `/invocations` HTTP endpoint via a `POST` request\. 
 
  Run the following command to test the inference endpoint\. 
 
