@@ -38,6 +38,7 @@ To sell paid software in AWS Marketplace, you must be a permanent resident or ci
 + Bahrain¹ ²
 + European Union \(EU\) member state¹
 + Hong Kong SAR
++ Israel¹ ²
 + Japan² ³
 + New Zealand¹
 + Norway¹ ²

@@ -29,7 +29,7 @@ Before you get started, you must complete the following prerequisites:
 
    We recommend that you plan your pricing, entitlement, and metering strategy well in advance of publicly publishing your product\.
    + For information about the requirements for container\-based products, see [Container\-based product requirements](container-product-policies.md)\.
-   + For information about setting the pricing for your product, see [Container product pricing](pricing-container-products.md)\.
+   + For information about setting the pricing for your product, see [Container products pricing](pricing-container-products.md)\.
    + For information about custom metering for your paid container\-based product, see [Hourly and custom metering with AWS Marketplace Metering Service](container-products-billing-integration.md#entitlement-and-metering-for-paid-products)\.
 
 ## Creating a container product<a name="create-container-product"></a>
@@ -83,7 +83,7 @@ You now have your initial container product and product ID\. Next, add pricing d
 To update the pricing details for your container product, you must use a product load form \(PLF\)\. The PLF for your product is a spreadsheet that contains information about your product\. The following procedure outlines using the PLF to update information about your product, including pricing details\.
 
 **Note**  
-For more information about pricing models for container products, see [Container product pricing](pricing-container-products.md)\.  
+For more information about pricing models for container products, see [Container products pricing](pricing-container-products.md)\.  
 Your pricing and metering must be aligned\. For more information about metering with container products, see [Hourly and custom metering with AWS Marketplace Metering Service](container-products-billing-integration.md#entitlement-and-metering-for-paid-products)\.
 
 **To update pricing for your container product by using the product load form**

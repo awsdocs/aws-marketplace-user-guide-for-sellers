@@ -296,7 +296,7 @@ Amazon Payments Europe S\.C\.A\. \(APE\) will respond with an update to your com
 If you aren't satisfied with our response, you may choose to escalate your complaint by contacting the following:
 + Amazon Payments Europe senior management
 
-  Submit your complaints by sending an email message to senior management at management\-ape@amazon\.lu\. We will consider your comments carefully and respond within 15 business days following the day on which senior management received your complaint\. In exceptional circumstances beyond the control of Amazon Payment Europe, the resolution of the complaint may be extended up to 35 business days, following the day on which senior management first received the complaint\.
+  Submit your complaints by sending an email message to senior management at ape\-management@amazon\.lu\. We will consider your comments carefully and respond within 15 business days following the day on which senior management received your complaint\. In exceptional circumstances beyond the control of Amazon Payment Europe, the resolution of the complaint may be extended up to 35 business days, following the day on which senior management first received the complaint\.
 + Commission de Surveillance du Secteur Financier \(CSSF\)
 
   The CSSF is the authority responsible for the prudential supervision of companies in the financial sector in Luxembourg\. You can contact the CSSF at 110 Route d’Arlon L\-2991 Luxembourg or use the **Contact page** at: [https://www\.cssf\.lu/contacts/](https://www.cssf.lu/contacts/)\. To obtain further information regarding the CSSF and how to contact them, see [Customer complaints](https://www.cssf.lu/customer-complaints/) on the CSSF website\.

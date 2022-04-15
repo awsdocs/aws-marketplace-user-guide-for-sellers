@@ -42,7 +42,7 @@ You can use [Using AWS PrivateLink with AWS Marketplace](privatelink.md) to conï
 
  Your SaaS product is hosted in your environment and it must be accessed over the internet through a public endpoint that you manage and maintain, like a website\. Typically, you have a website that customers use to register for your product, sign in to use the product, and access support for your product\. For the sake of simplicity, this endpoint will be referred to as your *registration website*\.
 
-If you choose this access option and your product doesn't already have a registration website, you need to create one\. After you have a registration website, your website must be programmed to validated customers whenever they access your registration page\.
+If you choose this access option and your product doesn't already have a registration website, you need to create one\. After you have a registration website, your website must be programmed to validate customers whenever they access your registration page\.
 
 **To validate customers using your registration website**
 

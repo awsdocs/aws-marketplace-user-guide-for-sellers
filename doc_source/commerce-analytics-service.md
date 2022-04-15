@@ -71,7 +71,7 @@ The Commerce Analytics Service accesses the Amazon S3 bucket and Amazon SNS topi
 1. On the AWS Marketplace Management Portal, record the **Role Name ARN** in the success message\. You need the ARN to call the service\. 
 
 **Note**  
-Onboarding onto Commerce Analytics Service creates an IAM role in your AWS account that allows AWS Marketplace to write to the Amazon S3 bucket and publish notifications to the Amazon SNS Topic\.
+Onboarding onto Commerce Analytics Service creates an IAM role in your AWS account that allows AWS Marketplace to write to the Amazon S3 bucket and publish notifications to the Amazon SNS Topic\. AWS Marketplace uses the account 452565589796 to perform these associated actions with this IAM\.
 
 ### Verify your configuration<a name="verify-your-configuration"></a>
 

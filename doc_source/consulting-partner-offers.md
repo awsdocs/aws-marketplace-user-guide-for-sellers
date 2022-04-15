@@ -7,8 +7,8 @@ The following diagram shows this relationship between an ISV, a consulting partn
  ![\[Relationships and workflow between ISVs, consulting partners, and buyers.\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/consulting-partner-relationships.png) 
 
 **Note**  
-For more information on creating a resell opportunity for a consulting partner, as an ISV, see [ISV setup of resell opportunities](consulting-partner-isv-info.md)\.  
-For more information on creating a private offer for a buyer, as a consulting partner, see [Consulting partner setup of resell opportunities](consulting-partner-info.md)\.
+For more information about creating a resell opportunity for a consulting partner, as an ISV, see [Creating a resell opportunity for a consulting partner as an ISV](consulting-partner-isv-info.md)\.  
+For more information about creating a private offer for a buyer, as a consulting partner, see [Creating a private offer as a consulting partner](consulting-partner-info.md)\.
 
 Each consulting partner private offer is visible only to a single buyer, with customized pricing and unique commercial terms to meet that buyer's needs\. When creating a private offer, you start from a wholesale cost set by the ISV\. Then you mark up that price to create the buyer's offer price\. The wholesale cost is determined in one of two ways:
 + **Recurring discount** – An ISV authorizes the consulting partner to resell their product or products at an agreed\-to discount from their list price with a recurring opportunity\. This discount allows the consulting partner to continue to resell the product without further price negotiation with the ISV\. This discount can be set up to last until a specified date, or indefinitely, until ended by either the ISV or the consulting partner\.
@@ -25,4 +25,4 @@ For information about third\-party financing for private offers, see [Customer f
 
 ## Additional information<a name="consulting-partner-additional-information"></a>
 
-For additional information and questions, we encourage ISVs and consulting partners to connect with the AWS Marketplace channel team\. If you don’t know who to contact specifically, send an email message to aws\-mp\-channel@amazon\.com, and someone on the team will respond to you within one business day\.
+For additional information and questions, we encourage ISVs and consulting partners to connect with the AWS Marketplace channel team\. If you don’t know who to contact specifically, send an email message to [aws\-mp\-channel@amazon\.com](mailto://aws-mp-channel@amazon.com), and someone on the team will respond to you within one business day\.

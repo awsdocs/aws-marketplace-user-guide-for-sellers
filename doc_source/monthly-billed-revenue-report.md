@@ -9,7 +9,13 @@ The amounts in this report reflect only revenue that we billed to customers, not
 
 ## Publication schedule<a name="publication-schedule-2"></a>
 
-This report is published monthly on the fifteenth day of each month at 00:00 UTC\. The report covers the previous calendar month from the first day of the month at 00:00 UTC through the last day of the month at 23:59 UTC\. For example, the report that is published on May 15 covers from April 1 at 00:00 UTC through April 30 at 23:59 UTC\.
+This report is published monthly on the fifteenth day of each month at 00:00 UTC\.  
+
+Billing and Revenue Data covers from 15th to 14th of next month\.
+
+Long\-term Subscriptions covers the first day of the month at 00:00 UTC through the last day of the month at 23:59 UTC of the previous month\.
+
+For example, the report that is published on May 15 covers from April 1 at 00:00 UTC through April 30 at 23:59 UTC\.
 
 **Topics**
 + [Publication schedule](#publication-schedule-2)

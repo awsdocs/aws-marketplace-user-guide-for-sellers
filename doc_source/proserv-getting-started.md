@@ -50,7 +50,7 @@ To learn how to make the product available publicly, see [Editing product visibi
 When a potential buyer views your product on AWS Marketplace, they can't purchase it directly\. When they attempt to subscribe, they are redirected to request a [private offer](https://docs.aws.amazon.com/marketplace/latest/userguide/private-offers-overview.html) from you\. AWS Marketplace sends an email message to your AWS Marketplace seller account root user email address, informing you that the customer has requested a private offer\. The following procedure describes how to respond to this request\.
 
 **Note**  
-You can create private offers with prices up to $250,000 through the AWS Marketplace Management Portal\. To create a private offer higher than $250,000, approval is required\. For more information, contact your AWS Marketplace Business Development representative, or send an email message with your details to the AWS Marketplace Business operations team at [ mpcustdesk@amazon\.com](mailto:mpcustdesk@amazon.com)\.
+When you create a private offer higher than $250,000 through the AWS Marketplace Management Portal, additional approval may be required\. For more information, contact your AWS Marketplace Business Development representative, or send an email message with your details to the AWS Marketplace Business operations team at [ mpcustdesk@amazon\.com](mailto:mpcustdesk@amazon.com)\.
 
 **To create a private offer for a professional services product**
 

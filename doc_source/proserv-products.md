@@ -9,6 +9,10 @@ For more information about professional services products, see:
 + [Providing details for a professional services product](proserv-product-details.md)
 + [Requirements for professional services products ](proserv-product-guidelines.md)
 
+The following video explains more about managing professional services products in AWS Marketplace\.
+
+[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/2ZsS1LfRivk/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/2ZsS1LfRivk)
+
 ## Getting help<a name="proserv-help"></a>
 
  For assistance with your professional services products, contact your business development partner for AWS Marketplace or [contact us](https://aws.amazon.com/marketplace/management/contact-us/)\. 

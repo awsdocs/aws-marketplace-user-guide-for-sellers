@@ -12,7 +12,9 @@ Your Docker image size is governed by the Amazon Elastic Container Registry \(Am
 
 ## Storage size<a name="ml-storage-size"></a>
 
-When you create an endpoint, Amazon SageMaker attaches an Amazon Elastic Block Store \(Amazon EBS\) storage volume to each ML compute instance that hosts the endpoint\. \(An endpoint is also known as *real\-time inference* or *Amazon SageMaker hosting service*\.\) The size of the storage volume depends on the instance type\. For more information, see [Host Instance Storage Volumes](https://docs.aws.amazon.com/sagemaker/latest/dg/host-instance-storage.html)\. For batch transform, keep these limits in mind\. 
+When you create an endpoint, Amazon SageMaker attaches an Amazon Elastic Block Store \(Amazon EBS\) storage volume to each ML compute instance that hosts the endpoint\. \(An endpoint is also known as *real\-time inference* or *Amazon SageMaker hosting service*\.\) The size of the storage volume depends on the instance type\. For more information, see [Host Instance Storage Volumes](https://docs.aws.amazon.com/sagemaker/latest/dg/host-instance-storage.html) in the *Amazon SageMaker Developer Guide*\. 
+
+For batch transform, see [Storage in Batch Transform](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-transform-storage.html) in the *Amazon SageMaker Developer Guide*\. 
 
 ## Instance size<a name="ml-instance-size"></a>
 

@@ -2,9 +2,6 @@
 
 To receive notifications, you subscribe to the AWS Marketplace Amazon Simple Notification Service \(Amazon SNS\) topics provided to you during product creation\. The topics provide notifications about changes to customers’ subscriptions for your products\. For example, you can know when customers accept a private oﬀer\. 
 
-**Note**  
-Amazon SNS notifications are not supported for AMI\-based products with contract pricing\.
-
 The following Amazon SNS topic is available for AMI products:
 + [Amazon SNS topic: `aws-mp-subscription-notification`](#ami-sns-subscription-message-body) – This topic notifies you when a buyer subscribes or unsubscribes to a product\. This notification is available for hourly pricing models, including hourly and hourly with annual\.
 

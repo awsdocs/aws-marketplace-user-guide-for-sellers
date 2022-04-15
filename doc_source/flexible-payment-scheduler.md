@@ -16,7 +16,7 @@ After the AWS account or accounts are confirmed, customize your offer details on
 **Note**  
  For private offers with flexible payment scheduler, for multi\-year and custom duration Amazon Machine Image \(AMI\) products, set the number of instances for each instance type included in the offer and the hourly pricing for any additional launched instances\. After the customer launches the specified number of instances, any additional instances launched are charged at the hourly rate specified in the private offer\. 
 
-Under **Payment Schedule**, add the invoice dates and invoice amounts for all of the installments that the customer will make\. You can add up to 36 installments\. Each time you add an installment, **Total amount due from buyer** is updated\. 
+Under **Payment Schedule**, add the invoice dates and invoice amounts for all of the installments that the customer will make\. You can add up to 60 installments\. Each time you add an installment, **Total amount due from buyer** is updated\. 
 
 **Note**  
 The invoice date for the first installment is the first time that the customer is invoiced for your private offer\. You receive the payment for that first invoice after AWS Marketplace receives the payment from the customer\. 

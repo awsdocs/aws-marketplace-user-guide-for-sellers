@@ -6,13 +6,15 @@ AWS Marketplace buyers see the available delivery options on the published produ
 
 For a walkthrough of the buying experience, you can refer to this video: [ Deploying AWS Marketplace Containers on Amazon ECS Clusters](https://www.youtube.com/watch?v=XaiUAiQQJtk) \(3:34\)\.
 
-You can run Paid container products on these orchestration services: [Amazon Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/), [Amazon Elastic Kubernetes Service](https://docs.aws.amazon.com/eks/latest/userguide/), and [AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html)\. You can run Free and Bring Your Own License model \(BYOL\) container products on any Docker\-compatible runtime\.
+You can find, subscribe to, and deploy third\-party Kubernetes applications from AWS Marketplace on any Kubernetes cluster in any environment\. You can deploy third\-party Kubernetes applications on Amazon Elastic Container Service \(Amazon ECS\), Amazon Elastic Kubernetes Service \(Amazon EKS\), AWS Fargate, and on\-premises using Amazon EKS Anywhere \(EKS Anywhere\)\. You can also deploy them on self\-managed Kubernetes clusters on\-premises or in Amazon Elastic Compute Cloud \(Amazon EC2\)\.
+
+You can run Free and Bring Your Own License model \(BYOL\) container products on any Docker\-compatible runtime\.
 
 **Topics**
 + [Getting help](#container-help)
 + [Getting started with container products](container-product-getting-started.md)
 + [Container\-based product requirements](container-product-policies.md)
-+ [Container product pricing](pricing-container-products.md)
++ [Container products pricing](pricing-container-products.md)
 + [Billing, metering, and licensing integrations](container-products-billing-integration.md)
 + [Amazon SNS notifications for container products](container-notification.md)
 

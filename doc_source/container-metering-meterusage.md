@@ -1,19 +1,19 @@
 # Custom metering with AWS Marketplace Metering Service<a name="container-metering-meterusage"></a>
 
-AWS Marketplace container products can have custom metering on up to 24 different pricing dimensions per product\. Each dimension can have a long\-term contract price associated with it\. Custom metering is enabled by integrating your container product with AWS Marketplace Metering Service\. If you want to define your own pricing units and custom metering for that usage to us for billing, integrate with [https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html)\.
+AWS Marketplace container products can have custom metering on up to 24 different pricing dimensions per product\. Each dimension can have a long\-term contract price associated with it\. To enable custom metering, integrate your container product with AWS Marketplace Metering Service\. You can define your own pricing units and custom metering for that usage to AWS for billing using the [https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html) API operation\.
 
 Price dimensions are defined in two locations, once in the product load form and once through the `MeterUsage` operation\. This two\-factor method ensures that the subsequent offers are working as intended before they're made available to the public\.
 
 To set up custom metering, you'll need to choose the usage category, the unit type, and pricing dimensions: 
 + **Usage category** – The usage category helps buyers understand what your product is and how to use it\. 
 + **Unit type** – The unit type defines the unit of measure for billing\. For example, bandwidth measured in GBps or MBps, the number of hosts, or data measured in MB, GB, or TB\.
-+ **Pricing dimensions** – The pricing dimensions represents a feature or service that you've set a per\-unit price for \(for example, users, scans, vCPUs, or deployed agents\)\. Pricing dimensions are public; however, you can still define private and Bring Your Own License \(BYOL\) offers for public products\. Don't send pricing in the metering records\. You meter the quantity of units, and we use that along with the prices you defined when creating your product to compute the buyer's bill\. 
++ **Pricing dimensions** – The pricing dimensions represents a feature or service that you've set a per\-unit price for \(for example, users, scans, vCPUs, or deployed agents\)\. Pricing dimensions are public\. However, you can still define private and Bring Your Own License \(BYOL\) offers for public products\. Don't send pricing in the metering records\. You meter the quantity of units, and we use that along with the prices you defined when creating your product to compute the buyer's bill\. 
 
-  If your product pricing doesn't fit with any of the predefined categories or unit types, you can choose the generic **units**category and use the dimension description to describe what the unit is\.
+  If your product pricing doesn't fit with any of the predefined categories or unit types, you can choose the generic **Units** category\. Then, use the dimension description to describe what the unit is\.
 
 Optionally, you may distribute the usage into allocations by properties that you track\. The allocations are represented as tags to the buyer\. These tags allow the buyer to view their costs split into usage by tag values\. For example, if you charge by the user, and users have a "Department" property, you could create usage allocations with tags that have a key of "Department", and one allocation per value\. This does not change the price, dimensions, or the total usage that you report, but allows your customer to view their costs by categories appropriate to your product\.
 
-We recommend that you send a metering record every hour; however, you can aggregate usage over daily or monthly periods as well\. If you experience an outage you can aggregate buyer software use and send it in the following hours metering\. You can't send more than one record per hour\.
+We recommend that you send a metering record every hour\. However, you can aggregate usage over daily or monthly periods as well\. If you experience an outage, you can aggregate buyer software use and send it in the following hours metering\. You can't send more than one record per hour\.
 
 **Important**  
 Free trial and prepaid entitlement are tracked on an hourly level\. As a result, sending these records in separately might lead to the buyer being overcharged\.
@@ -28,9 +28,9 @@ Before publishing the product, you must do the following:
 
 1. Use an AWS Identity and Access Management \(IAM\) role for the task or pod running your application with the IAM permissions necessary to call `MeterUsage`\. The IAM managed policy `AWSMarketplaceMeteringRegisterUsage` has these permissions\.
 
-1. \(Optional\) We recommend that you enable CloudTrail logging in the task or pod definition if you want to see logging\.
+1. \(Optional\) We recommend that you enable AWS CloudTrail logging in the task or pod definition if you want to see logging\.
 
-1. Make a test call to the `MeterUsage` operation with a record for all of the pricing dimensions you define\.
+1. Make a test call to the `MeterUsage` API operation with a record for all of the pricing dimensions you define\.
 
 ## Product load form for custom metering<a name="custom-metering-product-load-form"></a>
 

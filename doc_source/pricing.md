@@ -4,7 +4,7 @@ This topic provides general pricing information about software products in AWS M
 
 For paid products, AWS Marketplace collects software charges from the customer\. 
 
-There is no service fee for free or open\-source Software that is made available to customers without charge\.
+There is no service fee for free or open\-source software that is made available to customers without charge\.
 
 For information about refunds, see [Refunds](refunds.md)\.
 
@@ -27,7 +27,7 @@ The following topics provide general information about the pricing models availa
 
 For information about the pricing models for specific product delivery methods, see:
 + [AMI product pricing](pricing-ami-products.md)
-+ [Container product pricing](pricing-container-products.md)
++ [Container products pricing](pricing-container-products.md)
 + [Machine learning product pricing](machine-learning-pricing.md)
 + [SaaS product pricing](saas-pricing-models.md)
 + [Professional services product pricing](pricing-proserv-products.md)
@@ -125,6 +125,9 @@ You can update prices and metadata through the AWS Marketplace Management Portal
 1. Sign in to the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/)\.
 
 1. In the **Products** tab, a list of current products that you created is available\. In the table for your current products, choose the **Action** column to edit your product\. 
+
+**Note**  
+For new subscribers, the price change is effective immediately\. For existing subscribers, the price change is effective on the first day of the month following a 90\-day period that begins on the date that the price change notification is sent\. For example, say you send a price change notification on March 16\. June 16 is about 90 days after March 16\. Because the price change happens on the first day of the month that follows the 90\-day period, the effective date of the change is July 1\.
 
 ## Private offers<a name="private-offers"></a>
 

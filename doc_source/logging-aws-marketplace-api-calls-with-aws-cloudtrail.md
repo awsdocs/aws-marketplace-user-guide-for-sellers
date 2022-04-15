@@ -1,6 +1,6 @@
 # Logging AWS Marketplace API calls with AWS CloudTrail<a name="logging-aws-marketplace-api-calls-with-aws-cloudtrail"></a>
 
- AWS Marketplace is integrated with CloudTrail, a service that provides a record of actions taken by a user, role, or an AWS service in AWS Marketplace\. CloudTrail captures API calls for AWS Marketplace as events\. The calls captured include calls from the AWS Marketplace console and code calls to the AWS Marketplace API operations\.
+ AWS Marketplace is integrated with AWS CloudTrail, a service that provides a record of actions taken by a user, role, or an AWS service in AWS Marketplace\. CloudTrail captures API calls for AWS Marketplace as events\. The calls captured include calls from the AWS Marketplace console and code calls to the AWS Marketplace API operations\.
 
  CloudTrail is enabled on your AWS account when you create the account\. When supported event activity occurs in AWS Marketplace, that activity is recorded in a CloudTrail event along with other AWS service events in **Event history**\. You can view, search, and download recent events in your account\.
 
@@ -13,9 +13,9 @@ AWS Marketplace supports logging the `BatchMeterUsage` operation as events in Cl
 
 ## AWS Marketplace log file entry examples<a name="example-aws-marketplace-log-file-entries"></a>
 
-### Example: BatchMeterUsage<a name="example-aws-marketplace-log-file-entries-batchmeterusage"></a>
+### Example: `BatchMeterUsage`<a name="example-aws-marketplace-log-file-entries-batchmeterusage"></a>
 
-The following example shows a CloudTrail log entry that demonstrates the `BatchMeterUsage` action from the AWS Marketplace Metering Service\. 
+The following example shows a CloudTrail log entry that demonstrates the `BatchMeterUsage` action from the AWS Marketplace Metering Service\. When the seller [sends metering records to report their customers' usage](https://docs.aws.amazon.com/marketplace/latest/userguide/metering-for-usage.html) for a software as a service \(SaaS\) product listed on AWS Marketplace, this CloudTrail log entry is logged in the seller's AWS account\.
 
 ```
 {
@@ -70,9 +70,9 @@ The following example shows a CloudTrail log entry that demonstrates the `BatchM
   }
 ```
 
-### Example: RegisterUsage for containers<a name="example-aws-marketplace-log-file-entries-registerusage-containers"></a>
+### Example: `RegisterUsage` for containers<a name="example-aws-marketplace-log-file-entries-registerusage-containers"></a>
 
-The following example shows a CloudTrail log entry that demonstrates the `RegisterUsage` action from the AWS Marketplace Metering Service\. 
+The following example shows a CloudTrail log entry that demonstrates the `RegisterUsage` action from the AWS Marketplace Metering Service\. When an hourly\-priced container product from AWS Marketplace is deployed in the buyer's AWS account, the software in the container calls `RegisterUsage` within the buyer's AWS account to initiate the hourly metering for that Amazon Elastic Container Service \(Amazon ECS\) task or Amazon Elastic Kubernetes Service \(Amazon EKS\) pod\. This CloudTrail log entry is logged in the buyer's AWS account\.
 
 ```
 {
@@ -121,9 +121,9 @@ The following example shows a CloudTrail log entry that demonstrates the `Regist
 }
 ```
 
-### Example: MeterUsage for containers on Amazon EKS<a name="example-aws-marketplace-log-file-entries-meterusage"></a>
+### Example: `MeterUsage` for containers on Amazon EKS<a name="example-aws-marketplace-log-file-entries-meterusage"></a>
 
-The following example shows a CloudTrail log entry that demonstrates the `MeterUsage` action from the AWS Marketplace Metering Service for containers on Amazon EKS\. 
+The following example shows a CloudTrail log entry that demonstrates the `MeterUsage` action from the AWS Marketplace Metering Service for containers on Amazon EKS\. When a container product with [custom metering](https://docs.aws.amazon.com/marketplace/latest/userguide/container-metering-meterusage.html) from AWS Marketplace is deployed in the buyer's AWS account, the software in the container calls `MeterUsage` within the buyer's AWS account to report each hour\. This CloudTrail log entry is logged in the buyer's AWS account\.
 
 ```
 {
@@ -174,9 +174,9 @@ The following example shows a CloudTrail log entry that demonstrates the `MeterU
 }
 ```
 
-### Example: MeterUsage on AMIs<a name="example-aws-marketplace-log-file-entries-meterusage-amis"></a>
+### Example: `MeterUsage` on AMIs<a name="example-aws-marketplace-log-file-entries-meterusage-amis"></a>
 
-The following example shows a CloudTrail log entry that demonstrates the `MeterUsage` action from the AWS Marketplace Metering Service for AMIs\. 
+The following example shows a CloudTrail log entry that demonstrates the `MeterUsage` action from the AWS Marketplace Metering Service for Amazon Machine Images \(AMIs\)\. When an AMI product with custom metering from AWS Marketplace is deployed in the buyer's AWS account, the software from the AMI calls `MeterUsage` within the buyer's AWS account to report usage each hour\. This CloudTrail log entry is logged in the buyer's AWS account\.
 
 ```
 {
@@ -226,11 +226,11 @@ The following example shows a CloudTrail log entry that demonstrates the `MeterU
 }
 ```
 
-## Related Topics<a name="saas-ct-related-topics"></a>
+## Related topics<a name="saas-ct-related-topics"></a>
 
 For more information, see the following topics in the *AWS CloudTrail User Guide*:
-+  [Overview for Creating a Trail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html) 
-+  [AWS Service Integrations with CloudTrail Logs](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-aws-service-specific-topics.html#cloudtrail-aws-service-specific-topics-integrations) 
-+  [Conﬁguring Amazon SNS Notiﬁcations for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html) 
-+  [Receiving CloudTrail Log Files from Multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html) 
-+  [CloudTrail userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\. 
++  [Creating a trail for your AWS account](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html) 
++  [AWS service integrations with CloudTrail Logs](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-aws-service-specific-topics.html#cloudtrail-aws-service-specific-topics-integrations) 
++  [Conﬁguring Amazon SNS notiﬁcations for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html) 
++  [Receiving CloudTrail log files from multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail log files from multiple accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html) 
++  [CloudTrail userIdentity element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\. 
