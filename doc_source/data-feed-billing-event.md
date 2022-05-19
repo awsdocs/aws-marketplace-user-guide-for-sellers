@@ -22,7 +22,7 @@ The following table explains the names and descriptions of the data feed's colum
 | product\_id | The identifier of the product\. This is a foreign key to the [product](data-feed-product.md) data feed\.Can be used to join to the `Product` data feed on the `product_id` field\. | 
 | action |  The type of action for this event\. Possible values are as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
 | transaction\_type |  The type of transaction\. For examples, see [Taxing scenarios](#data-feeds-billing-event-tax-examples)\. Possible values are as follows:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
-| parent\_billing\_event\_id | If the action is DISBURSEMENT or FORGIVEN and the transaction\_type is DISBURSEMENT, this is the billing\_event\_id that initiated this billing event\. If action has another value, this field is null\.  | 
+| parent\_billing\_event\_id | If the `action` is `DISBURSED` or `FORGIVEN` and the transaction\_type is `DISBURSEMENT`, this is the billing\_event\_id that initiated this billing event\. If action has another value, this field is null\.  | 
 | disbursement\_billing\_event\_id |  The related disbursement when the `action` is `DISBURSED` AND one of the following is true:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html) In all other cases, this value is null\.  | 
 | amount | The billing event amount\.  | 
 | currency | The ISO 639 currency code\. | 
@@ -34,7 +34,7 @@ The following table explains the names and descriptions of the data feed's colum
 | invoice\_id | The AWS invoice ID\. | 
 | billing\_address\_id | The payer's billing address reference in the address data feed\.Can be used to join to the `Address` data feed on the `address_id` field\. | 
 | transaction\_reference\_id |  An identifier that allows you to cross\-reference data from the following reports: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
-| bank\_trace\_id | For disbursement transactions \(transaction\_type = DISBURSEMENT and action = DISBURSED\), the trace ID assigned by the bank\. The trace ID can be used to correlate with bank\-provided reports from the seller bank\. | 
+| bank\_trace\_id | For disbursement transactions \(transaction\_type = `DISBURSEMENT` and action = DISBURSED\), the trace ID assigned by the bank\. The trace ID can be used to correlate with bank\-provided reports from the seller bank\. | 
 | broker\_id |  An identifier of the business entity which facilitated the transaction\. Possible values are as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
 
 ## Taxing scenarios<a name="data-feeds-billing-event-tax-examples"></a>
