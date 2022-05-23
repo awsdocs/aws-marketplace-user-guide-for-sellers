@@ -2,8 +2,7 @@
 
 By registering as a seller for AWS Marketplace, you can sell your products and services to other AWS Marketplace customers\. 
 
-
-
+To sell on AWS Marketplace, we require an AWS account that is created after Sept 27, 2017. Our records indicate that your AWS account was created before this date. Please create a new AWS account to start selling on AWS Marketplace.
 Registering as a seller requires the following steps:
 
 1. **Create your public profile** – You provide the information that is displayed in AWS Marketplace to buyers that tells them about your company, such as your company name and logo\. After you complete this process, you can sell products for free\. To sell paid products, you must complete steps two and three\.
