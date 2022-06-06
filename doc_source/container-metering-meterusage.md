@@ -1,4 +1,4 @@
-# Custom metering with AWS Marketplace Metering Service<a name="container-metering-meterusage"></a>
+# Custom metering for Container products with AWS Marketplace Metering Service<a name="container-metering-meterusage"></a>
 
 AWS Marketplace container products can have custom metering on up to 24 different pricing dimensions per product\. Each dimension can have a long\-term contract price associated with it\. To enable custom metering, integrate your container product with AWS Marketplace Metering Service\. You can define your own pricing units and custom metering for that usage to AWS for billing using the [https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html) API operation\.
 

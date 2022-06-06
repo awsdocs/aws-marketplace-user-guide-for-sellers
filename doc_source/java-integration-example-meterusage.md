@@ -26,11 +26,9 @@ The following example outlines an implementation that uses the AWS SDK for Java 
 **Note**  
 It is possible to see transient issues in connecting to the AWS Marketplace Metering Service\. AWS Marketplace strongly recommends implementing retries for up to 30 minutes, with exponential back off, to avoid short\-term outages or network issues\.
 
-1. Rebuild a new version of your Docker container image that includes the `MeterUsage` call, tag the container, and push it to any Docker registry that is compatible with Amazon ECS or Amazon EKS, such as Amazon Elastic Container Registry \(Amazon ECR\) or Docker Hub\. If you are using Amazon ECR, ensure that the account launching the Amazon ECS task or Amazon EKS pod has permissions on the Amazon ECR repository\. Otherwise, the operation fails\.
-**Note**  
- If you use a private Docker Hub repository, follow the steps in [Private registry authentication for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/private-auth.html) in the *Amazon Elastic Container Service Developer Guide*\. 
+1. Rebuild a new version of your container image that includes the `MeterUsage` call, tag the container, and push it to any Docker registry that is compatible with Amazon ECS or Amazon EKS, such as Amazon Elastic Container Registry \(Amazon ECR\)\. If you are using Amazon ECR, ensure that the account launching the Amazon ECS task or Amazon EKS pod has permissions on the Amazon ECR repository\. Otherwise, the operation fails\.
 
-1.  Create an [IAM](https://aws.amazon.com/iam/) role that grants permission for your container to call `MeterUsage`, as defined in the following code example\. You must supply this AWS Identity and Access Management \(IAM\) role in the [Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_role_arn) parameter of the Amazon ECS task or Amazon EKS pod definition\.
+1. Create an [IAM](https://aws.amazon.com/iam/) role that grants permission for your container to call `MeterUsage`, as defined in the following code example\. You must supply this AWS Identity and Access Management \(IAM\) role in the [Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_role_arn) parameter of the Amazon ECS task or Amazon EKS pod definition\.
 
    ```
    {

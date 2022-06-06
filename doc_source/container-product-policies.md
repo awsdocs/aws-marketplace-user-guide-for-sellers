@@ -43,7 +43,7 @@ All products and their related metadata are reviewed when submitted to ensure th
   + If the external resources are no longer available, the product must be removed from AWS Marketplace as well\.
   + The external resources must not require additional payment methods or costs and the setup of the connection must be automated\.
 + Product software and metadata must not contain language that redirects users to other cloud platforms, additional products, or upsell services that aren't available on AWS Marketplace\.
-+ If your product is an add\-on to another ISV’s product, your product description must indicate that it extends the functionality of the other product and that without it, your product has very limited utility\. For example, *This product extends the functionality of <product name> and without it, this product has very limited utility\. Please note that <product name> might require its own license for full functionality with this listing\.*
++ If your product is an add\-on to another product or another ISV’s product, your product description must indicate that it extends the functionality of the other product and that without it, your product has very limited utility\. For example, *This product extends the functionality of <product name> and without it, this product has very limited utility\. Please note that <product name> might require its own license for full functionality with this listing\.*
 
 ## Architecture requirements<a name="container-architecture-requirements"></a>
 

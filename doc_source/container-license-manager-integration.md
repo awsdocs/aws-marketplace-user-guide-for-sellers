@@ -1,4 +1,4 @@
-# Contract pricing with AWS License Manager<a name="container-license-manager-integration"></a>
+# Contract pricing for Container products with AWS License Manager<a name="container-license-manager-integration"></a>
 
 For container\-based products with contract pricing, use AWS License Manager to associate licenses with your product\. 
 

@@ -124,7 +124,7 @@ You can update prices and metadata through the AWS Marketplace Management Portal
 
 1. Sign in to the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/)\.
 
-1. In the **Products** tab, a list of current products that you created is available\. In the table for your current products, choose the **Action** column to edit your product\. 
+1. In the **Products** tab, a list of current products that you created is available\. You edit your product listing or request changes here\.
 
 **Note**  
 For new subscribers, the price change is effective immediately\. For existing subscribers, the price change is effective on the first day of the month following a 90\-day period that begins on the date that the price change notification is sent\. For example, say you send a price change notification on March 16\. June 16 is about 90 days after March 16\. Because the price change happens on the first day of the month that follows the 90\-day period, the effective date of the change is July 1\.

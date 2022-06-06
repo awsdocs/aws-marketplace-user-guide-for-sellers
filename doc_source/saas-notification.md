@@ -4,7 +4,7 @@ To receive notifications, you subscribe to the AWS Marketplace Amazon Simple Not
 
 The following Amazon SNS topics are available to software as a service \(SaaS\) products:
 + [Amazon SNS topic: `aws-mp-entitlement-notification`](#saas-sns-message-body) – This topic notifies you when buyers create a new contract, upgrade it, renew it, or it expires\. This is only available for products with pricing models that include a contract \(also known as **SaaS Contracts** and **SaaS Contracts with Consumption \(Overages\)**\)\.
-+ [Amazon SNS topic: `aws-mp-subscription-notification`](#saas-sns-subscription-message-body) – This topic notifies you when a buyer subscribes to or unsubscribes from a product and includes the `offer-identifier` for private offers\. This is available for all pricing models, including contracts and subscriptions \(also known as **SaaS Subscriptions** and **SaaS Contracts with Consumption \(Overages\)**\)\.
++ [Amazon SNS topic: `aws-mp-subscription-notification`](#saas-sns-subscription-message-body) – This topic notifies you when a buyer subscribes to or unsubscribes from a product and includes the `offer-identifier` for private offers and a free trials flag for SaaS free trials\. This is available for all pricing models, including contracts and subscriptions \(also known as **SaaS Subscriptions**, **SaaS Contracts**, and **SaaS Contracts with Consumption \(Overages\)**\.
 
 To learn more about the scenarios in which you respond to these notifications, see the following topics:
 + [Integrate your SaaS subscription product](saas-integrate-subscription.md)
@@ -40,7 +40,8 @@ Each message in the `aws-mp-subscription-notification` topic has the following f
     "action": "<action-name>",
     "customer-identifier": " X01EXAMPLEX",
     "product-code": "n0123EXAMPLEXXXXXXXXXXXX",
-    "offer-identifier": "offer-abcexample123"
+    "offer-identifier": "offer-abcexample123",
+    "isFreeTrialTermPresent":"true"
 }
 ```
 

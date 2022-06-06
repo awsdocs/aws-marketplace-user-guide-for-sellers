@@ -1,15 +1,15 @@
-# AWS License Manager integration<a name="ami-license-manager-integration"></a>
+# Contract pricing for AMI products with AWS License Manager<a name="ami-license-manager-integration"></a>
 
 For Amazon Machine Image \(AMI\)\-based products with contract pricing, you use AWS License Manager to associate licenses with your product\. 
 
 AWS License Manager is a license management tool that enables your application to track and update licenses \(also known as entitlements\) that have been purchased by a customer\. This section provides information about how to integrate your product with AWS License Manager\. After the integration is complete, you can publish your product listing on AWS Marketplace\.
 
-For more information about AWS License Manager, see the [AWS License Manager User Guide](https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html) and the [AWS License Manager](https://docs.aws.amazon.com/cli/latest/reference/license-manager/index.html) section of the *AWS CLI Command Reference*\.
+For more information about AWS License Manager, refer to the [AWS License Manager User Guide](https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html) and the [AWS License Manager](https://docs.aws.amazon.com/cli/latest/reference/license-manager/index.html) section of the *AWS CLI Command Reference*\.
 
 **Note**  
 Customers can't launch new instances of the AMI after the contract expiry period\. However, during the contract duration, they can launch any number of instances\. These licenses are not node\-locked or tied to particular instances\.
 **Private Offer Creation**– Sellers can generate private offers for the products using the Private offer creation tool in the AWS Marketplace Management Portal\.
-**Reporting** – You can set up data feeds by setting up an Amazon S3 bucket in the **Report** section in the AWS Marketplace Management Portal\. For more information, see [Seller reports and data feeds](reports-and-data-feed.md)\.
+**Reporting** – You can set up data feeds by setting up an Amazon S3 bucket in the **Report** section in the AWS Marketplace Management Portal\. For more information, refer to [Seller reports and data feeds](reports-and-data-feed.md)\.
 
 ## License models<a name="license-models"></a>
 
@@ -37,7 +37,7 @@ With the configuration model, the entitlements are counted in one of two ways:
  The license is drawn from the pool of allowed amount of licenses upon use\. That entitlement is checked out permanently and can't be returned to the license pool\.
 
 **Example of processing a limited amount of data**  
-A user is entitled to process 500GB of data\. As they continue to process data, the quantity is drawn from the pool of 500GB until all 500GB licenses are consumed\.
+A user is entitled to process 500 GB of data\. As they continue to process data, the quantity is drawn from the pool of 500 GB until all 500 GB licenses are consumed\.
 
 For drawdown licenses, you can use the `CheckoutLicense` API operation to check out license units that are consumed\. 
 
@@ -218,29 +218,189 @@ Before publishing the product, you must do the following:
 
 1. Make a test call to the `RegisterUsage` API operation with a record for all of the pricing dimensions you deﬁne\.
 
-## Integrating an AMI product with License Manager<a name="integrate-with-LM"></a>
+## Integrating an AMI\-based product with AWS License Manager<a name="integrate-with-LM"></a>
+
+You can integrate your AMI\-based product with License Manager by using the [AWS License Manager](https://docs.aws.amazon.com/license-manager/latest/APIReference/Welcome.html) API\. Launch the Amazon EC2 instances by using AWS Marketplace AMI\-based products\. 
+
+**Note**  
+Make sure that you have completed the [License Manager integration prerequisites](#LM-prereqs) before you perform the following procedure\. 
 
 **To integrate your AMI\-based product with License Manager**
 
-1. Set IAM permissions to call License Manager\. For more information, see [License Manager integration prerequisites](#LM-prereqs)\.
+1. Complete the procedure in [Creating a test license in License Manager](#creating-test-license)\. You must create a test license in License Manager for testing your integration\.
 
-1. Download the AWS SDK\.
+1. Run the [GetLicense](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_GetLicense.html) API operation using the license Amazon Resource Name \(ARN\) that you obtained in step 1\. Note the value of the `KeyFingerprint` attribute of the `GetLicense` response for later use\. 
 
-   Don't configure AWS credentials within your software\. AWS credentials for the buyer are automatically obtained at runtime when your AMI is running within an Amazon EC2 instance, Amazon ECS task, or Amazon EKS pod\.
+1. Download and include the latest public AWS SDK in your application\. 
 
-1. Add license checks to your product\.
+1. To verify that the buyer is entitled to use a license for your application, run the [CheckoutLicense](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_CheckoutLicense.html) API operation\. Use the entitlements details and the key fingerprint of the test license that you obtained in step 1\. 
 
-   Your product can call the `CheckoutLicense` API operation wherever the license check should be performed\. For checking the license, your product has to know:
+   If there are no entitlements found for the license, or the entitlement maximum count is exceeded, the `CheckoutLicense` API operation returns `NoEntitlementsAllowedException`\. If the entitlements are valid, or available to use, the `CheckoutLicense` operation returns a successful response with the requested entitlements and their values\.
 
-   1. The trusted issuer of the license \(AWS Marketplace\)
+1. \(Required for floating entitlements only\) Run the [CheckinLicense](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_CheckInLicense.html) API operation using the `LicenseConsumptionToken` that was received in the `CheckoutLicense` response\. This action releases previously checked\-out entitlements back into the pool of available entitlements\.
 
-   1. The application's Product SKU \(Product ID\)
+1. After you successfully verify the License Manager integration with the test license that you created in step 1, update the key fingerprint in your code to `aws:294406891311:AWS/Marketplace:issuer-fingerprint`\. Now, you're ready to work with licenses issued by AWS Marketplace\.
 
-   1. The entitlement to check for this application
+Follow the release process of building the application to an AMI product and then submit the product to AWS Marketplace following the product publishing process\.
 
-   The API calls vary based on what kind of pricing licenses you set up\.
+### Creating a test license in License Manager<a name="creating-test-license"></a>
 
-1. Publish your product listing on AWS Marketplace\.
+You use version 2 of the AWS Command Line Interface \(AWS CLI\) to create a test license in AWS License Manager\. This test license is only used for verifying and testing the AWS License Manager integration\. After the testing is completed, you can delete the test license\. The actual license is generated by AWS Marketplace with a different key fingerprint\.
+
+AWS Marketplace supports two types of entitlements in AWS License Manager\. However, only one type can be enabled for a product\. When you create a license, including a test license, you must specify one of the following types of entitlements: 
+
+**Tiered entitlements ** – The tiered license model entitles the customer to certain application features\. Customers can't define the quantity of units they want to purchase\. However, they can select a single predefined package or tier\. Customers can modify the contract later to subscribe to another tier\.
+
+**Configurable entitlements ** – The configurable license model grants entitlements to a certain quantity of resources when the customer procures a license\. The customer chooses the quantity of units they want to purchase during the subscription process and will be billed based on the unit price\. Customers can also subscribe to multiple dimensions\.
+
+The required parameters for use in the `CheckoutLicense` API operation are as follows:
++ `CheckoutType` – The valid values are `Perpetual` or `Provisional`:
+  + `Perpetual` – Used when the quantity of entitlements checked out will be exhausted from the pool\. Example: Buyer is entitled to process 500 GB of data\. As they continue to process data, the quantity is drawn down and exhausted from the pool of 500 GB\. Gets the status of a purchased license on whether the license is expired or about to be expired to send a notification to the customer\.
+  + `Provisional` – Used for floating license entitlements where entitlements are checked out of the pool and returned back after use\. Example: User is entitled to 500 simultaneous users in the application\. As users log in and log out, the users are drawn and returned to the pool of 500 users\. For more information about floating license entitlements, see [Seller issued licenses in AWS License Manager\.](https://docs.aws.amazon.com/license-manager/latest/userguide/seller-issued-licenses.html)
++ `ClientToken` – Unique, case\-sensitive identifier to ensure the exact result occurs and is the same no matter how many times attempted\. We recommend that you use a random universally unique identifier \(UUID\) for each request\.
++ `Entitlements` – List of entitlements to be checked out\.
+  + For tiered entitlements, provide `Name` and `Unit` properties as follows:
+
+    `{`
+
+    `"Name": "<Entitlement_Name>",`
+
+    `"Unit": "None"`
+
+    `}`
+  + For configurable entitlements, provide `Name`, `Unit`, and `Value`properties as follows:
+
+    `{`
+
+    `"Name": "<Entitlement_Name>",`
+
+    `"Unit": "<Entitlement_Unit>",`
+
+    `"Value": <Desired_Count>{`
+
+    \}
++ `KeyFingerprint` – Use this key fingerprint to verify that the license is issued by AWS Marketplace\. The key fingerprint for licenses issued by AWS Marketplace is as follows:
+
+  `aws:294406891311:AWS/Marketplace:issuer-fingerprint`
++ `Product SKU` – Product ID with a Globally Unique Identifier \(GUID\) format that is associated with an AWS Marketplace product\.
+
+**Example of a configurable entitlement**  
+The following is an example of a request that uses the `CheckoutLicense` API operation to check out a configurable entitlement named `PowerUsers`\.  
+
+```
+aws license-manager checkout-license \
+   product-sku "2205b290-19e6-4c76-9eea-377d6bf71a47" \
+   checkout-type "PROVISIONAL" \
+   client-token "79464194dca9429698cc774587a603a1" \"Statement":[
+   entitlements "Name=PowerUsers,Value=1,Unit=Count" \ 
+   key-fingerprint "aws:294406891311:AWS/Marketplace:issuer-fingerprint"
+```
+
+**Example of a tiered entitlement**  
+The following is an example of a request that uses the `CheckoutLicense` API operation to check out a feature entitlement named `EnterpriseEdition`\.  
+
+```
+aws license-manager checkout-license \
+   --product-sku "2205b290-19e6-4c76-9eea-377d6bf71a47" \
+   --checkout-type "PROVISIONAL" \
+   --client-token "79464194dca9429698cc774587a603a1" \
+   --entitlements "Name=EnterpriseEdition,Unit=None" \
+   --key-fingerprint "aws:294406891311:AWS/Marketplace:issuer-fingerprint"
+```
+
+**To create a test license for your AMI\-based product**
+
+1. From your local environment with AWS CLI v2 installed, run the following script\. The script creates the test license and configures the appropriate product details\.
+
+   ```
+   #!/bin/bash
+   
+      # Replace with intended product ID on AWS Marketplace
+      PRODUCT_ID=<REPLACE-WITH-PRODUCT-ID>
+   
+      # Replace with license recipient's AWS Account ID
+      BENEFICIARY_ACCOUNT_ID=<REPLACE-WITH-BENEFICIARY-ACCOUNT-ID>\ 
+      
+      # Replace with your product's name
+      PRODUCT_NAME="Test Product"
+      
+      # Replace with your seller name on AWS Marketplace
+      SELLER_OF_RECORD="Test Seller" 
+      
+      # Replace with intended license name
+      LICENSE_NAME="AWSMP Test License"
+      
+      # Replace with desired contract dimensions
+      # More info here: https://docs.aws.amazon.com/license-manager/latest/APIReference/API_Entitlement.html
+      CONFIGURABLE_ENTITLEMENTS='[
+       {
+         "Name": "ReadOnly",
+         "MaxCount": 5,
+         "Overage": false,
+         "Unit": "Count",
+         "AllowCheckIn": true
+       }
+    ]'
+   
+      TIERED_ENTITLEMENTS='[
+       {
+         "Name": "EnterpriseUsage", 
+         "Value": "Enabled",
+         "Unit": "None"
+        
+    ]'
+   
+      # Format "yyyy-mm-ddTHH:mm:ss.SSSZ"
+      # This creates a validity period of 10 days starting the current day
+      # Can be updated to desired dates
+      VALIDITY_START=$(date +%Y-%m-%dT%H:%M:%S.%SZ)
+      VALIDITY_END=$(date -v +10d +%Y-%m-%dT%H:%M:%S.%SZ)
+   
+      # Configuration for consumption of the license as set on Marketplace products
+      CONSUMPTION_CONFIG='{
+        "RenewType": "None",
+        "ProvisionalConfiguration": {
+          "MaxTimeToLiveInMinutes": 60
+        }
+      }'
+   
+      # License's home Region
+      HOME_REGION=us-east-1
+   
+      # License issuer's name
+      ISSUER=Self  
+   
+      # Run AWS CLI command to create a license
+   aws license-manager create-license \
+     --license-name "${LICENSE_NAME}" \
+     --product-name "${PRODUCT_NAME}" \
+     --product-sku "${PRODUCT_ID}" \
+     --issuer Name="${ISSUER}" \
+     --beneficiary "${BENEFICIARY_ACCOUNT_ID}" \
+     --validity Begin="${VALIDITY_START}",End="${VALIDITY_END}" \
+     --entitlements "${CONFIGURABLE_ENTITLEMENTS}" \ # Replace with `TIERED_ENTITLEMENTS` if desired
+     --home-region "${HOME_REGION}" \
+     --region "${HOME_REGION}" \
+     --consumption-configuration "${CONSUMPTION_CONFIG}" \
+     --client-token $(uuidgen)
+   ```
+
+1. Grant the license using the AWS License Manager console\. For more information, see [distribute an entitlement](https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html#distribute-entitlement.) in the *License Manager User Guide*\.
+
+1. Sign in to the AWS account that acts as a buyer account\. Go to the AWS License Manager console to accept and activate the granted licenses\. For more information, see [manage your granted licenses](https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html#manage-granted-licenses) in the *License Manager User Guide*\.
+
+1. Run the following command in your environment\.
+
+   ```
+   aws license-manager checkout-license \
+      product-sku "${PRODUCT_ID}" \
+      checkout-type "PROVISIONAL" \ 
+      key-fingerprint "aws:294406891311:AWS/Marketplace:issuer-fingerprint" \
+      entitlements "${CONFIGURABLE_ENTITLEMENTS}" \
+      client-token $(uuidgen)
+   ```
+
+   The previous command uses `PROVISIONAL` as the value for the `CheckoutType` parameter\. If the entitlement uses a drawdown license, use `PERPETUAL` for the value\.
 
 ### License Manager API calls<a name="LM-API-calls"></a>
 

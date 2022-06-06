@@ -70,14 +70,14 @@ To ensure the security of the customer contact data available through the Produc
 
  The `StartSupportDataExport` method allows you to request contact details that customers have submitted for your PSC\-enabled products\. Data is exported from the start date specified in the request up to 15 minutes prior to the time of the request\. A successful request results in the dataset being published to the Amazon Simple Storage Service\(Amazon S3\) bucket specified\. 
 
- At this time, you can query the API to request the `test_customer_support_contacts_data` dataset\. This will export a static test dataset containing data that does not correspond to any real customer data\. You should use the test data for testing and integration\. The `customer_support_contacts_data` option, which will return the real customer contact data for your PSC\-enabled products, will not be available until after the General Availability of this feature later in 2016\. 
+ You can query the API to request the `test_customer_support_contacts_data` dataset, which exports a static test dataset containing data that doesn't correspond to real customer data\. You should use the test data for testing and integration\. The `customer_support_contacts_data` option returns real customer contact data for your PSC\-enabled products\.
 
 ### Request parameters<a name="request-parameters"></a>
 
 
 |  Input  |  Description  | 
 | --- | --- | 
-|  Data Set Type  |   The type of dataset requested to be exported\. Valid options for datasets are:   test\_customer\_support\_contacts\_data   customer\_support\_contacts\_data   The test\_customer\_support\_contacts\_data dataset provides sample data for testing and integration purposes and is available immediately\. The customer\_support\_contacts\_data dataset is currently unavailable\. This option will contain actual customer data and be available upon general availability of PSC\.   | 
+|  Data Set Type  |   The type of dataset requested to be exported\. Valid options for datasets are:   test\_customer\_support\_contacts\_data   customer\_support\_contacts\_data   | 
 |  From Date  |   The earliest date of data to be exported\. The exported data will contain information from the specified From Date to 15 minutes prior to the time of the request\.   The From Date must be expressed as an ISO 8601 date/time string\.   If you would like to receive the full data set, as opposed to a set of updates, specify any date prior to the date when you onboarded to the program\. To receive only incremental data since your last request, specify the endDateTime from the dataSetCoverageRange from the metadata JSON file resulting from your previous request\. See below for more information about the metadata JSON file\.   | 
 |  Role Name ARN  |  The Amazon Resource Name \(ARN\) of the IAM role with an attached permissions policy which provides the service with access to your resources\.  | 
 |  Destination S3 Bucket Name  |  The name \(friendly name, not ARN\) of the destination [Amazon S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)\. Your datasets will be published to this location\.  | 

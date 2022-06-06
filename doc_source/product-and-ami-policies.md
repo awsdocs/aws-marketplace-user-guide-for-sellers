@@ -2,7 +2,7 @@
 
 AWS Marketplace maintains the following policies for all Amazon Machine Image \(AMI\) products and offerings in AWS Marketplace\. The policies promote a safe, secure, and trustworthy platform for our customers\.
 
-All products and their related metadata are reviewed when they're submitted to ensure that they meet or exceed current AWS Marketplace policies\. These policies are reviewed and adjusted to meet evolving security guidelines\. AWS Marketplace continuously scans your products to verify that they meet changes to the security guidelines\. If products fall out of compliance, AWS Marketplace will contact you to  update your AMI product to meet new standards\. Likewise, if a newly discovered vulnerability is found to affect the AMI, we will ask you to provide an updated AMI with the relevant updates in place\. You must use the [self\-service AMI scanning tool](https://aws.amazon.com/marketplace/management/manage-products) before submitting your AMI\. This tool helps ensure that the AMI meets AWS Marketplace policies\.
+All products and their related metadata are reviewed when they're submitted to ensure that they meet or exceed current AWS Marketplace policies\. These policies are reviewed and adjusted to meet evolving security guidelines\. AWS Marketplace continuously scans your products to verify that they meet changes to the security guidelines\. If products fall out of compliance, AWS Marketplace will contact you to update your AMI product to meet new standards\. Likewise, if a newly discovered vulnerability is found to affect the AMI, we will ask you to provide an updated AMI with the relevant updates in place\. You must use the [self\-service AMI scanning tool](https://aws.amazon.com/marketplace/management/manage-products) before submitting your AMI\. This tool helps ensure that the AMI meets AWS Marketplace policies\.
 
 ## Security policies<a name="security"></a>
 
@@ -63,7 +63,7 @@ All AMIs must adhere to the following product usage policies:
   + If the external resources are no longer available, the product must be removed from AWS Marketplace as well\.
   + The external resources must not require additional payment methods or costs and the setup of the connection must be automated\.
 + Product software and metadata must not contain language that redirects users to other cloud platforms, additional products, or upsell services that aren't available in AWS Marketplace\.
-+ If your product is an add\-on to another ISV’s product, your product description must indicate that it extends the functionality of the other product and that without it, your product has very limited utility\. For example, *This product extends the functionality of <product name> and without it, this product has very limited utility\. Please note that <product name> might require its own license for full functionality with this listing\.*
++ If your product is an add\-on to another product or another ISV’s product, your product description must indicate that it extends the functionality of the other product and that without it, your product has very limited utility\. For example, *This product extends the functionality of <product name> and without it, this product has very limited utility\. Please note that <product name> might require its own license for full functionality with this listing\.*
 
 ## Architecture policies<a name="architecture"></a>
 
@@ -72,5 +72,6 @@ All AMIs must adhere to the following architecture policies:
 + AMIs must use HVM virtualization\.
 + AMIs must use 64\-bit or 64\-bit ARM architecture\.
 + AMIs must be AMIs backed by Amazon Elastic Block Store \(Amazon EBS\)\. We don't support AMIs backed by Amazon Simple Storage Service \(Amazon S3\)\.
++ AMIs must not use encrypted EBS snaphots\.
 + AMIs must not use encrypted file systems\.
 + AMIs must be built so that they can run in all AWS Regions and are Region\-agnostic\. AMIs built differently for different Regions aren't allowed\.

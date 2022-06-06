@@ -1,6 +1,22 @@
 # Notifications for AWS Marketplace events<a name="notifications"></a>
 
-The AWS Marketplace Notifications team can send automated email messages to the address associated with your AWS account to provide visibility into events on AWS Marketplace\. 
+The AWS Marketplace Notifications team can send automated email messages to the address associated with your AWS account to provide visibility into events on AWS Marketplace\. You do not need to set up notifications they are sent automatically for all AWS Marketplace product type subscriptions\.
+
+The AWS Marketplace Notifications team sends email notifications for offers and agreements made in AWS Marketplace verifying the transaction\. The notifications are sent in real\-time based on the successful fulfilment of a customer subscription\. 
+
+As a seller, you will receive an email notification when a buyer accepts an offer\. As a buyer, you will receive an email notification when you accept an offer\. Notifications are sent to a buyer and an Independent Software Vendor \(ISV\) for public or private offers subscriptions\. They are also sent to a buyer, ISV, and channel partner for Consulting Partner Private Offers \(CPPO\) private offer subscriptions\.
+
+Email notifications contain details listed here \(to ISV and CP\):
++ Purchase date, time, and time zone
++ Customer AWS account ID
++ Product name
++ Product identification
++ Offer name
++ Offer identification
++ Agreement identification
++ Service start date
++ Service end date
++ Purchase amount \(for contract and CCP\)
 
 AWS Marketplace can also send notifications through Amazon Simple Notification Service \(Amazon SNS\) about changes to customers' subscriptions and contract entitlements for the following products:
 + [Amazon SNS notifications for SaaS products](saas-notification.md)
@@ -20,6 +36,7 @@ The following event types are supported by email notifications for all products 
 + Recurring scan vulnerability or recurring scan reminder
 + Reseller opportunity has been created, updated, or expired 
 + Consulting partner private offer has been published
++ Email notifications to buyer and seller for offer acceptance
 
   For more information about reseller opportunities for consulting partner private offers, see [Creating a resell opportunity for a consulting partner as an ISV](consulting-partner-isv-info.md) and [Creating a private offer as a consulting partner](consulting-partner-info.md)\.
 
@@ -37,7 +54,7 @@ You can add up to 10 email addresses for custom email notifications using the AW
 
 **To add or update email addresses**
 
-1. Sign in to the [https://aws.amazon.com/marketplace/management/seller-settings/account](https://aws.amazon.com/marketplace/management/seller-settings/account)
+1. Sign in to the [AWS Marketplace Management Portal\.](https://aws.amazon.com/marketplace/management/)
 
 1. From **Settings**, choose the **Notifications** tab\.
 
@@ -55,7 +72,7 @@ You can remove an email address so the recipient is unsubscribed from custom ema
 
 **To unsubscribe recipients from event notifications**
 
-1. Sign in to the [https://aws.amazon.com/marketplace/management/seller-settings/account](https://aws.amazon.com/marketplace/management/seller-settings/account)
+1. Sign in to the [AWS Marketplace Management Portal\.](https://aws.amazon.com/marketplace/management/) 
 
 1. From **Settings** choose the **Notifications** tab\.
 

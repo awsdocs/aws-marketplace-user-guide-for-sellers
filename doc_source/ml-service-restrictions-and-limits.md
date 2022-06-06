@@ -22,7 +22,7 @@ SageMaker provides a selection of instance types that are optimized to fit diffe
 
 ## Payload size for inference<a name="ml-payload-size-for-inference"></a>
 
- For an endpoint, the maximum size of the input data per invocation is 25 MB\. This value can't be adjusted\. If your software expects larger input sizes, your buyers can deploy endpoints configured for [Amazon SageMaker Asynchronous Inference](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html)\. If Asynchronous Inference is needed, provide detailed usage information so that your buyers configure the endpoint properly\.
+ For an endpoint, limit the maximum size of the input data per invocation to 6 MB\. If your software expects larger input sizes, your buyers can deploy endpoints configured for [Amazon SageMaker Asynchronous Inference](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html)\. If Asynchronous Inference is needed, provide detailed usage information so that your buyers configure the endpoint properly\.
 
 For batch transform, the maximum size of the input data per invocation is 100 MB\. This value can't be adjusted\. 
 

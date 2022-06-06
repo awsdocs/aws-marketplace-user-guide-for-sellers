@@ -5,6 +5,7 @@
 **Notes**  
 Registering as an AWS Marketplace seller is a prerequisite to listing data products on AWS Data Exchange and making them available on AWS Marketplace\. For more information about these requirements, see [Providing Data Products on AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/latest/userguide/providing-data-sets.html) in the *AWS Data Exchange User Guide*\.
 For information about the permissions that AWS Marketplace sellers need, see [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md)\.
+For more information about product listing fees, registered sellers can view the [AWS Marketplace Seller Terms](https://aws.amazon.com/marketplace/management/seller-settings/terms) in the AWS Marketplace Management Portal\.
 
 ## Seller requirements for publishing free software products<a name="seller-requirements-for-publishing-free-products"></a>
 
@@ -73,6 +74,4 @@ Data products are published and managed from the AWS Data Exchange console\. AWS
 
  All registered sellers can access the AWS Marketplace Management Portal using their AWS credentials for the account that they used to create their products\. The account that you use is defined as the seller of record when a customer subscribes to your product\. If you need help determining the specific account that is the seller of record for your products, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\. 
 
- AWS Marketplace strongly recommends using AWS Identity and Access Management \(IAM\) roles to sign in to the AWS Marketplace Management Portal rather than using your root account credentials\. For more information, see [IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html#intro-identity-users) in the *IAM User Guide*\. 
-
- To enable people in your company to sign in to the AWS Marketplace Management Portal, create an IAM user for each person you want to have access and define access permissions to the AWS Marketplace Management Portal\. We also recommend creating an AWS account root user role to use for access\. For more information, see [AWS account root user credentials and IAM user credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) in the *AWS General Reference*\.
+ AWS Marketplace strongly recommends using AWS Identity and Access Management \(IAM\) roles to sign in to the AWS Marketplace Management Portal rather than using your root account credentials\. For more information, see [AWS Marketplace security](https://docs.aws.amazon.com/en_us/marketplace/latest/userguide/security.html)\. 

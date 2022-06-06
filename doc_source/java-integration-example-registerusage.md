@@ -76,9 +76,7 @@ It is possible to see transient issues in connecting to the AWS Marketplace Mete
    "rrO9Q4FEi3gweH3X4lrt2okf5zwIatUUwERlw016wTy_21Nv8S..."
    ```
 
-1. Rebuild a new version of your Docker container image that includes the `RegisterUsage` call, tag the container, and push it to any Docker registry that is compatible with Amazon ECS or Amazon EKS, such as Amazon ECR or Docker Hub\. If you are using Amazon ECR, ensure that the account launching the Amazon ECS task or Amazon EKS pod has permissions on the Amazon ECR repository\. Otherwise, execution fails\.
-**Note**  
- If you use a private Docker Hub repository, follow the steps in [Private Registry Authentication for Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/private-auth.html) in the *Amazon Elastic Container Service Developer Guide*\. 
+1. Rebuild a new version of your container image that includes the `RegisterUsage` call, tag the container, and push it to any container registry that is compatible with Amazon ECS or Amazon EKS, such as Amazon ECR or Amazon ECR Public\. If you are using Amazon ECR, ensure that the account launching the Amazon ECS task or Amazon EKS pod has permissions on the Amazon ECR repository\. Otherwise, the launch fails\.
 
 1.  Create an [IAM](https://aws.amazon.com/iam/) role that grants permission for your container to call `RegisterUsage`, as defined in the following code\. You must supply this IAM role in the [Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_role_arn) parameter of the Amazon ECS task or Amazon EKS pod definition\.
 

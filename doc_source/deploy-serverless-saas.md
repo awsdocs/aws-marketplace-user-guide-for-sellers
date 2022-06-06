@@ -2,6 +2,10 @@
 
 The AWS Marketplace serverless SaaS integration deployment fulfills the core capabilities required to successfully integrate a vendor’s SaaS solution with its corresponding listing on AWS Marketplace\. These capabilities include accepting new customer registrations, granting and revoking customer access, updating customer entitlements, and reporting metered usage\.
 
+The video featured here explains how to deploy the AWS Quick Start for AWS Marketplace serverless SaaS integration\. With this automated reference deployment, you can easily integrate new software as a service \(SaaS\) solutions on your AWS Marketplace seller account, accelerate the listing process, and significantly reduce go\-to\-market time\.
+
+[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/bfZHb8CMvnU/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/bfZHb8CMvnU)
+
 The following figure shows how the AWS Marketplace serverless SaaS integration on AWS environment sets up the following workflow of events\.
 
 ![\[Serverless SaaS integration workflow\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/serverless-saas-integration-workflow.png)

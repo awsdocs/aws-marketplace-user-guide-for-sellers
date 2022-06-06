@@ -31,7 +31,7 @@ These two product charge categories are displayed separately on the AWS Marketpl
 
 ### Free trial for single AMI hourly products<a name="free-trial"></a>
 
-Single AMI hourly products are eligible for the optional Free trial program\. In a Free trial, a customer can subscribe to the product and use a single instance for up to 31 days without paying software charges on the product\. Applicable AWS infrastructure charges still apply\. To offer a single AMI hourly product, define the duration of the trial period and notify the [AWS Marketplace Managed Catalog Operations \(MCO\)](https://aws.amazon.com/marketplace/management/contact-us/) team\. The trial period can be 5–31 days\.
+Single AMI hourly products are eligible for the optional Free trial program\. In a Free trial, a customer can subscribe to the product and use a single instance for up to 31 days without paying software charges on the product\. Applicable AWS infrastructure charges still apply\. Free trials will automatically convert to a paid subscription upon expiration\. Customers will be charged for additional usage above the free units provided\. To offer a single AMI hourly product, define the duration of the trial period and notify the [AWS Marketplace Managed Catalog Operations \(MCO\)](https://aws.amazon.com/marketplace/management/contact-us/) team\. The trial period can be 5–31 days\.
 
 When customers subscribe to a Free trial product, they receive a welcome email message that includes the term of the Free trial, a calculated expiration date, and details on unsubscribing\. A reminder email message is sent three days before the expiration date\.
 

@@ -133,7 +133,7 @@ For container\-based products with usage pricing, you use the [AWS Marketplace M
 
 For container\-based products with contract pricing, you use the AWS License Manager to associate licenses with your product\. 
 
-For more information about integrating with AWS License Manager, see [Contract pricing with AWS License Manager](container-license-manager-integration.md)\.
+For more information about integrating with AWS License Manager, see [Contract pricing for Container products with AWS License Manager](container-license-manager-integration.md)\.
 
 ## Adding a new version of your product<a name="container-add-version"></a>
 
@@ -434,6 +434,6 @@ When you publicly publish a container product, you make it visible to all AWS cu
 
 ## Container product scans for security issues<a name="container-security"></a>
 
-When you submit a container image URL, we scan it and check for security vulnerabilities\. We examine the images you provide for known security vulnerabilities\. To do this, we perform a layer\-by\-layer static scan on the image\. If we find critical vulnerabilities with remotely exploitable risk vectors, we provide you with a list of found issues\. We strongly recommend that you perform your own security analysis using a container image scanner such as Clair, Twistlock, Aqua Security, or Trend Micro to avoid delays in the ingestion and publishing process\. 
+When you create a change request to add a new version to your container product, we scan the container images included in that new version and check for security vulnerabilities\. To do this, we perform a layer\-by\-layer static scan on the image\. If we find critical vulnerabilities with remotely exploitable risk vectors, we provide you with a list of found issues\. We strongly recommend that you perform your own security analysis using a container image scanner such as Clair, Twistlock, Aqua Security, or Trend Micro to avoid delays in the ingestion and publishing process\. 
 
 Your choice of base image for building your container images can have a significant influence on the security profile of the final image\. If you choose a base image that already has known critical vulnerabilities, they will be flagged because of the base layer, even if your application software layers are clean\. We recommend that you verify that you're starting with a vulnerability\-free base container before you build your images and submit them to AWS Marketplace\. 

@@ -11,6 +11,10 @@
 + [Editing product visibility](#proserv-edit-visibility)
 + [Removing a professional services product](#proserv-remove-product)
 
+The following video explains more about listing professional services products in AWS Marketplace\.
+
+[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/8inkD7mgrLk/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/8inkD7mgrLk)
+
 ## Prerequisites<a name="proserv-prereqs"></a>
 
 To sell professional services on AWS Marketplace, you must complete the following prerequisites:

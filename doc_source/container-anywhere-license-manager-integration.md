@@ -2,7 +2,7 @@
 
 Follow these instructions to integrate AWS License Manager with an AWS Marketplace for Containers Anywhere product for Amazon EKS Anywhere, Amazon ECS Anywhere, Amazon EC2, or on\-premises infrastructure\. 
 
-For general information about the License Manager integration with AWS Marketplace, including available license models, see [Contract pricing with AWS License Manager](container-license-manager-integration.md)\. For more information about AWS License Manager, see the [AWS License Manager User Guide](https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html) and the [AWS License Manager](https://docs.aws.amazon.com/cli/latest/reference/license-manager/index.html) section of the *AWS CLI Command Reference*\.
+For general information about the License Manager integration with AWS Marketplace, including available license models, see [Contract pricing for Container products with AWS License Manager](container-license-manager-integration.md)\. For more information about AWS License Manager, see the [AWS License Manager User Guide](https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html) and the [AWS License Manager](https://docs.aws.amazon.com/cli/latest/reference/license-manager/index.html) section of the *AWS CLI Command Reference*\.
 
 ## Integrating an AWS Marketplace for Containers Anywhere product with License Manager<a name="containers-anywhere-integrate-with-LM"></a>
 

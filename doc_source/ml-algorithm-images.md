@@ -9,11 +9,21 @@
 **Note**  
  For algorithm products, the training container generates model artifacts that are loaded into the inference container on model deployment\. 
 
- The following is an overview of how buyers use an algorithm and its components: 
+The following diagram shows the workflow for publishing and using algorithm products\.
 
-1.  The buyer creates a training job with a compatible dataset and appropriate hyperparameter values\. SageMaker runs the training image and loads the training data and hyperparameters into the training container\. When the training job completes, the model artifacts located in `/opt/ml/model/` are compressed and copied to the buyer’s [Amazon S3](http://aws.amazon.com/s3/) bucket\. 
+![\[Diagram of how a seller creates an algorithm package image and how a buyer uses it.\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/ml-algorithm-package-images.png)
 
-1.  The buyer creates a model package with the model artifacts from the training stored in Amazon S3 and deploys the model\. SageMaker runs the inference image, extracts the compressed model artifacts, and loads the files into the inference container directory path `/opt/ml/model/` where it is consumed by the code that serves the inference\. 
+1. The seller creates a training image and an inference image \(no network access when deployed\) and uploads it to the Amazon ECR Registry\. 
+
+1. The seller then creates an algorithm resource in Amazon SageMaker and publishes their ML product on AWS Marketplace\.
+
+1. The buyer subscribes to the ML product\. 
+
+1. The buyer creates a training job with a compatible dataset and appropriate hyperparameter values\. SageMaker runs the training image and loads the training data and hyperparameters into the training container\. When the training job completes, the model artifacts located in `/opt/ml/model/` are compressed and copied to the buyer’s [Amazon S3](http://aws.amazon.com/s3/) bucket\. 
+
+1. The buyer creates a model package with the model artifacts from the training stored in Amazon S3 and deploys the model\. 
+
+1. SageMaker runs the inference image, extracts the compressed model artifacts, and loads the files into the inference container directory path `/opt/ml/model/` where it is consumed by the code that serves the inference\. 
 
 1.  Whether the model deploys as an endpoint or a batch transform job, SageMaker passes the data for inference on behalf of the buyer to the container via the container’s HTTP endpoint and returns the prediction results\. 
 
@@ -30,6 +40,10 @@
 
 **Note**  
  The following is only one example of packaging code for a training image\. For more information, see [Use your own algorithms and models with the AWS Marketplace](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-marketplace.html) and the [AWS Marketplace SageMaker examples](https://github.com/aws/amazon-sagemaker-examples/tree/master/aws_marketplace) on GitHub\.
+
+**Topics**
++ [Step 1: Creating the container image](#ml-step-1-creating-the-container-image-1)
++ [Step 2: Building and testing the image locally](#ml-step-2-building-and-testing-the-image-locally-1)
 
 ### Step 1: Creating the container image<a name="ml-step-1-creating-the-container-image-1"></a>
 
@@ -180,6 +194,10 @@ sudo docker run \
 **Note**  
  The following is only one example of packaging code for an inference image\. For more information, see [ Use your own algorithms and models with the AWS Marketplace](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-marketplace.html) and the [AWS Marketplace SageMaker examples](https://github.com/aws/amazon-sagemaker-examples/tree/master/aws_marketplace) on GitHub\.  
 The following example uses a web service, [Flask](https://pypi.org/project/Flask/), for simplicity, and is not considered production\-ready\.
+
+**Topics**
++ [Step 1: Creating the inference image](#ml-step-1-creating-the-inference-image)
++ [Step 2: Building and testing the image locally](#ml-step-2-building-and-testing-the-image-locally-2)
 
 ### Step 1: Creating the inference image<a name="ml-step-1-creating-the-inference-image"></a>
 

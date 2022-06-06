@@ -6,7 +6,7 @@ Before submitting your AMI product request to AWS Marketplace, review this check
 + Your AMI must be production\-ready\. 
 + Your AMI can't restrict product usage by time or any other measurements\. 
 + Your AMI must be compatible with the 1\-Click fulfillment experience\. 
-+ Everything required to use the product is in the software, including client applications\. 
++ Everything required to use the product is in the software, including client applications\. Products that require external dependencies, such as software packages or client applications, must follow the [Product usage policies](product-and-ami-policies.md#product-usage) which include proper disclosure\. 
 + The default user uses a randomized password, or creating the initial user requires verification that the buyer is authorized to use the instance using a value unique to the instance such as instance ID\.
 
  For free or paid products:

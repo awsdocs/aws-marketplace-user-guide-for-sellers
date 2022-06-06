@@ -2,7 +2,7 @@
 
 AWS Marketplace provides a number of data feeds to help sellers collect and analyze information about your product sales\. Data feeds are available to all registered AWS Marketplace sellers\. Since data feeds are generated within a day, they contain the most current data available\.
 
-This page provides an overview of data feeds, and explains how to access and use them\. Subsequent pages describe each data feed\. 
+This page provides an overview of data feeds and explains how to access and use them\. Subsequent pages describe each data feed\. 
 
 ## Storage and structure of data feeds<a name="data-feed-details"></a>
 
@@ -143,6 +143,10 @@ When the AWS Marketplace reports service calls Amazon S3, AWS KMS, or Amazon SNS
                 }
         },
 ```
+
+## Unsubscribing from data feeds<a name="data-feed-unsubscribing"></a>
+
+Open a web browser and sign in to the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/)\. Then, go to the [Contact us page](https://aws.amazon.com/marketplace/management/contact-us/) to submit an unsubscribe request to the AWS Marketplace Managed Catalog Operations \(MCO\) team\. The unsubscribe request can take up to 10 business days to process\.
 
 ## Using data feeds<a name="data-feed-using"></a>
 

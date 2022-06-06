@@ -9,8 +9,8 @@ Most of your product's settings can’t be changed after you've configured them\
 
 There are three pricing options for SaaS products on AWS Marketplace\. Choosing the right pricing model for your product is the most important decision you will make\. Choosing the wrong pricing model can set you back by weeks, because it determines the payment options for your customers and the billing integration code you'll need to write, test, and deploy\.
 + **SaaS subscriptions** – A pay\-as\-you\-go model where buyers are billed for their hourly usage of your SaaS product\.
-+ **SaaS contracts** – Buyers are either billed in advance for the use of your software, or you can offer them a flexible payment schedule\. 
-+ **SaaS contracts with pay\-as\-you\-go** – This option is similar to a standard contract, however your customers can also pay for additional usage above their contract\. This is a blended pricing option, that gives your customers the most pricing options and it requires the most integration code on your end\.
++ **SaaS contracts** – Buyers are either billed in advance for the use of your software, or you can offer them a flexible payment schedule\. You can create a free trial version of your SaaS listing on AWS Marketplace\.
++ **SaaS contracts with pay\-as\-you\-go** – This option is similar to a standard contract, however your customers can also pay for additional usage above their contract\. This is a blended pricing option, that gives your customers the most pricing options and it requires the most integration code on your end\. These pricing types support a free trial\.
 
 For more information on pricing, see [SaaS product pricing](saas-pricing-models.md)\.
 

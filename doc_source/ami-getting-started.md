@@ -14,7 +14,7 @@ AMI\-based products include a set of one or more versions of the software, and m
 
 You also create the first version of the software\. Depending on how you are delivering your software, this might be a single AMI, a set of one or more AMIs with AWS CloudFormation templates, or software packages for your buyer to use in creating their own AMIs\. For more information, see [AMI\-based product delivery methods](ami-products.md#ami-product-delivery-methods)\.
 
-For paid products, buyers are billed for the number of installed instances\. To meter on a different dimension that your software tracks \(for example, number of users of the product\), integrate your product with the AWS Marketplace Metering Service\. For more information, see [AWS Marketplace Metering Service integration](metering-service.md)\.
+For paid products, buyers are billed for the number of installed instances\. To meter on a different dimension that your software tracks \(for example, number of users of the product\), integrate your product with the AWS Marketplace Metering Service\. For more information, see [Custom metering for AMI products with AWS Marketplace Metering Service](custom-metering-with-mp-metering-service.md)\.
 
 When you create your product and the first version of your software, it's initially published in a limited scope so that only your account can access it\. When you're ready, you can publish it to the AWS Marketplace catalog to allow buyers to subscribe and purchase your product\.
 

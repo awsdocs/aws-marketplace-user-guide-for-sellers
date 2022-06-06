@@ -1,26 +1,42 @@
 # Model package images<a name="ml-model-package-images"></a>
 
- An Amazon SageMakerSageMaker model package is a pre\-trained model that makes predictions and does not require any further training by the buyer\. 
+ An Amazon SageMaker model package is a pre\-trained model that makes predictions and does not require any further training by the buyer\. 
 
  A model package includes the following components: 
 +  An inference image stored in [Amazon Elastic Container Registry](http://aws.amazon.com/ecr/) \(Amazon ECR\) 
 +  \(Optional\) Model artifacts, stored separately in [Amazon S3](http://aws.amazon.com/s3/) 
 
 **Note**  
- Model artifacts are files your model uses to make predictions and are generally the result of your own training processes\. Artifacts can be any file type that is needed by your model, but must use\.tar\.gz compression\. For model packages, they can either be bundled within your inference image or be stored separately in Amazon S3\. The model artifacts stored in Amazon S3 are loaded into the inference container at runtime\. When publishing your model package, those artifacts are published and stored in AWS Marketplace owned Amazon S3 buckets that are inaccessible by the buyer directly\. 
+ Model artifacts are files your model uses to make predictions and are generally the result of your own training processes\. Artifacts can be any file type that is needed by your model but must use\.tar\.gz compression\. For model packages, they can either be bundled within your inference image or stored separately in Amazon SageMaker\. The model artifacts stored in Amazon S3 are loaded into the inference container at runtime\. When publishing your model package, those artifacts are published and stored in AWS Marketplace owned Amazon S3 buckets that are inaccessible by the buyer directly\. 
 
- The following is an overview of how buyers use a model package and its components: 
+**Tip**  
+If your inference model is built with a deep learning framework such as Gluon, Keras, MXNet, PyTorch, TensorFlow, TensorFlow\-Lite, or ONNX, consider using Amazon SageMaker Neo\. Neo can automatically optimize inference models that deploy to a specific family of cloud instance types such as `ml.c4`, `ml.p2`, and others\. For more information, see [Optimize model performance using Neo](https://docs.aws.amazon.com/sagemaker/latest/dg/neo.html) in the *Amazon SageMaker Developer Guide*\.
 
-1.  The buyer subscribes to a model package and deploys the model\. SageMaker runs the inference image\. Any seller\-provided model artifacts not bundled in the inference image are loaded dynamically at runtime\. 
+The following diagram shows the workflow for publishing and using model package products\. 
 
-1.  SageMaker passes the buyer’s inference data to the container via the container’s HTTP endpoints and returns the prediction results\. 
+![\[Diagram of how a seller creates a model package image and how a buyer uses it.\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/ml-model-package-images.png)
 
+1. The seller creates an inference image \(no network access when deployed\) and pushes it to the Amazon ECR Registry\. 
+
+   The model artifacts can either be bundled in the inference image or stored separately in S3\.
+
+1. The seller then creates a model package resource in Amazon SageMaker and publishes their ML product on AWS Marketplace\.
+
+1. The buyer subscribes to the ML product and deploys the model\. 
 **Note**  
- Your model can be deployed as an endpoint for single inferences or as a batch job to get predictions for an entire dataset at once\. For more information, see [Deploy Models for Inference](https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html)\. 
+ The model can be deployed as an endpoint for real\-time inferences or as a batch job to get predictions for an entire dataset at once\. For more information, see [Deploy Models for Inference](https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html)\. 
+
+1. SageMaker runs the inference image\. Any seller\-provided model artifacts not bundled in the inference image are loaded dynamically at runtime\. 
+
+1.  SageMaker passes the buyer’s inference data to the container by using the container’s HTTP endpoints and returns the prediction results\. 
 
 ## Creating an inference image for model packages<a name="ml-creating-an-inference-image-for-model-packages"></a>
 
- This section provides a walkthrough for packaging your inference code into an inference image for your model package product\. 
+ This section provides a walkthrough for packaging your inference code into an inference image for your model package product\. The process consists of the following steps:
+
+**Topics**
++ [Step 1: Creating the container image](#ml-step-1-creating-the-container-image)
++ [Step 2: Building and testing the image locally](#ml-step-2-building-and-testing-the-image-locally)
 
  The inference image is a Docker image containing your inference logic\. The container at runtime exposes HTTP endpoints to allow SageMaker to pass data to and from your container\. 
 

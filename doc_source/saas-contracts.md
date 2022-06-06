@@ -75,7 +75,7 @@ A SaaS contract product has a contract expiry\. When a contract ends, the follow
 
 1.  You have 1 hour to meter any remaining usage for the customer\. After this time has elapsed, you can no longer send metering records for this customer\. 
 
-## When a SaaS contract is cancelled<a name="saas-contract-cancellations"></a>
+## When a SaaS contract is canceled<a name="saas-contract-cancellations"></a>
 
 Key points of the SaaS contract cancellation process include the following: 
 
@@ -90,3 +90,29 @@ Key points of the SaaS contract cancellation process include the following:
 1. You have one hour to send a ﬁnal metering record for the customer for any additional usage charges\. 
 
 1. You notify the customer from your product that the cancellation is in progress\. If a customer indicates that they want to cancel through your product, direct the customer to AWS Marketplace\. To guarantee that there will be no future charges, customers should conﬁrm the cancellation with AWS Marketplace\. 
+
+## Creating a SaaS free trial offer<a name="creating-a-saas-free-trial-offer"></a>
+
+Sellers can create and manage SaaS free trial offers in the AWS Marketplace Management Portal \(AMMP\)\. Customers can evaluate software products before making large purchase decisions by using the SaaS free trial option\. After a customer subscribes to your product, your product performs entitlement checks the same way it does for paid customers\.
+
+If you use Seller Data Delivery Service \(SDDS\), a new supplemental SaaS free trial report, 'agreement\_detail\_report', will be delivered daily to your S3 bucket\. The report includes agreement details such as `is_free_trial_offer`, subscriber name and id, `offer_id`, agreement start and end date, etc\. As a seller, you also receive SNS notifications when new subscriptions are created\. SNS notifications include a` isFreeTrialTermPresent` flag to help identify free trial agreements\.
+
+Each AWS account can only use a free trial for a SaaS product once\. The free usage amount granted during a free trial is not shared across linked accounts in an AWS organization\. Different linked accounts within a single main payer account can create their own individual free trials\.
+
+**To create and manage SaaS free trial offers as a seller**
+
+1. Sign in to the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management), and choose **Create or manage offers** from **Offers** on the navigation bar\.
+
+1. Choose the **Public free trials** tab to review all SaaS free trials and then choose **Create free trial offer**\. Sellers can create one SaaS free trial offer per each public SaaS contract\.
+
+1. For **Offer fundamentals**, select your **Product** and then choose **Next**\.
+
+1. In **Free trial settings**, enter the number of days for your **Free trial length**, enter the dimensions from your existing public offer, and set the quantity limits per each dimension\. The duration of free trials range from 7\-90 days\. You also have the option to **Remove** or **Add dimensions**\.
+
+1. For **Service agreement**, select your contract type or **Custom EULA** and then choose **Review offer**\.
+
+1. Verify and review all information for the offer, and then choose **Create offer**\.
+
+## Cancelling a SaaS free trial offer<a name="cancel-saas-free-trial-offer"></a>
+
+Sellers can cancel free trial offers at any time from the AWS Marketplace Management Portal by selecting the offer, choosing **View details**, and choosing **Cancel offer**\. Once an offer is canceled, active agreements for this offer will be active until expiration\. New agreements for a canceled offer can't be created\.

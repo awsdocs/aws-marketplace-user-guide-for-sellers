@@ -1,4 +1,4 @@
-# Billing, metering, and licensing integrations<a name="container-products-billing-integration"></a>
+# Container product billing, metering, and licensing integrations<a name="container-products-billing-integration"></a>
 
 AWS Marketplace integrates with other AWS services to provide both metering and contract\-based pricing for your container product\.
 

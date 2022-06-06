@@ -6,7 +6,7 @@ When buyers use the AMI that you provide, they're billed for instances that they
 
 See the following resources:
 + For more information about pricing AWS Marketplace products, see [Product pricing](pricing.md)\.
-+ For more information about creating custom metering for your product, see [AWS Marketplace Metering Service integration](metering-service.md)\.
++ For more information about creating custom metering for your product, see [Custom metering for AMI products with AWS Marketplace Metering Service](custom-metering-with-mp-metering-service.md)\.
 
 ## AMI\-based product delivery methods<a name="ami-product-delivery-methods"></a>
 

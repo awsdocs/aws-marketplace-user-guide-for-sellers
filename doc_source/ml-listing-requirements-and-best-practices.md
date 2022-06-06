@@ -33,8 +33,9 @@ Before creating a machine learning product listing, ensure that you have the fol
   +  How your model was trained or the amount of data that was used 
   +  What the performance metrics are and the validation data used 
   +  If medical, whether or not your model is for diagnostic use 
-+  Optionally, for paid products, offer a free trial of 14–30 days for customers to try your product\. For more information, see [Machine learning product pricing](machine-learning-pricing.md)\. 
-+  Optionally, for model package products, if you want to enable a real\-time product demo on your product listing page, contact [AWS Marketplace Seller Operations](http://aws.amazon.com/marketplace/management/contact-us/)\. The product demo allows a prospective buyer to try your model directly on the listing page without subscribing to or deploying the model themselves\. 
++ By default, machine learning products are configured to have public visibility\. However, you can create a product with private visibility\. For more information, see [Creating your product listing](ml-publishing-your-product-in-aws-marketplace.md#ml-creating-your-listing)\.
++  \(Optional\) For paid products, offer a free trial of 14–30 days for customers to try your product\. For more information, see [Machine learning product pricing](machine-learning-pricing.md)\. 
++  \(Optional\) For model package products, if you want to enable a real\-time product demo on your product listing page, contact [AWS Marketplace Seller Operations](http://aws.amazon.com/marketplace/management/contact-us/)\. The product demo allows a prospective buyer to try your model directly on the listing page without subscribing to or deploying the model themselves\. 
 
 ## Requirements for usage information<a name="ml-requirements-for-usage-information"></a>
 
@@ -42,7 +43,7 @@ Clear usage information that describes the expected inputs and outputs of your p
 
 With each new version of your resource that you add to your product listing, you must provide usage information\. 
 
-To add usage information for a new product that you are publishing for the first time, sign into the AWS Marketplace Management Portal console\. From the Products dropdown, choose **Machine learning**\. Select your product\. In the **Product Overview** under **Launch option**, provide the ARN of your model package or algorithm resource, and choose **Add**\. 
+To add usage information for a new product that you are publishing for the first time, sign into the AWS Marketplace Management Portal console\. From the **Products** dropdown, choose **Machine learning**\. Select your product\. In the **Product Overview** under **Launch option**, provide the ARN of your model package or algorithm resource, and choose **Add**\. 
 
 To edit the existing usage information for a specific version, choose **Edit** under **Launch option** and then **Edit version**\. 
 
@@ -50,7 +51,7 @@ To edit the existing usage information for a specific version, choose **Edit** u
 
 A clear explanation of your format, with examples of inputs and outputs, is important to help your buyers to understand and use your product\. This understanding helps your buyers to perform any necessary transformations on the input data to get the best inference results\. 
 
-You will be prompted for the following when adding your SageMaker resource to your product listing\.
+You will be prompted for the following when adding your Amazon SageMaker resource to your product listing\.
 
 ### Inference inputs and outputs<a name="ml-inference-inputs-and-outputs"></a>
 
@@ -64,7 +65,7 @@ For samples, provide input files that work with your product\. If your model pe
 
 In the **Information to train a model** section, provide the input data format and code snippets for any necessary preprocessing of the data\. Include supported MIME content types \(for example, **image/jpeg**, **image/png**, **image/bmp**\), description of values if applicable, and limitations\. Ensure to include input samples hosted on [GitHub](https://github.com)\. 
 
-Explain both optional and mandatory features that can be provided by the buyer, and specify whether the PIPE input mode is supported\. If [distributed training](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-training-algo-running-container.html#your-algorithms-training-algo-running-container-dist-training) \(training with more than 1 CPU/GPU instance\) is supported, specify this\. For tuning, list the recommend hyperparameters\. 
+Explain both optional and mandatory features that can be provided by the buyer, and specify whether the `PIPE` input mode is supported\. If [distributed training](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-training-algo-running-container.html#your-algorithms-training-algo-running-container-dist-training) \(training with more than 1 CPU/GPU instance\) is supported, specify this\. For tuning, list the recommend hyperparameters\. 
 
 ## Requirements for Jupyter notebook<a name="ml-requirements-for-jupyter-notebook"></a>
 
@@ -72,7 +73,7 @@ When adding your SageMaker resource to your product listing, provide a link to a
 
 Use the AWS SDK for Python \(Boto\)\. A well\-developed sample notebook makes it easier for buyers to try and use your listing\. 
 
-For model package products, your sample notebook demonstrates the preparation of input data, creation of an endpoint for real\-time inference, and performance of batch\-transform jobs\. For more information, see [Model Package listing and Sample notebook](https://github.com/awslabs/amazon-sagemaker-examples/tree/master/aws_marketplace/curating_aws_marketplace_listing_and_sample_notebook/ModelPackage) on GitHub\. For sample notebooks, see [generic\_sample\_notebook](https://github.com/awslabs/amazon-sagemaker-examples/tree/master/aws_marketplace/using_model_packages/generic_sample_notebook) and [auto\_insurance](https://github.com/awslabs/amazon-sagemaker-examples/tree/master/aws_marketplace/using_model_packages/auto_insurance)\. The latter sample notebook works in all Regions, without entering any parameters and without a buyer needing to locate sample data\.
+For model package products, your sample notebook demonstrates the preparation of input data, creation of an endpoint for real\-time inference, and performance of batch\-transform jobs\. For more information, see [Model Package listing and Sample notebook](https://github.com/awslabs/amazon-sagemaker-examples/tree/master/aws_marketplace/curating_aws_marketplace_listing_and_sample_notebook/ModelPackage) on GitHub\. For sample notebooks, see [generic\_sample\_notebook](https://github.com/awslabs/amazon-sagemaker-examples/tree/master/aws_marketplace/using_model_packages/generic_sample_notebook) and [auto\_insurance](https://github.com/awslabs/amazon-sagemaker-examples/tree/master/aws_marketplace/using_model_packages/auto_insurance)\. The latter sample notebook works in all AWS Regions, without entering any parameters and without a buyer needing to locate sample data\.
 
 **Note**  
 An underdeveloped sample Jupyter notebook that does not show multiple possible inputs and data preprocessing steps might make it difficult for the buyer to fully understand your product's value proposition\. 

@@ -14,7 +14,8 @@ Each message in the `aws-mp-subscription-notification` topic has the following f
     "action": "<action-name>",
     "customer-identifier": " X01EXAMPLEX",
     "product-code": "n0123EXAMPLEXXXXXXXXXXXX",
-    "offer-identifier": "offer-abcexample123"
+    "offer-identifier": "offer-abcexample123",
+    "isFreeTrialTermPresent":"true"
 }
 ```
 

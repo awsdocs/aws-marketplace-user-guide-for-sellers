@@ -1,6 +1,6 @@
 # Flexible payment scheduler<a name="flexible-payment-scheduler"></a>
 
-Flexible payment scheduler enables you to extend private offers with a custom payment schedule\. The schedule can be spread over up to three years, and the customer makes payments in regular installments\. After they are subscribed, your customers can see all the payments on the schedule and on their AWS invoice, helping them track their spending\. Flexible payment scheduler is available for private offers on AMI multi\-year and SaaS contracts products\.
+Flexible payment scheduler enables you to extend private offers with a custom payment schedule\. The schedule can be spread over up to five years, and the customer makes payments in regular installments\. After they are subscribed, your customers can see all the payments on the schedule and on their AWS invoice, helping them track their spending\. Flexible payment scheduler is available for private offers on AMI multi\-year and SaaS contracts products\.
 
 Any customer on invoice terms, for example net\-30 or net\-60 terms, can subscribe to a private offer with a flexible payment schedule\. Customers who pay their AWS bill using a credit card can't\. If you try to create a private offer with a custom payment schedule for a customer who isn't on invoice terms, you receive an error\. 
 
