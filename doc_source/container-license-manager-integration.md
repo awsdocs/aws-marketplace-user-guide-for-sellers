@@ -242,7 +242,7 @@ Don't configure AWS credentials within your software\. AWS credentials for the b
 ## License Manager API operations<a name="container-LM-API-calls"></a>
 
 To manage the licenses stored in the customer's License Manager account, your software can use the following API operations:
-+ `GetLicense` – Gets the status of a purchased license on whether the license is expired or about to be expired to send a notification to the customer\.
++ `GetLicense` – An API that the software can query\. It retrieves the status of a purchased license \(i\.e\. expired or expiring soon\) and sends a status notification to the customer\.
 + `CheckoutLicense` – Discovers licenses that the user has purchased\. You can also use the `CheckoutLicense` API operation to update the license quantity when the user has consumed some quantity of licenses\. With `CheckoutLicense`, you can keep checking out the quantities of licenses used by the customer\. When the customer exhausts all the licenses, this call returns an error\. For information about the suggested cadence to run `CheckoutLicense`, see [License renewals and upgrades](#container-LM-lic-renew-upgrade)\.
 + `ExtendLicenseConsumption` – In case of floating dimensions, when the software checks out a license, the license will return to the pool automatically after 60 minutes\. If you want to extend the time the license remains checked out, use the `ExtendLicenseConsumption` API operation to extend the license for another 60 minutes\.
 + `CheckInLicense` – In case of floating dimensions, when you want to return the license to the entitlement pool, use the `CheckInLicense` API operation\.

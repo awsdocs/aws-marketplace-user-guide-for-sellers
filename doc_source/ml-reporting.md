@@ -20,4 +20,4 @@
 
  For other available reports, see [Seller reports](https://docs.aws.amazon.com/marketplace/latest/userguide/Reporting.html)\. 
 
-You can also create custom reports using the available [Data feeds](data-feed.md) from AWS Marketplace\.
+You can also create custom reports using the available [Seller Delivery Data Feeds Service](data-feed-service.md) from AWS Marketplace\.

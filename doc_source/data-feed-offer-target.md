@@ -15,11 +15,11 @@ The following table explains the names and descriptions of the data feed's colum
 | offer\_id\+offer\_revision | The identifier and revision of the offer\. These two columns reference the offer that this target relates to\.Can used to join to the `offer_id` and `offer_revision` fields of the `Target` data feed\. | 
 | target\_type | Indicates whether the offer recipient is BuyerAccounts, which indicates a private offer, or ParticipatingPrograms\. | 
 | polarity | Indicates whether the offer is intended to be made to the `target_type`\. Acceptable values are as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-offer-target.html)  | 
-| value | A string that represents the target: either an AWS account ID or a program that can be used with an offer\. For example, [Standard Contract for AWS Marketplace \(SCMP\)](standardized-license-terms.md#standard-contracts), [Enterprise Contract for AWS Marketplace \(ECMP\)](standardized-license-terms.md#enterprise-contracts), or [AWS Marketplace Field Demonstration Program \(FDP\)](field-demonstration-program.md)\. | 
+| value | A string that represents the target: either an AWS account ID or a program that can be used with an offer\. For example, [Standard Contract for AWS Marketplace \(SCMP\)](standardized-license-terms.md#standard-contracts), or [AWS Marketplace Field Demonstration Program \(FDP\)](field-demonstration-program.md)\. | 
 
 ## Example of offer target data feed<a name="data-feed-offer-target-sample-data"></a>
 
-The following shows an example of the offer target data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed.md#data-feed-historization)\. 
+The following shows an example of the offer target data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed-service.md#data-feed-historization)\. 
 
 
 | offer\_target\_id  | offer\_id  | offer\_revision | target\_type | polarity | value | 

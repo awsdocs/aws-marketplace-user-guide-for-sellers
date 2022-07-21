@@ -2,7 +2,7 @@
 
 The offer data feed provides information about all offers that you've created as the seller of record\. If a single offer has multiple revisions, all revisions are included in the data feed\.
 
-When you make an offer revision and the data in an exposed field changes, a new record is created in the data feed for the same primary key \(`offer_id` plus `offer_revision`\)\. However, the `valid_from` field has a different value\. For more information about the data feed history columns, see [Historization of the data](data-feed.md#data-feed-historization)\.
+When you make an offer revision and the data in an exposed field changes, a new record is created in the data feed for the same primary key \(`offer_id` plus `offer_revision`\)\. However, the `valid_from` field has a different value\. For more information about the data feed history columns, see [Historization of the data](data-feed-service.md#data-feed-historization)\.
 
 The offer data feed is refreshed every 24 hours, so new data is available daily\.
 
@@ -22,7 +22,7 @@ The following table provides the names and descriptions of the data feed's colum
 
 ## Example of offer data feed<a name="data-feed-offer-sample-data"></a>
 
-The following shows an example of the offer data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed.md#data-feed-historization)\.
+The following shows an example of the offer data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed-service.md#data-feed-historization)\.
 
 
 | offer\_id  | offer\_revision | name | expiration\_date | opportunity\_name | opportunity\_description | seller\_account\_id | opportunity\_id | 

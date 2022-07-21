@@ -4,7 +4,7 @@ This data feed provides information about billing events, including invoicing an
 
 For example, you can use this data feed to learn when and what a buyer is invoiced\. You can also use the [example SQL queries](#data-feeds-billing-event-query-examples) to analyze the data from this data feed\.
 
-This data feed contains information associated with billing events for which you are the seller of record\. For agreements made via channel partners, this data feed contains information about billing events between the manufacturer and seller of record\.
+This data feed contains information associated with billing events for which you are the seller of record\. For agreements made through channel partners, this data feed contains information about billing events between the manufacturer and seller of record\.
 
 The billing event data feed is refreshed every 24 hours, so new data is available daily\.
 
@@ -16,25 +16,25 @@ The following table explains the names and descriptions of the data feed's colum
 | Column name  | Description  | 
 | --- | --- | 
 | billing\_event\_id | An identifier for a billing event\. This ID is unique in the seller's environment\.  | 
-| from\_account\_id | The account that initiated the billing event\. If transction\_type is SELLER\_REV\_SHARE, it is the buyer's payer account\. This is a foreign key to the [account](data-feed-account.md) data feed\.Can be used to join to the `Account` data feed on the `account_id` field\. | 
+| from\_account\_id | The account that initiated the billing event\. If transaction\_type is SELLER\_REV\_SHARE, it is the buyer's payer account\. This is a foreign key to the [account](data-feed-account.md) data feed\.Can be used to join to the `Account` data feed on the `account_id` field\. | 
 | to\_account\_id | The account that receives the transaction amount for the product\. This is a foreign key to the account data feed\.Can be used to join to the `Account` data feed on the `account_id` field\. | 
 | end\_user\_account\_id | The account that uses the product\. This account may be different from the buyer and payer accounts\.Can be used to join to the `Account` data feed on the `account_id` field\. | 
 | product\_id | The identifier of the product\. This is a foreign key to the [product](data-feed-product.md) data feed\.Can be used to join to the `Product` data feed on the `product_id` field\. | 
 | action |  The type of action for this event\. Possible values are as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
 | transaction\_type |  The type of transaction\. For examples, see [Taxing scenarios](#data-feeds-billing-event-tax-examples)\. Possible values are as follows:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
-| parent\_billing\_event\_id | If the action is DISBURSEMENT or FORGIVEN and the transaction\_type is DISBURSEMENT, this is the billing\_event\_id that initiated this billing event\. If action has another value, this field is null\.  | 
-| disbursement\_billing\_event\_id |  The related disbursement when the `action` is `DISBURSED` AND one of the following is true:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html) In all other cases, this value is null\.  | 
+| parent\_billing\_event\_id | When the value of broker\_id is AWS\_INC, the value of action is DISBURSEMENTor FORGIVEN, and the value of transaction\_type is DISBURSEMENT, the parent\_billing\_event\_id refers to the original billing\_event\_id that initiated this billing event\. If action has another value, this field is null\. When the value of `broker_id` is `AWS_EUROPE`, the `parent_billing_event_id` refers to the original `billing_event_id` that initiated this billing event for the following scenarios: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)When the value of `broker_id` is `AWS_EUROPE`, the `parent_billing_event_id` refers to the original `billing_event_id` of the previous successful disbursement billing event for the following scenario:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)When the value of `broker_id` is `AWS_EUROPE`, this field is null for all remaining scenarios\. | 
+| disbursement\_billing\_event\_id |  The related disbursement when the value of `action` is `DISBURSED` and one of the following is true:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html) In all other scenarios, this value is null\.  | 
 | amount | The billing event amount\.  | 
 | currency | The ISO 639 currency code\. | 
 | balance\_impacting | Whether the amount is taken into account in calculating seller disbursements\. A value of 0 indicates the amount is shown for informational purposes and has no effect on the balance\. A value of 1 indicates that this amount takes into account in determining seller disbursements\.  | 
 | invoice\_date | The date the invoice was created\. | 
-| payment\_due\_date | When the action is INVOICED, the due date for the invoice\. | 
+| payment\_due\_date | When the value of action is INVOICED, the due date for the invoice\. | 
 | usage\_period\_start\_date | The start date for the period in the record\. | 
 | usage\_period\_end\_date | The end date for the period in the record\. | 
 | invoice\_id | The AWS invoice ID\. | 
 | billing\_address\_id | The payer's billing address reference in the address data feed\.Can be used to join to the `Address` data feed on the `address_id` field\. | 
 | transaction\_reference\_id |  An identifier that allows you to cross\-reference data from the following reports: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
-| bank\_trace\_id | For disbursement transactions \(transaction\_type = DISBURSEMENT and action = DISBURSED\), the trace ID assigned by the bank\. The trace ID can be used to correlate with bank\-provided reports from the seller bank\. | 
+| bank\_trace\_id | For disbursement transactions \(transaction\_type =is DISBURSEMENT and action is DISBURSED\), the trace ID assigned by the bank\. The trace ID can be used to correlate with bank\-provided reports from the seller bank\. | 
 | broker\_id |  An identifier of the business entity which facilitated the transaction\. Possible values are as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-billing-event.html)  | 
 
 ## Taxing scenarios<a name="data-feeds-billing-event-tax-examples"></a>
@@ -148,7 +148,7 @@ The following tables show the relevant information in Jane's data feed at the en
 
 ## Example queries<a name="data-feeds-billing-event-query-examples"></a>
 
-As described in [Using data feeds](data-feed.md#data-feed-using), you can use [ Athena](https://docs.aws.amazon.com/athena/latest/ug/what-is.html) to run queries on the data that's collected and stored as data feeds in your managed Amazon S3 bucket\. This section provides some examples of common ways you might do this\. All examples assume that a single currency is used\.
+As described in [Using data feeds](data-feed-service.md#data-feed-using), you can use [ Athena](https://docs.aws.amazon.com/athena/latest/ug/what-is.html) to run queries on the data that's collected and stored as data feeds in your managed Amazon S3 bucket\. This section provides some examples of common ways you might do this\. All examples assume that a single currency is used\.
 
 ## Example 1: Amount invoiced, including taxes<a name="data-feed-example-query-tax-invoice"></a>
 

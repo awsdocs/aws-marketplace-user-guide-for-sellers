@@ -17,7 +17,7 @@ The following table explains the names and descriptions of the data feed's colum
 
 ## Example of legacy mapping data feed<a name="data-feed-legacy-mapping-sample-data"></a>
 
-The following shows an example of the legacy mapping data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed.md#data-feed-historization)\.
+The following shows an example of the legacy mapping data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed-service.md#data-feed-historization)\.
 
 
 | mapping\_type | legacy\_id  | new\_id | 

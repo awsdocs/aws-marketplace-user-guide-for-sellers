@@ -49,6 +49,8 @@ Be sure that you are signed out from another AWS account before signing in with 
 
 1. On the **Create Private Offer** page:
 
+   1. If the opportunity has an attached reseller contract, an **Accept reseller contract** section displays\. View the contract and then select **I accept the reseller contract** or **I accept the Reseller Contract for AWS Marketplace \(RCMP\)**, depending on the contract\.
+
    1. For **Buyer\(s\)**, enter the one or more buyer AWS account IDs\.
 
       You can enter up to 25 buyer account IDs\.

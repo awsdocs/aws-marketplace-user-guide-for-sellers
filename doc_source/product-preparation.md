@@ -7,7 +7,7 @@ Preparing to publish a product on AWS Marketplace includes configuring your pack
 + [Product pricing](pricing.md)
 + [Regions and countries for your AWS Marketplace product](regions-and-countries.md)
 + [Private offers](private-offers-overview.md)
-+ [Standardized license terms](standardized-license-terms.md)
++ [Standardized contracts in AWS Marketplace](standardized-license-terms.md)
 + [Categories and metadata](categories-and-metadata.md)
 + [Search engine optimization for products](search-engine-optimization.md)
 

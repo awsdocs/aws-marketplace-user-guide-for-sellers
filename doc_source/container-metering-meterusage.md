@@ -1,4 +1,4 @@
-# Custom metering for Container products with AWS Marketplace Metering Service<a name="container-metering-meterusage"></a>
+# Custom metering for container products with AWS Marketplace Metering Service<a name="container-metering-meterusage"></a>
 
 AWS Marketplace container products can have custom metering on up to 24 different pricing dimensions per product\. Each dimension can have a long\-term contract price associated with it\. To enable custom metering, integrate your container product with AWS Marketplace Metering Service\. You can define your own pricing units and custom metering for that usage to AWS for billing using the [https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html) API operation\.
 
@@ -58,30 +58,15 @@ If your container image integrates with the `MeterUsage` operation and receives 
 
 Exceptions other than `ThrottlingException` are thrown only on the initial call to `MeterUsage`\. Subsequent calls from the same Amazon ECS task or Amazon EKS pod do not throw `CustomerNotSubscribedException` even if the customer unsubscribes while the task or pod is still running\. These customers are still charged for running containers after they unsubscribe and their usage is tracked\.
 
-The following table describes the errors that `MeterUsage` might throw\. Each AWS SDK programming language has a set of error handling guidelines that you can refer to for additional information\. 
-
-
-|  **Error**  |  **Description**  | 
-| --- | --- | 
-| DuplicateRequestException |  A metering record has already been emitted for the given `{usageDimension, timestamp}` with a different `usageQuantity`\.  | 
-| InvalidUsageDimensionException |  The usage dimension does not match one of the `UsageDimensions` associated with the product\.  | 
-| TimestampOutOfBoundsException  |  The `timestamp` value passed in the `MeterUsage` is out of allowed range\.  | 
-|  InternalServiceErrorException  |  MeterUsage isn't available\. | 
-|  CustomerNotEntitledException  |  The customer doesn't have a valid subscription for the product\.  | 
-|  InvalidProductCodeException  |  The ProductCode value passed in as part of the request doesn't exist\.  | 
-|  PlatformNotSupportedException  |  AWS Marketplace doesn't support metering usage from the underlying platform\. Only Amazon ECS, Amazon EKS, and AWS Fargate are supported\.  | 
-|  ThrottlingException  |  The calls to MeterUsage are throttled\. | 
-|  InvalidEndpointRegionException  |  MeterUsage must be called in the same AWS Region that the Amazon ECS task or Amazon EKS pod was launched in\. This prevents a container from choosing a Region \(for example, withRegion\(“us\-east\-1”\)\) when calling MeterUsage\.  | 
-|  InvalidTagException  | The tags in the UsageAllocations object must have unique keys within each UsageAllocation, have no key\-value pairs the same across UsageAllocation objects, and the number of tags must be 5 or less per UsageAllocation\.  | 
-|  InvalidUsageAllocationsException  | The UsageAllocation object allocations do not add up to the UsageQuantity value\. | 
+See [MeterUsage](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_MeterUsage.html) in the *AWS Marketplace Metering Service API Reference*for detailed descriptions of common errors for `MeterUsage`\. Each AWS SDK programming language has a set of error handling guidelines that you can refer to for additional information\. 
 
 ## Vendor\-metered tagging \(Optional\)<a name="container-vendor-metered-tagging"></a>
 
 Vendor\-metered tagging helps Independent Software Vendors \(ISVs\) give the buyer more granular insight into their software usage and can help them perform cost allocation\.
 
-There are many ways to tag a buyer's software usage\. One way is to first ask your buyers what they want to see in their cost allocation\. Then you can split the usage across properties that you track for the buyer’s account\. Examples of properties include `Account ID`, `Business Unit`, `Cost Centers`, and other relevant metadata for your product\. These properties are exposed to the buyer as tags\. Using tags, buyers can view their costs split into usage by the tag values in their AWS Billing Console \([https://console\.aws\.amazon\.com/billing/](https://console.aws.amazon.com/billing/)\)\. Vendor\-metered tagging doesn't change the price, dimensions, or the total usage that you report\. It allows your customer to view their costs by categories appropriate to your product\.
+There are many ways to tag a buyer's software usage\. One way is to first ask your buyers what they want to see in their cost allocation\. Then you can split the usage across properties that you track for the buyer’s account\. Examples of properties include `AccountId`, `Business Unit`, `Cost Centers`, and other relevant metadata for your product\. These properties are exposed to the buyer as tags\. Using tags, buyers can view their costs split into usage by the tag values in their AWS Billing Console \([https://console\.aws\.amazon\.com/billing/](https://console.aws.amazon.com/billing/)\)\. Vendor\-metered tagging doesn't change the price, dimensions, or the total usage that you report\. It allows your customer to view their costs by categories appropriate to your product\.
 
-In a common use case, a buyer subscribes to your product with one AWS account\. The buyer also has numerous user accounts associated with the same product subscription\. You can create usage allocations with tags that have a key of `Account ID`, and then allocate usage to each user account\. In this case, buyers can activate the `Account ID` tag in their Billing and Cost Management console and analyze individual user account usage\.
+In a common use case, a buyer subscribes to your product with one AWS account\. The buyer also has numerous user accounts associated with the same product subscription\. You can create usage allocations with tags that have a key of `AccountId`, and then allocate usage to each user account\. In this case, buyers can activate the `AccountId` tag in their Billing and Cost Management console and analyze individual user account usage\.
 
 ### Seller experience<a name="container-vendor-metered-tag-seller"></a>
 
@@ -92,6 +77,18 @@ In the following diagram, **Resource 1** has a unique set of `AccountId` and `Bu
 **Resource 2** and **Resource 3** both have the same `AccountId` tag, `2222`, and the same `BusinessUnit` tag, `Operations`\. As a result, they're combined into a single `UsageAllocations` entry in the **Metering Record**\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/seller-vendor-meter-tag.png)
+
+Sellers can also combine resources without tags into a single `UsageAllocation` with the allocated usage quantity and send it as one of the entries in `UsageAllocations`\.
+
+Limits include:
++ Number of tags – 5
++ Size of `UsageAllocations` \(cardinality\) – 2,500
+
+Validations include:
++ Characters allowed for the tag key and value – a\-zA\-Z0\-9\+ \-=\.\_:\\/@
++ Maximum tags across `UsageAllocation` list – 5
++ Two `UsageAllocations` can't have the same tags \(that is, the same combination of tag keys and values\)\. If that's the case, they must use the same `UsageAllocation`\.
++ The sum of `AllocatedUsageQuantity` of `UsageAllocation` must equal the `UsageQuantity`, which is the aggregate usage\.
 
 ### Buyer experience<a name="container-vendor-metered-tag-buyer"></a>
 

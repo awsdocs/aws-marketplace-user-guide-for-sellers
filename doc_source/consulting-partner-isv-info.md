@@ -45,7 +45,9 @@ Press and hold down the **Ctrl** key to select multiple products at once\.
 
 1. \(Optional\) Set one or more **Buyer account IDs** to specify that the opportunity is only for those buyers\.
 
-1. \(Optional\) Select the **End User License Agreement** \(EULA\) version or upload the EULA to be included in the opportunity\.
+1. \(Optional\) Select the **End User License Agreement \(EULA\)** version or upload the EULA to be included in the opportunity\.
+
+1. \(Optional\) Select the **Reseller Contract for AWS Marketplace \(RCMP\)** or upload a custom contract to be included in the opportunity\.
 
 1. Select **Review opportunity**, and make sure that the information is correct\.
 

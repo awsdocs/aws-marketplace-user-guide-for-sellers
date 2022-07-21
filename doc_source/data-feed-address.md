@@ -25,7 +25,7 @@ The following table explains the names and descriptions of the data feed's colum
 
 ## Example of address data feed<a name="data-feed-address-sample-data"></a>
 
-The following shows an example of the address data feed\. In the data feed, this information is presented in a single table\. For readability, the data is shown in two tables here, and the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed.md#data-feed-historization)\. 
+The following shows an example of the address data feed\. In the data feed, this information is presented in a single table\. For readability, the data is shown in two tables here, and the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed-service.md#data-feed-historization)\. 
 
 
 | address\_id  | aws\_account\_id  | email\_domain  | company\_name  | country  | state\_or\_region  | city  | postal\_code  | 

@@ -116,6 +116,18 @@ In the following diagram, **Resource 1** has a unique set of `AccountId` and `Bu
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/seller-vendor-meter-tag.png)
 
+Sellers can also combine resources without tags into a single `UsageAllocation` with the allocated usage quantity and send it as one of the entries in `UsageAllocations`\.
+
+Limits include:
++ Number of tags – 5
++ Size of `UsageAllocations` \(cardinality\) – 2,500
+
+Validations include:
++ Characters allowed for the tag key and value – a\-zA\-Z0\-9\+ \-=\.\_:\\/@
++ Maximum tags across `UsageAllocation` list – 5
++ Two `UsageAllocations` can't have the same tags \(that is, the same combination of tag keys and values\)\. If that's the case, they must use the same `UsageAllocation`\.
++ The sum of `AllocatedUsageQuantity` of `UsageAllocation` must equal the `UsageQuantity`, which is the aggregate usage\.
+
 ### Buyer experience<a name="ami-vendor-metered-tag-buyer"></a>
 
 The following table shows an example of the buyer experience after a buyer activates the `AccountId` and `BusinessUnit` vendor tags\. 

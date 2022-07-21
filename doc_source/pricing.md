@@ -34,7 +34,7 @@ For information about the pricing models for specific product delivery methods, 
 
 ### Annual pricing<a name="annual-pricing"></a>
 
-An annual pricing model enables you to offer products to customers who can purchase a 12\-month subscription\. The subscription pricing can provide up to 40 percent savings compared to running the same product hourly for extended periods\. The customer is invoiced for the full amount of the contract at the time of subscription\. For more information about how annual subscriptions are presented to customers, see [AMI Subscriptions](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-ami-subscriptions.html)\. 
+An annual pricing model enables you to offer products to customers who can purchase a 12\-month subscription\. As an example, the subscription pricing can provide up to 40 percent savings compared to running the same product hourly for extended periods\. The customer is invoiced for the full amount of the contract at the time of subscription\. For more information about how annual subscriptions are presented to customers, see [AMI subscriptions](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-ami-subscriptions.html) or [Pricing models for paid container products](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-what-is-aws-marketplace-for-containers.html#what-is-aws-marketplace-for-containers-pricing)\. 
 
 Considerations when working with an annual subscription include the following:
 + Annual pricing is defined per instance type\. It can be the same for all Amazon Elastic Compute Cloud \(Amazon EC2\) instance types or different for each instance type\. 

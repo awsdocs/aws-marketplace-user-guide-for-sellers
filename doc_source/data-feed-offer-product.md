@@ -8,7 +8,7 @@ When you add or remove a product from an offer, you create an offer revision\.
 
 The offer product data feed is refreshed every 24 hours, so new data is available daily\.
 
-The following table explains the names and descriptions of the data feed's columns\. For information about the data feed history columns, see [Historization of the data](data-feed.md#data-feed-historization)\.
+The following table explains the names and descriptions of the data feed's columns\. For information about the data feed history columns, see [Historization of the data](data-feed-service.md#data-feed-historization)\.
 
 
 | Column name  | Description  | 

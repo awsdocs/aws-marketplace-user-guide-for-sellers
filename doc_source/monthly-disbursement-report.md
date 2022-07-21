@@ -4,7 +4,7 @@ The disbursement report provides information about funds that we collected and d
 
 Refunds appear as negative amounts because the money is returned to your customer after you authorize a refund\. 
 
-This report is available on the AWS Marketplace Management Portal under the **Reports** tab\.  To create your own report similar to this one you can use the AWS Marketplace [Data feeds](data-feed.md), including the [Example 1: Disbursements by product](data-feed-full-examples.md#data-feed-example-disbursement-by-product) as a base report to customize to meet your needs\.
+This report is available on the AWS Marketplace Management Portal under the **Reports** tab\.  To create your own report similar to this one you can use the AWS Marketplace [Seller Delivery Data Feeds Service](data-feed-service.md), including the [Example 1: Disbursements by product](data-feed-full-examples.md#data-feed-example-disbursement-by-product) as a base report to customize to meet your needs\.
 
 ## Publication schedule<a name="publication-schedule-3"></a>
 

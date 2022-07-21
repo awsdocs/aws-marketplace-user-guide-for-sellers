@@ -22,7 +22,7 @@ If your SaaS product is integrated with another AWS managed service that handles
   +  If you send multiple requests for the same customer/dimension/hour, the records are not aggregated\. 
 + Sellers can send metering records with a timestamp up to 6 hours in the past if the customer is subscribed to your product\. If the customer unsubscribes, sellers have to send the metering records within 1 hour of the customer unsubscribing\. 
 + `BatchMeterUsage` payloads must not exceed 1MB\. Choose the number of usage records to send in a `BatchMeterUsage` request so that you don't exceed the size of the payload\.
-+  The AWS Marketplace Metering Service is available in the AWS Regions listed in the topic [AWS Marketplace endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/aws-marketplace.html) in the *AWS General Reference*\. By default, the US East \(N\. Virginia\) Region is enabled for SaaS metering products when you request your product\. If you intend to use other Regions, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. For more information, see [BatchMeterUsage](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_BatchMeterUsage.html)\. 
++  The AWS Marketplace Metering Service is available in the AWS Regions listed in [AWS Marketplace endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/aws-marketplace.html) in the *AWS General Reference*\. By default, the US East \(N\. Virginia\) Region is enabled for SaaS metering products when you request your product\. If you intend to use other Regions, contact the [https://aws.amazon.com/marketplace/management/contact-us/](https://aws.amazon.com/marketplace/management/contact-us/) team\. For more information, see [BatchMeterUsage](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_BatchMeterUsage.html)\. 
 
 For code examples, see [Code examples for SaaS product integration](saas-code-examples.md)\.
 
@@ -51,6 +51,22 @@ In the following diagram, **Resource 1** has a unique set of `AccountId` and `Bu
 **Resource 2** and **Resource 3** both have the same `AccountId` tag, `2222`, and the same `BusinessUnit` tag, `Operations`\. As a result, they're combined into a single `UsageAllocations` entry in the **Metering Record**\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/seller-vendor-meter-tag.png)
+
+Sellers can also combine resources without tags into a single `UsageAllocation` and send it as one of the entries in `UsageAllocations`\.
+
+Limits include:
++ Number of tags – 5
++ Size of `UsageAllocations` \(cardinality\) – 2,500
++ Maximum request size – 1 MB 
+
+Validations include:
++ Characters allowed for the tag key and value – a\-zA\-Z0\-9\+ \-=\.\_:\\/@
++ Maximum tags across `UsageAllocation` list – 5
++ Two `UsageAllocations` can't have the same tags \(that is, the same combination of tag keys and values\)\. If that's the case, they must use the same `UsageAllocation`\.
++ The sum of `AllocatedUsageQuantity` of `UsageAllocation` must equal the `UsageQuantity`, which is the aggregate usage\.
++ The maximum payload size can't be more than 1 MB\. This includes input attribute keys \(for example, `UsageRecords`, `AllocatedUsageQuantity`, tags\)\.
+**Note**  
+To make sure that you aren't breaching the payload limit, create a sample request object with a maximum size based on the business requirement, convert the object into a JSON string, and obtain the size in bytes\. Make sure that a single API call won't breach the 1 MB limit\. For example\. if a request with 1 `UsageRecord` has a maximum size of 200 KB, don't send more than 5 `UsageRecords` as part of the request \(200KB \* 5 = 1MB\)\.
 
 ### Buyer experience<a name="saas-vendor-metered-tag-buyer"></a>
 

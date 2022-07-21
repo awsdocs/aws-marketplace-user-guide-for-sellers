@@ -21,7 +21,7 @@ If a buyer unsubscribes from your product while running it, they are entitled to
 
 As you create and publish your container products and use the `MeterUsage` or `RegisterUsage` API operations for entitlement and metering, keep the following guidelines in mind:
 + Don't configure AWS credentials within your software or the Docker container image\. AWS credentials for the buyer are automatically obtained at runtime when your container image is running within an Amazon ECS task or Amazon EKS pod\.
-+  To call the `MeterUsage` or `RegisterUsage` API operations from Amazon EKS, you must [use a supported AWS SDK](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html)\. To test `MeterUsage` or `RegisterUsage` integration of Amazon EKS, you must run an Amazon EKS cluster running Kubernetes 1\.13\.x or greater\. Kubernetes 1\.13 is required for AWS Identity and Access Management \(IAM\) roles for pod support, which is a dependency for the running pod to obtain the AWS credentials required to invoke these actions on Amazon EKS\. 
++  To call the `MeterUsage` or `RegisterUsage` API operations from Amazon EKS, you must [use a supported AWS SDK](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html)\. To test `MeterUsage` or `RegisterUsage` integration of Amazon EKS, you must run an Amazon EKS cluster running Kubernetes 1\.13\.x or greater\. Kubernetes 1\.13 is required for AWS Identity and Access Management \(IAM\) roles for pod support\. IAM roles are required for the running pod to obtain the AWS credentials required to invoke these actions on Amazon EKS\. 
 + You can do local development, but you will get a `PlatformNotSupportedException` exception\. This exception won't occur when you launch the container on AWS container services \(Amazon ECS, Amazon EKS, and Fargate\)\.
 
 ### Supported AWS Regions<a name="supported-regions-metering"></a>
@@ -37,7 +37,7 @@ For example, a customer launches an Amazon ECS task or Amazon EKS pod\. The `Reg
 
 
 
-AWS SDK languages don't determine the `AWS_REGION` in a consistent manner\. For example, the AWS SDK for Java automatically uses [Amazon EC2 instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) \(specifically, `ec2InstanceMetadata`\) to obtain the Region when environment variables or other configuration aren't present\. In this instance, only call `ec2InstanceMetadata` if the `AWS_REGION` environment variable isn’t present\.
+AWS SDK languages don't determine the `AWS_REGION` in a consistent manner\. If your SDK does not automatically pick up the `AWS_REGION`, software needs to be written manually to determine the `AWS_Region`\. For example, the AWS SDK for Java automatically uses [Amazon EC2 instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) \(specifically, `ec2InstanceMetadata`\) to obtain the Region when environment variables or other configuration aren't present\. In this instance, only call `ec2InstanceMetadata` if the `AWS_REGION` environment variable isn’t present\.
 
 For information about how to dynamically obtain an AWS Region at runtime, refer to the [AWS SDK Developer Guide](http://aws.amazon.com/tools) for your programming language\.
 
@@ -59,7 +59,7 @@ AWS License Manager is a license management tool that enables your application t
 For more information about AWS License Manager, see the [AWS License Manager User Guide](https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html) and the [AWS License Manager](https://docs.aws.amazon.com/cli/latest/reference/license-manager/index.html) section of the *AWS CLI Command Reference*\.
 
 **Note**  
-Customers can't launch new instances of the container after the contract expiry period\. However, during the contract duration, they can launch any number of instances\. These licenses are not node\-locked or tied to particular instances\.
+Customers can't launch new instances of the container after the contract expiry period\. However, during the contract duration, they can launch any number of instances\. These licenses are not bound to a specific node or instance\. Any software running on any container on any node can checkout the license as long as it has the assigned AWS credentials\.
 **Private Offer Creation** – Sellers can generate private offers for the products using the Private offer creation tool in the AWS Marketplace Management Portal\.
 **Reporting** – You can set up data feeds by setting up an Amazon S3 bucket in the **Report** section in the AWS Marketplace Management Portal\. For more information, see [Seller reports and data feeds](reports-and-data-feed.md)\.
 

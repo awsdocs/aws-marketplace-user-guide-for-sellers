@@ -46,7 +46,7 @@ To build your CloudFormation templates, you must meet the template prerequisites
 + For ease of review by the AWS Marketplace team and transparency to the customer, we recommend that you add comments in your **UserData** section\.
 
 ### Template input parameters<a name="template-input-parameters"></a>
-+ Input parameters to the template must not include the AWS Marketplace customer's AWS credentials \(such as passwords, public keys, private keys, or certificates\) or personal information such as an email address\.
++ Input parameters to the template must not include the AWS Marketplace customer's AWS credentials \(such as passwords, public keys, private keys, or certificates\)\.
 + For sensitive input parameters such as passwords, choose the `NoEcho` property and enable stronger regular expression\. For other input parameters, set the most common inputs along with appropriate helper text\.
 + Use AWS CloudFormation parameter types for inputs where available\.
 + Use `AWS::CloudFormation::Interface` to group and sort input parameters\.

@@ -2,7 +2,7 @@
 
 This data feed provides information about all the accounts you interact with: your own, any channel partners you work with, buyers, payers, and all taxed accounts\. 
 
-Account data is immutable, and it is not associated with a version number\. Changes to fields are appended, so this data feed may have several rows with the same `account_id` and different `valid_from` values\. For information about data history fields, see [Historization of the data](data-feed.md#data-feed-historization)\.
+Account data is immutable, and it is not associated with a version number\. Changes to fields are appended, so this data feed may have several rows with the same `account_id` and different `valid_from` values\. For information about data history fields, see [Historization of the data](data-feed-service.md#data-feed-historization)\.
 
 The account data feed is refreshed every 24 hours, so new data is available daily\.
 
@@ -21,7 +21,7 @@ The following table explains the names and descriptions of the data feed's colum
 
 ## Example of account data feed<a name="data-feed-account-sample-data"></a>
 
-The following shows an example of the account data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed.md#data-feed-historization)\.
+The following shows an example of the account data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed-service.md#data-feed-historization)\.
 
 
 | account\_id  | aws\_account\_id  | encrypted\_account\_id | mailing\_address\_id | tax\_address\_id | tax\_registration\_number | tax\_legal\_name | 

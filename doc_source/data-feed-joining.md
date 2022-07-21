@@ -14,14 +14,14 @@ The following diagram shows the tables in each domain, and how they are related 
 The following sections provide *entity relationship* \(ER\) diagrams for each domain\. Each ER diagram shows the tables and the fields within each table, as well as the fields that you can use to join the tables\.
 
 **Note**  
-The ER diagrams in this section do not include the common fields for all data feeds\. For more information about the common fields, see [Storage and structure of data feeds](data-feed.md#data-feed-details)\.
+The ER diagrams in this section do not include the common fields for all data feeds\. For more information about the common fields, see [Storage and structure of data feeds](data-feed-service.md#data-feed-details)\.
 
 The following table describes the symbols that are used in the ER diagrams\.
 
 
 | Symbol | Description | 
 | --- | --- | 
-|  ![\[An image of the letters "PK" as a symbol.\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/datafeeds-primary-key.png)  |  **Primary key** – A primary key for the table\. When used with the `valid_from` and `update_date` fields, it is unique\. For more details about using these fields together, see [Historization of the data](data-feed.md#data-feed-historization)\. If more than one field is marked as primary key, then the fields together form the primary key\.  | 
+|  ![\[An image of the letters "PK" as a symbol.\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/datafeeds-primary-key.png)  |  **Primary key** – A primary key for the table\. When used with the `valid_from` and `update_date` fields, it is unique\. For more details about using these fields together, see [Historization of the data](data-feed-service.md#data-feed-historization)\. If more than one field is marked as primary key, then the fields together form the primary key\.  | 
 |  ![\[An image of the letters "FK" as a symbol.\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/datafeeds-foreign-key.png)  |   **Foreign key** – A field that represents a primary key in a different table\. Not necessarily unique in the table\.   In some cases, the foreign key can be blank if the record in the current table does not have a corresponding record in the foreign table\.   | 
 |  ![\[An image of the letters "AK" as a symbol.\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/datafeeds-alternate-key.png)  |   **Alternate key** – A key that can be used as a key in the table\. Follows the same uniqueness rules as the primary key\.  | 
 |  ![\[An image of a line with a cross at one end and circle and fork at the other.\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/datafeeds-one-to-many.png)  |   **Connector** – Lines between fields represent a connection, which is two fields that can be used to join tables\. The ends of the line represent the type of connection\. This example represents a one\-to\-many connection\.  | 

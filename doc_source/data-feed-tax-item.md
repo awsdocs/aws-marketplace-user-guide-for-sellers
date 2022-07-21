@@ -8,7 +8,7 @@ The tax item data feed is refreshed every 24 hours, so new data is available dai
 
 Tax item data is immutable\. 
 
-The following table explains the names and descriptions of the data feed's columns\. For information about data history columns, see [Historization of the data](data-feed.md#data-feed-historization)\.
+The following table explains the names and descriptions of the data feed's columns\. For information about data history columns, see [Historization of the data](data-feed-service.md#data-feed-historization)\.
 
 
 | Column name  | Description  | 

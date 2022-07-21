@@ -1,12 +1,12 @@
 # Notifications for AWS Marketplace events<a name="notifications"></a>
 
-The AWS Marketplace Notifications team can send automated email messages to the address associated with your AWS account to provide visibility into events on AWS Marketplace\. You do not need to set up notifications they are sent automatically for all AWS Marketplace product type subscriptions\.
+The AWS Marketplace Notifications team can send automated email messages to the email address associated with your AWS account\. These email messages provide you with visibility into events on AWS Marketplace\. You don't need to set up notifications\. They are sent automatically for all AWS Marketplace product type subscriptions\.
 
-The AWS Marketplace Notifications team sends email notifications for offers and agreements made in AWS Marketplace verifying the transaction\. The notifications are sent in real\-time based on the successful fulfilment of a customer subscription\. 
+The AWS Marketplace Notifications team sends email notifications that verify the transaction for offers and agreements made in AWS Marketplace\. The notifications are sent in real time based on the successful fulfilment of a customer subscription\.
 
-As a seller, you will receive an email notification when a buyer accepts an offer\. As a buyer, you will receive an email notification when you accept an offer\. Notifications are sent to a buyer and an Independent Software Vendor \(ISV\) for public or private offers subscriptions\. They are also sent to a buyer, ISV, and channel partner for Consulting Partner Private Offers \(CPPO\) private offer subscriptions\.
+As a seller, you receive an email notification when a buyer accepts an offer\. As a buyer, you receive an email notification when you accept an offer\. Notifications are sent to a buyer and an independent software vendor \(ISV\) for public or private offer subscriptions\. They are also sent to a buyer, ISV, and channel partner for consulting partner private offer subscriptions\.
 
-Email notifications contain details listed here \(to ISV and CP\):
+When sent to an ISV or a channel partner, email notifications contain the following details:
 + Purchase date, time, and time zone
 + Customer AWS account ID
 + Product name
@@ -16,7 +16,7 @@ Email notifications contain details listed here \(to ISV and CP\):
 + Agreement identification
 + Service start date
 + Service end date
-+ Purchase amount \(for contract and CCP\)
++ Purchase amount \(for contract and consulting partner\)
 
 AWS Marketplace can also send notifications through Amazon Simple Notification Service \(Amazon SNS\) about changes to customers' subscriptions and contract entitlements for the following products:
 + [Amazon SNS notifications for SaaS products](saas-notification.md)

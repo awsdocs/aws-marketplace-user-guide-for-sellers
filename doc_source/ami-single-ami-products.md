@@ -202,7 +202,27 @@ For information about creating an AMI for AWS Marketplace, see [Best practices f
 
 You can check the status of your request at any time from the **Requests** tab of the [ Server Products](https://aws.amazon.com/marketplace/management/products/server) page\. The new version will be reviewed and, if successful, published as a new public version of your product\. If there is an issue, the status may show **Action required**\. Select the request to see details, including any issues\.
 
-If your request is successful, your existing users will receive an email notifying them the new version is available, linking to the version's release notes, and suggesting that they upgrade to the latest version\. You will also receive a copy of the email in your root AWS account email\.
+If your request is successful, your existing users will receive the following email message\. The message notifies them that the new version is available, links to the version's release notes, and suggests they upgrade to the latest version\. As the AWS account root user, you'll also receive a copy of the email message in the email account that's associated with your AWS account\.
+
+```
+Greetings from AWS Marketplace,
+
+Thank you for subscribing to <product-title>
+
+We are writing to inform you that <seller-name> has added a new version to <product-title> on AWS Marketplace. As an existing customer, your subscription to the product, any running instances and access to previous versions are unaffected. However, <seller-name> does recommend you to update to the latest version, <product-title>/<version-title> by visiting <product-detail-page-of-new-listing>.
+
+For additional questions or upgrade information, please contact <seller-name> directly. Click here <link of seller page on MP> to visit the seller’s profile page on AWS Marketplace.
+
+Release notes for <product-title>/<version-title>:
+
+<release-notes>
+
+Thank you,
+The AWS Marketplace Team
+https://aws.amazon.com/marketplace
+
+Amazon Web Services, Inc. is a subsidiary of Amazon.com, Inc. Amazon.com is a registered trademark of Amazon.com, Inc. This message was produced and distributed by Amazon Web Services Inc., 410 Terry Ave. North, Seattle, WA 98109-5210
+```
 
 ## Giving AWS Marketplace access to your AMI<a name="single-ami-marketplace-ami-access"></a>
 
@@ -261,7 +281,23 @@ You can check the status of your request at any time from the **Requests** tab o
 **Note**  
 Restricting a version can take up to 3 days to complete\.
 
-If your request is successful, your existing users will receive an email notifying them of the version restriction, and suggesting that they use the most recent version available\. You will also receive a copy of the email in your root AWS account email\.
+If your request is successful, your existing users will receive the following email message that notifies them of the version restriction and suggests they use the most recent version available\. As the AWS account root user, you'll also receive a copy of the email message in the email account that's associated with your AWS account\.
+
+```
+Greetings from AWS Marketplace,
+
+Thank you for subscribing to <product-title>.
+
+We are writing to inform you that, as of <Version-Restriction-Date>, <Seller Name> will no longer offer version(s) "<version-title>" to new subscribers. Your use and subscription is unaffected for this version(s), however it is recommended that users upgrade to the latest version on AWS Marketplace.
+
+For additional questions or upgrade information, please contact <seller-name> directly. Click here<link of seller page on MP> to visit the seller’s profile page on AWS Marketplace.
+
+Thank you,
+The AWS Marketplace Team
+https://aws.amazon.com/marketplace
+
+Amazon Web Services, Inc. is a subsidiary of Amazon.com, Inc. Amazon.com is a registered trademark of Amazon.com, Inc. This message was produced and distributed by Amazon Web Services Inc., 410 Terry Ave. North, Seattle, WA 98109-5210
+```
 
 ## Removing a product from AWS Marketplace<a name="removing-products-from-aws-marketplace"></a>
 

@@ -2,7 +2,7 @@
 
 This data feed provides information about all products you've created as the seller of record and all products you're authorized to resell\.
 
-Product data is mutable\. This means that when you change the value for one of the following fields, a new record is created in the data feed with a different value for `valid_from` field\. For more information about the data feed history columns, see [Historization of the data](data-feed.md#data-feed-historization)\.
+Product data is mutable\. This means that when you change the value for one of the following fields, a new record is created in the data feed with a different value for `valid_from` field\. For more information about the data feed history columns, see [Historization of the data](data-feed-service.md#data-feed-historization)\.
 
 The product data feed is refreshed every 24 hours, so new data is available daily\.
 
@@ -18,7 +18,7 @@ The following table explains the names and descriptions of the data feed's colum
 
 ## Example of product data feed<a name="data-feed-product-sample-data"></a>
 
-The following shows an example of the offer target data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed.md#data-feed-historization)\. 
+The following shows an example of the offer target data feed\. For readability, the data history columns aren't shown\. For information about data history fields, see [Historization of the data](data-feed-service.md#data-feed-historization)\. 
 
 
 | product\_id  | manufacturer\_account\_id  | product\_code | title | 

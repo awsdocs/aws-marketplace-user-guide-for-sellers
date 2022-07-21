@@ -85,7 +85,9 @@ For example, in a case where you have `ReadOnlyUsers` and `AdminUsers` dimension
 
 ### Automatic renewals<a name="ami-contracts-automatic-renewals"></a>
 
- When a customer purchases your product through AWS Marketplace using Container contracts, they can agree to automatic renewal of the contract terms\. The customer continues to pay for the entitlements every month or for 1, 2, or 3 years\. The customer always has the option to modify the renewal settings\. They can cancel the renewal or renew the contract different quantities and durations\. 
+ When customers purchase your product through AWS Marketplace using container contracts, they can agree to automatically renew the contract terms\. Customers continue to pay for the entitlements every month or for 1, 2, or 3 years\. 
+
+Customers can modify their renewal settings at any time\. For more information, see [Modifying an existing contract](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-container-contracts.html#modify-existing-contract) in the *AWS Marketplace Buyer Guide*\.
 
 ### When a container contract ends<a name="ami-contract-ends"></a>
 

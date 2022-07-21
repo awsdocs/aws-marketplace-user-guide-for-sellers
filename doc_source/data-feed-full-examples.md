@@ -9,7 +9,7 @@ To find out the amount that's been disbursed by product, you can run a query lik
 This set of sample queries build upon each other to create the final list of product details with disbursements\. It also shows how to get the product information at a specific point in time\. The comments in the queries explain what the queries are doing, as well as how you can modify them to get different views of the data\.
 
 **Note**  
-When running this query, we are assuming that the data ingested is using two time axes \(the valid\_from column and the update column\)\. For more details, see [Storage and structure of data feeds](data-feed.md#data-feed-details)\.
+When running this query, we are assuming that the data ingested is using two time axes \(the valid\_from column and the update column\)\. For more details, see [Storage and structure of data feeds](data-feed-service.md#data-feed-details)\.
 
 ```
     -- Get all the products and keep the latest product_id, valid_from tuple
@@ -303,7 +303,7 @@ To find the billed revenue by customer, you can run a query like the following\.
 This is a set of sample queries that build upon each other to create the final list of customer details with the total amount billed to each customer for usage of your software\. The comments in the queries explain what the queries are doing, as well as how you can modify them to get different views of the data\.
 
 **Note**  
-When running this query, we are assuming that the data ingested is using two time axes \(the valid\_from column and the update column\)\. For more details, see [Storage and structure of data feeds](data-feed.md#data-feed-details)\.
+When running this query, we are assuming that the data ingested is using two time axes \(the valid\_from column and the update column\)\. For more details, see [Storage and structure of data feeds](data-feed-service.md#data-feed-details)\.
 
 ```
     -- Gets all the products and keeps the latest product_id, 

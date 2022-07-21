@@ -22,7 +22,7 @@ Use the following instructions to integrate your AWS Marketplace for Containers 
 **Tip**  
 If you lose your product ID, you can find it in the AWS Marketplace Management Portal by choosing **Container** from the **Assets** menu\. The **Containers** page shows a list of your products with their associated product IDs\.
 
-1. Download the latest public AWS SDK and then include it in your container application\. You can find installation instructions for your preferred AWS SDK at [Tools to Build on AWS](https://aws.amazon.com/tools/)\.
+1. Download the latest public AWS SDK and then install it in your container application\. You can find installation instructions for your preferred AWS SDK at [Tools to Build on AWS](https://aws.amazon.com/tools/)\.
 **Note**  
 To call the License Manager API operations from Amazon EKS Anywhere or a Kubernetes cluster that isn't provided by AWS, you must use a supported AWS SDK\. To view a list of supported AWS SDKs, see [Using a supported AWS SDK](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html)\.
 
@@ -40,7 +40,7 @@ Extending the `DefaultCredentialsProvider` allows the same container application
    LicenseManagerClientBuilder clientBuilder = LicenseManagerClient.builder().credentialsProvider(LicenseCredentialsProvider.create());
    ```
 
-1. Call the `CheckoutLicense` API operation by using the `aws license-manager checkout-license` command from each paid container image in your product offering\. This checks that the buyer is entitled to use a license for your application\. If the buyer is entitled to the application, `CheckLicense` succeeds and returns the requested entitlements and their values\. If the buyer isn't entitled to the application, `CheckLicense` throws an exception\.
+1. Call the `CheckoutLicense` API operation by using the `aws license-manager checkout-license` command from each paid container image in your product offering\. This checks that the buyer is entitled to use a license for your application\. If the buyer is entitled to the application, `CheckoutLicense` succeeds and returns the requested entitlements and their values\. If the buyer isn't entitled to the application, `CheckoutLicense` throws an exception\.
 
    The following parameters are required when calling the `CheckoutLicense` API operation:
    + `CheckoutType` – The valid values are `PROVISIONAL` or `PERPETUAL`:
@@ -93,7 +93,7 @@ To check licenses, container applications require outbound network access to use
 
 1. Update your application’s Helm chart to accept a Kubernetes secret as optional input that contains configuration to access licenses using License Manager APIs\. The configuration secret will contain an identity token issued by License Manager and an AWS Identity and Access Management role which will be used by the custom credential provider described previously to get AWS credentials for calling License Manager APIs when the container application is deployed on\-premises\. Also, add the AWS Region as an input with a default value of `us-east-1`\.
 
-   Buyers deploying the container application on\-premises can create the Kubernetes secret through the AWS Marketplace buyer experience for container products\. The Kubernetes secret name can then be provided as input to the `helm install` command\. The configuration secret can be expected in the following format\.
+   Buyers deploying the container application on\-premises can create the Kubernetes secret through the AWS Marketplace buyer experience for container products\. Provide the Kubernetes secret name as input to the `helm install` command\. The configuration secret is configured in the following format\.
 
    ```
    apiVersion: v1
@@ -159,7 +159,7 @@ To check licenses, container applications require outbound network access to use
    {{ - end }}
    ```
 **Note**  
-The license configuration secret is optional\. Buyers only use the value for on\-premises deployments\. For AWS deployments, the deployment specification should include a service account for the License Manager integrated images\.
+The license configuration secret is optional\. Buyers only use the value for on\-premises deployments\. For AWS deployments, the deployment specification must include a service account for the License Manager integrated images\.
 
 1. Test the License Manager integration locally and on Amazon EKS by performing the steps in the following sections:
 
@@ -215,7 +215,7 @@ You can use minikube or any other setup to test License Manager integration on a
    echo "Grant arn: $GRANT_ARN"
    ```
 
-1. Create a K8 secret with the license token and IAM role using the secret format defined previously\. Use the License Manager `CreateToken` API operation to generate a license token\. Then, use the IAM `CreateRole` API operation to create an IAM role with permissions and a trust policy\. See the example in the following script\. The following script uses test buyer account credentials\.
+1. Create a Kubernetes secret with the license token and IAM role using the secret format defined previously\. Use the License Manager `CreateToken` API operation to generate a license token\. Then, use the IAM `CreateRole` API operation to create an IAM role with permissions and a trust policy\. See the example in the following script\. The following script uses test buyer account credentials\.
 
    ```
    read -p 'AWS Account for test license: ' TEST_ACCOUNT_ID
@@ -255,7 +255,7 @@ You can use minikube or any other setup to test License Manager integration on a
 
 ## Testing License Manager integration on Amazon EKS<a name="container-testing-LM-integration-EKS"></a>
 
-You can also test License Manager integration on Amazon EKS\. Test to make sure that the application can call License Manager API operations without the license configuration secret\. Also make sure that the service account can be used to set up IRSA and provide relevant credentials to the application\.
+You can also test License Manager integration on Amazon EKS\. Test to make sure that the application can call License Manager API operations without the license configuration secret\. Also make sure that the service account can be used to set up IAM Roles for Service Accounts \(IRSA\) and provide relevant credentials to the application\.
 
 **To test a License Manager integration on Amazon EKS**
 

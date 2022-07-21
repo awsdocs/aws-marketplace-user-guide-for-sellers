@@ -6,6 +6,8 @@ For notiﬁcation about updates to this documentation, you can subscribe to the 
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Seller Delivery Data Feeds Service section added](https://docs.aws.amazon.com/marketplace/latest/userguide/data-feed-service.html) | Documentation\-only add the Seller Delivery Data Feeds Service section and reorganize the sections related to data feeds\. | June 15, 2022 | 
+| [Supplementary reports section added](https://docs.aws.amazon.com/marketplace/latest/userguide/supplementary-reports.html) | Added a new section for supplementary reports that AWS Marketplace provides for recent feature launches\. | June 14, 2022 | 
 | [SaaS free trials for contracts are now available to sellers on AWS Marketplace](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-contracts.html) | Sellers can now create free trials without additional development work by defining the free trial length, dimension\(s\) available in the trial period, and the amount of free usage capacity customers receive\. | May 31, 2022 | 
 | [Email notifications added to buyer and seller transactions](https://docs.aws.amazon.com/marketplace/latest/userguide/notifications.html#event-types) | New feature enabling email notifications to buyers and sellers verifying offers and agreements made in AWS Marketplace\. | May 23, 2022 | 
 | [Examples added to creating your machine learning product listing](https://docs.aws.amazon.com/marketplace/latest/userguide/ml-publishing-your-product-in-aws-marketplace.html#ml-creating-your-listing) | Documentation\-only update to the machine learning section to include examples to show a comparison of the seller's view and the buyer's view when creating a machine learning product\. | April 22, 2022 | 

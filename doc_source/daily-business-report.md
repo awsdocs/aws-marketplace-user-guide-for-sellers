@@ -4,6 +4,9 @@
 
 The daily business report helps you understand how AWS customers are using your products on a daily basis and the estimated revenue from that usage\. You only receive this report if relevant information is available\. If you don't receive this report and think that you should have received it, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\.
 
+**Note**  
+Not all customer information columns are available by default\. If your report is missing fields, please contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\.
+
 You can access this report at the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/reports/)\. If you are registered for the [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md), you can also access your reports using the AWS SDK\.
 
 You can use a unique identifier for each customer to identify customers over time and across reports\. The identifier enables you to track customer usage patterns so that you can estimate customer spend, gain insights into free trial usage, and annual usage trends\.
@@ -23,7 +26,7 @@ You can use a unique identifier for each customer to identify customers over tim
 
 ## Section 1: Usage by instance type<a name="section-1-usage-by-instance-type"></a>
 
- This section lists data with a row for each instance type that the customer uses\. For instance, when the customer uses a product on one instance type and the same product on a different instance type, the report includes a row for each of the two instance types\. 
+ This section lists data with a row for each instance type that the customer uses\. For instance, when the customer uses a product on one instance type and the same product on a different instance type, the report includes a row for each of the two instance types\. The fields marked with an asterisk \(\*\) indicate the columns that aren't available by default\.
 
 
 |  Column name  |  Description  | 
@@ -43,10 +46,10 @@ You can use a unique identifier for each customer to identify customers over tim
 |  Offer Visibility  |  Whether the offer is a public, private, or enterprise contract offer\.  | 
 |  Customer AWS Account Number  |  The ID of the account that the charges are billed to\.  | 
 |  Customer Country  |  The two\-character country code that is associated with the account that the charges are billed to\.  | 
-|  Customer State  |  The billing address state that is associated with the account that the charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
-|  Customer City  |  The billing address city that is associated with the account that charges are billed to\. | 
-|  Customer Zip Code  | The billing address zip code that is associated with the account that the charges are billed to\.  | 
-|  Customer Email Domain  |  The email domain that is associated with the account that the charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
+|  \*Customer State  |  The billing address state that is associated with the account that the charges are billed to\. This report uses ISO 3166\-1 alpha\-2 standard\.  | 
+|  \*Customer City  |  The billing address city that is associated with the account that charges are billed to\. | 
+|  \*Customer Zip Code  | The billing address zip code that is associated with the account that the charges are billed to\.  | 
+|  \*Customer Email Domain  |  The email domain that is associated with the account that the charges are billed to\. For example, if the email address is liu\-jie@example\.com, the entry is example\.com\. | 
 |  Solution Title  |  The name of the solution\.  | 
 |  Solution ID  |  The unique identifier for the solution\.  | 
 |  Payer Reference ID  |  A unique identifier that isn't the account ID\. It's associated with the account that fees are billed to\. It helps with tracking usage, revenue, and subscriptions by customers across all of the AWS Marketplace financial reports\.  | 

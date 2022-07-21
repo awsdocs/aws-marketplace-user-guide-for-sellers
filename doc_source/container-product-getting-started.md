@@ -5,6 +5,7 @@ This topic describes all the steps related to creating, testing, and publishing 
 **Topics**
 + [Prerequisites](#container-prereq)
 + [Creating a container product](#create-container-product)
++ [Updating a container product](#container-updating-product)
 + [Creating the product ID for your container product](#create-initial-container-product)
 + [Creating or updating pricing details for container products](#container-product-load-form)
 + [Integrating AWS Marketplace Metering Service for your container product](#getting-started-integrate-metering)
@@ -42,6 +43,16 @@ Creating a container product involves the following steps:
 
 1. For paid products, [integrate metering into your product](#getting-started-integrate-metering)\.
 
+1. [Publish the product for buyers](#container-product-publishing)\.
+
+The first two steps must happen before you can edit any other details in AWS Marketplace\. However, you can perform the other steps in the order that makes the most sense to you or in parallel\.
+
+The following topics describe each of these steps\.
+
+## Updating a container product<a name="container-updating-product"></a>
+
+Updating a container product involves the following steps:
+
 1. [Add a new version of your product](#container-add-version), including:
 
    1. Add repositories for your containers\.
@@ -53,10 +64,6 @@ Creating a container product involves the following steps:
 1. [Update the product version information](#container-product-updating-version)\.
 
 1. [Publish the product for buyers](#container-product-publishing)\.
-
-The first two steps must happen before you can edit any other details in AWS Marketplace\. However, you can perform the other steps in the order that makes the most sense to you or in parallel\.
-
-The following topics describe each of these steps\.
 
 ## Creating the product ID for your container product<a name="create-initial-container-product"></a>
 
@@ -92,7 +99,7 @@ Your pricing and metering must be aligned\. For more information about metering 
 
 1. From the menu bar, expand **Assets**, and choose **File upload**\.
 
-1. From **Product load forms for download** on the right side, choose **Containers Product Load Form**\.
+1. From **Product load forms and seller guides** on the right side, choose **Containers Product Load Form**\.
 
 1. Open the PLF spreadsheet on your computer, and fill out the fields to define your product\. This information includes your product ID that you made note of when you created your container product\.
 **Tip**  
@@ -217,7 +224,7 @@ Your container images are scanned automatically to see if they meet the [Contain
 
 #### Adding a new delivery option without a template<a name="add-delivery-option"></a>
 
-1. To add a new delivery option without a template, choose **Add delivery option**\. After adding an option, follow the instructions in the following steps to configure it\.
+1. To add a new delivery option without a template, choose **New delivery option**\. After adding an option, follow the instructions in the following steps to configure it\.
 
 1. Choose a delivery method for the delivery option\. The delivery method determines how buyers will launch your software\.
    + For a **Container image** delivery option, provide paths to container images in an Amazon Elastic Container Registry \(Amazon ECR\) repository that was created in the AWS Marketplace console\. Buyers use the container image paths to launch the software by pulling the images directly into their environments\.
@@ -259,7 +266,7 @@ Your container images are scanned automatically to see if they meet the [Contain
 
    1. Choose **Hide passwords and secrets** to mask sensitive information in consoles, command line tools, and APIs\. For more information, see the `NoEcho` parameter documentation in [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) in the *AWS CloudFormation User Guide*\.
 
-1. If needed, choose **Add delivery option** to add additional delivery options and perform the instructions in the previous steps to configure them\.
+1. If needed, choose **New delivery option** to add additional delivery options and perform the instructions in the previous steps to configure them\.
 
 1. Select **Submit**\.
 
@@ -281,7 +288,7 @@ Your product can support multiple platforms with different container images \(fo
 
    1. If the product already has delivery options in other versions, you can use the existing option as a template to add a delivery option to the new version\. In **Delivery options**, choose the delivery option that you want to add from the list\. You can edit the option using the instructions in the following steps\.
 
-   1. To add a new delivery option without a template, choose **Add delivery option**\. After adding an option, follow the instructions in the following steps to configure it\.
+   1. To add a new delivery option without a template, choose **New delivery option**\. After adding an option, follow the instructions in the following steps to configure it\.
 
 1. Choose a delivery method for the delivery option\. The delivery method determines how buyers will launch your software\.
    + For a **Container image** delivery option, provide paths to container images in an Amazon Elastic Container Registry \(Amazon ECR\) repository that was created in the AWS Marketplace console\. Buyers use the container image paths to launch the software by pulling the images directly into their environments\.
@@ -323,7 +330,7 @@ Your product can support multiple platforms with different container images \(fo
 
    1. Choose **Hide passwords and secrets** to mask sensitive information in consoles, command line tools, and APIs\. For more information, see the `NoEcho` parameter documentation in [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) in the *AWS CloudFormation User Guide*\.
 
-1. If needed, choose **Add delivery option** to add additional delivery options and perform the instructions in the previous steps to configure them\.
+1. If needed, choose **New delivery option** to add additional delivery options and perform the instructions in the previous steps to configure them\.
 
 1. Select **Submit**\.
 
