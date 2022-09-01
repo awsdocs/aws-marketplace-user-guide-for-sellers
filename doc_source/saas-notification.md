@@ -2,6 +2,9 @@
 
 To receive notifications, you subscribe to the AWS Marketplace Amazon Simple Notification Service \(Amazon SNS\) topics provided to you during product creation\. The topics provide notifications about changes to customers’ subscriptions and contract entitlements for your products\. This enables you to know when to provide and revoke access for specific customers\. 
 
+**Note**  
+During the product creation process, you'll receive the actual Amazon Resource Name \(ARN\) to the SNS topic\. For example: `arn:aws:sns:us-east-1:123456789012:aws-mp-subscription-notification-PRODUCTCODE`
+
 The following Amazon SNS topics are available to software as a service \(SaaS\) products:
 + [Amazon SNS topic: `aws-mp-entitlement-notification`](#saas-sns-message-body) – This topic notifies you when buyers create a new contract, upgrade it, renew it, or it expires\. This is only available for products with pricing models that include a contract \(also known as **SaaS Contracts** and **SaaS Contracts with Consumption \(Overages\)**\)\.
 + [Amazon SNS topic: `aws-mp-subscription-notification`](#saas-sns-subscription-message-body) – This topic notifies you when a buyer subscribes to or unsubscribes from a product and includes the `offer-identifier` for private offers and a free trials flag for SaaS free trials\. This is available for all pricing models, including contracts and subscriptions \(also known as **SaaS Subscriptions**, **SaaS Contracts**, and **SaaS Contracts with Consumption \(Overages\)**\.
@@ -46,6 +49,8 @@ Each message in the `aws-mp-subscription-notification` topic has the following f
 ```
 
 The `offer-identifier` only appears in the notification if the offer is a *private offer*\.
+
+The `isFreeTrialTermPresent` property indicates if the buyer's subscription is a free trial\. The JSON value of this property is not a *boolean* datatype\. Instead, the value is converted to a *string* datatype\. For more information, see [ Creating a SaaS free trial offer\.](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-contracts.html#creating-a-saas-free-trial-offer.html)
 
 The *<action\-name>* will vary depending on the notification\. Possible actions are:
 + `subscribe-success` – The `subscribe-success` message signals when the seller can begin sending metering records\.

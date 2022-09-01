@@ -1,4 +1,4 @@
-# AWS Marketplace Commerce Analytics Service<a name="commerce-analytics-service"></a>
+# AWS MarketplaceCommerce Analytics Service<a name="commerce-analytics-service"></a>
 
 The AWS Marketplace Commerce Analytics Service lets you programmatically access product and customer data through AWS Marketplace\. After you enroll in the service, you can access your usage, subscription, and billing reports through the AWS SDK\.
 
@@ -24,7 +24,7 @@ The AWS Marketplace Commerce Analytics Service lets you programmatically access 
 
 You must configure your AWS account and AWS services to use the AWS Marketplace Commerce Analytics Service\. 
 
-**To use the AWS Marketplace Commerce Analytics Service**
+**To use the AWS MarketplaceCommerce Analytics Service**
 
 1. [Set up your AWS account with permissions](#permissions-for-commerce-analytics)\.
 
@@ -61,6 +61,8 @@ The Commerce Analytics Service accesses the Amazon S3 bucket and Amazon SNS topi
 **To enable access**
 
 1. Log in to the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/) with the AWS account you use to manage your AWS Marketplace products\. 
+
+1. Ensure you have the [ necessary IAM permissions](https://docs.aws.amazon.com/marketplace/latest/userguide/commerce-analytics-service.html#technical-implementation-guide) to enroll in the AWS Marketplace Commerce Analytics Service\.
 
 1. Navigate to the [Commerce Analytics Service enrollment page](https://aws.amazon.com/marketplace/management/cas/enroll)\. 
 
@@ -109,9 +111,32 @@ If you receive a response including the *dataSetRequestId* response from the ser
 
  The AWS Marketplace Commerce Analytics Service is provided through the [AWS SDK](https://aws.amazon.com/tools/)\. This guide shows you how to interact with the service using the [AWS CLI](https://aws.amazon.com/cli/) and the [AWS SDK for Java](https://aws.amazon.com/sdk-for-java/)\.
 
-### IAM policy for Commerce Analytics Service<a name="aws-marketplace-commerce-analytics-iam-permissions"></a>
+### IAM policies for Commerce Analytics Service<a name="aws-marketplace-commerce-analytics-iam-permissions"></a>
 
-To allow your IAM users to use the Commerce Analytics Service, attach the following inline policy to your users\.
+To allow your IAM users to use the Commerce Analytics Service, attach the following inline policies to your users\.
+
+Use the following IAM permission policy to enroll in the AWS Marketplace Commerce Analytics Service\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListRoles",
+                "iam:CreateRole",
+                "iam:CreatePolicy",
+                "iam:AttachRolePolicy",
+                "aws-marketplace-management:viewReports"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+Use the following IAM permission policy to allow an IAM user to make requests to the AWS Marketplace Commerce Analytics Service\.
 
 ```
 {
@@ -292,7 +317,7 @@ Request successful, unique ID: c59aff81-6875-11e5-a6d8-fd5dbcaa74ab
 
 ### Responses<a name="responses"></a>
 
-The AWS Marketplace Commerce Analytics service returns two responses\. The first is synchronous, which is returned immediately, and the second is asynchronous, which is returned using the Amazon SNS\. The synchronous response is similar to this example\.
+The AWS Marketplace Commerce Analytics Service returns two responses\. The first is synchronous, which is returned immediately, and the second is asynchronous, which is returned using the Amazon SNS\. The synchronous response is similar to this example\.
 
 
 **Data set parameters**  

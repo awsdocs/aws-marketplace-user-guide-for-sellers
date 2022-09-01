@@ -6,7 +6,7 @@ For sales of products enrolled in the tax calculation service, the report includ
 
 To map transactions between the disbursement report and this report, use the `Transaction Reference ID`\.
 
-This report is available on the AWS Marketplace Management Portal under the **Reports** tab\. If you're enrolled in the AWS Marketplace commerce analytics service, you can use API calls to pull down sections of this report\. For more information, see [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md)\. 
+This report is available on the AWS Marketplace Management Portal under the **Reports** tab\. If you're enrolled in the AWS Marketplace commerce analytics service, you can use API calls to pull down sections of this report\. For more information, see [AWS MarketplaceCommerce Analytics Service](commerce-analytics-service.md)\. 
 
 ## Publication schedule<a name="publication-schedule-5"></a>
 

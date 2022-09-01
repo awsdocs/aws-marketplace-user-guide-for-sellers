@@ -2,7 +2,7 @@
 
  This report lists data for customers who purchased your products\. This report doesn't specify current or past usage, only that a customer is subscribed to your product\. You only receive this report if relevant information is available\. If you don't receive this report and think that you should have, contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\.
 
-You can access this report at the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/reports/)\. If you are registered for the [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md), you can also access your reports using the AWS SDK\.
+You can access this report at the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/reports/)\. If you are registered for the [AWS MarketplaceCommerce Analytics Service](commerce-analytics-service.md), you can also access your reports using the AWS SDK\.
 
 The report has two sections: one for hourly and monthly subscriptions and one for annual subscriptions\. The report includes the list of AWS account IDs for all customers who are subscribed to your products\. 
 

@@ -5,7 +5,7 @@
 **Important**  
 The amounts in this report reflect only revenue that we billed to customers, not amounts that we collected\.
 
- This report is available on the AWS Marketplace Management Portal under the **Reports** tab\. If you're enrolled in the AWS Marketplace commerce analytics service, you can use API calls to pull down sections of this report\. For more information, see [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md)\. 
+ This report is available on the AWS Marketplace Management Portal under the **Reports** tab\. If you're enrolled in the AWS Marketplace commerce analytics service, you can use API calls to pull down sections of this report\. For more information, see [AWS MarketplaceCommerce Analytics Service](commerce-analytics-service.md)\. 
 
 ## Publication schedule<a name="publication-schedule-2"></a>
 

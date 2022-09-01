@@ -20,7 +20,7 @@ All SaaS products must adhere to the following customer information requirements
 ## Product usage guidelines<a name="saas-product-usage"></a>
 
 All SaaS products must adhere to the following product usage guidelines:
-+ After subscribing to the product in AWS Marketplace, customers should be able to create an account within your SaaS application and gain access to a web console within two business days\. If the customer cannot gain access to the application immediately, you must provide a message with specific instructions on when they will gain access\. When an account has been created, the customer must be sent a notification confirming that their account has been created along with clear next steps\. 
++ After subscribing to the product in AWS Marketplace, customers should be able to create an account within your SaaS application and gain access to a web console\. If the customer cannot gain access to the application immediately, you must provide a message with specific instructions on when they will gain access\. When an account has been created, the customer must be sent a notification confirming that their account has been created along with clear next steps\. 
 + If a customer already has an account in the SaaS application, they must have the ability to log in from the fulfillment landing page\.
 + Customers must be able to see the status of their subscription within the SaaS application, including any relevant contract or subscription usage information\.
 + Customers must be able to easily get help with issues such as: using the application, troubleshooting, and requesting refunds \(if applicable\)\. Support contact options must be specified on the fulfillment landing page\.

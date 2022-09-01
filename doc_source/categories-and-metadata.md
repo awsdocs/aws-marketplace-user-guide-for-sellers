@@ -35,41 +35,6 @@ The product information page displays up to three product highlight bullet point
 
 Example product highlight: Projecting costs: With Smart Solution, you pay only for what you use\. You're charged for each hour or partial hour that Smart Solution is running\.
 
-### Writing the release notes<a name="writing-the-release-notes"></a>
-
-Each time you update an AMI product, you must provide a description of the changes in the release notes\. The release notes should contain specific information to help the user decide whether to install the update\. Use clear labels for the update, such as "Critical" for a security update or "Important" or "Optional" for other types of updates\.
-
-### Writing the usage instructions<a name="writing-the-usage-instructions"></a>
-
-Provide usage instructions that help ensure that the buyer can successfully configure and run the software\. The usage instructions you provide are shown during the AMI configuration process\.
-
-To write effective usage instructions, follow these guidelines:
-+ Write them with a new or moderately technical audience\.
-+ Don't assume that the user has prior experience with or extensive knowledge of the product, computer operating systems, engineering, or IT operations\.
-+ Take the buyer from launching to using the product, including any configuration or special steps to get the application running\.
-
- Example usage instructions: 
-
-1. Launch the product via 1\-Click\.
-
-1. Use a web browser to access the application at https://<EC2\_Instance\_Public\_DNS>/index\.html\.
-
-1. Sign in using the following credentials:
-   + Username: user
-   + Password: the instance\_id of the instance
-
-### Writing the upgrade instructions<a name="writing-upgrade-instructions"></a>
-
-Provide details on how buyer can upgrade from an earlier version of the product\. Include information on how to preserve data and settings when creating another instance\. If there is no upgrade path, edit this field to specifically mention that\. 
-
-Example upgrade instructions:
-
-1. Do \*\*\*\*, and then \*\*\*\*\.
-
-1. Check that all plugins used by your project are compatible with version \*\.\*, by doing \*\*\*\. If they aren't compatible, do \*\*\*\.
-
-1. Make a backup of your data, by doing \*\*\*\.
-
 ## Choosing categories and keywords<a name="choosing-categories-and-keywords"></a>
 
 When you list your product, you can choose up to three software categories and corresponding subcategories for your product\. This helps buyers discover your product as they browse or search for products on AWS Marketplace\. Choose only categories that are relevant to your product; in most cases, only one category applies\. The product load form and the **Products** tab both contain a complete list of categories\. 

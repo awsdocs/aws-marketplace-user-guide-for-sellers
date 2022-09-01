@@ -6,14 +6,14 @@ For paid products, AWS Marketplace collects software charges from the customer\.
 
 There is no service fee for free or open\-source software that is made available to customers without charge\.
 
-For information about refunds, see [Refunds](refunds.md)\.
+For information about refunds, see [Product refunds in AWS Marketplace](refunds.md)\.
 
 **Topics**
 + [Pricing models](#pricing-models)
 + [Changing pricing models](#changing-pricing-models)
 + [Changing prices](#changing-prices)
 + [Private offers](#private-offers)
-+ [Refunds](refunds.md)
++ [Product refunds in AWS Marketplace](refunds.md)
 
 ## Pricing models<a name="pricing-models"></a>
 

@@ -64,7 +64,7 @@ For more information about preparing your product information and submitting it 
 For more information about preparing your AMI for submission to AWS Marketplace, see the following resources:
 + [Best practices for building AMIs](best-practices-for-building-your-amis.md)
 + [AMI product checklist](aws-marketplace-listing-checklist.md)
-+ [AMI security policies](product-and-ami-policies.md)
++ [AMI\-based product requirements](product-and-ami-policies.md)
 
 ## Creating a change request<a name="single-ami-creating-change-request"></a>
 
@@ -257,7 +257,7 @@ On this page, when you select the role that you just created, you can see its AR
 If you want to prevent buyers from accessing a specific version of your public product, you can restrict that version\.
 
 **Note**  
-Buyers that previously subscribed to the product will still be able to use the version\. AWS Marketplace guidelines require that you continue to offer support to existing buyers for 90 days after restricting the version\.
+All subscribers can use the current version regardless of the restriction status\. AWS Marketplace guidelines require that you continue to offer support to existing buyers for 90 days after restricting the version\. Your AMI will be marked as deprecated after the version is restricted\. For more information, see [Deprecate an AMI](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ami-deprecate.html) in the *Amazon Elastic Compute Cloud User Guide for Windows Instances*\.
 
 **To restrict a version**
 
@@ -334,7 +334,7 @@ If you have questions about product removals, contact the [AWS Marketplace Selle
 When you make changes to your product's information, you sometimes run into errors\. Following are some common issues and suggestions for how to fix them:
 + **Scanning your AMI** – Several issues could happen when scanning your AMI:
   + You have not granted AWS Marketplace permissions to scan your AMI\. Grant AWS Marketplace permissions to access it\. Or you have granted permissions, but the permissions boundary is too restrictive\. For more information, see [Giving AWS Marketplace access to your AMI](#single-ami-marketplace-ami-access)\.
-  + If scanning finds security issues or Common Vulnerabilities and Exposures \(CVEs\) in your AMI, make sure you're using the latest patches for the operating system in your image\. For more information, see [AMI security policies](product-and-ami-policies.md)\.
+  + If scanning finds security issues or Common Vulnerabilities and Exposures \(CVEs\) in your AMI, make sure you're using the latest patches for the operating system in your image\. For more information, see [AMI\-based product requirements](product-and-ami-policies.md)\.
 
   For general guidelines about building an AMI, see [Best practices for building AMIs](best-practices-for-building-your-amis.md)\.
 + **AWS Marketplace Management Portal fields** – Some fields in the AWS Marketplace Management Portal require very specific information:

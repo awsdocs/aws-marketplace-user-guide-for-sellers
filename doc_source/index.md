@@ -4,13 +4,13 @@
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
@@ -18,13 +18,13 @@ Amazon's trademarks and trade dress may not be used in
 + [Getting started as a seller](user-guide-for-sellers.md)
    + [Seller registration process](seller-registration-process.md)
    + [Seller toolkit](additional-seller-tools.md)
-      + [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md)
+      + [AWS MarketplaceCommerce Analytics Service](commerce-analytics-service.md)
       + [AWS Marketplace Field Demonstration Program](field-demonstration-program.md)
       + [Product Support Connection](product-support-connection.md)
       + [More resources in AWS Marketplace Management Portal](more-seller-resources.md)
 + [Preparing your product](product-preparation.md)
    + [Product pricing](pricing.md)
-      + [Refunds](refunds.md)
+      + [Product refunds in AWS Marketplace](refunds.md)
    + [Regions and countries for your AWS Marketplace product](regions-and-countries.md)
    + [Private offers](private-offers-overview.md)
       + [Flexible payment scheduler](flexible-payment-scheduler.md)
@@ -34,6 +34,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Private offer upgrades and renewals](private-offers-upgrades-and-renewals.md)
    + [Standardized contracts in AWS Marketplace](standardized-license-terms.md)
    + [Categories and metadata](categories-and-metadata.md)
+   + [AMI and container product usage instructions](ami-container-product-usage-instructions.md)
    + [Search engine optimization for products](search-engine-optimization.md)
 + [AWS Marketplace for Desktop Applications (AMDA)](amda.md)
 + [AMI-based products](ami-products.md)
@@ -51,7 +52,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Contract pricing for AMI products with AWS License Manager](ami-license-manager-integration.md)
    + [Amazon SNS notifications for AMI products](ami-notification.md)
    + [AMI product checklist](aws-marketplace-listing-checklist.md)
-   + [AMI security policies](product-and-ami-policies.md)
+   + [AMI-based product requirements](product-and-ami-policies.md)
 + [Container-based products](container-based-products.md)
    + [Getting started with container products](container-product-getting-started.md)
    + [Container-based product requirements](container-product-policies.md)
@@ -131,8 +132,13 @@ Amazon's trademarks and trade dress may not be used in
       + [Sales compensation report](sales-compensation-report.md)
       + [US sales and use tax report](u.s.-sales-and-use-tax-report.md)
    + [Supplementary reports](supplementary-reports.md)
++ [AWS Marketplace Vendor Insights](vendor-insights.md)
+   + [Understanding AWS Marketplace Vendor Insights](vendor-insights-understanding.md)
+   + [Onboarding with AWS Marketplace Vendor Insights](vendor-insights-onboarding.md)
+   + [Viewing your AWS Marketplace Vendor Insights profile](vendor-insights-profile.md)
 + [AWS Marketplace security](security.md)
    + [Controlling access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)
+   + [Controlling access to AWS Marketplace Vendor Insights](seller-security-iam-config-vend-insights.md)
    + [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md)
    + [AWS managed policies for AWS Marketplace sellers](security-iam-awsmanpol.md)
    + [AWS Marketplace Commerce Analytics Service account permissions](set-aws-iam-cas-permissions.md)

@@ -9,7 +9,7 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using AWS Marketplace\. The following topics show you how to configure AWS Identity and Access Management to manage access to AWS Marketplace in order to meet your security and compliance objectives\. You can also learn how to use other AWS services that can help you to monitor and secure your AWS Marketplace resources\.
 
 To learn more about security and other policies regarding the products that you offer in AWS Marketplace, see the following topics:
-+ [AMI security policies](product-and-ami-policies.md) 
++ [AMI\-based product requirements](product-and-ami-policies.md) 
 + [Container\-based product requirements](container-product-policies.md) 
 + [SaaS product guidelines](saas-guidelines.md) 
 + [Requirements for professional services products ](proserv-product-guidelines.md) 
@@ -20,6 +20,7 @@ To learn about security for buyers in AWS Marketplace, see [Security on AWS Mark
 
 **Topics**
 + [Controlling access to AWS Marketplace Management Portal](marketplace-management-portal-user-access.md)
++ [Controlling access to AWS Marketplace Vendor Insights](seller-security-iam-config-vend-insights.md)
 + [Policies and permissions for AWS Marketplace sellers](detailed-management-portal-permissions.md)
 + [AWS managed policies for AWS Marketplace sellers](security-iam-awsmanpol.md)
 + [AWS Marketplace Commerce Analytics Service account permissions](set-aws-iam-cas-permissions.md)

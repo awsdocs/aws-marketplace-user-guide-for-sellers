@@ -10,7 +10,7 @@ You can also include Lambda functions in a serverless application with your AMI 
 
 ## Building your product listing<a name="building-your-product-listing"></a>
 
-To submit your product, you need to prepare and validate your AMIs, create your AWS CloudFormation templates, create a topology diagram, complete the product load form, and submit the materials to AWS Marketplace\. We recommend that you start by creating and validating your AMIs and then complete and validate the CloudFormation templates\. After you complete those steps, you should create a topology diagram and estimate the software and infrastructure price\. AWS Marketplace validates your submission and works with you to make your product public\. Use [AWS Pricing Calculator](https://calculator.aws/#/) to help estimate the infrastructure cost for your template\. Provide AWS Marketplace with a link to your saved calculator configuration\. The following are limitations of multi\-AMI solution products:
+To submit your product, you need to prepare and validate your AMIs, create your AWS CloudFormation templates, create an architectural diagram, complete the product load form, and submit the materials to AWS Marketplace\. We recommend that you start by creating and validating your AMIs and then complete and validate the CloudFormation templates\. After you complete those steps, you should create an architectural diagram and estimate the software and infrastructure price\. AWS Marketplace validates your submission and works with you to make your product public\. Use [AWS Pricing Calculator](https://calculator.aws/#/) to help estimate the infrastructure cost for your template\. Provide AWS Marketplace with a link to your saved calculator configuration\. The following are limitations of multi\-AMI solution products:
 + Updating existing AWS Marketplace products from a standalone product to a multi\-AMI product isn't supported\. To make a product available in a multi\-AMI product, copy the AMI and submit it as a component to a new multi\-AMI product\. The resulting AMI has a unique product code that's different from the previous product's code\.
 + Multi\-AMI solutions aren't visible on the **AWS Marketplace** tab of the **Launch Instance** page in the Amazon Elastic Compute Cloud \(Amazon EC2\) console\. 
 + A CloudFormation template must not launch AMIs outside of those listed in the multi\-AMI solution\.
@@ -59,7 +59,7 @@ Customers must provide these as input parameters\.
 
 ### Network and security parameters<a name="networksecurity-parameters"></a>
 + Ensure that the default SSH port \(22\) or RDP port \(3389\) isn't open to 0\.0\.0\.0\.
-+ Instead of using the default virtual private cloud \(VPC\), we recommend that you build a VPC with appropriate access control lists \(ACLs\) and security groups\. Only AWS accounts created before December 4, 2013, support EC2\-Classic\.
++ Instead of using the default virtual private cloud \(VPC\), we recommend that you build a VPC with appropriate access control lists \(ACLs\) and security groups\. 
 + Enable access to the customer's AWS environment by using an AWS Identity and Access Management \(IAM\) role to call [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) from the AWS Security Token Service\. 
 + Set IAM roles and policies to [grant the least privilege](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) and enable write access only when absolutely necessary\. For example, if your application needs only `S3:GET`, `PUT`, and `DELETE` operations, specify those actions only\. We don't recommend the use of `S3:*` in this case\. 
 
@@ -71,9 +71,17 @@ The infrastructure cost estimate for each template displayed to customers is bas
 
 After you calculate the template's estimated monthly cost, provide AWS Marketplace with the **Save and Share** link for the US East \(N\. Virginia\) Region\. This is part of the submission process\.
 
-## Topology diagram<a name="topology-diagram"></a>
+## Architectural diagram<a name="topology-diagram"></a>
 
-You must provide a topology diagram for each template\. The diagram must use the [AWS product icons](https://aws.amazon.com/architecture/icons/) for each AWS service deployed through the AWS CloudFormation template, and it must include metadata for the services\. The diagram must be 1100 x 700 pixels in size\. Make sure that your diagram meets this sizing requirement to avoid cropping or stretching, as shown in the following image\.
+You must provide an architectural diagram for each template\. The diagram must meet the following criteria:
++ Illustrate standard deployment\(s\) on AWS
++ Use the [AWS product icons](https://aws.amazon.com/architecture/icons/) for each AWS service deployed through the AWS CloudFormation template
++ Include metadata for all the services deployed by the AWS CloudFormation template
++ Include all networks, VPCs, and subnets deployed by the AWS CloudFormation template
++ Show integration points, including third party assets, APIs and on\-premises, hybrid assets
++ Must be 1100 x 700 pixels in size 
+**Note**  
+Make sure that your diagram meets this sizing requirement to avoid cropping or stretching, as shown in the following image\.
 
  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/marketplace/latest/userguide/images/cloudformation-02.png) 
 
@@ -84,7 +92,7 @@ To submit products delivered by using AWS CloudFormation templates, you must pro
   + A single\-AMI product can have one to three CloudFormation templates
   + A multi\-AMI product can have up to 20 CloudFormation templates
 + The estimated infrastructure price for the default configuration of each template
-+ A topology diagram and topology metadata
++ An architectural diagram and architectural metadata
 + Completed product form \(available from the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/)\)
   + For single\-AMI products, use the [Commercial Product](https://s3.amazonaws.com/awsmp-loadforms/ProductDataLoad-Current.xlsx) form
   + For multi\-AMI products, use the [Multi\-AMI Product](https://s3.amazonaws.com/awsmp-loadforms/AWS_Marketplace_Product_Load_Form_CAR_Multi_AMI.xlsx) form
@@ -98,9 +106,9 @@ For each CloudFormation template, you must also provide the following informatio
 
 |  Field  |  Description  |  Restrictions  | 
 | --- | --- | --- | 
-|  Title  |  Title of the topology\. This appears on the detail and fulfillment pages and the pop\-up that shows the topology details\.  |  50 characters  | 
+|  Title  |  Title of the architecture\. This appears on the detail and fulfillment pages and the pop\-up that shows the architectural details\.  |  50 characters  | 
 |  Short description  |  This appears on the detail and fulfillment pages\.  |  200 characters  | 
-|  Long description  |  This appears in the topology details pop\-up\.  |  2000 characters  | 
+|  Long description  |  This appears in the architectural details pop\-up\.  |  2000 characters  | 
 
 For multi\-AMI products, the following fields are required:
 + Solution title

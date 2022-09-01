@@ -3,8 +3,8 @@
  AWS Marketplace has three managed policies you can use with the AWS Marketplace Management Portal\. In addition, you can use individual permissions to create your own AWS Identity and Access Management \(IAM\) policy\. 
 
 **Note**  
-To learn about policies and permissions on AWS Data Exchange for data products, see [Identity and Access Management in AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/latest/userguide/auth-access.html) in the *AWS Data Exchange User Guide*\.  
-To learn about policies and permissions for AWS Marketplace buyers, see [ Controlling access to AWS Marketplace subscriptions](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html) in the *AWS Marketplace Buyer Guide*\.
+To learn about policies and permissions on AWS Data Exchange for data products, refer to [Identity and Access Management in AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/latest/userguide/auth-access.html) in the *AWS Data Exchange User Guide*\.  
+To learn about policies and permissions for AWS Marketplace buyers, refer to [ Controlling access to AWS Marketplace subscriptions](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html) in the *AWS Marketplace Buyer Guide*\.
 
 ## Policies for AWS Marketplace sellers<a name="seller-managed-policies"></a>
 
@@ -22,14 +22,11 @@ Allows read\-only access to the [Products](https://aws.amazon.com/marketplace/ma
 **Important**  
 AWS Marketplace buyers can use managed policies to manage the subscriptions they purchase\. The managed policies you use with AWS Marketplace Management Portal start with `AWSMarketplaceSeller`\. When you search for policies in IAM, make sure to search for policies that start with `AWSMarketplaceSeller`\. 
 
-AWS Marketplace also provides specialized managed policies for specific scenarios\. For a full list of AWS managed policies for AWS Marketplace sellers, as well as descriptions of what permissions they provide, see [AWS managed policies for AWS Marketplace sellers](security-iam-awsmanpol.md)\.
+AWS Marketplace also provides specialized managed policies for specific scenarios\. For a full list of AWS managed policies for AWS Marketplace sellers, as well as descriptions of what permissions they provide, refer to [AWS managed policies for AWS Marketplace sellers](security-iam-awsmanpol.md)\.
 
 ## Permissions for AWS Marketplace sellers<a name="seller-ammp-permissions"></a>
 
 You can use the following permissions in IAM policies for the AWS Marketplace Management Portal:
-
-**`aws-marketplace-management:viewMarketing`**  
-Allows access to the [Marketing](https://aws.amazon.com/marketplace/management/marketing/) page in the AWS Marketplace Management Portal\.
 
 **`aws-marketplace-management:viewSupport`**  
 Allows access to the [Customer Support Eligibility](https://aws.amazon.com/marketplace/management/support/) page in the AWS Marketplace Management Portal\.
@@ -47,7 +44,7 @@ Allows access to the [Settings](https://aws.amazon.com/marketplace/management/se
 Allows access to list objects in AWS Marketplace Management Portal\. Required to access the [Offers](https://aws.amazon.com/marketplace/management/offers) and [Partners](https://aws.amazon.com/marketplace/management/partners) pages in the AWS Marketplace Management Portal\. 
 
 **`aws-marketplace:DescribeEntity`**  
-Allows access to see details of objects in AWS Marketplace Management Portal\. Required to access the [Offers](https://aws.amazon.com/marketplace/management/offers), [Partners](https://aws.amazon.com/marketplace/management/partners), and [Agreements](https://aws.amazon.com/marketplace/management/agreements) pages in the AWS Marketplace Management Portal\. 
+Allows access to view details of objects in AWS Marketplace Management Portal\. Required to access the [Offers](https://aws.amazon.com/marketplace/management/offers), [Partners](https://aws.amazon.com/marketplace/management/partners), and [Agreements](https://aws.amazon.com/marketplace/management/agreements) pages in the AWS Marketplace Management Portal\. 
 
 **`aws-marketplace:StartChangeSet`**  
 Allows access to create product changes in AWS Marketplace Management Portal\. Required to make changes in the [Offers](https://aws.amazon.com/marketplace/management/offers), [Partners](https://aws.amazon.com/marketplace/management/partners), and [**Agreements**](private-offers-upgrades-and-renewals.md) pages in the AWS Marketplace Management Portal\. 
@@ -142,4 +139,4 @@ To grant permissions to view and use the **Offers** page to view existing and cr
 
 Alternatively, you can create separate IAM groups for granting access to each individual page in the AWS Marketplace Management Portal\. Users can belong to more than one group\. So, if a user needs access to more than one page, you can add the user to all of the appropriate groups\. For example, create one IAM group and grant that group permission to access the **Marketing** page, create another group and grant that group permission to access the **File Upload** page, and so on\. If a user needs permission to access both the **Marketing** page and the **File Upload** page, add the user to both groups\.
 
-For more information about IAM users and groups, see [Identities \(Users, Groups, and Roles\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) in the *IAM User Guide*\. 
+For more information about IAM users and groups, refer to [Identities \(Users, Groups, and Roles\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) in the *IAM User Guide*\. 

@@ -9,6 +9,7 @@ Preparing to publish a product on AWS Marketplace includes configuring your pack
 + [Private offers](private-offers-overview.md)
 + [Standardized contracts in AWS Marketplace](standardized-license-terms.md)
 + [Categories and metadata](categories-and-metadata.md)
++ [AMI and container product usage instructions](ami-container-product-usage-instructions.md)
 + [Search engine optimization for products](search-engine-optimization.md)
 
 ## Product delivery<a name="product-delivery"></a>

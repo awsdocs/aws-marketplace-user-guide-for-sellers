@@ -1,4 +1,4 @@
-# AMI security policies<a name="product-and-ami-policies"></a>
+# AMI\-based product requirements<a name="product-and-ami-policies"></a>
 
 AWS Marketplace maintains the following policies for all Amazon Machine Image \(AMI\) products and offerings in AWS Marketplace\. The policies promote a safe, secure, and trustworthy platform for our customers\.
 
@@ -75,3 +75,7 @@ All AMIs must adhere to the following architecture policies:
 + AMIs must not use encrypted EBS snaphots\.
 + AMIs must not use encrypted file systems\.
 + AMIs must be built so that they can run in all AWS Regions and are Region\-agnostic\. AMIs built differently for different Regions aren't allowed\.
+
+## AMI product usage instructions<a name="ami-product-usage-instructions"></a>
+
+When creating usage instructions for your AMI product, please follow the steps and guidance located in [AMI and container product usage instructions](ami-container-product-usage-instructions.md)\.

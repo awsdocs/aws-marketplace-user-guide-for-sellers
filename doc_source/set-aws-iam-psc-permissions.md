@@ -2,7 +2,7 @@
 
  The AWS Marketplace product support connection feature makes it possible for customers to provide contact information in the AWS Marketplace website so that you can offer them support for your products\. AWS Marketplace shares the data that the customer provides to you through an API\. Customers can choose to add contact details during or after they purchase a product that you enrolled in AWS Marketplace product support connection\. You use the API to retrieve the customer's contact data, along with relevant product subscription details\.
 
- If haven't enrolled in the [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md), you must configure your account and AWS services to use it\. Do the following: 
+ If haven't enrolled in the [AWS MarketplaceCommerce Analytics Service](commerce-analytics-service.md), you must configure your account and AWS services to use it\. Do the following: 
 
 1.  \(Optional\) Create an [IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)\. 
 

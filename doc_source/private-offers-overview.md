@@ -51,12 +51,12 @@ AMI, container, professional services, and SaaS products are supported for priva
 You can provide private offers pricing for AMI products\. 
 
 The offer can be any custom duration for the following:
-+ AMI hourly or AMI annual private offers: up to 3 years \(1,095 days\)
++ AMI hourly or AMI hourly with annual private offers: up to 3 years \(1,095 days\)\. Only AMI hourly with annual private offers or AMI contracts support flexible payment scheduling\.
 + AMI contract private offers: up to 5 years \(60 months\)
 
-  For AMI contracts, private offers don't monitor usage\.
+  For AMI contracts, private offers don't monitor usage\. Upgrading for AMI contracts is only possible if you're using non\-tiered pricing\.
 
-  Buyers can manually upgrade to new contract levels at any time\. However, it is up to the independent software vendor \(ISV\) to define contract tiers, enforce service limitations, and advise buyers to manually upgrade to higher contract tiers when needed\. The contract duration of the private offer can match the public product listing, or can be a custom duration in months \(up to 60\)\. 
+  Buyers can manually upgrade to new contract levels at any time\. However, it is up to the independent software vendor \(ISV\) to define contract tiers, enforce service limitations, and advise buyers to manually upgrade their contracts with more units\. Only non\-tiered pricing\-based contracts support upgrades at this time\. The contract duration of the private offer can match the public product listing, or can be a custom duration in months \(up to 60\)\. 
 
 License entitlements begin on the date the buyer accepts the private offer\. 
 
@@ -70,12 +70,12 @@ Private offers are not available for monthly billing contracts\.
 You can provide private offers pricing for container\-based product contracts\. 
 
 The offer can be any custom duration for the following:
-+ Container hourly or AMI annual private offers – Up to 3 years \(1,095 days\)
++ Container hourly or container hourly with long term private offers – Up to 3 years \(1,095 days\)\. Only container hourly with long term private offers or container contracts support flexible payment scheduling\.
 + Container contract private offers – Up to 5 years \(60 months\)
 
-  For Container contracts, private offers don't monitor usage\.
+  For Container contracts, private offers don't monitor usage\. Upgrading for container contracts is only possible if you're using non\-tiered pricing\.
 
-  Buyers can manually upgrade to new contract levels at any time\. However, the independent software vendor \(ISV\) defines the contract tiers, enforces service limitations, and advises buyers to manually upgrade to higher contract tiers when needed\. The contract duration of the private offer can match the public product listing, or it can be a custom duration in months \(up to 60 months\)\. 
+  Buyers can manually upgrade to new contract levels at any time\. However, the independent software vendor \(ISV\) defines the contract tiers, enforces service limitations, and advises buyers to manually upgrade their contracts with more units\. Only non\-tiered pricing\-based contracts support upgrades at this time\. The contract duration of the private offer can match the public product listing, or it can be a custom duration in months \(up to 60 months\)\. 
 
 License entitlements begin on the date the buyer accepts the private offer\. For container private offers with flexible payment schedules, you can set the number of units agreed to in the contract, for the duration of the contract\. You can also define a custom hourly price for those same units if the buyer uses more\.
 

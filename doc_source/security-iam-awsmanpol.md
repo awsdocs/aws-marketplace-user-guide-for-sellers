@@ -9,19 +9,21 @@ Additionally, AWS supports managed policies for job functions that span multiple
 This section lists each of the policies used to manage seller access to AWS Marketplace\. For information about buyer policies, see [AWS managed policies for AWS Marketplace buyers](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-security-iam-awsmanpol.html) in the *AWS Marketplace Buyer Guide*\.
 
 **Topics**
-+ [AWS managed policy: AWSMarketplaceAmiIngestion](#security-iam-awsmanpol-awsmarketplaceamiingestion)
-+ [AWS managed policy: AWSMarketplaceFullAccess](#security-iam-awsmanpol-awsmarketplacefullaccess)
-+ [AWS managed policy: AWSMarketplaceGetEntitlements](#security-iam-awsmanpol-awsmarketplacegetentitlements)
-+ [AWS managed policy: AWSMarketplaceMeteringFullAccess](#security-iam-awsmanpol-awsmarketplacemeteringfullaccess)
-+ [AWS managed policy: AWSMarketplaceMeteringRegisterUsage](#security-iam-awsmanpol-awsmarketplacemeteringregisterusage)
-+ [AWS managed policy: AWSMarketplaceSellerFullAccess](#security-iam-awsmanpol-awsmarketplacesellerfullaccess)
-+ [AWS managed policy: AWSMarketplaceSellerProductsFullAccess](#security-iam-awsmanpol-awsmarketplacesellerproductsfullaccess)
-+ [AWS managed policy: AWSMarketplaceSellerProductsReadOnly](#security-iam-awsmanpol-awsmarketplacesellerproductsreadonly)
++ [AWS managed policy: `AWSMarketplaceAmiIngestion`](#security-iam-awsmanpol-awsmarketplaceamiingestion)
++ [AWS managed policy: `AWSMarketplaceFullAccess`](#security-iam-awsmanpol-awsmarketplacefullaccess)
++ [AWS managed policy: `AWSMarketplaceGetEntitlements`](#security-iam-awsmanpol-awsmarketplacegetentitlements)
++ [AWS managed policy: `AWSMarketplaceMeteringFullAccess`](#security-iam-awsmanpol-awsmarketplacemeteringfullaccess)
++ [AWS managed policy: `AWSMarketplaceMeteringRegisterUsage`](#security-iam-awsmanpol-awsmarketplacemeteringregisterusage)
++ [AWS managed policy: `AWSMarketplaceSellerFullAccess`](#security-iam-awsmanpol-awsmarketplacesellerfullaccess)
++ [AWS managed policy: `AWSMarketplaceSellerProductsFullAccess`](#security-iam-awsmanpol-awsmarketplacesellerproductsfullaccess)
++ [AWS managed policy: `AWSMarketplaceSellerProductsReadOnly`](#security-iam-awsmanpol-awsmarketplacesellerproductsreadonly)
++ [AWS managed policy: `AWSVendorInsightsVendorFullAccess`](#security-iam-awsmanpol-awsvendorinsightsvendorfullaccess)
++ [AWS managed policy: `AWSVendorInsightsVendorReadOnly`](#security-iam-awsmanpol-awsvendorinsightsvendorreadonly)
 + [AWS Marketplace updates to AWS managed policies](#security-iam-awsmanpol-updates)
 
-## AWS managed policy: AWSMarketplaceAmiIngestion<a name="security-iam-awsmanpol-awsmarketplaceamiingestion"></a>
+## AWS managed policy: `AWSMarketplaceAmiIngestion`<a name="security-iam-awsmanpol-awsmarketplaceamiingestion"></a>
 
-You can create a service role with this policy that can then be used by AWS Marketplace to perform actions on your behalf\. For more information about using AWSMarketplaceAmiIngestion, see [Giving AWS Marketplace access to your AMI](ami-single-ami-products.md#single-ami-marketplace-ami-access)\.
+You can create a service role with this policy that can then be used by AWS Marketplace to perform actions on your behalf\. For more information about using `AWSMarketplaceAmiIngestion`, see [Giving AWS Marketplace access to your AMI](ami-single-ami-products.md#single-ami-marketplace-ami-access)\.
 
 This policy is used to grant contributor permissions that allow AWS Marketplace to copy your Amazon Machine Images \(AMIs\) in order to list them on AWS Marketplace\.
 
@@ -54,7 +56,7 @@ This policy is used to grant contributor permissions that allow AWS Marketplace 
 }
 ```
 
-## AWS managed policy: AWSMarketplaceFullAccess<a name="security-iam-awsmanpol-awsmarketplacefullaccess"></a>
+## AWS managed policy: `AWSMarketplaceFullAccess`<a name="security-iam-awsmanpol-awsmarketplacefullaccess"></a>
 
 You can attach the `AWSMarketplaceFullAccess` policy to your IAM identities\.
 
@@ -163,7 +165,7 @@ This policy grants administrative permissions that allow full access to AWS Mark
 }
 ```
 
-## AWS managed policy: AWSMarketplaceGetEntitlements<a name="security-iam-awsmanpol-awsmarketplacegetentitlements"></a>
+## AWS managed policy: `AWSMarketplaceGetEntitlements`<a name="security-iam-awsmanpol-awsmarketplacegetentitlements"></a>
 
 You can attach the `AWSMarketplaceGetEntitlements` policy to your IAM identities\.
 
@@ -186,7 +188,7 @@ This policy grants read\-only permissions that allow Software\-as\-a\-Service \(
 }
 ```
 
-## AWS managed policy: AWSMarketplaceMeteringFullAccess<a name="security-iam-awsmanpol-awsmarketplacemeteringfullaccess"></a>
+## AWS managed policy: `AWSMarketplaceMeteringFullAccess`<a name="security-iam-awsmanpol-awsmarketplacemeteringfullaccess"></a>
 
 You can attach the `AWSMarketplaceMeteringFullAccess` policy to your IAM identities\.
 
@@ -209,7 +211,7 @@ This policy grants contributor permissions that allow reporting metered usage th
 }
 ```
 
-## AWS managed policy: AWSMarketplaceMeteringRegisterUsage<a name="security-iam-awsmanpol-awsmarketplacemeteringregisterusage"></a>
+## AWS managed policy: `AWSMarketplaceMeteringRegisterUsage`<a name="security-iam-awsmanpol-awsmarketplacemeteringregisterusage"></a>
 
 You can attach the `AWSMarketplaceMeteringRegisterUsage` policy to your IAM identities\.
 
@@ -232,7 +234,7 @@ This policy grants contributor permissions that allow reporting metered usage th
 }
 ```
 
-## AWS managed policy: AWSMarketplaceSellerFullAccess<a name="security-iam-awsmanpol-awsmarketplacesellerfullaccess"></a>
+## AWS managed policy: `AWSMarketplaceSellerFullAccess`<a name="security-iam-awsmanpol-awsmarketplacesellerfullaccess"></a>
 
 You can attach the `AWSMarketplaceSellerFullAccess` policy to your IAM identities\.
 
@@ -245,15 +247,9 @@ This policy grants administrative permissions that allow full access to all sell
 ```
 {
     "Version": "2012-10-17",
-    "Statement": [
-        {
+    "Statement": [{
             "Effect": "Allow",
             "Action": [
-                "aws-marketplace-management:uploadFiles",
-                "aws-marketplace-management:viewMarketing",
-                "aws-marketplace-management:viewReports",
-                "aws-marketplace-management:viewSupport",
-                "aws-marketplace-management:viewSettings",
                 "aws-marketplace:ListChangeSets",
                 "aws-marketplace:DescribeChangeSet",
                 "aws-marketplace:StartChangeSet",
@@ -272,46 +268,41 @@ This policy grants administrative permissions that allow full access to all sell
             "Resource": "*"
         },
         {
-            "Action": [
-                "aws-marketplace:SearchAgreements",
-                "aws-marketplace:DescribeAgreement",
-                "aws-marketplace:GetAgreementTerms"
-            ],
-            "Effect": "Allow",
-            "Resource": "*",
-            "Condition": {
-                "StringEquals": {
-                    "aws-marketplace:PartyType": "Proposer"
-                },
-                "ForAllValues:StringEquals": {
-                    "aws-marketplace:AgreementType": [
-                        "PurchaseAgreement"
-                    ]
-                }
-            }
-        },
-        {
             "Effect": "Allow",
             "Action": [
                 "iam:GetRole"
             ],
-            "Resource": "arn:aws:iam::*:role/*"
+            "Resource": "arn:aws:iam:::role/"
         },
         {
             "Effect": "Allow",
             "Action": [
                 "iam:PassRole"
             ],
-            "Resource": "arn:aws:iam::*:role/*",
+            "Resource": "arn:aws:iam:::role/",
             "Condition": {
                 "StringEquals": {
                     "iam:PassedToService": "assets.marketplace.amazonaws.com"
                 }
             }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "vendor-insights:GetDataSource",
+                "vendor-insights:ListDataSources",
+                "vendor-insights:ListSecurityProfiles",
+                "vendor-insights:GetSecurityProfile",
+                "vendor-insights:GetSecurityProfileSnapshot",
+                "vendor-insights:ListSecurityProfileSnapshots"
+            ],
+            "Resource": "*"
         }
+    ]
+}
 ```
 
-## AWS managed policy: AWSMarketplaceSellerProductsFullAccess<a name="security-iam-awsmanpol-awsmarketplacesellerproductsfullaccess"></a>
+## AWS managed policy: `AWSMarketplaceSellerProductsFullAccess`<a name="security-iam-awsmanpol-awsmarketplacesellerproductsfullaccess"></a>
 
 You can attach the `AWSMarketplaceSellerProductsFullAccess` policy to your IAM identities\.
 
@@ -322,8 +313,7 @@ This policy grants contributor permissions that allow full access to manage prod
 ```
 {
     "Version": "2012-10-17",
-    "Statement": [
-        {
+    "Statement": [{
             "Effect": "Allow",
             "Action": [
                 "aws-marketplace:ListChangeSets",
@@ -348,23 +338,37 @@ This policy grants contributor permissions that allow full access to manage prod
             "Action": [
                 "iam:GetRole"
             ],
-            "Resource": "arn:aws:iam::*:role/*"
+            "Resource": "arn:aws:iam:::role/"
         },
         {
             "Effect": "Allow",
             "Action": [
                 "iam:PassRole"
             ],
-            "Resource": "arn:aws:iam::*:role/*",
+            "Resource": "arn:aws:iam:::role/",
             "Condition": {
                 "StringEquals": {
                     "iam:PassedToService": "assets.marketplace.amazonaws.com"
                 }
             }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "vendor-insights:GetDataSource",
+                "vendor-insights:ListDataSources",
+                "vendor-insights:ListSecurityProfiles",
+                "vendor-insights:GetSecurityProfile",
+                "vendor-insights:GetSecurityProfileSnapshot",
+                "vendor-insights:ListSecurityProfileSnapshots"
+            ],
+            "Resource": "*"
         }
+    ]
+}
 ```
 
-## AWS managed policy: AWSMarketplaceSellerProductsReadOnly<a name="security-iam-awsmanpol-awsmarketplacesellerproductsreadonly"></a>
+## AWS managed policy: `AWSMarketplaceSellerProductsReadOnly`<a name="security-iam-awsmanpol-awsmarketplacesellerproductsreadonly"></a>
 
 You can attach the `AWSMarketplaceSellerProductsReadOnly` policy to your IAM identities\.
 
@@ -396,6 +400,109 @@ This policy grants read\-only permissions that allow access to view products on 
 }
 ```
 
+## AWS managed policy: `AWSVendorInsightsVendorFullAccess`<a name="security-iam-awsmanpol-awsvendorinsightsvendorfullaccess"></a>
+
+You can attach the `AWSVendorInsightsVendorFullAccess` policy to your IAM identities\.
+
+This policy grants full access to create and manage all resources on AWS Marketplace Vendor Insights\. AWS Marketplace Vendor Insights identifies assessor as the buyer and vendor is equal to the seller for the purposes of this guide\. 
+
+
+
+**Permissions details**
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "aws-marketplace:DescribeEntity",
+      "Resource": "arn:aws:aws-marketplace:*:*:*/SaaSProduct/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "aws-marketplace:ListEntities",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "vendor-insights:CreateDataSource",
+        "vendor-insights:DeleteDataSource",
+        "vendor-insights:GetDataSource",
+        "vendor-insights:ListDataSources",
+        "vendor-insights:CreateSecurityProfile",
+        "vendor-insights:ListSecurityProfiles",
+        "vendor-insights:GetSecurityProfile",
+        "vendor-insights:AssociateDataSource",
+        "vendor-insights:DisassociateDataSource",
+        "vendor-insights:UpdateSecurityProfile",
+        "vendor-insights:ActivateSecurityProfile",
+        "vendor-insights:DeactivateSecurityProfile",
+        "vendor-insights:GetSecurityProfileSnapshot",
+        "vendor-insights:ListSecurityProfileSnapshots"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "aws-marketplace:AcceptAgreementApprovalRequest",
+        "aws-marketplace:RejectAgreementApprovalRequest",
+        "aws-marketplace:GetAgreementApprovalRequest",
+        "aws-marketplace:ListAgreementApprovalRequests"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "ForAllValues:StringEquals": {
+          "aws-marketplace:AgreementType": "VendorInsightsAgreement"
+        }
+      }
+    }
+  ]
+}
+```
+
+## AWS managed policy: `AWSVendorInsightsVendorReadOnly`<a name="security-iam-awsmanpol-awsvendorinsightsvendorreadonly"></a>
+
+You can attach the `AWSVendorInsightsVendorReadOnly` policy to your IAM identities\.
+
+This policy grants read\-only access for viewing AWS Marketplace Vendor Insights resources\. AWS Marketplace Vendor Insights identifies accessor is equal to buyer and vendor is equal to seller\.
+
+
+
+**Permissions details**
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "aws-marketplace:DescribeEntity",
+      "Resource": "arn:aws:aws-marketplace:*:*:*/SaaSProduct/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "aws-marketplace:ListEntities",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "vendor-insights:GetDataSource",
+        "vendor-insights:ListDataSources",
+        "vendor-insights:ListSecurityProfiles",
+        "vendor-insights:GetSecurityProfile",
+        "vendor-insights:GetSecurityProfileSnapshot",
+        "vendor-insights:ListSecurityProfileSnapshots"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+```
+
 
 
 ## AWS Marketplace updates to AWS managed policies<a name="security-iam-awsmanpol-updates"></a>
@@ -409,6 +516,8 @@ View details about updates to AWS managed policies for AWS Marketplace since thi
 
 | Change | Description | Date | 
 | --- | --- | --- | 
-|   [AWSMarketplaceSellerFullAccess](#security-iam-awsmanpol-awsmarketplacesellerfullaccess) and [AWSMarketplaceSellerProductsFullAccess](#security-iam-awsmanpol-awsmarketplacesellerproductsfullaccess) – Update to existing policies   | AWS Marketplace updated the policies so that the iam:PassedToService condition is only applied to iam:PassRole\. | November 22, 2021 | 
-|   [AWSMarketplaceFullAccess](#security-iam-awsmanpol-awsmarketplacefullaccess) – Update to an existing policy   |   AWS Marketplace removed a duplicate `ec2:DescribeAccountAttributes` permission from `AWSMarketplaceFullAccess` policy\.   | July 20, 2021 | 
+|  [AWSVendorInsightsVendorFullAccess](#security-iam-awsmanpol-awsvendorinsightsvendorfullaccess) and [AWSVendorInsightsVendorReadOnly](#security-iam-awsmanpol-awsvendorinsightsvendorreadonly) – Added new policies  | AWS Marketplace added policies for the new feature AWS Marketplace Vendor Insights: AWSVendorInsightsVendorFullAccess and AWSVendorInsightsVendorReadOnly\. | July 26, 2022 | 
+| [AWSMarketplaceSellerProductsFullAccess ](#security-iam-awsmanpol-awsmarketplacesellerproductsfullaccess)and [AWSMarketplaceSellerFullAccess ](#security-iam-awsmanpol-awsmarketplacesellerfullaccess)– Updated policies | AWS Marketplace updated policies for the new feature AWS Marketplace Vendor Insights: AWSMarketplaceSellerProductsFullAccess and AWSMarketplaceSellerFullAccess\. | July 26, 2022 | 
+|  [AWSMarketplaceSellerFullAccess](#security-iam-awsmanpol-awsmarketplacesellerfullaccess) and [AWSMarketplaceSellerProductsFullAccess](#security-iam-awsmanpol-awsmarketplacesellerproductsfullaccess) – Update to existing policies  | AWS Marketplace updated the policies so that the iam:PassedToService condition is only applied to iam:PassRole\. | November 22, 2021 | 
+|  [AWSMarketplaceFullAccess](#security-iam-awsmanpol-awsmarketplacefullaccess) – Update to an existing policy  |  AWS Marketplace removed a duplicate `ec2:DescribeAccountAttributes` permission from `AWSMarketplaceFullAccess` policy\.  | July 20, 2021 | 
 |  AWS Marketplace started tracking changes  |  AWS Marketplace started tracking changes for its AWS managed policies\.  | April 20, 2021 | 

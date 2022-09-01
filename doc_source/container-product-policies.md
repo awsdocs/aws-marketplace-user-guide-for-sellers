@@ -52,3 +52,7 @@ All products and their related metadata are reviewed when submitted to ensure th
 + Container images must be based on Linux\.
 + Paid container\-based products must be able to be deployed on [Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html), [Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html), or [AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html)\.
 + Paid container\-based products with contract pricing and an integration with AWS License Manager should deploy on Amazon EKS, Amazon ECS, AWS Fargate, Amazon EKS Anywhere, Amazon ECS Anywhere, Red Hat OpenShift Service on AWS \(ROSA\), self\-managed Kubernetes clusters on\-premises, or on Amazon Elastic Compute Cloud\.
+
+## Container product usage instructions<a name="container-product-usage-instructions"></a>
+
+When creating usage instructions for your container product, please follow the steps and guidance located in [AMI and container product usage instructions](ami-container-product-usage-instructions.md)\.

@@ -7,7 +7,7 @@ The daily business report helps you understand how AWS customers are using your 
 **Note**  
 Not all customer information columns are available by default\. If your report is missing fields, please contact the [AWS Marketplace Seller Operations](https://aws.amazon.com/marketplace/management/contact-us/) team\.
 
-You can access this report at the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/reports/)\. If you are registered for the [AWS Marketplace Commerce Analytics Service](commerce-analytics-service.md), you can also access your reports using the AWS SDK\.
+You can access this report at the [AWS Marketplace Management Portal](https://aws.amazon.com/marketplace/management/reports/)\. If you are registered for the [AWS MarketplaceCommerce Analytics Service](commerce-analytics-service.md), you can also access your reports using the AWS SDK\.
 
 You can use a unique identifier for each customer to identify customers over time and across reports\. The identifier enables you to track customer usage patterns so that you can estimate customer spend, gain insights into free trial usage, and annual usage trends\.
 

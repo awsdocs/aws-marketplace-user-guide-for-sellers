@@ -2,6 +2,9 @@
 
 To receive notifications, you subscribe to the AWS Marketplace Amazon Simple Notification Service \(Amazon SNS\) topics provided to you during product creation\. The topics provide notifications about changes to customers’ subscriptions for your products\. For example, you can use this to know when customers accept a private oﬀer\. 
 
+**Note**  
+During the product creation process, you'll receive the actual Amazon Resource Name \(ARN\) to the SNS topic\. For example: `arn:aws:sns:us-east-1:123456789012:aws-mp-subscription-notification-PRODUCTCODE`
+
 The following Amazon SNS topic is available for container products:
 + [Amazon SNS topic: `aws-mp-subscription-notification`](#container-sns-subscription-message-body) – This topic notifies you when a buyer subscribes or unsubscribes to a product\. This is available for hourly pricing models, including hourly and hourly with long term\.
 

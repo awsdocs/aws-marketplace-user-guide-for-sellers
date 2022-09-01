@@ -2,7 +2,7 @@
 
 Take your software as a service \(SaaS\) application metadata, and create a new SaaS product in AWS Marketplace catalog, using the AWS Marketplace Management Portal\.
 
-1. Sign in to the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/)\.
+1. Sign in to the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/homepage)\.
 
 1. For **Products**, choose **SaaS**\.
 

@@ -56,20 +56,15 @@ linux-machine ~]$ aws license-manager checkout-license\
 **Response**
 
 ```
-{
-  "CheckoutType": "PERPETUAL",
-  "EntitlementsAllowed": [
-    {      
-      "Name": "DataConsumption", 
-      "Count": 10,
-      "Units": "Count",
-      "Value": "Enabled"
-    }
-},
-  "Expiration":    "2021-04-22Tl9:02: 36",
-  "IssuedAt": "2021-04-22Tl8:02:36",
-  "LicenseArn": "arn:aws:license-manager::294406891311:license:l-16bf01b...",
-  "LicenseConsumptionToken":  "AKIAIOSFODNN7EXAMPLE"
+{"CheckoutType": "PERPETUAL",
+"EntitlementsAllowed": [{
+"Name": "IntermediateTier",
+"Units": "None"
+}],
+"Expiration": "2021-04-22Tl9:02:36",
+"IssuedAt": "2021-04-22Tl8:02:36",
+"LicenseArn": "arn:aws:license-manager::294406891311:license:l-16bf01b...",
+"LicenseConsumptionToken": "AKIAIOSFODNN7EXAMPLE"
 }
 ```
 
