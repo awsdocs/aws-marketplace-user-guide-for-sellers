@@ -29,13 +29,10 @@ Amazon Machine Image \(AMI\)\-based product charges fall into two categories:
 
 These two product charge categories are displayed separately on the AWS Marketplace detail pages to help buyers understand the potential cost of using the products\. 
 
-### Free trial for single\-AMI hourly products<a name="free-trial"></a>
+### Free trial for AMI hourly products<a name="free-trial"></a>
 
-Single\-AMI hourly products are eligible for the optional Free trial program\. In a Free trial, a customer can subscribe to the product and use a single instance for up to 31 days without paying software charges on the product\. Applicable AWS infrastructure charges still apply\. Free trials will automatically convert to a paid subscription upon expiration\. Customers will be charged for additional usage above the free units provided\. To offer a single\-AMI hourly product, define the duration of the trial period and notify the [AWS Marketplace Managed Catalog Operations \(MCO\)](https://aws.amazon.com/marketplace/management/contact-us/) team\. The trial period can be 5–31 days\.
+AMI hourly products are eligible for the optional Free trial program\. In a Free trial, a customer can subscribe to the product and use a single instance for up to 31 days without paying software charges on the product\. Applicable AWS infrastructure charges still apply\. Free trials will automatically convert to a paid subscription upon expiration\. Customers will be charged for additional usage above the free units provided\. To offer an hourly product free trial, define the duration of the trial period and notify the [AWS Marketplace Managed Catalog Operations \(MCO\)](https://aws.amazon.com/marketplace/management/contact-us/) team\. The trial period can be 5–31 days\.
 
 When customers subscribe to a Free trial product, they receive a welcome email message that includes the term of the Free trial, a calculated expiration date, and details on unsubscribing\. A reminder email message is sent three days before the expiration date\.
 
 If you offer a Free trial product in AWS Marketplace, you agree to the specific refund policies described under **Refund Policy**\.
-
-**Note**  
-Free trials are available for single\-AMI products and single\-AMI with AWS CloudFormation products with hourly pricing\. Multi\-AMI with AWS CloudFormation products do not support free trials\.

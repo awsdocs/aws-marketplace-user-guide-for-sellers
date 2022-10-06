@@ -22,10 +22,10 @@ You can use AWS Identity and Access Management \(IAM\) to configure your primary
 
 ## Creating your public profile<a name="seller-public-profile"></a>
 
-The first step to register is to select the AWS account to use as your primary AWS Marketplace account, and provide the information that is displayed to potential buyers in the AWS Marketplace console\.
+The first step to register is to select the AWS account to use as your primary AWS Marketplace account, and provide the information that is displayed to potential buyers in the AWS Marketplace console\. This account will be the seller of record for your products in AWS Marketplace and will be used for reporting, disbursement, and communication from AWS Marketplace to you\.
 
 **Note**  
- Once you use an AWS account to list a product on AWS Marketplace, you can't change the account associated with the product\. You can use an existing account or register a new account\. This account will be the seller of record for your products in AWS Marketplace and will be used for reporting, disbursement, and communication from AWS Marketplace to you\.
+ Once you use an AWS account to register as a seller and list a product on AWS Marketplace, you can't change the account associated with the product\. We recommend that you use a new account to register as an AWS Marketplace seller\. However, you can use an existing account if that account was created after September 27, 2017\. 
 
 **To create your public profile**
 

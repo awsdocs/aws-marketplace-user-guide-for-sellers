@@ -10,7 +10,7 @@ The following Amazon SNS topic is available for AMI products:
 
 ## Amazon SNS topic: `aws-mp-subscription-notification`<a name="ami-sns-subscription-message-body"></a>
 
-Each message in the `aws-mp-subscription-notification` topic has the following format\.
+Each message in the `aws-mp-subscription-notification` topic for the `subscribe-success` and `subscribe-fail` action has the following format\.
 
 ```
 {

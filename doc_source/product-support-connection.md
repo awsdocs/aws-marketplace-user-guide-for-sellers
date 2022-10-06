@@ -1,5 +1,8 @@
 # Product Support Connection<a name="product-support-connection"></a>
 
+**Note**  
+AWS Marketplace Product Support Connection and sharing customer contact details using the Commerce Analytics Service are no longer supported as of November 30, 2022\. AWS Marketplace will remove enrollment of your product listing from AWS Marketplace Product Support Connection on November 30, 2022\.
+
  AWS Marketplace Product Support Connection \(PSC\) is a feature that enables AWS Marketplace customers to provide contact information in the AWS Marketplace website for the purposes of obtaining and accessing product support from AWS Marketplace Sellers\. AWS Marketplace shares the provided data with participating Sellers via an API to enable a better support experience\. Customers can choose to add contact details during or after a purchase of PSC\-enabled AWS Marketplace products, and Sellers can retrieve the Customer contact data, along with relevant product subscription details, by calling a pull\-based API\. 
 
  Your staff can use the Customer Support Eligibility tool to access near\-real\-time information about a customer's subscription to your products and provide fast, personalized service\. AWS Marketplace Management Portal makes it easy to get started: Enter a customer's AWS account ID to retrieve subscription and usage information from their account\. 
