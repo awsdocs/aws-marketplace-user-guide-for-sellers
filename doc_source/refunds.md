@@ -4,7 +4,9 @@ All paid products in AWS Marketplace, regardless of pricing model, must have a s
 
 ## Refund request types for AWS Marketplace products<a name="refund-requests"></a>
 
-Customers can request different types of refunds for AWS Marketplace products: If a customer requests a software refund directly from AWS, we instruct them to contact you using your posted support contact information for the product in question\. Refunds of any AWS infrastructure charges are up to the discretion of AWS and are handled independently of software refunds\. 
+Customers can request different types of refunds for AWS Marketplace products\. For AWS Marketplace products sold by AWS, refer to the refund policy page and then submit the contact support form using the AWS Support Center Console\. If a customer requests a software refund directly from AWS, we instruct them to contact the seller using your posted support contact information for the product in question\. Refunds of any AWS infrastructure charges are up to the discretion of AWS and are handled independently of software refunds\. 
+
+If the product is sold by a third\-party, buyers will be instructed to view refund policies on the product detail page\. Software charges for AWS Marketplace subscriptions are paid to the seller of the product, and refunds must be requested from the seller directly\. Each AWS Marketplace seller is required to include a refund policy on their AWS Marketplace page\.
 
 If you use the AWS Marketplace Tax Calculation Service, customers might contact you to request a tax\-only refund\. If a customer requests a tax\-only refund, you can, at your discretion, grant either a tax\-only refund or a full software refund plus tax\. 
 

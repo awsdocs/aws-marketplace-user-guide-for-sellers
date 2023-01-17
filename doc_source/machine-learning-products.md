@@ -14,7 +14,7 @@
 
 ## Getting started with machine learning products<a name="ml-getting-started"></a>
 
- AWS Marketplace supports two machine learning product types, using Amazon SageMaker\. Both types, the model package products and the algorithm products, produce a deployable inference model for making predictions\. 
+ AWS Marketplace supports two machine learning product types, using Amazon SageMaker\. Both types, the model package products and the algorithm products, produce a deployable inference model for making predictions\.
 
 ### SageMaker model package<a name="ml-amazon-sagemaker-model-package"></a>
 

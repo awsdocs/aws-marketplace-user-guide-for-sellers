@@ -9,7 +9,7 @@ For more information about AWS License Manager, refer to the [AWS License Manage
 **Note**  
 Customers can't launch new instances of the AMI after the contract expiry period\. However, during the contract duration, they can launch any number of instances\. These licenses are not node\-locked or tied to particular instances\.
 **Private Offer Creation**– Sellers can generate private offers for the products using the Private offer creation tool in the AWS Marketplace Management Portal\.
-**Reporting** – You can set up data feeds by setting up an Amazon S3 bucket in the **Report** section in the AWS Marketplace Management Portal\. For more information, refer to [Seller reports and data feeds](reports-and-data-feed.md)\.
+**Reporting** – You can set up data feeds by setting up an Amazon S3 bucket in the **Report** section in the AWS Marketplace Management Portal\. For more information, refer to [Seller reports, data feeds, and dashboards](reports-and-data-feed.md)\.
 
 ## License models<a name="license-models"></a>
 

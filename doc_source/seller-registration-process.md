@@ -174,6 +174,9 @@ For sellers who use [Hyperwallet's virtual bank account solution](https://docs.a
 
 ## \(Optional\) Add secondary users for the Know Your Customer procedure<a name="optional-add-secondary-users-for-the-know-your-customer-procedure"></a>
 
+**Note**  
+IAM users are required to enable Multi\-Factor Authentication \(MFA\) to update disbursement information\. For more information about MFA, see [Multi\-Factor Authentication \(MFA\) for IAM](https://aws.amazon.com/iam/features/mfa/)\.
+
 Secondary users \(IAM users\) are individuals who can amend KYC information, control the flow of funds or refunds, and change financial information such as bank account details\. 
 
 Only secondary users that are KYC verified can make the aforementioned updates\. These secondary users are subject to the same ongoing screening controls as the root account owner\.

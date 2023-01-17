@@ -16,7 +16,7 @@ The AWS Marketplace Metering Service enables several new scenarios\. For example
 
  Your software must call the Metering Service hourly and record the consumption value for that hour\. 
 
- When your software starts, it should record the minute\-of\-the\-hour at which it started\. This is referred to as the *start\-minute*\. Every hour on the start\-minute, your software must retrieve the consumption value for that hour and call the Metering Service\. For information about how to obtain this value, see the linkend="custom\-metering\-pricing\-ami\-products" endterm="custom\-metering\-pricing\-ami\-products\.title"/> section\.
+ When your software starts, it should record the minute\-of\-the\-hour at which it started\. This is referred to as the *start\-minute*\. Every hour on the start\-minute, your software must determine the consumption value for that hour and call the Metering Service\. For information about how to obtain this value, see [Modifying your software to use the Metering Service](https://docs.aws.amazon.com/marketplace/latest/userguide/custom-metering-pricing-ami-products.html#modifying-your-software-to-use-the-metering-service)\.
 
  To wake up each hour at the start\-minute, your software must use one of the following approaches: 
 +  A thread within your software\. 

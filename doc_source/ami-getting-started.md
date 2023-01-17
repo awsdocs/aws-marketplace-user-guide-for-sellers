@@ -36,7 +36,7 @@ Unlike new products, new versions are published to full public availability\. Yo
 
 1. **Update version information** – To help those existing buyers, the seller updates the version information for 1\.1\.0 with a suggestion to upgrade to version 1\.1\.1\.
 
-1. **Monitor usage** – As buyers purchase and use the product, the seller monitors sales, usage, and other metrics using the AWS Marketplace [Seller reports and data feeds](reports-and-data-feed.md)\.
+1. **Monitor usage** – As buyers purchase and use the product, the seller monitors sales, usage, and other metrics using the AWS Marketplace [Seller reports, data feeds, and dashboards](reports-and-data-feed.md)\.
 
 1. **Remove the product** – When the product is no longer needed, the seller removes it from AWS Marketplace\.
 

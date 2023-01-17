@@ -21,13 +21,11 @@ You're responsible for correctly configuring your SaaS software to accept new cu
 
 1. The customer is redirected to your software's registration landing page\. This page must be able to accept the token with the customer’s identiﬁer\. 
 
-1. The customer’s browser sends a `POST` request to your software's registration landing page URL\. The request contains one `POST` parameter, `x-amzn-marketplace-token`, containing the customer’s registration token\. From the perspective of your registration website, the customer has submitted a form with this parameter\. The registration token is an opaque string\. If the offer type is a free trial, a second parameter, `x-amzn-marketplace-offer-type` with the value `free trial`, will be added to the request\. 
+1. The customer’s browser sends a `POST` request to your software's registration landing page URL\. The request contains one `POST` parameter, `x-amzn-marketplace-token`, containing the customer’s registration token\. From the perspective of your registration website, the customer has submitted a form with this parameter\. The registration token is an opaque string\. If the offer type is a free trial, a second parameter, `x-amzn-marketplace-offer-type` with the value `free-trial`, will be added to the request\. 
 
 1. To redeem this registration token for a customer identifier, customer AWS account Id, and product code, your website must call [ResolveCustomer](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/API_ResolveCustomer.html) on the AWS Marketplace Metering Service\. The customer identiﬁer isn't the customer’s AWS account ID, but it's universal between products and should be saved to an internal source as part of your customer records\. The product code is a unique string for your SaaS product that AWS provides to you\. Each AWS product has one unique product code, which is assigned to you during registration\.
 **Note**  
 To see an example of a `ResolveCustomer` call, see [`ResolveCustomer` code example](saas-code-examples.md#saas-resolvecustomer-example)\.
-
-1. Your website validates that the product code returned matches your SaaS product that the customer is attempting to access and calls `GetEntitlement` to return the entitlement data for the customer’s subscription\.
 
 1.  The customer is instructed to either create an account in your product or sign in to an existing account\. 
 **Note**  

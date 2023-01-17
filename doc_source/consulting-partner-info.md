@@ -4,7 +4,7 @@ To create a consulting partner private offer, you must be registered through the
 + [Getting started as a seller](user-guide-for-sellers.md)
 + [Preparing your product](product-preparation.md)
 + [Submitting your product for publication](product-submission.md)
-+ [Seller reports and data feeds](reports-and-data-feed.md)
++ [Seller reports, data feeds, and dashboards](reports-and-data-feed.md)
 
 If you're new to providing products on AWS Marketplace, the following topics can help you better understand the kinds of products available:
 + [AMI\-based products](ami-products.md)

@@ -2,9 +2,6 @@
 
 As an ISV, you can authorize consulting partners to resell your products by creating a resale *opportunity* for that partner\. You can specify a discount percentage or custom price per product dimension to create a wholesale price for the consulting partner\. The partner can mark up the wholesale price when creating their consulting partner private offer for a buyer\. For more information about consulting partner private offers, see [Extending a private offer based on an opportunity](consulting-partner-info.md#consulting-partner-recurring-discount)\.
 
-**Note**  
-If the particular terms of the authorization that you want to create are not possible using the AWS Marketplace Management Portal, you can fill out an * AWS Marketplace Reseller Author form*\. To request and return the form, reach out to your AWS Marketplace channel account manager or send an email message to [mpcustdesk@amazon\.com](mailto://mpcustdesk@amazon.com)\.
-
 The following procedure outlines how ISVs can create an opportunity for a consulting partner\. To use this feature, you must have permissions to use the **Partners** tab in the AWS Marketplace Management Portal\. For more information, see [Policies for AWS Marketplace sellers](detailed-management-portal-permissions.md#seller-managed-policies)\.
 
 **To create a reseller opportunity for a consulting partner as an ISV**

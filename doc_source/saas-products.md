@@ -9,6 +9,7 @@ For assistance with your SaaS products, [contact us](https://aws.amazon.com/mark
 + [Plan your SaaS product](saas-prepare.md)
 + [SaaS product guidelines](saas-guidelines.md)
 + [SaaS product pricing](saas-pricing-models.md)
++ [SaaS free trials](saas-free-trials.md)
 + [SaaS customer onboarding](saas-product-customer-setup.md)
 + [Amazon SNS notifications for SaaS products](saas-notification.md)
 + [Accessing the AWS Marketplace Metering and Entitlement Service APIs](saas-integration-metering-and-entitlement-apis.md)

@@ -16,6 +16,7 @@ Before you get started, you must complete the following prerequisites:
 + [Prerequisites](#saas-prereqs)
 + [Creating a SaaS product](saas-create-product.md)
 + [Create an initial SaaS product page](saas-create-product-page.md)
++ [SaaS product settings](saas-product-settings.md)
 + [Integrate your SaaS subscription product](saas-integrate-subscription.md)
 + [Integrate your SaaS contract product](saas-integrate-contract.md)
 + [Integrate your SaaS contract with pay\-as\-you\-go product](saas-integrate-contract-with-pay.md)

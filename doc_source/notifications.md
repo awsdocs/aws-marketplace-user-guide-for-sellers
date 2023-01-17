@@ -35,10 +35,12 @@ The following event types are supported by email notifications for all products 
 + Buyer has requested a professional service product
 + Recurring scan vulnerability or recurring scan reminder
 + Reseller opportunity has been created, updated, or expired 
-+ Consulting partner private offer has been published
++ New or updated private offer has been published
++ New or updated channel partner private offer has been published
 + Email notifications to buyer and seller for offer acceptance
 
-  For more information about reseller opportunities for consulting partner private offers, see [Creating a resell opportunity for a consulting partner as an ISV](consulting-partner-isv-info.md) and [Creating a private offer as a consulting partner](consulting-partner-info.md)\.
+**Note**  
+For more information about reseller opportunities for consulting partner private offers, see [Creating a resell opportunity for a consulting partner as an ISV](consulting-partner-isv-info.md) and [Creating a private offer as a consulting partner](consulting-partner-info.md)\.
 
 ## Manage notifications<a name="manage-notifications"></a>
 

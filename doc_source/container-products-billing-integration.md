@@ -61,7 +61,7 @@ For more information about AWS License Manager, see the [AWS License Manager Use
 **Note**  
 Customers can't launch new instances of the container after the contract expiry period\. However, during the contract duration, they can launch any number of instances\. These licenses are not bound to a specific node or instance\. Any software running on any container on any node can checkout the license as long as it has the assigned AWS credentials\.
 **Private Offer Creation** – Sellers can generate private offers for the products using the Private offer creation tool in the AWS Marketplace Management Portal\.
-**Reporting** – You can set up data feeds by setting up an Amazon S3 bucket in the **Report** section in the AWS Marketplace Management Portal\. For more information, see [Seller reports and data feeds](reports-and-data-feed.md)\.
+**Reporting** – You can set up data feeds by setting up an Amazon S3 bucket in the **Report** section in the AWS Marketplace Management Portal\. For more information, see [Seller reports, data feeds, and dashboards](reports-and-data-feed.md)\.
 
 ### Integration workflow<a name="container-LM-LM-workflow"></a>
 

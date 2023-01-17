@@ -50,7 +50,7 @@ Each message in the `aws-mp-subscription-notification` topic has the following f
 
 The `offer-identifier` only appears in the notification if the offer is a *private offer*\.
 
-The `isFreeTrialTermPresent` property indicates if the buyer's subscription is a free trial\. The JSON value of this property is not a *boolean* datatype\. Instead, the value is converted to a *string* datatype\. For more information, see [ Creating a SaaS free trial offer\.](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-contracts.html#creating-a-saas-free-trial-offer.html)
+The `isFreeTrialTermPresent` property indicates if the buyer's subscription is a free trial\. The JSON value of this property is not a *boolean* datatype\. Instead, the value is converted to a *string* datatype\. For more information, see [ SaaS free trials\.](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-free-trials.html)
 
 The *<action\-name>* will vary depending on the notification\. Possible actions are:
 + `subscribe-success` – The `subscribe-success` message signals when the seller can begin sending metering records\.

@@ -57,9 +57,10 @@ If you offer a free trial for your product in AWS Marketplace, you agree to the 
 
 You can create private offers for your machine learning products\. A private offer gives specific buyers a different price than your publicly displayed price\.
 
-Private offers work in one of two ways:
+Private offers work in one of several ways:
 + **Hourly** – Private offers can be an hourly rate that is different from the publicly displayed hourly rate\.
-+ **Contract** – Private offers can be a contract with a fixed upfront fee for a specified number of days\. The buyer is allowed to use an unlimited number of instances for the entire duration of the contract\. At the end of the contract, any instances that continue to run are billed at the hourly rate that you set in the private offer\. For example, you can create a contract with a fixed upfront fee for 365 days of unlimited use\. You also set an hourly rate for the private offer\. When the buyer accepts this private offer, they pay that upfront fee\. When the contract ends, any instances still running are billed at that hourly rate\.
++ **Per inference** – Private offers can have an inference rate that's different from the publicly displayed inference rate, if you've configured [inference pricing](https://docs.aws.amazon.com/marketplace/latest/userguide/machine-learning-pricing.html#ml-pricing-inference) for when your product is deployed as an endpoint\.
++ **Contract** – Private offers can be a contract with a fixed upfront fee for a specified number of days\. The buyer is allowed to use an unlimited number of instances for the entire duration of the contract\. At the end of the contract, any instances that continue to run are billed at the hourly rate that you set in the private offer\. For example, you can create a contract with a fixed upfront fee for 365 days of unlimited use\. You also set an hourly rate for the private offer\. When the buyer accepts this private offer, they pay that upfront fee\. When the contract ends, any instances still running are billed at that hourly rate\. If you’re offering a free private trial, ensure you set the correct hourly rate after the free trial period ends to avoid a free perpetual license\.
 
 The set of terms and agreement between you and the buyer in private offers can differ from the one in the public offer or other private offers\.
 

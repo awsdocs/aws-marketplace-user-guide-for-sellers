@@ -4,5 +4,5 @@
 + [AWS MarketplaceCommerce Analytics Service](commerce-analytics-service.md)
 + [AWS Marketplace Field Demonstration Program](field-demonstration-program.md)
 + [Product Support Connection](product-support-connection.md)
-+ [Seller reports and data feeds](reports-and-data-feed.md)
++ [Seller reports, data feeds, and dashboards](reports-and-data-feed.md)
 + [More resources in AWS Marketplace Management Portal](more-seller-resources.md)

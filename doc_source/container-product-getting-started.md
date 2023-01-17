@@ -14,6 +14,7 @@ This topic describes all the steps related to creating, testing, and publishing 
 + [Updating version information](#container-product-updating-version)
 + [Creating or updating product information for your container product](#update-container-product-info)
 + [Publishing container products](#container-product-publishing)
++ [Publishing add\-on products in Amazon EKS](#publishing-eks-add-on)
 + [Container product scans for security issues](#container-security)
 
 ## Prerequisites<a name="container-prereq"></a>
@@ -222,9 +223,9 @@ After you upload your artifacts, you're ready to create the version of your prod
 **Note**  
 Your container images are scanned automatically to see if they meet the [Container\-based product requirements](container-product-policies.md)\. For more information, refer to [Container product scans for security issues](#container-security)\.
 
-#### Adding a new delivery option without a template<a name="add-delivery-option"></a>
+#### Adding a new delivery option<a name="add-delivery-option"></a>
 
-1. To add a new delivery option without a template, choose **New delivery option**\. After adding an option, follow the instructions in the following steps to configure it\.
+1. To add a new delivery option, choose **New delivery option**\. After adding an option, follow the instructions in the following steps to configure it\.
 
 1. Choose a delivery method for the delivery option\. The delivery method determines how buyers will launch your software\.
    + For a **Container image** delivery option, provide paths to container images in an Amazon Elastic Container Registry \(Amazon ECR\) repository that was created in the AWS Marketplace console\. Buyers use the container image paths to launch the software by pulling the images directly into their environments\.
@@ -288,7 +289,7 @@ Your product can support multiple platforms with different container images \(fo
 
    1. If the product already has delivery options in other versions, you can use the existing option as a template to add a delivery option to the new version\. In **Delivery options**, choose the delivery option that you want to add from the list\. You can edit the option using the instructions in the following steps\.
 
-   1. To add a new delivery option without a template, choose **New delivery option**\. After adding an option, follow the instructions in the following steps to configure it\.
+   1. To add a new delivery option, choose **New delivery option**\. After adding an option, follow the instructions in the following steps to configure it\.
 
 1. Choose a delivery method for the delivery option\. The delivery method determines how buyers will launch your software\.
    + For a **Container image** delivery option, provide paths to container images in an Amazon Elastic Container Registry \(Amazon ECR\) repository that was created in the AWS Marketplace console\. Buyers use the container image paths to launch the software by pulling the images directly into their environments\.
@@ -326,7 +327,9 @@ Your product can support multiple platforms with different container images \(fo
 
    1. Choose to enable **QuickLaunch** on this product version\. QuickLaunch is a feature in AWS Marketplace\. Buyers can use QuickLaunch to create an Amazon EKS cluster quickly and launch your software on it by using AWS CloudFormation\. For more information, see [QuickLaunch in AWS Marketplace](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-configuring-a-product.html#buyer-launch-container-quicklaunch)\.
 
-   1. In **Override parameters**, enter parameters that will be used in the Helm CLI commands that launch the software\. Buyers can override the provided default values\. If you have enabled QuickLaunch, also enter a parameter name and description for the CloudFormation form\.
+   1. In **Override parameters**, enter parameters that will be used in the Helm CLI commands that launch the software\. Buyers can override the provided default values\. If you have enabled QuickLaunch, also enter a parameter name and description for the CloudFormation form\. There is a limit of 15 parameters when using the AWS Marketplace Management Console, but there is no limit when using the AWS Marketplace Catalog API\. For more information, see [Adding a new version to a container\-based product](https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#container-add-version)\.
+**Note**  
+Some **Override parameters** are required\. Amazon EKS Anywhere products require an **Override parameter** for license secret with a `DefaultValue` of `"${AWSMP_LICENSE_SECRET}"`\. For paid products, you must provide one **Override parameter** for service account configuration with the `DefaultValue` of `"${AWSMP_SERVICE_ACCOUNT}"`\.
 
    1. Choose **Hide passwords and secrets** to mask sensitive information in consoles, command line tools, and APIs\. For more information, see the `NoEcho` parameter documentation in [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) in the *AWS CloudFormation User Guide*\.
 
@@ -439,8 +442,61 @@ You can't restrict a version if it will leave your public product with no public
 
 When you publicly publish a container product, you make it visible to all AWS customers who can then subscribe and launch your product\. The AWS Marketplace Seller Operations team reviews the data in your product information, as well as your test calls to the AWS Marketplace Metering Service\.
 
+## Publishing add\-on products in Amazon EKS<a name="publishing-eks-add-on"></a>
+
+An Amazon EKS add\-on is software that provides supporting operational capabilities to Kubernetes applications but isn't specific to the application\. For example, an Amazon EKS add\-on includes observability agents or Kubernetes drivers that allow the cluster to interact with underlying AWS resources for networking, compute, and storage\.
+
+As a seller of container products with deployment options including Amazon EKS, you can publish a version of your product as an AWS Marketplace add\-on\. Your add\-on appears in the Amazon EKS console next to add\-ons maintained by AWS and other vendors\. Your buyers can deploy your add\-ons just as easily as they do the other add\-ons using the Amazon EKS console, API service endpoints, AWS CLI, or SDKs\.
+
+For more information, see [Amazon EKS add\-ons](https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html) in the *Amazon EKS User Guide*\.
+
+### Preparing your container product as an AWS Marketplace add\-on<a name="preparing-eks-addon"></a>
+
+To publish your container product as an AWS Marketplace add\-on, it must meet the following requirements:
++ Your container product must be published in AWS Marketplace\.
++ Your container product must not use the Bring Your Own License \(BYOL\) [pricing model](https://docs.aws.amazon.com/marketplace/latest/userguide/pricing-container-products.html)\.
++ You must adhere to all [container\-based product requirements](https://docs.aws.amazon.com/marketplace/latest/userguide/container-product-policies.html) including pushing all container images and Helm charts into AWS Marketplace managed ECR repositories\. This includes open\-source images, for example, `nginx`\. Images and charts can't be hosted in other external repositories including, but not limited to, [Amazon ECR Public Gallery](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repositories.html), Docker Hub, and Quay\.
++ You must create a [Helm chart](https://helm.sh/docs/chart_template_guide/getting_started/) for deploying your container product onto an Amazon EKS cluster\. To create a Helm chart the following requirements must be met:
+  + Your container product must be deployed into a Kubernetes namespace that is not an [initial namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) including the `default` namespace\.
+  + Your container product must include at least one Kubernetes service account\. The service account must be able to assume an [IAM role for service account](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) to access any AWS services including services required for AWS Marketplace [container\-billing integration](https://docs.aws.amazon.com/marketplace/latest/userguide/container-products-billing-integration.html)\.
+
+### Submitting your container product as an Amazon EKS add\-on<a name="submitting-eks-addon"></a>
+
+1. Go to [Adding a new version of your product](https://docs.aws.amazon.com/marketplace/latest/userguide/container-product-getting-started.html#container-add-version) for the procedure to upload your container images and Helm chart to new repositories\.
+
+1. Add a new version of your container product, and select the **Helm chart** option for the **Delivery method**\.
+
+1. Gather the information in the following table for your add\-on\.  
+**Add\-on table**    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/marketplace/latest/userguide/container-product-getting-started.html)
+
+1. Submit the data that you gathered in a [support request](http://aws.amazon.com/marketplace/management/contact-us) in AWS Marketplace while you're signed in to the AWS account that is registered as a seller\.
+**Note**  
+The details portion of the support request form is limited to 1,000 characters\. If the data from your add\-on exceeds the form's character limit, submit the support request form with a brief message that describes your intent\. When you receive the automated email message that confirms the submission of your support request, send an email reply with the complete information about your add\-on\.
+
+### Restricting a version of your Amazon EKS add\-on<a name="restriciting-version-eks-addon"></a>
+
+You might want to restrict access to a version of your container product that is published as an Amazon EKS add\-on\.
+
+**Note**  
+You can't restrict a version if doing so means that your public product has no public version\.
+
+1. Submit the required details in a [support request](https://aws.amazon.com/marketplace/management/contact-us) in AWS Marketplace while you're signed in to the AWS account that is registered as a seller\.
+
+1. For the required details to restrict your product, see the **Required for restrict change type** column in the [Submitting your container product as an Amazon EKS add\-on](#submitting-eks-addon) procedure\.
+
+1. Sign in to the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/)\.
+
+1. Select **Server** from the **Products** menu\.
+
+1. On the **Server products** tab, select the product that you want to restrict\.
+
+1. From the **Request changes** dropdown list, choose **Update versions**, then choose **Restrict version**\.
+
+1. Select the version to restrict and then choose **Submit**\.
+
 ## Container product scans for security issues<a name="container-security"></a>
 
 When you create a change request to add a new version to your container product, we scan the container images included in that new version and check for security vulnerabilities\. To do this, we perform a layer\-by\-layer static scan on the image\. If we find critical vulnerabilities with remotely exploitable risk vectors, we provide you with a list of found issues\. We strongly recommend that you perform your own security analysis using a container image scanner such as Clair, Twistlock, Aqua Security, or Trend Micro to avoid delays in the ingestion and publishing process\. 
 
-Your choice of base image for building your container images can have a significant influence on the security profile of the final image\. If you choose a base image that already has known critical vulnerabilities, they will be flagged because of the base layer, even if your application software layers are clean\. We recommend that you verify that you're starting with a vulnerability\-free base container before you build your images and submit them to AWS Marketplace\. 
+Your choice of base image for building your container images can have a significant influence on the security profile of the final image\. If you choose a base image that already has known critical vulnerabilities, they will be flagged because of the base layer, even if your application software layers are clean\. We recommend that you verify that you're starting with a base container that is free of vulnerabilities before you build your images and submit them to AWS Marketplace\. 

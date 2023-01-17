@@ -26,7 +26,7 @@ All SaaS products must adhere to the following product usage guidelines:
 + Customers must be able to easily get help with issues such as: using the application, troubleshooting, and requesting refunds \(if applicable\)\. Support contact options must be specified on the fulfillment landing page\.
 + Product software and metadata must not contain language that redirects users to other cloud platforms, additional products, upsell services, or free trial offers that aren't available on AWS Marketplace\.
 
-  For information about free trials for SaaS products, see [Creating a SaaS free trial offer](saas-contracts.md#creating-a-saas-free-trial-offer)\.
+  For information about free trials for SaaS products, see [SaaS free trials](saas-free-trials.md)\.
 + If your product is an add\-on to another product or another ISV’s product, your product description must indicate that it extends the functionality of the other product and that without it, your product has very limited utility\. For example, *This product extends the functionality of <product name> and without it, this product has very limited utility\. Please note that <product name> might require its own license for full functionality with this listing\.*
 
 ## Architecture guidelines<a name="saas-architecture"></a>
