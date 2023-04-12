@@ -1,6 +1,6 @@
 # Amazon SNS notifications for SaaS products<a name="saas-notification"></a>
 
-To receive notifications, you subscribe to the AWS Marketplace Amazon Simple Notification Service \(Amazon SNS\) topics provided to you during product creation\. The topics provide notifications about changes to customers’ subscriptions and contract entitlements for your products\. This enables you to know when to provide and revoke access for specific customers\. 
+To receive notifications, you subscribe to the AWS Marketplace Amazon Simple Notification Service \(Amazon SNS\) topics specific to your product which were provisioned in an AWS managed account\. The details of these SNS topics were given to you during product creation\. The topics provide notifications about changes to customers’ subscriptions and contract entitlements for your products\. This enables you to know when to provide and revoke access for specific customers\. 
 
 **Note**  
 During the product creation process, you'll receive the actual Amazon Resource Name \(ARN\) to the SNS topic\. For example: `arn:aws:sns:us-east-1:123456789012:aws-mp-subscription-notification-PRODUCTCODE`
